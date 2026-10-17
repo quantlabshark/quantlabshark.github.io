@@ -6,7 +6,7 @@ hexo.extend.filter.register('before_generate',()=>{
 });
 hexo.extend.helper.register('foam_appearance_initial',()=>fs.readFileSync(path.join(hexo.theme_dir,'source/assets/appearance-initial.js'),'utf8'));
 hexo.extend.helper.register('foam_catalog_hint',page=>{
- if(!['home','catalog','topics','fvm-book','turbulence-book','heat-transfer-book','kolev-book'].includes(page.layout))return '';
+ if(!['home','catalog'].includes(page.layout))return '';
  const url='/'+page.path.replace(/index\.html$/,''),root=page.layout==='home'?nodes.find(n=>n.key==='topics'):nodes.find(n=>n.href===url);
  if(!root)return '';
  const ids=new Set([root.id]);let changed=true;

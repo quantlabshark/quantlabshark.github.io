@@ -17,7 +17,7 @@
   apply();
   document.addEventListener('DOMContentLoaded', () => {
     const sidebar = document.querySelector('#sidebar');
-    if (!sidebar || document.body.dataset.section === 'town') return;
+    if (!sidebar) return;
     const toggle = document.createElement('button');
     toggle.type = 'button'; toggle.className = 'sidebar-toggle';
     toggle.setAttribute('aria-controls', 'sidebar');

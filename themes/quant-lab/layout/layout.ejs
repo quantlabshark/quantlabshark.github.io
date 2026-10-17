@@ -13,30 +13,25 @@
   <script><%- foam_appearance_initial() %></script>
   <link rel="stylesheet" href="/assets/site-core.css">
   <link rel="preload" href="/assets/site-extras.css" as="style">
-  <% if(page.section!=='town'){ %><link rel="preload" href="/assets/card-backgrounds.css" as="style"><% } %>
-  <% if(['fvm-book','turbulence-book','heat-transfer-book','kolev-book'].includes(page.layout)){ %><link rel="stylesheet" href="/assets/fvm-labs.css"><% } %>
-  <% if(page.reference_module||['function-objects','boundary-conditions'].includes(page.section)){ %><link rel="stylesheet" href="/assets/function-objects.css"><% } %>
+  <link rel="preload" href="/assets/card-backgrounds.css" as="style">
   <script src="/assets/runtime-account.js" defer></script>
   <script src="/assets/appearance.js" defer></script>
   <script src="/assets/sidebar-resize.js" defer></script>
+  <script src="/assets/navigation-tree.js" defer></script>
   <script src="/assets/navigation.js" defer></script>
   <% const catalogHint=foam_catalog_hint(page); if(catalogHint){ %><script type="application/json" id="catalog-hint"><%- catalogHint %></script><% } %>
-  <% if(['model-reference','quick-reference','commands','dictionaries','function-objects','boundary-conditions'].includes(page.layout)){ %><link rel="stylesheet" href="/assets/reference-catalog.css"><% } %>
   <script src="/assets/search-matches.js" defer></script>
   <script src="/assets/search-scope.js" defer></script>
   <script src="/assets/site.js" defer></script>
-  <% if(page.layout==='model-reference'){ %><script src="/assets/model-reference.js" defer></script><% } %>
-  <% if(page.section==='function-objects'){ %><script src="/assets/function-objects.js" defer></script><% } %>
-  <% if(page.section==='boundary-conditions'){ %><script src="/assets/boundary-conditions.js" defer></script><% } %>
   <script src="/assets/runtime-content.js" data-math-runtime="<%= foam_bundle_url('runtime-math.js') %>" defer></script>
-  <% if(page.section!=='town'){ %><script src="/assets/community-likes.js" defer></script><% } %>
+  <script src="/assets/community-likes.js" defer></script>
   <script src="/assets/runtime-ui.js" defer></script>
-  <% if(page.layout==='fvm-book'){ %><script src="/assets/fvm-catalog.js" defer></script><% } %>
-  <% if(['theory','turbulence-book','heat-transfer-book','kolev-book'].includes(page.layout)){ %><script src="/assets/theory-catalog.js" defer></script><% } %>
+  <% if(['interview','interview-book','read'].includes(page.layout)){ %><script src="/assets/interview-view.js" defer></script><script src="/assets/interview.js" defer></script><link rel="stylesheet" href="/assets/interview.css"><% } %>
+  <% if(page.layout==='curriculum'){ %><script src="/assets/curriculum-view.js" defer></script><script src="/assets/curriculum.js" defer></script><link rel="stylesheet" href="/assets/curriculum.css"><% } %>
   <script src="/assets/runtime-panda-art.js" defer fetchpriority="low"></script>
   <script src="/assets/runtime-panda-pet.js" defer fetchpriority="low"></script>
   <link rel="stylesheet" href="/assets/site-extras.css">
-  <% if(page.section!=='town'){ %><link rel="stylesheet" href="/assets/card-backgrounds.css"><% } %>
+  <link rel="stylesheet" href="/assets/card-backgrounds.css">
 <link rel="stylesheet" href="/assets/quant.css"></head>
 <body data-section="<%= page.section || page.layout || '' %>" data-lesson="<%= page.lesson_id || '' %>">
 <a class="skip" href="#main">跳到主要内容</a>
@@ -45,10 +40,7 @@
   <a class="brand" href="/"><span class="brand-mark"><img src="/assets/favicon.svg" alt="" width="44" height="44"></span><span>QuantLab<small>小鲨陪你学量化</small></span></a>
   <div class="version"><span class="status-dot"></span> Python · 数据 · 研究</div>
   <nav aria-label="主要导航">
-    <div class="nav-label">学习空间</div>
-    <%- partial('_partial/learning-nav') %>
-    <div class="nav-label">资源与社区</div>
-    <%- partial('_partial/community-nav') %>
+    <%- quant_navigation(page) %>
   </nav>
   <div class="sidebar-bottom"><div class="tiny-label">QUANTITATIVE LEARNING</div><p>从数据到可验证的研究</p><a href="/read/?slug=sources-and-validation">资料与研究约定 →</a></div>
 </aside>

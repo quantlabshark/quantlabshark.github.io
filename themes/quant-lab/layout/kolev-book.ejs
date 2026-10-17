@@ -1,9 +1,0 @@
-<div class="page-wrap">
-  <div class="eyebrow">基础理论与原理 · 多相流动力学</div>
-  <%- partial('_partial/section-page',{key:'kolev-'+page.kolev_volume,defaults:{name:page.title,subtitle:page.subtitle,body:page.description}}) %>
-  <div class="fvm-book-meta"><span id="kolev-<%= page.kolev_volume %>-count">课程目录</span></div>
-  <label class="search-field"><input id="kolev-<%= page.kolev_volume %>-query" type="search" placeholder="查找章节或概念" aria-label="查找多相流动力学课程"></label>
-  <div id="kolev-<%= page.kolev_volume %>-catalog" data-kolev-catalog data-lab-catalog="kolev-<%= page.kolev_volume %>" data-catalog-custom aria-live="polite" aria-busy="true"><p>正在读取课程目录…</p></div>
-  <noscript>请启用 JavaScript 加载课程目录。</noscript>
-  <p class="muted">课程参考：Nikolay I. Kolev，<em>Multiphase Flow Dynamics</em>，第 <%= page.kolev_volume %> 卷。</p>
-</div>

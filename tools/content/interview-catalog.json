@@ -1,0 +1,2508 @@
+[
+  {
+    "slug": "zhou-full-1",
+    "title": "1 一般原则",
+    "summary": "量化面试涉及的知识准备、练习方法、题意确认、推理表达与假设说明。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1001,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "一般原则",
+        "number": 1,
+        "chapter": 1,
+        "edition": "2026-10",
+        "section": "1",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          1,
+          2
+        ],
+        "question_count": 0
+      }
+    }
+  },
+  {
+    "slug": "zhou-full-2-1",
+    "title": "2.1 问题简化",
+    "summary": "从小规模情形建立递推，分析海盗分配与老虎吃羊的决策。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1002,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "思维题",
+        "number": 2,
+        "chapter": 2,
+        "edition": "2026-10",
+        "section": "2.1",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          2,
+          3
+        ],
+        "question_count": 2
+      }
+    }
+  },
+  {
+    "slug": "zhou-full-2-2",
+    "title": "2.2 逻辑推理",
+    "summary": "通过信息排除、分支判断与不变量，求解过桥、生日、称球和赛马题。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1003,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "思维题",
+        "number": 3,
+        "chapter": 2,
+        "edition": "2026-10",
+        "section": "2.2",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "question_count": 8
+      }
+    }
+  },
+  {
+    "slug": "zhou-full-2-3",
+    "title": "2.3 转换问题表示",
+    "summary": "使用染色、编码、物理状态与传递协议处理装箱和信息交换问题。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1004,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "思维题",
+        "number": 4,
+        "chapter": 2,
+        "edition": "2026-10",
+        "section": "2.3",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          6,
+          7,
+          8
+        ],
+        "question_count": 7
+      }
+    }
+  },
+  {
+    "slug": "zhou-full-2-4",
+    "title": "2.4 对称性",
+    "summary": "利用翻面、标签对称性与计数状态，处理硬币、果袋和访室问题。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1005,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "思维题",
+        "number": 5,
+        "chapter": 2,
+        "edition": "2026-10",
+        "section": "2.4",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          8,
+          9
+        ],
+        "question_count": 3
+      }
+    }
+  },
+  {
+    "slug": "zhou-full-2-5",
+    "title": "2.5 数列求和",
+    "summary": "推导整数求和式，用代数重建缺失数，并优化玻璃球测试次数。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1006,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "思维题",
+        "number": 6,
+        "chapter": 2,
+        "edition": "2026-10",
+        "section": "2.5",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          9,
+          10,
+          11
+        ],
+        "question_count": 4
+      }
+    }
+  },
+  {
+    "slug": "zhou-full-2-6",
+    "title": "2.6 抽屉原理",
+    "summary": "用抽屉原理证明重复、距离与社交关系结论，并设计称重编码。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1007,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "思维题",
+        "number": 7,
+        "chapter": 2,
+        "edition": "2026-10",
+        "section": "2.6",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          11,
+          12
+        ],
+        "question_count": 5
+      }
+    }
+  },
+  {
+    "slug": "zhou-full-2-7",
+    "title": "2.7 模运算",
+    "summary": "利用奇偶性、模三与位数同余，构造帽子编码和颜色变化不变量。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1008,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "思维题",
+        "number": 8,
+        "chapter": 2,
+        "edition": "2026-10",
+        "section": "2.7",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          12,
+          13,
+          14
+        ],
+        "question_count": 3
+      }
+    }
+  },
+  {
+    "slug": "zhou-full-2-8",
+    "title": "2.8 数学归纳法",
+    "summary": "以归纳、成对计数与前缀和，证明分币、折巧克力和环形赛道结论。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1009,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "思维题",
+        "number": 9,
+        "chapter": 2,
+        "edition": "2026-10",
+        "section": "2.8",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          14,
+          15,
+          16
+        ],
+        "question_count": 3
+      }
+    }
+  },
+  {
+    "slug": "zhou-full-2-9",
+    "title": "2.9 反证法",
+    "summary": "通过反证证明平方根的无理性，并构造七色帽子的同余策略。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1010,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "思维题",
+        "number": 10,
+        "chapter": 2,
+        "edition": "2026-10",
+        "section": "2.9",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          16,
+          17
+        ],
+        "question_count": 2
+      }
+    }
+  },
+  {
+    "slug": "zhou-full-3-1",
+    "title": "3.1 极限与导数",
+    "summary": "复习极限与求导规则，计算复合幂导数并比较指数幂的大小。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1011,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "微积分与线性代数",
+        "number": 11,
+        "chapter": 3,
+        "edition": "2026-10",
+        "section": "3.1",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          17,
+          18,
+          19
+        ],
+        "question_count": 3
+      }
+    }
+  },
+  {
+    "slug": "zhou-full-3-2",
+    "title": "3.2 积分",
+    "summary": "用分部积分和截面积分，求解几何体积、扫雪与正态条件期望。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1012,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "微积分与线性代数",
+        "number": 12,
+        "chapter": 3,
+        "edition": "2026-10",
+        "section": "3.2",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          19,
+          20,
+          21
+        ],
+        "question_count": 5
+      }
+    }
+  },
+  {
+    "slug": "zhou-full-3-3",
+    "title": "3.3 偏导数与重积分",
+    "summary": "说明偏导、链式法则与积分换元，并用极坐标计算高斯积分。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1013,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "微积分与线性代数",
+        "number": 13,
+        "chapter": 3,
+        "edition": "2026-10",
+        "section": "3.3",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          21
+        ],
+        "question_count": 1
+      }
+    }
+  },
+  {
+    "slug": "zhou-full-3-4",
+    "title": "3.4 微积分方法",
+    "summary": "运用泰勒展开、数值求根与拉格朗日乘子求解近似和约束优化。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1014,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "微积分与线性代数",
+        "number": 14,
+        "chapter": 3,
+        "edition": "2026-10",
+        "section": "3.4",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          21,
+          22,
+          23,
+          24
+        ],
+        "question_count": 5
+      }
+    }
+  },
+  {
+    "slug": "zhou-full-3-5",
+    "title": "3.5 常微分方程",
+    "summary": "按可分离、一阶线性和二阶线性分类，推导常微分方程的解。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1015,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "微积分与线性代数",
+        "number": 15,
+        "chapter": 3,
+        "edition": "2026-10",
+        "section": "3.5",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          24,
+          25,
+          26
+        ],
+        "question_count": 5
+      }
+    }
+  },
+  {
+    "slug": "zhou-full-3-6",
+    "title": "3.6 线性代数",
+    "summary": "整理向量、最小二乘、特征分解和矩阵分解，推导相关性的约束。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1016,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "微积分与线性代数",
+        "number": 16,
+        "chapter": 3,
+        "edition": "2026-10",
+        "section": "3.6",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          26,
+          27,
+          28,
+          29,
+          30
+        ],
+        "question_count": 5
+      }
+    }
+  },
+  {
+    "slug": "zhou-full-4-1",
+    "title": "4.1 概率定义与集合运算",
+    "summary": "从样本空间与事件运算出发，分析投币、翻牌、随机占座和圆周点。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1017,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "概率论",
+        "number": 17,
+        "chapter": 4,
+        "edition": "2026-10",
+        "section": "4.1",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          30,
+          31,
+          32,
+          33
+        ],
+        "question_count": 4
+      }
+    }
+  },
+  {
+    "slug": "zhou-full-4-2",
+    "title": "4.2 组合分析",
+    "summary": "用排列组合、容斥和递推，计算扑克、配对、生日及整数末位问题。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1018,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "概率论",
+        "number": 18,
+        "chapter": 4,
+        "edition": "2026-10",
+        "section": "4.2",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          33,
+          34,
+          35,
+          36,
+          37
+        ],
+        "question_count": 8
+      }
+    }
+  },
+  {
+    "slug": "zhou-full-4-3",
+    "title": "4.3 条件概率与贝叶斯公式",
+    "summary": "明确条件事件与信息机制，运用贝叶斯公式和递推计算概率。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1019,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "概率论",
+        "number": 19,
+        "chapter": 4,
+        "edition": "2026-10",
+        "section": "4.3",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44
+        ],
+        "question_count": 16
+      }
+    }
+  },
+  {
+    "slug": "zhou-full-4-4",
+    "title": "4.4 离散分布与连续分布",
+    "summary": "整理常用离散及连续分布，计算几何概率、泊松等待时间和正态矩。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1020,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "概率论",
+        "number": 20,
+        "chapter": 4,
+        "edition": "2026-10",
+        "section": "4.4",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          44,
+          45,
+          46,
+          47
+        ],
+        "question_count": 4
+      }
+    }
+  },
+  {
+    "slug": "zhou-full-4-5",
+    "title": "4.5 期望、方差与协方差",
+    "summary": "运用期望线性性与条件期望，求解环数、收集问题、对冲和违约界限。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1021,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "概率论",
+        "number": 21,
+        "chapter": 4,
+        "edition": "2026-10",
+        "section": "4.5",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          47,
+          48,
+          49,
+          50
+        ],
+        "question_count": 7
+      }
+    }
+  },
+  {
+    "slug": "zhou-full-4-6",
+    "title": "4.6 顺序统计量",
+    "summary": "推导极值的分布、矩与相关系数，并用交换标签处理蚂蚁碰撞。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1022,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "概率论",
+        "number": 22,
+        "chapter": 4,
+        "edition": "2026-10",
+        "section": "4.6",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          50,
+          51,
+          52
+        ],
+        "question_count": 3
+      }
+    }
+  },
+  {
+    "slug": "zhou-05-01",
+    "title": "马尔可夫链",
+    "summary": "有限状态链、吸收概率与期望时间，包含赌徒破产、骰子竞争、硬币模式和染色球的完整题解。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1023,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "随机过程与随机微积分",
+        "number": 23,
+        "chapter": 5,
+        "edition": "2026-10",
+        "section": "5.1",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          53,
+          54,
+          55,
+          56,
+          57,
+          58
+        ],
+        "question_count": 6
+      }
+    }
+  },
+  {
+    "slug": "zhou-05-02",
+    "title": "鞅与随机游走",
+    "summary": "停时与Wald等式、区间首达、反射原理和序列等待时间的推导。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1024,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "随机过程与随机微积分",
+        "number": 24,
+        "chapter": 5,
+        "edition": "2026-10",
+        "section": "5.2",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          58,
+          59,
+          60,
+          61
+        ],
+        "question_count": 4
+      }
+    }
+  },
+  {
+    "slug": "zhou-05-03",
+    "title": "动态规划",
+    "summary": "Bellman方程、三次骰子、系列赛复制、归零骰子与红黑牌的最优停止。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1025,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "随机过程与随机微积分",
+        "number": 25,
+        "chapter": 5,
+        "edition": "2026-10",
+        "section": "5.3",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          61,
+          62,
+          63,
+          64,
+          65
+        ],
+        "question_count": 4
+      }
+    }
+  },
+  {
+    "slug": "zhou-05-04",
+    "title": "布朗运动与随机微积分",
+    "summary": "布朗运动性质、单侧与双侧首达、指数鞅、Itô公式及全部原题。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1026,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "随机过程与随机微积分",
+        "number": 26,
+        "chapter": 5,
+        "edition": "2026-10",
+        "section": "5.4",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "question_count": 9
+      }
+    }
+  },
+  {
+    "slug": "zhou-06-01",
+    "title": "期权定价",
+    "summary": "无套利平价、美式行权、Black–Scholes方程与公式，以及触及和倒数支付合约。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1027,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "金融",
+        "number": 27,
+        "chapter": 6,
+        "edition": "2026-10",
+        "section": "6.1",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75
+        ],
+        "question_count": 10
+      }
+    }
+  },
+  {
+    "slug": "zhou-06-02",
+    "title": "期权风险敏感度",
+    "summary": "Delta、Gamma、Theta、Vega与Rho，包含动态对冲、隐含波动率、Volga和风险中性密度。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1028,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "金融",
+        "number": 28,
+        "chapter": 6,
+        "edition": "2026-10",
+        "section": "6.2",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          75,
+          76,
+          77,
+          78,
+          79,
+          80
+        ],
+        "question_count": 10
+      }
+    }
+  },
+  {
+    "slug": "zhou-06-03",
+    "title": "期权组合与奇异期权",
+    "summary": "牛市价差边界、跨式支付、二元期权复制和交换期权的计价基准方法。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1029,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "金融",
+        "number": 29,
+        "chapter": 6,
+        "edition": "2026-10",
+        "section": "6.3",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          80,
+          81,
+          82
+        ],
+        "question_count": 4
+      }
+    }
+  },
+  {
+    "slug": "zhou-06-04",
+    "title": "组合、风险与固定收益",
+    "summary": "最小方差组合、VaR尾部风险、反向浮息久期、远期期货与短利率模型。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1030,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "金融",
+        "number": 30,
+        "chapter": 6,
+        "edition": "2026-10",
+        "section": "6.4",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          82,
+          83,
+          84,
+          85
+        ],
+        "question_count": 5
+      }
+    }
+  },
+  {
+    "slug": "zhou-07-01",
+    "title": "算法与复杂度",
+    "summary": "复杂度、排序、洗牌、流抽样、矩阵查找、Fibonacci和最大连续子数组的完整实现。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1031,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "算法与数值方法",
+        "number": 31,
+        "chapter": 7,
+        "edition": "2026-10",
+        "section": "7.1",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92
+        ],
+        "question_count": 12
+      }
+    }
+  },
+  {
+    "slug": "zhou-07-02",
+    "title": "二进制与概率编码",
+    "summary": "2的幂、移位乘法、指定概率模拟和1000个候选的一轮二进制定位。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1032,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "算法与数值方法",
+        "number": 32,
+        "chapter": 7,
+        "edition": "2026-10",
+        "section": "7.2",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          92
+        ],
+        "question_count": 4
+      }
+    }
+  },
+  {
+    "slug": "zhou-07-03",
+    "title": "蒙特卡洛与有限差分",
+    "summary": "随机变量生成、方差缩减、蒙特卡洛Greeks、圆周率估计及三种有限差分格式。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 1033,
+    "metadata": {
+      "interview": {
+        "book": "zhou",
+        "topic": "算法与数值方法",
+        "number": 33,
+        "chapter": 7,
+        "edition": "2026-10",
+        "section": "7.3",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_pages": [
+          93,
+          94,
+          95,
+          96
+        ],
+        "question_count": 7
+      }
+    }
+  },
+  {
+    "slug": "material-001",
+    "title": "损失函数与时序模型",
+    "summary": "常见损失函数、Transformer 时序预测、日频与分钟因子",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2001,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "信弘天禾",
+        "number": 1,
+        "chapter": 1,
+        "edition": "2026-10",
+        "section": "面经与研究",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/信弘天禾.docx"
+        ],
+        "question_count": 3
+      }
+    }
+  },
+  {
+    "slug": "material-002",
+    "title": "模型选择与预测周期",
+    "summary": "树模型与神经网络、TabNet 表现不佳的诊断、遗传算法挖因子的相关性约束、极端行情下的模型处理、不同预测周期",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2002,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "蝶威",
+        "number": 2,
+        "chapter": 2,
+        "edition": "2026-10",
+        "section": "面经与研究",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/蝶威.docx"
+        ],
+        "question_count": 5
+      }
+    }
+  },
+  {
+    "slug": "material-003",
+    "title": "市场结构与收益来源",
+    "summary": "对市场的理解",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2003,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "因诺",
+        "number": 3,
+        "chapter": 3,
+        "edition": "2026-10",
+        "section": "面经与研究",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/因诺.docx"
+        ],
+        "question_count": 1
+      }
+    }
+  },
+  {
+    "slug": "material-004",
+    "title": "市价委托与限价委托",
+    "summary": "委托方式",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2004,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "思晔",
+        "number": 4,
+        "chapter": 4,
+        "edition": "2026-10",
+        "section": "面经与研究",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/思晔.docx"
+        ],
+        "question_count": 1
+      }
+    }
+  },
+  {
+    "slug": "material-005",
+    "title": "CTA 与多因子模型",
+    "summary": "CTA 策略、多因子模型",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2005,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "蒙玺",
+        "number": 5,
+        "chapter": 5,
+        "edition": "2026-10",
+        "section": "面经与研究",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/蒙玺.docx"
+        ],
+        "question_count": 2
+      }
+    }
+  },
+  {
+    "slug": "material-006",
+    "title": "量化研报复现流程",
+    "summary": "复现研究报告",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2006,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "燧石",
+        "number": 6,
+        "chapter": 6,
+        "edition": "2026-10",
+        "section": "面经与研究",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/燧石.docx"
+        ],
+        "question_count": 1
+      }
+    }
+  },
+  {
+    "slug": "material-007",
+    "title": "期权定价模型与假设",
+    "summary": "Black–Scholes 与其他模型",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2007,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "洛书",
+        "number": 7,
+        "chapter": 7,
+        "edition": "2026-10",
+        "section": "面经与研究",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/洛书.docx"
+        ],
+        "question_count": 1
+      }
+    }
+  },
+  {
+    "slug": "material-008",
+    "title": "量化研究流程与项目讨论",
+    "summary": "量化交易与职业动机、因子的含义、因子之后的步骤、因子衰减、成交量因子、变量显著性与拟合、异常值处理、面板特征、反向提问",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2008,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "念空面试回忆",
+        "number": 8,
+        "chapter": 8,
+        "edition": "2026-10",
+        "section": "面经与研究",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "笔试面试回忆/念空面试回忆.docx"
+        ],
+        "question_count": 9
+      }
+    }
+  },
+  {
+    "slug": "material-009",
+    "title": "几何回归与程序基础",
+    "summary": "三角形内的回归、计算器、Python 多线程、项目讨论",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2009,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "明泓投资",
+        "number": 9,
+        "chapter": 9,
+        "edition": "2026-10",
+        "section": "面经与研究",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/明泓投资.docx"
+        ],
+        "question_count": 4
+      }
+    }
+  },
+  {
+    "slug": "material-010",
+    "title": "系统基础与推理",
+    "summary": "八球称重、TCP 长连接、I/O 占用、结束进程与信号、mmap 与共享内存、静态库与动态库、量取 4 升水、口算",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2010,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "仲阳天王星",
+        "number": 10,
+        "chapter": 10,
+        "edition": "2026-10",
+        "section": "面经与研究",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/仲阳天王星.docx"
+        ],
+        "question_count": 8
+      }
+    }
+  },
+  {
+    "slug": "material-011",
+    "title": "杠杆与随机排列",
+    "summary": "十倍杠杆、随机分组",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2011,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "乾象",
+        "number": 11,
+        "chapter": 11,
+        "edition": "2026-10",
+        "section": "面经与研究",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/乾象.docx"
+        ],
+        "question_count": 2
+      }
+    }
+  },
+  {
+    "slug": "material-012",
+    "title": "三份持仓记录核对",
+    "summary": "账户与策略持仓核对",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2012,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "天演",
+        "number": 12,
+        "chapter": 12,
+        "edition": "2026-10",
+        "section": "量化研究与数据",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/天演.docx"
+        ],
+        "question_count": 1
+      }
+    }
+  },
+  {
+    "slug": "material-013",
+    "title": "Tick 数据清洗与订单流分析",
+    "summary": "三日统计、成交金额变化、三秒网格、价差比例、二十 Tick 波动、盘口不平衡、主动买卖量估计、成交类型因子、十档撤单量、交易方案",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2013,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "概率",
+        "number": 13,
+        "chapter": 13,
+        "edition": "2026-10",
+        "section": "量化研究与数据",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/概率.docx",
+          "xhs量化面经整理汇总/概率2.pdf"
+        ],
+        "question_count": 10
+      }
+    }
+  },
+  {
+    "slug": "material-014",
+    "title": "期货配对交易与高频研究",
+    "summary": "跨市场原油价差、配对交易回测、菜籽油连续合约与趋势、PTA 预测周期与模型、十品种分钟线与截面动量",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2014,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "茂源",
+        "number": 14,
+        "chapter": 14,
+        "edition": "2026-10",
+        "section": "量化研究与数据",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/茂源.docx"
+        ],
+        "question_count": 5
+      }
+    }
+  },
+  {
+    "slug": "material-015",
+    "title": "五日 Tick 数据编程任务",
+    "summary": "合约成交排名、三组配对策略",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2015,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "Question",
+        "number": 15,
+        "chapter": 15,
+        "edition": "2026-10",
+        "section": "量化研究与数据",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/Assignment/Assignment/Question.docx"
+        ],
+        "question_count": 2
+      }
+    }
+  },
+  {
+    "slug": "material-016",
+    "title": "字符统计与单次交易",
+    "summary": "缺失字母、一次买卖最大利润",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2016,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "盛冠达",
+        "number": 16,
+        "chapter": 16,
+        "edition": "2026-10",
+        "section": "量化研究与数据",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/盛冠达.docx"
+        ],
+        "question_count": 2
+      }
+    }
+  },
+  {
+    "slug": "material-017",
+    "title": "代数小数与序列模型",
+    "summary": "第200位小数、CNN 面板、无贯通裂缝积木墙",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2017,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "稳博",
+        "number": 17,
+        "chapter": 17,
+        "edition": "2026-10",
+        "section": "量化研究与数据",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/稳博.docx"
+        ],
+        "question_count": 3
+      }
+    }
+  },
+  {
+    "slug": "material-018",
+    "title": "统计、因子与交易算法",
+    "summary": "正态与独立、灯泡时间、IC 与收益、CAPM 偏离与套利、相关性与最小风险、外汇利率平价、因子研究、DataFrame 操作、不用 corr、最多k次股票交易",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2018,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "超量子",
+        "number": 18,
+        "chapter": 18,
+        "edition": "2026-10",
+        "section": "量化研究与数据",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/超量子.docx"
+        ],
+        "question_count": 10
+      }
+    }
+  },
+  {
+    "slug": "material-019",
+    "title": "抽样概率与比较算法",
+    "summary": "至少两个蓝球、冒泡排序规模、最大与第二大、33人约瑟夫环",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2019,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "宽德",
+        "number": 19,
+        "chapter": 19,
+        "edition": "2026-10",
+        "section": "概率统计与算法",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/宽德.docx"
+        ],
+        "question_count": 4
+      }
+    }
+  },
+  {
+    "slug": "material-020",
+    "title": "数值推理与收益概率",
+    "summary": "嵌套函数的加法次数、涨跌5%的盈利概率、增长阶排序、有界方差、完全平方幂、等相关三变量、三变量关联指标、三角形距离和、新预测思路",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2020,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "卓胜",
+        "number": 20,
+        "chapter": 20,
+        "edition": "2026-10",
+        "section": "概率统计与算法",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/卓胜.docx"
+        ],
+        "question_count": 9
+      }
+    }
+  },
+  {
+    "slug": "material-021",
+    "title": "概率、回归与序列问题",
+    "summary": "四开关识别、递增抽样停止、已知红黑数量下注、十五分钟来车、第一张A、双向回归、相关系数边界、证券代码正则、有限次交换的最大拼接数、最长公共子序列",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2021,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "中量投",
+        "number": 21,
+        "chapter": 21,
+        "edition": "2026-10",
+        "section": "概率统计与算法",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/中量投.docx"
+        ],
+        "question_count": 10
+      }
+    }
+  },
+  {
+    "slug": "material-022",
+    "title": "矩阵约束与基础算法",
+    "summary": "已知两个0.8相关、秩一扰动特征值、严格对角占优、高斯积分、概率1/7、双硬币停止、整数乘法、缺失收益协方差、单链表反转、约瑟夫问题、区间合并、数字根",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2022,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "玄信",
+        "number": 22,
+        "chapter": 22,
+        "edition": "2026-10",
+        "section": "概率统计与算法",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/玄信.docx"
+        ],
+        "question_count": 12
+      }
+    }
+  },
+  {
+    "slug": "material-023",
+    "title": "回归与随机等待",
+    "summary": "OLS 与复制样本、二维密度、相关和的最小值、偏币生成公平结果、公平币生成5/13、首次正面、连续三正面、任意终止模式",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2023,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "丰盛",
+        "number": 23,
+        "chapter": 23,
+        "edition": "2026-10",
+        "section": "概率统计与研究",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/丰盛.docx"
+        ],
+        "question_count": 8
+      }
+    }
+  },
+  {
+    "slug": "material-024",
+    "title": "贝叶斯、相关结构与计算性能",
+    "summary": "命中来源、三人相遇、推广与模拟、顺序与随机内存访问、等相关范围、构造等相关变量、等角向量数量、超过物理内存、排序规模估计、环境变量",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2024,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "佳期",
+        "number": 24,
+        "chapter": 24,
+        "edition": "2026-10",
+        "section": "概率统计与研究",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/佳期.docx"
+        ],
+        "question_count": 10
+      }
+    }
+  },
+  {
+    "slug": "material-025",
+    "title": "混频预测与模型基础",
+    "summary": "GDP建模、KNN适用场景、神经网络场景、过拟合、PCR与岭回归、随机优化、分块协方差、数组与vector、TCP与UDP、线程调度、阶乘末尾零、海岛人口预测",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2025,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "启林",
+        "number": 25,
+        "chapter": 25,
+        "edition": "2026-10",
+        "section": "概率统计与研究",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/启林.docx"
+        ],
+        "question_count": 12
+      }
+    }
+  },
+  {
+    "slug": "material-026",
+    "title": "谱界、回归与组合计数",
+    "summary": "逆相关矩阵迹、矩阵和的谱界、复制回归数据、长短期信号、首个红球、正交多项式、最大投影方差、相邻上升数、单变量与联合拟合、球面可见点",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2026,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "衍复",
+        "number": 26,
+        "chapter": 26,
+        "edition": "2026-10",
+        "section": "概率统计与研究",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/衍复.docx"
+        ],
+        "question_count": 10
+      }
+    }
+  },
+  {
+    "slug": "material-027",
+    "title": "回归与随机游走",
+    "summary": "二的29次方缺失数字、马回原角、联合回归与顺序残差、赌徒达到5元、复制样本系数",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2027,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "幻方",
+        "number": 27,
+        "chapter": 27,
+        "edition": "2026-10",
+        "section": "概率统计与研究",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/幻方.docx"
+        ],
+        "question_count": 5
+      }
+    }
+  },
+  {
+    "slug": "material-028",
+    "title": "停止时间与几何覆盖",
+    "summary": "骰子累计余数、多一枚硬币、多两枚硬币、51点覆盖、三次骰子最优停止",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2028,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "正定",
+        "number": 28,
+        "chapter": 28,
+        "edition": "2026-10",
+        "section": "概率统计与研究",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/正定.docx"
+        ],
+        "question_count": 5
+      }
+    }
+  },
+  {
+    "slug": "material-029",
+    "title": "贝叶斯与最优决策",
+    "summary": "阳性后的条件概率、两个均匀数的次序统计量、连续三正面、100张奖励纸、三轮骰子、最小风险配置、整数回文、价格买卖、黄球期望",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2029,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "灵均",
+        "number": 29,
+        "chapter": 29,
+        "edition": "2026-10",
+        "section": "概率统计与研究",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/灵均.docx"
+        ],
+        "question_count": 9
+      }
+    }
+  },
+  {
+    "slug": "material-030",
+    "title": "条件概率与博弈决策",
+    "summary": "抽到1后换牌堆、取完红糖、猜1至100、生日首次重复、轮流等待HT",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2030,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "大雁",
+        "number": 30,
+        "chapter": 30,
+        "edition": "2026-10",
+        "section": "笔试综合题",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/大雁.pdf"
+        ],
+        "question_count": 5
+      }
+    }
+  },
+  {
+    "slug": "material-031",
+    "title": "几何拼接与基础概率",
+    "summary": "等腰直角三角形拼接、折痕段数、红包换选、31块积木、相关矩阵范围、幂函数求导、先取完红豆",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2031,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "平方和",
+        "number": 31,
+        "chapter": 31,
+        "edition": "2026-10",
+        "section": "笔试综合题",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/平方和.pdf"
+        ],
+        "question_count": 7
+      }
+    }
+  },
+  {
+    "slug": "material-032",
+    "title": "随机停止与研究讨论",
+    "summary": "HH前的正面总数、两圆公切线、排除00后的整数和、三期资产停止、奇数行列01矩阵、行业哑变量、理性但受约束的交易、行业超额回撤案例",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2032,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "投研面试题_v3",
+        "number": 32,
+        "chapter": 32,
+        "edition": "2026-10",
+        "section": "笔试综合题",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/投研面试题_v3.pdf"
+        ],
+        "question_count": 8
+      }
+    }
+  },
+  {
+    "slug": "material-033",
+    "title": "相关结构、停止策略与算法",
+    "summary": "余弦相似度范围、滚动标准差最大值、岭回归解析解、抽到自己礼物、正态重量最优停止、比较πᵉ与eᵖⁱ、整数平方、样本外关系稳定、老虎与羊、生日逻辑、新因子入库、√3无理、10",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2033,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "卡方",
+        "number": 33,
+        "chapter": 33,
+        "edition": "2026-10",
+        "section": "笔试综合题",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/卡方.pdf"
+        ],
+        "question_count": 15
+      }
+    }
+  },
+  {
+    "slug": "material-034",
+    "title": "最优停止、套利约束与吸收过程",
+    "summary": "红白球停止、世界杯赔率套利、反复等涨10%的策略、赌场与破产",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2034,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "至诚卓远",
+        "number": 34,
+        "chapter": 34,
+        "edition": "2026-10",
+        "section": "笔试综合题",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/至诚卓远.pdf",
+          "xhs量化面经整理汇总/致诚卓远.docx"
+        ],
+        "question_count": 4
+      }
+    }
+  },
+  {
+    "slug": "material-035",
+    "title": "概率、博弈与回归",
+    "summary": "三次均匀观测的和、提前到站与接送、受限石头剪刀布、顺序选数、相同红盒分球、细杆最快下摆、先回归残差与联合回归",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2035,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "通登",
+        "number": 35,
+        "chapter": 35,
+        "edition": "2026-10",
+        "section": "概率、算法与研究",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/通登.docx"
+        ],
+        "question_count": 7
+      }
+    }
+  },
+  {
+    "slug": "material-036",
+    "title": "递推、区间匹配与质数操作",
+    "summary": "母牛数量、两个字符计数相同的最长区间、变成相邻质数的最少操作",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2036,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "世纪前沿",
+        "number": 36,
+        "chapter": 36,
+        "edition": "2026-10",
+        "section": "概率、算法与研究",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/世纪前沿.docx"
+        ],
+        "question_count": 3
+      }
+    }
+  },
+  {
+    "slug": "material-037",
+    "title": "概率递推、组合优化与研究设计",
+    "summary": "棋盘奖杯、连续六的等待时间、排列的初始递增段、钟针等分圆盘、装备升级到十五、两位方向预测专家、独立分析师资金分配、月销量数据策略、涨跌停与做空约束、次日收益与预测时点、兑",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2037,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "九坤",
+        "number": 37,
+        "chapter": 37,
+        "edition": "2026-10",
+        "section": "概率、算法与研究",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/九坤.docx"
+        ],
+        "question_count": 14
+      }
+    }
+  },
+  {
+    "slug": "material-038",
+    "title": "代数估计与最短路径",
+    "summary": "代数幂整数个位、乘积大小比较、深度学习与循环网络、Transformer 时序预测、从商店到公司的最短路",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2038,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "靖奇投资",
+        "number": 38,
+        "chapter": 38,
+        "edition": "2026-10",
+        "section": "概率、算法与研究",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/靖奇投资.docx"
+        ],
+        "question_count": 5
+      }
+    }
+  },
+  {
+    "slug": "material-039",
+    "title": "随机过程、交易算法与最优停止",
+    "summary": "圆周三点成锐角、百年内连续一百个正面、四面体随机游走、飞机最后两人、六十面与五十面骰、含卖出费用的最优交易、约瑟夫最后一人、步长二的约瑟夫、由 GCD 矩阵恢复序列、抽三",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2039,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "赫富",
+        "number": 39,
+        "chapter": 39,
+        "edition": "2026-10",
+        "section": "概率与算法",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/赫富.docx"
+        ],
+        "question_count": 11
+      }
+    }
+  },
+  {
+    "slug": "material-040",
+    "title": "概率与线性代数选择题",
+    "summary": "连续两个正面、随机标号的骰子、远端离群点对拟合影响、圆周锐角三角形、牛顿第一步、相关系数可行范围、层级指数分布协方差、投影最大方差、异性相邻对数、给定 beta 的最小方",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2040,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "锐天",
+        "number": 40,
+        "chapter": 40,
+        "edition": "2026-10",
+        "section": "概率与算法",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/锐天.docx"
+        ],
+        "question_count": 10
+      }
+    }
+  },
+  {
+    "slug": "material-041",
+    "title": "动态规划与量化研究判断",
+    "summary": "七颗糖的最优策略、网格最小扣分、首次出现正反、首次出现正正、进制数字和整除、奇数行列和矩阵、字符串拼接求和、参与公平零和赌博的动机、量价因子的经济机制、模型未来有效性",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2041,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "聚宽",
+        "number": 41,
+        "chapter": 41,
+        "edition": "2026-10",
+        "section": "概率与算法",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/聚宽.docx",
+          "xhs量化面经整理汇总/聚宽.pdf"
+        ],
+        "question_count": 10
+      }
+    }
+  },
+  {
+    "slug": "material-042",
+    "title": "几何概率、随机过程与顺序算法",
+    "summary": "随机弦、条件停止、几何覆盖、回归范围与顺序结构",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2042,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "诚奇",
+        "number": 42,
+        "chapter": 42,
+        "edition": "2026-10",
+        "section": "概率、线性代数与算法",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/诚奇.docx",
+          "笔试面试回忆/诚奇笔试.docx"
+        ],
+        "question_count": 20
+      }
+    }
+  },
+  {
+    "slug": "material-043",
+    "title": "正态分布、线性模型与数据结构",
+    "summary": "相关正态变量、岭回归梯度、异形骰子的和、幂等矩阵、两地上市股票收益、递增子序列枚举、斜杠字典",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2043,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "安贤",
+        "number": 43,
+        "chapter": 43,
+        "edition": "2026-10",
+        "section": "统计与程序设计",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/安贤.docx"
+        ],
+        "question_count": 7
+      }
+    }
+  },
+  {
+    "slug": "material-044",
+    "title": "Python、概率与算法题目回忆",
+    "summary": "对象拷贝、平方数列表、可变参数、Lasso 与 Ridge、Dropout 训练与推理、未记录的两道概率题、有限次掷骰停止、两骰和五先于和七、无限后退随机游走、七名囚犯猜",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2044,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "托特投资笔试回忆",
+        "number": 44,
+        "chapter": 44,
+        "edition": "2026-10",
+        "section": "统计与程序设计",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "笔试面试回忆/托特投资笔试回忆.docx"
+        ],
+        "question_count": 17
+      }
+    }
+  },
+  {
+    "slug": "material-045",
+    "title": "随机图、计算机基础与并行配送",
+    "summary": "固定边数随机图顶点度、随机图三角形数量、游走到零的概率、偏置游走有限停止、圆环最后访问位置、顺序与随机访问内存、超出物理内存、排序一秒可行性、未缓存变量自增、环境变量、并",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2045,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "佳期",
+        "number": 45,
+        "chapter": 24,
+        "edition": "2026-10",
+        "section": "数学与算法",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/佳期.pdf"
+        ],
+        "question_count": 11
+      }
+    }
+  },
+  {
+    "slug": "material-046",
+    "title": "骰子、几何阻挡与概率算法",
+    "summary": "十骰点数和模七、一般骰子余数分布、反射房间的护卫、五牌展示四牌猜一牌、让分乒乓球、一千升煤油运输、立方体铁架追逃、同端值最大子数组和",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2046,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "白鹭",
+        "number": 46,
+        "chapter": 45,
+        "edition": "2026-10",
+        "section": "数学与算法",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/白鹭.pdf"
+        ],
+        "question_count": 8
+      }
+    }
+  },
+  {
+    "slug": "material-047",
+    "title": "滚动因子处理与随机收益",
+    "summary": "含缺失值的滚动方差、过去五日全股票标准化、稳健标准化、相关与残差、两位循环小数倒数、两条反向回归线、偏置硬币差三停止、圣彼得堡赌局、五次反面的贝叶斯更新、随机赌注至首次反",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2047,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "上海念空私募基金管理合伙企业（有限合伙）线上笔试题目",
+        "number": 47,
+        "chapter": 46,
+        "edition": "2026-10",
+        "section": "数据处理与概率统计",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/上海念空私募基金管理合伙企业（有限合伙）线上笔试题目.pdf"
+        ],
+        "question_count": 9
+      }
+    }
+  },
+  {
+    "slug": "material-048",
+    "title": "数组操作、统计选择题与编程",
+    "summary": "套信封、打印字母 K、SQL 筛选、字母频次、岭回归惩罚系数、filter 与 map、按行取最小值、每周胜利总数、营业额异常值、红球来源、右乘矩阵后的秩、数组视图与复制",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2048,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "喜岳投资",
+        "number": 48,
+        "chapter": 47,
+        "edition": "2026-10",
+        "section": "数据处理与概率统计",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/喜岳投资.docx"
+        ],
+        "question_count": 17
+      }
+    }
+  },
+  {
+    "slug": "material-049",
+    "title": "固定内存的时间加权移动平均",
+    "summary": "不规则到达数据的窗口均价",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2049,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "凯读",
+        "number": 49,
+        "chapter": 48,
+        "edition": "2026-10",
+        "section": "程序设计与模型识别",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/凯读.docx"
+        ],
+        "question_count": 1
+      }
+    }
+  },
+  {
+    "slug": "material-050",
+    "title": "行业暴露估计与潜变量识别",
+    "summary": "行业收益已知的暴露、行业收益也未知",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2050,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "凯读2",
+        "number": 50,
+        "chapter": 49,
+        "edition": "2026-10",
+        "section": "程序设计与模型识别",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/凯读2.pdf"
+        ],
+        "question_count": 2
+      }
+    }
+  },
+  {
+    "slug": "material-051",
+    "title": "电梯等待与时序信号筛选",
+    "summary": "电梯预估下楼时间、下一行 VWAP 与信号选择",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2051,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "伯兄quant校招生机试题",
+        "number": 51,
+        "chapter": 50,
+        "edition": "2026-10",
+        "section": "程序设计与模型识别",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/【quant-校招】笔试题202209/伯兄quant校招生机试题.txt",
+          "xhs量化面经整理汇总/【quant-校招】笔试题202209 2/伯兄quant校招生机试题.txt"
+        ],
+        "question_count": 2
+      }
+    }
+  },
+  {
+    "slug": "material-052",
+    "title": "几何体积、重掷策略与路径",
+    "summary": "近砖点体积、重掷两骰的概率、四边形角度、摩托车最短加速路程、八点键盘最长密码",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2052,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "通登 2",
+        "number": 52,
+        "chapter": 51,
+        "edition": "2026-10",
+        "section": "组合、几何与程序设计",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/通登 2.docx"
+        ],
+        "question_count": 5
+      }
+    }
+  },
+  {
+    "slug": "material-053",
+    "title": "语言推理、运动与几何",
+    "summary": "Hausa 数字推理、恒力下速率、垂线端点最远距离、三个均匀变量两两分离、递归代码输出",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2053,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "通登笔试",
+        "number": 53,
+        "chapter": 52,
+        "edition": "2026-10",
+        "section": "组合、几何与程序设计",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "笔试面试回忆/通登笔试.docx"
+        ],
+        "question_count": 5
+      }
+    }
+  },
+  {
+    "slug": "material-054",
+    "title": "集合撮合、素数子串与坦克模拟",
+    "summary": "最大成交量撮合、不含前导零的素数子串、无图形界面坦克 Demo",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2054,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "孝庸基金",
+        "number": 54,
+        "chapter": 53,
+        "edition": "2026-10",
+        "section": "组合、几何与程序设计",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/孝庸基金.docx"
+        ],
+        "question_count": 3
+      }
+    }
+  },
+  {
+    "slug": "material-055",
+    "title": "交易数据分析与行情指标实作",
+    "summary": "城市与地区消费、付款差异、账户年龄及行情热度指标",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2055,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "顽岩量化研究实习岗",
+        "number": 55,
+        "chapter": 54,
+        "edition": "2026-10",
+        "section": "数据分析实作",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/顽岩.zip!/量化研究实习岗笔试题（2.5h）.docx"
+        ],
+        "question_count": 8
+      }
+    }
+  },
+  {
+    "slug": "material-jiukun-2",
+    "title": "九坤笔试回忆：排列、等待时间与状态压缩",
+    "summary": "九坤笔试回忆：排列、等待时间与状态压缩：题目整理、数学推导与程序实现。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2056,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "扫描试题与图像资料",
+        "number": 56,
+        "chapter": 55,
+        "edition": "2026-10",
+        "section": "九坤笔试回忆：排列、等待时间与状态压缩",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/九坤2.docx"
+        ],
+        "question_count": 4
+      }
+    }
+  },
+  {
+    "slug": "material-huajun",
+    "title": "华均广汇：图计数、最大子数组与数据合并",
+    "summary": "华均广汇：图计数、最大子数组与数据合并：题目整理、数学推导与程序实现。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2057,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "扫描试题与图像资料",
+        "number": 57,
+        "chapter": 55,
+        "edition": "2026-10",
+        "section": "华均广汇：图计数、最大子数组与数据合并",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/华均广汇.docx"
+        ],
+        "question_count": 3
+      }
+    }
+  },
+  {
+    "slug": "material-zhuoshi",
+    "title": "卓识投资：前沿筛选、随机序列与组合计数",
+    "summary": "卓识投资：前沿筛选、随机序列与组合计数：题目整理、数学推导与程序实现。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2058,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "扫描试题与图像资料",
+        "number": 58,
+        "chapter": 55,
+        "edition": "2026-10",
+        "section": "卓识投资：前沿筛选、随机序列与组合计数",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/卓识投资.docx"
+        ],
+        "question_count": 6
+      }
+    }
+  },
+  {
+    "slug": "material-hande",
+    "title": "涵德：程序分析、组合风险与动态决策",
+    "summary": "涵德：程序分析、组合风险与动态决策，含题目条件、解题过程与程序示例。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2059,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "扫描试题与图像资料",
+        "number": 59,
+        "chapter": 55,
+        "edition": "2026-10",
+        "section": "涵德：程序分析、组合风险与动态决策",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/涵德.pdf"
+        ],
+        "question_count": 8
+      }
+    }
+  },
+  {
+    "slug": "material-weiguan",
+    "title": "微观博易：贪心算法、矩阵赋值与条件分布",
+    "summary": "微观博易：贪心算法、矩阵赋值与条件分布，含题目条件、解题过程与程序示例。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2060,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "扫描试题与图像资料",
+        "number": 60,
+        "chapter": 55,
+        "edition": "2026-10",
+        "section": "微观博易：贪心算法、矩阵赋值与条件分布",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/微观博易.jpg"
+        ],
+        "question_count": 5
+      }
+    }
+  },
+  {
+    "slug": "material-jiwei",
+    "title": "集微：递推策略、正则化与渐近估计",
+    "summary": "集微：递推策略、正则化与渐近估计，含题目条件、解题过程与程序示例。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2061,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "扫描试题与图像资料",
+        "number": 61,
+        "chapter": 55,
+        "edition": "2026-10",
+        "section": "集微：递推策略、正则化与渐近估计",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/集微.jpg"
+        ],
+        "question_count": 5
+      }
+    }
+  },
+  {
+    "slug": "material-higgs-first",
+    "title": "希格斯第一轮：分析、概率与矩阵",
+    "summary": "希格斯第一轮：分析、概率与矩阵：原题条件、推导和可复核的答案。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2062,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "扫描试题与图像资料",
+        "number": 62,
+        "chapter": 55,
+        "edition": "2026-10",
+        "section": "希格斯第一轮：分析、概率与矩阵",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/希格斯/微信图片_20210904223904.jpg"
+        ],
+        "question_count": 20
+      }
+    }
+  },
+  {
+    "slug": "material-higgs-second",
+    "title": "希格斯第二轮：构造、递推与不变量",
+    "summary": "希格斯第二轮：构造、递推与不变量：原题条件、推导和可复核的答案。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2063,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "扫描试题与图像资料",
+        "number": 63,
+        "chapter": 55,
+        "edition": "2026-10",
+        "section": "希格斯第二轮：构造、递推与不变量",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/希格斯/微信图片_20210904223912.jpg"
+        ],
+        "question_count": 7
+      }
+    }
+  },
+  {
+    "slug": "material-lingjun-scans",
+    "title": "灵均图像试题：概率、最优停止与动态规划",
+    "summary": "灵均图像试题：概率、最优停止与动态规划：原题条件、推导和可复核的答案。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2064,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "扫描试题与图像资料",
+        "number": 64,
+        "chapter": 55,
+        "edition": "2026-10",
+        "section": "灵均图像试题：概率、最优停止与动态规划",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.33.58.png",
+          "xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.34.14.png",
+          "xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.34.26.png",
+          "xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.34.31.png",
+          "xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.34.35.png",
+          "xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.34.42.png",
+          "xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.34.47.png",
+          "xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.34.56.png",
+          "xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.35.03.png",
+          "xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.35.17.png"
+        ],
+        "question_count": 10
+      }
+    }
+  },
+  {
+    "slug": "material-eff",
+    "title": "艾方：订单簿特征与波动率预测",
+    "summary": "艾方：订单簿特征与波动率预测，按原资料主题整理。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2065,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "扫描试题与图像资料",
+        "number": 65,
+        "chapter": 55,
+        "edition": "2026-10",
+        "section": "艾方：订单簿特征与波动率预测",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "xhs量化面经整理汇总/艾方.pdf"
+        ],
+        "question_count": 7
+      }
+    }
+  },
+  {
+    "slug": "material-capital-concepts",
+    "title": "资本市场术语与研究指标",
+    "summary": "资本市场术语与研究指标，按原资料主题整理。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2066,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "资本市场基础与资料索引",
+        "number": 66,
+        "chapter": 56,
+        "edition": "2026-10",
+        "section": "资本市场术语与研究指标",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "资本面学习资料.pdf"
+        ],
+        "question_count": 0
+      }
+    }
+  },
+  {
+    "slug": "material-capital-reading",
+    "title": "资本市场阅读与音视频资料索引",
+    "summary": "资本市场阅读与音视频资料索引，按原资料主题整理。",
+    "kind": "reference",
+    "status": "published",
+    "sort_order": 2067,
+    "metadata": {
+      "interview": {
+        "book": "practice",
+        "topic": "资本市场基础与资料索引",
+        "number": 67,
+        "chapter": 56,
+        "edition": "2026-10",
+        "section": "资本市场阅读与音视频资料索引",
+        "difficulty": "综合",
+        "full_source": true,
+        "source_files": [
+          "资本面学习资料.pdf"
+        ],
+        "question_count": 0
+      }
+    }
+  }
+]

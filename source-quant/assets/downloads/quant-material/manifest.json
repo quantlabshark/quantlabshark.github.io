@@ -1,0 +1,42 @@
+[
+  {
+    "file": "features-analysis.zip",
+    "url": "/assets/downloads/quant-material/features-analysis.zip",
+    "size_bytes": 69545582,
+    "sha256": "3ec669c3f4f6924301c4b1ccd89290b37f87aca1a4c84db0c31389cedc30b419",
+    "entries": [
+      "features.csv",
+      "analyze.py",
+      "features-results.json"
+    ]
+  },
+  {
+    "file": "wanyan-analysis.zip",
+    "url": "/assets/downloads/quant-material/wanyan-analysis.zip",
+    "size_bytes": 9259615,
+    "sha256": "22d357dedcd6bd8b8812f63b3d2e2bae6148234975c96ef91dd7e580178b03ef",
+    "entries": [
+      "transaction-anonymous.csv",
+      "stock_price.csv",
+      "热门股票.csv",
+      "analyze_transactions.py",
+      "analyze_market.py",
+      "transaction-results.json",
+      "result.csv",
+      "wanyan-correlations.csv",
+      "wanyan-market-summary.json"
+    ]
+  },
+  {
+    "file": "assignment-support.zip",
+    "url": "/assets/downloads/quant-material/assignment-support.zip",
+    "size_bytes": 1751,
+    "sha256": "fca8293c1ccf175801d1208ce5b47bb3a24a5355fe1bad0f21304c9bde8d5348",
+    "entries": [
+      "ContractList.csv",
+      "Functions/FilterStructure.m",
+      "Functions/LoadMarketData.m",
+      "Functions/ReadCSV.m"
+    ]
+  }
+]

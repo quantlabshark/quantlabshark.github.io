@@ -1,13 +1,10 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path');
 // Searchable full text and article examples belong to authenticated reads.
-// Replace legacy source JSON routes with the small public catalog fields.
+// Replace the source search index with the small public catalog fields.
 hexo.extend.filter.register('after_generate',function(){
- const paths={};
- for(const key of ['commands','dictionaries'])paths[key]=JSON.parse(fs.readFileSync(path.join(this.source_dir,'assets',key+'.json'),'utf8')).map(row=>row.url);
- this.route.set('assets/reference-paths.json',JSON.stringify(paths));
  for(const name of fs.readdirSync(path.join(this.source_dir,'assets'))){
-  if(!/^(?:dictionaries|function-objects|boundary-conditions|reference-[\w-]+|search)\.json$/.test(name))continue;
+  if(name!=='search.json')continue;
   const rows=JSON.parse(fs.readFileSync(path.join(this.source_dir,'assets',name),'utf8'));if(!Array.isArray(rows))continue;
   if(!rows.some(r=>r.searchText!==undefined||r.text!==undefined||r.examples!==undefined||r.body!==undefined))continue;
   const safe=rows.map(row=>{const {searchText,text,examples,body,...item}=row;

@@ -4621,4 +4621,3 @@ function yaml(hljs) {
 module.exports = yaml;
 
 return module.exports;})());
-self.foamHighlight.registerLanguage('openfoam',h=>({name:'OpenFOAM dictionary',aliases:['foam','dict'],keywords:{keyword:'FoamFile dimensions internalField boundaryField type value uniform nonuniform application solver libs functions include includeIfPresent includeEtc includeFunc code codeInclude codeOptions codeLibs name object class version format location',literal:'true false yes no on off',built_in:'fixedValue zeroGradient noSlip empty wedge symmetryPlane cyclic inletOutlet fixedFluxPressure laminar RAS LES Gauss Euler backward CrankNicolson upwind linear linearUpwind limitedLinear PIMPLE SIMPLE PISO PCG PBiCGStab GAMG smoothSolver'},contains:[h.C_LINE_COMMENT_MODE,h.C_BLOCK_COMMENT_MODE,h.QUOTE_STRING_MODE,h.C_NUMBER_MODE,{className:'meta',begin:/#[A-Za-z{][^\n]*/},{className:'variable',begin:/\$[A-Za-z_{][\w{}./]*/}]}));

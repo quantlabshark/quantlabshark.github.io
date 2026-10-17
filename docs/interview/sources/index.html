@@ -1,0 +1,881 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>资料来源与覆盖清单 · QuantLab</title>
+  <meta name="description" content="教材章节、原始文件与网站阅读单元的对应关系。">
+  <meta name="theme-color" content="#f6f5f0" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#111816" media="(prefers-color-scheme: dark)">
+
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="preconnect" href="https://skqoondpsqzvybnmcaas.supabase.co" crossorigin>
+  <link rel="preload" href="/assets/auth-config.json" as="fetch" crossorigin>
+
+  <script>// Apply saved appearance before the first paint; controls load without blocking HTML.
+(() => {
+ const root=document.documentElement;
+ root.classList.add('has-js');
+ let theme='system',palette='green',width=null,collapsed=false;
+ try{theme=localStorage.getItem('foamlab.theme')||'system';palette=localStorage.getItem('foamlab.palette')||'green';width=Number(localStorage.getItem('foamlab.sidebarWidth'));collapsed=localStorage.getItem('foamlab.sidebarCollapsed')==='1';}catch{}
+ root.dataset.theme=['light','dark'].includes(theme)?theme:(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+ root.dataset.palette=['green','blue','pink','lavender','beige'].includes(palette)?palette:'green';
+ root.style.colorScheme=root.dataset.theme;
+ const backgrounds={green:{light:'#f6f5f0',dark:'#111816'},blue:{light:'#f3f5f8',dark:'#111821'},pink:{light:'#faf4f5',dark:'#20171c'},lavender:{light:'#f6f4fa',dark:'#1b1723'},beige:{light:'#faf6ed',dark:'#201c15'}};
+ document.querySelectorAll('meta[name="theme-color"]').forEach(meta=>meta.content=backgrounds[root.dataset.palette][root.dataset.theme]);
+ root.classList.toggle('sidebar-collapsed',collapsed);
+ if(innerWidth>=761&&Number.isFinite(width)&&width>=200)root.style.setProperty('--sidebar',Math.round(Math.max(200,Math.min(480,Math.floor(innerWidth*.38),width)))+'px');
+})();
+</script>
+  <link rel="stylesheet" href="/assets/site-core.css?v=b2d655636bc5">
+  <link rel="preload" href="/assets/site-extras.css?v=9c0e554d3282" as="style">
+  <link rel="preload" href="/assets/card-backgrounds.css?v=270af760c99f" as="style">
+  <script src="/assets/runtime-account.js?v=5ca9f448ee73" defer></script>
+  <script src="/assets/appearance.js?v=67ddfcfe66ed" defer></script>
+  <script src="/assets/sidebar-resize.js?v=33c42fbee2a7" defer></script>
+  <script src="/assets/navigation-tree.js?v=36d86516109f" defer></script>
+  <script src="/assets/navigation.js?v=cf428e00fa47" defer></script>
+
+  <script src="/assets/search-matches.js?v=10f98f89b4c9" defer></script>
+  <script src="/assets/search-scope.js?v=91e891d855f8" defer></script>
+  <script src="/assets/site.js?v=127aa28f1576" defer></script>
+  <script src="/assets/runtime-content.js?v=8f36c9a4d0f8" data-math-runtime="/assets/runtime-math.js?v=b1a923324b80" defer></script>
+  <script src="/assets/community-likes.js?v=98d5222155f7" defer></script>
+  <script src="/assets/runtime-ui.js?v=cbe3a599cbe6" defer></script>
+
+
+  <script src="/assets/runtime-panda-art.js?v=986424b93b42" defer fetchpriority="low"></script>
+  <script src="/assets/runtime-panda-pet.js?v=b9e38e4287d3" defer fetchpriority="low"></script>
+  <link rel="stylesheet" href="/assets/site-extras.css?v=9c0e554d3282">
+  <link rel="stylesheet" href="/assets/card-backgrounds.css?v=270af760c99f">
+<link rel="stylesheet" href="/assets/quant.css?v=778543f2b587"><meta name="generator" content="Hexo 8.1.2"></head>
+<body data-section="page" data-lesson="">
+<a class="skip" href="#main">跳到主要内容</a>
+<aside class="sidebar" id="sidebar">
+  <button class="icon-button sidebar-close" type="button" data-close-nav aria-label="关闭导航">×</button>
+  <a class="brand" href="/"><span class="brand-mark"><img src="/assets/favicon.svg" alt="" width="44" height="44"></span><span>QuantLab<small>小鲨陪你学量化</small></span></a>
+  <div class="version"><span class="status-dot"></span> Python · 数据 · 研究</div>
+  <nav aria-label="主要导航">
+    <div class="nav-label">学习与研究</div><div class="nav-group" data-directory-id="091fce16-2e52-4792-8cb6-acb9f615e856" data-nav-section="home"><div class="nav-parent"><a class="nav-item " href="/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10 12 3l9 7v11h-6v-7H9v7H3Z"/></svg><span>学习概览</span></a></div></div><div class="nav-group" data-directory-id="773a34b4-8d48-4fca-9258-927b946d2914" data-nav-section="start"><div class="nav-parent"><a class="nav-item " href="/start/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg><span>快速开始</span></a></div></div><div class="nav-group" data-directory-id="c2c20043-d270-4aed-babd-39d07e85f26a" data-nav-section="courses"><div class="nav-parent"><a class="nav-item " href="/courses/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v16M3 4c4-1 7 0 9 2 2-2 5-3 9-2v16c-4-1-7 0-9 2-2-2-5-3-9-2Z"/></svg><span>系统学习</span></a><button type="button" class="nav-expand" aria-controls="directory-c2c20043-d270-4aed-babd-39d07e85f26a" aria-expanded="false" aria-label="展开系统学习子目录"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 6 6-6 6"/></svg></button></div><div class="nav-subgroup" id="directory-c2c20043-d270-4aed-babd-39d07e85f26a" hidden><div class="nav-group" data-directory-id="7fbed1d6-c6c5-4c1b-8735-ade64f15be52" data-nav-section="course-0"><div class="nav-parent"><a class="nav-item nav-subitem " href="/courses/#stage-01"><span>01 市场与研究</span></a></div></div><div class="nav-group" data-directory-id="0c97f1c3-dfca-48e2-9cfa-ae10fcb24de9" data-nav-section="course-1"><div class="nav-parent"><a class="nav-item nav-subitem " href="/courses/#stage-02"><span>02 Python与数据</span></a></div></div><div class="nav-group" data-directory-id="bae66396-d1e6-4607-ac93-86e0f465d805" data-nav-section="course-2"><div class="nav-parent"><a class="nav-item nav-subitem " href="/courses/#stage-03"><span>03 概率与统计</span></a></div></div><div class="nav-group" data-directory-id="5c3ef451-63c2-4e13-86cd-7320240126e5" data-nav-section="course-3"><div class="nav-parent"><a class="nav-item nav-subitem " href="/courses/#stage-04"><span>04 策略与回测</span></a></div></div><div class="nav-group" data-directory-id="606eb414-4b3f-55ba-bc41-f936b93c9b47" data-nav-section="course-4"><div class="nav-parent"><a class="nav-item nav-subitem " href="/courses/#stage-05"><span>05 因子与预测</span></a></div></div><div class="nav-group" data-directory-id="5c14064d-8915-5f7c-bcc6-f9bd10d4c40e" data-nav-section="course-5"><div class="nav-parent"><a class="nav-item nav-subitem " href="/courses/#stage-06"><span>06 机器学习与文本</span></a></div></div><div class="nav-group" data-directory-id="4cb276d3-8233-5664-8700-2a8bbd7b23cc" data-nav-section="course-6"><div class="nav-parent"><a class="nav-item nav-subitem " href="/courses/#stage-07"><span>07 投资组合</span></a></div></div><div class="nav-group" data-directory-id="dcd8ff4d-86f5-5bb7-9657-9505a8ce9fce" data-nav-section="course-7"><div class="nav-parent"><a class="nav-item nav-subitem " href="/courses/#stage-08"><span>08 订单簿与随机模型</span></a></div></div><div class="nav-group" data-directory-id="e2d6ce20-4289-5775-b6f9-55af14c8bfdf" data-nav-section="course-8"><div class="nav-parent"><a class="nav-item nav-subitem " href="/courses/#stage-09"><span>09 高频数据分析</span></a></div></div><div class="nav-group" data-directory-id="5ef91958-52de-5cd7-8782-1265893a5d9a" data-nav-section="course-9"><div class="nav-parent"><a class="nav-item nav-subitem " href="/courses/#stage-10"><span>10 执行与做市</span></a></div></div><div class="nav-group" data-directory-id="fbc0522d-3663-5bbb-be2d-6b8691cc16c7" data-nav-section="course-10"><div class="nav-parent"><a class="nav-item nav-subitem " href="/courses/#stage-11"><span>11 研究系统与综合实践</span></a></div></div></div></div><div class="nav-group" data-directory-id="a99b73bc-8dcb-4d7d-84f2-a0f30d259ede" data-nav-section="topics"><div class="nav-parent"><a class="nav-item " href="/topics/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h7v7H3Zm11 0h7v7h-7ZM3 14h7v7H3Zm11 0h7v7h-7Z"/></svg><span>专题学习</span></a></div></div><div class="nav-label">笔试与面试</div><div class="nav-group" data-directory-id="e4929cee-404a-50b6-a5b7-e76678ca05dd" data-nav-section="interview"><div class="nav-parent"><a class="nav-item active" href="/interview/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3h8v4H8ZM7 5H4v17h16V5h-3M8 12h8M8 17h5"/></svg><span>量化笔面试</span></a><button type="button" class="nav-expand" aria-controls="directory-e4929cee-404a-50b6-a5b7-e76678ca05dd" aria-expanded="false" aria-label="展开量化笔面试子目录"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 6 6-6 6"/></svg></button></div><div class="nav-subgroup" id="directory-e4929cee-404a-50b6-a5b7-e76678ca05dd" hidden><div class="nav-group" data-directory-id="061c5d65-3752-51b1-815a-0a831b5df727" data-nav-section="interview-zhou"><div class="nav-parent"><a class="nav-item nav-subitem " href="/interview/zhou/"><span>经典书籍题解</span></a></div></div><div class="nav-group" data-directory-id="6609a5e7-aa1a-5c66-9e8a-4566ec0c74ff" data-nav-section="interview-practice"><div class="nav-parent"><a class="nav-item nav-subitem " href="/interview/practice/"><span>笔面试实战</span></a></div></div><div class="nav-group" data-directory-id="e2a8bdb2-93e4-5150-ab6d-83fa6427edd5" data-nav-section="interview-sources"><div class="nav-parent"><a class="nav-item nav-subitem active" href="/interview/sources/" aria-current="page"><span>资料来源</span></a></div></div></div></div><div class="nav-label">实验与工具</div><div class="nav-group" data-directory-id="c41526dd-742a-469f-9389-9bfddcee30dc" data-nav-section="quick-reference"><div class="nav-parent"><a class="nav-item " href="/quick-reference/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 16 22 22M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0"/></svg><span>速查手册</span></a><button type="button" class="nav-expand" aria-controls="directory-c41526dd-742a-469f-9389-9bfddcee30dc" aria-expanded="false" aria-label="展开速查手册子目录"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 6 6-6 6"/></svg></button></div><div class="nav-subgroup" id="directory-c41526dd-742a-469f-9389-9bfddcee30dc" hidden><div class="nav-group" data-directory-id="13c09645-17ba-4818-ac04-473fbd820fb0" data-nav-section="commands"><div class="nav-parent"><a class="nav-item nav-subitem " href="/commands/"><span>Python 速查</span></a></div></div><div class="nav-group" data-directory-id="39a8c8e1-a0a8-4dcd-aeae-ea460cf1031f" data-nav-section="dictionaries"><div class="nav-parent"><a class="nav-item nav-subitem " href="/dictionaries/"><span>研究方法速查</span></a></div></div></div></div><div class="nav-group" data-directory-id="5813c8a9-fb85-4ce0-b907-41b640afd107" data-nav-section="labs"><div class="nav-parent"><a class="nav-item " href="/labs/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 3v18h18M8 16v-5m5 5V7m5 9V5"/></svg><span>交互实验</span></a></div></div><div class="nav-group" data-directory-id="2f203658-6876-400a-afaa-ec29caee921f" data-nav-section="programming"><div class="nav-parent"><a class="nav-item " href="/programming/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 7 5 5-5 5m8 0h6M2 3h20v18H2Z"/></svg><span>Python 实践</span></a></div></div><div class="nav-group" data-directory-id="4560f087-a08d-4b02-8eb8-545d6594d86c" data-nav-section="tools"><div class="nav-parent"><a class="nav-item " href="/tools/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14 6 4 4m-9 4-6 6 2 2 6-6M13 3a6 6 0 0 0-4 10l2 2a6 6 0 0 0 10-4l-4 2-4-4Z"/></svg><span>工具生态</span></a></div></div><div class="nav-label">资源与社区</div><div class="nav-group" data-directory-id="6cb0390d-4b0e-459e-a155-9dfb328810ec" data-nav-section="resources"><div class="nav-parent"><a class="nav-item " href="/resources/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m-5-5 5 5 5-5M3 17v5h18v-5"/></svg><span>资料中心</span></a></div></div><div class="nav-group" data-directory-id="552777e1-0105-4d2d-b417-a210de9b0297" data-nav-section="sharing"><div class="nav-parent"><a class="nav-item " href="/sharing/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v16M3 4c4-1 7 0 9 2 2-2 5-3 9-2v16c-4-1-7 0-9 2-2-2-5-3-9-2Z"/></svg><span>实践与分享</span></a></div></div><div class="nav-group" data-directory-id="595214f5-cc0a-4dcc-8a05-6a22406b0664" data-nav-section="community"><div class="nav-parent"><a class="nav-item " href="/community/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h18v13H9l-6 5Z"/></svg><span>讨论中心</span></a></div></div><div class="nav-group" data-directory-id="eef736ef-be09-4f13-99d4-433464d67f07" data-nav-section="assignments"><div class="nav-parent"><a class="nav-item " href="/assignments/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 3h16v19H4Zm4 7 2 2 5-6M8 17h8"/></svg><span>作业与实践</span></a></div></div><div class="nav-group" data-directory-id="bba8fbde-b0e3-444d-8adc-a61271523e45" data-nav-section="announcements"><div class="nav-parent"><a class="nav-item " href="/announcements/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17h16l-2-4V8a6 6 0 0 0-12 0v5Zm6 4h4"/></svg><span>网站公告</span></a></div></div>
+  </nav>
+  <div class="sidebar-bottom"><div class="tiny-label">QUANTITATIVE LEARNING</div><p>从数据到可验证的研究</p><a href="/read/?slug=sources-and-validation">资料与研究约定 →</a></div>
+</aside>
+<div class="app-shell">
+  <header class="topbar"><button class="icon-button mobile-menu" aria-label="打开导航" aria-expanded="false" aria-controls="sidebar"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button><div class="breadcrumb"><a id="breadcrumb-parent" href="/">学习概览</a> <span>/</span> <strong>资料来源与覆盖清单</strong></div><button class="search-trigger" data-open-search><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="m16 16 5 5"/></svg><span>搜索课程、方法、代码…</span><kbd>Ctrl K</kbd></button><div class="account-actions" aria-label="账号"><span class="account-entry"><button class="account-nav" type="button" id="account-nav-label" aria-busy="true" aria-expanded="false" aria-controls="account-panel" aria-haspopup="dialog" aria-describedby="account-reply-count">个人中心</button><span id="account-reply-count" class="reply-count" data-reply-count hidden></span></span><button class="account-sign-out" id="nav-sign-out" type="button" hidden>退出登录</button></div><a class="github-link" href="https://github.com/quantlabshark/quantlabshark.github.io" target="_blank" rel="noopener noreferrer" aria-label="GitHub 仓库"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 20c-5 1-5-3-7-3m14 5v-4c0-1-.3-2-1-2 4-.5 7-2 7-6 0-2-1-3-2-4 0-1 0-3-1-4-2 0-4 1-4 1-2-.5-4-.5-6 0 0 0-2-1-4-1-1 1-1 3-1 4-1 1-2 2-2 4 0 4 3 5.5 7 6-.7.5-1 1-1 2v4"/></svg></a></header>
+  <section id="account-panel" class="account-panel" role="dialog" aria-label="我的账号" hidden>
+ <div class="account-panel-heading"><strong>我的账号</strong><button type="button" class="icon-button" id="account-panel-close" aria-label="关闭账号面板">×</button></div>
+ <div class="account-panel-identity"><span id="account-panel-avatar" class="account-panel-avatar" aria-hidden="true">F</span><div><strong id="account-panel-name">个人中心</strong><p id="account-panel-status" role="status">正在恢复登录…</p></div><span class="account-panel-badge" id="account-panel-badge" hidden>已登录</span></div>
+ <div id="account-panel-member" hidden>
+  <a class="account-panel-growth" href="/account/#my-panda"><div><span>我的鲨鱼</span><strong id="account-panel-level">等级读取中…</strong></div><div class="account-panel-xp"><span id="account-panel-xp-bar"></span></div><p id="account-panel-xp">正在读取成长记录</p></a>
+  <nav class="account-panel-links" aria-label="账号常用入口"><a href="/account/#notifications">消息提醒 <span class="reply-count" data-reply-count hidden></span></a><a href="/account/#notes">我的笔记 <span>→</span></a><a href="/account/#profile-form">个人资料 <span>→</span></a><a href="/account/#my-panda">我的鲨鱼 <span>→</span></a><a href="/account/#account-progress-state">学习进度 <span>→</span></a><a href="/studio/">作者工作台 <span>→</span></a><a href="/admin/" data-management-link hidden>管理平台 <span>→</span></a></nav>
+  <div class="account-panel-footer"><a href="/account/">打开个人中心 →</a><button type="button" class="account-sign-out" data-account-sign-out>退出登录</button></div>
+ </div>
+ <div id="account-panel-guest" hidden><p>登录后保存学习进度，查看鲨鱼等级并参与讨论。</p><button type="button" class="button" id="account-panel-sign-in"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 20c-5 1-5-3-7-3m14 5v-4c0-1-.3-2-1-2 4-.5 7-2 7-6 0-2-1-3-2-4 0-1 0-3-1-4-2 0-4 1-4 1-2-.5-4-.5-6 0 0 0-2-1-4-1-1 1-1 3-1 4-1 1-2 2-2 4 0 4 3 5.5 7 6-.7.5-1 1-1 2v4"/></svg> 使用 GitHub 登录</button></div>
+ <p id="account-panel-message" role="status" hidden></p>
+</section>
+
+  <main id="main"><div class="page-return"><a class="button secondary" id="page-back-link" href="/">← 返回学习概览</a></div><div class="article-shell">
+  <article class="article" data-cms-slug="">
+    <div class="eyebrow">QUANTLAB</div>
+    <h1>资料来源与覆盖清单</h1>
+
+    <div class="prose"><h1 id="资料来源与覆盖清单"><a href="#资料来源与覆盖清单" class="headerlink" title="资料来源与覆盖清单"></a>资料来源与覆盖清单</h1><h2 id="整理范围"><a href="#整理范围" class="headerlink" title="整理范围"></a>整理范围</h2><p>Xinfeng Zhou 教材按原书 7 章整理为 33 个阅读单元，对应所提供 PDF 的全部 96 页。QuantMaterial 的 93 个文件和压缩包内 4 个独有文件已逐项登记，正文整理为 67 个阅读单元。重复文件合并到同一篇题解。</p>
+<p><a href="/interview/zhou/">经典教材目录</a> · <a href="/interview/practice/">笔面试资料目录</a> · <a href="/assets/source-coverage.json">下载完整覆盖记录</a></p>
+<h2 id="教材章节"><a href="#教材章节" class="headerlink" title="教材章节"></a>教材章节</h2><div class="table-scroll" tabindex="0" role="region" aria-label="表格，可横向滚动"><table>
+<thead>
+<tr>
+<th>章节</th>
+<th>阅读单元</th>
+<th>PDF 页码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><a href="/read/?slug=zhou-full-1">1 一般原则</a></td>
+<td>1–2</td>
+</tr>
+<tr>
+<td>2.1</td>
+<td><a href="/read/?slug=zhou-full-2-1">2.1 问题简化</a></td>
+<td>2–3</td>
+</tr>
+<tr>
+<td>2.2</td>
+<td><a href="/read/?slug=zhou-full-2-2">2.2 逻辑推理</a></td>
+<td>3–6</td>
+</tr>
+<tr>
+<td>2.3</td>
+<td><a href="/read/?slug=zhou-full-2-3">2.3 转换问题表示</a></td>
+<td>6–8</td>
+</tr>
+<tr>
+<td>2.4</td>
+<td><a href="/read/?slug=zhou-full-2-4">2.4 对称性</a></td>
+<td>8–9</td>
+</tr>
+<tr>
+<td>2.5</td>
+<td><a href="/read/?slug=zhou-full-2-5">2.5 数列求和</a></td>
+<td>9–11</td>
+</tr>
+<tr>
+<td>2.6</td>
+<td><a href="/read/?slug=zhou-full-2-6">2.6 抽屉原理</a></td>
+<td>11–12</td>
+</tr>
+<tr>
+<td>2.7</td>
+<td><a href="/read/?slug=zhou-full-2-7">2.7 模运算</a></td>
+<td>12–14</td>
+</tr>
+<tr>
+<td>2.8</td>
+<td><a href="/read/?slug=zhou-full-2-8">2.8 数学归纳法</a></td>
+<td>14–16</td>
+</tr>
+<tr>
+<td>2.9</td>
+<td><a href="/read/?slug=zhou-full-2-9">2.9 反证法</a></td>
+<td>16–17</td>
+</tr>
+<tr>
+<td>3.1</td>
+<td><a href="/read/?slug=zhou-full-3-1">3.1 极限与导数</a></td>
+<td>17–19</td>
+</tr>
+<tr>
+<td>3.2</td>
+<td><a href="/read/?slug=zhou-full-3-2">3.2 积分</a></td>
+<td>19–21</td>
+</tr>
+<tr>
+<td>3.3</td>
+<td><a href="/read/?slug=zhou-full-3-3">3.3 偏导数与重积分</a></td>
+<td>21–21</td>
+</tr>
+<tr>
+<td>3.4</td>
+<td><a href="/read/?slug=zhou-full-3-4">3.4 微积分方法</a></td>
+<td>21–24</td>
+</tr>
+<tr>
+<td>3.5</td>
+<td><a href="/read/?slug=zhou-full-3-5">3.5 常微分方程</a></td>
+<td>24–26</td>
+</tr>
+<tr>
+<td>3.6</td>
+<td><a href="/read/?slug=zhou-full-3-6">3.6 线性代数</a></td>
+<td>26–30</td>
+</tr>
+<tr>
+<td>4.1</td>
+<td><a href="/read/?slug=zhou-full-4-1">4.1 概率定义与集合运算</a></td>
+<td>30–33</td>
+</tr>
+<tr>
+<td>4.2</td>
+<td><a href="/read/?slug=zhou-full-4-2">4.2 组合分析</a></td>
+<td>33–37</td>
+</tr>
+<tr>
+<td>4.3</td>
+<td><a href="/read/?slug=zhou-full-4-3">4.3 条件概率与贝叶斯公式</a></td>
+<td>37–44</td>
+</tr>
+<tr>
+<td>4.4</td>
+<td><a href="/read/?slug=zhou-full-4-4">4.4 离散分布与连续分布</a></td>
+<td>44–47</td>
+</tr>
+<tr>
+<td>4.5</td>
+<td><a href="/read/?slug=zhou-full-4-5">4.5 期望、方差与协方差</a></td>
+<td>47–50</td>
+</tr>
+<tr>
+<td>4.6</td>
+<td><a href="/read/?slug=zhou-full-4-6">4.6 顺序统计量</a></td>
+<td>50–52</td>
+</tr>
+<tr>
+<td>5.1</td>
+<td><a href="/read/?slug=zhou-05-01">马尔可夫链</a></td>
+<td>53–58</td>
+</tr>
+<tr>
+<td>5.2</td>
+<td><a href="/read/?slug=zhou-05-02">鞅与随机游走</a></td>
+<td>58–61</td>
+</tr>
+<tr>
+<td>5.3</td>
+<td><a href="/read/?slug=zhou-05-03">动态规划</a></td>
+<td>61–65</td>
+</tr>
+<tr>
+<td>5.4</td>
+<td><a href="/read/?slug=zhou-05-04">布朗运动与随机微积分</a></td>
+<td>65–69</td>
+</tr>
+<tr>
+<td>6.1</td>
+<td><a href="/read/?slug=zhou-06-01">期权定价</a></td>
+<td>69–75</td>
+</tr>
+<tr>
+<td>6.2</td>
+<td><a href="/read/?slug=zhou-06-02">期权风险敏感度</a></td>
+<td>75–80</td>
+</tr>
+<tr>
+<td>6.3</td>
+<td><a href="/read/?slug=zhou-06-03">期权组合与奇异期权</a></td>
+<td>80–82</td>
+</tr>
+<tr>
+<td>6.4</td>
+<td><a href="/read/?slug=zhou-06-04">组合、风险与固定收益</a></td>
+<td>82–85</td>
+</tr>
+<tr>
+<td>7.1</td>
+<td><a href="/read/?slug=zhou-07-01">算法与复杂度</a></td>
+<td>86–92</td>
+</tr>
+<tr>
+<td>7.2</td>
+<td><a href="/read/?slug=zhou-07-02">二进制与概率编码</a></td>
+<td>92–92</td>
+</tr>
+<tr>
+<td>7.3</td>
+<td><a href="/read/?slug=zhou-07-03">蒙特卡洛与有限差分</a></td>
+<td>93–96</td>
+</tr>
+</tbody></table></div>
+<h2 id="数据与代码"><a href="#数据与代码" class="headerlink" title="数据与代码"></a>数据与代码</h2><div class="table-scroll" tabindex="0" role="region" aria-label="表格，可横向滚动"><table>
+<thead>
+<tr>
+<th>配套包</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="/assets/downloads/quant-material/features-analysis.zip">伯兄特征分析包，约 66.3 MB</a></td>
+<td>原始数值表、时间划分与模型脚本、实测结果</td>
+</tr>
+<tr>
+<td><a href="/assets/downloads/quant-material/wanyan-analysis.zip">顽岩数据分析包，约 8.8 MB</a></td>
+<td>去姓名交易表、行情与热度数据、计算结果、复现脚本</td>
+</tr>
+<tr>
+<td><a href="/assets/downloads/quant-material/assignment-support.zip">Assignment 支持文件</a></td>
+<td>合约清单及原 MATLAB 读取函数；原始 Tick 行情未包含在资料中</td>
+</tr>
+</tbody></table></div>
+<h2 id="原文件对应表"><a href="#原文件对应表" class="headerlink" title="原文件对应表"></a>原文件对应表</h2><p>表内路径相对于 QuantMaterial；<code>!</code> 表示压缩包内文件。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="表格，可横向滚动"><table>
+<thead>
+<tr>
+<th>原文件</th>
+<th>处理方式</th>
+<th>对应内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>xhs量化面经整理汇总/Assignment/Assignment/ContractList.csv</code></td>
+<td>配套附件</td>
+<td><a href="/read/?slug=material-015">五日 Tick 数据编程任务</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/Assignment/Assignment/Functions/FilterStructure.m</code></td>
+<td>配套附件</td>
+<td><a href="/read/?slug=material-015">五日 Tick 数据编程任务</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/Assignment/Assignment/Functions/LoadMarketData.m</code></td>
+<td>配套附件</td>
+<td><a href="/read/?slug=material-015">五日 Tick 数据编程任务</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/Assignment/Assignment/Functions/ReadCSV.m</code></td>
+<td>配套附件</td>
+<td><a href="/read/?slug=material-015">五日 Tick 数据编程任务</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/Assignment/Assignment/Question.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-015">五日 Tick 数据编程任务</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/【quant-校招】笔试题202209/features.csv</code></td>
+<td>配套附件</td>
+<td><a href="/read/?slug=material-051">电梯等待与时序信号筛选</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/【quant-校招】笔试题202209/伯兄quant校招生机试题.txt</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-051">电梯等待与时序信号筛选</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/【quant-校招】笔试题202209 2/features.csv</code></td>
+<td>重复合并</td>
+<td><a href="/read/?slug=material-051">电梯等待与时序信号筛选</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/【quant-校招】笔试题202209 2/伯兄quant校招生机试题.txt</code></td>
+<td>重复合并</td>
+<td><a href="/read/?slug=material-051">电梯等待与时序信号筛选</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/上海念空私募基金管理合伙企业（有限合伙）线上笔试题目.pdf</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-047">滚动因子处理与随机收益</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/世纪前沿.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-036">递推、区间匹配与质数操作</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/中量投.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-021">概率、回归与序列问题</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/丰盛.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-023">回归与随机等待</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/九坤.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-037">概率递推、组合优化与研究设计</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/九坤2.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-jiukun-2">九坤笔试回忆：排列、等待时间与状态压缩</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/乾象.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-011">杠杆与随机排列</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/仲阳天王星.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-010">系统基础与推理</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/伯兄投资.zip</code></td>
+<td>重复合并</td>
+<td><a href="/read/?slug=material-051">电梯等待与时序信号筛选</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/佳期.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-024">贝叶斯、相关结构与计算性能</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/佳期.pdf</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-045">随机图、计算机基础与并行配送</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/信弘天禾.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-001">损失函数与时序模型</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/凯读.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-049">固定内存的时间加权移动平均</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/凯读2.pdf</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-050">行业暴露估计与潜变量识别</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/华均广汇.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-huajun">华均广汇：图计数、最大子数组与数据合并</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/卓胜.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-020">数值推理与收益概率</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/卓识投资.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-zhuoshi">卓识投资：前沿筛选、随机序列与组合计数</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/卡方.pdf</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-033">相关结构、停止策略与算法</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/启林.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-025">混频预测与模型基础</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/喜岳投资.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-048">数组操作、统计选择题与编程</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/因诺.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-003">市场结构与收益来源</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/大雁.pdf</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-030">条件概率与博弈决策</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/天演.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-012">三份持仓记录核对</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/孝庸基金.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-054">集合撮合、素数子串与坦克模拟</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/安贤.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-043">正态分布、线性模型与数据结构</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/宽德.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-019">抽样概率与比较算法</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/希格斯/微信图片_20210904223904.jpg</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-higgs-first">希格斯第一轮：分析、概率与矩阵</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/希格斯/微信图片_20210904223912.jpg</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-higgs-second">希格斯第二轮：构造、递推与不变量</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/希格斯.zip</code></td>
+<td>重复合并</td>
+<td><a href="/read/?slug=material-higgs-first">希格斯第一轮：分析、概率与矩阵</a>、<a href="/read/?slug=material-higgs-second">希格斯第二轮：构造、递推与不变量</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/平方和.pdf</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-031">几何拼接与基础概率</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/幻方.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-027">回归与随机游走</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/微观博易.jpg</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-weiguan">微观博易：贪心算法、矩阵赋值与条件分布</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/思晔.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-004">市价委托与限价委托</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/投研面试题_v3.pdf</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-032">随机停止与研究讨论</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/明泓投资.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-009">几何回归与程序基础</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/概率.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-013">Tick 数据清洗与订单流分析</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/概率2.pdf</code></td>
+<td>重复合并</td>
+<td><a href="/read/?slug=material-013">Tick 数据清洗与订单流分析</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/正定.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-028">停止时间与几何覆盖</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/洛书.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-007">期权定价模型与假设</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/涵德.docx</code></td>
+<td>重复合并</td>
+<td><a href="/read/?slug=material-hande">涵德：程序分析、组合风险与动态决策</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/涵德.pdf</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-hande">涵德：程序分析、组合风险与动态决策</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/灵均.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-029">贝叶斯与最优决策</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/灵均.zip</code></td>
+<td>重复合并</td>
+<td><a href="/read/?slug=material-lingjun-scans">灵均图像试题：概率、最优停止与动态规划</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.33.58.png</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-lingjun-scans">灵均图像试题：概率、最优停止与动态规划</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.34.14.png</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-lingjun-scans">灵均图像试题：概率、最优停止与动态规划</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.34.26.png</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-lingjun-scans">灵均图像试题：概率、最优停止与动态规划</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.34.31.png</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-lingjun-scans">灵均图像试题：概率、最优停止与动态规划</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.34.35.png</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-lingjun-scans">灵均图像试题：概率、最优停止与动态规划</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.34.42.png</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-lingjun-scans">灵均图像试题：概率、最优停止与动态规划</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.34.47.png</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-lingjun-scans">灵均图像试题：概率、最优停止与动态规划</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.34.56.png</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-lingjun-scans">灵均图像试题：概率、最优停止与动态规划</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.35.03.png</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-lingjun-scans">灵均图像试题：概率、最优停止与动态规划</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.35.17.png</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-lingjun-scans">灵均图像试题：概率、最优停止与动态规划</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/燧石.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-006">量化研报复现流程</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/玄信.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-022">矩阵约束与基础算法</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/白鹭.pdf</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-046">骰子、几何阻挡与概率算法</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/盛冠达.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-016">字符统计与单次交易</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/稳博.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-017">代数小数与序列模型</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/聚宽.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-041">动态规划与量化研究判断</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/聚宽.pdf</code></td>
+<td>重复合并</td>
+<td><a href="/read/?slug=material-041">动态规划与量化研究判断</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/至诚卓远.pdf</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-034">最优停止、套利约束与吸收过程</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/致诚卓远.docx</code></td>
+<td>重复合并</td>
+<td><a href="/read/?slug=material-034">最优停止、套利约束与吸收过程</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/艾方.pdf</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-eff">艾方：订单簿特征与波动率预测</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/茂源.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-014">期货配对交易与高频研究</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/蒙玺.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-005">CTA 与多因子模型</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/蝶威.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-002">模型选择与预测周期</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/衍复.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-026">谱界、回归与组合计数</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/诚奇.docx</code></td>
+<td>重复合并</td>
+<td><a href="/read/?slug=material-042">几何概率、随机过程与顺序算法</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/赫富.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-039">随机过程、交易算法与最优停止</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/超量子.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-018">统计、因子与交易算法</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/通登 2.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-052">几何体积、重掷策略与路径</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/通登.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-035">概率、博弈与回归</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/锐天.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-040">概率与线性代数选择题</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/集微.jpg</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-jiwei">集微：递推策略、正则化与渐近估计</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/靖奇.zip</code></td>
+<td>重复合并</td>
+<td><a href="/read/?slug=material-015">五日 Tick 数据编程任务</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/靖奇投资.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-038">代数估计与最短路径</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/顽岩.zip</code></td>
+<td>配套附件</td>
+<td><a href="/read/?slug=material-055">交易数据分析与行情指标实作</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总.zip</code></td>
+<td>重复合并</td>
+<td><a href="/read/?slug=material-047">滚动因子处理与随机收益</a>、<a href="/read/?slug=material-036">递推、区间匹配与质数操作</a>、<a href="/read/?slug=material-021">概率、回归与序列问题</a>、<a href="/read/?slug=material-023">回归与随机等待</a>、<a href="/read/?slug=material-037">概率递推、组合优化与研究设计</a>、<a href="/read/?slug=material-jiukun-2">九坤笔试回忆：排列、等待时间与状态压缩</a>、<a href="/read/?slug=material-011">杠杆与随机排列</a>、<a href="/read/?slug=material-010">系统基础与推理</a>、<a href="/read/?slug=material-051">电梯等待与时序信号筛选</a>、<a href="/read/?slug=material-024">贝叶斯、相关结构与计算性能</a>、<a href="/read/?slug=material-045">随机图、计算机基础与并行配送</a>、<a href="/read/?slug=material-001">损失函数与时序模型</a>、<a href="/read/?slug=material-049">固定内存的时间加权移动平均</a>、<a href="/read/?slug=material-050">行业暴露估计与潜变量识别</a>、<a href="/read/?slug=material-huajun">华均广汇：图计数、最大子数组与数据合并</a>、<a href="/read/?slug=material-020">数值推理与收益概率</a>、<a href="/read/?slug=material-zhuoshi">卓识投资：前沿筛选、随机序列与组合计数</a>、<a href="/read/?slug=material-033">相关结构、停止策略与算法</a>、<a href="/read/?slug=material-025">混频预测与模型基础</a>、<a href="/read/?slug=material-048">数组操作、统计选择题与编程</a>、<a href="/read/?slug=material-003">市场结构与收益来源</a>、<a href="/read/?slug=material-030">条件概率与博弈决策</a>、<a href="/read/?slug=material-012">三份持仓记录核对</a>、<a href="/read/?slug=material-054">集合撮合、素数子串与坦克模拟</a>、<a href="/read/?slug=material-043">正态分布、线性模型与数据结构</a>、<a href="/read/?slug=material-019">抽样概率与比较算法</a>、<a href="/read/?slug=material-higgs-first">希格斯第一轮：分析、概率与矩阵</a>、<a href="/read/?slug=material-higgs-second">希格斯第二轮：构造、递推与不变量</a>、<a href="/read/?slug=material-031">几何拼接与基础概率</a>、<a href="/read/?slug=material-027">回归与随机游走</a>、<a href="/read/?slug=material-weiguan">微观博易：贪心算法、矩阵赋值与条件分布</a>、<a href="/read/?slug=material-004">市价委托与限价委托</a>、<a href="/read/?slug=material-032">随机停止与研究讨论</a>、<a href="/read/?slug=material-009">几何回归与程序基础</a>、<a href="/read/?slug=material-013">Tick 数据清洗与订单流分析</a>、<a href="/read/?slug=material-028">停止时间与几何覆盖</a>、<a href="/read/?slug=material-007">期权定价模型与假设</a>、<a href="/read/?slug=material-hande">涵德：程序分析、组合风险与动态决策</a>、<a href="/read/?slug=material-029">贝叶斯与最优决策</a>、<a href="/read/?slug=material-lingjun-scans">灵均图像试题：概率、最优停止与动态规划</a>、<a href="/read/?slug=material-006">量化研报复现流程</a>、<a href="/read/?slug=material-022">矩阵约束与基础算法</a>、<a href="/read/?slug=material-046">骰子、几何阻挡与概率算法</a>、<a href="/read/?slug=material-016">字符统计与单次交易</a>、<a href="/read/?slug=material-017">代数小数与序列模型</a>、<a href="/read/?slug=material-041">动态规划与量化研究判断</a>、<a href="/read/?slug=material-034">最优停止、套利约束与吸收过程</a>、<a href="/read/?slug=material-eff">艾方：订单簿特征与波动率预测</a>、<a href="/read/?slug=material-014">期货配对交易与高频研究</a>、<a href="/read/?slug=material-005">CTA 与多因子模型</a>、<a href="/read/?slug=material-002">模型选择与预测周期</a>、<a href="/read/?slug=material-026">谱界、回归与组合计数</a>、<a href="/read/?slug=material-042">几何概率、随机过程与顺序算法</a>、<a href="/read/?slug=material-039">随机过程、交易算法与最优停止</a>、<a href="/read/?slug=material-018">统计、因子与交易算法</a>、<a href="/read/?slug=material-052">几何体积、重掷策略与路径</a>、<a href="/read/?slug=material-035">概率、博弈与回归</a>、<a href="/read/?slug=material-040">概率与线性代数选择题</a>、<a href="/read/?slug=material-jiwei">集微：递推策略、正则化与渐近估计</a>、<a href="/read/?slug=material-015">五日 Tick 数据编程任务</a>、<a href="/read/?slug=material-038">代数估计与最短路径</a>、<a href="/read/?slug=material-055">交易数据分析与行情指标实作</a></td>
+</tr>
+<tr>
+<td><code>笔试面试回忆/念空面试回忆.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-008">量化研究流程与项目讨论</a></td>
+</tr>
+<tr>
+<td><code>笔试面试回忆/托特投资笔试回忆.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-044">Python、概率与算法题目回忆</a></td>
+</tr>
+<tr>
+<td><code>笔试面试回忆/诚奇笔试.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-042">几何概率、随机过程与顺序算法</a></td>
+</tr>
+<tr>
+<td><code>笔试面试回忆/通登笔试.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-053">语言推理、运动与几何</a></td>
+</tr>
+<tr>
+<td><code>笔试面试回忆(1).zip</code></td>
+<td>重复合并</td>
+<td><a href="/read/?slug=material-008">量化研究流程与项目讨论</a>、<a href="/read/?slug=material-044">Python、概率与算法题目回忆</a>、<a href="/read/?slug=material-042">几何概率、随机过程与顺序算法</a>、<a href="/read/?slug=material-053">语言推理、运动与几何</a></td>
+</tr>
+<tr>
+<td><code>资本面学习资料.pdf</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-capital-concepts">资本市场术语与研究指标</a>、<a href="/read/?slug=material-capital-reading">资本市场阅读与音视频资料索引</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/顽岩.zip!/量化研究实习岗笔试题（2.5h）.docx</code></td>
+<td>已整理</td>
+<td><a href="/read/?slug=material-055">交易数据分析与行情指标实作</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/顽岩.zip!/热门股票.csv</code></td>
+<td>配套附件</td>
+<td><a href="/read/?slug=material-055">交易数据分析与行情指标实作</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/顽岩.zip!/stock_price.csv</code></td>
+<td>配套附件</td>
+<td><a href="/read/?slug=material-055">交易数据分析与行情指标实作</a></td>
+</tr>
+<tr>
+<td><code>xhs量化面经整理汇总/顽岩.zip!/transaction.xlsx</code></td>
+<td>配套附件</td>
+<td><a href="/read/?slug=material-055">交易数据分析与行情指标实作</a></td>
+</tr>
+</tbody></table></div>
+<h2 id="原资料中的缺项与歧义"><a href="#原资料中的缺项与歧义" class="headerlink" title="原资料中的缺项与歧义"></a>原资料中的缺项与歧义</h2><p>部分面试回忆只记录了题名或结论，部分数据题缺少所引用的数据。这些位置保留原条件，并说明可计算的结果、所需补充信息或尚缺的证明。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="表格，可横向滚动"><table>
+<thead>
+<tr>
+<th>原资料</th>
+<th>缺项或歧义</th>
+<th>整理方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="/read/?slug=material-006">燧石.docx</a></td>
+<td>仅有研报系列名，缺具体报告、模型公式及数据版本</td>
+<td>提供逐阶段复现流程，无唯一实验数值</td>
+</tr>
+<tr>
+<td><a href="/read/?slug=material-013">概率.docx/概率2.pdf</a></td>
+<td>三日0.csv、1.csv、2.csv及字段说明图未包含于目录</td>
+<td>完整十项方法与可识别性分析，未填造行情统计</td>
+</tr>
+<tr>
+<td><a href="/read/?slug=material-014">茂源.docx</a></td>
+<td>各历史原油/PTA/十品种Tick数据、汇率与主力表不在目录；3.5%%费率含义不清</td>
+<td>保留原时间、数值、成本与任务；明确参数口径和所需输入</td>
+</tr>
+<tr>
+<td><a href="/read/?slug=material-015">Assignment/Question.docx</a></td>
+<td>五天Tick行情本体；目录只有ContractList与读取函数</td>
+<td>算法、账本格式及附件链接，真实排名与PNL待数据</td>
+</tr>
+<tr>
+<td><a href="/read/?slug=material-035">通登.docx</a></td>
+<td>顺序选数中丙的最优反应并列规则</td>
+<td>给最坏反应下75/76，并解释74在不同反应下结果</td>
+</tr>
+<tr>
+<td><a href="/read/?slug=material-036">世纪前沿.docx</a></td>
+<td>质数操作目标误写为“全部已有”</td>
+<td>明确按全部相同解释并求解</td>
+</tr>
+<tr>
+<td><a href="/read/?slug=material-037">九坤.docx</a></td>
+<td>篮球比赛回合数与平局规则；专家预测共同任务及收费条件</td>
+<td>给参数化概率及条件比较，不定唯一赢家</td>
+</tr>
+<tr>
+<td><a href="/read/?slug=material-044">托特投资笔试回忆.docx</a></td>
+<td>第6/7概率题全题缺失；翻牌打破成环、白魔法师仅题名；股票/约瑟夫II/滑雪版本条件缺失</td>
+<td>缺题保留缺项；可识别常见版本明确标注条件并给算法</td>
+</tr>
+<tr>
+<td><a href="/read/?slug=material-045">佳期.pdf</a></td>
+<td>圆环游走起点未写明</td>
+<td>按零点起步得1/100，并说明起点为50时为零</td>
+</tr>
+<tr>
+<td><a href="/read/?slug=material-046">白鹭.pdf</a></td>
+<td>三只乌龟不能捕获的完整下界证明；连续子数组与一般子序列用词冲突</td>
+<td>证明四只足够且保留未证下界；按原前缀和意图解释连续子数组</td>
+</tr>
+<tr>
+<td><a href="/read/?slug=material-047">上海念空线上笔试.pdf</a></td>
+<td>factorA.csv/factorB.csv未包含于目录；贝叶斯题未指定先验</td>
+<td>给可运行数据处理与合成检验；先验用Beta(a,b)及均匀特例</td>
+</tr>
+<tr>
+<td><a href="/read/?slug=material-048">喜岳投资.docx</a></td>
+<td>SQL表结构及筛选条件；打印K的尺寸和样例</td>
+<td>SQL说明缺项；K给明确参数化布局</td>
+</tr>
+<tr>
+<td><a href="/read/?slug=material-050">凯读2.pdf</a></td>
+<td>未知行业收益时未提供保证识别的锚点或约束</td>
+<td>可运行反例证明原条件不能保证唯一反推，并列出可补条件</td>
+</tr>
+<tr>
+<td><a href="/read/?slug=material-051">伯兄quant校招生机试题.txt</a></td>
+<td>电梯起始/回程/停站细则，features无时间戳或信号定义，N未指定</td>
+<td>明确电梯模型并独立枚举验证；按连续行序作时间切分且报告候选网格结果</td>
+</tr>
+<tr>
+<td><a href="/read/?slug=material-052">通登 2.docx</a></td>
+<td>几何图形分支、键盘跨越中间点规则不完整</td>
+<td>保留可见边长2/3/1，按凸四边形及任意端点连线假设求解</td>
+</tr>
+<tr>
+<td><a href="/read/?slug=material-053">通登笔试.docx</a></td>
+<td>最后一题递归程序页未附；0至6的均匀分布未写明连续/离散</td>
+<td>程序输出不能恢复；均匀题两种解释均完整计算</td>
+</tr>
+<tr>
+<td><a href="/read/?slug=material-055">顽岩ZIP题面</a></td>
+<td>Hot Rate、corr1/corr2及账户存续时间未定义</td>
+<td>给明确定义并实跑全部附件，日期2018-02-29保留缺失</td>
+</tr>
+<tr>
+<td><a href="/read/?slug=material-hande">涵德.docx/涵德.pdf</a></td>
+<td>25马取前5的全局最少场次证明未由当前资料提供</td>
+<td>父任务给9场构造上界，不称已证最少</td>
+</tr>
+</tbody></table></div>
+</div>
+  </article>
+  <aside class="article-toc"><div>本页目录</div><nav id="toc" aria-label="本页目录"></nav></aside>
+</div>
+
+</main>
+  <footer class="footer"><span>QuantLab · 量化学习站</span><span><a href="/read/?slug=sources-and-validation">资料来源</a> <a href="/support/">参与建设</a> <span class="footer-contact"><a href="/community/">交流与反馈</a></span> <a href="/admin/" data-management-link hidden>管理入口</a></span><div class="site-stats" data-site-stats data-state="loading" aria-label="网站访问统计"><span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 3v17h17M8 15v-4m5 4V6m5 9V9"/></svg>累计访问 <strong data-site-visits>—</strong> 次</span><span title="按北京时间统计，每日零点开始新一天">今日访问 <strong data-site-today-visits>—</strong> 次</span><span><i class="online-dot" aria-hidden="true"></i>当前在线 <strong data-site-online>—</strong> 人</span></div></footer>
+</div>
+<dialog id="search-dialog" aria-labelledby="search-title"><div class="dialog-head"><h2 id="search-title">搜索学习资料</h2><button class="icon-button" data-close-dialog aria-label="关闭搜索">×</button></div><div class="search-scopes"><label>查找范围<select id="search-scope"><option value="">全站</option></select></label><label hidden>子模块<select id="search-subscope"><option value="">全部子模块</option></select></label></div><label class="search-field"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="m16 16 5 5"/></svg><input id="global-search" type="search" maxlength="120" placeholder="例如：收益率、pandas、样本外验证" autocomplete="off" aria-label="搜索关键词"></label><div id="search-results" aria-live="polite"><p class="muted">输入关键词查找文章；登录后可搜索正文和代码。</p></div><div class="dialog-foot">支持中文与命令名称 <kbd>Esc</kbd> 关闭</div></dialog>
+<div class="toast" role="status" hidden></div>
+</body></html>

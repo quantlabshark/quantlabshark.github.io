@@ -2,10 +2,7 @@
 (() => {
  const placements=[
   {id:'system',label:'系统学习',kind:'lesson',track:null},
-  {id:'algorithms',label:'专题学习 / 有限体积法',kind:'lesson',track:'统计与信号与理论'},
   {id:'programming',label:'Python 实践 / 编程实例',kind:'lesson',track:'Python 实践'},
-  {id:'linux',label:'Python 实践 / Linux 入门',kind:'lesson',track:'Linux 入门'},
-  {id:'cpp',label:'Python 实践 / C++ 入门',kind:'lesson',track:'C++ 入门'},
   {id:'module',label:'专题学习 / 专题导览',kind:'module',track:null},
   {id:'article',label:'实践与分享 / 文章',kind:'article',track:null},
   {id:'resource',label:'资料中心 / 数据与源码',kind:'resource',track:null},
@@ -14,15 +11,15 @@
   {id:'announcement',label:'网站公告',kind:'announcement',track:null},
   {id:'assignment',label:'作业与实践',kind:'assignment',track:null},
   {id:'course',label:'系统学习 / 课程集合',kind:'course',track:null},
-  {id:'commands',label:'命令速查',kind:'reference',fixed:true},
-  {id:'dictionaries',label:'配置与字典速查',kind:'reference',fixed:true},
+  {id:'commands',label:'Python 速查',kind:'reference',fixed:true},
+  {id:'dictionaries',label:'研究方法速查',kind:'reference',fixed:true},
   {id:'reference',label:'其他参考资料',kind:'reference',fixed:true},
   {id:'internal',label:'管理平台 / 内部文档',fixed:true}
  ];
  const key=row=>{
   if(row.metadata?.admin_only||['site-maintenance','site-design'].includes(row.slug))return 'internal';
   if(row.kind==='reference')return row.slug?.startsWith('command-')?'commands':row.slug?.startsWith('dictionary-')||row.metadata?.canonical_path?.startsWith('/dictionaries/')?'dictionaries':'reference';
-  if(row.kind==='lesson')return ({'统计与信号与理论':'algorithms','Python 实践':'programming','Linux 入门':'linux','C++ 入门':'cpp'})[row.track]||'system';
+  if(row.kind==='lesson')return row.track==='Python 实践'?'programming':'system';
   return row.kind;
  };
  const placement=row=>placements.find(p=>p.id===key(row));
@@ -40,11 +37,9 @@
   const ancestors=window.FoamDirectory?.ancestors(id)||[];
   for(const node of ancestors){
    let path='';try{path=new URL(node.href,location.origin).pathname;}catch{}
-   if(node.key==='town'||/^\/town(?:\/|$)/.test(path))return 'town';
    if(node.key==='community'||/^\/community(?:\/|$)/.test(path))return 'questions';
   }
   return '';
  };
- const isTownContent=row=>!!row&&((row.section_ids||[]).some(id=>managementTarget(id)==='town')||row.track==='鲨鱼小镇'||/^town(?:-|\/)/.test(row.slug||'')||!!row.metadata?.town_spot||row.metadata?.town===true||/^\/town(?:\/|$)/.test(row.metadata?.canonical_path||'')||/^town-/.test(row.metadata?.release||''));
- window.FoamCMSUI={placements,key,placement,locationLabel,managementTarget,isTownContent,confirmAction,pager:(page,total,size=25)=>window.FoamPagination?'<div class="cms-pagination"><span>共 '+total+' 项 · 第 '+page+' / '+Math.max(1,Math.ceil(total/size))+' 页</span>'+window.FoamPagination.html(page,total,size,'data-page')+'</div>':pager(page,total,size)};
+ window.FoamCMSUI={placements,key,placement,locationLabel,managementTarget,confirmAction,pager:(page,total,size=25)=>window.FoamPagination?'<div class="cms-pagination"><span>共 '+total+' 项 · 第 '+page+' / '+Math.max(1,Math.ceil(total/size))+' 页</span>'+window.FoamPagination.html(page,total,size,'data-page')+'</div>':pager(page,total,size)};
 })();

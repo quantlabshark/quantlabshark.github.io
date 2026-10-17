@@ -1,0 +1,13 @@
+<% const all=interview_rows(),zhou=interview_rows('zhou'),practice=interview_rows('practice'); %>
+<div class="page-wrap interview-hub" data-lab-catalog="interview" data-catalog-custom>
+ <section class="interview-hero">
+  <div><div class="eyebrow">QUANTITATIVE FINANCE INTERVIEWS</div><h1>量化笔试与面试</h1><p class="interview-lead">按教材章节与资料来源编排，收录题目、推导、程序实现与研究分析。</p><div class="fl-actions"><a class="button" href="/interview/zhou/">教材目录 →</a><a class="button secondary" href="/interview/practice/">笔面试资料目录</a></div></div>
+  <aside class="interview-summary"><span>QUESTION LIBRARY</span><strong data-interview-total><%= all.length %></strong><p>个阅读单元</p><div><span>2 册主题目录</span><span><%= interview_chapters('zhou').length+interview_chapters('practice').length %> 个章节</span></div></aside>
+ </section>
+ <div class="interview-section-heading"><h2>资料目录</h2><p>教材内容与笔面试资料分别编排。</p></div>
+ <div class="interview-books">
+  <a class="interview-book-card" href="/interview/zhou/"><div class="interview-cover"><span>01 / FOUNDATIONS</span><strong>概率 · 数学<br>金融 · 算法</strong><small>XINFENG ZHOU</small></div><div class="interview-book-copy"><span class="eyebrow">经典书籍题解</span><h2>经典量化面试教材</h2><p>《A Practical Guide To Quantitative Finance Interviews》中文整理，涵盖面试准备、逻辑、数学、概率、随机过程、金融与数值方法。</p><div class="interview-book-tags"><span><%= zhou.length %> 节</span><span><%= interview_chapters('zhou').length %> 章</span><span>题目与解答</span></div><b>查看章节目录 →</b></div></a>
+  <a class="interview-book-card" href="/interview/practice/"><div class="interview-cover practice"><span>02 / RESEARCH & CODE</span><strong>统计 · 模型<br>代码 · 研究</strong><small>QUANTMATERIAL</small></div><div class="interview-book-copy"><span class="eyebrow">笔面试实战</span><h2>量化笔面试资料</h2><p>QuantMaterial 资料整理，包含概率统计、机器学习、编程、因子研究及数据分析题解。</p><div class="interview-book-tags"><span><%= practice.length %> 节</span><span><%= interview_chapters('practice').length %> 章</span><span>代码与研究分析</span></div><b>查看章节目录 →</b></div></a>
+ </div>
+ <div class="interview-source-note"><strong>编排说明</strong><p>教材按原章节组织，笔面试资料按来源归类。每篇注明章节、页码或文件位置；重复资料合并，数据与代码附件附使用说明。正文使用本站账号登录阅读。<a href="/interview/sources/">查看来源与覆盖清单 →</a></p></div>
+</div>

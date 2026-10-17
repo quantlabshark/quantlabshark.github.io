@@ -1,7 +1,7 @@
 'use strict';
 (() => {
  const L=window.QuantLab,D=window.FoamDirectory,requests=new Map();
- const supported=node=>{if(!node)return false;const url=new URL(D.url(node),location.origin);return !url.hash&&url.pathname!=='/'&&!/^\/(?:admin|studio|account|read|support|town)(?:\/|$)/.test(url.pathname);};
+ const supported=node=>{if(!node)return false;const url=new URL(D.url(node),location.origin);return !url.hash&&url.pathname!=='/'&&!/^\/(?:admin|studio|account|read|support)(?:\/|$)/.test(url.pathname);};
  const entryNode=node=>{if(!node)return null;const url=new URL(D.url(node),location.origin);if(!url.hash)return node;return D.ancestors(node.id).reverse().find(parent=>{const target=new URL(D.url(parent),location.origin);return !target.hash&&target.pathname===url.pathname&&target.search===url.search;});};
  async function read(node,fresh=false){
   if(fresh)requests.delete(node.id);

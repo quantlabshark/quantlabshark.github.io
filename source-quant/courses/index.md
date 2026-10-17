@@ -1,7 +1,7 @@
 ---
 title: 系统学习
-layout: catalog
+layout: curriculum
 section: courses
-description: 20 节课程，从数据处理到可复现的研究报告。
+description: 11 个阶段、66 课，从市场与 Python 基础到策略研究、投资组合和交易执行。
 ---
 

@@ -1,5 +1,5 @@
 'use strict';
-// Shared by global search and the town library. No result text becomes HTML.
+// Used by global search. No result text becomes HTML.
 (() => {
  const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text)n.textContent=text;if(cls)n.className=cls;return n;};
  const terms=q=>[...new Set(q.trim().toLowerCase().split(/\s+/).filter(Boolean))];
@@ -14,7 +14,7 @@
   if(!paths.length)paths=Array.isArray(item.locations)?item.locations:[];
   if(!paths.length){
    const section=String(item.canonical_path||item.url||'').split('/')[1];
-   const labels={commands:'速查手册 / 命令速查',dictionaries:'速查手册 / 配置与字典速查','function-objects':'速查手册 / 函数对象速查','boundary-conditions':'速查手册 / 边界条件速查',reference:'速查手册 / 参考手册',lessons:'系统学习',start:'快速开始'};
+   const labels={commands:'速查手册 / Python 速查',dictionaries:'速查手册 / 研究方法速查',lessons:'系统学习',start:'快速开始'};
    paths=[labels[section]||({lesson:'系统学习',课程:'系统学习',article:'实践与分享',分享:'实践与分享',resource:'资料中心',资料:'资料中心'})[item.kind]||'学习资料'];
   }
   return [...new Set(paths)].map(path=>item.file_path?path+' / '+item.file_path:path);

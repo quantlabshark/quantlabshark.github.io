@@ -3,7 +3,7 @@
  const root=document.querySelector('#search-scope'),child=document.querySelector('#search-subscope');
  if(!root||!child)return;
  let nodes=[];const groups=new Map(),matchers=new Map();
- const excluded=new Set(['home','town','community','internal']);
+ const excluded=new Set(['home','community','internal']);
  const order=(a,b)=>(a.sort_order||0)-(b.sort_order||0)||String(a.name||'').localeCompare(String(b.name||''));
  const option=(value,label)=>{const el=document.createElement('option');el.value=value;el.textContent=label;return el;};
  const selected=()=>child.value||root.value;

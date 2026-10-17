@@ -26,9 +26,6 @@
    if(el.matches('p')){const note=document.createElement('aside');note.className='note';el.before(note);note.append(el);}
    else headingIcon(el);
   });
-  // Restyle a few existing operational explanations without adding duplicate prose.
-  const starts=['第一行适用于安装到该路径的 Ubuntu 软件包。','本例是二维方腔。','cp -r 复制整个目录','计算会频繁读写文件，Linux 本地目录','终端显示乱码时，检查文件编码','在另一个终端进入同一算例，执行 tail -f','修改一处打印文本，重新编译并运行。'];
-  document.querySelectorAll('.prose > p').forEach(p=>{if(starts.some(s=>p.textContent.trim().startsWith(s))&&!p.closest('.panda-note')){const note=document.createElement('aside');note.className='note';p.before(note);note.append(p);}});
   // Only explicit short learning tips, never source quotations or warnings.
   document.querySelectorAll('.prose blockquote,.prose .tip,.prose .callout-tip,.prose .note,.prose .panda-note').forEach(el=>{
    if(el.closest('pre,code,.lab-preview'))return;

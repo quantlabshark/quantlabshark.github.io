@@ -1,0 +1,2671 @@
+{
+  "book_pages": 96,
+  "book_units": 33,
+  "material_files": 93,
+  "archive_unique_files": 4,
+  "material_units": 67,
+  "files": [
+    {
+      "file": "xhs量化面经整理汇总/Assignment/Assignment/ContractList.csv",
+      "sha256": "96911d9a4dac1d8cdc872e79c78ffe84e09968dbd0ceb77fa35c234dd39efb05",
+      "status": "attachment",
+      "unit_slugs": [
+        "material-015"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/Assignment/Assignment/Functions/FilterStructure.m",
+      "sha256": "2f57e9680f694dabbc162a7eaa8eac502295ce7f2abe3273fb680f1b10d526cf",
+      "status": "attachment",
+      "unit_slugs": [
+        "material-015"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/Assignment/Assignment/Functions/LoadMarketData.m",
+      "sha256": "9779f0f68d891d32396e6d11f6fdf96d0ca59e0b730f58aa9b8d443a7aeac6d3",
+      "status": "attachment",
+      "unit_slugs": [
+        "material-015"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/Assignment/Assignment/Functions/ReadCSV.m",
+      "sha256": "793bbe45498ef2f943cd37472fa5bc59a27798ab9d49805fa0d9b8ef1c438dca",
+      "status": "attachment",
+      "unit_slugs": [
+        "material-015"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/Assignment/Assignment/Question.docx",
+      "sha256": "22ee26d1e43af6c4631e5dd2efa97848bc89a44f10e37576ddd7bc5bec5dc9e8",
+      "status": "covered",
+      "unit_slugs": [
+        "material-015"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/【quant-校招】笔试题202209/features.csv",
+      "sha256": "f792a556bd3f03be088a1b73bba6f09e69548d46d9e5a12bbe585890c0a0dd7e",
+      "status": "attachment",
+      "unit_slugs": [
+        "material-051"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/【quant-校招】笔试题202209/伯兄quant校招生机试题.txt",
+      "sha256": "6e0cfd04563f9a86f7d83ce63e4fef3e8c6e029437de1c7051f4e5d3415c003f",
+      "status": "covered",
+      "unit_slugs": [
+        "material-051"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/【quant-校招】笔试题202209 2/features.csv",
+      "sha256": "f792a556bd3f03be088a1b73bba6f09e69548d46d9e5a12bbe585890c0a0dd7e",
+      "status": "duplicate",
+      "unit_slugs": [
+        "material-051"
+      ],
+      "duplicate_of": "xhs量化面经整理汇总/【quant-校招】笔试题202209/features.csv"
+    },
+    {
+      "file": "xhs量化面经整理汇总/【quant-校招】笔试题202209 2/伯兄quant校招生机试题.txt",
+      "sha256": "6e0cfd04563f9a86f7d83ce63e4fef3e8c6e029437de1c7051f4e5d3415c003f",
+      "status": "duplicate",
+      "unit_slugs": [
+        "material-051"
+      ],
+      "duplicate_of": "xhs量化面经整理汇总/【quant-校招】笔试题202209/伯兄quant校招生机试题.txt"
+    },
+    {
+      "file": "xhs量化面经整理汇总/上海念空私募基金管理合伙企业（有限合伙）线上笔试题目.pdf",
+      "sha256": "2e360d67ebfb86c174da0fb5e1d297d55605af19efe98bbb1386934954bd871d",
+      "status": "covered",
+      "unit_slugs": [
+        "material-047"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/世纪前沿.docx",
+      "sha256": "756cb306f6842d9bfdd90b9f9d0a8afe45c85bfaa8187beb71e0de97e520743b",
+      "status": "covered",
+      "unit_slugs": [
+        "material-036"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/中量投.docx",
+      "sha256": "74dfa036c51e5362dddc28cf627d54b27274d3fbe82fc661a5eb46259da0a764",
+      "status": "covered",
+      "unit_slugs": [
+        "material-021"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/丰盛.docx",
+      "sha256": "e3091de3d50f1aa07a795a311af660153a88afab57033bf5cef770684a4ed4c9",
+      "status": "covered",
+      "unit_slugs": [
+        "material-023"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/九坤.docx",
+      "sha256": "4b658ac8db54e59443bc088553b4bd2523e1e7d8376ef628db4b945f9da24461",
+      "status": "covered",
+      "unit_slugs": [
+        "material-037"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/九坤2.docx",
+      "sha256": "b733eb9cae05a1e43cf9387ab52d7fd266e76e79fbb8756fcee0efc41f0694e8",
+      "status": "covered",
+      "unit_slugs": [
+        "material-jiukun-2"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/乾象.docx",
+      "sha256": "cc07b458ad8601526a07be401e8685830c433966358e091f7262522f6f166b45",
+      "status": "covered",
+      "unit_slugs": [
+        "material-011"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/仲阳天王星.docx",
+      "sha256": "a0c5878b9f2f5551392be8373a828aca893af44e110fbaaada935ffea77afec5",
+      "status": "covered",
+      "unit_slugs": [
+        "material-010"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/伯兄投资.zip",
+      "sha256": "54d8f3cb453458e0a3db021310b37cc2ec79786d94bcc72c0cef28d540f48e4f",
+      "status": "duplicate",
+      "unit_slugs": [
+        "material-051"
+      ],
+      "duplicate_of": "xhs量化面经整理汇总/【quant-校招】笔试题202209/features.csv; xhs量化面经整理汇总/【quant-校招】笔试题202209/伯兄quant校招生机试题.txt",
+      "note": "压缩包有效条目均已按 SHA256 对应现有文件，系统元数据已排除。"
+    },
+    {
+      "file": "xhs量化面经整理汇总/佳期.docx",
+      "sha256": "0109da1fd008892b8201822f3deb976124ccfb5a1256dd132dc11a42d5efae6a",
+      "status": "covered",
+      "unit_slugs": [
+        "material-024"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/佳期.pdf",
+      "sha256": "6e35e8204a6b726c7584506ec59a7634a2a4e7b1c8eb241a218358e77e298da3",
+      "status": "covered",
+      "unit_slugs": [
+        "material-045"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/信弘天禾.docx",
+      "sha256": "1dff0d3ad1c5883e85bae2f8601301ac6d8dd240a35273c877f8292f861870ae",
+      "status": "covered",
+      "unit_slugs": [
+        "material-001"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/凯读.docx",
+      "sha256": "d923aa49ab40939707f00e8637ffa525eb7ac1a068e021092a3335267bf1d78b",
+      "status": "covered",
+      "unit_slugs": [
+        "material-049"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/凯读2.pdf",
+      "sha256": "1ee4298dda1a8bb93fe9d84502a79bcce8294fa19cef146a5329fadef1f89a0c",
+      "status": "covered",
+      "unit_slugs": [
+        "material-050"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/华均广汇.docx",
+      "sha256": "bb61f5fc730a0ffa59b20b86431d617f87a5dec75462749e1c00ee9aa26d3aaf",
+      "status": "covered",
+      "unit_slugs": [
+        "material-huajun"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/卓胜.docx",
+      "sha256": "55aac287cae13096d67670d443b3a5e9f8e1403b31794d88ba6eaa96430fed25",
+      "status": "covered",
+      "unit_slugs": [
+        "material-020"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/卓识投资.docx",
+      "sha256": "0c143e771ff67772aac8b07feb72dbcdd5fdae21940dd01d4117ea85b54346a3",
+      "status": "covered",
+      "unit_slugs": [
+        "material-zhuoshi"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/卡方.pdf",
+      "sha256": "ed1f140940078a3f5d3fe930bfda82f3bf24e1a4c902d846f0a4e514c1dec93c",
+      "status": "covered",
+      "unit_slugs": [
+        "material-033"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/启林.docx",
+      "sha256": "3a2f0b78864d8a21baf3dbfcf4170da0a6af03757f7a9e30a9d2169cff7125db",
+      "status": "covered",
+      "unit_slugs": [
+        "material-025"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/喜岳投资.docx",
+      "sha256": "0c5ab11f2e4c61c1b028aecc0d2eaa04b201f1259e27f4233efbebc531412a02",
+      "status": "covered",
+      "unit_slugs": [
+        "material-048"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/因诺.docx",
+      "sha256": "a78ff349006d013cc4952f7c61ad2dc071e5604f72cfb70a9ee6a1f098fce9e0",
+      "status": "covered",
+      "unit_slugs": [
+        "material-003"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/大雁.pdf",
+      "sha256": "6ce5303982bd981ab8cb950576fce1a0d6ab38f61ab92f7c73866fd01646f279",
+      "status": "covered",
+      "unit_slugs": [
+        "material-030"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/天演.docx",
+      "sha256": "335c29b4d75c2c1a34ec93098ab51b072985a6ffb2c57f36d24b93a2639e4356",
+      "status": "covered",
+      "unit_slugs": [
+        "material-012"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/孝庸基金.docx",
+      "sha256": "09a2b0f619b5bf54cd5ebff4648952dd739f6e56fa825f7c92be66a46e923f88",
+      "status": "covered",
+      "unit_slugs": [
+        "material-054"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/安贤.docx",
+      "sha256": "b150851fa2f19ccbed41c34b4ca9bf9571755ce58e3e3c3f32ef0f1304a0094f",
+      "status": "covered",
+      "unit_slugs": [
+        "material-043"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/宽德.docx",
+      "sha256": "3fd03a48b7877c65e8f6e8471952125af7a075cbd351434b9237e56920c7c55a",
+      "status": "covered",
+      "unit_slugs": [
+        "material-019"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/希格斯/微信图片_20210904223904.jpg",
+      "sha256": "a96ffe6d11f5f25ed66ee2f74f6cc4e63011e2b3353328eb1078a57a03e5ccd9",
+      "status": "covered",
+      "unit_slugs": [
+        "material-higgs-first"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/希格斯/微信图片_20210904223912.jpg",
+      "sha256": "dd8eaeb20ec600b6fa38c60ca8b997740df5820f069b1bfa4519d3ffc947452e",
+      "status": "covered",
+      "unit_slugs": [
+        "material-higgs-second"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/希格斯.zip",
+      "sha256": "20d41b62273cb4a3ada35b2e45428bee643bb2f235afcb68505b64a649f11396",
+      "status": "duplicate",
+      "unit_slugs": [
+        "material-higgs-first",
+        "material-higgs-second"
+      ],
+      "duplicate_of": "xhs量化面经整理汇总/希格斯/微信图片_20210904223904.jpg; xhs量化面经整理汇总/希格斯/微信图片_20210904223912.jpg",
+      "note": "压缩包有效条目均已按 SHA256 对应现有文件，系统元数据已排除。"
+    },
+    {
+      "file": "xhs量化面经整理汇总/平方和.pdf",
+      "sha256": "f9dea68678714b8313b9dcf20892a2c1668132a15cfe1ba1c26f8202e2e96c03",
+      "status": "covered",
+      "unit_slugs": [
+        "material-031"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/幻方.docx",
+      "sha256": "c3942c0c88e3fa581d595fa09853d5d39982193f4d1043a4438ea01862b34801",
+      "status": "covered",
+      "unit_slugs": [
+        "material-027"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/微观博易.jpg",
+      "sha256": "e420aecbc8f57952e19eabbb3b6f818ff85e142978aea356df9adf4398eac0bf",
+      "status": "covered",
+      "unit_slugs": [
+        "material-weiguan"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/思晔.docx",
+      "sha256": "888e11c2e6742831b812d0195a8e05bcd44c0e3e59524f485fc7999e2e5cca07",
+      "status": "covered",
+      "unit_slugs": [
+        "material-004"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/投研面试题_v3.pdf",
+      "sha256": "788d445fc41ce65d641d643d35832b083b20d6a6bab5d007345afff8b573c37b",
+      "status": "covered",
+      "unit_slugs": [
+        "material-032"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/明泓投资.docx",
+      "sha256": "fb8c9e6edb7296f9caa5708b231ed83e1903da1be8c0efb6ff9c02972be5b4ea",
+      "status": "covered",
+      "unit_slugs": [
+        "material-009"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/概率.docx",
+      "sha256": "b5bb31ef5396b0fcd91c98f2077a5790e07de560f2e41b23a0e8406182aaa998",
+      "status": "covered",
+      "unit_slugs": [
+        "material-013"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/概率2.pdf",
+      "sha256": "516251559152325d5106dffc535dce3068944fbae0fcc6872976c79da08032cd",
+      "status": "duplicate",
+      "unit_slugs": [
+        "material-013"
+      ],
+      "duplicate_of": "xhs量化面经整理汇总/概率.docx",
+      "note": "实质重复或被对应来源包含；全部独有文字已并入阅读单元。"
+    },
+    {
+      "file": "xhs量化面经整理汇总/正定.docx",
+      "sha256": "011c88d8eda7cb4b00f5916e8eb167464529f949b1b5f23865f75dfcaaf18907",
+      "status": "covered",
+      "unit_slugs": [
+        "material-028"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/洛书.docx",
+      "sha256": "af58676c21c5121028bee139dd845e35649c29c1b335d78a0a01904b6417234d",
+      "status": "covered",
+      "unit_slugs": [
+        "material-007"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/涵德.docx",
+      "sha256": "097ff0c20e1d803123ce6737a3b0e392c9985b8a70955cefc5103d20ab27199d",
+      "status": "duplicate",
+      "unit_slugs": [
+        "material-hande"
+      ],
+      "duplicate_of": "xhs量化面经整理汇总/涵德.pdf",
+      "note": "实质重复或被对应来源包含；全部独有文字已并入阅读单元。"
+    },
+    {
+      "file": "xhs量化面经整理汇总/涵德.pdf",
+      "sha256": "80c86bf19a3b4b3e3577865ad4813cf6e4e6420c43e762df6d4b49c6ce91ef07",
+      "status": "covered",
+      "unit_slugs": [
+        "material-hande"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/灵均.docx",
+      "sha256": "bea48ecdd3134dbd6939fb7e216f956b92402a0f63021a0ad0b9a24feb7dc045",
+      "status": "covered",
+      "unit_slugs": [
+        "material-029"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/灵均.zip",
+      "sha256": "14ed706c39f01148c1816e404ab72a49f88088c8b8dcbf3c7e6fea6cd939f2db",
+      "status": "duplicate",
+      "unit_slugs": [
+        "material-lingjun-scans"
+      ],
+      "duplicate_of": "xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.33.58.png; xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.34.14.png; xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.34.26.png; xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.34.31.png; xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.34.35.png; xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.34.42.png; xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.34.47.png; xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.34.56.png; xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.35.03.png; xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.35.17.png",
+      "note": "压缩包有效条目均已按 SHA256 对应现有文件，系统元数据已排除。"
+    },
+    {
+      "file": "xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.33.58.png",
+      "sha256": "cf4a59c62e5e21acfb3ce61396d1e13f57ad0c5f5804313625101f38eea6c5f9",
+      "status": "covered",
+      "unit_slugs": [
+        "material-lingjun-scans"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.34.14.png",
+      "sha256": "359d5671ff0e74d649a713acb3842077c083a7dc12ac69ed8b3b98421d380c0d",
+      "status": "covered",
+      "unit_slugs": [
+        "material-lingjun-scans"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.34.26.png",
+      "sha256": "345dcefe51fc5d64649b16cfc5ac6e74582233eac815af93c9ab8eb5412a353a",
+      "status": "covered",
+      "unit_slugs": [
+        "material-lingjun-scans"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.34.31.png",
+      "sha256": "cf1c838e5ccc2f514f4a6d1e68340e68ff0fe311382fd36308d9329217edb30b",
+      "status": "covered",
+      "unit_slugs": [
+        "material-lingjun-scans"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.34.35.png",
+      "sha256": "433befa8d42996175e3b72ee6b15e83e0948c699937207b7aa0ed13dab7681b8",
+      "status": "covered",
+      "unit_slugs": [
+        "material-lingjun-scans"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.34.42.png",
+      "sha256": "ed3ee2bc8b0fd85cfae9fda45381e972ec2703cfd8642e251cdf97800f7f4d01",
+      "status": "covered",
+      "unit_slugs": [
+        "material-lingjun-scans"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.34.47.png",
+      "sha256": "e0335795c678975deba8855b66e239f4a7c6f3322dd3b60145c444f8e9279b84",
+      "status": "covered",
+      "unit_slugs": [
+        "material-lingjun-scans"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.34.56.png",
+      "sha256": "28f9c7042855c7485d504f0e2741f10b87de3950ca00171acaacab6055ae01ff",
+      "status": "covered",
+      "unit_slugs": [
+        "material-lingjun-scans"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.35.03.png",
+      "sha256": "69cbb36bd8017bee6c1427aa176d018f40acd2cb76edd014fc98b7401814d513",
+      "status": "covered",
+      "unit_slugs": [
+        "material-lingjun-scans"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.35.17.png",
+      "sha256": "30f9ee9864227be1b2d3ee9338b751ad41038de1450ea4625cff5ab5d54e26a4",
+      "status": "covered",
+      "unit_slugs": [
+        "material-lingjun-scans"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/燧石.docx",
+      "sha256": "182d186e6130c7dec30390a5fb27f364f9200ad180eb7ebb94e56bd8e2ef1661",
+      "status": "covered",
+      "unit_slugs": [
+        "material-006"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/玄信.docx",
+      "sha256": "0f25bb591e0951e3acc4978ec15e079f937caa02616c8c149d423764f8096a40",
+      "status": "covered",
+      "unit_slugs": [
+        "material-022"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/白鹭.pdf",
+      "sha256": "4d1eb3aa0a5f3f7f8327e83ef8c30e87930ee9b391e0c3d08a42421dd8fbb9af",
+      "status": "covered",
+      "unit_slugs": [
+        "material-046"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/盛冠达.docx",
+      "sha256": "6156412bd5e55f4cb66e15e19401b1862e59a89809bd20b91c03e0e07b05861e",
+      "status": "covered",
+      "unit_slugs": [
+        "material-016"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/稳博.docx",
+      "sha256": "3f6f91b57a5bd985b2849beba7079ebe1f8249ed272fc9fac6c33cd79eed7beb",
+      "status": "covered",
+      "unit_slugs": [
+        "material-017"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/聚宽.docx",
+      "sha256": "7244a051a064cb800cb6ebb8d096de10795c7aeb06c5119063e908a7a6ce99ab",
+      "status": "covered",
+      "unit_slugs": [
+        "material-041"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/聚宽.pdf",
+      "sha256": "4055478501a8847f55f75d70cb7afa4737e98c68aa706eadff2861fdba6639ee",
+      "status": "duplicate",
+      "unit_slugs": [
+        "material-041"
+      ],
+      "duplicate_of": "xhs量化面经整理汇总/聚宽.docx",
+      "note": "实质重复或被对应来源包含；全部独有文字已并入阅读单元。"
+    },
+    {
+      "file": "xhs量化面经整理汇总/至诚卓远.pdf",
+      "sha256": "284a7eacf0578b3169859db9b6ea583723b600fd2fd072be69d75473e83cb94c",
+      "status": "covered",
+      "unit_slugs": [
+        "material-034"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/致诚卓远.docx",
+      "sha256": "4f9493b456aae5d5a0b8664afc89d84cc7f23c6d842de39e6027b014da73a6af",
+      "status": "duplicate",
+      "unit_slugs": [
+        "material-034"
+      ],
+      "duplicate_of": "xhs量化面经整理汇总/至诚卓远.pdf",
+      "note": "实质重复或被对应来源包含；全部独有文字已并入阅读单元。"
+    },
+    {
+      "file": "xhs量化面经整理汇总/艾方.pdf",
+      "sha256": "45f5fb06ef82d23ab22baee634f6da38452449ade22ea6e28dbf380d2834c9ff",
+      "status": "covered",
+      "unit_slugs": [
+        "material-eff"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/茂源.docx",
+      "sha256": "4e10d0129077402901b2f5527cba58be6c7ea0884f0696c9d36e0deb28cf9595",
+      "status": "covered",
+      "unit_slugs": [
+        "material-014"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/蒙玺.docx",
+      "sha256": "d310d3aa502306dbcd4afc3c8ad7c23460dd0e0e045c250bb9be98e889be7b54",
+      "status": "covered",
+      "unit_slugs": [
+        "material-005"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/蝶威.docx",
+      "sha256": "da9f35e637fd0565288ea3f63a45dc815b984ccc8fa554ba99b841e7948ad255",
+      "status": "covered",
+      "unit_slugs": [
+        "material-002"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/衍复.docx",
+      "sha256": "596cdfc93b447dad254800c5aa2ddb082c8564b513101407585b8723ee5023a2",
+      "status": "covered",
+      "unit_slugs": [
+        "material-026"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/诚奇.docx",
+      "sha256": "18d7ab9cc7f02e266ca0563bf6697f68694832046dcbcf6cd559de5c0f0e13e8",
+      "status": "duplicate",
+      "unit_slugs": [
+        "material-042"
+      ],
+      "duplicate_of": "笔试面试回忆/诚奇笔试.docx",
+      "note": "实质重复或被对应来源包含；全部独有文字已并入阅读单元。"
+    },
+    {
+      "file": "xhs量化面经整理汇总/赫富.docx",
+      "sha256": "46df183619667d6f8677c7a94be89b7ead5dc4fd80d27fac9dd2657e9c16a2ea",
+      "status": "covered",
+      "unit_slugs": [
+        "material-039"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/超量子.docx",
+      "sha256": "8080084773d9b37c13112faf83945ae4351bb691de101a380cc8f0e7e97b9e05",
+      "status": "covered",
+      "unit_slugs": [
+        "material-018"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/通登 2.docx",
+      "sha256": "cf5816045680aa4ac4220d0d184f6fc9885223366b916c1c38a4f4110c8096a0",
+      "status": "covered",
+      "unit_slugs": [
+        "material-052"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/通登.docx",
+      "sha256": "7a5133d12a9c0116d34870abd310e3a0a4446fb883bf74e04cf6fee33a77c640",
+      "status": "covered",
+      "unit_slugs": [
+        "material-035"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/锐天.docx",
+      "sha256": "1ce99cdf52cd97fa78f2f12b55ea1740169e1657d05fbbeaeef31247c11e9703",
+      "status": "covered",
+      "unit_slugs": [
+        "material-040"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/集微.jpg",
+      "sha256": "bf19d38db2aba3f2fdd24cc866d36bda22e71be80a5291d4a7aa68b1b0150734",
+      "status": "covered",
+      "unit_slugs": [
+        "material-jiwei"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/靖奇.zip",
+      "sha256": "7d7336559bfb9440f1e4e322c1eed0946b9675ab934b3697a1ca5ffed91e7eda",
+      "status": "duplicate",
+      "unit_slugs": [
+        "material-015"
+      ],
+      "duplicate_of": "xhs量化面经整理汇总/Assignment/Assignment/ContractList.csv; xhs量化面经整理汇总/Assignment/Assignment/Functions/FilterStructure.m; xhs量化面经整理汇总/Assignment/Assignment/Functions/LoadMarketData.m; xhs量化面经整理汇总/Assignment/Assignment/Functions/ReadCSV.m; xhs量化面经整理汇总/Assignment/Assignment/Question.docx",
+      "note": "压缩包有效条目均已按 SHA256 对应现有文件，系统元数据已排除。"
+    },
+    {
+      "file": "xhs量化面经整理汇总/靖奇投资.docx",
+      "sha256": "733845cfb573f4b283714f75e89c2e44d14e6efd473410e69d5927475e421abd",
+      "status": "covered",
+      "unit_slugs": [
+        "material-038"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/顽岩.zip",
+      "sha256": "174f84797c8a54f901d2bb6a2094c3e9a91aefbe4166b65e650675bd8d76af3a",
+      "status": "attachment",
+      "unit_slugs": [
+        "material-055"
+      ],
+      "note": "独有题目及附件已提取；映射见 archive-member-map.json。"
+    },
+    {
+      "file": "xhs量化面经整理汇总.zip",
+      "sha256": "e142690a115808770159b97c359613bfe21406e13bc1919ef3cfc07a5deb94e8",
+      "status": "duplicate",
+      "unit_slugs": [
+        "material-047",
+        "material-036",
+        "material-021",
+        "material-023",
+        "material-037",
+        "material-jiukun-2",
+        "material-011",
+        "material-010",
+        "material-051",
+        "material-024",
+        "material-045",
+        "material-001",
+        "material-049",
+        "material-050",
+        "material-huajun",
+        "material-020",
+        "material-zhuoshi",
+        "material-033",
+        "material-025",
+        "material-048",
+        "material-003",
+        "material-030",
+        "material-012",
+        "material-054",
+        "material-043",
+        "material-019",
+        "material-higgs-first",
+        "material-higgs-second",
+        "material-031",
+        "material-027",
+        "material-weiguan",
+        "material-004",
+        "material-032",
+        "material-009",
+        "material-013",
+        "material-028",
+        "material-007",
+        "material-hande",
+        "material-029",
+        "material-lingjun-scans",
+        "material-006",
+        "material-022",
+        "material-046",
+        "material-016",
+        "material-017",
+        "material-041",
+        "material-034",
+        "material-eff",
+        "material-014",
+        "material-005",
+        "material-002",
+        "material-026",
+        "material-042",
+        "material-039",
+        "material-018",
+        "material-052",
+        "material-035",
+        "material-040",
+        "material-jiwei",
+        "material-015",
+        "material-038",
+        "material-055"
+      ],
+      "duplicate_of": "xhs量化面经整理汇总/上海念空私募基金管理合伙企业（有限合伙）线上笔试题目.pdf; xhs量化面经整理汇总/世纪前沿.docx; xhs量化面经整理汇总/中量投.docx; xhs量化面经整理汇总/丰盛.docx; xhs量化面经整理汇总/九坤.docx; xhs量化面经整理汇总/九坤2.docx; xhs量化面经整理汇总/乾象.docx; xhs量化面经整理汇总/仲阳天王星.docx; xhs量化面经整理汇总/伯兄投资.zip; xhs量化面经整理汇总/佳期.docx; xhs量化面经整理汇总/佳期.pdf; xhs量化面经整理汇总/信弘天禾.docx; xhs量化面经整理汇总/凯读.docx; xhs量化面经整理汇总/凯读2.pdf; xhs量化面经整理汇总/华均广汇.docx; xhs量化面经整理汇总/卓胜.docx; xhs量化面经整理汇总/卓识投资.docx; xhs量化面经整理汇总/卡方.pdf; xhs量化面经整理汇总/启林.docx; xhs量化面经整理汇总/喜岳投资.docx; xhs量化面经整理汇总/因诺.docx; xhs量化面经整理汇总/大雁.pdf; xhs量化面经整理汇总/天演.docx; xhs量化面经整理汇总/孝庸基金.docx; xhs量化面经整理汇总/安贤.docx; xhs量化面经整理汇总/宽德.docx; xhs量化面经整理汇总/希格斯.zip; xhs量化面经整理汇总/平方和.pdf; xhs量化面经整理汇总/幻方.docx; xhs量化面经整理汇总/微观博易.jpg; xhs量化面经整理汇总/思晔.docx; xhs量化面经整理汇总/投研面试题_v3.pdf; xhs量化面经整理汇总/明泓投资.docx; xhs量化面经整理汇总/概率.docx; xhs量化面经整理汇总/概率2.pdf; xhs量化面经整理汇总/正定.docx; xhs量化面经整理汇总/洛书.docx; xhs量化面经整理汇总/涵德.docx; xhs量化面经整理汇总/涵德.pdf; xhs量化面经整理汇总/灵均.docx; xhs量化面经整理汇总/灵均.zip; xhs量化面经整理汇总/燧石.docx; xhs量化面经整理汇总/玄信.docx; xhs量化面经整理汇总/白鹭.pdf; xhs量化面经整理汇总/盛冠达.docx; xhs量化面经整理汇总/稳博.docx; xhs量化面经整理汇总/聚宽.docx; xhs量化面经整理汇总/聚宽.pdf; xhs量化面经整理汇总/至诚卓远.pdf; xhs量化面经整理汇总/致诚卓远.docx; xhs量化面经整理汇总/艾方.pdf; xhs量化面经整理汇总/茂源.docx; xhs量化面经整理汇总/蒙玺.docx; xhs量化面经整理汇总/蝶威.docx; xhs量化面经整理汇总/衍复.docx; xhs量化面经整理汇总/诚奇.docx; xhs量化面经整理汇总/赫富.docx; xhs量化面经整理汇总/超量子.docx; xhs量化面经整理汇总/通登 2.docx; xhs量化面经整理汇总/通登.docx; xhs量化面经整理汇总/锐天.docx; xhs量化面经整理汇总/集微.jpg; xhs量化面经整理汇总/靖奇.zip; xhs量化面经整理汇总/靖奇投资.docx; xhs量化面经整理汇总/顽岩.zip",
+      "note": "压缩包有效条目均已按 SHA256 对应现有文件，系统元数据已排除。"
+    },
+    {
+      "file": "笔试面试回忆/念空面试回忆.docx",
+      "sha256": "ddeb688bafeea4b1292afea70310366e239615d4eee20a2376f9b6378e32b775",
+      "status": "covered",
+      "unit_slugs": [
+        "material-008"
+      ]
+    },
+    {
+      "file": "笔试面试回忆/托特投资笔试回忆.docx",
+      "sha256": "475de734aa909b8b853d3eec8ce2090c7e3ed7ee4464dfb3461a6225b6b78136",
+      "status": "covered",
+      "unit_slugs": [
+        "material-044"
+      ]
+    },
+    {
+      "file": "笔试面试回忆/诚奇笔试.docx",
+      "sha256": "c8e49dfb117491cfa6d37111bec590b10a2433bd978c7c4c600a7bb9f7868904",
+      "status": "covered",
+      "unit_slugs": [
+        "material-042"
+      ]
+    },
+    {
+      "file": "笔试面试回忆/通登笔试.docx",
+      "sha256": "2a0014d65416863ae6b716e844f6d46940dd077aa419e9a36bd1ea4658794908",
+      "status": "covered",
+      "unit_slugs": [
+        "material-053"
+      ]
+    },
+    {
+      "file": "笔试面试回忆(1).zip",
+      "sha256": "3dfbbdef883225a53b6abdaf2f3097983ae153b4e2b4935a2ca35cc48c0fd5fc",
+      "status": "duplicate",
+      "unit_slugs": [
+        "material-008",
+        "material-044",
+        "material-042",
+        "material-053"
+      ],
+      "duplicate_of": "笔试面试回忆/念空面试回忆.docx; 笔试面试回忆/托特投资笔试回忆.docx; 笔试面试回忆/诚奇笔试.docx; 笔试面试回忆/通登笔试.docx",
+      "note": "压缩包有效条目均已按 SHA256 对应现有文件，系统元数据已排除。"
+    },
+    {
+      "file": "资本面学习资料.pdf",
+      "sha256": "c405c6378f2692023577a689a4855d18ffe84da22dd9e482faff8bb2923db1b6",
+      "status": "covered",
+      "unit_slugs": [
+        "material-capital-concepts",
+        "material-capital-reading"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/顽岩.zip!/量化研究实习岗笔试题（2.5h）.docx",
+      "sha256": "7d45624a1c63922a7bea3f023863357f10ac47c931728602ce745fca85ef2d7f",
+      "status": "covered",
+      "unit_slugs": [
+        "material-055"
+      ]
+    },
+    {
+      "file": "xhs量化面经整理汇总/顽岩.zip!/热门股票.csv",
+      "sha256": "71f0c76d60d09a1b885dc14ae432bac2b24c394ae1202c330954e545e838c2ed",
+      "status": "attachment",
+      "unit_slugs": [
+        "material-055"
+      ],
+      "note": "分析包提供行情数据或去姓名交易副本；交易原始姓名列不发布。"
+    },
+    {
+      "file": "xhs量化面经整理汇总/顽岩.zip!/stock_price.csv",
+      "sha256": "95b6ada937d3fae4b1d3a0060eaaaeeebc1e5005cc1ab2bfcc395cad1b9ee3b7",
+      "status": "attachment",
+      "unit_slugs": [
+        "material-055"
+      ],
+      "note": "分析包提供行情数据或去姓名交易副本；交易原始姓名列不发布。"
+    },
+    {
+      "file": "xhs量化面经整理汇总/顽岩.zip!/transaction.xlsx",
+      "sha256": "ed7e7d5347cce74442b2e66966fb5c63f7b26bf82eb5d1eb5b14c2b7b5d38603",
+      "status": "attachment",
+      "unit_slugs": [
+        "material-055"
+      ],
+      "note": "分析包提供行情数据或去姓名交易副本；交易原始姓名列不发布。"
+    }
+  ],
+  "book_coverage": [
+    {
+      "pdf_page": 1,
+      "chapter": 1,
+      "section": "1",
+      "items": [
+        "General Principles: fundamental knowledge; practice"
+      ],
+      "unit_slugs": [
+        "zhou-full-1"
+      ]
+    },
+    {
+      "pdf_page": 2,
+      "chapter": 1,
+      "section": "1",
+      "items": [
+        "General Principles: listening; communication; assumptions"
+      ],
+      "unit_slugs": [
+        "zhou-full-1"
+      ]
+    },
+    {
+      "pdf_page": 2,
+      "chapter": 2,
+      "section": "2.1",
+      "items": [
+        "Screwy pirates",
+        "Brain Teasers: introduction; Problem Simplification"
+      ],
+      "unit_slugs": [
+        "zhou-full-2-1"
+      ]
+    },
+    {
+      "pdf_page": 3,
+      "chapter": 2,
+      "section": "2.1",
+      "items": [
+        "Screwy pirates",
+        "Tiger and sheep"
+      ],
+      "unit_slugs": [
+        "zhou-full-2-1"
+      ]
+    },
+    {
+      "pdf_page": 3,
+      "chapter": 2,
+      "section": "2.2",
+      "items": [
+        "River crossing",
+        "Birthday problem",
+        "Logic Reasoning: introduction"
+      ],
+      "unit_slugs": [
+        "zhou-full-2-2"
+      ]
+    },
+    {
+      "pdf_page": 4,
+      "chapter": 2,
+      "section": "2.2",
+      "items": [
+        "Birthday problem",
+        "Card game",
+        "Burning ropes",
+        "Defective ball"
+      ],
+      "unit_slugs": [
+        "zhou-full-2-2"
+      ]
+    },
+    {
+      "pdf_page": 5,
+      "chapter": 2,
+      "section": "2.2",
+      "items": [
+        "Defective ball",
+        "Trailing zeros",
+        "Horse race"
+      ],
+      "unit_slugs": [
+        "zhou-full-2-2"
+      ]
+    },
+    {
+      "pdf_page": 6,
+      "chapter": 2,
+      "section": "2.2",
+      "items": [
+        "Horse race",
+        "Infinite sequence"
+      ],
+      "unit_slugs": [
+        "zhou-full-2-2"
+      ]
+    },
+    {
+      "pdf_page": 6,
+      "chapter": 2,
+      "section": "2.3",
+      "items": [
+        "Box packing",
+        "Calendar cubes",
+        "Thinking Out of the Box: introduction; mutilated chessboard example"
+      ],
+      "unit_slugs": [
+        "zhou-full-2-3"
+      ]
+    },
+    {
+      "pdf_page": 7,
+      "chapter": 2,
+      "section": "2.3",
+      "items": [
+        "Calendar cubes",
+        "Door to offer",
+        "Message delivery",
+        "Last ball"
+      ],
+      "unit_slugs": [
+        "zhou-full-2-3"
+      ]
+    },
+    {
+      "pdf_page": 8,
+      "chapter": 2,
+      "section": "2.3",
+      "items": [
+        "Last ball",
+        "Light switches",
+        "Quant salary"
+      ],
+      "unit_slugs": [
+        "zhou-full-2-3"
+      ]
+    },
+    {
+      "pdf_page": 8,
+      "chapter": 2,
+      "section": "2.4",
+      "items": [
+        "Coin piles",
+        "Application of Symmetry: introduction"
+      ],
+      "unit_slugs": [
+        "zhou-full-2-4"
+      ]
+    },
+    {
+      "pdf_page": 9,
+      "chapter": 2,
+      "section": "2.4",
+      "items": [
+        "Coin piles",
+        "Mislabeled bags",
+        "Wise men"
+      ],
+      "unit_slugs": [
+        "zhou-full-2-4"
+      ]
+    },
+    {
+      "pdf_page": 9,
+      "chapter": 2,
+      "section": "2.5",
+      "items": [
+        "Series Summation: introduction"
+      ],
+      "unit_slugs": [
+        "zhou-full-2-5"
+      ]
+    },
+    {
+      "pdf_page": 10,
+      "chapter": 2,
+      "section": "2.5",
+      "items": [
+        "Clock pieces",
+        "Missing integers",
+        "Counterfeit coins I",
+        "Glass balls",
+        "Sums of integers and squares"
+      ],
+      "unit_slugs": [
+        "zhou-full-2-5"
+      ]
+    },
+    {
+      "pdf_page": 11,
+      "chapter": 2,
+      "section": "2.5",
+      "items": [
+        "Glass balls"
+      ],
+      "unit_slugs": [
+        "zhou-full-2-5"
+      ]
+    },
+    {
+      "pdf_page": 11,
+      "chapter": 2,
+      "section": "2.6",
+      "items": [
+        "Matching socks",
+        "Handshakes",
+        "Have we met before?",
+        "The Pigeon Hole Principle: statement"
+      ],
+      "unit_slugs": [
+        "zhou-full-2-6"
+      ]
+    },
+    {
+      "pdf_page": 12,
+      "chapter": 2,
+      "section": "2.6",
+      "items": [
+        "Have we met before?",
+        "Ants on a square",
+        "Counterfeit coins II"
+      ],
+      "unit_slugs": [
+        "zhou-full-2-6"
+      ]
+    },
+    {
+      "pdf_page": 12,
+      "chapter": 2,
+      "section": "2.7",
+      "items": [
+        "Modular Arithmetic: definition"
+      ],
+      "unit_slugs": [
+        "zhou-full-2-7"
+      ]
+    },
+    {
+      "pdf_page": 13,
+      "chapter": 2,
+      "section": "2.7",
+      "items": [
+        "Prisoner problem",
+        "Division by 9",
+        "Division by 11: footnote exercise"
+      ],
+      "unit_slugs": [
+        "zhou-full-2-7"
+      ]
+    },
+    {
+      "pdf_page": 14,
+      "chapter": 2,
+      "section": "2.7",
+      "items": [
+        "Chameleon colors"
+      ],
+      "unit_slugs": [
+        "zhou-full-2-7"
+      ]
+    },
+    {
+      "pdf_page": 14,
+      "chapter": 2,
+      "section": "2.8",
+      "items": [
+        "Coin split problem",
+        "Math Induction: principle"
+      ],
+      "unit_slugs": [
+        "zhou-full-2-8"
+      ]
+    },
+    {
+      "pdf_page": 15,
+      "chapter": 2,
+      "section": "2.8",
+      "items": [
+        "Coin split problem",
+        "Chocolate bar problem",
+        "Race track"
+      ],
+      "unit_slugs": [
+        "zhou-full-2-8"
+      ]
+    },
+    {
+      "pdf_page": 16,
+      "chapter": 2,
+      "section": "2.8",
+      "items": [
+        "Race track"
+      ],
+      "unit_slugs": [
+        "zhou-full-2-8"
+      ]
+    },
+    {
+      "pdf_page": 16,
+      "chapter": 2,
+      "section": "2.9",
+      "items": [
+        "Irrational number",
+        "Rainbow hats",
+        "Proof by Contradiction: principle"
+      ],
+      "unit_slugs": [
+        "zhou-full-2-9"
+      ]
+    },
+    {
+      "pdf_page": 17,
+      "chapter": 2,
+      "section": "2.9",
+      "items": [
+        "Rainbow hats"
+      ],
+      "unit_slugs": [
+        "zhou-full-2-9"
+      ]
+    },
+    {
+      "pdf_page": 17,
+      "chapter": 3,
+      "section": "3.1",
+      "items": [
+        "Calculus and Linear Algebra: introduction; limits and derivative rules"
+      ],
+      "unit_slugs": [
+        "zhou-full-3-1"
+      ]
+    },
+    {
+      "pdf_page": 18,
+      "chapter": 3,
+      "section": "3.1",
+      "items": [
+        "Derivative of (ln x)^(ln x)",
+        "Maximum and minimum: e^pi versus pi^e",
+        "Extreme values; L’Hôpital’s rule"
+      ],
+      "unit_slugs": [
+        "zhou-full-3-1"
+      ]
+    },
+    {
+      "pdf_page": 19,
+      "chapter": 3,
+      "section": "3.1",
+      "items": [
+        "Limits of exp(x)/x^2 and x^2 ln x"
+      ],
+      "unit_slugs": [
+        "zhou-full-3-1"
+      ]
+    },
+    {
+      "pdf_page": 19,
+      "chapter": 3,
+      "section": "3.2",
+      "items": [
+        "Integral of ln(x)",
+        "Integral of sec(x)",
+        "Integration rules; integration by parts"
+      ],
+      "unit_slugs": [
+        "zhou-full-3-2"
+      ]
+    },
+    {
+      "pdf_page": 20,
+      "chapter": 3,
+      "section": "3.2",
+      "items": [
+        "Integral of sec(x)",
+        "Intersection of two cylinders",
+        "Snow plow"
+      ],
+      "unit_slugs": [
+        "zhou-full-3-2"
+      ]
+    },
+    {
+      "pdf_page": 21,
+      "chapter": 3,
+      "section": "3.2",
+      "items": [
+        "Snow plow",
+        "Expected value using integration"
+      ],
+      "unit_slugs": [
+        "zhou-full-3-2"
+      ]
+    },
+    {
+      "pdf_page": 21,
+      "chapter": 3,
+      "section": "3.3",
+      "items": [
+        "Gaussian integral",
+        "Partial derivatives; multivariable chain rule; multiple integration"
+      ],
+      "unit_slugs": [
+        "zhou-full-3-3"
+      ]
+    },
+    {
+      "pdf_page": 21,
+      "chapter": 3,
+      "section": "3.4",
+      "items": [
+        "Taylor series"
+      ],
+      "unit_slugs": [
+        "zhou-full-3-4"
+      ]
+    },
+    {
+      "pdf_page": 22,
+      "chapter": 3,
+      "section": "3.4",
+      "items": [
+        "i^i",
+        "Bernoulli inequality",
+        "Taylor expansions and remainder"
+      ],
+      "unit_slugs": [
+        "zhou-full-3-4"
+      ]
+    },
+    {
+      "pdf_page": 23,
+      "chapter": 3,
+      "section": "3.4",
+      "items": [
+        "Bernoulli inequality",
+        "Square root of 37",
+        "Root-finding algorithms",
+        "Newton’s method; Lagrange multipliers"
+      ],
+      "unit_slugs": [
+        "zhou-full-3-4"
+      ]
+    },
+    {
+      "pdf_page": 24,
+      "chapter": 3,
+      "section": "3.4",
+      "items": [
+        "Distance from origin to plane"
+      ],
+      "unit_slugs": [
+        "zhou-full-3-4"
+      ]
+    },
+    {
+      "pdf_page": 24,
+      "chapter": 3,
+      "section": "3.5",
+      "items": [
+        "y prime + 6xy = 0",
+        "y prime = (x-y)/(x+y)",
+        "Ordinary Differential Equations: separable and first-order linear methods"
+      ],
+      "unit_slugs": [
+        "zhou-full-3-5"
+      ]
+    },
+    {
+      "pdf_page": 25,
+      "chapter": 3,
+      "section": "3.5",
+      "items": [
+        "First-order linear equation",
+        "Homogeneous linear equation",
+        "Second-order homogeneous and nonhomogeneous linear methods"
+      ],
+      "unit_slugs": [
+        "zhou-full-3-5"
+      ]
+    },
+    {
+      "pdf_page": 26,
+      "chapter": 3,
+      "section": "3.5",
+      "items": [
+        "Nonhomogeneous linear equations"
+      ],
+      "unit_slugs": [
+        "zhou-full-3-5"
+      ]
+    },
+    {
+      "pdf_page": 26,
+      "chapter": 3,
+      "section": "3.6",
+      "items": [
+        "Correlation bounds: vectors",
+        "Vectors; inner product; norm"
+      ],
+      "unit_slugs": [
+        "zhou-full-3-6"
+      ]
+    },
+    {
+      "pdf_page": 27,
+      "chapter": 3,
+      "section": "3.6",
+      "items": [
+        "Linear least squares regression",
+        "QR decomposition; determinants"
+      ],
+      "unit_slugs": [
+        "zhou-full-3-6"
+      ]
+    },
+    {
+      "pdf_page": 28,
+      "chapter": 3,
+      "section": "3.6",
+      "items": [
+        "Eigenvalues and eigenvectors",
+        "Determinant and eigenvalue properties"
+      ],
+      "unit_slugs": [
+        "zhou-full-3-6"
+      ]
+    },
+    {
+      "pdf_page": 29,
+      "chapter": 3,
+      "section": "3.6",
+      "items": [
+        "Correlation bounds: positive semidefinite matrix",
+        "Correlated normal simulation",
+        "Positive semidefinite matrices; LU and Cholesky decomposition"
+      ],
+      "unit_slugs": [
+        "zhou-full-3-6"
+      ]
+    },
+    {
+      "pdf_page": 30,
+      "chapter": 3,
+      "section": "3.6",
+      "items": [
+        "Correlated normal simulation",
+        "Multivariate normal distribution; singular value decomposition"
+      ],
+      "unit_slugs": [
+        "zhou-full-3-6"
+      ]
+    },
+    {
+      "pdf_page": 30,
+      "chapter": 4,
+      "section": "4.1",
+      "items": [
+        "Probability Theory: introduction; sample space and probability axioms"
+      ],
+      "unit_slugs": [
+        "zhou-full-4-1"
+      ]
+    },
+    {
+      "pdf_page": 31,
+      "chapter": 4,
+      "section": "4.1",
+      "items": [
+        "Coin toss game",
+        "Card game",
+        "Set operations and basic event identities"
+      ],
+      "unit_slugs": [
+        "zhou-full-4-1"
+      ]
+    },
+    {
+      "pdf_page": 32,
+      "chapter": 4,
+      "section": "4.1",
+      "items": [
+        "Card game",
+        "Drunk passenger",
+        "N points on a circle"
+      ],
+      "unit_slugs": [
+        "zhou-full-4-1"
+      ]
+    },
+    {
+      "pdf_page": 33,
+      "chapter": 4,
+      "section": "4.1",
+      "items": [
+        "N points on a circle"
+      ],
+      "unit_slugs": [
+        "zhou-full-4-1"
+      ]
+    },
+    {
+      "pdf_page": 33,
+      "chapter": 4,
+      "section": "4.2",
+      "items": [
+        "Poker hands",
+        "Counting; permutations; combinations; binomial theorem; inclusion-exclusion"
+      ],
+      "unit_slugs": [
+        "zhou-full-4-2"
+      ]
+    },
+    {
+      "pdf_page": 34,
+      "chapter": 4,
+      "section": "4.2",
+      "items": [
+        "Poker hands",
+        "Hopping rabbit",
+        "Screwy pirates 2"
+      ],
+      "unit_slugs": [
+        "zhou-full-4-2"
+      ]
+    },
+    {
+      "pdf_page": 35,
+      "chapter": 4,
+      "section": "4.2",
+      "items": [
+        "Chess tournament",
+        "Application letters"
+      ],
+      "unit_slugs": [
+        "zhou-full-4-2"
+      ]
+    },
+    {
+      "pdf_page": 36,
+      "chapter": 4,
+      "section": "4.2",
+      "items": [
+        "Application letters",
+        "Birthday problem",
+        "100th digit"
+      ],
+      "unit_slugs": [
+        "zhou-full-4-2"
+      ]
+    },
+    {
+      "pdf_page": 37,
+      "chapter": 4,
+      "section": "4.2",
+      "items": [
+        "100th digit",
+        "Cubic of integer"
+      ],
+      "unit_slugs": [
+        "zhou-full-4-2"
+      ]
+    },
+    {
+      "pdf_page": 37,
+      "chapter": 4,
+      "section": "4.3",
+      "items": [
+        "Boys and girls",
+        "Conditional probability; Bayes formula; total probability; independence"
+      ],
+      "unit_slugs": [
+        "zhou-full-4-3"
+      ]
+    },
+    {
+      "pdf_page": 38,
+      "chapter": 4,
+      "section": "4.3",
+      "items": [
+        "Boys and girls",
+        "All-girl world?",
+        "Unfair coin",
+        "Fair probability from an unfair coin",
+        "Dart game"
+      ],
+      "unit_slugs": [
+        "zhou-full-4-3"
+      ]
+    },
+    {
+      "pdf_page": 39,
+      "chapter": 4,
+      "section": "4.3",
+      "items": [
+        "Dart game",
+        "Birthday line"
+      ],
+      "unit_slugs": [
+        "zhou-full-4-3"
+      ]
+    },
+    {
+      "pdf_page": 40,
+      "chapter": 4,
+      "section": "4.3",
+      "items": [
+        "Dice order",
+        "Monty Hall problem",
+        "Amoeba population",
+        "Candies in a jar"
+      ],
+      "unit_slugs": [
+        "zhou-full-4-3"
+      ]
+    },
+    {
+      "pdf_page": 41,
+      "chapter": 4,
+      "section": "4.3",
+      "items": [
+        "Candies in a jar",
+        "Coin toss game",
+        "Russian roulette series"
+      ],
+      "unit_slugs": [
+        "zhou-full-4-3"
+      ]
+    },
+    {
+      "pdf_page": 42,
+      "chapter": 4,
+      "section": "4.3",
+      "items": [
+        "Russian roulette series",
+        "Aces",
+        "Gambler’s ruin problem"
+      ],
+      "unit_slugs": [
+        "zhou-full-4-3"
+      ]
+    },
+    {
+      "pdf_page": 43,
+      "chapter": 4,
+      "section": "4.3",
+      "items": [
+        "Gambler’s ruin problem",
+        "Basketball scores",
+        "Cars on road"
+      ],
+      "unit_slugs": [
+        "zhou-full-4-3"
+      ]
+    },
+    {
+      "pdf_page": 44,
+      "chapter": 4,
+      "section": "4.3",
+      "items": [
+        "Cars on road"
+      ],
+      "unit_slugs": [
+        "zhou-full-4-3"
+      ]
+    },
+    {
+      "pdf_page": 44,
+      "chapter": 4,
+      "section": "4.4",
+      "items": [
+        "CDF, PMF, PDF, expectation and variance; discrete distribution table"
+      ],
+      "unit_slugs": [
+        "zhou-full-4-4"
+      ]
+    },
+    {
+      "pdf_page": 45,
+      "chapter": 4,
+      "section": "4.4",
+      "items": [
+        "Meeting probability",
+        "Probability of triangle",
+        "Continuous distribution table"
+      ],
+      "unit_slugs": [
+        "zhou-full-4-4"
+      ]
+    },
+    {
+      "pdf_page": 46,
+      "chapter": 4,
+      "section": "4.4",
+      "items": [
+        "Probability of triangle",
+        "Property of Poisson process",
+        "Moments of normal distribution"
+      ],
+      "unit_slugs": [
+        "zhou-full-4-4"
+      ]
+    },
+    {
+      "pdf_page": 47,
+      "chapter": 4,
+      "section": "4.4",
+      "items": [
+        "Moments of normal distribution"
+      ],
+      "unit_slugs": [
+        "zhou-full-4-4"
+      ]
+    },
+    {
+      "pdf_page": 47,
+      "chapter": 4,
+      "section": "4.5",
+      "items": [
+        "Connecting noodles",
+        "Expectation, covariance and correlation; conditional expectation"
+      ],
+      "unit_slugs": [
+        "zhou-full-4-5"
+      ]
+    },
+    {
+      "pdf_page": 48,
+      "chapter": 4,
+      "section": "4.5",
+      "items": [
+        "Connecting noodles",
+        "Optimal hedge ratio",
+        "Card game",
+        "Dice game",
+        "Sum of random variables"
+      ],
+      "unit_slugs": [
+        "zhou-full-4-5"
+      ]
+    },
+    {
+      "pdf_page": 49,
+      "chapter": 4,
+      "section": "4.5",
+      "items": [
+        "Sum of random variables",
+        "Coupon collection"
+      ],
+      "unit_slugs": [
+        "zhou-full-4-5"
+      ]
+    },
+    {
+      "pdf_page": 50,
+      "chapter": 4,
+      "section": "4.5",
+      "items": [
+        "Coupon collection",
+        "Joint default probability",
+        "18 balls in 10 boxes: empty-box footnote exercise"
+      ],
+      "unit_slugs": [
+        "zhou-full-4-5"
+      ]
+    },
+    {
+      "pdf_page": 50,
+      "chapter": 4,
+      "section": "4.6",
+      "items": [
+        "Expected value of max and min",
+        "General order-statistic CDF and density formulas"
+      ],
+      "unit_slugs": [
+        "zhou-full-4-6"
+      ]
+    },
+    {
+      "pdf_page": 51,
+      "chapter": 4,
+      "section": "4.6",
+      "items": [
+        "Expected value of max and min",
+        "Correlation of max and min",
+        "Equal variances of uniform maxima and minima: footnote discussion"
+      ],
+      "unit_slugs": [
+        "zhou-full-4-6"
+      ]
+    },
+    {
+      "pdf_page": 52,
+      "chapter": 4,
+      "section": "4.6",
+      "items": [
+        "Correlation of max and min",
+        "Random ants"
+      ],
+      "unit_slugs": [
+        "zhou-full-4-6"
+      ]
+    },
+    {
+      "pdf_page": 53,
+      "chapter": [
+        5
+      ],
+      "section": [
+        "5.1"
+      ],
+      "items": [
+        "Markov Chain: definition, transition matrix, initial probabilities, path probability"
+      ],
+      "unit_slugs": [
+        "zhou-05-01"
+      ]
+    },
+    {
+      "pdf_page": 54,
+      "chapter": [
+        5
+      ],
+      "section": [
+        "5.1"
+      ],
+      "items": [
+        "Classification of states",
+        "Absorbing Markov chains",
+        "Absorption probability and expected time",
+        "Gambler's ruin problem"
+      ],
+      "unit_slugs": [
+        "zhou-05-01"
+      ]
+    },
+    {
+      "pdf_page": 55,
+      "chapter": [
+        5
+      ],
+      "section": [
+        "5.1"
+      ],
+      "items": [
+        "Gambler's ruin problem: solution",
+        "Dice question",
+        "Coin tosses A: HHH and THH waiting times"
+      ],
+      "unit_slugs": [
+        "zhou-05-01"
+      ]
+    },
+    {
+      "pdf_page": 56,
+      "chapter": [
+        5
+      ],
+      "section": [
+        "5.1"
+      ],
+      "items": [
+        "Coin tosses A: solutions",
+        "Coin tosses B: HHH before THH",
+        "Coin tosses C: choosing triplets"
+      ],
+      "unit_slugs": [
+        "zhou-05-01"
+      ]
+    },
+    {
+      "pdf_page": 57,
+      "chapter": [
+        5
+      ],
+      "section": [
+        "5.1"
+      ],
+      "items": [
+        "Coin tosses C: full Table 5.1",
+        "Color balls"
+      ],
+      "unit_slugs": [
+        "zhou-05-01"
+      ]
+    },
+    {
+      "pdf_page": 58,
+      "chapter": [
+        5
+      ],
+      "section": [
+        "5.1",
+        "5.2"
+      ],
+      "items": [
+        "Color balls: conditional transitions and expectation",
+        "Random walk definition",
+        "Martingale definition and examples"
+      ],
+      "unit_slugs": [
+        "zhou-05-01",
+        "zhou-05-02"
+      ]
+    },
+    {
+      "pdf_page": 59,
+      "chapter": [
+        5
+      ],
+      "section": [
+        "5.2"
+      ],
+      "items": [
+        "Stopping rule",
+        "Wald's Equality",
+        "Drunk man",
+        "Dice game",
+        "Ticket line"
+      ],
+      "unit_slugs": [
+        "zhou-05-02"
+      ]
+    },
+    {
+      "pdf_page": 60,
+      "chapter": [
+        5
+      ],
+      "section": [
+        "5.2"
+      ],
+      "items": [
+        "Ticket line: reflection principle",
+        "Coin sequence: n heads"
+      ],
+      "unit_slugs": [
+        "zhou-05-02"
+      ]
+    },
+    {
+      "pdf_page": 61,
+      "chapter": [
+        5
+      ],
+      "section": [
+        "5.2",
+        "5.3"
+      ],
+      "items": [
+        "Coin sequence: induction and martingale",
+        "HHTTHH waiting time",
+        "Dynamic Programming: stages, states and dynamics"
+      ],
+      "unit_slugs": [
+        "zhou-05-02",
+        "zhou-05-03"
+      ]
+    },
+    {
+      "pdf_page": 62,
+      "chapter": [
+        5
+      ],
+      "section": [
+        "5.3"
+      ],
+      "items": [
+        "Additive cost and principle of optimality",
+        "Bellman recursion",
+        "Dice game: up to three rolls",
+        "World series"
+      ],
+      "unit_slugs": [
+        "zhou-05-03"
+      ]
+    },
+    {
+      "pdf_page": 63,
+      "chapter": [
+        5
+      ],
+      "section": [
+        "5.3"
+      ],
+      "items": [
+        "World series: payoff and bet tables",
+        "Binomial-tree interpretation"
+      ],
+      "unit_slugs": [
+        "zhou-05-03"
+      ]
+    },
+    {
+      "pdf_page": 64,
+      "chapter": [
+        5
+      ],
+      "section": [
+        "5.3"
+      ],
+      "items": [
+        "Dynamic dice game: threshold and full value table",
+        "Dynamic card game: Bellman equation"
+      ],
+      "unit_slugs": [
+        "zhou-05-03"
+      ]
+    },
+    {
+      "pdf_page": 65,
+      "chapter": [
+        5
+      ],
+      "section": [
+        "5.3",
+        "5.4"
+      ],
+      "items": [
+        "Dynamic card game: state values in Figure 5.9",
+        "Brownian motion A: definition and martingales"
+      ],
+      "unit_slugs": [
+        "zhou-05-03",
+        "zhou-05-04"
+      ]
+    },
+    {
+      "pdf_page": 66,
+      "chapter": [
+        5
+      ],
+      "section": [
+        "5.4"
+      ],
+      "items": [
+        "Brownian motion A: exponential martingale proof",
+        "Brownian motion B: correlation with square",
+        "Brownian motion C: signs at times 1 and 2",
+        "Stopping time A: boundaries -1 and 1"
+      ],
+      "unit_slugs": [
+        "zhou-05-04"
+      ]
+    },
+    {
+      "pdf_page": 67,
+      "chapter": [
+        5
+      ],
+      "section": [
+        "5.4"
+      ],
+      "items": [
+        "Stopping time A: mean exit time",
+        "Stopping time B: density and infinite expectation",
+        "Stopping time C: hit 3 before -5"
+      ],
+      "unit_slugs": [
+        "zhou-05-04"
+      ]
+    },
+    {
+      "pdf_page": 68,
+      "chapter": [
+        5
+      ],
+      "section": [
+        "5.4"
+      ],
+      "items": [
+        "Stopping time C: nonzero drift",
+        "Stopping time D: reach -1 with drift 1",
+        "Ito's lemma and Feynman-Kac",
+        "Ito's lemma A: sqrt(t) B_t",
+        "Ito's lemma B: B_t cubed"
+      ],
+      "unit_slugs": [
+        "zhou-05-04"
+      ]
+    },
+    {
+      "pdf_page": 69,
+      "chapter": [
+        5,
+        6
+      ],
+      "section": [
+        "5.4",
+        "6.1"
+      ],
+      "items": [
+        "Ito's lemma B: conclusion",
+        "Finance introduction and notation",
+        "Price direction of options"
+      ],
+      "unit_slugs": [
+        "zhou-05-04",
+        "zhou-06-01"
+      ]
+    },
+    {
+      "pdf_page": 70,
+      "chapter": [
+        6
+      ],
+      "section": [
+        "6.1"
+      ],
+      "items": [
+        "Price direction of options: Table 6.1",
+        "Put-call parity and bounds",
+        "American vs European options A"
+      ],
+      "unit_slugs": [
+        "zhou-06-01"
+      ]
+    },
+    {
+      "pdf_page": 71,
+      "chapter": [
+        6
+      ],
+      "section": [
+        "6.1"
+      ],
+      "items": [
+        "American vs European options A: three arguments",
+        "American vs European options B: puts with strikes 80 and 90"
+      ],
+      "unit_slugs": [
+        "zhou-06-01"
+      ]
+    },
+    {
+      "pdf_page": 72,
+      "chapter": [
+        6
+      ],
+      "section": [
+        "6.1"
+      ],
+      "items": [
+        "American vs European options B: arbitrage payoff",
+        "Black-Scholes-Merton differential equation",
+        "Discounted Feynman-Kac",
+        "Black-Scholes formula"
+      ],
+      "unit_slugs": [
+        "zhou-06-01"
+      ]
+    },
+    {
+      "pdf_page": 73,
+      "chapter": [
+        6
+      ],
+      "section": [
+        "6.1"
+      ],
+      "items": [
+        "Black-Scholes formula A: assumptions",
+        "Black-Scholes formula B: risk-neutral derivation",
+        "Black-Scholes formula C: PDE derivation"
+      ],
+      "unit_slugs": [
+        "zhou-06-01"
+      ]
+    },
+    {
+      "pdf_page": 74,
+      "chapter": [
+        6
+      ],
+      "section": [
+        "6.1"
+      ],
+      "items": [
+        "Black-Scholes formula C: heat-kernel solution",
+        "Black-Scholes formula D: perpetual hit of H"
+      ],
+      "unit_slugs": [
+        "zhou-06-01"
+      ]
+    },
+    {
+      "pdf_page": 75,
+      "chapter": [
+        6
+      ],
+      "section": [
+        "6.1",
+        "6.2"
+      ],
+      "items": [
+        "Black-Scholes formula D: value 1/H",
+        "Black-Scholes formula E: inverse stock payoff",
+        "Greeks definitions",
+        "Delta A"
+      ],
+      "unit_slugs": [
+        "zhou-06-01",
+        "zhou-06-02"
+      ]
+    },
+    {
+      "pdf_page": 76,
+      "chapter": [
+        6
+      ],
+      "section": [
+        "6.2"
+      ],
+      "items": [
+        "Delta A: derivative cancellation",
+        "Delta B: at-the-money maturity limit",
+        "Delta C: GM hedging"
+      ],
+      "unit_slugs": [
+        "zhou-06-02"
+      ]
+    },
+    {
+      "pdf_page": 77,
+      "chapter": [
+        6
+      ],
+      "section": [
+        "6.2"
+      ],
+      "items": [
+        "Delta C: rebalancing",
+        "Delta D: short-dated at-the-money estimate",
+        "Gamma: formula and limiting behavior"
+      ],
+      "unit_slugs": [
+        "zhou-06-02"
+      ]
+    },
+    {
+      "pdf_page": 78,
+      "chapter": [
+        6
+      ],
+      "section": [
+        "6.2"
+      ],
+      "items": [
+        "Gamma: Figure 6.3 parameters and interpretation",
+        "Theta: formulas and Figure 6.4",
+        "Theta A: positive theta"
+      ],
+      "unit_slugs": [
+        "zhou-06-02"
+      ]
+    },
+    {
+      "pdf_page": 79,
+      "chapter": [
+        6
+      ],
+      "section": [
+        "6.2"
+      ],
+      "items": [
+        "Theta A: put and dividend cases",
+        "Theta B: gamma-theta trade-off",
+        "Vega A: implied volatility and smile",
+        "Vega B: random volatility"
+      ],
+      "unit_slugs": [
+        "zhou-06-02"
+      ]
+    },
+    {
+      "pdf_page": 80,
+      "chapter": [
+        6
+      ],
+      "section": [
+        "6.2",
+        "6.3"
+      ],
+      "items": [
+        "Vega B: Volga and convexity",
+        "Vega C: risk-neutral density from strikes",
+        "Option portfolios and exotic options overview",
+        "Bull spread",
+        "Straddle"
+      ],
+      "unit_slugs": [
+        "zhou-06-02",
+        "zhou-06-03"
+      ]
+    },
+    {
+      "pdf_page": 81,
+      "chapter": [
+        6
+      ],
+      "section": [
+        "6.3"
+      ],
+      "items": [
+        "Straddle: volatility exposure and variance swap",
+        "Binary options: price and two hedging methods",
+        "Exchange options: original payoff and numeraire"
+      ],
+      "unit_slugs": [
+        "zhou-06-03"
+      ]
+    },
+    {
+      "pdf_page": 82,
+      "chapter": [
+        6
+      ],
+      "section": [
+        "6.3",
+        "6.4"
+      ],
+      "items": [
+        "Exchange options: Ito ratio and pricing",
+        "Other finance questions introduction",
+        "Portfolio optimization"
+      ],
+      "unit_slugs": [
+        "zhou-06-03",
+        "zhou-06-04"
+      ]
+    },
+    {
+      "pdf_page": 83,
+      "chapter": [
+        6
+      ],
+      "section": [
+        "6.4"
+      ],
+      "items": [
+        "Portfolio optimization: weights and general solution",
+        "Value at risk: tail risk and subadditivity example",
+        "Duration and convexity definitions"
+      ],
+      "unit_slugs": [
+        "zhou-06-04"
+      ]
+    },
+    {
+      "pdf_page": 84,
+      "chapter": [
+        6
+      ],
+      "section": [
+        "6.4"
+      ],
+      "items": [
+        "Dollar duration and DV01",
+        "Portfolio duration",
+        "Inverse floater: full cash-flow replication and duration",
+        "Forward and futures"
+      ],
+      "unit_slugs": [
+        "zhou-06-04"
+      ]
+    },
+    {
+      "pdf_page": 85,
+      "chapter": [
+        6
+      ],
+      "section": [
+        "6.4"
+      ],
+      "items": [
+        "Forward and futures: interest-rate correlation",
+        "Interest rate models: classifications",
+        "Vasicek",
+        "Cox-Ingersoll-Ross",
+        "Ho-Lee",
+        "Hull-White"
+      ],
+      "unit_slugs": [
+        "zhou-06-04"
+      ]
+    },
+    {
+      "pdf_page": 86,
+      "chapter": [
+        7
+      ],
+      "section": [
+        "7.1"
+      ],
+      "items": [
+        "Algorithms introduction",
+        "O, Omega and Theta notation"
+      ],
+      "unit_slugs": [
+        "zhou-07-01"
+      ]
+    },
+    {
+      "pdf_page": 87,
+      "chapter": [
+        7
+      ],
+      "section": [
+        "7.1"
+      ],
+      "items": [
+        "Worst-case and average-case complexity",
+        "Master theorem and binary search",
+        "Number swap",
+        "Unique elements"
+      ],
+      "unit_slugs": [
+        "zhou-07-01"
+      ]
+    },
+    {
+      "pdf_page": 88,
+      "chapter": [
+        7
+      ],
+      "section": [
+        "7.1"
+      ],
+      "items": [
+        "Unique elements: implementation",
+        "Horner's algorithm",
+        "Moving average",
+        "Sorting algorithm: insertion, merge and quicksort"
+      ],
+      "unit_slugs": [
+        "zhou-07-01"
+      ]
+    },
+    {
+      "pdf_page": 89,
+      "chapter": [
+        7
+      ],
+      "section": [
+        "7.1"
+      ],
+      "items": [
+        "Quicksort: expected comparison derivation",
+        "Random permutation A: shuffle",
+        "Random permutation B: reservoir sampling",
+        "Search algorithm A: min and max"
+      ],
+      "unit_slugs": [
+        "zhou-07-01"
+      ]
+    },
+    {
+      "pdf_page": 90,
+      "chapter": [
+        7
+      ],
+      "section": [
+        "7.1"
+      ],
+      "items": [
+        "Search algorithm A: comparison count",
+        "Search algorithm B: first nonzero",
+        "Search algorithm C: sorted grid",
+        "Fibonacci numbers: 100-second question"
+      ],
+      "unit_slugs": [
+        "zhou-07-01"
+      ]
+    },
+    {
+      "pdf_page": 91,
+      "chapter": [
+        7
+      ],
+      "section": [
+        "7.1"
+      ],
+      "items": [
+        "Fibonacci: matrix squaring",
+        "Maximum contiguous subarray: prefix sums and code"
+      ],
+      "unit_slugs": [
+        "zhou-07-01"
+      ]
+    },
+    {
+      "pdf_page": 92,
+      "chapter": [
+        7
+      ],
+      "section": [
+        "7.1",
+        "7.2"
+      ],
+      "items": [
+        "Maximum contiguous subarray: original numerical example",
+        "The Power of Two introduction",
+        "Power of 2",
+        "Multiplication by 7",
+        "Probability simulation",
+        "Poisonous wine"
+      ],
+      "unit_slugs": [
+        "zhou-07-01",
+        "zhou-07-02"
+      ]
+    },
+    {
+      "pdf_page": 93,
+      "chapter": [
+        7
+      ],
+      "section": [
+        "7.3"
+      ],
+      "items": [
+        "Numerical Methods introduction",
+        "Monte Carlo simulation A: European call",
+        "Monte Carlo simulation B: normal generation and inverse transform"
+      ],
+      "unit_slugs": [
+        "zhou-07-03"
+      ]
+    },
+    {
+      "pdf_page": 94,
+      "chapter": [
+        7
+      ],
+      "section": [
+        "7.3"
+      ],
+      "items": [
+        "Monte Carlo simulation B: rejection sampling",
+        "Monte Carlo simulation C: antithetic, moment matching, control variate and importance sampling"
+      ],
+      "unit_slugs": [
+        "zhou-07-03"
+      ]
+    },
+    {
+      "pdf_page": 95,
+      "chapter": [
+        7
+      ],
+      "section": [
+        "7.3"
+      ],
+      "items": [
+        "Monte Carlo simulation C: low-discrepancy sequence",
+        "Monte Carlo simulation D: delta and gamma",
+        "Monte Carlo simulation E: pi",
+        "Finite difference method A"
+      ],
+      "unit_slugs": [
+        "zhou-07-03"
+      ]
+    },
+    {
+      "pdf_page": 96,
+      "chapter": [
+        7
+      ],
+      "section": [
+        "7.3"
+      ],
+      "items": [
+        "Finite difference method A: explicit, implicit and Crank-Nicolson",
+        "Finite difference method B: grid stability"
+      ],
+      "unit_slugs": [
+        "zhou-07-03"
+      ]
+    }
+  ],
+  "unresolved": [
+    {
+      "unit": "material-006",
+      "source": "燧石.docx",
+      "missing": "仅有研报系列名，缺具体报告、模型公式及数据版本",
+      "handling": "提供逐阶段复现流程，无唯一实验数值"
+    },
+    {
+      "unit": "material-013",
+      "source": "概率.docx/概率2.pdf",
+      "missing": "三日0.csv、1.csv、2.csv及字段说明图未包含于目录",
+      "handling": "完整十项方法与可识别性分析，未填造行情统计"
+    },
+    {
+      "unit": "material-014",
+      "source": "茂源.docx",
+      "missing": "各历史原油/PTA/十品种Tick数据、汇率与主力表不在目录；3.5%%费率含义不清",
+      "handling": "保留原时间、数值、成本与任务；明确参数口径和所需输入"
+    },
+    {
+      "unit": "material-015",
+      "source": "Assignment/Question.docx",
+      "missing": "五天Tick行情本体；目录只有ContractList与读取函数",
+      "handling": "算法、账本格式及附件链接，真实排名与PNL待数据"
+    },
+    {
+      "unit": "material-035",
+      "source": "通登.docx",
+      "missing": "顺序选数中丙的最优反应并列规则",
+      "handling": "给最坏反应下75/76，并解释74在不同反应下结果"
+    },
+    {
+      "unit": "material-036",
+      "source": "世纪前沿.docx",
+      "missing": "质数操作目标误写为“全部已有”",
+      "handling": "明确按全部相同解释并求解"
+    },
+    {
+      "unit": "material-037",
+      "source": "九坤.docx",
+      "missing": "篮球比赛回合数与平局规则；专家预测共同任务及收费条件",
+      "handling": "给参数化概率及条件比较，不定唯一赢家"
+    },
+    {
+      "unit": "material-044",
+      "source": "托特投资笔试回忆.docx",
+      "missing": "第6/7概率题全题缺失；翻牌打破成环、白魔法师仅题名；股票/约瑟夫II/滑雪版本条件缺失",
+      "handling": "缺题保留缺项；可识别常见版本明确标注条件并给算法"
+    },
+    {
+      "unit": "material-045",
+      "source": "佳期.pdf",
+      "missing": "圆环游走起点未写明",
+      "handling": "按零点起步得1/100，并说明起点为50时为零"
+    },
+    {
+      "unit": "material-046",
+      "source": "白鹭.pdf",
+      "missing": "三只乌龟不能捕获的完整下界证明；连续子数组与一般子序列用词冲突",
+      "handling": "证明四只足够且保留未证下界；按原前缀和意图解释连续子数组"
+    },
+    {
+      "unit": "material-047",
+      "source": "上海念空线上笔试.pdf",
+      "missing": "factorA.csv/factorB.csv未包含于目录；贝叶斯题未指定先验",
+      "handling": "给可运行数据处理与合成检验；先验用Beta(a,b)及均匀特例"
+    },
+    {
+      "unit": "material-048",
+      "source": "喜岳投资.docx",
+      "missing": "SQL表结构及筛选条件；打印K的尺寸和样例",
+      "handling": "SQL说明缺项；K给明确参数化布局"
+    },
+    {
+      "unit": "material-050",
+      "source": "凯读2.pdf",
+      "missing": "未知行业收益时未提供保证识别的锚点或约束",
+      "handling": "可运行反例证明原条件不能保证唯一反推，并列出可补条件"
+    },
+    {
+      "unit": "material-051",
+      "source": "伯兄quant校招生机试题.txt",
+      "missing": "电梯起始/回程/停站细则，features无时间戳或信号定义，N未指定",
+      "handling": "明确电梯模型并独立枚举验证；按连续行序作时间切分且报告候选网格结果"
+    },
+    {
+      "unit": "material-052",
+      "source": "通登 2.docx",
+      "missing": "几何图形分支、键盘跨越中间点规则不完整",
+      "handling": "保留可见边长2/3/1，按凸四边形及任意端点连线假设求解"
+    },
+    {
+      "unit": "material-053",
+      "source": "通登笔试.docx",
+      "missing": "最后一题递归程序页未附；0至6的均匀分布未写明连续/离散",
+      "handling": "程序输出不能恢复；均匀题两种解释均完整计算"
+    },
+    {
+      "unit": "material-055",
+      "source": "顽岩ZIP题面",
+      "missing": "Hot Rate、corr1/corr2及账户存续时间未定义",
+      "handling": "给明确定义并实跑全部附件，日期2018-02-29保留缺失"
+    },
+    {
+      "unit": "material-hande",
+      "source": "涵德.docx/涵德.pdf",
+      "missing": "25马取前5的全局最少场次证明未由当前资料提供",
+      "handling": "父任务给9场构造上界，不称已证最少"
+    }
+  ]
+}

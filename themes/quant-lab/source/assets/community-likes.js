@@ -1,6 +1,5 @@
 'use strict';
 (() => {
- if(document.body.dataset.section==='town')return;
  const L=window.QuantLab,states=new Map(),pending=new Set(),seen=new WeakSet();let timer;
  const key=(kind,id)=>kind+':'+id;
  const buttons=k=>[...document.querySelectorAll('[data-like-id]')].filter(b=>key(b.dataset.likeKind,b.dataset.likeId)===k);

@@ -32,7 +32,7 @@
  D.isVisible=n=>D.ancestors(n.id).every(x=>x.visible);
  // A database array is an unordered set of placements. Prefer the programming
  // module for its lessons, even when they are also referenced by a physics topic.
- D.primary=item=>{const nodes=(item?.section_ids||[]).map(D.get).filter(n=>n&&D.isVisible(n));if(item?.track==='OpenFOAM 编程'){const root=D.nodes.find(n=>n.key==='programming');return nodes.find(n=>D.ancestors(n.id).some(a=>a.id===root?.id))||nodes[0];}return nodes[0];};
+ D.primary=item=>(item?.section_ids||[]).map(D.get).find(n=>n&&D.isVisible(n));
  D.url=n=>{if(n?.href&&!n.href.startsWith('/read/?')&&!(n.key==='programming-examples'&&n.href.startsWith('/programming/?'))){try{const u=new URL(n.href,location.origin);if(u.origin===location.origin)return u.pathname+u.search+u.hash;}catch{}}return '/section/?id='+encodeURIComponent(n.id);};
  D.locations=row=>(row.section_ids||[]).map(D.path).filter(Boolean);
  D.optionLabel=node=>{const depth=Math.max(0,D.ancestors(node.id).length-1);return '　'.repeat(Math.min(depth,8))+(depth?'↳ ':'')+D.path(node.id);};
@@ -40,28 +40,21 @@
  D.options=(selected='',exclude=[],rootId=null)=>(rootId?'':'<option value="">顶层模块</option>')+D.orderedNodes(rootId).filter(n=>!exclude.includes(n.id)).map(n=>D.option(n,selected)).join('');
  D.current=(nodes=D.nodes)=>{const u=new URL(location.href),id=u.searchParams.get('id');if(u.pathname==='/section/')return nodes.find(n=>n.id===id);return nodes.filter(n=>n.href&&n.href!=='/admin/'&&(()=>{const v=new URL(n.href,location.origin);return v.pathname===u.pathname&&(!v.hash||v.hash===u.hash)&&[...v.searchParams].every(([k,x])=>u.searchParams.get(k)===x);})()).sort((a,b)=>(new URL(b.href,location.origin).search+new URL(b.href,location.origin).hash).length-(new URL(a.href,location.origin).search+new URL(a.href,location.origin).hash).length)[0];};
  const contentReads=new Map(),hintKey='foamlab.directory-hint.v1';
- const projections={
-  full:'id,slug,kind,title,summary,track,series,cover_url,metadata,section_ids,author_id,author_name,sort_order,pinned,published_at,created_at,updated_at',
-  overview:'id,kind,title,summary,series,cover_url,section_ids,curriculum_series:metadata->curriculum_series',
-  book:'id,slug,title,summary,sort_order,fvm_book:metadata->fvm_book,turbulence_book:metadata->turbulence_book,heat_transfer_book:metadata->heat_transfer_book,kolev_book:metadata->kolev_book'
- };
- function readContent(ids,shape='full'){
-  if(!Object.hasOwn(projections,shape))shape='full';
-  const key=shape+':'+[...ids].sort().join(',');if(contentReads.has(key))return contentReads.get(key);
-  const pending=(async()=>{const rows=[];for(let start=0;;start+=500){const batch=L.check(await L.client.from('foamlab_content').select(projections[shape]).eq('status','published').overlaps('section_ids',ids).order('sort_order').order('id').range(start,start+499));
-   for(const row of batch){if(shape==='overview')row.metadata={curriculum_series:row.curriculum_series};if(shape==='book')row.metadata={fvm_book:row.fvm_book,turbulence_book:row.turbulence_book,heat_transfer_book:row.heat_transfer_book,kolev_book:row.kolev_book};}
+ const columns='id,slug,kind,title,summary,track,series,cover_url,metadata,section_ids,author_id,author_name,sort_order,pinned,published_at,created_at,updated_at';
+ function readContent(ids){
+  const key=[...ids].sort().join(',');if(contentReads.has(key))return contentReads.get(key);
+  const pending=(async()=>{const rows=[];for(let start=0;;start+=500){const batch=L.check(await L.client.from('foamlab_content').select(columns).eq('status','published').overlaps('section_ids',ids).order('sort_order').order('id').range(start,start+499));
    rows.push(...batch);if(batch.length<500)return rows;}})().catch(error=>{contentReads.delete(key);throw error;});
   contentReads.set(key,pending);return pending;
  }
  function prefetchCatalog(){
   // Cached IDs only schedule a fresh request. Never render cached names or rows.
-  const catalog=document.querySelector('[data-lab-catalog]'),book=document.querySelector('#fvm-catalog,#pope-catalog,#incropera-catalog,[data-kolev-catalog]'),hub=document.querySelector('#topic-hub'),home=document.querySelector('#home-special-topics');if(!catalog&&!book&&!hub&&!home)return;
-  const shapeFor=node=>book?'book':home||hub&&node.key===(hub.dataset.root||'topics')?'overview':'full';
+  const catalog=document.querySelector('[data-lab-catalog]');if(!catalog)return;
   try{const saved=JSON.parse(sessionStorage.getItem(hintKey)||'null');if(saved&&saved.user===(L.user?.id||null)&&Date.now()-saved.at<86400000&&Array.isArray(saved.nodes)&&saved.nodes.length<=2000){
-   const nodes=saved.nodes,key=home?'topics':catalog?.dataset.labCatalog||book?.id.replace('-catalog','')||hub?.dataset.root||'topics',node=(!home&&!book&&D.current(nodes))||nodes.find(n=>n.key===key);
-   if(node){void readContent(D.descendants(node.id,nodes),shapeFor(node)).catch(()=>{});return;}
+   const nodes=saved.nodes,key=catalog.dataset.labCatalog||'topics',node=D.current(nodes)||nodes.find(n=>n.key===key);
+   if(node){void readContent(D.descendants(node.id,nodes)).catch(()=>{});return;}
   }}catch{}
-  try{const hint=JSON.parse(document.getElementById('catalog-hint')?.textContent||'null');if(hint?.path===location.pathname&&Array.isArray(hint.ids)&&hint.ids.length&&hint.ids.length<=2000&&!new URLSearchParams(location.search).has('topic'))void readContent(hint.ids,shapeFor(hint)).catch(()=>{});}catch{}
+  try{const hint=JSON.parse(document.getElementById('catalog-hint')?.textContent||'null');if(hint?.path===location.pathname&&Array.isArray(hint.ids)&&hint.ids.length&&hint.ids.length<=2000&&!new URLSearchParams(location.search).has('topic'))void readContent(hint.ids).catch(()=>{});}catch{}
  }
  D.load=async()=>{await L.contentReady;prefetchCatalog();const nodes=[];for(let start=0;;start+=500){const r=L.check(await L.client.from('foamlab_sections').select('id,key,name,parent_id,href,description,nav_group,visible,sort_order,revision,created_at,updated_at,read_access').order('sort_order').order('id').range(start,start+499));nodes.push(...r);if(r.length<500)break;}D.nodes=nodes;D.available=true;
   try{sessionStorage.setItem(hintKey,JSON.stringify({user:L.user?.id||null,at:Date.now(),nodes:nodes.map(({id,key,href,parent_id})=>({id,key,href,parent_id}))}));}catch{}
@@ -69,7 +62,7 @@
  };
  D.ready=D.load().catch(e=>{D.error=e;return D;});
  document.dispatchEvent(new Event('foamlab:directory-init'));
- D.content=(node,shape='full')=>readContent(D.descendants(node.id),shape);
+ D.content=node=>readContent(D.descendants(node.id));
  D.picker=(host,ids=[],editable=true)=>{
   host.innerHTML='<h3>所在位置</h3><p class="cms-muted">可选择多个目录，同一篇正文会同时出现在这些位置。</p><div class="cms-selected-locations" role="status"></div><input type="search" class="cms-location-search" placeholder="查找模块或子模块" aria-label="查找发布位置"><div class="cms-location-picker">'+D.orderedNodes().map(n=>'<label data-location-label="'+esc(D.path(n.id).toLowerCase())+'" style="padding-inline-start:'+Math.min(7+Math.max(0,D.ancestors(n.id).length-1)*14,119)+'px"><input type="checkbox" name="section_ids" value="'+n.id+'" '+(ids.includes(n.id)?'checked':'')+' '+(!editable?'disabled':'')+'><span>'+esc(D.path(n.id))+'</span></label>').join('')+'</div>';
   const selected=()=>{const paths=D.readPicker(host).map(D.path);host.querySelector('.cms-selected-locations').textContent=paths.length?'已选择：'+paths.join('；'):'未归类';};selected();host.addEventListener('change',selected);
@@ -78,14 +71,10 @@
  D.readPicker=host=>[...host.querySelectorAll('[name=section_ids]:checked')].map(x=>x.value);
  D.nav=()=>{
   if(!D.available)return;const nav=document.querySelector('#sidebar nav');if(!nav)return;
-  D.icons=D.icons||Object.fromEntries([...nav.querySelectorAll('[data-nav-section]')].map(g=>[g.dataset.navSection,g.querySelector('.nav-parent>a svg')?.outerHTML||'']));
-  const icons={home:'⌂',start:'→',courses:'▤',topics:'▦',commands:'⌘',dictionaries:'▧',programming:'⌘',tools:'▦',resources:'↓',sharing:'▤',community:'♧',assignments:'☑',announcements:'♧'};
+  const scroller=document.getElementById('sidebar'),scrollTop=scroller.scrollTop;
   const focus=nav.contains(document.activeElement)?{key:document.activeElement.closest('[data-nav-section]')?.dataset.navSection,arrow:document.activeElement.matches('.nav-expand')}:null;
-  const current=D.current(),active=new Set(D.ancestors(current?.id).map(n=>n.id));
-  const item=(n,depth=0)=>{const children=D.children(n.id).filter(D.isVisible),open=window.FoamNavigation?.isOpen(n.key)===true;return '<div class="nav-group" data-directory-id="'+n.id+'" data-nav-section="'+esc(n.key)+'"><div class="nav-parent"><a class="nav-item '+(depth?'nav-subitem ':'')+(active.has(n.id)?'active':'')+'" href="'+esc(D.url(n))+'" '+(n.id===current?.id?'aria-current="page"':'')+'>'+(depth?'':(D.icons[n.key]||D.icons.topics||'<span class="directory-icon" aria-hidden="true">'+(icons[n.key]||'▦')+'</span>'))+'<span>'+esc(n.name)+'</span></a>'+(children.length?'<button type="button" class="nav-expand" aria-controls="directory-'+n.id+'" aria-expanded="'+open+'" aria-label="'+(open?'收起':'展开')+esc(n.name)+'子目录"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 6 6-6 6"/></svg></button>':'')+'</div>'+(children.length?'<div class="nav-subgroup" id="directory-'+n.id+'" '+(open?'':'hidden')+'>'+children.map(c=>item(c,depth+1)).join('')+'</div>':'')+'</div>';};
-  const roots=D.children(null).filter(D.isVisible),town=roots.find(n=>n.key==='town'),regular=roots.filter(n=>n.key!=='town'),groups=[...new Set(regular.map(n=>n.nav_group))];
-  const townLink=town?'<a class="town-entry town-nav-entry" href="'+esc(D.url(town))+'"><i class="town-nav-panda" aria-hidden="true"></i><span><strong>'+esc(town.name)+'</strong><small>带鲨鱼去逛逛</small></span><b aria-hidden="true">↗</b></a>':'';
-  nav.innerHTML=townLink+groups.map(group=>'<div class="nav-label">'+esc(group)+'</div>'+regular.filter(n=>n.nav_group===group).map(n=>item(n)).join('')).join('');
+  nav.innerHTML=window.QuantNavTree.render(D.nodes,{currentId:D.current()?.id,isOpen:key=>window.FoamNavigation?.isOpen(key)===true});
+  scroller.scrollTop=scrollTop;
   if(focus?.key){const group=[...nav.querySelectorAll('[data-nav-section]')].find(g=>g.dataset.navSection===focus.key);group?.querySelector(focus.arrow?':scope > .nav-parent > .nav-expand':':scope > .nav-parent > a')?.focus({preventScroll:true});}
  };
  D.breadcrumb=item=>{
@@ -104,21 +93,9 @@
  D.ready.then(async()=>{
   D.nav();if(window.foamCurrentContent)D.breadcrumb(window.foamCurrentContent);
   if(!D.available)return;
-  // Reference indexes keep their code previews; their categories follow the same tree.
-  const reference=document.querySelector('#command-list,#dictionary-list');
-  if(reference){
-   const key=reference.id==='command-list'?'commands':'dictionaries',node=D.nodes.find(n=>n.key===key),current=D.current(),button=document.querySelector('[data-command-filter],[data-dictionary-filter]');
-   if(node&&button){const tabs=button.parentElement;tabs.innerHTML=[node,...D.children(node.id).filter(D.isVisible)].map(n=>'<a class="'+(n.id===current?.id?'selected':'')+'" '+(n.id===current?.id?'aria-current="page" ':'')+'href="'+esc(D.url(n))+'">'+esc(n.id===node.id?'全部':n.name)+'</a>').join('');}
-   if(!current)return;
-   const heading=document.querySelector('.page-heading h1');if(heading&&node)heading.textContent=node.name;
-   try{
-    const [rows,response]=await Promise.all([D.content(current),fetch('/assets/reference-paths.json')]);if(!response.ok)throw Error('reference paths unavailable');const known=await response.json(),paths=new Set(known[key]||[]),extra=rows.filter(r=>!paths.has(r.metadata?.canonical_path));
-    if(extra.length){const host=document.createElement('section');host.className='directory-extra';host.innerHTML='<h2>本目录中的其他内容</h2><div class="lab-card-grid"></div>';reference.parentElement.append(host);const grid=host.querySelector('.lab-card-grid');await L.names(extra.map(r=>r.author_id));const render=()=>{grid.innerHTML=window.FoamPagination.slice(grid,extra,render,12).map(L.card).join('');};render();}
-   }catch{}
-  }
   // Home, quick start and functional pages can host newly placed content too.
   const current=D.current();
-  if(current&&!reference&&!document.querySelector('[data-lab-catalog],#fvm-catalog,#topic-hub,[data-theory-hub],#fo-list,#model-list,.quick-reference-hub,#live-article,.article[data-cms-slug],#cms-root,#town-app')&&!location.pathname.startsWith('/admin/')){
+  if(current&&!document.querySelector('[data-lab-catalog],#live-article,.article[data-cms-slug],#cms-root')&&!location.pathname.startsWith('/admin/')){
    try{
     const host=document.querySelector('main .page-wrap')||document.querySelector('main'),links=new Set([...host.querySelectorAll('a[href]')].map(a=>new URL(a.href).pathname+new URL(a.href).search));
     const children=D.children(current.id).filter(n=>D.isVisible(n)&&!links.has(n.href)&&!links.has(D.url(n)));
@@ -135,7 +112,7 @@
 'use strict';
 (() => {
  const L=window.QuantLab,D=window.FoamDirectory,requests=new Map();
- const supported=node=>{if(!node)return false;const url=new URL(D.url(node),location.origin);return !url.hash&&url.pathname!=='/'&&!/^\/(?:admin|studio|account|read|support|town)(?:\/|$)/.test(url.pathname);};
+ const supported=node=>{if(!node)return false;const url=new URL(D.url(node),location.origin);return !url.hash&&url.pathname!=='/'&&!/^\/(?:admin|studio|account|read|support)(?:\/|$)/.test(url.pathname);};
  const entryNode=node=>{if(!node)return null;const url=new URL(D.url(node),location.origin);if(!url.hash)return node;return D.ancestors(node.id).reverse().find(parent=>{const target=new URL(D.url(parent),location.origin);return !target.hash&&target.pathname===url.pathname&&target.search===url.search;});};
  async function read(node,fresh=false){
   if(fresh)requests.delete(node.id);
@@ -437,58 +414,6 @@
 })();
 
 ;
-/* topics.js */
-'use strict';
-(() => {
- const L=window.QuantLab,esc=L.esc,hub=document.querySelector('#topic-hub'),home=document.querySelector('#home-special-topics');if(!hub&&!home)return;
- const known=new Set(Object.keys(L.topicLabels));
- const collectionLabel=hub?.dataset.collectionLabel||'专题',programming=hub?.dataset.root==='programming';
- if(hub&&(hub.dataset.topic||new URLSearchParams(location.search).get('topic'))==='algorithms'){location.replace('/topics/finite-volume/'+location.hash);return;}
- const topicURL=key=>known.has(key)?'/topics/'+key+'/':'/topics/?topic='+encodeURIComponent(key);
- const figure=item=>L.safeURL(item.cover_url)?'<img src="'+esc(L.safeURL(item.cover_url))+'" alt="'+esc(item.title)+'配图" loading="lazy">':'';
- function card(item,lessons){const key=item.metadata.topic_key,count=lessons.filter(x=>Array.isArray(x.metadata?.topics)&&x.metadata.topics.includes(key)).length;return '<a class="topic-collection" data-topic="'+esc(key)+'" href="'+topicURL(key)+'">'+figure(item)+'<div class="topic-collection-body"><small>'+count+' 个关联课程</small><h2>'+esc(item.title)+'</h2><p>'+esc(item.summary)+'</p><span class="text-link">进入专题 →</span></div></a>';}
- async function readAll(queryFactory){const all=[];for(let start=0;;start+=500){const rows=L.check(await queryFactory().range(start,start+499));all.push(...rows);if(rows.length<500)return all;}}
- (async()=>{try{await L.contentReady;await L.directoryReady;const D=window.FoamDirectory;
- if(D?.available){
-  const root=D.nodes.find(n=>n.key===(hub?.dataset.root||'topics'));if(!root){if(hub)hub.innerHTML='<p>'+collectionLabel+'目录已调整，请从左侧导航选择。</p>';if(home)home.replaceChildren();return;}
-  const node=(hub&&D.current())||root,children=D.children(root.id).filter(D.isVisible),all=await D.content(node,home||node.id===root.id?'overview':'full');
-  const ownIntro=(items,node)=>items.find(r=>(r.kind==='module'||r.metadata?.curriculum_series)&&r.kind!=='lesson'&&r.section_ids?.includes(node.id));
-  const collection=(nodes=children)=>nodes.map(n=>{const ids=D.descendants(n.id),items=all.filter(r=>r.section_ids?.some(id=>ids.includes(id))),intro=ownIntro(items,n),count=items.filter(r=>r.id!==intro?.id&&r.kind!=='module'&&(!intro?.metadata?.curriculum_series||r.series===intro.metadata.curriculum_series)).length;return '<a class="topic-collection" href="'+esc(D.url(n))+'">'+(intro?figure(intro):'')+'<div class="topic-collection-body"><small>'+count+(programming?' 节课':' 篇内容')+'</small><h2>'+esc(n.name)+'</h2><p>'+esc(n.description||intro?.summary||'')+'</p><span class="text-link">进入'+collectionLabel+' →</span></div></a>';}).join('');
-  if(home)home.innerHTML=collection();if(!hub)return;
-  if(node.id===root.id){hub.querySelector('h1').textContent=root.name;hub.querySelector('.page-content-loading')?.remove();const grid=document.createElement('div');grid.className='topic-collection-grid';grid.innerHTML=collection();hub.append(grid);void window.FoamSectionPage?.apply(node);return;}
-  const ids=D.descendants(node.id),items=all.filter(r=>r.section_ids?.some(id=>ids.includes(id))),intro=ownIntro(items,node),selected=items.filter(r=>r.id!==intro?.id&&r.kind!=='module'&&(!intro?.metadata?.curriculum_series||r.series===intro.metadata.curriculum_series)),subtopics=D.children(node.id).filter(D.isVisible);
-  let introduction='';if(intro){const userId=window.foamAuth.user?.id||null,record=L.check(await L.client.rpc('foamlab_read_article',{p_slug:intro.slug}));if((window.foamAuth.user?.id||null)===userId&&record.allowed&&record.item)introduction=L.markdown(record.item.body);}
-  const crumbs=D.ancestors(node.id).map(n=>n.id===node.id?'<span aria-current="page">'+esc(n.name)+'</span>':'<a href="'+esc(D.url(n))+'">'+esc(n.name)+'</a>').join('<span aria-hidden="true">/</span>');
-  document.title=node.name+' · QuantLab';hub.innerHTML='<nav class="topic-breadcrumbs" aria-label="专题导航">'+crumbs+'</nav><header class="topic-detail-header"><div><h1>'+esc(node.name)+'</h1><p>'+esc(node.description||intro?.summary||'')+'</p><nav class="topic-section-links" aria-label="专题内容"><a href="#topic-courses">内容目录 · '+selected.length+' 篇 ↓</a></nav></div>'+(intro?figure(intro):'')+'</header>'+(introduction?'<section class="topic-introduction"><div class="prose">'+introduction+'</div></section>':'')+(subtopics.length?'<section id="topic-branches"><h2>'+ (node.key==='topic-meshes'?'选择网格主题':'子专题') +'</h2><div class="topic-collection-grid">'+collection(subtopics)+'</div></section>':'')+'<section id="topic-courses"><h2>'+'内容目录'+'</h2><div class="lab-card-grid"></div></section>';
-  void window.FoamSectionPage?.apply(node);const grid=hub.querySelector('.lab-card-grid');window.foamListState.remember(grid);await L.names(selected.filter(r=>['article','log'].includes(r.kind)).map(r=>r.author_id));
-  let industrySelect,countLabel;
-  if(node.key==='topic-engineering'){
-   const industries=[...new Set(selected.map(r=>r.metadata?.industry).filter(Boolean))];
-   const filters=document.createElement('div');filters.className='engineering-filters';
-   filters.innerHTML='<label>按行业选择 <select aria-label="工程案例行业"><option value="">全部行业</option>'+industries.map(x=>'<option value="'+esc(x)+'">'+esc(x)+'</option>').join('')+'</select></label><span role="status" aria-live="polite"></span>';
-   grid.before(filters);industrySelect=filters.querySelector('select');countLabel=filters.querySelector('[role="status"]');
-   industrySelect.onchange=()=>{window.foamListState.write({industry:industrySelect.value,page:''},true);render();};
-  }
-  const render=()=>{
-   const industry=new URLSearchParams(location.search).get('industry')||'';
-   if(industrySelect)industrySelect.value=industry;
-   const visible=industrySelect&&industrySelect.value?selected.filter(r=>r.metadata?.industry===industrySelect.value):selected;
-   if(countLabel)countLabel.textContent='共 '+visible.length+' 个案例';
-   grid.innerHTML=window.FoamPagination.slice(grid,visible,render,12).map(L.card).join('')||'<p>这里还没有发布内容。</p>';
-  };render();window.addEventListener('popstate',render);return;
- }
- if(programming)throw D?.error||new Error('编程目录暂时无法读取，请刷新重试。');
- const [rawModules,lessons]=await Promise.all([readAll(()=>L.client.from('foamlab_content').select('id,slug,kind,title,summary,track,series,cover_url,metadata,sort_order').eq('kind','module').eq('status','published').order('sort_order').order('slug')),readAll(()=>L.client.from('foamlab_content').select('id,slug,kind,title,summary,track,series,cover_url,metadata,sort_order').eq('kind','lesson').eq('status','published').order('sort_order').order('slug'))]);const modules=rawModules.filter(x=>typeof x.metadata?.topic_key==='string'&&x.metadata.topic_key);
- const collection=()=>modules.filter(x=>x.metadata.topic_key!=='algorithms').map(x=>card(x,lessons)).join('');
- if(home)home.innerHTML=collection();
- if(!hub)return;const key=hub.dataset.topic||new URLSearchParams(location.search).get('topic');if(!key){hub.querySelector('.page-content-loading')?.remove();const grid=document.createElement('div');grid.className='topic-collection-grid';grid.innerHTML=collection();hub.append(grid);return;}
- const item=modules.find(x=>x.metadata.topic_key===key);if(!item){hub.innerHTML='<div class="lab-empty"><h1>这个专题暂未发布</h1><p>可以先查看已经开放的专题和系统课程。</p><a class="button" href="/topics/">全部专题</a></div>';return;}
- const selected=lessons.filter(x=>key==='algorithms'?(x.track||'').includes('数值'):Array.isArray(x.metadata?.topics)&&x.metadata.topics.includes(key));const dedup=new Map();for(const lesson of selected)for(const file of L.courseDownloads(lesson)){if(!dedup.has(file.url))dedup.set(file.url,{...file,lessons:[]});dedup.get(file.url).lessons.push({slug:lesson.slug,title:lesson.title});}const files=[...dedup.values()];document.title=item.title+'专题 · QuantLab';
- hub.innerHTML='<nav class="topic-breadcrumbs" aria-label="专题导航"><a href="/topics/">全部专题</a><span>/</span><span>'+esc(item.title)+'</span></nav><header class="topic-detail-header"><div><div class="eyebrow">OPENFOAM v2512 / 专题学习</div><h1>'+esc(item.title)+'</h1><p>'+esc(item.summary)+'</p><nav class="topic-section-links"><a href="#topic-courses">内容目录 · '+selected.length+' 节 ↓</a><a href="#topic-cases">案例下载 · '+files.length+' 个包 ↓</a></nav></div>'+figure(item)+'</header><section class="topic-introduction"><div class="prose">'+esc(item.summary)+'</div></section><section id="topic-courses"><div class="topic-section-heading"><h2>内容目录</h2></div><div class="lab-card-grid">'+(selected.map(L.card).join('')||'<p class="lab-empty">内容目录正在整理。</p>')+'</div></section><section id="topic-cases"><div class="topic-section-heading"><h2>专题案例下载</h2></div><div class="topic-case-list">'+files.map(file=>'<section class="lesson-downloads"><div class="lesson-download-row">'+L.downloadLink(file)+'<p>'+esc(file.description||'先阅读包内 README，再进入对应的算例文件夹。')+'</p><details class="download-verification"><summary>适用课程</summary>'+file.lessons.map(x=>'<a class="text-link" href="/read/?slug='+encodeURIComponent(x.slug)+'">'+esc(x.title)+'</a><br>').join('')+'</details></div></section>').join('')+'</div></section>';
- }catch(e){if(hub)L.error(hub,e);if(home)home.innerHTML='<p class="muted">专题目录暂时无法读取，<a href="/topics/">点击重试</a>。</p>';}finally{L.reveal(hub);L.reveal(home);}})();
-})();
-
-;
 /* figure-viewer.js */
 'use strict';
 (() => {
@@ -505,7 +430,7 @@
 /* page-outline.js */
 'use strict';
 (() => {
- const main=document.querySelector('#main');if(!main||document.body.dataset.section==='town'||main.querySelector('.fl-home'))return;
+ const main=document.querySelector('#main');if(!main||main.querySelector('.fl-home'))return;
  const dock=document.createElement('details');dock.className='page-outline';dock.innerHTML='<summary aria-label="打开本页跳转目录"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/></svg> 本页目录</summary><nav aria-label="本页跳转目录"></nav>';
  const toolbar=document.createElement('div');toolbar.className='page-outline-toolbar';
  main.before(toolbar);toolbar.append(dock);
@@ -534,51 +459,6 @@
  document.addEventListener('click',event=>{if(dock.open&&!dock.contains(event.target))dock.open=false;});
  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&dock.open){dock.open=false;dock.querySelector('summary').focus();}});
  update();measureToolbar();window.addEventListener('resize',()=>{measureToolbar();clearTimeout(timer);timer=setTimeout(update,150);});
-})();
-
-;
-/* fvm-loader.js */
-'use strict';
-(() => {
- if(!/\/read\//.test(location.pathname))return;
- let loading=false;
- function scan(){
-  const book=!!window.foamCurrentContent?.metadata?.fvm_book;
-  document.querySelector('#live-article')?.classList.toggle('fvm-book-lesson',book);
-  if(!book&&!document.querySelector('.fvm-lab,.fvm-book-art'))return;
-  if(!document.querySelector('link[data-fvm-style]')){const css=document.createElement('link');css.rel='stylesheet';css.dataset.fvmStyle='true';css.href='/assets/fvm-labs.css?v=20261013-fvm-navigation';document.head.append(css);}
-  for(const img of document.querySelectorAll('.fvm-book-art img:not([data-fvm-sized])')){
-   const width=Number(img.getAttribute('width'));
-   if(width>0&&width<20000)img.style.setProperty('--fvm-art-width',Math.min(width/2,840)+'px');
-   img.dataset.fvmSized='true';
-  }
-  if(!document.querySelector('.fvm-lab'))return;
-  if(window.FoamFVM){window.FoamFVM.mount();return;}
-  if(loading)return;loading=true;
-  const loadLabs=()=>{const js=document.createElement('script');js.src='/assets/fvm-labs.js?v=20261013-fvm-navigation';js.onload=()=>window.FoamFVM?.mount();js.onerror=()=>{loading=false;};document.head.append(js);};
-  if(window.FoamFVMExplorer){loadLabs();return;}
-  const explorer=document.createElement('script');explorer.src='/assets/fvm-explorer.js?v=20261013-fvm-navigation';explorer.onload=loadLabs;explorer.onerror=()=>{loading=false;};document.head.append(explorer);
- }
- let queued=false;const main=document.querySelector('main');
- if(main)new MutationObserver(()=>{if(queued)return;queued=true;queueMicrotask(()=>{queued=false;scan();});}).observe(main,{childList:true,subtree:true});
- document.addEventListener('foamlab:content-ready',()=>queueMicrotask(scan));scan();
-})();
-
-;
-/* heat-loader.js */
-'use strict';
-(() => {
- if(!/\/read\//.test(location.pathname))return;
- let loading=false,queued=false;
- function scan(){
-  if(!document.querySelector('.heat-figure,.heat-lab'))return;
-  if(!document.querySelector('link[data-heat-style]')){const c=document.createElement('link');c.rel='stylesheet';c.href='/assets/heat-labs.css';c.dataset.heatStyle='true';document.head.append(c);}
-  if(!document.querySelector('.heat-lab'))return;
-  if(window.FoamHeat){window.FoamHeat.mount();return;}
-  if(loading)return;loading=true;const s=document.createElement('script');s.src='/assets/heat-labs.js';s.onerror=()=>{loading=false;};document.head.append(s);
- }
- const main=document.querySelector('main');if(main)new MutationObserver(()=>{if(queued)return;queued=true;queueMicrotask(()=>{queued=false;scan();});}).observe(main,{childList:true,subtree:true});
- document.addEventListener('foamlab:content-ready',scan);scan();
 })();
 
 ;

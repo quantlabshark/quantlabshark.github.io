@@ -2,27 +2,13 @@
 // The learning overview is a page, not a chronological blog index.
 hexo.extend.generator.register('index', () => []);
 hexo.extend.helper.register('learning', () => hexo.locals.get('data').learning);
-let referenceModulesCache;
-hexo.extend.filter.register('before_generate',()=>{referenceModulesCache=undefined;});
-const referenceModules=()=>referenceModulesCache||(referenceModulesCache=JSON.parse(require('node:fs').readFileSync(require('node:path').join(hexo.base_dir,'source-quant/assets/reference-modules.json'),'utf8')));
-hexo.extend.helper.register('reference_modules',referenceModules);
-hexo.extend.helper.register('model_references',key=>JSON.parse(require('node:fs').readFileSync(require('node:path').join(hexo.base_dir,'source-quant/assets/reference-'+key+'.json'),'utf8')));
-hexo.extend.helper.register('function_objects', () => JSON.parse(require('node:fs').readFileSync(require('node:path').join(hexo.base_dir, 'source-quant/assets/function-objects.json'), 'utf8')));
-hexo.extend.helper.register('boundary_conditions', () => JSON.parse(require('node:fs').readFileSync(require('node:path').join(hexo.base_dir, 'source-quant/assets/boundary-conditions.json'), 'utf8')));
 hexo.extend.helper.register('breadcrumb_parent', page => {
   const home={url:'/',label:'学习概览'},path=String(page.path||'');
-  if(page.reference_module){const m=referenceModules().find(x=>x.key===page.reference_module);return page.layout==='model-reference'?{url:'/quick-reference/',label:'速查手册'}:{url:'/'+m.key+'/',label:m.name};}
-  if(['linux/index.html','cpp/index.html'].includes(path))return {url:'/programming/',label:'OpenFOAM 编程'};
-  if(path==='algorithms/index.html')return {url:'/topics/',label:'专题学习'};
-  if(['fvm/index.html','theory/turbulence/index.html','theory/heat-mass-transfer/index.html'].includes(path))return {url:'/theory/',label:'基础理论与原理'};
-  if(['commands/index.html','dictionaries/index.html','function-objects/index.html','boundary-conditions/index.html','reference/index.html'].includes(path))return {url:'/quick-reference/',label:'速查手册'};
-  if(path.startsWith('boundary-conditions/'))return {url:'/boundary-conditions/',label:'边界条件速查'};
-  if(/^[^/]+\/index\.html$/.test(path)&&page.layout!=='admin-redirect')return home;
+  if(page.layout==='interview-book')return {url:'/interview/',label:'量化笔试与面试'};
+  if(['commands/index.html','dictionaries/index.html'].includes(path))return {url:'/quick-reference/',label:'速查手册'};
+  if(/^[^/]+\/index\.html$/.test(path))return home;
   if(page.section==='admin'||path.startsWith('admin/'))return {url:'/admin/',label:'管理平台'};
-  if(page.dictionary||path.startsWith('dictionaries/'))return {url:'/dictionaries/',label:'配置与字典速查'};
-  if(path.startsWith('function-objects/'))return {url:'/function-objects/',label:'函数对象速查'};
-  if(String(page.cms_slug||'').startsWith('command-')||path.startsWith('commands/'))return {url:'/commands/',label:'命令速查'};
-  const labels={courses:'系统学习',lessons:'课程目录',topics:'专题学习',linux:'Linux 入门',cpp:'C++ 入门',programming:'OpenFOAM 编程',algorithms:'数值方法',tools:'工具生态',resources:'资料中心',recommendations:'资料中心',sharing:'实践与分享',authors:'实践与分享',community:'讨论中心',assignments:'作业与实践',announcements:'网站公告',reference:'参考手册',studio:'个人中心'};
+  const labels={courses:'系统学习',lessons:'课程目录',topics:'专题学习',programming:'Python 实践',tools:'工具生态',resources:'资料中心',recommendations:'资料中心',sharing:'实践与分享',authors:'实践与分享',community:'讨论中心',assignments:'作业与实践',announcements:'网站公告',studio:'个人中心'};
   const section=page.section||path.split('/')[0],name=labels[section];
   if(!name)return home;
   const route=({lessons:'courses',studio:'account',authors:'sharing',recommendations:'resources'})[section]||section;
@@ -51,4 +37,4 @@ hexo.extend.helper.register('icon', name => {
   return '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+(paths[name]||paths.book)+'</svg>';
 });
 
-hexo.extend.helper.register('course_count',(track)=>{const fs=require('node:fs'),path=require('node:path'),dir=path.join(hexo.base_dir,'tools/content');return fs.readdirSync(dir).filter(n=>n.endsWith('content.json')).flatMap(n=>JSON.parse(fs.readFileSync(path.join(dir,n),'utf8'))).filter(r=>r.kind==='lesson'&&r.status==='published'&&(!track||r.track===track)).length;});
+hexo.extend.helper.register('course_count',()=>{const fs=require('node:fs'),path=require('node:path');return JSON.parse(fs.readFileSync(path.join(hexo.base_dir,'tools/content/course-catalog.json'),'utf8')).length;});

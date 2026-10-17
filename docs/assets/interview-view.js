@@ -1,0 +1,7 @@
+'use strict';
+(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory();else root.QuantInterviewView=factory();})(typeof window==='undefined'?this:window,()=>{
+ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ function chapters(rows){return [...new Set(rows.map(r=>r.metadata.interview.chapter))].map(ch=>({number:ch,title:rows.find(r=>r.metadata.interview.chapter===ch).metadata.interview.topic,rows:rows.filter(r=>r.metadata.interview.chapter===ch)}));}
+ function render(rows){return chapters(rows).map(c=>`<details class="interview-chapter" id="chapter-${esc(c.number)}" ${c.number===1?'open':''}><summary><span class="interview-chapter-num">${String(c.number).padStart(2,'0')}</span><span>${esc(c.title)}</span><small>${c.rows.length} 节</small></summary><ol>${c.rows.map(r=>`<li data-interview-question data-difficulty="${esc(r.metadata.interview.difficulty)}"><a href="/read/?slug=${encodeURIComponent(r.slug)}"><span class="interview-question-no">${String(r.metadata.interview.number).padStart(2,'0')}</span><span><strong>${esc(r.title)}</strong><small>${esc(r.summary)}</small></span><span class="interview-difficulty">${esc(r.metadata.interview.difficulty)}</span><span aria-hidden="true">↗</span></a></li>`).join('')}</ol></details>`).join('');}
+ return {chapters,render};
+});

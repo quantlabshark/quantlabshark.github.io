@@ -7,7 +7,8 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "preview": "node tools/serve.cjs",
-    "check": "node tools/check.cjs"
+    "check": "node tools/check.cjs",
+    "sync:catalog": "node tools/sync-public-catalogs.cjs"
   },
   "engines": {
     "node": ">=20.19.0"

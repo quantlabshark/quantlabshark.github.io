@@ -1,0 +1,20 @@
+'use strict';
+// Refresh only public navigation and question metadata before publishing.
+const fs=require('node:fs'),path=require('node:path'),{createClient}=require('@supabase/supabase-js');
+const root=path.resolve(__dirname,'..'),config=JSON.parse(fs.readFileSync(path.join(root,'source-quant/assets/auth-config.json'),'utf8'));
+async function main(){
+ const client=createClient(config.supabaseUrl,config.publishableKey,{auth:{persistSession:false,autoRefreshToken:false}});
+ async function pages(table,columns,filters=q=>q){const rows=[];for(let offset=0;;offset+=500){const {data,error}=await filters(client.from(table).select(columns)).order('sort_order').order('id').range(offset,offset+499);if(error)throw error;rows.push(...data);if(data.length<500)return rows;}}
+ const nodes=await pages('foamlab_sections','id,key,name,parent_id,href,description,nav_group,visible,sort_order,revision,read_access');
+ if(!nodes.some(n=>n.key==='tools')||!nodes.some(n=>n.key==='interview'))throw Error('Missing expected navigation roots');
+ const rows=(await pages('foamlab_content','slug,title,summary,kind,status,sort_order,metadata',q=>q.eq('status','published').not('metadata->interview','is',null))).map(r=>({...r,metadata:{interview:r.metadata.interview}}));
+ if(!rows.length)throw Error('Empty interview catalog');
+ const courses=(await pages('foamlab_content','id,slug,title,summary,kind,status,sort_order,metadata',q=>q.eq('status','published').eq('kind','lesson').eq('metadata->curriculum->>edition','2026-10'))).map(r=>({...r,metadata:{curriculum:r.metadata.curriculum}}));
+ if(courses.length!==66)throw Error('Expected 66 system lessons, received '+courses.length);
+ const write=(file,data)=>fs.writeFileSync(path.join(root,file),JSON.stringify(data,null,2)+'\n');
+ write('tools/content/navigation.json',nodes);write('tools/content/interview-catalog.json',rows);
+ write('tools/content/course-catalog.json',courses);
+ write('source-quant/assets/search-scopes.json',nodes.map(({id,key,name,parent_id,href,visible,sort_order})=>({id,key,name,parent_id,href,visible,sort_order})));
+ console.log(`Refreshed ${nodes.length} navigation entries, ${courses.length} lessons and ${rows.length} interview units; no article bodies downloaded.`);
+}
+main().catch(e=>{console.error(e.message);process.exitCode=1;});

@@ -4,8 +4,6 @@
 .panda-grab{display:block;width:120px;height:135px;padding:0;border:0;background:none!important;box-shadow:none!important;cursor:grab;touch-action:none;-webkit-user-select:none;filter:drop-shadow(0 6px 8px rgba(20,45,35,.14))}
 .panda-grab:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:30%}
 .panda-pet.is-dragging .panda-grab{cursor:grabbing}
-.panda-pet.is-dragging .pa-mover{transform:rotate(-8deg)}
-.panda-pet.is-curious:not([data-action]) .pa-head{transform:rotate(-5deg)}
 .panda-nameplate{display:flex;align-items:center;justify-content:center;gap:6px;margin:2px auto 0;width:max-content;max-width:120px;padding:3px 10px;border:1px solid var(--line);border-radius:20px;background:var(--surface,#fffefb);color:var(--ink);font:12px/1.5 var(--font);white-space:nowrap;box-shadow:var(--shadow)}
 .panda-nameplate span{overflow:hidden;text-overflow:ellipsis;max-width:70px}
 .panda-nameplate b{color:var(--accent);font-size:11px}
@@ -24,7 +22,6 @@
 .panda-tip-notes{padding:0;border:0;background:none;color:var(--accent);font-size:13px;text-decoration:underline;text-underline-offset:3px}
 .panda-dock{position:fixed;right:18px;bottom:18px;z-index:42;width:52px;height:52px;padding:4px 3px 2px;border:1px solid var(--line);border-radius:50%;background:var(--surface,#fffefb);box-shadow:0 4px 14px rgba(20,45,35,.14)}
 .panda-dock:hover{background:var(--mint)}
-
 /* account panel */
 .panda-account{margin:28px 0 36px;padding:28px;border:1px solid var(--line);border-radius:20px;background:var(--surface,#fffefb);box-shadow:var(--shadow);scroll-margin-top:100px}
 .panda-account-loading{color:var(--muted)}
@@ -77,43 +74,17 @@
 /* Each learning achievement has its own collectible illustration. */
 .panda-badge-card{overflow:hidden;padding-top:0;gap:2px}
 .panda-badge-card>.panda-badge-picture{display:block;align-self:stretch;margin:0 -8px 10px;aspect-ratio:1;overflow:hidden;line-height:0}
-.panda-badge-picture img{display:block;width:100%;height:100%;object-fit:cover}
+.panda-badge-picture{background:radial-gradient(circle at 50% 46%,var(--mint),transparent 70%)}.panda-badge-picture svg{display:block;width:100%;height:100%;padding:12%}
 .panda-badge-card.locked .panda-badge-picture{filter:grayscale(1);opacity:.58}
 .panda-badge-card.locked>small{color:var(--muted)}
-/* Keep travel previews local to collection cards, with no effect on town movement. */
+/* Travel previews stay local to collection cards. */
 .panda-item-preview.panda-ride-preview{position:relative;width:128px;max-width:100%;height:136px;margin:3px 0 8px;--ride-step:1.2s}
 .panda-ride-preview[data-ride=jog]{--ride-step:.55s}
-.panda-ride-preview .pa-carry{display:none!important}
 .panda-ride-preview .panda-ride-wind{position:absolute;inset:0;width:100%;height:100%;fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;opacity:0;pointer-events:none}
-.panda-ride-preview .panda-ride-spokes{fill:none;stroke:#98b7ae;stroke-width:1.1;animation:panda-ride-wheel 1.8s linear infinite}
-.panda-ride-preview:is([data-ride=walk],[data-ride=jog]) .pa-char{animation:panda-ride-step var(--ride-step) ease-in-out infinite}
-.panda-ride-preview:is([data-ride=walk],[data-ride=jog]) .pa-leg-l{animation:panda-ride-leg var(--ride-step) ease-in-out infinite}
-.panda-ride-preview:is([data-ride=walk],[data-ride=jog]) .pa-leg-r{animation:panda-ride-leg var(--ride-step) ease-in-out calc(var(--ride-step)/-2) infinite}
-.panda-ride-preview:is([data-ride=walk],[data-ride=jog]) .pa-arm-l{animation:panda-ride-arm var(--ride-step) ease-in-out infinite;transform-origin:52px 110px}
-.panda-ride-preview:is([data-ride=walk],[data-ride=jog]) .pa-arm-r{animation:panda-ride-arm var(--ride-step) ease-in-out calc(var(--ride-step)/-2) infinite;transform-origin:108px 110px}
-.panda-ride-preview[data-ride=jog] .pa-mover{transform:rotate(-7deg);transform-origin:80px 150px}
-.panda-ride-preview[data-ride=skateboard] .pa-char{animation:panda-ride-glide 2.4s ease-in-out infinite;transform-origin:80px 166px}
-.panda-ride-preview[data-ride=skateboard] .pa-arm-l{transform:rotate(48deg);transform-origin:52px 110px}
-.panda-ride-preview[data-ride=skateboard] .pa-leg-r{animation:panda-ride-push 2.4s ease-in-out infinite}
 .panda-ride-preview:is([data-ride=jog],[data-ride=skateboard],[data-ride=bicycle]) .panda-ride-wind{opacity:.45;animation:panda-ride-wind 1.3s ease-out infinite}
-.panda-ride-preview[data-ride=bicycle] .pa-leg-l{animation:panda-ride-pedal 1s linear infinite}
-.panda-ride-preview[data-ride=bicycle] .pa-leg-r{animation:panda-ride-pedal 1s linear -.5s infinite}
-.panda-ride-preview[data-ride=bicycle] .pa-arm-l{transform:rotate(-24deg);transform-origin:52px 110px}
-.panda-ride-preview[data-ride=bicycle] .pa-arm-r{transform:rotate(-38deg);transform-origin:108px 110px}
-.panda-ride-preview[data-ride=balloon] .pa-mover{animation:panda-ride-float 3.2s ease-in-out infinite}
-.panda-ride-preview[data-ride=balloon] .pa-arm-r{transform:rotate(-100deg);transform-origin:108px 110px}
-.panda-ride-preview[data-ride=balloon] .pa-shadow{opacity:.07;transform:scaleX(.7);transform-origin:80px 167px}
 .panda-item.locked .panda-ride-preview{opacity:.5;filter:grayscale(1)}
 .panda-ride-preview[data-quiet=true] *{animation:none!important}
 .panda-ride-preview[data-quiet=true] .panda-ride-wind{opacity:0}
-@keyframes panda-ride-step{0%,50%,100%{translate:0 0}25%,75%{translate:0 -4px}}
-@keyframes panda-ride-leg{0%,100%{translate:0 -4px;rotate:-7deg}50%{translate:0 3px;rotate:7deg}}
-@keyframes panda-ride-arm{0%,100%{rotate:-17deg}50%{rotate:17deg}}
-@keyframes panda-ride-push{0%,25%,100%{translate:0 0}55%{translate:10px 7px}75%{translate:14px -3px}}
-@keyframes panda-ride-glide{0%,100%{translate:-5px 0;rotate:-2deg}50%{translate:5px -2px;rotate:2deg}}
-@keyframes panda-ride-pedal{0%,100%{translate:0 -5px}25%{translate:5px 0}50%{translate:0 5px}75%{translate:-5px 0}}
-@keyframes panda-ride-wheel{to{rotate:360deg}}
-@keyframes panda-ride-float{0%,100%{translate:-3px -2px;rotate:-2deg}50%{translate:3px -10px;rotate:2deg}}
 @keyframes panda-ride-wind{from{translate:8px 0;opacity:0}30%{opacity:.45}to{translate:-10px 0;opacity:0}}
 @media(prefers-reduced-motion:reduce){.panda-ride-preview *{animation:none!important}.panda-ride-preview .panda-ride-wind{display:none}}
 .panda-rules,.panda-history{margin-top:20px;padding-top:15px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
@@ -137,13 +108,9 @@
 .panda-growth-stages .locked .panda-item-preview{filter:grayscale(1);opacity:.28}
 .panda-growth-stages .locked strong{color:var(--muted)}
 .panda-play-menu .panda-menu-grid button:disabled{color:var(--muted);background:var(--bg);opacity:.65}
-[data-form=scientist] .panda-art .pa-f-master,[data-form=scientist] .panda-art .pa-o-coat{display:inline}
-[data-form=scientist] .pa-robe{fill:#edf1e9}
-[data-form=scientist] .pa-robe-trim{stroke:#a1b8a3}
 .panda-pet.is-evolving .panda-art,.panda-profile-visual.is-evolving .panda-art{animation:panda-evolve .85s ease-in-out}
 @keyframes panda-evolve{0%,100%{filter:none}45%{filter:brightness(1.25) drop-shadow(0 0 8px #e5c46f);transform:translateY(-3px)}}
 [data-quiet=true] .panda-art *{animation:none!important}
-[data-quiet=true] .pa-pupils{transform:none}
 body:has(dialog[open]) .panda-pet,body.nav-open .panda-pet,body:has(dialog[open]) .panda-dock{visibility:hidden}
 @media(max-width:1100px){.panda-collection{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:700px){.panda-growth-stages{grid-template-columns:repeat(2,minmax(0,1fr))}.panda-tabs{flex-wrap:wrap}.panda-tabs button{padding:6px 12px}}

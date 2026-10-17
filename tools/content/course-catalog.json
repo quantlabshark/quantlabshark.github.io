@@ -1,0 +1,2713 @@
+[
+  {
+    "id": "5576f2e1-bf8d-5269-9ac1-c679c2a3726c",
+    "slug": "quant-course-01",
+    "title": "01 · 量化研究的基本流程",
+    "summary": "从研究问题、数据和规则出发，手算一次实验并记录可核对的结论。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 1,
+    "metadata": {
+      "curriculum": {
+        "level": "入门",
+        "stage": 1,
+        "number": 1,
+        "edition": "2026-10",
+        "minutes": 25,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化",
+            "chapters": "1.5",
+            "pdf_pages": [
+              27,
+              28
+            ]
+          },
+          {
+            "book": "Quant Roadmap — Ultimate Edition",
+            "chapters": "25",
+            "pdf_pages": [
+              69,
+              70,
+              71,
+              72
+            ]
+          }
+        ],
+        "stage_title": "市场与研究"
+      }
+    }
+  },
+  {
+    "id": "bf77a999-026d-5673-a412-031aa96a529a",
+    "slug": "quant-course-02",
+    "title": "02 · 交易品种、收益来源与研究岗位",
+    "summary": "理解股票、债券、基金和衍生品的收益结构，以及量化工作的任务分工。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 2,
+    "metadata": {
+      "curriculum": {
+        "level": "入门",
+        "stage": 1,
+        "number": 2,
+        "edition": "2026-10",
+        "minutes": 25,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化",
+            "chapters": "1.1–1.2、1.6",
+            "pdf_pages": [
+              22,
+              23,
+              28,
+              29
+            ]
+          },
+          {
+            "book": "Quant Roadmap — Ultimate Edition",
+            "chapters": "17",
+            "pdf_pages": [
+              56,
+              57,
+              58
+            ]
+          }
+        ],
+        "stage_title": "市场与研究"
+      }
+    }
+  },
+  {
+    "id": "3b58df3a-dab5-55b4-a352-9836534fd4fe",
+    "slug": "quant-course-03",
+    "title": "03 · 报价、订单与成交",
+    "summary": "从订单簿报价计算成交金额，区分订单、部分成交、持仓和执行成本。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 3,
+    "metadata": {
+      "curriculum": {
+        "level": "入门",
+        "stage": 1,
+        "number": 3,
+        "edition": "2026-10",
+        "minutes": 25,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化",
+            "chapters": "1.1、1.7、3.2",
+            "pdf_pages": [
+              22,
+              30,
+              31,
+              80,
+              81
+            ]
+          }
+        ],
+        "stage_title": "市场与研究"
+      }
+    }
+  },
+  {
+    "id": "44d8a7a7-1905-521b-b308-01d828060076",
+    "slug": "quant-course-04",
+    "title": "04 · 收益、复利与净值",
+    "summary": "计算简单收益、对数收益、复利与净值，并处理分红和外部现金流。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4,
+    "metadata": {
+      "curriculum": {
+        "level": "入门",
+        "stage": 1,
+        "number": 4,
+        "edition": "2026-10",
+        "minutes": 25,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化",
+            "chapters": "2.1",
+            "pdf_pages": [
+              35
+            ]
+          },
+          {
+            "book": "深入浅出Python量化交易实战",
+            "chapters": "2.1",
+            "pdf_pages": [
+              43,
+              44,
+              45
+            ]
+          }
+        ],
+        "stage_title": "市场与研究"
+      }
+    }
+  },
+  {
+    "id": "79821632-ab2d-5168-843a-f837f6a32ae3",
+    "slug": "quant-course-05",
+    "title": "05 · 波动、回撤与分散投资",
+    "summary": "手算收益波动和路径回撤，理解共同变化对分散投资效果的影响。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 5,
+    "metadata": {
+      "curriculum": {
+        "level": "入门",
+        "stage": 1,
+        "number": 5,
+        "edition": "2026-10",
+        "minutes": 25,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化",
+            "chapters": "1.4、2.3",
+            "pdf_pages": [
+              26,
+              27,
+              39,
+              40
+            ]
+          },
+          {
+            "book": "深入浅出Python量化交易实战",
+            "chapters": "2.1.3",
+            "pdf_pages": [
+              45,
+              46
+            ]
+          }
+        ],
+        "stage_title": "市场与研究"
+      }
+    }
+  },
+  {
+    "id": "8ca90937-ec25-5ffb-ac48-a407aeddad7d",
+    "slug": "quant-course-06",
+    "title": "06 · 研究问题、数据与检验",
+    "summary": "将观察写成可检验的问题，固定数据、比较对象、信息时点与评价区间。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 6,
+    "metadata": {
+      "curriculum": {
+        "level": "入门",
+        "stage": 1,
+        "number": 6,
+        "edition": "2026-10",
+        "minutes": 25,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化",
+            "chapters": "1.5、2.8.5",
+            "pdf_pages": [
+              27,
+              28,
+              62,
+              63
+            ]
+          },
+          {
+            "book": "Quant Roadmap — Ultimate Edition",
+            "chapters": "14、25",
+            "pdf_pages": [
+              46,
+              69,
+              70,
+              71,
+              72
+            ]
+          }
+        ],
+        "stage_title": "市场与研究"
+      }
+    }
+  },
+  {
+    "id": "a1e835b0-e9e0-5483-9fa4-181fa681b099",
+    "slug": "quant-course-07",
+    "title": "07 · Python环境与第一个实验",
+    "summary": "运行第一个独立 Python 实验，理解输入、输出、检查和运行顺序。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7,
+    "metadata": {
+      "curriculum": {
+        "level": "入门",
+        "stage": 2,
+        "number": 7,
+        "edition": "2026-10",
+        "minutes": 35,
+        "source_refs": [
+          {
+            "book": "深入浅出Python量化交易实战",
+            "chapters": "1.3",
+            "pdf_pages": [
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33
+            ]
+          },
+          {
+            "book": "Quant Roadmap — Ultimate Edition",
+            "chapters": "12",
+            "pdf_pages": [
+              39
+            ]
+          }
+        ],
+        "stage_title": "Python与数据"
+      }
+    }
+  },
+  {
+    "id": "ff1d3a80-45b0-53cd-8d86-b1e09f126f89",
+    "slug": "quant-course-08",
+    "title": "08 · 变量、容器与函数",
+    "summary": "使用变量、列表、字典和函数表达收益计算与现金持仓更新。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8,
+    "metadata": {
+      "curriculum": {
+        "level": "入门",
+        "stage": 2,
+        "number": 8,
+        "edition": "2026-10",
+        "minutes": 35,
+        "source_refs": [
+          {
+            "book": "Quant Roadmap — Ultimate Edition",
+            "chapters": "12",
+            "pdf_pages": [
+              39,
+              40
+            ]
+          },
+          {
+            "book": "深入浅出Python量化交易实战",
+            "chapters": "1.3.3、2.1",
+            "pdf_pages": [
+              33,
+              34,
+              35,
+              36,
+              37,
+              43
+            ]
+          }
+        ],
+        "stage_title": "Python与数据"
+      }
+    }
+  },
+  {
+    "id": "b835bc80-0f25-5563-96cd-e4ff3971487d",
+    "slug": "quant-course-09",
+    "title": "09 · NumPy数组与向量运算",
+    "summary": "用 NumPy 计算收益和组合，检查数组形状、运算方向及权重含义。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 9,
+    "metadata": {
+      "curriculum": {
+        "level": "入门",
+        "stage": 2,
+        "number": 9,
+        "edition": "2026-10",
+        "minutes": 35,
+        "source_refs": [
+          {
+            "book": "深入浅出Python量化交易实战",
+            "chapters": "1.3.3、2.1",
+            "pdf_pages": [
+              35,
+              36,
+              37,
+              43
+            ]
+          },
+          {
+            "book": "Quant Roadmap — Ultimate Edition",
+            "chapters": "12",
+            "pdf_pages": [
+              39
+            ]
+          }
+        ],
+        "stage_title": "Python与数据"
+      }
+    }
+  },
+  {
+    "id": "ae71b735-4ad5-5a1c-8766-745909819e53",
+    "slug": "quant-course-10",
+    "title": "10 · pandas时间序列与数据清洗",
+    "summary": "用 pandas 处理日期、重复和缺失，保留清洗记录并按时间计算收益。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 10,
+    "metadata": {
+      "curriculum": {
+        "level": "入门",
+        "stage": 2,
+        "number": 10,
+        "edition": "2026-10",
+        "minutes": 35,
+        "source_refs": [
+          {
+            "book": "深入浅出Python量化交易实战",
+            "chapters": "1.3.3",
+            "pdf_pages": [
+              33,
+              34,
+              35,
+              36
+            ]
+          },
+          {
+            "book": "Quant Roadmap — Ultimate Edition",
+            "chapters": "14",
+            "pdf_pages": [
+              46
+            ]
+          }
+        ],
+        "stage_title": "Python与数据"
+      }
+    }
+  },
+  {
+    "id": "4a046f20-d764-512c-94aa-14a796b854f7",
+    "slug": "quant-course-11",
+    "title": "11 · 行情、财务与文本数据",
+    "summary": "区分行情、财务和文本数据，建立字段、单位、身份与时间的对应关系。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 11,
+    "metadata": {
+      "curriculum": {
+        "level": "入门",
+        "stage": 2,
+        "number": 11,
+        "edition": "2026-10",
+        "minutes": 35,
+        "source_refs": [
+          {
+            "book": "Quant Roadmap — Ultimate Edition",
+            "chapters": "14",
+            "pdf_pages": [
+              46,
+              47,
+              48,
+              49
+            ]
+          },
+          {
+            "book": "深入浅出Python量化交易实战",
+            "chapters": "1.2.2",
+            "pdf_pages": [
+              25,
+              26
+            ]
+          },
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化",
+            "chapters": "2.1",
+            "pdf_pages": [
+              35,
+              36
+            ]
+          }
+        ],
+        "stage_title": "Python与数据"
+      }
+    }
+  },
+  {
+    "id": "2b4d4273-0270-5900-b14e-aefab04296f4",
+    "slug": "quant-course-12",
+    "title": "12 · 信息时间与可复现的数据集",
+    "summary": "按可获得时间连接信息，保存数据版本并排除跨越测试边界的标签。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 12,
+    "metadata": {
+      "curriculum": {
+        "level": "入门",
+        "stage": 2,
+        "number": 12,
+        "edition": "2026-10",
+        "minutes": 35,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化",
+            "chapters": "2.6.3、2.8.5",
+            "pdf_pages": [
+              53,
+              62,
+              63
+            ]
+          },
+          {
+            "book": "Quant Roadmap — Ultimate Edition",
+            "chapters": "14、25",
+            "pdf_pages": [
+              46,
+              69,
+              70,
+              71,
+              72
+            ]
+          }
+        ],
+        "stage_title": "Python与数据"
+      }
+    }
+  },
+  {
+    "id": "237fa8a0-bf2f-5e11-9c8a-d4383df630bd",
+    "slug": "quant-course-13",
+    "title": "13 · 概率、条件概率与抽样",
+    "summary": "通过计数、条件概率和贝叶斯公式，理解事件、独立性与抽样机制。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 13,
+    "metadata": {
+      "curriculum": {
+        "level": "基础",
+        "stage": 3,
+        "number": 13,
+        "edition": "2026-10",
+        "minutes": 40,
+        "source_refs": [
+          {
+            "book": "Quant Roadmap — Ultimate Edition",
+            "chapters": "8",
+            "pdf_pages": [
+              26
+            ]
+          },
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化",
+            "chapters": "2.1、2.6.3",
+            "pdf_pages": [
+              35,
+              53
+            ]
+          }
+        ],
+        "stage_title": "概率与统计"
+      }
+    }
+  },
+  {
+    "id": "e573e560-5fd1-5378-8901-f2a803686f22",
+    "slug": "quant-course-14",
+    "title": "14 · 期望、方差与协方差",
+    "summary": "计算期望、方差、协方差和组合风险，区分总体规律与样本估计。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 14,
+    "metadata": {
+      "curriculum": {
+        "level": "基础",
+        "stage": 3,
+        "number": 14,
+        "edition": "2026-10",
+        "minutes": 40,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化",
+            "chapters": "2.3–2.4",
+            "pdf_pages": [
+              39,
+              40,
+              41
+            ]
+          },
+          {
+            "book": "Quant Roadmap — Ultimate Edition",
+            "chapters": "8",
+            "pdf_pages": [
+              26
+            ]
+          }
+        ],
+        "stage_title": "概率与统计"
+      }
+    }
+  },
+  {
+    "id": "bc6dd424-51d8-5950-8366-e28d6a521dfd",
+    "slug": "quant-course-15",
+    "title": "15 · 估计、置信区间与重抽样",
+    "summary": "计算均值标准误、置信区间和重抽样结果，说明小样本与时间依赖。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 15,
+    "metadata": {
+      "curriculum": {
+        "level": "基础",
+        "stage": 3,
+        "number": 15,
+        "edition": "2026-10",
+        "minutes": 40,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化",
+            "chapters": "2.4.3、2.5",
+            "pdf_pages": [
+              43,
+              44,
+              45,
+              46
+            ]
+          },
+          {
+            "book": "Quant Roadmap — Ultimate Edition",
+            "chapters": "8",
+            "pdf_pages": [
+              26
+            ]
+          }
+        ],
+        "stage_title": "概率与统计"
+      }
+    }
+  },
+  {
+    "id": "ec346cf4-47b8-5afc-bc33-aedc69939138",
+    "slug": "quant-course-16",
+    "title": "16 · 回归与残差分析",
+    "summary": "手算一元最小二乘，检查残差、拟合指标及样本外预测误差。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 16,
+    "metadata": {
+      "curriculum": {
+        "level": "基础",
+        "stage": 3,
+        "number": 16,
+        "edition": "2026-10",
+        "minutes": 40,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化",
+            "chapters": "2.4.1、2.6.2–2.6.3",
+            "pdf_pages": [
+              41,
+              49,
+              50,
+              51,
+              52,
+              53
+            ]
+          },
+          {
+            "book": "Quant Roadmap — Ultimate Edition",
+            "chapters": "1、13",
+            "pdf_pages": [
+              11,
+              42
+            ]
+          }
+        ],
+        "stage_title": "概率与统计"
+      }
+    }
+  },
+  {
+    "id": "3da0cd68-07ac-5565-b36d-242351fe8630",
+    "slug": "quant-course-17",
+    "title": "17 · 时间序列、平稳性与自相关",
+    "summary": "理解平稳性、差分和自相关，模拟自回归过程并检查波动结构。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 17,
+    "metadata": {
+      "curriculum": {
+        "level": "基础",
+        "stage": 3,
+        "number": 17,
+        "edition": "2026-10",
+        "minutes": 40,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化",
+            "chapters": "2.1.1、2.6.3",
+            "pdf_pages": [
+              35,
+              52,
+              53,
+              54
+            ]
+          }
+        ],
+        "stage_title": "概率与统计"
+      }
+    }
+  },
+  {
+    "id": "f2a4811d-5543-583b-9a54-927961a0205e",
+    "slug": "quant-course-18",
+    "title": "18 · 假设检验与多重比较",
+    "summary": "用精确二项检验理解 p 值，控制多重比较并结合经济效应解释结果。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 18,
+    "metadata": {
+      "curriculum": {
+        "level": "基础",
+        "stage": 3,
+        "number": 18,
+        "edition": "2026-10",
+        "minutes": 40,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化",
+            "chapters": "2.8.5",
+            "pdf_pages": [
+              62,
+              63
+            ]
+          },
+          {
+            "book": "Quant Roadmap — Ultimate Edition",
+            "chapters": "25",
+            "pdf_pages": [
+              69,
+              70,
+              71,
+              72
+            ]
+          }
+        ],
+        "stage_title": "概率与统计"
+      }
+    }
+  },
+  {
+    "id": "bff8b1d6-dd3b-5493-bfa7-0af90dd52206",
+    "slug": "quant-course-19",
+    "title": "19 · 信号、持仓与回测时序",
+    "summary": "将收盘信号对应到下一开盘持仓，核对订单状态与收益所属区间。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 19,
+    "metadata": {
+      "curriculum": {
+        "level": "基础",
+        "stage": 4,
+        "number": 19,
+        "edition": "2026-10",
+        "minutes": 45,
+        "source_refs": [
+          {
+            "book": "深入浅出Python量化交易实战",
+            "chapters": "1.3.3、2.1",
+            "pdf_pages": [
+              35,
+              36,
+              37,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45
+            ]
+          },
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化",
+            "chapters": "2.6.3、2.8.1",
+            "pdf_pages": [
+              53,
+              60
+            ]
+          }
+        ],
+        "stage_title": "策略与回测"
+      }
+    }
+  },
+  {
+    "id": "12c2360c-d927-5fc1-94f3-e3ff3093c3b5",
+    "slug": "quant-course-20",
+    "title": "20 · 移动平均与趋势策略",
+    "summary": "实现单双均线趋势规则，明确窗口、持续持仓状态与参数检验。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 20,
+    "metadata": {
+      "curriculum": {
+        "level": "基础",
+        "stage": 4,
+        "number": 20,
+        "edition": "2026-10",
+        "minutes": 45,
+        "source_refs": [
+          {
+            "book": "深入浅出Python量化交易实战",
+            "chapters": "2.2",
+            "pdf_pages": [
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54
+            ]
+          },
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化",
+            "chapters": "2.8.1–2.8.2",
+            "pdf_pages": [
+              59,
+              60,
+              61
+            ]
+          },
+          {
+            "book": "Quant Roadmap — Ultimate Edition",
+            "chapters": "22",
+            "pdf_pages": [
+              65
+            ]
+          }
+        ],
+        "stage_title": "策略与回测"
+      }
+    }
+  },
+  {
+    "id": "dab15665-41af-5125-843c-44e3bc961be9",
+    "slug": "quant-course-21",
+    "title": "21 · 突破、海龟与仓位管理",
+    "summary": "实现过去窗口的突破通道，结合真实波幅、风险预算与持仓状态。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 21,
+    "metadata": {
+      "curriculum": {
+        "level": "基础",
+        "stage": 4,
+        "number": 21,
+        "edition": "2026-10",
+        "minutes": 45,
+        "source_refs": [
+          {
+            "book": "深入浅出Python量化交易实战",
+            "chapters": "2.3",
+            "pdf_pages": [
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60
+            ]
+          },
+          {
+            "book": "Quant Roadmap — Ultimate Edition",
+            "chapters": "22",
+            "pdf_pages": [
+              65
+            ]
+          }
+        ],
+        "stage_title": "策略与回测"
+      }
+    }
+  },
+  {
+    "id": "4b39aaec-38bf-5cfa-9ff5-dad73d78445e",
+    "slug": "quant-course-22",
+    "title": "22 · 配对、均值回归与季节性",
+    "summary": "从价差定义和双腿损益入手，检验均值回归及季节性分组假设。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 22,
+    "metadata": {
+      "curriculum": {
+        "level": "基础",
+        "stage": 4,
+        "number": 22,
+        "edition": "2026-10",
+        "minutes": 45,
+        "source_refs": [
+          {
+            "book": "Quant Roadmap — Ultimate Edition",
+            "chapters": "20–21",
+            "pdf_pages": [
+              63,
+              64
+            ]
+          },
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化",
+            "chapters": "2.8.2–2.8.3",
+            "pdf_pages": [
+              60,
+              61
+            ]
+          }
+        ],
+        "stage_title": "策略与回测"
+      }
+    }
+  },
+  {
+    "id": "9b18eb6a-ce0b-5e4c-a21f-d631e699d633",
+    "slug": "quant-course-23",
+    "title": "23 · 交易成本、约束与绩效",
+    "summary": "建立含费用的现金账，计算成本上限、回撤和同口径绩效指标。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 23,
+    "metadata": {
+      "curriculum": {
+        "level": "基础",
+        "stage": 4,
+        "number": 23,
+        "edition": "2026-10",
+        "minutes": 45,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化",
+            "chapters": "1.4、3.2",
+            "pdf_pages": [
+              26,
+              27,
+              80,
+              81,
+              82
+            ]
+          },
+          {
+            "book": "深入浅出Python量化交易实战",
+            "chapters": "2.1.3",
+            "pdf_pages": [
+              45,
+              46
+            ]
+          }
+        ],
+        "stage_title": "策略与回测"
+      }
+    }
+  },
+  {
+    "id": "bb59a320-bea8-5e95-8bed-b91f651b20e8",
+    "slug": "quant-course-24",
+    "title": "24 · 样本外检验与研究报告",
+    "summary": "完成按时间划分的研究实验，比较基准、交易明细和成本敏感性。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 24,
+    "metadata": {
+      "curriculum": {
+        "level": "基础",
+        "stage": 4,
+        "number": 24,
+        "edition": "2026-10",
+        "minutes": 45,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化",
+            "chapters": "2.8.5",
+            "pdf_pages": [
+              62,
+              63
+            ]
+          },
+          {
+            "book": "深入浅出Python量化交易实战",
+            "chapters": "2.1–2.4",
+            "pdf_pages": [
+              40,
+              43,
+              45,
+              52,
+              59,
+              61,
+              62
+            ]
+          },
+          {
+            "book": "Quant Roadmap — Ultimate Edition",
+            "chapters": "25",
+            "pdf_pages": [
+              69,
+              70,
+              71,
+              72
+            ]
+          }
+        ],
+        "stage_title": "策略与回测"
+      }
+    }
+  },
+  {
+    "id": "e18257bb-3716-54cc-9f36-8db039bfb88d",
+    "slug": "quant-course-25",
+    "title": "25 · 因子定义与截面选股",
+    "summary": "定义时点可得的因子，按截面排序构造候选股票与理论权重，分离特征和未来标签。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 25,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 5,
+        "number": 25,
+        "edition": "2026-10",
+        "minutes": 40,
+        "source_refs": [
+          {
+            "book": "深入浅出Python量化交易实战",
+            "chapters": "4.2、5.1–5.2",
+            "pdf_pages": [
+              93,
+              96,
+              98,
+              107,
+              109,
+              110,
+              113,
+              115,
+              116,
+              117,
+              118,
+              119
+            ]
+          },
+          {
+            "book": "Quant Roadmap — Ultimate Edition",
+            "chapters": "1",
+            "pdf_pages": [
+              9,
+              10,
+              11
+            ]
+          }
+        ],
+        "stage_title": "因子与预测"
+      }
+    }
+  },
+  {
+    "id": "81047555-1573-51c5-a5f5-245e1ad153f5",
+    "slug": "quant-course-26",
+    "title": "26 · 分组收益、IC与换手率",
+    "summary": "计算分组收益、秩相关与权重换手，辨别持有周期、重叠标签和不同统计口径。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 26,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 5,
+        "number": 26,
+        "edition": "2026-10",
+        "minutes": 40,
+        "source_refs": [
+          {
+            "book": "深入浅出Python量化交易实战",
+            "chapters": "6.2–6.4",
+            "pdf_pages": [
+              131,
+              133,
+              135,
+              138,
+              139,
+              143,
+              145,
+              146,
+              147
+            ]
+          }
+        ],
+        "stage_title": "因子与预测"
+      }
+    }
+  },
+  {
+    "id": "38fd9ae1-d702-56b8-a44b-23e0b0d3d8dd",
+    "slug": "quant-course-27",
+    "title": "27 · 标准化、相关性与PCA",
+    "summary": "从手算协方差出发理解标准化与主成分，学习缺失处理、中性化和训练内拟合。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 27,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 5,
+        "number": 27,
+        "edition": "2026-10",
+        "minutes": 40,
+        "source_refs": [
+          {
+            "book": "深入浅出Python量化交易实战",
+            "chapters": "5.3",
+            "pdf_pages": [
+              120,
+              121,
+              122,
+              123,
+              124
+            ]
+          },
+          {
+            "book": "Quant Roadmap — Ultimate Edition",
+            "chapters": "1、8",
+            "pdf_pages": [
+              10,
+              11,
+              26
+            ]
+          }
+        ],
+        "stage_title": "因子与预测"
+      }
+    }
+  },
+  {
+    "id": "efa82629-1882-52a0-b5f0-fd516b02437f",
+    "slug": "quant-course-28",
+    "title": "28 · 线性模型、Ridge与Lasso",
+    "summary": "推导岭回归与 Lasso 的一维解，理解系数收缩、稀疏性和惩罚强度的时间验证。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 28,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 5,
+        "number": 28,
+        "edition": "2026-10",
+        "minutes": 40,
+        "source_refs": [
+          {
+            "book": "深入浅出Python量化交易实战",
+            "chapters": "7.1–7.2",
+            "pdf_pages": [
+              149,
+              152,
+              155,
+              156,
+              157,
+              159,
+              160,
+              161
+            ]
+          },
+          {
+            "book": "Quant Roadmap — Ultimate Edition",
+            "chapters": "1",
+            "pdf_pages": [
+              10,
+              11
+            ]
+          }
+        ],
+        "stage_title": "因子与预测"
+      }
+    }
+  },
+  {
+    "id": "81071396-696a-5dc9-8192-571a62e37dd8",
+    "slug": "quant-course-29",
+    "title": "29 · KNN分类与回归",
+    "summary": "通过邻居投票和数值平均理解 KNN，检查距离、输入尺度及过去样本的可用范围。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 29,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 5,
+        "number": 29,
+        "edition": "2026-10",
+        "minutes": 40,
+        "source_refs": [
+          {
+            "book": "深入浅出Python量化交易实战",
+            "chapters": "3.1–3.3",
+            "pdf_pages": [
+              63,
+              65,
+              66,
+              67,
+              73,
+              79,
+              81,
+              83,
+              87
+            ]
+          },
+          {
+            "book": "Quant Roadmap — Ultimate Edition",
+            "chapters": "7",
+            "pdf_pages": [
+              23,
+              24
+            ]
+          }
+        ],
+        "stage_title": "因子与预测"
+      }
+    }
+  },
+  {
+    "id": "97fbc4ce-5b58-5b72-baf1-4eb4f0c5b830",
+    "slug": "quant-course-30",
+    "title": "30 · 决策树与随机森林",
+    "summary": "从节点纯度计算理解决策树，构造随机森林并比较特征重要性的含义与限制。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 30,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 5,
+        "number": 30,
+        "edition": "2026-10",
+        "minutes": 40,
+        "source_refs": [
+          {
+            "book": "深入浅出Python量化交易实战",
+            "chapters": "8.1–8.3",
+            "pdf_pages": [
+              172,
+              174,
+              176,
+              178,
+              181,
+              183,
+              184,
+              188,
+              189
+            ]
+          },
+          {
+            "book": "Quant Roadmap — Ultimate Edition",
+            "chapters": "7",
+            "pdf_pages": [
+              23,
+              24
+            ]
+          }
+        ],
+        "stage_title": "因子与预测"
+      }
+    }
+  },
+  {
+    "id": "89aee971-99c2-547b-8d1f-8ebefeeeca43",
+    "slug": "quant-course-31",
+    "title": "31 · 支持向量机与动态选因子",
+    "summary": "理解分类间隔与核函数，将动态特征选择、缩放和支持向量机放入完整训练窗口。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 31,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 6,
+        "number": 31,
+        "edition": "2026-10",
+        "minutes": 40,
+        "source_refs": [
+          {
+            "book": "深入浅出Python量化交易实战",
+            "chapters": "9.1–9.2",
+            "pdf_pages": [
+              195,
+              196,
+              197,
+              199,
+              200,
+              203,
+              204,
+              205,
+              206
+            ]
+          },
+          {
+            "book": "Quant Roadmap — Ultimate Edition",
+            "chapters": "1、7",
+            "pdf_pages": [
+              10,
+              11,
+              23,
+              24
+            ]
+          }
+        ],
+        "stage_title": "机器学习与文本"
+      }
+    }
+  },
+  {
+    "id": "65550964-5045-5251-8f46-e6fdb1ee8a98",
+    "slug": "quant-course-32",
+    "title": "32 · 新闻数据、分词与发布时间",
+    "summary": "按发布时间与接收时间组织文本，保留否定、数字和文档版本，建立可追溯清洗流程。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 32,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 6,
+        "number": 32,
+        "edition": "2026-10",
+        "minutes": 40,
+        "source_refs": [
+          {
+            "book": "深入浅出Python量化交易实战",
+            "chapters": "10.2–10.3",
+            "pdf_pages": [
+              223,
+              225,
+              226,
+              227,
+              229,
+              230,
+              232,
+              234
+            ]
+          },
+          {
+            "book": "Quant Roadmap — Ultimate Edition",
+            "chapters": "7、14",
+            "pdf_pages": [
+              23,
+              24,
+              46
+            ]
+          }
+        ],
+        "stage_title": "机器学习与文本"
+      }
+    }
+  },
+  {
+    "id": "7ab10e25-6782-5bc7-ad39-775539177f1a",
+    "slug": "quant-course-33",
+    "title": "33 · 文本向量化与主题模型",
+    "summary": "手算词袋和 TF-IDF，使用词计数学习主题混合，区分文本表示与预测目标。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 33,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 6,
+        "number": 33,
+        "edition": "2026-10",
+        "minutes": 40,
+        "source_refs": [
+          {
+            "book": "深入浅出Python量化交易实战",
+            "chapters": "11.1–11.3",
+            "pdf_pages": [
+              235,
+              238,
+              239,
+              240,
+              241,
+              242,
+              243,
+              246,
+              248,
+              250
+            ]
+          }
+        ],
+        "stage_title": "机器学习与文本"
+      }
+    }
+  },
+  {
+    "id": "d4f83c06-0dd3-57e7-9502-adc27474ef87",
+    "slug": "quant-course-34",
+    "title": "34 · 朴素贝叶斯与情绪分类",
+    "summary": "推导朴素贝叶斯的平滑概率，检查否定词、类别失衡和情绪分数的评价口径。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 34,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 6,
+        "number": 34,
+        "edition": "2026-10",
+        "minutes": 40,
+        "source_refs": [
+          {
+            "book": "深入浅出Python量化交易实战",
+            "chapters": "12.1–12.3",
+            "pdf_pages": [
+              251,
+              252,
+              255,
+              257,
+              258,
+              260,
+              261,
+              262,
+              263,
+              264,
+              266
+            ]
+          }
+        ],
+        "stage_title": "机器学习与文本"
+      }
+    }
+  },
+  {
+    "id": "42dd0cf1-08f8-521a-9127-60fc264e9322",
+    "slug": "quant-course-35",
+    "title": "35 · 神经网络、CNN与LSTM",
+    "summary": "运行多层感知机的一步更新，逐项计算卷积和 LSTM 状态，理解嵌入与序列形状。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 35,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 6,
+        "number": 35,
+        "edition": "2026-10",
+        "minutes": 50,
+        "source_refs": [
+          {
+            "book": "深入浅出Python量化交易实战",
+            "chapters": "13.2–13.3、14.1–14.3",
+            "pdf_pages": [
+              272,
+              274,
+              276,
+              278,
+              280,
+              281,
+              282,
+              283,
+              284,
+              288,
+              290,
+              293,
+              294,
+              295,
+              297,
+              300,
+              302,
+              303,
+              305
+            ]
+          },
+          {
+            "book": "Quant Roadmap — Ultimate Edition",
+            "chapters": "7",
+            "pdf_pages": [
+              23,
+              24,
+              25
+            ]
+          }
+        ],
+        "stage_title": "机器学习与文本"
+      }
+    }
+  },
+  {
+    "id": "88299838-1c38-5891-867d-2c45f19fabf1",
+    "slug": "quant-course-36",
+    "title": "36 · 预测模型的完整研究流程",
+    "summary": "在合成价格上完成时序划分、模型选择和含成本账户，分别评价预测误差与交易结果。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 36,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 6,
+        "number": 36,
+        "edition": "2026-10",
+        "minutes": 50,
+        "source_refs": [
+          {
+            "book": "深入浅出Python量化交易实战",
+            "chapters": "3.1、7.2–7.3、9.2、14.3.4、15.1–15.2",
+            "pdf_pages": [
+              65,
+              66,
+              159,
+              160,
+              161,
+              163,
+              164,
+              203,
+              204,
+              205,
+              305,
+              309,
+              310,
+              311
+            ]
+          },
+          {
+            "book": "Quant Roadmap — Ultimate Edition",
+            "chapters": "1、7、25",
+            "pdf_pages": [
+              9,
+              10,
+              11,
+              23,
+              24,
+              69,
+              70,
+              71,
+              72
+            ]
+          }
+        ],
+        "stage_title": "机器学习与文本"
+      }
+    }
+  },
+  {
+    "id": "187a0959-e828-5cfb-9b99-62d4c634b3ad",
+    "slug": "quant-course-37",
+    "title": "37 · 均值方差与有效前沿",
+    "summary": "从两资产手算建立均值方差模型，区分全局最小方差、收益约束与有效前沿。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 37,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 7,
+        "number": 37,
+        "edition": "2026-10",
+        "minutes": 35,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化 — Xin Guo 等",
+            "chapters": [
+              "2.3",
+              "2.4"
+            ],
+            "pdf_pages": [
+              39,
+              40,
+              41
+            ]
+          }
+        ],
+        "stage_title": "投资组合"
+      }
+    }
+  },
+  {
+    "id": "c4d7f105-3bf4-5140-bf3e-82b502db6ad4",
+    "slug": "quant-course-38",
+    "title": "38 · Alpha、Beta与多因子模型",
+    "summary": "用收益分解解释Alpha与Beta，建立积极权重、跟踪误差和多因子协方差模型。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 38,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 7,
+        "number": 38,
+        "edition": "2026-10",
+        "minutes": 35,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化 — Xin Guo 等",
+            "chapters": [
+              "2.4.1",
+              "3.1"
+            ],
+            "pdf_pages": [
+              41,
+              76,
+              77,
+              78,
+              79,
+              80
+            ]
+          }
+        ],
+        "stage_title": "投资组合"
+      }
+    }
+  },
+  {
+    "id": "db9a0e89-8ba3-50a3-b957-cada67896023",
+    "slug": "quant-course-39",
+    "title": "39 · 收缩估计、贝叶斯与Black-Litterman",
+    "summary": "以精度加权理解均值收缩，学习协方差收缩及相对观点的Black–Litterman更新。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 39,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 7,
+        "number": 39,
+        "edition": "2026-10",
+        "minutes": 35,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化 — Xin Guo 等",
+            "chapters": [
+              "2.4.2"
+            ],
+            "pdf_pages": [
+              41,
+              42,
+              43
+            ]
+          }
+        ],
+        "stage_title": "投资组合"
+      }
+    }
+  },
+  {
+    "id": "f8e9e189-08d2-5bf9-b976-abc1b5650b04",
+    "slug": "quant-course-40",
+    "title": "40 · 参数不确定性与重抽样组合",
+    "summary": "用全方差公式识别参数不确定性，实施共同重抽样并理解NPEB的二阶矩决策。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 40,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 7,
+        "number": 40,
+        "edition": "2026-10",
+        "minutes": 40,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化 — Xin Guo 等",
+            "chapters": [
+              "2.4.3",
+              "2.5",
+              "2.7"
+            ],
+            "pdf_pages": [
+              43,
+              44,
+              45,
+              46,
+              47,
+              55,
+              56
+            ]
+          }
+        ],
+        "stage_title": "投资组合"
+      }
+    }
+  },
+  {
+    "id": "6fef7183-fa1f-5677-9399-443e22a36c41",
+    "slug": "quant-course-41",
+    "title": "41 · 多期配置、再平衡与成本",
+    "summary": "先计算权重漂移与现金守恒，再理解交易费用、不交易区间和多期决策。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 41,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 7,
+        "number": 41,
+        "edition": "2026-10",
+        "minutes": 40,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化 — Xin Guo 等",
+            "chapters": [
+              "3.2",
+              "3.3"
+            ],
+            "pdf_pages": [
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              88,
+              89,
+              90
+            ]
+          }
+        ],
+        "stage_title": "投资组合"
+      }
+    }
+  },
+  {
+    "id": "f80ad2ab-41c7-5ad4-be82-277c2a4d8a1d",
+    "slug": "quant-course-42",
+    "title": "42 · 资本增长、风险预算与组合检验",
+    "summary": "通过Kelly与再平衡手算，区分复利目标、资金权重和风险贡献，并组织组合样本外检验。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 42,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 7,
+        "number": 42,
+        "edition": "2026-10",
+        "minutes": 40,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化 — Xin Guo 等",
+            "chapters": [
+              "2.7",
+              "3.3.3"
+            ],
+            "pdf_pages": [
+              55,
+              56,
+              57,
+              86,
+              87
+            ]
+          }
+        ],
+        "stage_title": "投资组合"
+      }
+    }
+  },
+  {
+    "id": "07349390-27cb-56f2-ae71-08c7155a7d49",
+    "slug": "quant-course-43",
+    "title": "43 · 随机游走、布朗运动与鞅",
+    "summary": "从硬币随机游走建立布朗运动、信息集和鞅的概念，推导伊藤公式及几何布朗运动。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 43,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 8,
+        "number": 43,
+        "edition": "2026-10",
+        "minutes": 40,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化 — Xin Guo 等",
+            "chapters": [
+              "2.6",
+              "附录 A.1–A.3",
+              "附录 D.1"
+            ],
+            "pdf_pages": [
+              47,
+              48,
+              49,
+              50,
+              292,
+              293,
+              294,
+              295,
+              296,
+              297,
+              298,
+              299,
+              310,
+              311
+            ]
+          }
+        ],
+        "stage_title": "订单簿与随机模型"
+      }
+    }
+  },
+  {
+    "id": "97001f23-12e2-5bec-a4fe-8aa30f7d7f0f",
+    "slug": "quant-course-44",
+    "title": "44 · 马尔可夫链、动态规划与HJB",
+    "summary": "先用有限库存决策表计算最优卖出量，再理解转移矩阵、生成元和连续时间 HJB 方程。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 44,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 8,
+        "number": 44,
+        "edition": "2026-10",
+        "minutes": 40,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化 — Xin Guo 等",
+            "chapters": [
+              "附录 B",
+              "6.1.1",
+              "6.2.2"
+            ],
+            "pdf_pages": [
+              300,
+              301,
+              302,
+              192,
+              193,
+              198,
+              199
+            ]
+          }
+        ],
+        "stage_title": "订单簿与随机模型"
+      }
+    }
+  },
+  {
+    "id": "8e6f594f-705f-529e-9b55-d546a1670d0d",
+    "slug": "quant-course-45",
+    "title": "45 · 泊松过程、自激过程与模拟",
+    "summary": "用到达强度描述订单事件，建立泊松与 Hawkes 模型，并实现指数核自激过程的拒绝采样。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 45,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 8,
+        "number": 45,
+        "edition": "2026-10",
+        "minutes": 40,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化 — Xin Guo 等",
+            "chapters": [
+              "4.6.2",
+              "5.3",
+              "附录 C.1–C.4"
+            ],
+            "pdf_pages": [
+              136,
+              137,
+              160,
+              161,
+              303,
+              304,
+              305,
+              306,
+              307,
+              308,
+              309
+            ]
+          }
+        ],
+        "stage_title": "订单簿与随机模型"
+      }
+    }
+  },
+  {
+    "id": "eea13418-4ca0-5528-863e-81e094d1558a",
+    "slug": "quant-course-46",
+    "title": "46 · 订单簿重建与成交机制",
+    "summary": "按事件顺序重建订单簿，区分新增、撤单、成交与改价，并检查价格、数量和队列位置。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 46,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 8,
+        "number": 46,
+        "edition": "2026-10",
+        "minutes": 40,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化 — Xin Guo 等",
+            "chapters": [
+              "5.1",
+              "5.2.1"
+            ],
+            "pdf_pages": [
+              155,
+              156,
+              157
+            ]
+          }
+        ],
+        "stage_title": "订单簿与随机模型"
+      }
+    }
+  },
+  {
+    "id": "b0019fe2-60ee-5006-9ee4-59fec028b7e1",
+    "slug": "quant-course-47",
+    "title": "47 · 订单不平衡与价格预测",
+    "summary": "由盘口数量计算不平衡与微价格，明确预测目标、信息时间和成交后收益，建立可检验的方向模型。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 47,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 8,
+        "number": 47,
+        "edition": "2026-10",
+        "minutes": 40,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化 — Xin Guo 等",
+            "chapters": [
+              "5.2.2",
+              "5.3",
+              "5.4"
+            ],
+            "pdf_pages": [
+              158,
+              159,
+              160,
+              161,
+              167,
+              168
+            ]
+          }
+        ],
+        "stage_title": "订单簿与随机模型"
+      }
+    }
+  },
+  {
+    "id": "bd45d731-0e3c-5993-b6d4-3cb5535cf58c",
+    "slug": "quant-course-48",
+    "title": "48 · 排队模型与扩散近似",
+    "summary": "从出生死亡链计算队列占用，再分析排队位置、首次耗尽时间和订单簿的扩散近似。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 48,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 8,
+        "number": 48,
+        "edition": "2026-10",
+        "minutes": 40,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化 — Xin Guo 等",
+            "chapters": [
+              "5.5.1–5.5.3",
+              "附录 D"
+            ],
+            "pdf_pages": [
+              169,
+              170,
+              171,
+              172,
+              173,
+              174,
+              175,
+              176,
+              177,
+              178,
+              310,
+              311,
+              312,
+              313
+            ]
+          }
+        ],
+        "stage_title": "订单簿与随机模型"
+      }
+    }
+  },
+  {
+    "id": "e2be0403-ec36-5fb4-b7a8-a6ac7cd63363",
+    "slug": "quant-course-49",
+    "title": "49 · 买卖价反弹与已实现波动率",
+    "summary": "解释成交价的负自相关及高频方差偏差，用模拟比较不同抽样间隔下的已实现方差。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 49,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 9,
+        "number": 49,
+        "edition": "2026-10",
+        "minutes": 45,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化 — Xin Guo 等",
+            "chapters": [
+              "4.2.1–4.2.2",
+              "4.3.1"
+            ],
+            "pdf_pages": [
+              117,
+              118,
+              119,
+              120
+            ]
+          }
+        ],
+        "stage_title": "高频数据分析"
+      }
+    }
+  },
+  {
+    "id": "6edd7547-f11a-51a7-899f-866e2e4c1c15",
+    "slug": "quant-course-50",
+    "title": "50 · 噪声修正、双尺度与已实现核",
+    "summary": "推导双尺度去偏、已实现核、预平均和 QMLE，并用同一模拟价格比较估计结果。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 50,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 9,
+        "number": 50,
+        "edition": "2026-10",
+        "minutes": 45,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化 — Xin Guo 等",
+            "chapters": [
+              "4.3.2–4.3.6"
+            ],
+            "pdf_pages": [
+              121,
+              122,
+              123,
+              124,
+              125
+            ]
+          }
+        ],
+        "stage_title": "高频数据分析"
+      }
+    }
+  },
+  {
+    "id": "db8a0687-f554-59ce-a4fc-9b7a36f30a8a",
+    "slug": "quant-course-51",
+    "title": "51 · 异步交易与多资产协方差",
+    "summary": "分析异步成交造成的相关性偏差，实现重叠区间协方差，并用极化恒等式连接单资产与多资产估计。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 51,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 9,
+        "number": 51,
+        "edition": "2026-10",
+        "minutes": 45,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化 — Xin Guo 等",
+            "chapters": [
+              "4.4.1–4.4.4"
+            ],
+            "pdf_pages": [
+              125,
+              126,
+              127,
+              128,
+              129
+            ]
+          }
+        ],
+        "stage_title": "高频数据分析"
+      }
+    }
+  },
+  {
+    "id": "41b81729-02bc-507c-95b3-de03bc7a120e",
+    "slug": "quant-course-52",
+    "title": "52 · 傅里叶估计、跳跃与幂变差",
+    "summary": "用频域系数估计积分方差，解释带宽与异步处理，并区分连续波动、跳跃和不同阶幂变差。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 52,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 9,
+        "number": 52,
+        "edition": "2026-10",
+        "minutes": 45,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化 — Xin Guo 等",
+            "chapters": [
+              "4.5.1–4.5.3",
+              "4.6.7",
+              "附录 A.2"
+            ],
+            "pdf_pages": [
+              130,
+              131,
+              132,
+              133,
+              134,
+              142,
+              143,
+              294,
+              295
+            ]
+          }
+        ],
+        "stage_title": "高频数据分析"
+      }
+    }
+  },
+  {
+    "id": "33a4f835-6eff-532a-8b8f-780c5986d1c3",
+    "slug": "quant-course-53",
+    "title": "53 · 持续时间、ACD与标值点过程",
+    "summary": "把交易间隔与成交方向、幅度联合建模，推导 ACD 条件均值和似然，并区分事件时间与日历时间。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 53,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 9,
+        "number": 53,
+        "edition": "2026-10",
+        "minutes": 45,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化 — Xin Guo 等",
+            "chapters": [
+              "4.6.1",
+              "4.6.3–4.6.5"
+            ],
+            "pdf_pages": [
+              134,
+              135,
+              136,
+              137,
+              138,
+              139,
+              140
+            ]
+          }
+        ],
+        "stage_title": "高频数据分析"
+      }
+    }
+  },
+  {
+    "id": "197cdde1-90eb-56ca-8dbf-465ed26a1056",
+    "slug": "quant-course-54",
+    "title": "54 · 波动率预测与状态变化",
+    "summary": "连接日收益与高频波动率测度，推导 Realized GARCH 和状态过滤，区分事后平滑与实时预测。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 54,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 9,
+        "number": 54,
+        "edition": "2026-10",
+        "minutes": 45,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化 — Xin Guo 等",
+            "chapters": [
+              "2.6.3",
+              "3.3.6",
+              "4.6.6"
+            ],
+            "pdf_pages": [
+              52,
+              53,
+              54,
+              90,
+              140,
+              141,
+              142
+            ]
+          }
+        ],
+        "stage_title": "高频数据分析"
+      }
+    }
+  },
+  {
+    "id": "8b619abd-f1eb-5d43-b522-168455ec1dfb",
+    "slug": "quant-course-55",
+    "title": "55 · TWAP、VWAP与最优执行",
+    "summary": "区分执行基准与下单策略，由冲击成本和库存风险推导 Almgren–Chriss 清算路径。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 55,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 10,
+        "number": 55,
+        "edition": "2026-10",
+        "minutes": 45,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化 — Xin Guo 等",
+            "chapters": [
+              "6.1.1–6.1.3",
+              "6.6 补充材料 1"
+            ],
+            "pdf_pages": [
+              191,
+              192,
+              193,
+              194,
+              195,
+              196,
+              221
+            ]
+          }
+        ],
+        "stage_title": "执行与做市"
+      }
+    }
+  },
+  {
+    "id": "f6ca8471-4398-5c78-ad6e-18ea385de29f",
+    "slug": "quant-course-56",
+    "title": "56 · 价格冲击与订单簿恢复",
+    "summary": "用订单簿形状积分计算冲击成本，区分数量恢复与价格恢复，并检验分批交易的成本。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 56,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 10,
+        "number": 56,
+        "edition": "2026-10",
+        "minutes": 45,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化 — Xin Guo 等",
+            "chapters": [
+              "6.2.1–6.2.4",
+              "6.3.1–6.3.4"
+            ],
+            "pdf_pages": [
+              197,
+              198,
+              199,
+              200,
+              201,
+              202,
+              203,
+              204,
+              205,
+              206,
+              207,
+              208,
+              209,
+              210
+            ]
+          }
+        ],
+        "stage_title": "执行与做市"
+      }
+    }
+  },
+  {
+    "id": "46f50a2f-9165-55e5-869d-3d978499fe29",
+    "slug": "quant-course-57",
+    "title": "57 · 多资产执行与最优配置",
+    "summary": "将资产相关性与交叉冲击写入多资产执行目标，并比较主动成交、被动挂单和等待的条件成本。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 57,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 10,
+        "number": 57,
+        "edition": "2026-10",
+        "minutes": 45,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化 — Xin Guo 等",
+            "chapters": [
+              "6.4",
+              "6.5.1–6.5.2"
+            ],
+            "pdf_pages": [
+              210,
+              211,
+              212,
+              213,
+              214,
+              215,
+              216,
+              217,
+              218,
+              219,
+              220,
+              221
+            ]
+          }
+        ],
+        "stage_title": "执行与做市"
+      }
+    }
+  },
+  {
+    "id": "dbb612fc-f8d1-5405-a870-c124b0605e5a",
+    "slug": "quant-course-58",
+    "title": "58 · 做市报价、库存与脉冲控制",
+    "summary": "由库存风险推导保留价格和报价偏移，写出做市 HJB，并说明市价减仓如何形成脉冲控制。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 58,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 10,
+        "number": 58,
+        "edition": "2026-10",
+        "minutes": 45,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化 — Xin Guo 等",
+            "chapters": [
+              "7.1–7.3"
+            ],
+            "pdf_pages": [
+              228,
+              229,
+              230,
+              231,
+              232,
+              233,
+              234
+            ]
+          }
+        ],
+        "stage_title": "执行与做市"
+      }
+    }
+  },
+  {
+    "id": "66a57da6-89b2-510c-9eb1-c71f0ab5d3e0",
+    "slug": "quant-course-59",
+    "title": "59 · 智能订单路由与随机逼近",
+    "summary": "把多市场队列、费用与欠成交惩罚写成统一成本，推导样本梯度并用投影随机逼近求订单拆分。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 59,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 10,
+        "number": 59,
+        "edition": "2026-10",
+        "minutes": 45,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化 — Xin Guo 等",
+            "chapters": [
+              "7.4",
+              "7.5.1–7.5.3",
+              "7.8"
+            ],
+            "pdf_pages": [
+              234,
+              235,
+              236,
+              237,
+              238,
+              239,
+              246
+            ]
+          }
+        ],
+        "stage_title": "执行与做市"
+      }
+    }
+  },
+  {
+    "id": "c5683531-8cf1-59fa-9d91-b3b8e135296e",
+    "slug": "quant-course-60",
+    "title": "60 · 暗池、删失数据与流动性分配",
+    "summary": "识别满额成交造成的右删失，用风险集估计流动性尾概率，再推导整数贪心和连续比例分配。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 60,
+    "metadata": {
+      "curriculum": {
+        "level": "进阶",
+        "stage": 10,
+        "number": 60,
+        "edition": "2026-10",
+        "minutes": 45,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化 — Xin Guo 等",
+            "chapters": [
+              "7.6.1–7.6.3",
+              "7.7.1–7.7.2"
+            ],
+            "pdf_pages": [
+              239,
+              240,
+              241,
+              242,
+              243,
+              244,
+              245,
+              246
+            ]
+          }
+        ],
+        "stage_title": "执行与做市"
+      }
+    }
+  },
+  {
+    "id": "90248828-253b-5489-85a6-3724a727b023",
+    "slug": "quant-course-61",
+    "title": "61 · 行情、信号与订单系统",
+    "summary": "理解行情、信号、订单和成交回报如何连接，建立可回放的交易状态。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 61,
+    "metadata": {
+      "curriculum": {
+        "level": "实践",
+        "stage": 11,
+        "number": 61,
+        "edition": "2026-10",
+        "minutes": 45,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化",
+            "chapters": "8.2–8.3",
+            "pdf_pages": [
+              258,
+              259,
+              260,
+              261,
+              262,
+              263,
+              264,
+              265,
+              266,
+              267,
+              268,
+              269,
+              270
+            ]
+          }
+        ],
+        "stage_title": "研究系统与综合实践"
+      }
+    }
+  },
+  {
+    "id": "0749fe40-8e5f-56d6-99e3-2479caab89c9",
+    "slug": "quant-course-62",
+    "title": "62 · 操作风险、策略风险与监控",
+    "summary": "把风险限制写成可执行检查，区分模型损失、数据故障和订单异常。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 62,
+    "metadata": {
+      "curriculum": {
+        "level": "实践",
+        "stage": 11,
+        "number": 62,
+        "edition": "2026-10",
+        "minutes": 45,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化",
+            "chapters": "8.5–8.7",
+            "pdf_pages": [
+              275,
+              276,
+              277,
+              278,
+              279,
+              280,
+              281,
+              282,
+              283,
+              284,
+              285,
+              286,
+              287
+            ]
+          }
+        ],
+        "stage_title": "研究系统与综合实践"
+      }
+    }
+  },
+  {
+    "id": "2ba16614-9474-5862-9cdd-8d7b600cb3fc",
+    "slug": "quant-course-63",
+    "title": "63 · 市场规则与交易约束的核查",
+    "summary": "将市场规则转换为带日期的研究参数，核查成交、结算与交易限制。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 63,
+    "metadata": {
+      "curriculum": {
+        "level": "实践",
+        "stage": 11,
+        "number": 63,
+        "edition": "2026-10",
+        "minutes": 45,
+        "source_refs": [
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化",
+            "chapters": "8.4",
+            "pdf_pages": [
+              270,
+              271,
+              272,
+              273,
+              274
+            ]
+          }
+        ],
+        "stage_title": "研究系统与综合实践"
+      }
+    }
+  },
+  {
+    "id": "c0c2c15b-6de9-5856-af1c-90c2eed3b0e1",
+    "slug": "quant-course-64",
+    "title": "64 · 衍生品、波动率与后续学习",
+    "summary": "以收益结构理解衍生品与波动率，建立后续数学学习的对应关系。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 64,
+    "metadata": {
+      "curriculum": {
+        "level": "拓展",
+        "stage": 11,
+        "number": 64,
+        "edition": "2026-10",
+        "minutes": 45,
+        "source_refs": [
+          {
+            "book": "Roadmap Ultimate Edition",
+            "chapters": "2、11",
+            "pdf_pages": [
+              13,
+              14,
+              37,
+              38
+            ]
+          },
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化",
+            "chapters": "2.2、3.3及附录A",
+            "pdf_pages": [
+              38,
+              39,
+              83,
+              84,
+              85,
+              292,
+              293,
+              294,
+              295,
+              296,
+              297,
+              298,
+              299
+            ]
+          }
+        ],
+        "stage_title": "研究系统与综合实践"
+      }
+    }
+  },
+  {
+    "id": "78427355-3eda-5a51-92ea-a7691d1e6381",
+    "slug": "quant-course-65",
+    "title": "65 · 完整量化研究项目",
+    "summary": "完成从假设、数据、回测到结果解释的可复现实验。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 65,
+    "metadata": {
+      "curriculum": {
+        "level": "实践",
+        "stage": 11,
+        "number": 65,
+        "edition": "2026-10",
+        "minutes": 45,
+        "source_refs": [
+          {
+            "book": "Roadmap Ultimate Edition",
+            "chapters": "13、14、25",
+            "pdf_pages": [
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              67,
+              68,
+              69,
+              70,
+              71,
+              72
+            ]
+          },
+          {
+            "book": "深入浅出Python量化交易实战",
+            "chapters": "2.1–2.3",
+            "pdf_pages": [
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62
+            ]
+          },
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化",
+            "chapters": "2.8.5、8.5",
+            "pdf_pages": [
+              62,
+              275,
+              276,
+              277
+            ]
+          }
+        ],
+        "stage_title": "研究系统与综合实践"
+      }
+    }
+  },
+  {
+    "id": "4334f49d-afe9-5b33-9bc5-4d1ce23de306",
+    "slug": "quant-course-66",
+    "title": "66 · 学习资料索引与职业准备",
+    "summary": "把三份主资料对应到课程阶段，依据实际缺口安排后续学习。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 66,
+    "metadata": {
+      "curriculum": {
+        "level": "综合",
+        "stage": 11,
+        "number": 66,
+        "edition": "2026-10",
+        "minutes": 45,
+        "source_refs": [
+          {
+            "book": "Roadmap Ultimate Edition",
+            "chapters": "全书主题目录及13、17、25、26",
+            "pdf_pages": [
+              7,
+              8,
+              42,
+              43,
+              44,
+              45,
+              56,
+              57,
+              58,
+              67,
+              68,
+              69,
+              70,
+              71,
+              72,
+              73
+            ]
+          },
+          {
+            "book": "量化交易：算法、分析、数据、模型和优化",
+            "chapters": "全书目录",
+            "pdf_pages": [
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ]
+          },
+          {
+            "book": "深入浅出Python量化交易实战",
+            "chapters": "全书目录及第15章",
+            "pdf_pages": [
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ]
+          }
+        ],
+        "stage_title": "研究系统与综合实践"
+      }
+    }
+  }
+]

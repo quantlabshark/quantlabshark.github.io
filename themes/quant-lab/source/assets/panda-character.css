@@ -1,31 +1,43 @@
 /* Self-contained QuantLab shark wardrobe and motion. */
-.shark-art{display:block;width:100%;height:100%;overflow:visible;pointer-events:none;--sk-ink:#294751;--sk-blue:#83acba;--sk-fin:#6492a4;--sk-white:#fffbee}
+.shark-art{display:block;width:100%;height:100%;overflow:visible;pointer-events:none;--sk-ink:#1d3a52;--sk-blue:#5d9fd5;--sk-fin:#4886bf;--sk-shine:#a6d2f2;--sk-white:#fdfaf2}
 .shark-art *{transform-box:view-box}
-.shark-art .sk-outline{stroke:var(--sk-ink);stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round}
+.shark-art .sk-outline{stroke:var(--sk-ink);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
 .shark-art .sk-body{fill:var(--sk-blue)}.shark-art .sk-fin{fill:var(--sk-fin)}
-.shark-art .sk-bodyshine{fill:#b7d0d7;opacity:.75}.shark-art .sk-finshine{fill:#8bb0bc}
-.shark-art :is(.sk-belly,.sk-snout){fill:var(--sk-white)}
-.shark-art .sk-eye,.shark-art .sk-dark{fill:var(--sk-ink)}
-.shark-art .sk-cheek{fill:#eaa99f;opacity:.65}
-.shark-art .sk-inkline{fill:none;stroke:var(--sk-ink);stroke-width:2.5;stroke-linecap:round}
-.shark-art .sk-gills{fill:none;stroke:#608b98;stroke-width:2;stroke-linecap:round}
-.shark-art .sk-tooth{fill:#fff;stroke:#45626a;stroke-width:.8;stroke-linejoin:round}
-.shark-art .sk-mouth-open{fill:#45616c;stroke:var(--sk-ink);stroke-width:1.5}
-.shark-art .sk-shadow{fill:#315b4b;opacity:.12}.shark-art .sk-gold{fill:#e9bc62}
-.shark-art .sk-teal{fill:#4e9984}.shark-art .sk-purple{fill:#9c95bc}
-.shark-art .sk-straw{fill:#e6cd93}.shark-art .sk-pack{fill:#bd9471}
-.shark-art .sk-coatfill{fill:#e8efea}.shark-art .sk-strap{fill:none;stroke:#9a7652;stroke-width:5;stroke-linecap:round}
-.shark-art .sk-goldline{fill:none;stroke:#b88e44;stroke-width:2;stroke-linecap:round}
-.shark-art .sk-glasses-lines{fill:#fff;fill-opacity:.12;stroke:#4b635a;stroke-width:2.2}
-.shark-art .sk-headphone-band{fill:none;stroke:#77708c;stroke-width:5}
-.shark-art .sk-helmet{fill:#d7eced;fill-opacity:.2;stroke:#9ebfc6;stroke-width:3}
-.shark-art .sk-bubbles{fill:none;stroke:#a2cbc7;stroke-width:1.8}
-.shark-art .sk-sleep{fill:#88adb9;font:700 16px system-ui,sans-serif}
-.shark-art :is(.sk-o,.sk-decor,.sk-eyes-happy,.sk-eyes-closed,.sk-mouth-open){display:none}
-[data-outfit=scarf] .sk-scarf,[data-outfit=redscarf] .sk-scarf,[data-outfit=backpack] .sk-backpack,[data-outfit=coat] .sk-coat,[data-outfit=raincoat] .sk-raincoat,[data-outfit=headphones] .sk-headphones,[data-outfit=flower] .sk-flower,[data-outfit=goggles] .sk-glasses,[data-outfit=glasses] .sk-glasses,[data-outfit=cap] .sk-cap,[data-outfit=strawhat] .sk-strawhat,[data-outfit=wizard] .sk-wizard,[data-outfit=spacesuit] .sk-suit,[data-outfit=book] .sk-book{display:inline}
-[data-outfit=redscarf] .sk-scarf .sk-teal{fill:#cd796a}
-[data-form=master] .sk-glasses,[data-form=engineer] .sk-hardhat,[data-form=explorer] .sk-backpack,[data-form=astronaut] .sk-suit{display:inline}
-:is([data-outfit=cap],[data-outfit=strawhat],[data-outfit=wizard]) .sk-hardhat,:is([data-outfit=spacesuit],[data-form=astronaut]) .sk-hat{display:none}
+.shark-art .sk-bodyshine{fill:var(--sk-shine);opacity:.8}.shark-art .sk-finshine{fill:var(--sk-shine);opacity:.45}
+.shark-art .sk-belly{fill:var(--sk-white)}
+.shark-art .sk-eye,.shark-art .sk-dark{fill:var(--sk-ink)}.shark-art .sk-glint{fill:#fff}
+.shark-art .sk-cheek{fill:#f49d9b;opacity:.6}
+.shark-art .sk-inkline{fill:none;stroke:var(--sk-ink);stroke-width:2.6;stroke-linecap:round}
+.shark-art .sk-gills{fill:none;stroke:var(--sk-ink);stroke-width:1.8;stroke-linecap:round;opacity:.45}
+.shark-art .sk-tooth{fill:#fff;stroke:var(--sk-ink);stroke-width:1.1;stroke-linejoin:round}
+.shark-art .sk-mouth-open{fill:#2f4b62;stroke:var(--sk-ink);stroke-width:1.6;stroke-linejoin:round}.shark-art .sk-tongue{fill:#ee8f92}
+.shark-art .sk-shadow{fill:#1d3a52;opacity:.12}
+.shark-art .sk-gold{fill:#f0bf55}.shark-art .sk-teal{fill:#3f9b86}.shark-art .sk-purple{fill:#8e86c4}.shark-art .sk-red{fill:#dc6b5f}
+.shark-art .sk-straw{fill:#ecd295}.shark-art .sk-ribbon{fill:none;stroke:#d36f61;stroke-width:5}
+.shark-art .sk-knit{fill:#f6ede0}.shark-art .sk-knitline{fill:none;stroke:#d8c7b0;stroke-width:1.6;stroke-linecap:round}
+.shark-art .sk-petal{fill:#f5aeb8;stroke:#d97f8d;stroke-width:1}
+.shark-art .sk-pack{fill:#c39468}.shark-art .sk-strap{fill:none;stroke:#8f6a47;stroke-width:5;stroke-linecap:round}.shark-art .sk-strapline{fill:none;stroke:#8f6a47;stroke-width:2.4;stroke-linecap:round}
+.shark-art .sk-coatfill{fill:#f2f5f3}.shark-art .sk-coatline{fill:none;stroke:#9fb0b8;stroke-width:1.8;stroke-linejoin:round}
+.shark-art .sk-goldline{fill:none;stroke:#b98a3c;stroke-width:2;stroke-linecap:round}
+.shark-art .sk-scarfline{fill:none;stroke:#b9e3d6;stroke-width:2;stroke-linecap:round}
+.shark-art .sk-bookcover{fill:#3f7b6c}.shark-art .sk-page{fill:#fffaf0}.shark-art .sk-pageline{fill:none;stroke:#b8bba9;stroke-width:1.5;stroke-linecap:round}
+.shark-art .sk-glasses-lines{fill:#fff;fill-opacity:.15;stroke:var(--sk-ink);stroke-width:2.4;stroke-linecap:round}
+.shark-art .sk-headphone-band{fill:none;stroke:#6c64a4;stroke-width:5;stroke-linecap:round}
+.shark-art .sk-helmet{fill:#d9eef7;fill-opacity:.22;stroke:#98c4d8;stroke-width:3}.shark-art .sk-helmetshine{fill:none;stroke:#fff;stroke-width:3.5;stroke-linecap:round;opacity:.85}
+.shark-art .sk-collar{fill:#c9dbe3}
+.shark-art .sk-board{fill:#e3a35a}.shark-art .sk-wheel{fill:none;stroke:var(--sk-ink);stroke-width:3.5}.shark-art .sk-frame{fill:none;stroke:#d8665a;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}
+.shark-art .sk-balloon{fill:#e2675d}.shark-art .sk-balloonshine{fill:none;stroke:#fff;stroke-width:2.5;stroke-linecap:round;opacity:.7}.shark-art .sk-string{fill:none;stroke:var(--sk-ink);stroke-width:1.3;opacity:.6}
+.shark-art .sk-sand{fill:#d7ebe6}.shark-art .sk-sandline{fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round}.shark-art .sk-weed{fill:none;stroke:#68a88a;stroke-width:3;stroke-linecap:round;opacity:.75}
+.shark-art .sk-bubbles{fill:none;stroke:#93c6d9;stroke-width:1.8}
+.shark-art .sk-sleep{fill:#7ea7c4;font:700 16px system-ui,sans-serif}
+.shark-art .sk-noteline{fill:none;stroke:#3f9b86;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.shark-art :is(.sk-o,.sk-ride,.sk-decor,.sk-eyes-happy,.sk-eyes-closed,.sk-mouth-open,.sk-tongue){display:none}
+[data-outfit=scarf] .sk-scarf,[data-outfit=redscarf] .sk-scarf,[data-outfit=backpack] .sk-backpack,[data-outfit=coat] .sk-coat,[data-outfit=raincoat] .sk-raincoat,[data-outfit=headphones] .sk-headphones,[data-outfit=flower] .sk-flower,[data-outfit=goggles] .sk-glasses,[data-outfit=glasses] .sk-glasses,[data-outfit=cap] .sk-cap,[data-outfit=strawhat] .sk-strawhat,[data-outfit=wizard] .sk-wizard,[data-outfit=beanie] .sk-beanie,[data-outfit=bowtie] .sk-bowtie,[data-outfit=spacesuit] .sk-suit,[data-outfit=book] .sk-book{display:inline}
+[data-outfit=redscarf] .sk-scarf .sk-teal{fill:#d5705f}[data-outfit=redscarf] .sk-scarfline{stroke:#f6c5b9}
+[data-form=master] .sk-glasses,[data-form=scientist] :is(.sk-glasses,.sk-coat),[data-form=engineer] .sk-hardhat,[data-form=explorer] .sk-backpack,[data-form=astronaut] .sk-suit{display:inline}
+:is([data-outfit=cap],[data-outfit=strawhat],[data-outfit=wizard],[data-outfit=beanie]) .sk-hardhat,:is([data-outfit=spacesuit],[data-form=astronaut]) :is(.sk-hat,.sk-dorsal,.sk-headphones){display:none}
+[data-ride=skateboard] .sk-ride-skateboard,[data-ride=bicycle] .sk-ride-bicycle,[data-ride=balloon] .sk-ride-balloon{display:inline}
+[data-ride=skateboard] .sk-swimmer{transform:translateY(-9px)}[data-ride=bicycle] .sk-swimmer{transform:translateY(-14px) scale(.9)}
 [data-decoration]:not([data-decoration=no-decor]):not([data-decoration=none]) .sk-decor{display:inline}
 :is([data-action=read],[data-preview-action=read]) .sk-book{display:inline}
 :is([data-action=sleep],[data-action=meditate],[data-preview-action=sleep],[data-preview-action=meditate]) .sk-eyes-closed{display:inline}
@@ -33,28 +45,35 @@
 :is([data-action=cheer],[data-action=dance],[data-action=jump],[data-preview-action=cheer],[data-preview-action=dance],[data-preview-action=jump]) .sk-eyes-happy{display:inline}
 :is([data-action=cheer],[data-action=jump],[data-preview-action=cheer],[data-preview-action=jump]) .sk-stars{display:inline}
 :is([data-action=sleep],[data-action=meditate],[data-action=cheer],[data-action=dance],[data-action=jump],[data-preview-action=sleep],[data-preview-action=meditate],[data-preview-action=cheer],[data-preview-action=dance],[data-preview-action=jump]) .sk-eyes-open{display:none}
-:is([data-action=sing],[data-preview-action=sing]) :is(.sk-mouth-open,.sk-music){display:inline}
+:is([data-action=sing],[data-preview-action=sing]) :is(.sk-mouth-open,.sk-tongue,.sk-music){display:inline}
 :is([data-action=sing],[data-preview-action=sing]) :is(.sk-smile,.sk-tooth){display:none}
-.sk-swimmer,.sk-stage{transform-origin:80px 110px}.sk-tail{transform-origin:118px 135px}.sk-fin-left{transform-origin:42px 111px}.sk-fin-right{transform-origin:117px 111px}
+.sk-swimmer,.sk-stage{transform-origin:80px 160px}.sk-tail{transform-origin:104px 156px}.sk-fin-left{transform-origin:38px 101px}.sk-fin-right{transform-origin:122px 101px}
 .sk-pupils{transform:translate(var(--look-x,0px),var(--look-y,0px));transition:transform .15s}
 .sk-fin-right,.sk-fin-left,.sk-swimmer{transition:transform .3s ease}
 [data-facing=left] .sk-stage{transform:scaleX(-1)}
-:is([data-action=wave],[data-preview-action=wave]) .sk-fin-right{transform:rotate(-100deg)}
-:is([data-action=read],[data-preview-action=read]) .sk-fin-left{transform:rotate(-24deg)}
-:is([data-action=read],[data-preview-action=read]) .sk-fin-right{transform:rotate(24deg)}
-:is([data-action=stretch],[data-action=cheer],[data-preview-action=stretch],[data-preview-action=cheer]) .sk-fin-left{transform:rotate(65deg)}
-:is([data-action=stretch],[data-action=cheer],[data-preview-action=stretch],[data-preview-action=cheer]) .sk-fin-right{transform:rotate(-65deg)}
-:is([data-action=sleep],[data-preview-action=sleep]) .sk-swimmer{transform:rotate(9deg) translateY(3px)}
-[data-action]:not([data-quiet=true]) .sk-tail{animation:sk-tail 1.3s ease-in-out infinite}
+.panda-pet.is-dragging .sk-swimmer{transform:rotate(-8deg)}.panda-pet.is-curious:not([data-action]) .sk-swimmer{transform:rotate(-4deg)}
+[data-quiet=true] .sk-pupils{transform:none}
+:is([data-action=wave],[data-preview-action=wave]) .sk-fin-right{transform:rotate(-70deg)}
+:is([data-action=read],[data-preview-action=read]) .sk-fin-left{transform:rotate(-28deg)}
+:is([data-action=read],[data-preview-action=read]) .sk-fin-right{transform:rotate(28deg)}
+:is([data-action=stretch],[data-action=cheer],[data-preview-action=stretch],[data-preview-action=cheer]) .sk-fin-left{transform:rotate(55deg)}
+:is([data-action=stretch],[data-action=cheer],[data-preview-action=stretch],[data-preview-action=cheer]) .sk-fin-right{transform:rotate(-55deg)}
+[data-ride=balloon] .sk-fin-right{transform:rotate(-38deg)}
+:is([data-action=sleep],[data-preview-action=sleep]) .sk-swimmer{transform:rotate(7deg) translateY(2px)}
+[data-action]:not([data-quiet=true]) .sk-tail{animation:sk-tail 1.2s ease-in-out infinite}
 [data-action=wave]:not([data-quiet=true]) .sk-fin-right{animation:sk-wave .7s ease-in-out infinite}
 :is([data-action=dance],[data-action=sway],[data-action=sing],[data-action=crawl]):not([data-quiet=true]) .sk-swimmer{animation:sk-sway 1.1s ease-in-out infinite}
 :is([data-action=jump],[data-action=cheer]):not([data-quiet=true]) .sk-swimmer{animation:sk-hop .85s ease-in-out infinite}
 [data-action=spin]:not([data-quiet=true]) .sk-swimmer{animation:sk-spin 1.5s ease-in-out infinite}
 [data-action=roll]:not([data-quiet=true]) .sk-swimmer{animation:sk-roll 1.5s ease-in-out infinite}
-@keyframes sk-tail{50%{transform:rotate(8deg)}}@keyframes sk-wave{0%,100%{transform:rotate(-80deg)}50%{transform:rotate(-115deg)}}
+[data-ride=bicycle]:not([data-quiet=true]) .sk-wheels{animation:sk-bump .5s ease-in-out infinite}
+[data-ride=balloon]:not([data-quiet=true]) .sk-stage{animation:sk-float 3.2s ease-in-out infinite}
+.panda-ride-preview:is([data-ride=walk],[data-ride=jog]):not([data-quiet=true]) .sk-swimmer{animation:sk-sway var(--ride-step) ease-in-out infinite}.panda-ride-preview[data-ride=skateboard]:not([data-quiet=true]) .sk-stage{animation:sk-glide 2.4s ease-in-out infinite}
+@keyframes sk-tail{50%{transform:rotate(9deg)}}@keyframes sk-wave{0%,100%{transform:rotate(-55deg)}50%{transform:rotate(-90deg)}}
 @keyframes sk-sway{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(5deg) translateY(-3px)}}
 @keyframes sk-hop{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}
-@keyframes sk-spin{50%{transform:scaleX(-1)}}@keyframes sk-roll{0%,100%{transform:rotate(-10deg)}50%{transform:rotate(18deg)}}
-html[data-theme=dark] .shark-art{--sk-blue:#80a7b8;--sk-fin:#5e879b;--sk-white:#efece1}
+@keyframes sk-spin{50%{transform:scaleX(-1)}}@keyframes sk-roll{0%,100%{transform:rotate(-9deg)}50%{transform:rotate(14deg)}}
+@keyframes sk-bump{50%{transform:translateY(-1.5px)}}@keyframes sk-float{50%{transform:translateY(-6px)}}@keyframes sk-glide{0%,100%{transform:translateX(-5px)}50%{transform:translateX(5px)}}
+html[data-theme=dark] .shark-art{--sk-blue:#5f9ccf;--sk-fin:#4a83b8;--sk-shine:#93c2e6;--sk-white:#f1eee4;--sk-ink:#132a3d}
 @media(prefers-reduced-motion:reduce){.shark-art *{animation:none!important;transition:none!important}}
 [data-quiet=true] .shark-art *{animation:none!important}

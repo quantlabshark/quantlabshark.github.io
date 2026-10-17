@@ -11,6 +11,8 @@
  // Links only navigate; neither page activation nor data loading opens a group.
  window.FoamNavigation={isOpen,restore};
  restore();
+ try{document.getElementById('sidebar').scrollTop=Number(sessionStorage.getItem('quantlab.nav-scroll')||0);}catch{}
+ window.addEventListener('pagehide',()=>{try{sessionStorage.setItem('quantlab.nav-scroll',String(document.getElementById('sidebar').scrollTop));}catch{}});
  nav.addEventListener('click',e=>{const button=e.target.closest('.nav-expand');if(!button||!nav.contains(button))return;e.preventDefault();const group=button.closest('[data-nav-section]'),open=button.getAttribute('aria-expanded')!=='true';saved[group.dataset.navSection]=open;toggle(group,open);try{localStorage.setItem('foamlab-nav-groups',JSON.stringify(saved));}catch{}});
  function activate(item){
   if(window.FoamDirectory?.available){if(item)window.FoamDirectory.breadcrumb(item);return;}
@@ -24,8 +26,7 @@
   if(!winner&&item){
    let key='',filter='';
    if(item.kind==='lesson'){
-    if(['OpenFOAM 编程','C++ 入门','Linux 入门'].includes(item.track)){key='programming';filter=item.track==='C++ 入门'?'/cpp/':item.track==='Linux 入门'?'/linux/':'/programming/?q=';}
-    else if(item.track==='数值方法与理论'){key='topics';filter='/topics/finite-volume/';}
+    if(item.track==='Python 实践'){key='programming';filter='/programming/?q=';}
     else{key='courses';filter='track='+encodeURIComponent(item.track);}
    }else if(item.kind==='tool'){key='tools';}
    else if(['resource','recommendation'].includes(item.kind)){key='resources';filter='kind='+item.kind;}
@@ -53,7 +54,7 @@
   const connection=navigator.connection;
   if(!link||link.hasAttribute('download')||link.target&&link.target!=='_self'||document.visibilityState==='hidden'||connection?.saveData||/^(slow-)?2g$/.test(connection?.effectiveType||''))return;
   let url;try{url=new URL(link.href);}catch{return;}
-  if(url.origin!==location.origin||!/^\/(?:$|(?:start|courses|topics|theory|fvm|read|reference|commands|dictionaries|function-objects|boundary-conditions|programming|cpp|linux|tools|resources|sharing|announcements)\/)/.test(url.pathname))return;
+  if(url.origin!==location.origin||!/^\/(?:$|(?:start|courses|topics|interview|read|commands|dictionaries|programming|tools|resources|sharing|announcements)\/)/.test(url.pathname))return;
   if([...url.searchParams.keys()].some(key=>/token|code|state|auth|logout/i.test(key)))return;
   url.hash='';const key=url.pathname+url.search;
   if(key===location.pathname+location.search||prefetched.has(key)||prefetched.size>=3)return;
