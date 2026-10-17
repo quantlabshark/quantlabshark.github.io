@@ -1,5 +1,5 @@
 .curriculum-hero{display:grid;grid-template-columns:minmax(0,1fr) 180px;gap:36px;align-items:center;padding-bottom:28px;border-bottom:1px solid var(--line)}
-.curriculum-hero h1{font-size:clamp(30px,3.2vw,42px)}
+.curriculum-hero h1{font-size:36px}
 .curriculum-hero p{color:var(--muted);line-height:1.9;max-width:740px}
 .curriculum-hero aside{border-left:1px solid var(--line);padding-left:28px;display:flex;flex-direction:column}
 .curriculum-hero aside strong{font:72px Georgia,serif;color:var(--accent)}
@@ -43,3 +43,5 @@
 @media(max-width:1250px){.curriculum-card-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.curriculum-sources{gap:12px}.curriculum-sources article{padding:17px}.curriculum-guide-links>span{margin-left:0}}
 @media(max-width:760px){.curriculum-hero{grid-template-columns:1fr;gap:14px}.curriculum-hero aside{border:0;padding:0;flex-direction:row;gap:12px;align-items:baseline}.curriculum-hero aside strong{font-size:36px}.curriculum-hero aside p{display:none}.curriculum-sources{grid-template-columns:1fr;gap:10px;padding:22px 0}.curriculum-sources h2{font-size:15px}.curriculum-toolbar{gap:10px}.curriculum-toolbar>span{font-size:12px}.curriculum-toc{padding:20px 16px;margin-bottom:30px}.curriculum-toc nav{gap:8px}.curriculum-toc nav a{font-size:11px;padding:7px 9px}.curriculum-stage>header{gap:12px}.curriculum-stage>header h2{font-size:22px}.curriculum-number{font-size:36px;min-width:40px}.curriculum-card-grid{grid-template-columns:1fr;gap:17px}.curriculum-card-top{padding:15px 20px}.curriculum-card-body{padding:20px}.curriculum-card h3{font-size:18px}.curriculum-card-footer{margin:0 20px}.curriculum-card:hover{transform:none}}
 @media(prefers-reduced-motion:reduce){.curriculum-card{transition:none}}
+
+@media(max-width:760px){.curriculum-hero h1{font-size:29px}}

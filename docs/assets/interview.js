@@ -28,14 +28,21 @@
    filter(false);openHash();host.dataset.live='true';
   }catch{document.getElementById('interview-sync').textContent='当前显示发布时的目录；实时更新暂时无法读取。';}})();
  }
- let lastSlug='';
+ function revealAnswerHash(){let target;try{target=document.getElementById(decodeURIComponent(location.hash.slice(1)));}catch{}if(!target)return;const details=target.closest('.interview-answer');if(details){details.open=true;requestAnimationFrame(()=>target.scrollIntoView({block:'start'}));}}
+ window.addEventListener('hashchange',revealAnswerHash);
  async function reader(item){
   const meta=item?.metadata?.interview,article=document.getElementById('live-article'),prose=article?.querySelector('.prose');
-  if(!meta||!prose||lastSlug===item.slug)return;lastSlug=item.slug;
+  if(!meta||!prose||prose.dataset.interviewReady)return;prose.dataset.interviewReady='true';
   const bookURL='/interview/'+meta.book+'/',label=meta.book==='zhou'?'经典书籍题解':'笔面试实战';
   document.querySelector('.lab-reader')?.classList.add('has-chapters');
   const heading=[...prose.querySelectorAll('h2')].find(h=>h.textContent==='参考解答'),source=[...prose.querySelectorAll('h2')].find(h=>h.textContent==='来源与说明');
   if(heading&&!meta.full_source){const details=document.createElement('details');details.className='interview-answer';const summary=document.createElement('summary');summary.textContent='查看解答与追问';details.append(summary);heading.before(details);let current=heading;while(current&&current!==source){const next=current.nextSibling;details.append(current);current=next;}const revealHash=()=>{let target;try{target=document.getElementById(decodeURIComponent(location.hash.slice(1)));}catch{}if(target&&details.contains(target)){details.open=true;requestAnimationFrame(()=>target.scrollIntoView({block:'start'}));}};revealHash();window.addEventListener('hashchange',revealHash);}
+  const answers=[...prose.querySelectorAll('details.interview-answer')];
+  if(answers.length){
+   const toolbar=document.createElement('div');toolbar.className='interview-answer-tools';toolbar.innerHTML='<p>本页 '+answers.length+' 组解答 · 点击题目下方“查看解答”展开</p><button type="button" class="button secondary" aria-expanded="false">展开本页解答</button>';prose.before(toolbar);
+   const button=toolbar.querySelector('button'),update=()=>{const all=answers.every(d=>d.open);button.textContent=all?'收起本页解答':'展开本页解答';button.setAttribute('aria-expanded',String(all));};
+   button.addEventListener('click',()=>{const open=button.getAttribute('aria-expanded')!=='true';answers.forEach(d=>d.open=open);update();});prose.addEventListener('toggle',update,true);revealAnswerHash();update();
+  }
   const nav=document.createElement('nav');nav.className='lesson-navigation interview-reader-nav';nav.setAttribute('aria-label','阅读单元翻页');nav.innerHTML=`<a href="${bookURL}#chapter-${esc(meta.chapter)}">← 返回本章目录</a>`;article.querySelector('.lesson-actions')?.before(nav);
   try{
    const D=await window.FoamDirectory.ready;if(!D.available)return;const node=D.nodes.find(n=>n.key==='interview-'+meta.book);if(!node)return;

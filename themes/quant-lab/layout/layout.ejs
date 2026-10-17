@@ -28,6 +28,7 @@
   <script src="/assets/runtime-ui.js" defer></script>
   <% if(['interview','interview-book','read'].includes(page.layout)){ %><script src="/assets/interview-view.js" defer></script><script src="/assets/interview.js" defer></script><link rel="stylesheet" href="/assets/interview.css"><% } %>
   <% if(page.layout==='curriculum'){ %><script src="/assets/curriculum-view.js" defer></script><script src="/assets/curriculum.js" defer></script><link rel="stylesheet" href="/assets/curriculum.css"><% } %>
+  <% if(['theory','theory-book'].includes(page.layout)){ %><script src="/assets/theory-view.js" defer></script><script src="/assets/theory.js" defer></script><link rel="stylesheet" href="/assets/theory.css"><% } %>
   <script src="/assets/runtime-panda-art.js" defer fetchpriority="low"></script>
   <script src="/assets/runtime-panda-pet.js" defer fetchpriority="low"></script>
   <link rel="stylesheet" href="/assets/site-extras.css">

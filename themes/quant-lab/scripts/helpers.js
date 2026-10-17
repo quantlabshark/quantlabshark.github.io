@@ -5,6 +5,7 @@ hexo.extend.helper.register('learning', () => hexo.locals.get('data').learning);
 hexo.extend.helper.register('breadcrumb_parent', page => {
   const home={url:'/',label:'学习概览'},path=String(page.path||'');
   if(page.layout==='interview-book')return {url:'/interview/',label:'量化笔试与面试'};
+  if(page.layout==='theory-book')return {url:'/theory/',label:'基础理论与原理'};
   if(['commands/index.html','dictionaries/index.html'].includes(path))return {url:'/quick-reference/',label:'速查手册'};
   if(/^[^/]+\/index\.html$/.test(path))return home;
   if(page.section==='admin'||path.startsWith('admin/'))return {url:'/admin/',label:'管理平台'};

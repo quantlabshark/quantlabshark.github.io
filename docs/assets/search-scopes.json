@@ -27,6 +27,24 @@
     "sort_order": 20
   },
   {
+    "id": "6c937a0e-545c-56f5-a699-90c4325073d4",
+    "key": "theory",
+    "name": "基础理论与原理",
+    "parent_id": null,
+    "href": "/theory/",
+    "visible": true,
+    "sort_order": 25
+  },
+  {
+    "id": "0d99264a-7913-52fc-8f8e-a4c784c92834",
+    "key": "factor-investing",
+    "name": "因子投资：方法与实践",
+    "parent_id": "6c937a0e-545c-56f5-a699-90c4325073d4",
+    "href": "/theory/factor-investing/",
+    "visible": true,
+    "sort_order": 26
+  },
+  {
     "id": "a99b73bc-8dcb-4d7d-84f2-a0f30d259ede",
     "key": "topics",
     "name": "专题学习",

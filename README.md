@@ -16,7 +16,11 @@
 
 `/interview/` 包含经典书籍题解与笔面试资料两册，共 100 个阅读单元。Zhou 教材全部 7 章整理为 33 节；QuantMaterial 整理为 67 节。`/interview/sources/` 逐项列出 93 个原文件及压缩包内 4 个独有文件，记录重复合并、配套附件和原始条件缺项。数据包包含计算结果和复现脚本，交易表已去除姓名列。笔面试内容不计入系统课程进度。
 
-导航的初始页面和动态目录共用 `navigation-tree.js`，避免跳转时入口缺失。`npm run sync:catalog` 从量化站读取最新公开目录信息，更新 `tools/content/navigation.json`、`course-catalog.json`、`interview-catalog.json` 与搜索范围；后台调整目录或题目后，先同步，再构建发布。同步脚本不读取正文或私有数据。在线目录读取失败时，页面仍保留发布时的导航和索引。
+笔面试正文中的 636 组解答使用原生 `details` 默认折叠，保留题干可见；每页可统一展开和收起。目录跳转和私人笔记定位会展开对应解答。
+
+`/theory/` 是“基础理论与原理”的书籍入口，沿用 OpenFOAM 站的书籍卡片、章节目录与阅读导航。首册《因子投资：方法与实践》覆盖 7 章、43 个二级小节，另设阅读导引、后记、附录 A 与参考文献索引，共 47 个阅读单元。正文补充收益率、统计、回归和矩阵基础，说明原书历史实证与教学模拟的区别。`factor-book-coverage.json` 记录原书页码对应关系，配套示例在 `factor-investing-examples.zip`。
+
+导航的初始页面和动态目录共用 `navigation-tree.js`，避免跳转时入口缺失。`npm run sync:catalog` 从量化站读取最新公开目录信息，更新 `tools/content/navigation.json`、`course-catalog.json`、`interview-catalog.json`、`theory-catalog.json` 与搜索范围；后台调整目录或题目后，先同步，再构建发布。同步脚本不读取正文或私有数据。在线目录读取失败时，页面仍保留发布时的导航和索引。
 
 吉祥物小鲨是内联矢量图，形象与装扮在 `panda-art.js`、`panda-character.css` 中（文件名沿用旧站，便于兼容数据库里的装扮记录）。小镇前端代码和管理入口已移除；数据库中的小镇表与迁移暂时保留，未删除数据。
 

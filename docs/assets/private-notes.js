@@ -100,7 +100,7 @@
   $('[data-note-copy]',host).onclick=()=>{clearTimeout(timer);note={...payload(note),id:crypto.randomUUID(),title:(note.title.slice(0,150)+'（副本）'),revision:0};base=null;conflict=false;serial++;form();changed();void save();};
   $('[data-note-reload]',host).onclick=async()=>{if(!confirm('载入云端版本会替换窗口内的草稿。是否继续？'))return;try{const r=check(await client().from(TABLE).select('*').eq('id',note.id).single());adopt(r);}catch(e){status(e.message,true);}};
   host.querySelectorAll('[data-note-mode]').forEach(b=>b.onclick=()=>mode(b.dataset.noteMode));
-  $('[data-note-formula]',host).onclick=()=>{mode('edit');const t=$('[data-note-body]',host);t.setRangeText('\n\\[\nq = -k \\nabla T\n\\]\n',t.selectionStart,t.selectionEnd,'select');note.body=t.value;changed();t.focus();};
+  $('[data-note-formula]',host).onclick=()=>{mode('edit');const t=$('[data-note-body]',host);t.setRangeText('\n\\[\nr_t = \\alpha + \\beta f_t + \\varepsilon_t\n\\]\n',t.selectionStart,t.selectionEnd,'select');note.body=t.value;changed();t.focus();};
   place();
  }
  function noteLink(n){const u=new URL(safePage(n.page_url)||'/',location.origin);u.searchParams.set('note',n.id);return u.pathname+u.search;}
@@ -288,6 +288,7 @@
    const images=[...document.querySelectorAll('main img')];await Promise.race([Promise.all(images.filter(im=>im.loading!=='lazy').map(im=>im.decode().catch(()=>{}))),new Promise(r=>setTimeout(r,700))]);
    await new Promise(requestAnimationFrame);
    const h=n.anchor_id?document.getElementById(n.anchor_id):null;
+   for(let d=h?.closest('details');d;d=d.parentElement?.closest('details'))d.open=true;
    const y=h?scrollY+h.getBoundingClientRect().top+n.anchor_offset-70:n.scroll_ratio*Math.max(0,document.documentElement.scrollHeight-innerHeight);
    scrollTo({top:Math.max(0,y),behavior:'instant'});
   }catch{window.foamNotify?.('暂时无法恢复笔记位置，可稍后重试。');}
