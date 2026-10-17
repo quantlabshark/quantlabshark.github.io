@@ -1,0 +1,34 @@
+name: 作业提交
+description: 提交量化学习实践任务
+title: "[作业提交] 实践编号 · 标题"
+body:
+  - type: markdown
+    attributes:
+      value: "提交内容公开可见。请勿填写 API 令牌、密码或私人信息。"
+  - type: input
+    id: assignment
+    attributes:
+      label: 实践任务编号
+      placeholder: "例如：实践 1 · 数据审计"
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: 数据、假设与方法
+    validations:
+      required: true
+  - type: textarea
+    id: results
+    attributes:
+      label: 结果、核对过程与局限
+    validations:
+      required: true
+  - type: input
+    id: code
+    attributes:
+      label: 代码或研究报告链接
+  - type: textarea
+    id: question
+    attributes:
+      label: 希望获得的反馈

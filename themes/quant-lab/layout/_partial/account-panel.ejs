@@ -1,0 +1,11 @@
+<section id="account-panel" class="account-panel" role="dialog" aria-label="我的账号" hidden>
+ <div class="account-panel-heading"><strong>我的账号</strong><button type="button" class="icon-button" id="account-panel-close" aria-label="关闭账号面板">×</button></div>
+ <div class="account-panel-identity"><span id="account-panel-avatar" class="account-panel-avatar" aria-hidden="true">F</span><div><strong id="account-panel-name">个人中心</strong><p id="account-panel-status" role="status">正在恢复登录…</p></div><span class="account-panel-badge" id="account-panel-badge" hidden>已登录</span></div>
+ <div id="account-panel-member" hidden>
+  <a class="account-panel-growth" href="/account/#my-panda"><div><span>我的鲨鱼</span><strong id="account-panel-level">等级读取中…</strong></div><div class="account-panel-xp"><span id="account-panel-xp-bar"></span></div><p id="account-panel-xp">正在读取成长记录</p></a>
+  <nav class="account-panel-links" aria-label="账号常用入口"><a href="/account/#notifications">消息提醒 <span class="reply-count" data-reply-count hidden></span></a><a href="/account/#notes">我的笔记 <span>→</span></a><a href="/account/#profile-form">个人资料 <span>→</span></a><a href="/account/#my-panda">我的鲨鱼 <span>→</span></a><a href="/account/#account-progress-state">学习进度 <span>→</span></a><a href="/studio/">作者工作台 <span>→</span></a><a href="/admin/" data-management-link hidden>管理平台 <span>→</span></a></nav>
+  <div class="account-panel-footer"><a href="/account/">打开个人中心 →</a><button type="button" class="account-sign-out" data-account-sign-out>退出登录</button></div>
+ </div>
+ <div id="account-panel-guest" hidden><p>登录后保存学习进度，查看鲨鱼等级并参与讨论。</p><button type="button" class="button" id="account-panel-sign-in"><%- icon('github') %> 使用 GitHub 登录</button></div>
+ <p id="account-panel-message" role="status" hidden></p>
+</section>

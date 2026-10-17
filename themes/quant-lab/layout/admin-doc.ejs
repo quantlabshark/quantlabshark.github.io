@@ -1,0 +1,10 @@
+<div class="article-shell admin-document" data-admin-document="<%= page.admin_doc_slug %>">
+  <article class="article">
+    <div class="eyebrow">网站管理 / 内部文档</div>
+    <h1><%= page.title %></h1>
+    <div id="admin-document-state" class="admin-gate" role="status">正在验证管理权限…</div>
+    <div id="admin-document-content" class="prose" hidden></div>
+  </article>
+  <aside class="article-toc" id="admin-document-navigation" hidden><div>管理文档</div><nav aria-label="管理文档"><a href="/admin/">返回管理平台</a><a href="/admin/maintenance/">维护手册</a><a href="/admin/design/">设计规范</a></nav><nav id="admin-document-toc" aria-label="本页目录"></nav></aside>
+</div>
+<script src="/assets/admin-doc.js" defer></script>

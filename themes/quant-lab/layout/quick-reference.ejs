@@ -1,0 +1,12 @@
+<% const modules=reference_modules(); const general=[['commands','terminal','命令速查','查终端命令的用途、选项和运行示例。'],['dictionaries','file','配置与字典速查','查配置文件的位置、结构和参数。'],['function-objects','search','函数对象速查','查后处理、采样统计与输出设置。'],['boundary-conditions','grid','边界条件速查','按字段与边界场景查参数、搭配和示例。'],...modules.filter(m=>m.group==='general').map(m=>[m.key,m.icon,m.name,m.description]),['reference','book','参考手册','按章节阅读概念说明与综合参考资料。']]; const specialized=modules.filter(m=>m.group==='specialized').map(m=>[m.key,m.icon,m.name,m.description]); %>
+<div class="page-wrap quick-reference-hub">
+ <div class="eyebrow">OPENFOAM v2512 · 速查手册</div>
+ <div class="page-heading"><h1>速查手册</h1><p>先查通用的命令、文件与求解设置，再按物理问题查专用模型。条目提供参数说明、配置示例和相关算例。</p></div>
+ <nav class="reference-hub-links" aria-label="速查分组"><a href="#general">通用模块</a><a href="#specialized">专用模块</a><a href="/quick-reference/official-modules/">官方模块对照 →</a></nav>
+ <% [['general','通用模块','命令、配置、边界条件与求解方法。',general],['specialized','专用模块','按物理过程和计算方法查模型配置。',specialized]].forEach(([id,title,description,items])=>{ %>
+ <section class="reference-group" id="<%= id %>" aria-labelledby="<%= id %>-title"><header><h2 id="<%= id %>-title"><%= title %></h2><p><%= description %></p></header>
+ <div class="lab-card-grid"><% items.forEach(([path,ico,name,desc])=>{ %>
+ <article class="lab-card reference-entry"><span class="reference-entry-icon" aria-hidden="true"><%- icon(ico) %></span><div class="reference-entry-body"><h3><a href="/<%= path %>/"><%= name %></a></h3><p><%= desc %></p><a class="text-link" href="/<%= path %>/">进入目录 <span aria-hidden="true">→</span></a></div></article>
+ <% }); %></div></section>
+ <% }); %>
+</div>

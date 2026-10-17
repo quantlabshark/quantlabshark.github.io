@@ -1,0 +1,9 @@
+node_modules/
+.quantlab-work/
+__pycache__/
+*.pyc
+db.json
+tools/content/seed-content.json
+.env
+.env.*
+supabase/.temp/

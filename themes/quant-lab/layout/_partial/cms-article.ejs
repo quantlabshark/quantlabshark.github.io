@@ -1,0 +1,9 @@
+<div class="article-shell">
+  <article class="article" data-cms-slug="<%= page.cms_slug || '' %>"<% if(page.cms_slug){ %> data-cms-state="loading"<% } %>>
+    <div class="eyebrow"><%= articleEyebrow %></div>
+    <h1><%= articleTitle %></h1>
+    <% if(page.cms_slug){ %><div class="article-cms-loading" role="status"><span>正在打开最新内容…</span><i></i><i></i><i></i></div><% } %>
+    <% if(page.cms_slug){ %><div class="prose"></div><noscript><p>请启用 JavaScript 并登录后阅读正文。</p><a class="button" href="/account/">前往登录</a></noscript><% } else { %><div class="prose"><%- page.content %></div><% } %>
+  </article>
+  <aside class="article-toc"><div>本页目录</div><nav id="toc" aria-label="本页目录"></nav></aside>
+</div>

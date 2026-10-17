@@ -1,0 +1,60 @@
+/* Self-contained QuantLab shark wardrobe and motion. */
+.shark-art{display:block;width:100%;height:100%;overflow:visible;pointer-events:none;--sk-ink:#294751;--sk-blue:#83acba;--sk-fin:#6492a4;--sk-white:#fffbee}
+.shark-art *{transform-box:view-box}
+.shark-art .sk-outline{stroke:var(--sk-ink);stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round}
+.shark-art .sk-body{fill:var(--sk-blue)}.shark-art .sk-fin{fill:var(--sk-fin)}
+.shark-art .sk-bodyshine{fill:#b7d0d7;opacity:.75}.shark-art .sk-finshine{fill:#8bb0bc}
+.shark-art :is(.sk-belly,.sk-snout){fill:var(--sk-white)}
+.shark-art .sk-eye,.shark-art .sk-dark{fill:var(--sk-ink)}
+.shark-art .sk-cheek{fill:#eaa99f;opacity:.65}
+.shark-art .sk-inkline{fill:none;stroke:var(--sk-ink);stroke-width:2.5;stroke-linecap:round}
+.shark-art .sk-gills{fill:none;stroke:#608b98;stroke-width:2;stroke-linecap:round}
+.shark-art .sk-tooth{fill:#fff;stroke:#45626a;stroke-width:.8;stroke-linejoin:round}
+.shark-art .sk-mouth-open{fill:#45616c;stroke:var(--sk-ink);stroke-width:1.5}
+.shark-art .sk-shadow{fill:#315b4b;opacity:.12}.shark-art .sk-gold{fill:#e9bc62}
+.shark-art .sk-teal{fill:#4e9984}.shark-art .sk-purple{fill:#9c95bc}
+.shark-art .sk-straw{fill:#e6cd93}.shark-art .sk-pack{fill:#bd9471}
+.shark-art .sk-coatfill{fill:#e8efea}.shark-art .sk-strap{fill:none;stroke:#9a7652;stroke-width:5;stroke-linecap:round}
+.shark-art .sk-goldline{fill:none;stroke:#b88e44;stroke-width:2;stroke-linecap:round}
+.shark-art .sk-glasses-lines{fill:#fff;fill-opacity:.12;stroke:#4b635a;stroke-width:2.2}
+.shark-art .sk-headphone-band{fill:none;stroke:#77708c;stroke-width:5}
+.shark-art .sk-helmet{fill:#d7eced;fill-opacity:.2;stroke:#9ebfc6;stroke-width:3}
+.shark-art .sk-bubbles{fill:none;stroke:#a2cbc7;stroke-width:1.8}
+.shark-art .sk-sleep{fill:#88adb9;font:700 16px system-ui,sans-serif}
+.shark-art :is(.sk-o,.sk-decor,.sk-eyes-happy,.sk-eyes-closed,.sk-mouth-open){display:none}
+[data-outfit=scarf] .sk-scarf,[data-outfit=redscarf] .sk-scarf,[data-outfit=backpack] .sk-backpack,[data-outfit=coat] .sk-coat,[data-outfit=raincoat] .sk-raincoat,[data-outfit=headphones] .sk-headphones,[data-outfit=flower] .sk-flower,[data-outfit=goggles] .sk-glasses,[data-outfit=glasses] .sk-glasses,[data-outfit=cap] .sk-cap,[data-outfit=strawhat] .sk-strawhat,[data-outfit=wizard] .sk-wizard,[data-outfit=spacesuit] .sk-suit,[data-outfit=book] .sk-book{display:inline}
+[data-outfit=redscarf] .sk-scarf .sk-teal{fill:#cd796a}
+[data-form=master] .sk-glasses,[data-form=engineer] .sk-hardhat,[data-form=explorer] .sk-backpack,[data-form=astronaut] .sk-suit{display:inline}
+:is([data-outfit=cap],[data-outfit=strawhat],[data-outfit=wizard]) .sk-hardhat,:is([data-outfit=spacesuit],[data-form=astronaut]) .sk-hat{display:none}
+[data-decoration]:not([data-decoration=no-decor]):not([data-decoration=none]) .sk-decor{display:inline}
+:is([data-action=read],[data-preview-action=read]) .sk-book{display:inline}
+:is([data-action=sleep],[data-action=meditate],[data-preview-action=sleep],[data-preview-action=meditate]) .sk-eyes-closed{display:inline}
+:is([data-action=sleep],[data-preview-action=sleep]) .sk-sleep{display:inline}
+:is([data-action=cheer],[data-action=dance],[data-action=jump],[data-preview-action=cheer],[data-preview-action=dance],[data-preview-action=jump]) .sk-eyes-happy{display:inline}
+:is([data-action=cheer],[data-action=jump],[data-preview-action=cheer],[data-preview-action=jump]) .sk-stars{display:inline}
+:is([data-action=sleep],[data-action=meditate],[data-action=cheer],[data-action=dance],[data-action=jump],[data-preview-action=sleep],[data-preview-action=meditate],[data-preview-action=cheer],[data-preview-action=dance],[data-preview-action=jump]) .sk-eyes-open{display:none}
+:is([data-action=sing],[data-preview-action=sing]) :is(.sk-mouth-open,.sk-music){display:inline}
+:is([data-action=sing],[data-preview-action=sing]) :is(.sk-smile,.sk-tooth){display:none}
+.sk-swimmer,.sk-stage{transform-origin:80px 110px}.sk-tail{transform-origin:118px 135px}.sk-fin-left{transform-origin:42px 111px}.sk-fin-right{transform-origin:117px 111px}
+.sk-pupils{transform:translate(var(--look-x,0px),var(--look-y,0px));transition:transform .15s}
+.sk-fin-right,.sk-fin-left,.sk-swimmer{transition:transform .3s ease}
+[data-facing=left] .sk-stage{transform:scaleX(-1)}
+:is([data-action=wave],[data-preview-action=wave]) .sk-fin-right{transform:rotate(-100deg)}
+:is([data-action=read],[data-preview-action=read]) .sk-fin-left{transform:rotate(-24deg)}
+:is([data-action=read],[data-preview-action=read]) .sk-fin-right{transform:rotate(24deg)}
+:is([data-action=stretch],[data-action=cheer],[data-preview-action=stretch],[data-preview-action=cheer]) .sk-fin-left{transform:rotate(65deg)}
+:is([data-action=stretch],[data-action=cheer],[data-preview-action=stretch],[data-preview-action=cheer]) .sk-fin-right{transform:rotate(-65deg)}
+:is([data-action=sleep],[data-preview-action=sleep]) .sk-swimmer{transform:rotate(9deg) translateY(3px)}
+[data-action]:not([data-quiet=true]) .sk-tail{animation:sk-tail 1.3s ease-in-out infinite}
+[data-action=wave]:not([data-quiet=true]) .sk-fin-right{animation:sk-wave .7s ease-in-out infinite}
+:is([data-action=dance],[data-action=sway],[data-action=sing],[data-action=crawl]):not([data-quiet=true]) .sk-swimmer{animation:sk-sway 1.1s ease-in-out infinite}
+:is([data-action=jump],[data-action=cheer]):not([data-quiet=true]) .sk-swimmer{animation:sk-hop .85s ease-in-out infinite}
+[data-action=spin]:not([data-quiet=true]) .sk-swimmer{animation:sk-spin 1.5s ease-in-out infinite}
+[data-action=roll]:not([data-quiet=true]) .sk-swimmer{animation:sk-roll 1.5s ease-in-out infinite}
+@keyframes sk-tail{50%{transform:rotate(8deg)}}@keyframes sk-wave{0%,100%{transform:rotate(-80deg)}50%{transform:rotate(-115deg)}}
+@keyframes sk-sway{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(5deg) translateY(-3px)}}
+@keyframes sk-hop{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}
+@keyframes sk-spin{50%{transform:scaleX(-1)}}@keyframes sk-roll{0%,100%{transform:rotate(-10deg)}50%{transform:rotate(18deg)}}
+html[data-theme=dark] .shark-art{--sk-blue:#80a7b8;--sk-fin:#5e879b;--sk-white:#efece1}
+@media(prefers-reduced-motion:reduce){.shark-art *{animation:none!important;transition:none!important}}
+[data-quiet=true] .shark-art *{animation:none!important}

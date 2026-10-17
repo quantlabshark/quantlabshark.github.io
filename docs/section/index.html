@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>内容目录 · QuantLab</title>
+  <meta name="description" content="浏览本目录下的内容。">
+  <meta name="theme-color" content="#f6f5f0" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#111816" media="(prefers-color-scheme: dark)">
+  
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="preconnect" href="https://skqoondpsqzvybnmcaas.supabase.co" crossorigin>
+  <link rel="preload" href="/assets/auth-config.json" as="fetch" crossorigin>
+  
+  <script>// Apply saved appearance before the first paint; controls load without blocking HTML.
+(() => {
+ const root=document.documentElement;
+ root.classList.add('has-js');
+ let theme='system',palette='green',width=null,collapsed=false;
+ try{theme=localStorage.getItem('foamlab.theme')||'system';palette=localStorage.getItem('foamlab.palette')||'green';width=Number(localStorage.getItem('foamlab.sidebarWidth'));collapsed=localStorage.getItem('foamlab.sidebarCollapsed')==='1';}catch{}
+ root.dataset.theme=['light','dark'].includes(theme)?theme:(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+ root.dataset.palette=['green','blue','pink','lavender','beige'].includes(palette)?palette:'green';
+ root.style.colorScheme=root.dataset.theme;
+ const backgrounds={green:{light:'#f6f5f0',dark:'#111816'},blue:{light:'#f3f5f8',dark:'#111821'},pink:{light:'#faf4f5',dark:'#20171c'},lavender:{light:'#f6f4fa',dark:'#1b1723'},beige:{light:'#faf6ed',dark:'#201c15'}};
+ document.querySelectorAll('meta[name="theme-color"]').forEach(meta=>meta.content=backgrounds[root.dataset.palette][root.dataset.theme]);
+ root.classList.toggle('sidebar-collapsed',collapsed);
+ if(innerWidth>=761&&Number.isFinite(width)&&width>=200)root.style.setProperty('--sidebar',Math.round(Math.max(200,Math.min(480,Math.floor(innerWidth*.38),width)))+'px');
+})();
+</script>
+  <link rel="stylesheet" href="/assets/site-core.css?v=399504a2bd18">
+  <link rel="preload" href="/assets/site-extras.css?v=61fdbecc4bb8" as="style">
+  <link rel="preload" href="/assets/card-backgrounds.css?v=a1a10725de1b" as="style">
+  
+  
+  <script src="/assets/runtime-account.js?v=5ca9f448ee73" defer></script>
+  <script src="/assets/appearance.js?v=67ddfcfe66ed" defer></script>
+  <script src="/assets/sidebar-resize.js?v=3ef87a0899a4" defer></script>
+  <script src="/assets/navigation.js?v=a67edbc2e644" defer></script>
+  
+  
+  <script src="/assets/search-matches.js?v=9af0fd791e9a" defer></script>
+  <script src="/assets/search-scope.js?v=dcee4cd29d53" defer></script>
+  <script src="/assets/site.js?v=02d2a49d6db6" defer></script>
+  
+  
+  
+  <script src="/assets/runtime-content.js?v=23c2a1562f8c" data-math-runtime="/assets/runtime-math.js?v=b1a923324b80" defer></script>
+  <script src="/assets/community-likes.js?v=641e185f1a84" defer></script>
+  <script src="/assets/runtime-ui.js?v=a2eecbe0fec4" defer></script>
+  
+  
+  <script src="/assets/runtime-panda-art.js?v=6bcde6e35a9c" defer fetchpriority="low"></script>
+  <script src="/assets/runtime-panda-pet.js?v=dc9dea4c7b8c" defer fetchpriority="low"></script>
+  <link rel="stylesheet" href="/assets/site-extras.css?v=61fdbecc4bb8">
+  <link rel="stylesheet" href="/assets/card-backgrounds.css?v=a1a10725de1b">
+<link rel="stylesheet" href="/assets/quant.css?v=fb2fd7cb1af2"><meta name="generator" content="Hexo 8.1.2"></head>
+<body data-section="section" data-lesson="">
+<a class="skip" href="#main">跳到主要内容</a>
+<aside class="sidebar" id="sidebar">
+  <button class="icon-button sidebar-close" type="button" data-close-nav aria-label="关闭导航">×</button>
+  <a class="brand" href="/"><span class="brand-mark"><img src="/assets/favicon.svg" alt="" width="44" height="44"></span><span>QuantLab<small>小鲨陪你学量化</small></span></a>
+  <div class="version"><span class="status-dot"></span> Python · 数据 · 研究</div>
+  <nav aria-label="主要导航">
+    <div class="nav-label">学习空间</div>
+    <div class="nav-group" data-nav-section="home"><div class="nav-parent"><a class="nav-item " href="/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10H3z"/><path d="M9 20v-7h6v7"/></svg><span>学习概览</span></a></div></div>
+<div class="nav-group" data-nav-section="start"><div class="nav-parent"><a class="nav-item " href="/start/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg><span>快速开始</span></a></div></div>
+<div class="nav-group" data-nav-section="courses"><div class="nav-parent"><a class="nav-item " href="/courses/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6c-3-3-7-3-10-2v15c3-1 7-1 10 2 3-3 7-3 10-2V4c-3-1-7-1-10 2Zm0 0v15"/></svg><span>系统学习</span></a></div></div>
+<div class="nav-group" data-nav-section="topics"><div class="nav-parent"><a class="nav-item " href="/topics/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span>专题学习</span></a></div></div>
+<div class="nav-group" data-nav-section="quick-reference"><div class="nav-parent"><a class="nav-item " href="/quick-reference/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="m16 16 5 5"/></svg><span>速查手册</span></a></div></div>
+<div class="nav-group" data-nav-section="labs"><div class="nav-parent"><a class="nav-item " href="/labs/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 3v17h17M8 15v-4m5 4V6m5 9V9"/></svg><span>交互实验</span></a></div></div>
+<div class="nav-group" data-nav-section="programming"><div class="nav-parent"><a class="nav-item " href="/programming/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 7 4 5-4 5m8 0h6"/><rect x="2" y="3" width="20" height="18" rx="3"/></svg><span>Python 实践</span></a></div></div>
+
+    <div class="nav-label">资源与社区</div>
+    <div class="nav-group" data-nav-section="resources"><div class="nav-parent"><a class="nav-item " href="/resources/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v14m-5-5 5 5 5-5M3 16v6h18v-6"/></svg><span>资料中心</span></a></div></div>
+<div class="nav-group" data-nav-section="sharing"><div class="nav-parent"><a class="nav-item " href="/sharing/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6c-3-3-7-3-10-2v15c3-1 7-1 10 2 3-3 7-3 10-2V4c-3-1-7-1-10 2Zm0 0v15"/></svg><span>实践与分享</span></a></div></div>
+<div class="nav-group" data-nav-section="community"><div class="nav-parent"><a class="nav-item " href="/community/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11a9 9 0 0 1-9 9H4l-3 2 2-7a9 9 0 1 1 18-4Z"/><path d="M7 9h9m-9 5h6"/></svg><span>讨论中心</span></a></div></div>
+<div class="nav-group" data-nav-section="assignments"><div class="nav-parent"><a class="nav-item " href="/assignments/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="15" height="18" rx="2"/><path d="M9 4V2h6v2m-7 8 2 2 5-5M9 18h7"/></svg><span>作业与实践</span></a></div></div>
+<div class="nav-group" data-nav-section="announcements"><div class="nav-parent"><a class="nav-item " href="/announcements/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 8-3 8-3 10h18c0-2-3-2-3-10M9 21h6"/></svg><span>网站公告</span></a></div></div>
+
+  </nav>
+  <div class="sidebar-bottom"><div class="tiny-label">QUANTITATIVE LEARNING</div><p>从数据到可验证的研究</p><a href="/read/?slug=sources-and-validation">资料与研究约定 →</a></div>
+</aside>
+<div class="app-shell">
+  <header class="topbar"><button class="icon-button mobile-menu" aria-label="打开导航" aria-expanded="false" aria-controls="sidebar"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button><div class="breadcrumb"><a id="breadcrumb-parent" href="/">学习概览</a> <span>/</span> <strong>内容目录</strong></div><button class="search-trigger" data-open-search><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="m16 16 5 5"/></svg><span>搜索课程、方法、代码…</span><kbd>Ctrl K</kbd></button><div class="account-actions" aria-label="账号"><span class="account-entry"><button class="account-nav" type="button" id="account-nav-label" aria-busy="true" aria-expanded="false" aria-controls="account-panel" aria-haspopup="dialog" aria-describedby="account-reply-count">个人中心</button><span id="account-reply-count" class="reply-count" data-reply-count hidden></span></span><button class="account-sign-out" id="nav-sign-out" type="button" hidden>退出登录</button></div><a class="github-link" href="https://github.com/quantlabshark/quantlabshark.github.io" target="_blank" rel="noopener noreferrer" aria-label="GitHub 仓库"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 20c-5 1-5-3-7-3m14 5v-4c0-1-.3-2-1-2 4-.5 7-2 7-6 0-2-1-3-2-4 0-1 0-3-1-4-2 0-4 1-4 1-2-.5-4-.5-6 0 0 0-2-1-4-1-1 1-1 3-1 4-1 1-2 2-2 4 0 4 3 5.5 7 6-.7.5-1 1-1 2v4"/></svg></a></header>
+  <section id="account-panel" class="account-panel" role="dialog" aria-label="我的账号" hidden>
+ <div class="account-panel-heading"><strong>我的账号</strong><button type="button" class="icon-button" id="account-panel-close" aria-label="关闭账号面板">×</button></div>
+ <div class="account-panel-identity"><span id="account-panel-avatar" class="account-panel-avatar" aria-hidden="true">F</span><div><strong id="account-panel-name">个人中心</strong><p id="account-panel-status" role="status">正在恢复登录…</p></div><span class="account-panel-badge" id="account-panel-badge" hidden>已登录</span></div>
+ <div id="account-panel-member" hidden>
+  <a class="account-panel-growth" href="/account/#my-panda"><div><span>我的鲨鱼</span><strong id="account-panel-level">等级读取中…</strong></div><div class="account-panel-xp"><span id="account-panel-xp-bar"></span></div><p id="account-panel-xp">正在读取成长记录</p></a>
+  <nav class="account-panel-links" aria-label="账号常用入口"><a href="/account/#notifications">消息提醒 <span class="reply-count" data-reply-count hidden></span></a><a href="/account/#notes">我的笔记 <span>→</span></a><a href="/account/#profile-form">个人资料 <span>→</span></a><a href="/account/#my-panda">我的鲨鱼 <span>→</span></a><a href="/account/#account-progress-state">学习进度 <span>→</span></a><a href="/studio/">作者工作台 <span>→</span></a><a href="/admin/" data-management-link hidden>管理平台 <span>→</span></a></nav>
+  <div class="account-panel-footer"><a href="/account/">打开个人中心 →</a><button type="button" class="account-sign-out" data-account-sign-out>退出登录</button></div>
+ </div>
+ <div id="account-panel-guest" hidden><p>登录后保存学习进度，查看鲨鱼等级并参与讨论。</p><button type="button" class="button" id="account-panel-sign-in"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 20c-5 1-5-3-7-3m14 5v-4c0-1-.3-2-1-2 4-.5 7-2 7-6 0-2-1-3-2-4 0-1 0-3-1-4-2 0-4 1-4 1-2-.5-4-.5-6 0 0 0-2-1-4-1-1 1-1 3-1 4-1 1-2 2-2 4 0 4 3 5.5 7 6-.7.5-1 1-1 2v4"/></svg> 使用 GitHub 登录</button></div>
+ <p id="account-panel-message" role="status" hidden></p>
+</section>
+
+  <main id="main"><div class="page-return"><a class="button secondary" id="page-back-link" href="/">← 返回学习概览</a></div><div class="page-wrap lab-catalog-page" data-page-state="loading"><div class="page-content-loading" role="status"><span>正在读取内容目录…</span><i></i><i></i><i></i></div><div class="eyebrow">QUANTLAB / KNOWLEDGE LIBRARY</div><div class="catalog-header"><div class="page-heading"><h1>内容目录</h1><p>浏览本目录下的内容。</p></div></div><label class="search-field catalog-search"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="m16 16 5 5"/></svg><input id="catalog-query" type="search" placeholder="搜索主题、标题或系列名称" aria-label="搜索内容"></label><div id="catalog-filters" class="filter-tabs" aria-label="主题筛选"></div><p id="catalog-count" class="result-count" role="status"></p><div class="lab-card-grid" data-lab-catalog="section"><div class="lab-loading"><span></span>正在读取内容目录…</div></div><noscript><p>课程目录需要 JavaScript 才能加载；请启用 JavaScript 后继续。</p></noscript></div>
+</main>
+  <footer class="footer"><span>QuantLab · 量化学习站</span><span><a href="/read/?slug=sources-and-validation">资料来源</a> <a href="/support/">参与建设</a> <span class="footer-contact"><a href="/community/">交流与反馈</a></span> <a href="/admin/" data-management-link hidden>管理入口</a></span><div class="site-stats" data-site-stats data-state="loading" aria-label="网站访问统计"><span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 3v17h17M8 15v-4m5 4V6m5 9V9"/></svg>累计访问 <strong data-site-visits>—</strong> 次</span><span title="按北京时间统计，每日零点开始新一天">今日访问 <strong data-site-today-visits>—</strong> 次</span><span><i class="online-dot" aria-hidden="true"></i>当前在线 <strong data-site-online>—</strong> 人</span></div></footer>
+</div>
+<dialog id="search-dialog" aria-labelledby="search-title"><div class="dialog-head"><h2 id="search-title">搜索学习资料</h2><button class="icon-button" data-close-dialog aria-label="关闭搜索">×</button></div><div class="search-scopes"><label>查找范围<select id="search-scope"><option value="">全站</option></select></label><label hidden>子模块<select id="search-subscope"><option value="">全部子模块</option></select></label></div><label class="search-field"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="m16 16 5 5"/></svg><input id="global-search" type="search" maxlength="120" placeholder="例如：收益率、pandas、样本外验证" autocomplete="off" aria-label="搜索关键词"></label><div id="search-results" aria-live="polite"><p class="muted">输入关键词查找文章；登录后可搜索正文和代码。</p></div><div class="dialog-foot">支持中文与命令名称 <kbd>Esc</kbd> 关闭</div></dialog>
+<div class="toast" role="status" hidden></div>
+</body></html>

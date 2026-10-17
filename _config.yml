@@ -1,0 +1,31 @@
+title: QuantLab 量化学习站
+subtitle: 从数据到可验证的研究
+description: 中文量化学习站：Python、数据、因子、回测与风险管理，配套实验、学习记录和讨论。
+author: QuantLab
+language: zh-CN
+timezone: Asia/Shanghai
+url: https://quantlabshark.github.io
+root: /
+permalink: :title/
+source_dir: source-quant
+public_dir: docs
+theme: quant-lab
+default_layout: page
+post_asset_folder: false
+relative_link: false
+syntax_highlighter: ''
+highlight:
+  enable: false
+prismjs:
+  enable: false
+marked:
+  headerIds: true
+  mangle: false
+external_link:
+  enable: false
+skip_render:
+  - 'assets/**'
+  - 'downloads/**'
+include:
+  - '.nojekyll'
+per_page: 0

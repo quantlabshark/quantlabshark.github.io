@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title><%= page.title || '量化学习站' %> · QuantLab</title>
+  <meta name="description" content="<%= page.description || '中文量化学习站：Python、统计、因子、回测与风险管理。' %>">
+  <meta name="theme-color" content="#f6f5f0" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#111816" media="(prefers-color-scheme: dark)">
+  <% if(page.noindex || page.admin_only || page.section==='admin'){ %><meta name="robots" content="noindex, nofollow"><% } %>
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <% const contentOrigin=foam_content_origin(); if(contentOrigin){ %><link rel="preconnect" href="<%= contentOrigin %>" crossorigin><% } %>
+  <link rel="preload" href="/assets/auth-config.json" as="fetch" crossorigin>
+  <% if(page.layout==='read'||page.cms_slug){ %><link rel="preload" href="<%= foam_bundle_url('runtime-math.js') %>" as="script"><% } %>
+  <script><%- foam_appearance_initial() %></script>
+  <link rel="stylesheet" href="/assets/site-core.css">
+  <link rel="preload" href="/assets/site-extras.css" as="style">
+  <% if(page.section!=='town'){ %><link rel="preload" href="/assets/card-backgrounds.css" as="style"><% } %>
+  <% if(['fvm-book','turbulence-book','heat-transfer-book','kolev-book'].includes(page.layout)){ %><link rel="stylesheet" href="/assets/fvm-labs.css"><% } %>
+  <% if(page.reference_module||['function-objects','boundary-conditions'].includes(page.section)){ %><link rel="stylesheet" href="/assets/function-objects.css"><% } %>
+  <script src="/assets/runtime-account.js" defer></script>
+  <script src="/assets/appearance.js" defer></script>
+  <script src="/assets/sidebar-resize.js" defer></script>
+  <script src="/assets/navigation.js" defer></script>
+  <% const catalogHint=foam_catalog_hint(page); if(catalogHint){ %><script type="application/json" id="catalog-hint"><%- catalogHint %></script><% } %>
+  <% if(['model-reference','quick-reference','commands','dictionaries','function-objects','boundary-conditions'].includes(page.layout)){ %><link rel="stylesheet" href="/assets/reference-catalog.css"><% } %>
+  <script src="/assets/search-matches.js" defer></script>
+  <script src="/assets/search-scope.js" defer></script>
+  <script src="/assets/site.js" defer></script>
+  <% if(page.layout==='model-reference'){ %><script src="/assets/model-reference.js" defer></script><% } %>
+  <% if(page.section==='function-objects'){ %><script src="/assets/function-objects.js" defer></script><% } %>
+  <% if(page.section==='boundary-conditions'){ %><script src="/assets/boundary-conditions.js" defer></script><% } %>
+  <script src="/assets/runtime-content.js" data-math-runtime="<%= foam_bundle_url('runtime-math.js') %>" defer></script>
+  <% if(page.section!=='town'){ %><script src="/assets/community-likes.js" defer></script><% } %>
+  <script src="/assets/runtime-ui.js" defer></script>
+  <% if(page.layout==='fvm-book'){ %><script src="/assets/fvm-catalog.js" defer></script><% } %>
+  <% if(['theory','turbulence-book','heat-transfer-book','kolev-book'].includes(page.layout)){ %><script src="/assets/theory-catalog.js" defer></script><% } %>
+  <script src="/assets/runtime-panda-art.js" defer fetchpriority="low"></script>
+  <script src="/assets/runtime-panda-pet.js" defer fetchpriority="low"></script>
+  <link rel="stylesheet" href="/assets/site-extras.css">
+  <% if(page.section!=='town'){ %><link rel="stylesheet" href="/assets/card-backgrounds.css"><% } %>
+<link rel="stylesheet" href="/assets/quant.css"></head>
+<body data-section="<%= page.section || page.layout || '' %>" data-lesson="<%= page.lesson_id || '' %>">
+<a class="skip" href="#main">跳到主要内容</a>
+<aside class="sidebar" id="sidebar">
+  <button class="icon-button sidebar-close" type="button" data-close-nav aria-label="关闭导航">×</button>
+  <a class="brand" href="/"><span class="brand-mark"><img src="/assets/favicon.svg" alt="" width="44" height="44"></span><span>QuantLab<small>小鲨陪你学量化</small></span></a>
+  <div class="version"><span class="status-dot"></span> Python · 数据 · 研究</div>
+  <nav aria-label="主要导航">
+    <div class="nav-label">学习空间</div>
+    <%- partial('_partial/learning-nav') %>
+    <div class="nav-label">资源与社区</div>
+    <%- partial('_partial/community-nav') %>
+  </nav>
+  <div class="sidebar-bottom"><div class="tiny-label">QUANTITATIVE LEARNING</div><p>从数据到可验证的研究</p><a href="/read/?slug=sources-and-validation">资料与研究约定 →</a></div>
+</aside>
+<div class="app-shell">
+  <header class="topbar"><button class="icon-button mobile-menu" aria-label="打开导航" aria-expanded="false" aria-controls="sidebar"><%- icon('menu') %></button><% const parentPage=breadcrumb_parent(page); %><div class="breadcrumb"><a id="breadcrumb-parent" href="<%= parentPage.url %>"><%= parentPage.label %></a><% if(page.path!=='index.html'){ %> <span>/</span> <strong><%= page.title || '学习概览' %></strong><% } %></div><button class="search-trigger" data-open-search><%- icon('search') %><span>搜索课程、方法、代码…</span><kbd>Ctrl K</kbd></button><div class="account-actions" aria-label="账号"><span class="account-entry"><button class="account-nav" type="button" id="account-nav-label" aria-busy="true" aria-expanded="false" aria-controls="account-panel" aria-haspopup="dialog" aria-describedby="account-reply-count">个人中心</button><span id="account-reply-count" class="reply-count" data-reply-count hidden></span></span><button class="account-sign-out" id="nav-sign-out" type="button" hidden>退出登录</button></div><a class="github-link" href="https://github.com/quantlabshark/quantlabshark.github.io" target="_blank" rel="noopener noreferrer" aria-label="GitHub 仓库"><%- icon('github') %></a></header>
+  <%- partial('_partial/account-panel') %>
+  <main id="main"><% if(page.path!=='index.html'){ %><div class="page-return"><a class="button secondary" id="page-back-link" href="<%= parentPage.url %>">← 返回<%= parentPage.label %></a></div><% } %><%- body %></main>
+  <footer class="footer"><span>QuantLab · 量化学习站</span><span><a href="/read/?slug=sources-and-validation">资料来源</a> <a href="/support/">参与建设</a> <%- partial('_partial/footer-contact') %> <a href="/admin/" data-management-link hidden>管理入口</a></span><div class="site-stats" data-site-stats data-state="loading" aria-label="网站访问统计"><span><%- icon('chart') %>累计访问 <strong data-site-visits>—</strong> 次</span><span title="按北京时间统计，每日零点开始新一天">今日访问 <strong data-site-today-visits>—</strong> 次</span><span><i class="online-dot" aria-hidden="true"></i>当前在线 <strong data-site-online>—</strong> 人</span></div></footer>
+</div>
+<dialog id="search-dialog" aria-labelledby="search-title"><div class="dialog-head"><h2 id="search-title">搜索学习资料</h2><button class="icon-button" data-close-dialog aria-label="关闭搜索">×</button></div><div class="search-scopes"><label>查找范围<select id="search-scope"><option value="">全站</option></select></label><label hidden>子模块<select id="search-subscope"><option value="">全部子模块</option></select></label></div><label class="search-field"><%- icon('search') %><input id="global-search" type="search" maxlength="120" placeholder="例如：收益率、pandas、样本外验证" autocomplete="off" aria-label="搜索关键词"></label><div id="search-results" aria-live="polite"><p class="muted">输入关键词查找文章；登录后可搜索正文和代码。</p></div><div class="dialog-foot">支持中文与命令名称 <kbd>Esc</kbd> 关闭</div></dialog>
+<div class="toast" role="status" hidden></div>
+</body></html>

@@ -1,0 +1,283 @@
+'use strict';
+(() => {
+ const $=(s,r=document)=>r.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const lab=window.QuantLab={esc,$,client:null,user:null,role:null};
+ // A warm auth session may resolve before the next deferred script executes.
+ // Wait for directory registration; keep the fallback if its script fails.
+ lab.directoryReady=new Promise(resolve=>{
+  document.addEventListener('foamlab:directory-init',()=>resolve(window.FoamDirectory.ready),{once:true});
+  document.addEventListener('DOMContentLoaded',()=>resolve(window.FoamDirectory?.ready),{once:true});
+ });
+ const safeURL=s=>{if(typeof s!=='string'||!s.trim())return '';try{const u=new URL(s.trim(),location.origin);return ['http:','https:'].includes(u.protocol)?u.href:'';}catch{return '';}};lab.safeURL=safeURL;
+ lab.date=s=>new Date(s).toLocaleDateString('zh-CN');
+ const rememberedParent=url=>{try{const remembered=sessionStorage.getItem('foamlab.returnTo:'+url);if(!remembered)return url;const saved=new URL(remembered,location.origin);return saved.origin===location.origin&&saved.pathname===url?saved.pathname+saved.search+saved.hash:url;}catch{return url;}};
+ const setParentLinks=parent=>{try{if(parent.url!=='/admin/'){const raw=sessionStorage.getItem('foamlab.returnFor:'+location.pathname+location.search),saved=raw?new URL(raw,location.origin):null,labels={'/courses/':'课程目录','/topics/':'专题学习','/commands/':'命令速查','/dictionaries/':'配置与字典速查','/function-objects/':'functionObject 速查','/linux/':'Linux 入门','/cpp/':'C++ 入门','/programming/':'Python 实践','/topics/finite-volume/':'有限体积法','/tools/':'工具生态','/resources/':'资料中心','/recommendations/':'资料中心','/sharing/':'实践与分享','/authors/':'实践与分享','/announcements/':'网站公告','/assignments/':'作业与实践'};if(saved&&saved.origin===location.origin&&Object.hasOwn(labels,saved.pathname))parent={url:saved.pathname+saved.search+saved.hash,label:labels[saved.pathname]};}}catch{}const url=rememberedParent(parent.url),link=$('#breadcrumb-parent'),back=$('#page-back-link');if(link){link.href=url;link.textContent=parent.label;}if(back){back.href=url;back.textContent='← 返回'+parent.label;}};
+ const initialParent=$('#breadcrumb-parent');if(initialParent)setParentLinks({url:new URL(initialParent.href,location.origin).pathname,label:initialParent.textContent});
+
+ lab.headingTitle=item=>String(item.slug||'').startsWith('command-')?item.title.split(' · ')[0]:item.title;
+ lab.updateBreadcrumb=item=>{let parent={url:'/',label:'学习概览'};const track=String(item.track||''),canonical=String(item.metadata?.canonical_path||'');
+  if(item.metadata?.admin_only)parent={url:'/admin/',label:'管理平台'};
+  else if(item.metadata?.kolev_book)parent={url:'/theory/multiphase-'+([1,2,3].includes(Number(item.metadata.kolev_book.volume))?Number(item.metadata.kolev_book.volume):1)+'/',label:item.track||'多相流动力学'};
+  else if(item.metadata?.heat_transfer_book)parent={url:'/theory/heat-mass-transfer/',label:'传热与传质基础'};
+  else if(item.metadata?.turbulence_book)parent={url:'/theory/turbulence/',label:'湍流理论'};
+  else if(item.metadata?.fvm_book)parent={url:'/fvm/',label:'量化研究中的有限体积法'};
+  else if(canonical==='/start/')parent={url:'/',label:'学习概览'};
+  else if(canonical.startsWith('/dictionaries/')||String(item.slug).startsWith('dictionary-'))parent={url:'/dictionaries/',label:'配置与字典速查'};
+  else if(String(item.slug).startsWith('command-'))parent={url:'/commands/',label:'命令速查'};
+  else if(canonical.startsWith('/function-objects/'))parent={url:'/function-objects/',label:'functionObject 速查'};
+  else if(['lesson','course'].includes(item.kind)){parent=/C\+\+/.test(track)?{url:'/cpp/',label:'C++ 入门'}:/Linux/.test(track)?{url:'/linux/',label:'Linux 入门'}:/Python 实践/.test(track)?{url:'/programming/',label:'Python 实践'}:track==='统计与信号与理论'?{url:'/topics/finite-volume/',label:'有限体积法'}:{url:'/courses/',label:'课程目录'};}
+  else {const map={module:['topics','专题学习'],tool:['tools','工具生态'],resource:['resources','资料中心'],recommendation:['resources','资料中心'],article:['sharing','实践与分享'],log:['sharing','实践与分享'],announcement:['announcements','网站公告'],assignment:['assignments','作业与实践'],reference:['reference','参考资料']};const entry=map[item.kind];if(entry)parent={url:'/'+entry[0]+'/',label:entry[1]};}
+  setParentLinks(parent);
+  window.foamCurrentContent=item;
+  document.dispatchEvent(new CustomEvent('foamlab:content-ready',{detail:item}));
+ };
+
+ lab.error=(host,e)=>{host.innerHTML='<div class="lab-empty" role="alert"><strong>暂时无法完成请求</strong><p>'+esc(e.message||'请稍后重试。')+'</p><button class="button secondary" onclick="location.reload()">刷新页面</button></div>';};
+ lab.reveal=host=>{const page=host?.closest('[data-page-state]');if(page)page.dataset.pageState='ready';};
+ lab.check=r=>{if(r.error)throw Error(r.error.message);return r.data;};
+ lab.markdown=body=>{
+  const math=[];
+  body=window.FoamMathSource.transform(body,({tex,display})=>{
+   const i=math.push({tex,display})-1;return '<span data-foam-math="'+i+'"></span>';
+  });
+  const holder=document.createElement('div');holder.innerHTML=DOMPurify.sanitize(marked.parse(body,{gfm:true,breaks:false}),{USE_PROFILES:{html:true},ALLOW_DATA_ATTR:false,ADD_ATTR:['data-foam-math'],FORBID_TAGS:['style','form','input','button','textarea','select','option','label','iframe','object','embed','video','audio'],FORBID_ATTR:['style','id']});
+  holder.querySelectorAll('a').forEach(a=>{const u=safeURL(a.getAttribute('href'));if(!u)a.removeAttribute('href');else{a.href=u;if(new URL(u).origin!==location.origin){a.target='_blank';a.rel='noopener noreferrer';}}});
+  holder.querySelectorAll('img').forEach(img=>{const u=safeURL(img.getAttribute('src'));if(!u)img.remove();else{img.src=u;img.loading='lazy';}});
+  holder.querySelectorAll('pre > code').forEach(code=>{const lang=code.className.match(/language-([\w+-]+)/)?.[1];if(window.FoamDictionaryFormat?.isDictionary(code.textContent,lang)){code.textContent=window.FoamDictionaryFormat.format(code.textContent,lang);code.className='language-openfoam';}});
+  holder.querySelectorAll('pre').forEach(pre=>{pre.classList.add('lab-code');pre.tabIndex=0;const panel=document.createElement('div');panel.className='code-panel';pre.replaceWith(panel);const tools=document.createElement('div');tools.className='code-toolbar';const lang=pre.querySelector('code')?.className.match(/language-([\w+-]+)/)?.[1]||'text',label=({foam:'量化研究 字典',openfoam:'量化研究 字典',dict:'量化研究 字典',cpp:'C++',bash:'Bash / 终端',python:'Python',text:'文本 / 日志',plaintext:'文本 / 日志',prompt:'提示词'})[lang]||lang,lines=Math.max(1,pre.textContent.replace(/\n$/,'').split('\n').length);if(lang==='prompt')panel.classList.add('wrap-lines');pre.setAttribute('aria-label',lang==='prompt'?'可复制的提示词':label+'代码');tools.innerHTML='<span class="code-language">'+esc(label)+'</span><span class="code-lines">'+lines+' 行</span><button type="button" data-lab-wrap aria-pressed="'+(lang==='prompt'?'true':'false')+'">自动换行</button><button type="button" data-lab-copy>'+ (lang==='prompt'?'复制提示词':'复制代码')+'</button>';panel.append(tools,pre);});
+  holder.querySelectorAll('table').forEach(table=>{if(table.parentElement.classList.contains('table-scroll'))return;const scroll=document.createElement('div');scroll.className='table-scroll';scroll.tabIndex=0;scroll.setAttribute('role','region');scroll.setAttribute('aria-label','表格，可横向滚动');table.replaceWith(scroll);scroll.append(table);});
+  window.FoamInlineCode?.decorate(holder);
+  holder.querySelectorAll('h2,h3').forEach((h,i)=>h.id='section-'+i);
+  holder.querySelectorAll('h4,h5,h6').forEach((h,i)=>h.id='detail-'+i);
+  // Decorate prose and code before expanding formulas into thousands of DOM
+  // nodes. Repeated symbols share markup only within this rendering operation.
+  const mathMarkup=new Map();
+  holder.querySelectorAll('[data-foam-math]').forEach(el=>{const item=math[Number(el.dataset.foamMath)];if(!item){el.remove();return;}if(window.katex){try{const key=String(item.display)+':'+item.tex;if(mathMarkup.has(key))el.replaceChildren(...mathMarkup.get(key).map(node=>node.cloneNode(true)));else{katex.render(item.tex,el,{displayMode:item.display,throwOnError:true,trust:false,maxExpand:1000});mathMarkup.set(key,[...el.childNodes].map(node=>node.cloneNode(true)));}}catch{el.className='math-error';el.textContent=item.tex;}}else{el.className='math-pending';el.dataset.mathDisplay=String(item.display);el.textContent=item.tex;}});
+  if(math.length&&!window.katex)window.FoamMathRenderer.enhance();
+  return holder.innerHTML;
+ };
+ document.addEventListener('click',async e=>{const wrap=e.target.closest('[data-lab-wrap]');if(wrap){const on=wrap.closest('.code-panel').classList.toggle('wrap-lines');wrap.setAttribute('aria-pressed',String(on));return;}const b=e.target.closest('[data-lab-copy]');if(b){try{await navigator.clipboard.writeText(b.closest('.code-panel').querySelector('pre').textContent);window.dispatchEvent(new Event('foamlab:code-copied'));b.textContent='已复制';setTimeout(()=>b.textContent='复制代码',1300);}catch{window.foamNotify?.('请选中代码后复制。');}}});
+ let authInitialized=false;
+ // Published content can load while member/administrator permissions are checked.
+ lab.contentReady=(async()=>{await window.foamAuth.ready;lab.client=window.foamAuth.client;lab.user=window.foamAuth.user;if(!lab.client)throw Error('内容服务未连接，请刷新重试。');return lab;})();
+ lab.ready=(async()=>{await lab.contentReady;if(lab.user){const id=lab.user.id,r=await lab.client.from('foamlab_roles').select('role').eq('user_id',id).maybeSingle();if(window.foamAuth.user?.id===id)lab.role=r.data?.role||'member';else{lab.user=window.foamAuth.user;lab.role=null;}}authInitialized=true;return lab;})();
+ window.addEventListener('foam-auth-change',e=>{
+  if(window.foamAuth.loading)return;
+  if(!window.foamAuth.user||window.foamAuth.user.is_anonymous){document.querySelectorAll('.article[data-cms-slug]:not([data-cms-slug=""]),#live-article').forEach(host=>lab.lockArticle?.(host));document.querySelectorAll('.topic-introduction').forEach(e=>e.remove());}
+  if(!authInitialized)return;
+  if(lab.user?.id===window.foamAuth.user?.id){if(e.detail?.accountUpdated)void lab.refreshAccountProgress();return;}
+  lab.user=window.foamAuth.user;lab.role=null;
+  document.querySelectorAll('[data-management-link],#profile-admin-link').forEach(link=>link.hidden=true);
+  // Rebuild member/admin controls with the new identity, including changes
+  // received from other tabs. Token refresh and progress updates do not reload.
+  location.reload();
+ });
+ lab.ready.catch(()=>{});
+ lab.ready.then(()=>{document.querySelectorAll('[data-management-link],#profile-admin-link').forEach(link=>link.hidden=lab.role!=='admin');}).catch(()=>{});
+ lab.refreshAccountProgress=async()=>{await window.foamAuth.profileReady;if(!lab.user||!$('.account-page')||window.foamAuth.dataError)return;try{const lessons=[];for(let offset=0;;offset+=500){const batch=lab.check(await lab.client.from('foamlab_content').select('id').eq('status','published').eq('kind','lesson').order('id').range(offset,offset+499));lessons.push(...batch);if(batch.length<500)break;}const completed=new Set(window.foamAuth.progress||[]),count=lessons.filter(item=>completed.has(item.id)).length,total=lessons.length;window.foamAuth.totalLessons=total;window.foamAuth.visibleCompleted=count;const number=$('#account-completed'),state=$('#account-progress-state'),bar=$('#account-progress-bar');if(number)number.textContent=String(count);if(state)state.textContent='已完成 '+count+' / '+total+' 节课程。';if(bar)bar.style.width=(total?Math.min(100,count/total*100):0)+'%';}catch{const state=$('#account-progress-state'),bar=$('#account-progress-bar');if(state)state.textContent='账号记录已读取，课程目录暂时无法同步；请刷新后查看当前进度。';if(bar)bar.style.width='0%';}};
+ lab.recordCompletion=async(contentId,completed)=>{await lab.ready;if(!lab.user)throw Error('请先登录。');if(typeof contentId!=='string'||!/^[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}$/i.test(contentId))throw Error('新版课程使用独立内容 ID，不能使用旧讲次编号。');lab.check(await lab.client.from('foamlab_learning_progress').upsert({user_id:lab.user.id,content_id:contentId,completed,updated_at:new Date().toISOString()},{onConflict:'user_id,content_id'}));const progress=new Set(window.foamAuth.progress||[]);if(completed)progress.add(contentId);else progress.delete(contentId);window.foamAuth.progress=[...progress];window.dispatchEvent(new CustomEvent('foam-auth-change',{detail:{user:lab.user,progress:[...progress]}}));await lab.refreshAccountProgress();};
+ lab.settingsReady=lab.ready.then(async()=>{
+  const r=await lab.client.from('foamlab_settings').select('value').eq('key','site').maybeSingle();const cfg=r.data?.value||{};lab.settings=cfg;
+  if(cfg.name){const brand=document.querySelector('.brand>span:last-child');if(brand&&cfg.name!=='QuantLab')brand.firstChild.textContent=cfg.name;}
+  for(const [path,label] of Object.entries(cfg.nav||{})){const a=[...document.querySelectorAll('.sidebar nav a')].find(x=>x.getAttribute('href')===path);if(a){const span=a.querySelector('span');if(span)span.textContent=label;}}
+  if(lab.user&&document.querySelector('.account-page')){
+   const admin=document.querySelector('#profile-admin-link');if(admin)admin.hidden=lab.role!=='admin';
+   await lab.refreshAccountProgress();
+  }
+  return cfg;
+ }).catch(()=>({}));
+ lab.login=async()=>{try{await window.foamAuth.signIn({returnTo:location.pathname+location.search+location.hash});}catch(e){window.foamNotify?.(e.message||'登录暂时无法发起，请稍后重试。');}};
+ document.addEventListener('click',e=>{if(e.target.closest('[data-lab-login]'))lab.login();});
+ lab.ensureProfile=async()=>{const meta=lab.user?.user_metadata||{};const display=(window.foamAuth.profile?.display_name||meta.user_name||meta.full_name||'学习者').slice(0,60);lab.check(await lab.client.from('foamlab_public_profiles').upsert({user_id:lab.user.id,display_name:display},{onConflict:'user_id'}));};
+ const authorProfiles=new Map(),authorReads=new Map(),authorReadAt=new Map();
+ lab.dateTime=s=>{const date=new Date(s);return Number.isNaN(date.getTime())?'—':date.toLocaleString('zh-CN',{year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false});};
+ lab.names=async ids=>{
+  const unique=[...new Set(ids.filter(Boolean))],missing=unique.filter(id=>!authorReads.has(id)&&Date.now()-(authorReadAt.get(id)||0)>60000);
+  for(let i=0;i<missing.length;i+=100){const batch=missing.slice(i,i+100);
+   const pending=(async()=>{const [profiles,levels]=await Promise.all([lab.client.from('foamlab_public_profiles').select('user_id,display_name').in('user_id',batch),lab.client.from('foamlab_author_levels').select('user_id,level').in('user_id',batch),window.FoamAvatar?.fetchMany(batch)]);
+    const profileById=new Map((profiles.data||[]).map(r=>[r.user_id,r])),levelById=new Map((levels.data||[]).map(r=>[r.user_id,r]));
+    for(const id of batch){const previous=authorProfiles.get(id)||{},profile=profileById.get(id),level=levelById.get(id);authorProfiles.set(id,{name:profile?.display_name||previous.name||'',level:level?.level??(levels.error?previous.level:1)});if(!profiles.error&&!levels.error)authorReadAt.set(id,Date.now());}
+   })().finally(()=>{for(const id of batch)authorReads.delete(id);});
+   for(const id of batch)authorReads.set(id,pending);
+  }
+  await Promise.all([...new Set(unique.map(id=>authorReads.get(id)).filter(Boolean))]);
+  return Object.fromEntries(unique.map(id=>[id,authorProfiles.get(id)?.name]).filter(([,name])=>name));
+ };
+ window.addEventListener('foam-avatar-change',e=>authorReadAt.delete(e.detail?.userId));
+ lab.authorMeta=(item,fallback='社区成员')=>{const author=authorProfiles.get(item.author_id),name=author?.name||item.author_name||fallback,published=item.published_at||item.created_at,modified=item.updated_at||published;const time=(label,value)=>'<span>'+label+' <time datetime="'+esc(value||'')+'">'+esc(lab.dateTime(value))+'</time></span>';return '<span class="author-identity">'+(item.author_id&&window.FoamAvatar?'<span class="author-avatar" aria-hidden="true">'+window.FoamAvatar.markup(window.FoamAvatar.get(item.author_id),true)+'</span>':'')+'<strong>'+esc(name)+'</strong>'+(item.author_id?'<span class="author-level" aria-label="作者等级">Lv.'+esc(author?.level??'—')+'</span>':'')+'</span>'+time('发布于',published)+time('修改于',modified);};
+ lab.topicLabels={'finite-volume':'有限体积法',turbulence:'湍流',multiphase:'多相流','heat-transfer':'传热与传质','electrochemistry':'电化学','porous-media':'渗流与多孔介质',aerodynamics:'可压缩流动',reacting:'化学反应流动',meshing:'网格划分','dynamic-mesh':'动网格','function-objects':'functionObject',engineering:'实际工程应用'};
+ lab.courseDownloads=item=>(Array.isArray(item.metadata?.downloads)?item.metadata.downloads:[]).filter(d=>d&&typeof d==='object'&&safeURL(d.url)).slice(0,20).map(d=>({...d,url:safeURL(d.url),label:String(d.label||'下载案例')}));
+ lab.fileSize=n=>Number.isFinite(Number(n))&&Number(n)>0?(n>=1048576?(n/1048576).toFixed(1)+' MB':Math.ceil(n/1024)+' KB'):'';
+ lab.downloadLink=(d,cls='')=>'<a class="'+cls+'" href="'+esc(d.url)+'" '+(new URL(d.url).origin===location.origin?'download':'target="_blank" rel="noopener noreferrer"')+'><span>↓ '+esc(d.label)+'</span><span>'+esc(lab.fileSize(d.size_bytes))+'</span></a>';
+ lab.topicLinks=item=>{const D=window.FoamDirectory;if(D?.available){const nodes=(item.section_ids||[]).map(D.get).filter(n=>n&&D.isVisible(n));return nodes.length?'<nav class="lesson-topic-links" aria-label="所在目录">'+nodes.map(n=>'<a href="'+esc(D.url(n))+'">'+esc(D.path(n.id))+' →</a>').join('')+'</nav>':'';}const keys=Array.isArray(item.metadata?.topics)?item.metadata.topics:[];return keys.some(x=>lab.topicLabels[x])?'<nav class="lesson-topic-links" aria-label="相关专题">'+keys.filter(x=>lab.topicLabels[x]).map(key=>'<a href="/topics/'+key+'/">'+esc(lab.topicLabels[key])+'专题 →</a>').join('')+'</nav>':'';};
+ lab.downloadPanel=item=>{const files=lab.courseDownloads(item);if(!files.length)return '';return '<section class="lesson-downloads" id="lesson-downloads" aria-label="对应案例下载"><header><h2>'+(item.kind==='lesson'?'本课案例与附件':'附件下载')+'</h2><span>量化研究 Python · '+files.length+' 个附件</span></header>'+files.map(d=>'<div class="lesson-download-row">'+lab.downloadLink(d)+'<p>'+esc(d.description||'下载后先阅读包内说明，再进入相应算例目录。')+'</p></div>').join('')+'</section>';};
+ lab.likeButton=(kind,id)=>'<button type="button" class="community-like" data-like-kind="'+esc(kind)+'" data-like-id="'+esc(id)+'" aria-pressed="false" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10v11H3V10h4Zm0 0 5-7c2 0 3 1 2 5h5a2 2 0 0 1 2 2l-2 9a2 2 0 0 1-2 2H7"/></svg><span data-like-label>点赞</span><span data-like-count>…</span></button>';
+ lab.card=item=>{const files=lab.courseDownloads(item),url=esc(safeURL(item.metadata?.canonical_path)||'/read/?slug='+encodeURIComponent(item.slug));return '<article class="lab-card"><a class="lab-card-main" href="'+url+'">'+(safeURL(item.cover_url)?'<img src="'+esc(safeURL(item.cover_url))+'" alt="'+esc(item.title)+'主题配图" loading="lazy">':'<div class="lab-card-mark">'+esc(item.track||item.kind)+'</div>')+'<div class="lab-card-body"><span class="lab-meta">'+esc(item.track||item.series||'QuantLab')+'</span><h3>'+(item.pinned?'<span class="pill community-pinned">置顶</span> ':'')+esc(item.title)+'</h3>'+(['article','log'].includes(item.kind)?'<div class="community-byline card-byline" data-author-content="'+esc(item.id)+'">'+lab.authorMeta(item)+'</div>':'')+'<p>'+esc(item.summary)+'</p><span class="lab-card-link">阅读全文 <span>↗</span></span></div></a>'+(files.length?'<div class="lab-card-download"><a href="'+esc(files[0].url)+'" '+(new URL(files[0].url).origin===location.origin?'download':'target="_blank" rel="noopener noreferrer"')+'>↓ 配套案例</a>'+(files.length>1?'<a href="'+url+'#lesson-downloads">全部 '+files.length+' 个包 →</a>':'<small>'+esc(lab.fileSize(files[0].size_bytes))+'</small>')+'</div>':'')+(item.kind==='article'?'<div class="community-post-actions">'+lab.likeButton('article',item.id)+'</div>':'')+'</article>';};
+ lab.courseDirectory=item=>{const D=window.FoamDirectory,node=D?.primary?.(item)||(item.section_ids||[]).map(id=>D?.get(id)).find(Boolean);return node?D.url(node):(item.track==='Python 实践'?'/programming/':'/courses/');};
+ lab.lessonNavigation=async(host,item)=>{if(item.kind!=='lesson'||!item.series)return;const unit=(item.metadata?.fvm_book||item.metadata?.turbulence_book||item.metadata?.heat_transfer_book||item.metadata?.kolev_book)?'节':'章';const nav=document.createElement('nav');nav.className='lesson-navigation';nav.setAttribute('aria-label','课程章节翻页');nav.innerHTML='<p class="muted">正在读取章节顺序…</p>';const actions=$('.lesson-actions',host);if(actions)actions.after(nav);else host.append(nav);try{await lab.directoryReady;const chapters=[];for(let offset=0;;offset+=500){const page=lab.check(await lab.client.from('foamlab_content').select('id,slug,title,sort_order').eq('kind','lesson').eq('status','published').eq('series',item.series).order('sort_order').order('slug').range(offset,offset+499));chapters.push(...page);if(page.length<500)break;}const index=chapters.findIndex(chapter=>chapter.id===item.id);if(index<0){nav.innerHTML='<p class="muted">课程顺序已更新，请返回课程目录重新选择。</p>';return;}const outline=$('#reader-chapters'),chapterList=$('#chapter-list');if(outline&&chapterList){outline.hidden=false;outline.open=false;outline.querySelector('summary').textContent='课程目录 · '+chapters.length+' '+unit;outline.querySelector('.chapter-series').textContent=item.series;chapterList.innerHTML=chapters.map(chapter=>'<a href="/read/?slug='+encodeURIComponent(chapter.slug)+'"'+(chapter.id===item.id?' aria-current="page"':'')+'>'+esc(chapter.title)+'</a>').join('');outline.ontoggle=()=>{if(outline.open)requestAnimationFrame(()=>{const active=chapterList.querySelector('[aria-current]');if(active)chapterList.scrollTop+=active.getBoundingClientRect().top-chapterList.getBoundingClientRect().top-(chapterList.clientHeight-active.offsetHeight)/2;});};}const first=chapters[0],last=chapters.at(-1),previous=chapters[index-1],next=chapters[index+1];const control=(name,label,target,enabled)=>enabled?'<a class="chapter-control" data-chapter="'+name+'" href="/read/?slug='+encodeURIComponent(target.slug)+'" title="'+esc(target.title)+'">'+label+'</a>':'<button class="chapter-control" data-chapter="'+name+'" type="button" disabled aria-disabled="true">'+label+'</button>';nav.innerHTML='<div class="chapter-heading"><div><span>'+esc(item.series)+'</span><strong>第 '+(index+1)+' / '+chapters.length+' '+unit+'</strong></div><a href="'+esc(lab.courseDirectory(item))+'">课程目录 ↗</a></div><div class="chapter-controls">'+control('first','首'+unit,first,index>0)+control('previous','← 上一'+unit,previous,!!previous)+control('next','下一'+unit+' →',next,!!next)+control('last','末'+unit,last,index<chapters.length-1)+'</div><div class="chapter-neighbors"><p><span>上一'+unit+'</span><strong>'+esc(previous?.title||'当前已是首'+unit)+'</strong></p><p><span>下一'+unit+'</span><strong>'+esc(next?.title||'当前已是末'+unit)+'</strong></p></div>';}catch{nav.innerHTML='<p class="muted">章节导航暂时无法读取。</p><a href="/courses/">返回课程目录 →</a>';}};
+ const listing=$('[data-lab-catalog]:not([data-catalog-custom])');
+ if(listing)(async()=>{try{await lab.contentReady;await lab.directoryReady;const mode=listing.dataset.labCatalog,D=window.FoamDirectory;let rows=[];
+ if(D?.available){
+  const node=D.current()||D.nodes.find(n=>n.key===mode);if(!node)throw Error('这个目录已删除，请从左侧导航选择其他目录。');
+  rows=await D.content(node);const wrap=listing.closest('.page-wrap');wrap.querySelector('h1').textContent=node.name;document.title=node.name+' · QuantLab';if(node.description)wrap.querySelector('.page-heading p').textContent=node.description;void window.FoamSectionPage?.apply(node);
+  const children=D.children(node.id).filter(D.isVisible);if(children.length){const links=document.createElement('nav');links.className='directory-children';links.setAttribute('aria-label','子目录');links.innerHTML=children.map(n=>'<a href="'+esc(D.url(n))+'">'+esc(n.name)+' →</a>').join('');wrap.querySelector('.catalog-search').before(links);}
+  const parent=D.get(node.parent_id);if(parent)setParentLinks({url:D.url(parent),label:D.path(parent.id)});
+ }else{const groups={courses:['lesson','course'],programming:['lesson'],cpp:['lesson'],linux:['lesson'],algorithms:['lesson'],tools:['tool'],resources:['resource','recommendation'],recommendations:['recommendation'],sharing:['article'],authors:['article'],announcements:['announcement'],assignments:['assignment'],'quick-reference':['reference'],commands:['reference'],dictionaries:['reference']};let q=lab.client.from('foamlab_content').select('id,slug,kind,title,summary,track,series,cover_url,metadata,author_id,author_name,sort_order,pinned,published_at,created_at,updated_at').eq('status','published').in('kind',groups[mode]||['article']).order('sort_order').order('created_at',{ascending:false}).limit(1000);if(mode==='programming')q=q.eq('track','Python与数据');if(mode==='cpp')q=q.eq('track','C++ 入门');if(mode==='linux')q=q.eq('track','Linux 入门');if(mode==='algorithms')q=q.ilike('track','%数值%');rows=lab.check(await q).filter(r=>mode!=='courses'||!['Linux 入门','C++ 入门','Python 实践','统计与信号与理论'].includes(r.track));}
+ // Tool collections show the course once; its chapters belong on its own page.
+ if(mode==='tools'){
+  const series=new Set(rows.filter(r=>r.kind!=='lesson'&&r.metadata?.curriculum_series).map(r=>r.metadata.curriculum_series));
+  rows=rows.filter(r=>r.kind!=='lesson'||!series.has(r.series));
+ }
+ lab.catalog=rows;const catalogAuthors=lab.names(rows.filter(r=>['article','log'].includes(r.kind)).map(r=>r.author_id)).catch(()=>{});
+ const search=$('#catalog-query'),filters=$('#catalog-filters'),kindFilters=$('#catalog-kind-filters');
+ const kinds=[['','全部资料'],['resource','数据与源码'],['recommendation','资源推荐']];let track='全部',kind='';
+ if(kindFilters)kindFilters.hidden=!!D?.available;
+ if(kindFilters)kindFilters.innerHTML=kinds.map(([value,label])=>'<button type="button" data-catalog-kind="'+value+'" aria-pressed="false">'+label+'</button>').join('');
+ function restoreFilters(){
+  const params=new URLSearchParams(location.search);if(search)search.value=params.get('q')||'';
+  kind=!D?.available&&mode==='resources'&&kinds.some(([value])=>value===params.get('kind'))?params.get('kind'):'';
+  const tracks=['全部',...new Set(rows.filter(r=>!kind||r.kind===kind).map(r=>r.track).filter(Boolean))];
+  track=!D?.available&&tracks.includes(params.get('track'))?params.get('track'):'全部';
+  if(filters){filters.hidden=D?.available||tracks.length<=2;filters.innerHTML=tracks.map(x=>'<button type="button" data-track="'+esc(x)+'" class="'+(x===track?'selected':'')+'" aria-pressed="'+(x===track)+'">'+esc(x)+'</button>').join('');}
+  kindFilters?.querySelectorAll('button').forEach(b=>{const selected=b.dataset.catalogKind===kind;b.classList.toggle('selected',selected);b.setAttribute('aria-pressed',String(selected));});
+ }
+ if(mode==='sharing'||mode==='authors'){rows=rows.filter(r=>r.kind==='article').sort((a,b)=>Number(!!b.pinned)-Number(!!a.pinned)||new Date(b.published_at||b.created_at)-new Date(a.published_at||a.created_at));}
+ restoreFilters();window.foamListState?.remember(listing);
+ if(filters)filters.onclick=e=>{const b=e.target.closest('[data-track]');if(!b)return;window.foamListState?.write({q:search?.value||'',track:b.dataset.track,...(kindFilters?{kind}:{})},true);restoreFilters();render();};
+ if(kindFilters)kindFilters.onclick=e=>{const b=e.target.closest('[data-catalog-kind]');if(!b)return;window.foamListState?.write({q:search?.value||'',track:'全部',kind:b.dataset.catalogKind},true);restoreFilters();render();};
+ function render(){const words=(search?.value||'').toLowerCase().split(/\s+/).filter(Boolean);const shown=rows.filter(r=>(!kind||r.kind===kind)&&(track==='全部'||r.track===track)&&words.every(w=>[r.title,r.summary,r.track,r.series].join(' ').toLowerCase().includes(w)));if(window.FoamResourcesHub?.render({listing,rows:shown,words,filtered:shown.length!==rows.length,mode,D}))return;listing.innerHTML=window.FoamPagination.slice(listing,shown,render,12).map(lab.card).join('')||'<div class="lab-empty">目前没有符合条件的内容。</div>';if($('#catalog-count'))$('#catalog-count').textContent=shown.length+' 项内容';}
+ search?.addEventListener('input',()=>{window.foamListState?.write({q:search.value,track,...(kindFilters?{kind}:{})});render();});window.addEventListener('popstate',()=>{restoreFilters();render();});render();void catalogAuthors.then(()=>{if(!listing.isConnected)return;const byId=new Map(rows.map(row=>[row.id,row]));for(const byline of listing.querySelectorAll('[data-author-content]')){const row=byId.get(byline.dataset.authorContent);if(row)byline.innerHTML=lab.authorMeta(row);}});
+ }catch(e){lab.error(listing,e);}finally{lab.reveal(listing);}})();
+ // The server resolves article and module reading permissions; generated pages
+ // contain an empty reader shell instead of a publicly readable fallback.
+ let articleEpoch=0;
+ lab.lockArticle=(host,access='member')=>{
+  const title={member:'登录后阅读文章',supporter:'充电会员专享',admin:'仅管理员可阅读'}[access]||'登录后阅读文章';
+  const description={member:'登录后即可查看完整正文、配置示例与文章讨论。',supporter:'本篇文章向充电会员和管理员开放。',admin:'本篇文章仅供管理员查看。'}[access]||'';
+  delete host.dataset.cmsSuspended;host.dataset.cmsState='locked';host.dataset.readAccess=access;
+  host.innerHTML='<div class="article-login"><div class="eyebrow">QUANTLAB · 学习资料</div><h1>'+title+'</h1><p>'+description+'</p>'+(!window.foamAuth.user||window.foamAuth.user.is_anonymous?'<button class="button" type="button" data-lab-login>使用 GitHub 登录</button>':'<a class="button secondary" href="/account/">个人中心</a>')+'<a class="text-link" href="/courses/">浏览学习目录 →</a></div>';
+  host.closest('.article-shell')?.querySelectorAll('.article-toc').forEach(e=>e.replaceChildren());window.foamCurrentContent=null;document.dispatchEvent(new Event('foamlab:article-locked'));
+ };
+ lab.suspendArticle=host=>{host.dataset.cmsSuspended='true';host.dataset.cmsState='loading';host.innerHTML='<div class="article-cms-loading" role="status"><span>正在打开文章…</span><i></i><i></i><i></i></div>';host.closest('.article-shell')?.querySelectorAll('.article-toc').forEach(e=>e.replaceChildren());window.foamCurrentContent=null;document.dispatchEvent(new Event('foamlab:article-locked'));};
+ lab.readArticle=async(host,slug)=>{
+  const epoch=articleEpoch;await lab.contentReady;if(epoch!==articleEpoch)return {locked:true};
+  const user=window.foamAuth.user,userId=user?.id||null;
+  const stale=()=>{if(epoch!==articleEpoch)return true;if((window.foamAuth.user?.id||null)!==userId){if(window.foamAuth.user&&!window.foamAuth.user.is_anonymous)lab.suspendArticle(host);else lab.lockArticle(host);return true;}return false;};
+  if(user&&!user.is_anonymous){
+   const result=await lab.client.from('foamlab_content').select('*').eq('slug',slug).eq('status','published').maybeSingle();
+   if(stale())return {locked:true};if(result.error){host.dataset.cmsState='error';throw Error('正文暂时无法读取，请刷新重试。');}
+   if(result.data){await window.FoamMathRenderer.ready();if(stale())return {locked:true};return {item:result.data};}
+  }
+  const result=await lab.client.rpc('foamlab_read_article',{p_slug:slug});
+  if(stale())return {locked:true};if(result.error||!result.data){host.dataset.cmsState='error';throw Error('正文暂时无法读取，请刷新重试。');}
+  const response=result.data;
+  if(!response.allowed){lab.lockArticle(host,response.access);return {locked:true};}
+  if(response.item){await window.FoamMathRenderer.ready();if(stale())return {locked:true};}
+  return {item:response.item};
+ };
+ const articleHosts=()=>document.querySelectorAll('.article[data-cms-slug]:not([data-cms-slug=""]),#live-article');
+ // Clear cached article bodies without treating a page transition as sign-out.
+ window.addEventListener('pagehide',()=>{articleEpoch++;articleHosts().forEach(lab.suspendArticle);});
+ window.addEventListener('pageshow',e=>{if(e.persisted&&articleHosts().length)location.reload();});
+ lab.restoreHash=()=>{if(!location.hash)return;let id;try{id=decodeURIComponent(location.hash.slice(1));}catch{return;}const move=()=>{const target=document.getElementById(id);if(!target)return false;requestAnimationFrame(()=>requestAnimationFrame(()=>target.scrollIntoView({block:'start',behavior:'instant'})));return true;};if(move())return;const observer=new MutationObserver(()=>{if(move())observer.disconnect();});observer.observe(document.querySelector('#main'),{childList:true,subtree:true});setTimeout(()=>observer.disconnect(),5000);};
+ const cachedArticle=$('[data-cms-slug]:not([data-cms-slug=""])');
+ if(cachedArticle)(async()=>{const host=cachedArticle.matches('.article')?cachedArticle:(cachedArticle.querySelector('.article')||cachedArticle);const prose=$('.prose',host),heading=$('h1',host);if(!prose||!heading)return;try{await lab.contentReady;const slug=cachedArticle.dataset.cmsSlug;if(!slug)return;const read=await lab.readArticle(host,slug);if(read.locked)return;const item=read.item;const toc=$('#toc')||$('#live-toc');if(!item||item.metadata?.admin_only){heading.textContent='内容已归档或尚未发布';prose.innerHTML='<div class="lab-empty"><p>这一条目的公开内容已移入归档、回收站或草稿。</p><a class="button secondary" href="/reference/">返回参考资料</a></div>';if(toc)toc.replaceChildren();document.title='内容已归档 · QuantLab';return;}lab.updateBreadcrumb(item);heading.textContent=lab.headingTitle(item);document.title=item.title+' · QuantLab';prose.innerHTML=lab.markdown(item.body);cachedArticle.dataset.cmsState='ready';lab.restoreHash();const description=$('meta[name="description"]');if(description&&item.summary)description.content=item.summary;const state=document.createElement('p');state.className='lab-cms-state article-meta';state.textContent='更新于 '+lab.date(item.updated_at);prose.before(state);if(toc)toc.innerHTML=[...prose.querySelectorAll('h2,h3')].map(h=>'<a href="#'+h.id+'" class="toc-'+h.tagName.toLowerCase()+'">'+esc(h.textContent)+'</a>').join('');const comments=document.createElement('section');comments.className='lab-comments';comments.id='cms-reference-comments';comments.innerHTML='<h2>评论与补充</h2>';host.append(comments);if(item.comments_enabled){try{await lab.messages(comments,{content_id:item.id});}catch(e){lab.error(comments,e);}}else comments.insertAdjacentHTML('beforeend','<p class="muted">这篇内容的评论已关闭。</p>');}catch(e){lab.error(host,e);}finally{if(cachedArticle.dataset.cmsState!=='locked'&&!cachedArticle.dataset.cmsSuspended)cachedArticle.dataset.cmsState='ready';}})();
+ const article=$('#live-article');if(article&&matchMedia('(max-width:1100px)').matches){const outline=$('.reader-sections');if(outline)outline.open=false;}
+ lab.resolveArticleAlias=async slug=>{
+  const aliases=window.foamArticleAliases;if(!aliases||!Object.hasOwn(aliases,slug))return slug;const target=aliases[slug];
+  // Activate a redirect only after the merged manuscript is actually published.
+  // A new frontend may reach readers before the content transaction completes.
+  const result=await lab.client.from('foamlab_content').select('slug,metadata').eq('slug',target.slug).eq('status','published').maybeSingle();
+  let active=!!result.data?.metadata?.merged_lessons?.includes(slug);
+  if(!result.error&&!result.data){
+   const access=await lab.client.rpc('foamlab_read_article',{p_slug:target.slug});
+   active=!access.error&&access.data?.allowed===false;
+  }
+  if(!active)return slug;
+  const url=new URL(location.href);let fragment='';try{fragment=decodeURIComponent(url.hash.slice(1));}catch{}
+  url.searchParams.set('slug',target.slug);url.hash=target.fragments?.[fragment]||target.hash||'';
+  history.replaceState(history.state,'',url);return target.slug;
+ };
+ if(article){const url=new URL(location.href),target={'fvm-book-04-03':'fvm-book-04-01','fvm-book-20-02':'fvm-book-20-01'}[url.searchParams.get('slug')];if(target){url.searchParams.set('slug',target);history.replaceState(history.state,'',url);}}
+ if(article)(async()=>{try{await lab.contentReady;const slug=await lab.resolveArticleAlias(new URLSearchParams(location.search).get('slug'));if(!slug)throw Error('未指定文章。请从课程或资源目录进入。');const read=await lab.readArticle(article,slug);if(read.locked)return;const item=read.item;if(!item||item.metadata?.admin_only){article.innerHTML='<div class="lab-empty"><h1>内容尚未发布或已移入归档</h1><a class="button" href="/courses/">返回学习路径</a></div>';return;}lab.updateBreadcrumb(item);const authorReady=lab.names([item.author_id]).catch(()=>{});document.title=item.title+' · QuantLab';document.querySelector('.lab-reader')?.classList.toggle('has-chapters',item.kind==='lesson'&&!!item.series);article.innerHTML='<div class="eyebrow">'+esc(item.track||item.kind)+'</div><h1>'+esc(lab.headingTitle(item))+'</h1><div class="article-meta community-byline">'+lab.authorMeta(item)+'</div>'+((item.metadata?.turbulence_book||item.metadata?.heat_transfer_book||item.metadata?.kolev_book)?'':'<p class="lab-lead">'+esc(item.summary)+'</p>')+lab.topicLinks(item)+'<div class="prose">'+lab.markdown(item.body)+'</div>'+(item.kind==='article'?'<div class="community-post-actions">'+lab.likeButton('article',item.id)+'</div>':'')+lab.downloadPanel(item)+'<div class="lesson-actions">'+(['lesson','course'].includes(item.kind)?'<button class="button" id="lab-complete">标记为已学</button>':'')+'<a class="button secondary" href="/community/?about='+encodeURIComponent(item.title)+'&amp;from='+encodeURIComponent(item.slug)+'">参与讨论</a></div><section id="lab-comments" class="lab-comments"><h2>评论与补充</h2></section>';
+ void authorReady.then(()=>{const byline=article.querySelector(':scope>.article-meta');if(byline)byline.innerHTML=lab.authorMeta(item);});
+ lab.restoreHash();
+ const toc=$('#live-toc');if(toc)toc.innerHTML=[...article.querySelectorAll('.prose h2,.prose h3')].map(h=>'<a href="#'+h.id+'" class="toc-'+h.tagName.toLowerCase()+'">'+esc(h.textContent)+'</a>').join('');
+ void lab.lessonNavigation(article,item);const complete=$('#lab-complete');if(complete){let done=false;if(lab.user){const r=await lab.client.from('foamlab_learning_progress').select('completed').eq('user_id',lab.user.id).eq('content_id',item.id).maybeSingle();done=!!r.data?.completed;}complete.textContent=done?'已学完 · 点击撤销':'标记为已学';complete.onclick=async()=>{if(!lab.user){lab.login();return;}complete.disabled=true;try{await lab.recordCompletion(item.id,!done);done=!done;complete.textContent=done?'已学完 · 点击撤销':'标记为已学';}catch(e){window.foamNotify?.(e.message);}finally{complete.disabled=false;}};}
+ if(item.comments_enabled){try{await lab.messages($('#lab-comments'),{content_id:item.id});}catch(e){lab.error($('#lab-comments'),e);}}else $('#lab-comments').insertAdjacentHTML('beforeend','<p class="muted">作者已关闭这篇内容的评论。</p>');
+ }catch(e){lab.error(article,e);}})();
+ lab.messages=async(host,parent,canReply=true)=>{await lab.ready;return window.FoamReplies.mount(host,parent,canReply);};
+ const forum=$('#lab-forum');if(forum)(async()=>{try{await lab.ready;await lab.settingsReady;const forumParams=new URLSearchParams(location.search),id=forumParams.get('topic');if(id){const thread=lab.check(await lab.client.from('foamlab_threads').select('*').eq('id',id).neq('status','hidden').maybeSingle());if(!thread)throw Error('讨论不存在或已隐藏。');const pageHeading=forum.parentElement.querySelector('.page-heading');if(pageHeading)pageHeading.remove();document.title=thread.title+' · 讨论中心 · QuantLab';const names=await lab.names([thread.author_id]);forum.innerHTML='<a class="text-link" href="/community/">← 全部讨论</a><article class="lab-topic"><span class="pill">'+esc(thread.category)+' · '+esc(thread.version)+'</span><h1>'+(thread.pinned?'<span class="pill community-pinned">置顶</span> ':'')+esc(thread.title)+'</h1><div class="article-meta community-byline">'+lab.authorMeta(thread)+'<span>'+esc(({open:'待解决',resolved:'已解决',closed:'已关闭'})[thread.status])+'</span></div><div class="prose">'+lab.markdown(thread.body)+'</div><div class="community-post-actions">'+lab.likeButton('question',thread.id)+(lab.user?.id===thread.author_id?'<a class="text-link" href="/studio/?tab=discussion">管理我的问题 →</a>':'')+'</div>'+(lab.user?.id===thread.author_id&&thread.status!=='closed'?'<button class="button secondary" id="resolve-thread">'+(thread.status==='resolved'?'重新打开问题':'标记问题已解决')+'</button>':'')+'</article><section class="lab-comments" id="thread-replies"><h2>回答与讨论</h2></section>';await lab.messages($('#thread-replies'),{thread_id:id},thread.status!=='closed');$('#resolve-thread')?.addEventListener('click',async e=>{const button=e.currentTarget;button.disabled=true;try{if(thread.accepted_message_id&&thread.status==='resolved')lab.check(await lab.client.rpc('foamlab_accept_answer',{thread_id:id,message_id:null}));else lab.check(await lab.client.from('foamlab_threads').update({status:thread.status==='resolved'?'open':'resolved'}).eq('id',id));location.reload();}catch(err){window.foamNotify?.(err.message);button.disabled=false;}});return;}
+ let category='全部',forumStatus=['open','resolved'].includes(forumParams.get('status'))?forumParams.get('status'):'';
+ const pageSize=200,statusPages=new Map(),cacheLifetime=30000;
+ let statusLoading=false,loadError='',requestVersion=0,statusRequest=null;
+ const threadQuery=status=>{let request=lab.client.from('foamlab_threads').select('id,title,category,version,status,pinned,created_at,updated_at,author_id').neq('status','hidden');if(status)request=request.eq('status',status);return request.order('pinned',{ascending:false}).order('created_at',{ascending:false}).order('id');};
+ const initialRows=lab.check(await threadQuery(forumStatus).range(0,pageSize-1));
+ statusPages.set(forumStatus,{rows:initialRows,offset:initialRows.length,more:initialRows.length===pageSize,at:Date.now()});
+ function cachedPage(status){
+  const all=statusPages.get(''),saved=statusPages.get(status);
+  // A complete all-status page can answer both filters without another request.
+  // Partial pages must keep independent server-side pagination for each status.
+  if(status&&all&&!all.more&&(!saved||all.at>saved.at)){
+   const rows=all.rows.filter(row=>row.status===status),page={rows,offset:rows.length,more:false,at:all.at};statusPages.set(status,page);return page;
+  }
+  return saved;
+ }
+ const currentRows=()=>cachedPage(forumStatus)?.rows||[];
+ forum.innerHTML='<div class="forum-toolbar"><label class="search-field"><input id="forum-query" type="search" aria-label="搜索讨论" placeholder="搜索问题标题、软件版本与分类"></label><button class="button" id="new-topic">提出问题 +</button></div><div class="filter-tabs" id="forum-status-filters" aria-label="解决状态">'+[['','全部'],['open','待解决'],['resolved','已解决']].map(([value,label])=>'<button type="button" data-forum-status="'+value+'" class="'+(value===forumStatus?'selected':'')+'" aria-pressed="'+String(value===forumStatus)+'">'+label+'</button>').join('')+'</div><div class="filter-tabs" id="forum-filters" aria-label="问题分类">'+['全部','使用问题','数据与清洗','统计与信号','Python 编程','回测与验证','其他问题'].map((c,i)=>'<button class="'+(!i?'selected':'')+'" aria-pressed="'+String(!i)+'" data-category="'+c+'">'+c+'</button>').join('')+'</div><p class="muted" id="forum-loaded-note"></p><div id="forum-topic-list"></div><button class="button secondary" id="forum-more" type="button">加载更多讨论</button><section id="topic-compose" class="lab-compose" hidden><h2>提出问题</h2><form id="topic-form"><label class="form-field"><span>问题标题</span><input name="title" minlength="5" maxlength="180" required></label><div class="form-grid"><label class="form-field"><span>分类</span><select name="category">'+['使用问题','数据与清洗','统计与信号','Python 编程','回测与验证','其他问题'].map(c=>'<option>'+c+'</option>').join('')+'</select></label><label class="form-field"><span>软件版本</span><input name="version" value="Python" maxlength="50" required></label></div><label class="form-field"><span>问题详情 · Markdown / TeX</span><textarea name="body" rows="14" minlength="10" maxlength="40000" required>## 要解决的问题\n\n## 环境与运行命令\n\n```bash\npython --version\n```\n\n## 最小数据与报错日志\n\n## 已尝试的方法\n</textarea></label><div class="admin-actions"><button class="button" type="submit">发布到讨论中心</button><button type="button" class="button secondary" id="topic-preview">预览</button></div><div class="prose lab-preview" id="topic-preview-body" hidden></div><p class="form-status" role="status"></p></form></section>';
+ function render(){const q=$('#forum-query').value.trim().toLowerCase(),rows=currentRows();const found=rows.filter(t=>(category==='全部'||t.category===category)&&[t.title,t.category,t.version].join(' ').toLowerCase().includes(q));$('#forum-topic-list').innerHTML=found.map(t=>'<article class="community-topic-card"><a class="lab-topic-row" href="/community/?topic='+t.id+'"><span class="topic-symbol">'+(t.status==='resolved'?'✓':t.pinned?'↑':'?')+'</span><div><h3>'+(t.pinned?'<span class="pill community-pinned">置顶</span> ':'')+esc(t.title)+'</h3><p>'+esc(t.category)+' · '+esc(t.version)+'</p><div class="community-byline topic-byline" data-forum-author="'+esc(t.id)+'">'+lab.authorMeta(t)+'</div></div><span class="pill">'+esc(({open:'待解决',resolved:'已解决',closed:'已关闭'})[t.status])+'</span></a>'+lab.likeButton('question',t.id)+'</article>').join('')||(statusLoading?'<div class="lab-empty">正在加载讨论…</div>':loadError?'<div class="lab-empty"><p>讨论暂时无法加载。</p><button type="button" class="button secondary" id="retry-forum">重新加载</button></div>':q.trim()||category!=='全部'||forumStatus?'<div class="lab-empty"><h2>没有匹配的问题</h2><p>可以换一个关键词，或清除筛选查看已加载的讨论。</p><button class="button secondary" type="button" id="clear-forum-filters">清除筛选</button></div>':'<div class="lab-empty"><h2>还没有讨论</h2><p>登录 GitHub 账号后，可以提出第一个问题。</p></div>');const retry=$('#retry-forum');if(retry)retry.onclick=()=>void selectStatus(forumStatus);const clear=$('#clear-forum-filters');if(clear)clear.onclick=()=>{$('#forum-query').value='';category='全部';$('#forum-filters').querySelectorAll('button').forEach(b=>{const selected=b.dataset.category===category;b.classList.toggle('selected',selected);b.setAttribute('aria-pressed',String(selected));});if(forumStatus)void selectStatus('');else render();$('#forum-query').focus();};}
+ function updateLoaded(){
+  const page=cachedPage(forumStatus),note=$('#forum-loaded-note'),more=$('#forum-more');
+  note.setAttribute('role','status');note.setAttribute('aria-live','polite');
+  note.textContent=statusLoading?(page?'正在更新讨论…':'正在加载讨论…'):loadError?(page?'更新未完成，当前显示已加载的讨论。':'讨论暂时无法加载，请重试。'):'已加载 '+(page?.rows.length||0)+' 个讨论；关键词与分类筛选应用于当前已加载内容。';
+  $('#forum-topic-list').setAttribute('aria-busy',String(statusLoading));
+  more.hidden=!page?.more;more.disabled=statusLoading;
+ }
+ function refreshAuthors(rows){
+  void lab.names(rows.map(row=>row.author_id)).then(()=>{
+   if(!forum.isConnected)return;const byId=new Map(currentRows().map(row=>[row.id,row]));
+   for(const node of forum.querySelectorAll('[data-forum-author]')){const row=byId.get(node.dataset.forumAuthor);if(row)node.innerHTML=lab.authorMeta(row);}
+  }).catch(()=>{});
+ }
+ async function loadStatus(append=false){
+  statusRequest?.abort();const request=statusRequest=new AbortController(),version=++requestVersion,status=forumStatus,previous=cachedPage(status),offset=append?previous.offset:0;
+  statusLoading=true;loadError='';if(!previous)render();updateLoaded();
+  const timeout=setTimeout(()=>request.abort(),10000);
+  try{
+   const batch=lab.check(await threadQuery(status).range(offset,offset+pageSize-1).abortSignal(request.signal));
+   if(version!==requestVersion||status!==forumStatus)return;
+   const rows=append?[...previous.rows]:[],known=new Set(rows.map(row=>row.id));
+   rows.push(...batch.filter(row=>!known.has(row.id)));
+   statusPages.set(status,{rows,offset:offset+batch.length,more:batch.length===pageSize,at:append?previous.at:Date.now()});
+   // A refreshed all-status list supersedes older status snapshots.
+   if(!status&&!append){statusPages.delete('open');statusPages.delete('resolved');}
+   statusLoading=false;render();refreshAuthors(rows);
+  }catch(error){
+   if(version!==requestVersion||status!==forumStatus)return;
+   statusLoading=false;loadError=error.message||'讨论暂时无法加载';render();window.foamNotify?.('讨论更新失败，请重试。');
+  }finally{clearTimeout(timeout);if(version===requestVersion){statusRequest=null;updateLoaded();}}
+ }
+ async function selectStatus(next){
+  const cached=cachedPage(next),fresh=cached&&Date.now()-cached.at<cacheLifetime;
+  if(next===forumStatus&&(statusLoading||fresh&&!loadError))return;
+  statusRequest?.abort();statusRequest=null;++requestVersion;statusLoading=false;loadError='';forumStatus=next;
+  $('#forum-status-filters').querySelectorAll('button').forEach(button=>{const selected=button.dataset.forumStatus===next;button.classList.toggle('selected',selected);button.setAttribute('aria-pressed',String(selected));});
+  const url=new URL(location.href);if(next)url.searchParams.set('status',next);else url.searchParams.delete('status');history.replaceState(history.state,'',url);
+  if(!cached)statusLoading=true;render();updateLoaded();
+  if(cached)refreshAuthors(cached.rows);
+  if(!fresh)await loadStatus();
+ }
+ $('#forum-more').onclick=()=>{if(!statusLoading&&cachedPage(forumStatus)?.more)void loadStatus(true);};
+ $('#forum-status-filters').onclick=e=>{const button=e.target.closest('[data-forum-status]');if(button)void selectStatus(button.dataset.forumStatus);};
+ $('#forum-query').oninput=render;
+ $('#forum-filters').onclick=e=>{const b=e.target.closest('[data-category]');if(!b)return;category=b.dataset.category;$('#forum-filters').querySelectorAll('button').forEach(x=>{x.classList.toggle('selected',x===b);x.setAttribute('aria-pressed',String(x===b));});render();};
+ window.addEventListener('pagehide',()=>{++requestVersion;statusRequest?.abort();statusRequest=null;statusLoading=false;});
+ window.addEventListener('pageshow',event=>{if(event.persisted){statusPages.clear();void loadStatus();}});
+ render();updateLoaded();refreshAuthors(initialRows);
+ const canCreate=lab.role!=='blocked'&&(lab.settings?.discussion_open!==false||lab.role==='admin');if(!canCreate){$('#new-topic').disabled=true;$('#new-topic').textContent=lab.role==='blocked'?'此账号暂不能发言':'暂时停止新建讨论';$('#forum-topic-list').insertAdjacentHTML('beforebegin','<p class="lab-evidence">'+(lab.role==='blocked'?'此账号的发言权限已停用，仍可阅读公开讨论。':'管理员暂时关闭新建讨论，已有公开问题与回答仍可阅读。')+'</p>');}const source={title:(forumParams.get('about')||'').trim().slice(0,180),slug:'',kind:''};const from=forumParams.get('from')||'';if(/^[a-z0-9][a-z0-9_/-]{0,179}$/.test(from)){try{const result=lab.check(await lab.client.from('foamlab_content').select('slug,title,kind,metadata').eq('slug',from).eq('status','published').maybeSingle());if(result&&!result.metadata?.admin_only){source.title=result.title;source.slug=result.slug;source.kind=result.kind;}}catch{}}
+ const compose=$('#topic-compose'),topicForm=$('#topic-form'),newTopic=$('#new-topic');if(source.title){const context=document.createElement('section');context.className='forum-source lab-evidence';context.setAttribute('aria-label','提问来源');const label=document.createElement('strong');label.textContent=source.kind==='lesson'?'来源课程':'来源内容';const description=document.createElement('p');if(source.slug){const link=document.createElement('a');link.href='/read/?slug='+encodeURIComponent(source.slug);link.textContent=source.title+' →';description.append(link);}else description.textContent=source.title;context.append(label,description);forum.prepend(context);context.after(compose);topicForm.elements.title.value='关于「'+source.title.slice(0,160)+'」的问题';if(canCreate)newTopic.textContent=lab.user?(source.kind==='lesson'?'针对本课提问':'针对这篇内容提问'):'登录后提问';}
+ function openCompose(scroll=true){compose.hidden=false;if(scroll){compose.scrollIntoView({behavior:'smooth',block:'start'});topicForm.elements.title.focus({preventScroll:true});}}
+ newTopic.onclick=async()=>{if(!canCreate)return;if(!lab.user){const u=new URL(location.href);u.searchParams.set('compose','1');history.replaceState(history.state,'',u.pathname+u.search+u.hash);newTopic.disabled=true;try{await lab.login();}catch{window.foamNotify?.('登录暂时无法发起，请稍后重试。');}finally{newTopic.disabled=false;}return;}openCompose();};if(lab.user&&canCreate&&(source.title||forumParams.get('compose')==='1'))openCompose(!source.title);
+ $('#topic-preview').onclick=()=>{const p=$('#topic-preview-body');p.innerHTML=lab.markdown($('#topic-form').elements.body.value);p.hidden=!p.hidden;};$('#topic-form').onsubmit=async e=>{e.preventDefault();const f=e.currentTarget,b=f.querySelector('[type=submit]');b.disabled=true;try{if(!canCreate)throw Error('当前无法新建讨论。');const title=f.elements.title.value.trim(),body=f.elements.body.value.trim();if(title.length<5||body.length<10)throw Error('标题至少需要 5 个有效字符，问题详情至少需要 10 个有效字符。');await lab.ensureProfile();const r=lab.check(await lab.client.from('foamlab_threads').insert({title,body,category:f.elements.category.value,version:f.elements.version.value,author_id:lab.user.id}).select('id').single());location.href='/community/?topic='+r.id;}catch(err){f.querySelector('.form-status').textContent=err.message;b.disabled=false;}};
+ }catch(e){lab.error(forum,e);}})();
+})();

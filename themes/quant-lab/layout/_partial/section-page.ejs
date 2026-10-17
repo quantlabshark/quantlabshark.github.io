@@ -1,0 +1,3 @@
+<% const intro=section_page_content(key,defaults); %>
+<div class="page-heading"><h1><%= intro.name %></h1><p <%= intro.subtitle?'':'hidden' %>><%= intro.subtitle %></p></div>
+<div class="prose section-page-intro" data-section-page-body <%= intro.body?'':'hidden' %>><%- intro.html %></div>

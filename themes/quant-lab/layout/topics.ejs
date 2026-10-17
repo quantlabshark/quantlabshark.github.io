@@ -1,0 +1,6 @@
+<div class="page-wrap topics-page" id="topic-hub" data-page-state="loading" data-topic="<%= page.topic || '' %>" data-root="<%= page.collection_root || 'topics' %>" data-collection-label="<%= page.collection_label || '专题' %>">
+  <div class="eyebrow"><%= page.collection_root === 'programming' ? 'OPENFOAM / PROGRAMMING' : 'OPENFOAM / TOPIC COLLECTIONS' %></div>
+  <div class="page-heading"><h1><%= page.title %></h1><p><%= page.description %></p></div>
+  <div class="page-content-loading" role="status"><span>正在读取<%= page.collection_label || '专题' %>课程…</span><i></i><i></i><i></i></div>
+  <noscript><p>请启用 JavaScript 后查看课程目录。</p></noscript>
+</div>

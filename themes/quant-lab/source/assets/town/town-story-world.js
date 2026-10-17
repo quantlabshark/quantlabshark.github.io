@@ -1,0 +1,108 @@
+'use strict';
+/* Authored connected landscapes. Geometry and collision share the same dimensions. */
+(() => {
+ const D=window.FoamTownStoryData;
+ const scene=id=>D.scenes.find(s=>s.id===id);
+ const svg=(body,box='0 0 200 200')=>`<svg viewBox="${box}" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">${body}</svg>`;
+ const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ let buildingCropId=0;
+ function building(id,i){
+  if(id==='summit'&&i===1)return svg('<image href="/assets/town/story-observatory.webp" width="200" height="200"/>');
+  const row=['forest','valley','wetland','summit'].indexOf(id),xs=[0,378,725,1086],ys=[0,343,707,1028,1448];
+  if(row>=0){
+   const x=xs[i],y=ys[row],width=xs[i+1]-x,height=ys[row+1]-y,clip='story-building-crop-'+(++buildingCropId);
+   // A square viewport leaves gutters around a rectangular atlas cell. Clip the
+   // image to the cell itself so adjacent buildings cannot appear in those gutters.
+   return svg(`<defs><clipPath id="${clip}" clipPathUnits="userSpaceOnUse"><rect x="${x}" y="${y}" width="${width}" height="${height}"/></clipPath></defs><image href="/assets/town/story-buildings-atlas.webp" width="1086" height="1448" clip-path="url(#${clip})"/>`,`${x} ${y} ${width} ${height}`);
+  }
+  const roof={forest:'#628258',valley:'#aa6851',wetland:'#527d82',summit:'#687b9a'}[id],wall={forest:'#e9d9a7',valley:'#e6c8a1',wetland:'#eee0b9',summit:'#ddd8bc'}[id];
+  const base=`<ellipse cx="100" cy="184" rx="91" ry="12" fill="#344738" opacity=".19"/><path d="M32 93h136v86H32z" fill="${wall}" stroke="#5c6147" stroke-width="4"/><path d="M27 94V77L99 29l75 48v17z" fill="${roof}" stroke="#435440" stroke-width="4"/><path d="m32 80 67-43 69 43M47 73h108M69 57h63" fill="none" stroke="#f3dfad" stroke-opacity=".4" stroke-width="4"/><path d="M32 147h136v9H32z" fill="#ad946b"/><path d="M88 130h28v49H88z" fill="#695e4a" stroke="#434d3f" stroke-width="4"/><circle cx="108" cy="155" r="2" fill="#ead47f"/><path d="M44 106h29v26H44zM131 106h26v26h-26z" fill="#8bb6ba" stroke="#566956" stroke-width="4"/><path d="M58 106v26m-14-13h29m70-13v26m-12-13h26" stroke="#e6e4b7" stroke-width="3"/><path d="M25 180h150v8H25z" fill="#ad9e7a" stroke="#657055" stroke-width="3"/>`;
+  const waterwheel=`<g class="story-wheel" style="transform-origin:35px 146px"><circle cx="35" cy="146" r="37" fill="#a47b4c" stroke="#574c3c" stroke-width="6"/><circle cx="35" cy="146" r="25" fill="#516c64" stroke="#d7ba7e" stroke-width="5"/>${Array.from({length:8},(_,j)=>`<path d="M35 110v72" transform="rotate(${j*45} 35 146)" stroke="#e1bc7e" stroke-width="5"/>`).join('')}<circle cx="35" cy="146" r="7" fill="#666457"/></g>`;
+  if(id==='forest'&&i===0)return svg(base+waterwheel);
+  if(id==='valley'&&i===0)return svg(base+`<path d="M16 122h51v44H16z" fill="#879a8d" stroke="#45594c" stroke-width="4"/><circle cx="40" cy="145" r="17" fill="#344d48"/><path d="m40 145-4-14 13 7-9 7 13 6-13 8v-14l-12 8 1-14z" fill="#d4d8bb"/><path d="M135 139h56v23h-56" fill="#8ca393" stroke="#45594c" stroke-width="4"/>`);
+  if(id==='valley'&&i===1)return svg(`<ellipse cx="100" cy="186" rx="70" ry="12" fill="#374c38" opacity=".2"/><path d="m62 179 17-83h43l17 83z" fill="#d1c597" stroke="#60684f" stroke-width="5"/><path d="M75 102h51M71 123h58M67 146h66" stroke="#b09d77" stroke-width="5"/><path d="M90 150h23v32H90z" fill="#4f5e4f"/><path d="m72 96 30-25 29 25" fill="#5c8068" stroke="#445544" stroke-width="5"/><path d="M103 83V21m-28 10h60l-13-8m13 8-13 8" stroke="#4f685d" stroke-width="5"/><g class="story-wheel" style="transform-origin:103px 82px">${[0,90,180,270].map(a=>`<path d="M103 82V18h15v48z" transform="rotate(${a} 103 82)" fill="#f5e6b9" stroke="#6b785c" stroke-width="3"/>`).join('')}<circle cx="103" cy="82" r="8" fill="#c29154"/></g>`);
+  if(id==='summit'&&i===0)return svg(`<ellipse cx="100" cy="184" rx="90" ry="12" fill="#374c38" opacity=".2"/><path d="M19 98 99 39l82 59v78H19z" fill="#b6cfb7" stroke="#586f5b" stroke-width="4"/><path d="M99 39v137M19 98h162M43 80v96M70 60v116m57-116v116m28-96v96M19 134h162" stroke="#e9e4bd" stroke-width="5"/><path d="M27 142h145v26H27z" fill="#887856"/>${[42,65,137,159].map(x=>`<path d="M${x} 160v-29m0 12-11-10m11 4 10-15" stroke="#4a8060" stroke-width="6"/>`).join('')}<path d="M84 124h31v52H84z" fill="#779a8e" stroke="#e9e4bd" stroke-width="4"/><path d="M13 179h174" stroke="#6a765b" stroke-width="8"/>`);
+  if(id==='summit'&&i===1)return svg(base+`<path d="M48 89a51 51 0 0 1 102 0z" fill="#a3b4b8" stroke="#526a75" stroke-width="4"/><path d="M99 38v51M63 56l73 23" stroke="#dce3c8" stroke-width="4"/><path d="m93 69 39-32 12 14-38 31z" fill="#597586" stroke="#435c64" stroke-width="4"/>`);
+  if(id==='wetland'&&i===1)return svg(base+`<path d="M28 144h40v35H28zM136 143h39v36h-39z" fill="#9f8e65" stroke="#5c6551" stroke-width="3"/><path d="M35 113h26v59H35z" fill="#b3d2c2" stroke="#566e61" stroke-width="3"/><path d="M37 145h22v24H37z" fill="#c5a477"/><path d="M141 123h28v49h-28z" fill="#c2ded1" stroke="#566e61" stroke-width="3"/>`);
+  if(id==='wetland'&&i===2)return svg(base+`<path d="M22 139h39v38H22z" fill="#9bc7c9" stroke="#536f63" stroke-width="3"/>${[[32,166,5],[48,152,7],[37,142,3]].map(([x,y,r])=>`<circle cx="${x}" cy="${y}" r="${r}" fill="#def0db" stroke="#6caaa9" stroke-width="2"/>`).join('')}`);
+  if(id==='forest'&&i===1)return svg(base+`<path d="M129 143h49v35h-49z" fill="#ecdcaa" stroke="#626e51" stroke-width="3"/><path d="M134 171 146 152l13 9 13-11" fill="none" stroke="#6a9486" stroke-width="3"/><path d="M27 137v43m-7-34h26" stroke="#5d6950" stroke-width="4"/>`);
+  return svg(base+`<path d="M126 144h48v30h-48z" fill="#f0e5ba" stroke="#67765b" stroke-width="3"/><path d="M132 166h34m-34-7h22m-22-7h29" stroke="#719081" stroke-width="3"/>`);
+ }
+ function decorate(g){const s=g.config.scene,id=s.id,w=g.world,W=g.width,H=g.height;
+  w.classList.add('town-game-world','story-landscape');w.dataset.scene=id;w.dataset.quiet=String(g.config.muted?.()||false);w.style.width=W+'px';w.style.height=H+'px';g.obstacles=[];g.streetSigns=[];
+  const colors={forest:['#88a46b','#426f58','#63875b'],valley:['#aeb081','#787c63','#939576'],wetland:['#9db888','#477f77','#7d9c71'],summit:['#91aca2','#667f84','#7d9b8a']}[id];
+  const path=s.roads;g.pathData=path;
+  const roadPoints=[];for(const d of path){const p=document.createElementNS('http://www.w3.org/2000/svg','path');p.setAttribute('d',d);const len=p.getTotalLength();for(let v=0;v<=len;v+=32){const at=p.getPointAtLength(v);roadPoints.push(at);}}
+  const onRoad=(x,y,r=90)=>roadPoints.some(p=>Math.hypot(x-p.x,y-p.y)<r);
+  let details='',water='',mountains='';
+  if(id==='forest'){
+   water='<path d="M327 389Q550 470 890 442" fill="none" stroke="#77947a" stroke-width="32"/><path data-fishing-water="水车旁渠" data-fishing-stroke="true" d="M327 389Q550 470 890 442" fill="none" stroke="#75a8a7" stroke-width="20"/><path data-fishing-water="竹林溪流" data-fishing-exclude="830,667,250,137" d="M860 0h180v1440H860z" fill="#578f92"/><path d="M888 0h124v1440H888z" fill="#81b8b7"/>';
+   g.obstacles.push({x:852,y:0,w:192,h:674},{x:852,y:804,w:192,h:636});
+   details+=`<g fill="#dfc38b" stroke="#786a4f" stroke-width="6"><path d="M833 678h236v117H833z"/>${Array.from({length:12},(_,i)=>`<path d="M${837+i*20} 680v113"/>`).join('')}<path d="M832 674h239m-239 122h239" stroke="#edd5a0" stroke-width="12"/></g>`;
+   for(let y=90;y<1400;y+=100)if(y<640||y>810)details+=`<path d="m920 ${y} 32 9 32-9m-57 28 25 7 25-7" fill="none" stroke="#e0e6c4" stroke-width="4" opacity=".6"/>`;
+  }else if(id==='wetland'){
+   water='<path d="M610 70h450l50 60v395l-70 61H670l-60-70z" fill="#698f77"/><path data-fishing-water="湿地湖泊" data-fishing-exclude="1002,507,242,182;765,315,174,70" d="M630 92h415l45 53v364l-62 55H684l-54-60z" fill="#83b7b4"/><path data-fishing-water="湿地浅塘" d="M80 1190h670v170H80z" fill="#88b7ae"/>';
+   g.obstacles.push({x:610,y:70,w:500,h:510},{x:80,y:1190,w:670,h:170});
+
+
+   for(let i=0;i<20;i++){const x=641+(i*137)%416,y=121+(i*61)%348;details+=`<path class="story-water-glint" d="m${x} ${y} 25 3 18-3" fill="none" stroke="#cde3c5" stroke-width="3"/>`;}
+   details+=`<image href="/assets/town/story-dock.webp" x="1002" y="507" width="242" height="182"/><image class="story-floating-boat" href="/assets/town/story-boat.webp" x="703" y="251" width="290" height="194"/>`;
+  }else{
+   mountains=Array.from({length:6},(_,i)=>{const x=i*330-70;if(id==='valley'&&x<1610&&x+350>1390)return '';return `<image href="/assets/town/story-rocks.webp" x="${x}" y="-115" width="365" height="240"/>`;}).join('');
+   if(id==='valley')g.obstacles.push({x:0,y:0,w:1400,h:140},{x:1600,y:0,w:320,h:140},{x:0,y:1320,w:W,h:120});
+   else g.obstacles.push({x:0,y:0,w:W,h:100},{x:0,y:1320,w:180,h:120},{x:380,y:1320,w:1540,h:120});
+   details+=`<image href="/assets/town/story-rocks.webp" x="675" y="280" width="430" height="285"/>${id==='valley'?'<path d="M893 338V200" stroke="#58645a" stroke-width="7"/><path d="M897 202h40v7h28v20h-34v-8h-34z" fill="#c88764" stroke="#745e4c" stroke-width="3"/><path d="M912 203v17m31-9v16" stroke="#efddb6" stroke-width="11"/>':''}`;
+   g.obstacles.push({x:685,y:325,w:400,h:230});
+  }
+  const defs=`<defs><pattern id="story-grass" width="90" height="72" patternUnits="userSpaceOnUse"><rect width="90" height="72" fill="${colors[0]}"/><path d="m12 21 4-7 2 8m48 21 3-6 3 6m-51 23 2-5 2 5" fill="none" stroke="${colors[2]}" stroke-width="3"/><path d="M48 9h5m-14 39h3m40 11h4" stroke="#d2ca93" stroke-width="3" opacity=".55"/></pattern><g id="story-tree"><ellipse cx="0" cy="25" rx="37" ry="13" fill="#344f43" opacity=".22"/><path d="M-7-20h14v49H-7z" fill="#837951"/><path d="M-32-25h-12v-28h11v-23h17v-14h32v14h17v23h11v28H32v16h-64z" fill="${colors[1]}" stroke="#3d6553" stroke-width="4"/><path d="M-28-34h-8v-21h11v-21h13v-8H7v12h-18v21h-17z" fill="#aac280" opacity=".6"/><path d="M-21-17h45v-12h12" fill="none" stroke="#325f4c" stroke-width="7"/></g></defs>`;
+  let flora='';let seed={forest:37,valley:129,wetland:71,summit:201}[id];const rand=()=>((seed=seed*1664525+1013904223>>>0)/4294967296);
+  for(let i=0;i<({forest:220,valley:105,wetland:140,summit:120}[id]);i++){const x=80+rand()*(W-160),y=100+rand()*(H-200);if(onRoad(x,y,110)||s.plots.some(([px,py])=>x>px-100&&x<px+290&&y>py-110&&y<py+390)||g.obstacles.some(o=>x>o.x-60&&x<o.x+o.w+60&&y>o.y-70&&y<o.y+o.h+50)||x>650&&x<1130&&y<610)continue;flora+=`<div class="town-game-tree ${i%19===0?'story-breeze':''}" style="left:${Math.round(x-67)}px;top:${Math.round(y-133)}px;z-index:${Math.round(y)};pointer-events:none;${id==='summit'?'filter:saturate(.7) hue-rotate(18deg)':''}">${window.FoamTownGameArt.scenery(id==='forest'&&i%3?1:0)}</div>`;g.obstacles.push({x:x-14,y:y-12,w:28,h:28});}
+  for(let i=0;i<100;i++){const x=70+rand()*(W-140),y=180+rand()*(H-300);if(onRoad(x,y,65)||g.obstacles.some(o=>x>o.x-35&&x<o.x+o.w+35&&y>o.y-35&&y<o.y+o.h+35)||s.plots.some(([px,py])=>x>px-25&&x<px+225&&y>py-30&&y<py+260))continue;flora+=`<div class="town-game-flower" style="left:${Math.round(x)}px;top:${Math.round(y)}px;z-index:1;pointer-events:none">${window.FoamTownGameArt.flower(i)}</div>`;}
+  if(id==='wetland'){
+   // Small, uneven clumps share the meadow's pixel art. Coordinates mark their
+   // roots on dry banks, with gaps between patches and clear access to the dock.
+   const banks=[[684,605,40],[714,617,29],[788,608,46],[826,619,32],[910,609,35],[950,598,43],
+    [708,86,35],[741,76,25],[848,82,40],[925,76,30],[976,85,35],
+    [594,220,36],[585,350,27],[600,485,39],
+    [114,1185,42],[173,1188,28],[258,1182,37],[287,1188,25],[411,1185,45],[471,1188,31],[647,1184,38],[701,1187,29]];
+   const dock={x:1002,y:507,w:242,h:182},clearance=22;
+   banks.forEach(([x,y,size],i)=>{
+    const left=x-size/2,top=y-size;
+    if(left<dock.x+dock.w+clearance&&left+size>dock.x-clearance&&top<dock.y+dock.h+clearance&&y>dock.y-clearance)return;
+    if(onRoad(x,y,95)||s.plots.some(([px,py])=>left<px+220&&left+size>px-20&&top<py+220&&y>py-20))return;
+    flora+=`<div class="town-game-flower story-bank-plant" style="left:${left}px;top:${top}px;width:${size}px;height:${size}px;z-index:1;pointer-events:none;animation-delay:${-i*.43}s" aria-hidden="true">${window.FoamTownGameArt.flower(i%4===1?4:2)}</div>`;
+   });
+  }
+  const textures=`<defs><pattern id="story-grass-texture" width="260" height="260" patternUnits="userSpaceOnUse"><image href="/assets/town/terrain-atlas.webp" width="520" height="520"/></pattern><pattern id="story-water-texture" width="210" height="210" patternUnits="userSpaceOnUse"><image href="/assets/town/terrain-atlas.webp" y="-210" width="420" height="420"/></pattern><pattern id="story-road-texture" width="210" height="210" patternUnits="userSpaceOnUse"><image href="/assets/town/terrain-atlas.webp" x="-210" width="420" height="420"/></pattern></defs>`;
+  const ground=document.createElement('div');ground.className='town-game-ground story-ground';ground.innerHTML=svg(`${defs}${textures}<rect width="${W}" height="${H}" fill="url(#story-grass-texture)"/><rect width="${W}" height="${H}" fill="${colors[0]}" opacity="${id==='forest'?.24:id==='valley'?.55:.4}"/>${mountains}${water.replace(/fill="#(?:81b8b7|83b7b4|88b7ae)"/g,'fill="url(#story-water-texture)"')}<g fill="none" stroke-linecap="round"><g stroke="#8d9b6a" stroke-width="91">${path.map(d=>`<path d="${d}"/>`).join('')}</g><g stroke="#bcaa7d" stroke-width="81">${path.map(d=>`<path d="${d}"/>`).join('')}</g><g stroke="url(#story-road-texture)" stroke-width="76" opacity="1">${path.map(d=>`<path d="${d}"/>`).join('')}</g></g>${details}`,`0 0 ${W} ${H}`);w.prepend(ground);w.insertAdjacentHTML('beforeend',flora);if(id==='valley'){const model=document.createElement('div');model.className='story-airfoil';model.style.cssText='position:absolute;left:735px;top:390px;width:330px;height:220px;z-index:610;pointer-events:none';model.innerHTML='<img src="/assets/town/story-airfoil.webp" alt="前缘圆钝、后缘尖细的翼型模型，支撑在试验台上" width="330" height="220">';w.append(model);}
+  w.querySelectorAll('[data-building]').forEach((el,i)=>{const p=g.positions[i];el.style.left=p.x+'px';el.style.top=p.y+'px';el.style.zIndex=String(p.y+194);el.querySelector('svg').outerHTML=building(id,i);el.dataset.doorX=p.x+100;el.dataset.doorY=p.y+216;g.obstacles.push({x:p.x+22,y:p.y+62,w:156,h:132});});
+  g.lights=document.createElement('div');g.lights.className='town-game-lights';g.lights.style.width=W+'px';g.lights.style.height=H+'px';g.viewport.append(g.lights);g.lampPositions=[];g.buildMinimap();
+  g.mini.querySelector('svg>path')?.remove();g.mini.querySelector('svg>ellipse')?.remove();g.mini.querySelector('svg>rect').setAttribute('fill',colors[0]);g.mini.querySelector('svg>rect').insertAdjacentHTML('afterend',water);
+  g.mini.querySelector('.town-mini-head b').textContent=s.name;
+ }
+ function exits(g){return g.config.scene?.exits||[{to:'forest',edge:'south',x:720,y:g.height},{to:'valley',edge:'south',x:1640,y:g.height}];}
+ function gate(g,e){return {x:Math.max(76,Math.min(g.width-76,e.x)),y:Math.max(88,Math.min(g.height-76,e.y))};}
+ function entrance(g,from){const e=exits(g).find(e=>e.to===from)||exits(g)[0],at={x:e.x,y:e.y};
+  if(e.edge==='west')at.x=210;if(e.edge==='east')at.x=g.width-210;if(e.edge==='north')at.y=215;if(e.edge==='south')at.y=g.height-215;
+  return g.open(at.x,at.y);
+ }
+ function portals(g,go){
+  const gates=exits(g).map(e=>{const at=gate(g,e),el=document.createElement('div'),side=e.edge==='north'||e.edge==='south';
+   const sx=side?at.x+(at.x>g.width/2?-110:110):at.x,sy=side?at.y-25:at.y-80;
+   el.className='story-waypost';el.dataset.edge=e.edge;el.setAttribute('aria-label','路牌：'+scene(e.to).name);el.style.left=Math.max(5,Math.min(g.width-145,sx-70))+'px';el.style.top=Math.max(12,sy-65)+'px';el.style.zIndex=String(Math.round(sy+1));
+   el.innerHTML=`<b>${({west:'←',east:'→',north:'↑',south:'↓'})[e.edge]} ${esc(scene(e.to).name)}</b>`;wAppend(g,el);return {...e,at};
+  });
+  g.storyGates=gates;let switching=false,age=0,transitionTimer,recoveryTimer;
+  const place=scene(g.config.scene?.id||'village'),title=document.createElement('div');title.className='story-place-title';title.setAttribute('role','status');title.innerHTML=`<small>流动观测站</small><strong>${esc(place.name)}</strong><span>${esc(place.subtitle)}</span>`;g.viewport.parentElement.append(title);const titleTimer=setTimeout(()=>title.remove(),3900);
+  const arrival=document.createElement('div');arrival.className='story-scene-arrival';g.viewport.parentElement.append(arrival);setTimeout(()=>arrival.remove(),500);
+  g.extras.push({update(dt){age+=dt;if(switching||age<.8||!g.config.playable)return;
+   const edge=gates.find(e=>Math.hypot(g.me.x-e.at.x,g.me.y-e.at.y)<54);if(!edge)return;
+   switching=true;g.stopMovement();g.locked=true;
+   const cover=document.createElement('div');cover.className='story-scene-transition';cover.setAttribute('aria-label','正在前往'+scene(edge.to).name);g.viewport.parentElement.append(cover);
+   transitionTimer=setTimeout(()=>{if(window.FoamTownGame.active===g)go(edge.to);},260);
+   recoveryTimer=setTimeout(()=>{if(window.FoamTownGame.active!==g)return;cover.remove();g.locked=false;switching=false;age=-2;g.emit('hint','这条路暂时没能接通，稍后再往路口走试试。');},8000);
+  },destroy(){clearTimeout(transitionTimer);clearTimeout(recoveryTimer);clearTimeout(titleTimer);title.remove();},minimap:()=>gates.map(p=>`<circle cx="${p.at.x}" cy="${p.at.y}" r="26" fill="#f3d896" stroke="#7f6542" stroke-width="9"/>`).join('')});return gates;
+ }
+ function wAppend(g,e){g.world.append(e);}
+ window.FoamTownStoryWorld={scene,decorate,portals,building,entrance,exits};
+})();

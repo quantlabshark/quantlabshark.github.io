@@ -1,0 +1,54 @@
+/* search-matches.css */
+#search-dialog{width:min(900px,calc(100vw - 30px))}
+.search-scopes{display:flex;gap:14px;margin:0 0 16px;flex-wrap:wrap}
+.search-scopes label{display:grid;grid-template-columns:4em minmax(0,1fr);align-items:center;gap:9px;font-size:13px;color:var(--muted);min-width:0;flex:1}
+.search-scopes label[hidden]{display:none}
+.search-scopes select{min-width:0;width:100%;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:var(--paper,#fff);color:var(--ink);font:inherit}
+html[data-theme=dark] .search-scopes select{background:#17221e;color:var(--ink)}
+@media(max-width:600px){.search-scopes{gap:10px}.search-scopes label{flex-basis:100%}}
+#search-results{max-height:58vh;padding:10px 0}
+.search-hit{display:block;min-width:0;padding:18px 14px;border-bottom:1px solid var(--line);border-radius:8px;color:var(--ink)}
+.search-hit:focus-visible{outline:2px solid var(--accent);outline-offset:-2px;background:var(--mint)}
+#search-results .search-hit{padding:18px 14px}
+#search-results .search-hit-line,.search-hit .search-hit-line{margin:0 0 7px;font:15px/1.75 var(--mono,Consolas,monospace);color:var(--ink);white-space:pre-wrap;overflow-wrap:anywhere}
+.search-hit mark{background:#f5dc98;color:#343121;border-radius:3px;padding:1px 2px;font-weight:600}
+.search-hit-meta{display:flex;flex-wrap:wrap;align-items:baseline;gap:5px 10px;margin-top:12px;color:var(--muted);font-size:12px}
+#search-results .search-hit-meta strong,.search-hit-meta strong{font-size:13px;font-weight:500;line-height:1.6;color:var(--accent)}
+.search-hit-source{font-size:11px;border:1px solid var(--line);border-radius:4px;padding:1px 5px}
+.search-hit-path{display:block;margin-top:4px;font-size:12px;line-height:1.7;color:var(--muted);overflow-wrap:anywhere}
+#search-results .search-hit-intro,.search-hit .search-hit-intro{margin:5px 0 0;font-size:13px;line-height:1.8;color:var(--muted);overflow-wrap:anywhere}
+#search-results .search-count{font-size:12px;color:var(--muted);margin:4px 12px 10px}
+html[data-theme=dark] .search-hit mark{background:#705b27;color:#fff2c5}
+@media(max-width:600px){#search-dialog{padding:18px}#search-results .search-hit{padding:15px 8px}#search-results .search-hit-line{font-size:14px}.search-hit-path{font-size:10px}}
+
+.tb-hits button.search-hit{display:block;padding:16px!important}.tb-hits .search-hit-meta{font-size:12px}.tb-hits .search-hit-path{font-size:11px}
+
+#search-dialog .search-field input{border:0;outline:none;background:transparent;box-shadow:none;min-width:0}
+
+/* community-likes.css */
+.community-like{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:38px;padding:.45rem .85rem;border:1px solid var(--line,#dce3dc);border-radius:999px;background:var(--surface,#fff);color:var(--muted,#60736b);font:inherit;font-size:.9rem;white-space:nowrap;cursor:pointer;transition:background .15s,color .15s}
+.community-like svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.community-like[aria-pressed=true]{color:var(--accent,#267b64);background:var(--lab-soft,#e5f0e9);border-color:currentColor}
+.community-like[aria-pressed=true] svg{fill:currentColor;fill-opacity:.15}.community-like:disabled{opacity:.65;cursor:wait}.community-like:focus-visible{outline:2px solid var(--accent,#267b64);outline-offset:3px}
+.community-post-actions{display:flex;flex-wrap:wrap;align-items:center;gap:1rem;margin:1.5rem 0}.lab-card>.community-post-actions{margin:0;padding:0 1.5rem 1.4rem}.lab-message>.community-post-actions{margin:.8rem 0 0}
+.community-topic-card{display:flex;align-items:center;gap:1rem;border-bottom:1px solid var(--line,#dce3dc);padding-right:1rem}.community-topic-card>.lab-topic-row{flex:1;min-width:0;border-bottom:0}.community-topic-card>.community-like{flex-shrink:0}
+@media(max-width:600px){.community-topic-card{flex-wrap:wrap;gap:0;padding:0 0 1rem}.community-topic-card>.lab-topic-row{flex-basis:100%}.community-topic-card>.community-like{margin-left:1rem}}
+
+/* town/panda-expansion.css */
+[data-outfit=beanie] .pa-town-form-hat,[data-outfit=strawhat] .pa-town-form-hat,[data-outfit=cap] .pa-town-form-hat,[data-outfit=wizard] .pa-town-form-hat,[data-outfit=raincoat] .pa-town-form-hat{display:none!important}
+[data-action=typing] .pa-town-keyboard,[data-action=photo] .pa-town-camera,[data-action=selfie] .pa-town-camera,[data-action=kite] .pa-town-kite,[data-action=bubbles] .pa-town-bubbles,[data-action=streamline] .pa-town-stream,[data-action=firework] .pa-town-firework{display:block}
+[data-action=typing] .pa-arm-l,[data-action=typing] .pa-arm-r{animation:pa-town-type .35s ease-in-out infinite;transform-origin:80px 111px}[data-action=typing] .pa-arm-r{animation-delay:.17s}
+[data-action=kite] .pa-town-kite{animation:pa-town-kite 2.4s ease-in-out infinite;transform-origin:108px 126px}
+[data-action=bubbles] .pa-town-bubble{animation:pa-town-bubble 2.5s ease-in-out infinite}[data-action=bubbles] .pa-town-bubble:nth-child(2){animation-delay:.6s}[data-action=bubbles] .pa-town-bubble:nth-child(3){animation-delay:1.2s}
+[data-action=photo] .pa-head,[data-action=selfie] .pa-head{animation:pa-town-pose 2s ease-in-out infinite;transform-origin:80px 100px}
+[data-action=taichi] .pa-char{animation:pa-town-taichi 4s ease-in-out infinite;transform-origin:80px 162px}[data-action=taichi] .pa-arm-l,[data-action=streamline] .pa-arm-r{animation:pa-town-arm 3s ease-in-out infinite;transform-origin:80px 114px}
+[data-action=streamline] .pa-town-stream{stroke-dasharray:160;animation:pa-town-draw 2s ease-in-out infinite}
+[data-action=firework] .pa-town-firework{animation:pa-town-firework 1.8s ease-out infinite;transform-origin:80px 12px}
+[data-action=walk] .pa-char,[data-ride=jog][data-action=walk] .pa-char{animation:pa-town-walk .65s ease-in-out infinite;transform-origin:80px 162px}[data-ride=jog][data-action=walk] .pa-char{animation-duration:.35s}
+[data-action=highfive] .pa-arm-r{animation:pa-town-highfive 1.5s ease-in-out 2;transform-origin:113px 110px}
+[data-action=hug] .pa-arm-l,[data-action=hug] .pa-arm-r{animation:pa-town-hug 3s ease-in-out;transform-origin:80px 110px}
+[data-action=duet] .pa-char{animation:pa-town-dance 3s ease-in-out infinite;transform-origin:80px 162px}
+[data-ride=balloon] .pa-mover{animation:pa-town-float 4s ease-in-out infinite}
+@keyframes pa-town-type{50%{translate:0 -5px;rotate:4deg}}@keyframes pa-town-kite{50%{rotate:8deg}}@keyframes pa-town-bubble{0%{translate:0 12px;opacity:0}30%{opacity:.85}100%{translate:8px -30px;opacity:0}}@keyframes pa-town-pose{50%{rotate:-4deg}}@keyframes pa-town-taichi{25%{rotate:-6deg;translate:-5px 2px}75%{rotate:6deg;translate:5px 2px}}@keyframes pa-town-arm{50%{rotate:18deg;translate:0 -6px}}@keyframes pa-town-draw{0%{stroke-dashoffset:160;opacity:0}30%{opacity:1}100%{stroke-dashoffset:0;opacity:0}}@keyframes pa-town-firework{0%{scale:.3;opacity:0}35%{scale:1;opacity:1}100%{scale:1.6;opacity:0}}@keyframes pa-town-walk{25%{rotate:-3deg;translate:0 -3px}75%{rotate:3deg;translate:0 -3px}}@keyframes pa-town-highfive{40%,65%{rotate:-90deg;translate:0 -2px}}@keyframes pa-town-hug{45%,70%{scale:.85 1;translate:0 -7px}}@keyframes pa-town-dance{25%{rotate:-8deg;translate:-5px -3px}75%{rotate:8deg;translate:5px -3px}}@keyframes pa-town-float{50%{translate:0 -7px}}
+[data-quiet=true] .pa-town-part,[data-quiet=true] .pa-town-prop{animation:none!important}@media(prefers-reduced-motion:reduce){.pa-town-part,.pa-town-prop{animation:none!important}.town-resident .pa-char{animation:none!important}}
+

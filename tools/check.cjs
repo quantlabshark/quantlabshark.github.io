@@ -1,0 +1,5 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const root=path.resolve(__dirname,'../docs');let pages=0;const missing=new Set();
+function walk(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const file=path.join(dir,e.name);if(e.isDirectory())walk(file);else if(e.name.endsWith('.html')){pages++;const s=fs.readFileSync(file,'utf8');assert(!/nmkforbzmbstasnjxlid|foamlabshark\.github\.io/.test(s),'Old service in '+file);for(const m of s.matchAll(/(?:src|href)=["'](\/[^"'#?]*)(?:[?#][^"']*)?["']/g)){const target=path.join(root,decodeURIComponent(m[1]),m[1].endsWith('/')?'index.html':'');if(!fs.existsSync(target))missing.add(m[1]);}}}}
+walk(root);const config=JSON.parse(fs.readFileSync(path.join(root,'assets/auth-config.json')));assert.equal(config.supabaseUrl,'https://skqoondpsqzvybnmcaas.supabase.co');assert.equal(missing.size,0,'Missing internal routes/assets: '+[...missing].join(', '));console.log('Checked '+pages+' pages: internal links and isolated service config passed.');

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="QuantLab 小鲨鱼">
+<rect width="160" height="160" rx="42" fill="#edf3e6"/>
+<g stroke="#294751" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+<path fill="#6492a4" d="M112 111q18-5 25-21l5 20 12 12q-13 5-23-3l-16 13zM68 47q-5-27 17-35-1 20 14 34z"/>
+<path fill="#83acba" d="M80 39c28 0 45 22 45 50 0 32-17 57-45 57S35 121 35 89c0-28 17-50 45-50z"/>
+<path fill="#6492a4" d="M41 99q-23 7-27 31 24-6 32-24m73-7q23 7 27 31-24-6-32-24"/>
+</g>
+<path fill="#fffbee" d="M41 87q39-28 78 0c-3 17-6 28-11 39-5 12-15 18-28 18s-23-6-28-18c-5-11-8-22-11-39z"/>
+<path fill="#b7d0d7" d="M45 71q10-26 31-27-22 16-25 35z"/>
+<g fill="#294751"><ellipse cx="62" cy="74" rx="5.8" ry="7.2"/><ellipse cx="98" cy="74" rx="5.8" ry="7.2"/></g>
+<g fill="#fff"><circle cx="64" cy="71.5" r="2"/><circle cx="100" cy="71.5" r="2"/></g>
+<g fill="#eaa99f" opacity=".65"><ellipse cx="49" cy="88" rx="7" ry="3.5"/><ellipse cx="111" cy="88" rx="7" ry="3.5"/></g>
+<path fill="none" stroke="#294751" stroke-width="2.5" stroke-linecap="round" d="M67 93q13 13 26 0"/>
+<path fill="#fff" stroke="#45626a" stroke-width=".8" d="m69 95 5 2-2 5zm17 2 5-2-3 7z"/>
+<path fill="none" stroke="#608b98" stroke-width="2" stroke-linecap="round" d="m45 100-3 7m9-5-2 7m8-4-1 6m59-11 3 7m-9-5 2 7m-8-4 1 6"/>
+<path fill="#4e9984" stroke="#294751" stroke-width="2.3" stroke-linejoin="round" d="M48 112q32 14 64 0l-2 10q-30 12-60 0zm46 10 14-2 1 20-12-2z"/>
+</svg>

@@ -1,0 +1,12 @@
+<% const module = reference_modules().find(item=>item.key===page.reference_module); const entries = model_references(module.key); const categories = [...new Set(entries.map(item=>item.category))]; %>
+<div class="page-wrap fo-quick reference-catalog" data-reference-module="<%= module.key %>">
+ <div class="eyebrow">OPENFOAM v2512 · 配置与示例</div>
+ <div class="page-heading"><h1><%= module.name %></h1><p><%= module.description %></p></div>
+ <nav class="fo-quick-links reference-links" aria-label="参考资料入口"><a href="/quick-reference/">全部速查模块 →</a><a href="/quick-reference/official-modules/">官方模块对照 →</a></nav>
+ <%- partial('_partial/reference-help',{search:'名称、物理用途、配置参数和模型类别。',usage:'先按问题选择分类，再打开条目查看参数表、配置示例和运行方法。示例标明所属算例，初始场与各配置文件分开显示。'}) %>
+ <label class="search-field"><%- icon('search') %><input id="model-query" type="search" aria-label="搜索<%= module.name %>" placeholder="输入名称、用途或参数…"></label>
+ <div class="filter-tabs" role="group" aria-label="条目分类"><% ['全部',...categories].forEach((category,index)=>{ %><button type="button" data-model-category="<%= category %>" class="<%= index===0?'selected':'' %>" aria-pressed="<%= index===0 %>"><%= category %></button><% }); %></div>
+ <div class="fo-quick-results"><p class="result-count" id="model-count" role="status">共 <%= entries.length %> 个条目</p><label>排序 <select id="model-sort"><option value="common">目录顺序</option><option value="name">名称 A–Z</option><option value="name-desc">名称 Z–A</option></select></label></div>
+ <div class="fo-quick-grid" id="model-list" data-loading="true" aria-label="参考条目"><% entries.slice(0,12).forEach(item=>{ %><article class="fo-quick-card"><header><h2><a href="<%= item.url %>"><%= item.name %></a></h2><span class="pill"><%= item.category %></span></header><p><%= item.description %></p><a class="text-link" href="<%= item.url %>">参数、配置与示例 →</a></article><% }); %></div>
+ <noscript><ul><% entries.forEach(item=>{ %><li><a href="<%= item.url %>"><%= item.name %></a>：<%= item.description %></li><% }); %></ul></noscript>
+</div>
