@@ -16,13 +16,13 @@
         "section": "1",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 0,
         "source_pages": [
           1,
           2
         ],
         "question_count": 0,
-        "answers_collapsed": true,
-        "answer_count": 0
+        "answers_collapsed": true
       }
     }
   },
@@ -43,13 +43,13 @@
         "section": "2.1",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 2,
         "source_pages": [
           2,
           3
         ],
         "question_count": 2,
-        "answers_collapsed": true,
-        "answer_count": 2
+        "answers_collapsed": true
       }
     }
   },
@@ -70,6 +70,7 @@
         "section": "2.2",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 8,
         "source_pages": [
           3,
           4,
@@ -77,8 +78,7 @@
           6
         ],
         "question_count": 8,
-        "answers_collapsed": true,
-        "answer_count": 8
+        "answers_collapsed": true
       }
     }
   },
@@ -99,14 +99,14 @@
         "section": "2.3",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 7,
         "source_pages": [
           6,
           7,
           8
         ],
         "question_count": 7,
-        "answers_collapsed": true,
-        "answer_count": 7
+        "answers_collapsed": true
       }
     }
   },
@@ -127,13 +127,13 @@
         "section": "2.4",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 3,
         "source_pages": [
           8,
           9
         ],
         "question_count": 3,
-        "answers_collapsed": true,
-        "answer_count": 3
+        "answers_collapsed": true
       }
     }
   },
@@ -154,14 +154,14 @@
         "section": "2.5",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 4,
         "source_pages": [
           9,
           10,
           11
         ],
         "question_count": 4,
-        "answers_collapsed": true,
-        "answer_count": 4
+        "answers_collapsed": true
       }
     }
   },
@@ -182,13 +182,13 @@
         "section": "2.6",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 5,
         "source_pages": [
           11,
           12
         ],
         "question_count": 5,
-        "answers_collapsed": true,
-        "answer_count": 5
+        "answers_collapsed": true
       }
     }
   },
@@ -209,14 +209,14 @@
         "section": "2.7",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 3,
         "source_pages": [
           12,
           13,
           14
         ],
         "question_count": 3,
-        "answers_collapsed": true,
-        "answer_count": 3
+        "answers_collapsed": true
       }
     }
   },
@@ -237,14 +237,14 @@
         "section": "2.8",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 3,
         "source_pages": [
           14,
           15,
           16
         ],
         "question_count": 3,
-        "answers_collapsed": true,
-        "answer_count": 3
+        "answers_collapsed": true
       }
     }
   },
@@ -265,13 +265,13 @@
         "section": "2.9",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 2,
         "source_pages": [
           16,
           17
         ],
         "question_count": 2,
-        "answers_collapsed": true,
-        "answer_count": 2
+        "answers_collapsed": true
       }
     }
   },
@@ -292,14 +292,14 @@
         "section": "3.1",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 3,
         "source_pages": [
           17,
           18,
           19
         ],
         "question_count": 3,
-        "answers_collapsed": true,
-        "answer_count": 3
+        "answers_collapsed": true
       }
     }
   },
@@ -320,14 +320,14 @@
         "section": "3.2",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 5,
         "source_pages": [
           19,
           20,
           21
         ],
         "question_count": 5,
-        "answers_collapsed": true,
-        "answer_count": 5
+        "answers_collapsed": true
       }
     }
   },
@@ -348,12 +348,12 @@
         "section": "3.3",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 1,
         "source_pages": [
           21
         ],
         "question_count": 1,
-        "answers_collapsed": true,
-        "answer_count": 1
+        "answers_collapsed": true
       }
     }
   },
@@ -374,6 +374,7 @@
         "section": "3.4",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 5,
         "source_pages": [
           21,
           22,
@@ -381,8 +382,7 @@
           24
         ],
         "question_count": 5,
-        "answers_collapsed": true,
-        "answer_count": 5
+        "answers_collapsed": true
       }
     }
   },
@@ -403,14 +403,14 @@
         "section": "3.5",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 6,
         "source_pages": [
           24,
           25,
           26
         ],
         "question_count": 5,
-        "answers_collapsed": true,
-        "answer_count": 6
+        "answers_collapsed": true
       }
     }
   },
@@ -431,6 +431,7 @@
         "section": "3.6",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 5,
         "source_pages": [
           26,
           27,
@@ -439,8 +440,7 @@
           30
         ],
         "question_count": 5,
-        "answers_collapsed": true,
-        "answer_count": 5
+        "answers_collapsed": true
       }
     }
   },
@@ -461,6 +461,7 @@
         "section": "4.1",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 4,
         "source_pages": [
           30,
           31,
@@ -468,8 +469,7 @@
           33
         ],
         "question_count": 4,
-        "answers_collapsed": true,
-        "answer_count": 4
+        "answers_collapsed": true
       }
     }
   },
@@ -490,6 +490,7 @@
         "section": "4.2",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 8,
         "source_pages": [
           33,
           34,
@@ -498,8 +499,7 @@
           37
         ],
         "question_count": 8,
-        "answers_collapsed": true,
-        "answer_count": 8
+        "answers_collapsed": true
       }
     }
   },
@@ -520,6 +520,7 @@
         "section": "4.3",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 20,
         "source_pages": [
           37,
           38,
@@ -531,8 +532,7 @@
           44
         ],
         "question_count": 16,
-        "answers_collapsed": true,
-        "answer_count": 20
+        "answers_collapsed": true
       }
     }
   },
@@ -553,6 +553,7 @@
         "section": "4.4",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 4,
         "source_pages": [
           44,
           45,
@@ -560,8 +561,7 @@
           47
         ],
         "question_count": 4,
-        "answers_collapsed": true,
-        "answer_count": 4
+        "answers_collapsed": true
       }
     }
   },
@@ -582,6 +582,7 @@
         "section": "4.5",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 7,
         "source_pages": [
           47,
           48,
@@ -589,8 +590,7 @@
           50
         ],
         "question_count": 7,
-        "answers_collapsed": true,
-        "answer_count": 7
+        "answers_collapsed": true
       }
     }
   },
@@ -611,14 +611,14 @@
         "section": "4.6",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 3,
         "source_pages": [
           50,
           51,
           52
         ],
         "question_count": 3,
-        "answers_collapsed": true,
-        "answer_count": 3
+        "answers_collapsed": true
       }
     }
   },
@@ -639,6 +639,7 @@
         "section": "5.1",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 6,
         "source_pages": [
           53,
           54,
@@ -648,8 +649,7 @@
           58
         ],
         "question_count": 6,
-        "answers_collapsed": true,
-        "answer_count": 6
+        "answers_collapsed": true
       }
     }
   },
@@ -670,6 +670,7 @@
         "section": "5.2",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 4,
         "source_pages": [
           58,
           59,
@@ -677,8 +678,7 @@
           61
         ],
         "question_count": 4,
-        "answers_collapsed": true,
-        "answer_count": 4
+        "answers_collapsed": true
       }
     }
   },
@@ -699,6 +699,7 @@
         "section": "5.3",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 4,
         "source_pages": [
           61,
           62,
@@ -707,8 +708,7 @@
           65
         ],
         "question_count": 4,
-        "answers_collapsed": true,
-        "answer_count": 4
+        "answers_collapsed": true
       }
     }
   },
@@ -729,6 +729,7 @@
         "section": "5.4",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 9,
         "source_pages": [
           65,
           66,
@@ -737,8 +738,7 @@
           69
         ],
         "question_count": 9,
-        "answers_collapsed": true,
-        "answer_count": 9
+        "answers_collapsed": true
       }
     }
   },
@@ -759,6 +759,7 @@
         "section": "6.1",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 10,
         "source_pages": [
           69,
           70,
@@ -769,8 +770,7 @@
           75
         ],
         "question_count": 10,
-        "answers_collapsed": true,
-        "answer_count": 10
+        "answers_collapsed": true
       }
     }
   },
@@ -791,6 +791,7 @@
         "section": "6.2",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 10,
         "source_pages": [
           75,
           76,
@@ -800,8 +801,7 @@
           80
         ],
         "question_count": 10,
-        "answers_collapsed": true,
-        "answer_count": 10
+        "answers_collapsed": true
       }
     }
   },
@@ -822,14 +822,14 @@
         "section": "6.3",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 4,
         "source_pages": [
           80,
           81,
           82
         ],
         "question_count": 4,
-        "answers_collapsed": true,
-        "answer_count": 4
+        "answers_collapsed": true
       }
     }
   },
@@ -850,6 +850,7 @@
         "section": "6.4",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 5,
         "source_pages": [
           82,
           83,
@@ -857,8 +858,7 @@
           85
         ],
         "question_count": 5,
-        "answers_collapsed": true,
-        "answer_count": 5
+        "answers_collapsed": true
       }
     }
   },
@@ -879,6 +879,7 @@
         "section": "7.1",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 12,
         "source_pages": [
           86,
           87,
@@ -889,8 +890,7 @@
           92
         ],
         "question_count": 12,
-        "answers_collapsed": true,
-        "answer_count": 12
+        "answers_collapsed": true
       }
     }
   },
@@ -911,12 +911,12 @@
         "section": "7.2",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 4,
         "source_pages": [
           92
         ],
         "question_count": 4,
-        "answers_collapsed": true,
-        "answer_count": 4
+        "answers_collapsed": true
       }
     }
   },
@@ -937,6 +937,7 @@
         "section": "7.3",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 7,
         "source_pages": [
           93,
           94,
@@ -944,8 +945,7 @@
           96
         ],
         "question_count": 7,
-        "answers_collapsed": true,
-        "answer_count": 7
+        "answers_collapsed": true
       }
     }
   },
@@ -966,12 +966,12 @@
         "section": "面经与研究",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 3,
         "source_files": [
           "xhs量化面经整理汇总/信弘天禾.docx"
         ],
         "question_count": 3,
-        "answers_collapsed": true,
-        "answer_count": 3
+        "answers_collapsed": true
       }
     }
   },
@@ -992,12 +992,12 @@
         "section": "面经与研究",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 5,
         "source_files": [
           "xhs量化面经整理汇总/蝶威.docx"
         ],
         "question_count": 5,
-        "answers_collapsed": true,
-        "answer_count": 5
+        "answers_collapsed": true
       }
     }
   },
@@ -1018,12 +1018,12 @@
         "section": "面经与研究",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 1,
         "source_files": [
           "xhs量化面经整理汇总/因诺.docx"
         ],
         "question_count": 1,
-        "answers_collapsed": true,
-        "answer_count": 1
+        "answers_collapsed": true
       }
     }
   },
@@ -1044,12 +1044,12 @@
         "section": "面经与研究",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 1,
         "source_files": [
           "xhs量化面经整理汇总/思晔.docx"
         ],
         "question_count": 1,
-        "answers_collapsed": true,
-        "answer_count": 1
+        "answers_collapsed": true
       }
     }
   },
@@ -1070,12 +1070,12 @@
         "section": "面经与研究",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 2,
         "source_files": [
           "xhs量化面经整理汇总/蒙玺.docx"
         ],
         "question_count": 2,
-        "answers_collapsed": true,
-        "answer_count": 2
+        "answers_collapsed": true
       }
     }
   },
@@ -1096,12 +1096,12 @@
         "section": "面经与研究",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 1,
         "source_files": [
           "xhs量化面经整理汇总/燧石.docx"
         ],
         "question_count": 1,
-        "answers_collapsed": true,
-        "answer_count": 1
+        "answers_collapsed": true
       }
     }
   },
@@ -1122,12 +1122,12 @@
         "section": "面经与研究",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 1,
         "source_files": [
           "xhs量化面经整理汇总/洛书.docx"
         ],
         "question_count": 1,
-        "answers_collapsed": true,
-        "answer_count": 1
+        "answers_collapsed": true
       }
     }
   },
@@ -1148,12 +1148,12 @@
         "section": "面经与研究",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 9,
         "source_files": [
           "笔试面试回忆/念空面试回忆.docx"
         ],
         "question_count": 9,
-        "answers_collapsed": true,
-        "answer_count": 9
+        "answers_collapsed": true
       }
     }
   },
@@ -1174,12 +1174,12 @@
         "section": "面经与研究",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 4,
         "source_files": [
           "xhs量化面经整理汇总/明泓投资.docx"
         ],
         "question_count": 4,
-        "answers_collapsed": true,
-        "answer_count": 4
+        "answers_collapsed": true
       }
     }
   },
@@ -1200,12 +1200,12 @@
         "section": "面经与研究",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 8,
         "source_files": [
           "xhs量化面经整理汇总/仲阳天王星.docx"
         ],
         "question_count": 8,
-        "answers_collapsed": true,
-        "answer_count": 8
+        "answers_collapsed": true
       }
     }
   },
@@ -1226,12 +1226,12 @@
         "section": "面经与研究",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 2,
         "source_files": [
           "xhs量化面经整理汇总/乾象.docx"
         ],
         "question_count": 2,
-        "answers_collapsed": true,
-        "answer_count": 2
+        "answers_collapsed": true
       }
     }
   },
@@ -1252,12 +1252,12 @@
         "section": "量化研究与数据",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 1,
         "source_files": [
           "xhs量化面经整理汇总/天演.docx"
         ],
         "question_count": 1,
-        "answers_collapsed": true,
-        "answer_count": 1
+        "answers_collapsed": true
       }
     }
   },
@@ -1278,13 +1278,13 @@
         "section": "量化研究与数据",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 10,
         "source_files": [
           "xhs量化面经整理汇总/概率.docx",
           "xhs量化面经整理汇总/概率2.pdf"
         ],
         "question_count": 10,
-        "answers_collapsed": true,
-        "answer_count": 10
+        "answers_collapsed": true
       }
     }
   },
@@ -1305,12 +1305,12 @@
         "section": "量化研究与数据",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 5,
         "source_files": [
           "xhs量化面经整理汇总/茂源.docx"
         ],
         "question_count": 5,
-        "answers_collapsed": true,
-        "answer_count": 5
+        "answers_collapsed": true
       }
     }
   },
@@ -1331,12 +1331,12 @@
         "section": "量化研究与数据",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 2,
         "source_files": [
           "xhs量化面经整理汇总/Assignment/Assignment/Question.docx"
         ],
         "question_count": 2,
-        "answers_collapsed": true,
-        "answer_count": 2
+        "answers_collapsed": true
       }
     }
   },
@@ -1357,12 +1357,12 @@
         "section": "量化研究与数据",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 2,
         "source_files": [
           "xhs量化面经整理汇总/盛冠达.docx"
         ],
         "question_count": 2,
-        "answers_collapsed": true,
-        "answer_count": 2
+        "answers_collapsed": true
       }
     }
   },
@@ -1383,12 +1383,12 @@
         "section": "量化研究与数据",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 3,
         "source_files": [
           "xhs量化面经整理汇总/稳博.docx"
         ],
         "question_count": 3,
-        "answers_collapsed": true,
-        "answer_count": 3
+        "answers_collapsed": true
       }
     }
   },
@@ -1409,12 +1409,12 @@
         "section": "量化研究与数据",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 10,
         "source_files": [
           "xhs量化面经整理汇总/超量子.docx"
         ],
         "question_count": 10,
-        "answers_collapsed": true,
-        "answer_count": 10
+        "answers_collapsed": true
       }
     }
   },
@@ -1435,12 +1435,12 @@
         "section": "概率统计与算法",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 4,
         "source_files": [
           "xhs量化面经整理汇总/宽德.docx"
         ],
         "question_count": 4,
-        "answers_collapsed": true,
-        "answer_count": 4
+        "answers_collapsed": true
       }
     }
   },
@@ -1461,12 +1461,12 @@
         "section": "概率统计与算法",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 9,
         "source_files": [
           "xhs量化面经整理汇总/卓胜.docx"
         ],
         "question_count": 9,
-        "answers_collapsed": true,
-        "answer_count": 9
+        "answers_collapsed": true
       }
     }
   },
@@ -1487,12 +1487,12 @@
         "section": "概率统计与算法",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 10,
         "source_files": [
           "xhs量化面经整理汇总/中量投.docx"
         ],
         "question_count": 10,
-        "answers_collapsed": true,
-        "answer_count": 10
+        "answers_collapsed": true
       }
     }
   },
@@ -1513,12 +1513,12 @@
         "section": "概率统计与算法",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 12,
         "source_files": [
           "xhs量化面经整理汇总/玄信.docx"
         ],
         "question_count": 12,
-        "answers_collapsed": true,
-        "answer_count": 12
+        "answers_collapsed": true
       }
     }
   },
@@ -1539,12 +1539,12 @@
         "section": "概率统计与研究",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 8,
         "source_files": [
           "xhs量化面经整理汇总/丰盛.docx"
         ],
         "question_count": 8,
-        "answers_collapsed": true,
-        "answer_count": 8
+        "answers_collapsed": true
       }
     }
   },
@@ -1565,12 +1565,12 @@
         "section": "概率统计与研究",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 10,
         "source_files": [
           "xhs量化面经整理汇总/佳期.docx"
         ],
         "question_count": 10,
-        "answers_collapsed": true,
-        "answer_count": 10
+        "answers_collapsed": true
       }
     }
   },
@@ -1591,12 +1591,12 @@
         "section": "概率统计与研究",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 12,
         "source_files": [
           "xhs量化面经整理汇总/启林.docx"
         ],
         "question_count": 12,
-        "answers_collapsed": true,
-        "answer_count": 12
+        "answers_collapsed": true
       }
     }
   },
@@ -1617,12 +1617,12 @@
         "section": "概率统计与研究",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 10,
         "source_files": [
           "xhs量化面经整理汇总/衍复.docx"
         ],
         "question_count": 10,
-        "answers_collapsed": true,
-        "answer_count": 10
+        "answers_collapsed": true
       }
     }
   },
@@ -1643,12 +1643,12 @@
         "section": "概率统计与研究",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 5,
         "source_files": [
           "xhs量化面经整理汇总/幻方.docx"
         ],
         "question_count": 5,
-        "answers_collapsed": true,
-        "answer_count": 5
+        "answers_collapsed": true
       }
     }
   },
@@ -1669,12 +1669,12 @@
         "section": "概率统计与研究",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 5,
         "source_files": [
           "xhs量化面经整理汇总/正定.docx"
         ],
         "question_count": 5,
-        "answers_collapsed": true,
-        "answer_count": 5
+        "answers_collapsed": true
       }
     }
   },
@@ -1695,12 +1695,12 @@
         "section": "概率统计与研究",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 9,
         "source_files": [
           "xhs量化面经整理汇总/灵均.docx"
         ],
         "question_count": 9,
-        "answers_collapsed": true,
-        "answer_count": 9
+        "answers_collapsed": true
       }
     }
   },
@@ -1721,12 +1721,12 @@
         "section": "笔试综合题",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 5,
         "source_files": [
           "xhs量化面经整理汇总/大雁.pdf"
         ],
         "question_count": 5,
-        "answers_collapsed": true,
-        "answer_count": 5
+        "answers_collapsed": true
       }
     }
   },
@@ -1747,12 +1747,12 @@
         "section": "笔试综合题",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 7,
         "source_files": [
           "xhs量化面经整理汇总/平方和.pdf"
         ],
         "question_count": 7,
-        "answers_collapsed": true,
-        "answer_count": 7
+        "answers_collapsed": true
       }
     }
   },
@@ -1773,12 +1773,12 @@
         "section": "笔试综合题",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 8,
         "source_files": [
           "xhs量化面经整理汇总/投研面试题_v3.pdf"
         ],
         "question_count": 8,
-        "answers_collapsed": true,
-        "answer_count": 8
+        "answers_collapsed": true
       }
     }
   },
@@ -1799,12 +1799,12 @@
         "section": "笔试综合题",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 15,
         "source_files": [
           "xhs量化面经整理汇总/卡方.pdf"
         ],
         "question_count": 15,
-        "answers_collapsed": true,
-        "answer_count": 15
+        "answers_collapsed": true
       }
     }
   },
@@ -1825,13 +1825,13 @@
         "section": "笔试综合题",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 4,
         "source_files": [
           "xhs量化面经整理汇总/至诚卓远.pdf",
           "xhs量化面经整理汇总/致诚卓远.docx"
         ],
         "question_count": 4,
-        "answers_collapsed": true,
-        "answer_count": 4
+        "answers_collapsed": true
       }
     }
   },
@@ -1852,12 +1852,12 @@
         "section": "概率、算法与研究",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 7,
         "source_files": [
           "xhs量化面经整理汇总/通登.docx"
         ],
         "question_count": 7,
-        "answers_collapsed": true,
-        "answer_count": 7
+        "answers_collapsed": true
       }
     }
   },
@@ -1878,12 +1878,12 @@
         "section": "概率、算法与研究",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 3,
         "source_files": [
           "xhs量化面经整理汇总/世纪前沿.docx"
         ],
         "question_count": 3,
-        "answers_collapsed": true,
-        "answer_count": 3
+        "answers_collapsed": true
       }
     }
   },
@@ -1904,12 +1904,12 @@
         "section": "概率、算法与研究",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 14,
         "source_files": [
           "xhs量化面经整理汇总/九坤.docx"
         ],
         "question_count": 14,
-        "answers_collapsed": true,
-        "answer_count": 14
+        "answers_collapsed": true
       }
     }
   },
@@ -1930,12 +1930,12 @@
         "section": "概率、算法与研究",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 5,
         "source_files": [
           "xhs量化面经整理汇总/靖奇投资.docx"
         ],
         "question_count": 5,
-        "answers_collapsed": true,
-        "answer_count": 5
+        "answers_collapsed": true
       }
     }
   },
@@ -1956,12 +1956,12 @@
         "section": "概率与算法",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 11,
         "source_files": [
           "xhs量化面经整理汇总/赫富.docx"
         ],
         "question_count": 11,
-        "answers_collapsed": true,
-        "answer_count": 11
+        "answers_collapsed": true
       }
     }
   },
@@ -1982,12 +1982,12 @@
         "section": "概率与算法",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 10,
         "source_files": [
           "xhs量化面经整理汇总/锐天.docx"
         ],
         "question_count": 10,
-        "answers_collapsed": true,
-        "answer_count": 10
+        "answers_collapsed": true
       }
     }
   },
@@ -2008,13 +2008,13 @@
         "section": "概率与算法",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 10,
         "source_files": [
           "xhs量化面经整理汇总/聚宽.docx",
           "xhs量化面经整理汇总/聚宽.pdf"
         ],
         "question_count": 10,
-        "answers_collapsed": true,
-        "answer_count": 10
+        "answers_collapsed": true
       }
     }
   },
@@ -2035,13 +2035,13 @@
         "section": "概率、线性代数与算法",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 20,
         "source_files": [
           "xhs量化面经整理汇总/诚奇.docx",
           "笔试面试回忆/诚奇笔试.docx"
         ],
         "question_count": 20,
-        "answers_collapsed": true,
-        "answer_count": 20
+        "answers_collapsed": true
       }
     }
   },
@@ -2062,12 +2062,12 @@
         "section": "统计与程序设计",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 7,
         "source_files": [
           "xhs量化面经整理汇总/安贤.docx"
         ],
         "question_count": 7,
-        "answers_collapsed": true,
-        "answer_count": 7
+        "answers_collapsed": true
       }
     }
   },
@@ -2088,12 +2088,12 @@
         "section": "统计与程序设计",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 17,
         "source_files": [
           "笔试面试回忆/托特投资笔试回忆.docx"
         ],
         "question_count": 17,
-        "answers_collapsed": true,
-        "answer_count": 17
+        "answers_collapsed": true
       }
     }
   },
@@ -2114,12 +2114,12 @@
         "section": "数学与算法",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 11,
         "source_files": [
           "xhs量化面经整理汇总/佳期.pdf"
         ],
         "question_count": 11,
-        "answers_collapsed": true,
-        "answer_count": 11
+        "answers_collapsed": true
       }
     }
   },
@@ -2140,12 +2140,12 @@
         "section": "数学与算法",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 8,
         "source_files": [
           "xhs量化面经整理汇总/白鹭.pdf"
         ],
         "question_count": 8,
-        "answers_collapsed": true,
-        "answer_count": 8
+        "answers_collapsed": true
       }
     }
   },
@@ -2166,12 +2166,12 @@
         "section": "数据处理与概率统计",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 9,
         "source_files": [
           "xhs量化面经整理汇总/上海念空私募基金管理合伙企业（有限合伙）线上笔试题目.pdf"
         ],
         "question_count": 9,
-        "answers_collapsed": true,
-        "answer_count": 9
+        "answers_collapsed": true
       }
     }
   },
@@ -2192,12 +2192,12 @@
         "section": "数据处理与概率统计",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 17,
         "source_files": [
           "xhs量化面经整理汇总/喜岳投资.docx"
         ],
         "question_count": 17,
-        "answers_collapsed": true,
-        "answer_count": 17
+        "answers_collapsed": true
       }
     }
   },
@@ -2218,12 +2218,12 @@
         "section": "程序设计与模型识别",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 1,
         "source_files": [
           "xhs量化面经整理汇总/凯读.docx"
         ],
         "question_count": 1,
-        "answers_collapsed": true,
-        "answer_count": 1
+        "answers_collapsed": true
       }
     }
   },
@@ -2244,12 +2244,12 @@
         "section": "程序设计与模型识别",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 2,
         "source_files": [
           "xhs量化面经整理汇总/凯读2.pdf"
         ],
         "question_count": 2,
-        "answers_collapsed": true,
-        "answer_count": 2
+        "answers_collapsed": true
       }
     }
   },
@@ -2270,13 +2270,13 @@
         "section": "程序设计与模型识别",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 2,
         "source_files": [
           "xhs量化面经整理汇总/【quant-校招】笔试题202209/伯兄quant校招生机试题.txt",
           "xhs量化面经整理汇总/【quant-校招】笔试题202209 2/伯兄quant校招生机试题.txt"
         ],
         "question_count": 2,
-        "answers_collapsed": true,
-        "answer_count": 2
+        "answers_collapsed": true
       }
     }
   },
@@ -2297,12 +2297,12 @@
         "section": "组合、几何与程序设计",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 5,
         "source_files": [
           "xhs量化面经整理汇总/通登 2.docx"
         ],
         "question_count": 5,
-        "answers_collapsed": true,
-        "answer_count": 5
+        "answers_collapsed": true
       }
     }
   },
@@ -2323,12 +2323,12 @@
         "section": "组合、几何与程序设计",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 5,
         "source_files": [
           "笔试面试回忆/通登笔试.docx"
         ],
         "question_count": 5,
-        "answers_collapsed": true,
-        "answer_count": 5
+        "answers_collapsed": true
       }
     }
   },
@@ -2349,12 +2349,12 @@
         "section": "组合、几何与程序设计",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 3,
         "source_files": [
           "xhs量化面经整理汇总/孝庸基金.docx"
         ],
         "question_count": 3,
-        "answers_collapsed": true,
-        "answer_count": 3
+        "answers_collapsed": true
       }
     }
   },
@@ -2375,12 +2375,12 @@
         "section": "数据分析实作",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 8,
         "source_files": [
           "xhs量化面经整理汇总/顽岩.zip!/量化研究实习岗笔试题（2.5h）.docx"
         ],
         "question_count": 8,
-        "answers_collapsed": true,
-        "answer_count": 8
+        "answers_collapsed": true
       }
     }
   },
@@ -2401,12 +2401,12 @@
         "section": "九坤笔试回忆：排列、等待时间与状态压缩",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 4,
         "source_files": [
           "xhs量化面经整理汇总/九坤2.docx"
         ],
         "question_count": 4,
-        "answers_collapsed": true,
-        "answer_count": 4
+        "answers_collapsed": true
       }
     }
   },
@@ -2427,12 +2427,12 @@
         "section": "华均广汇：图计数、最大子数组与数据合并",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 3,
         "source_files": [
           "xhs量化面经整理汇总/华均广汇.docx"
         ],
         "question_count": 3,
-        "answers_collapsed": true,
-        "answer_count": 3
+        "answers_collapsed": true
       }
     }
   },
@@ -2453,12 +2453,12 @@
         "section": "卓识投资：前沿筛选、随机序列与组合计数",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 6,
         "source_files": [
           "xhs量化面经整理汇总/卓识投资.docx"
         ],
         "question_count": 6,
-        "answers_collapsed": true,
-        "answer_count": 6
+        "answers_collapsed": true
       }
     }
   },
@@ -2479,12 +2479,12 @@
         "section": "涵德：程序分析、组合风险与动态决策",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 8,
         "source_files": [
           "xhs量化面经整理汇总/涵德.pdf"
         ],
         "question_count": 8,
-        "answers_collapsed": true,
-        "answer_count": 8
+        "answers_collapsed": true
       }
     }
   },
@@ -2505,12 +2505,12 @@
         "section": "微观博易：贪心算法、矩阵赋值与条件分布",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 5,
         "source_files": [
           "xhs量化面经整理汇总/微观博易.jpg"
         ],
         "question_count": 5,
-        "answers_collapsed": true,
-        "answer_count": 5
+        "answers_collapsed": true
       }
     }
   },
@@ -2531,12 +2531,12 @@
         "section": "集微：递推策略、正则化与渐近估计",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 4,
         "source_files": [
           "xhs量化面经整理汇总/集微.jpg"
         ],
         "question_count": 5,
-        "answers_collapsed": true,
-        "answer_count": 4
+        "answers_collapsed": true
       }
     }
   },
@@ -2557,12 +2557,12 @@
         "section": "希格斯第一轮：分析、概率与矩阵",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 20,
         "source_files": [
           "xhs量化面经整理汇总/希格斯/微信图片_20210904223904.jpg"
         ],
         "question_count": 20,
-        "answers_collapsed": true,
-        "answer_count": 20
+        "answers_collapsed": true
       }
     }
   },
@@ -2583,12 +2583,12 @@
         "section": "希格斯第二轮：构造、递推与不变量",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 7,
         "source_files": [
           "xhs量化面经整理汇总/希格斯/微信图片_20210904223912.jpg"
         ],
         "question_count": 7,
-        "answers_collapsed": true,
-        "answer_count": 7
+        "answers_collapsed": true
       }
     }
   },
@@ -2609,6 +2609,7 @@
         "section": "灵均图像试题：概率、最优停止与动态规划",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 10,
         "source_files": [
           "xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.33.58.png",
           "xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.34.14.png",
@@ -2622,8 +2623,7 @@
           "xhs量化面经整理汇总/灵均笔试试题/iShot_2023-01-09_11.35.17.png"
         ],
         "question_count": 10,
-        "answers_collapsed": true,
-        "answer_count": 10
+        "answers_collapsed": true
       }
     }
   },
@@ -2644,12 +2644,12 @@
         "section": "艾方：订单簿特征与波动率预测",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 7,
         "source_files": [
           "xhs量化面经整理汇总/艾方.pdf"
         ],
         "question_count": 7,
-        "answers_collapsed": true,
-        "answer_count": 7
+        "answers_collapsed": true
       }
     }
   },
@@ -2670,12 +2670,12 @@
         "section": "资本市场术语与研究指标",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 1,
         "source_files": [
           "资本面学习资料.pdf"
         ],
         "question_count": 0,
-        "answers_collapsed": true,
-        "answer_count": 1
+        "answers_collapsed": true
       }
     }
   },
@@ -2696,12 +2696,12 @@
         "section": "资本市场阅读与音视频资料索引",
         "difficulty": "综合",
         "full_source": true,
+        "answer_count": 0,
         "source_files": [
           "资本面学习资料.pdf"
         ],
         "question_count": 0,
-        "answers_collapsed": true,
-        "answer_count": 0
+        "answers_collapsed": true
       }
     }
   }

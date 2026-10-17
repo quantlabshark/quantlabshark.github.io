@@ -48,8 +48,8 @@
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 25,
-    "read_access": "inherit",
-    "revision": 2
+    "revision": 2,
+    "read_access": "inherit"
   },
   {
     "id": "0d99264a-7913-52fc-8f8e-a4c784c92834",
@@ -61,8 +61,8 @@
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 26,
-    "read_access": "inherit",
-    "revision": 2
+    "revision": 2,
+    "read_access": "inherit"
   },
   {
     "id": "a99b73bc-8dcb-4d7d-84f2-a0f30d259ede",

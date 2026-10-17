@@ -10,12 +10,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "G",
-        "chapter_title": "阅读导引",
-        "section": "G",
-        "number": 1,
         "part": "阅读准备",
+        "number": 1,
+        "chapter": "G",
+        "edition": "2026-10",
         "minutes": 25,
+        "section": "G",
         "source_pages": [
           1,
           2,
@@ -24,12 +24,12 @@
           5,
           6
         ],
+        "chapter_title": "阅读导引",
         "source_sections": [
           "版权信息",
           "内容简介",
           "前言"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -44,12 +44,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "1",
-        "chapter_title": "因子投资基础",
-        "section": "1.1",
-        "number": 2,
         "part": "第一部分 · 基础与方法",
+        "number": 2,
+        "chapter": "1",
+        "edition": "2026-10",
         "minutes": 22,
+        "section": "1.1",
         "source_pages": [
           7,
           8,
@@ -62,14 +62,14 @@
           15,
           16
         ],
+        "chapter_title": "因子投资基础",
         "source_sections": [
           "1.1.1 一个公式",
           "1.1.2 因子、多因子模型和异象",
           "1.1.3 再论异象和因子",
           "1.1.4 因子投资包含的内容",
           "1.1.5 实证资产定价与因子投资"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -84,23 +84,23 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "1",
-        "chapter_title": "因子投资基础",
-        "section": "1.2",
-        "number": 3,
         "part": "第一部分 · 基础与方法",
+        "number": 3,
+        "chapter": "1",
+        "edition": "2026-10",
         "minutes": 17,
+        "section": "1.2",
         "source_pages": [
           17,
           18,
           19,
           20
         ],
+        "chapter_title": "因子投资基础",
         "source_sections": [
           "1.2.1 实证资产定价",
           "1.2.2 研究现状"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -115,23 +115,23 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "1",
-        "chapter_title": "因子投资基础",
-        "section": "1.3",
-        "number": 4,
         "part": "第一部分 · 基础与方法",
+        "number": 4,
+        "chapter": "1",
+        "edition": "2026-10",
         "minutes": 18,
+        "section": "1.3",
         "source_pages": [
           21,
           22,
           23,
           24
         ],
+        "chapter_title": "因子投资基础",
         "source_sections": [
           "1.3.1 因子投资和管理人",
           "1.3.2 因子投资和投资者"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -146,18 +146,18 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "1",
-        "chapter_title": "因子投资基础",
-        "section": "1.4",
-        "number": 5,
         "part": "第一部分 · 基础与方法",
+        "number": 5,
+        "chapter": "1",
+        "edition": "2026-10",
         "minutes": 10,
+        "section": "1.4",
         "source_pages": [
           25,
           26
         ],
-        "source_sections": [],
-        "edition": "2026-10"
+        "chapter_title": "因子投资基础",
+        "source_sections": []
       }
     }
   },
@@ -172,12 +172,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "2",
-        "chapter_title": "因子投资方法论",
-        "section": "2.1",
-        "number": 6,
         "part": "第一部分 · 基础与方法",
+        "number": 6,
+        "chapter": "2",
+        "edition": "2026-10",
         "minutes": 24,
+        "section": "2.1",
         "source_pages": [
           27,
           28,
@@ -193,13 +193,13 @@
           38,
           39
         ],
+        "chapter_title": "因子投资方法论",
         "source_sections": [
           "2.1.1 因子模拟投资组合",
           "2.1.2 排序法及其检验",
           "2.1.3 多重排序法",
           "2.1.4 因子命名约定"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -214,12 +214,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "2",
-        "chapter_title": "因子投资方法论",
-        "section": "2.2",
-        "number": 7,
         "part": "第一部分 · 基础与方法",
+        "number": 7,
+        "chapter": "2",
+        "edition": "2026-10",
         "minutes": 26,
+        "section": "2.2",
         "source_pages": [
           40,
           41,
@@ -237,14 +237,14 @@
           53,
           54
         ],
+        "chapter_title": "因子投资方法论",
         "source_sections": [
           "2.2.1 时间序列回归",
           "2.2.2 截面回归",
           "2.2.3 时序回归vs截面回归",
           "2.2.4 Fama–MacBeth回归",
           "2.2.5 不同回归方法比较"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -259,12 +259,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "2",
-        "chapter_title": "因子投资方法论",
-        "section": "2.3",
-        "number": 8,
         "part": "第一部分 · 基础与方法",
+        "number": 8,
+        "chapter": "2",
+        "edition": "2026-10",
         "minutes": 23,
+        "section": "2.3",
         "source_pages": [
           55,
           56,
@@ -272,12 +272,12 @@
           58,
           59
         ],
+        "chapter_title": "因子投资方法论",
         "source_sections": [
           "2.3.1 引入工具变量",
           "2.3.2 使用公司特征",
           "2.3.3 两类模型"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -292,12 +292,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "2",
-        "chapter_title": "因子投资方法论",
-        "section": "2.4",
-        "number": 9,
         "part": "第一部分 · 基础与方法",
+        "number": 9,
+        "chapter": "2",
+        "edition": "2026-10",
         "minutes": 26,
+        "section": "2.4",
         "source_pages": [
           60,
           61,
@@ -307,13 +307,13 @@
           65,
           66
         ],
+        "chapter_title": "因子投资方法论",
         "source_sections": [
           "2.4.1 时序回归检验异象",
           "2.4.2 计量经济学问题",
           "2.4.3 White估计量和Newey–West估计量",
           "2.4.4 截面回归检验异象"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -328,12 +328,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "2",
-        "chapter_title": "因子投资方法论",
-        "section": "2.5",
-        "number": 10,
         "part": "第一部分 · 基础与方法",
+        "number": 10,
+        "chapter": "2",
+        "edition": "2026-10",
         "minutes": 28,
+        "section": "2.5",
         "source_pages": [
           67,
           68,
@@ -347,14 +347,14 @@
           76,
           77
         ],
+        "chapter_title": "因子投资方法论",
         "source_sections": [
           "2.5.1 GRS检验",
           "2.5.2 均值—方差张成检验",
           "2.5.3 从几何角度比较GRS 和均值—方差张成",
           "2.5.4 α检验",
           "2.5.5 贝叶斯方法"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -369,12 +369,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "2",
-        "chapter_title": "因子投资方法论",
-        "section": "2.6",
-        "number": 11,
         "part": "第一部分 · 基础与方法",
+        "number": 11,
+        "chapter": "2",
+        "edition": "2026-10",
         "minutes": 25,
+        "section": "2.6",
         "source_pages": [
           78,
           79,
@@ -383,12 +383,12 @@
           82,
           83
         ],
+        "chapter_title": "因子投资方法论",
         "source_sections": [
           "2.6.1 简单一元回归",
           "2.6.2 回归的几何意义",
           "2.6.3 用正交化过程求解多元回归"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -403,12 +403,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "2",
-        "chapter_title": "因子投资方法论",
-        "section": "2.7",
-        "number": 12,
         "part": "第一部分 · 基础与方法",
+        "number": 12,
+        "chapter": "2",
+        "edition": "2026-10",
         "minutes": 30,
+        "section": "2.7",
         "source_pages": [
           84,
           85,
@@ -422,14 +422,14 @@
           93,
           94
         ],
+        "chapter_title": "因子投资方法论",
         "source_sections": [
           "2.7.1 样本均值的方差",
           "2.7.2 分析框架",
           "2.7.3 数学基础",
           "2.7.4 有效性",
           "2.7.5 不应成为黑箱"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -444,18 +444,18 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "2",
-        "chapter_title": "因子投资方法论",
-        "section": "2.8",
-        "number": 13,
         "part": "第一部分 · 基础与方法",
+        "number": 13,
+        "chapter": "2",
+        "edition": "2026-10",
         "minutes": 20,
+        "section": "2.8",
         "source_pages": [
           95,
           96
         ],
-        "source_sections": [],
-        "edition": "2026-10"
+        "chapter_title": "因子投资方法论",
+        "source_sections": []
       }
     }
   },
@@ -470,12 +470,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "3",
-        "chapter_title": "主流因子解读",
-        "section": "3.1",
-        "number": 14,
         "part": "第二部分 · 因子与模型",
+        "number": 14,
+        "chapter": "3",
+        "edition": "2026-10",
         "minutes": 30,
+        "section": "3.1",
         "source_pages": [
           97,
           98,
@@ -493,14 +493,14 @@
           110,
           111
         ],
+        "chapter_title": "主流因子解读",
         "source_sections": [
           "3.1.1 数据来源",
           "3.1.2 量价数据处理",
           "3.1.3 财务数据处理",
           "3.1.4 因子构造流程",
           "3.1.5 实证设定"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -515,12 +515,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "3",
-        "chapter_title": "主流因子解读",
-        "section": "3.2",
-        "number": 15,
         "part": "第二部分 · 因子与模型",
+        "number": 15,
+        "chapter": "3",
+        "edition": "2026-10",
         "minutes": 23,
+        "section": "3.2",
         "source_pages": [
           112,
           113,
@@ -528,12 +528,12 @@
           115,
           116
         ],
+        "chapter_title": "主流因子解读",
         "source_sections": [
           "3.2.1 市场因子起源",
           "3.2.2 对CAPM的质疑",
           "3.2.3 市场因子实证"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -548,12 +548,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "3",
-        "chapter_title": "主流因子解读",
-        "section": "3.3",
-        "number": 16,
         "part": "第二部分 · 因子与模型",
+        "number": 16,
+        "chapter": "3",
+        "edition": "2026-10",
         "minutes": 21,
+        "section": "3.3",
         "source_pages": [
           117,
           118,
@@ -561,12 +561,12 @@
           120,
           121
         ],
+        "chapter_title": "主流因子解读",
         "source_sections": [
           "3.3.1 规模因子起源",
           "3.3.2 规模因子成因",
           "3.3.3 规模因子实证"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -581,12 +581,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "3",
-        "chapter_title": "主流因子解读",
-        "section": "3.4",
-        "number": 17,
         "part": "第二部分 · 因子与模型",
+        "number": 17,
+        "chapter": "3",
+        "edition": "2026-10",
         "minutes": 22,
+        "section": "3.4",
         "source_pages": [
           122,
           123,
@@ -596,12 +596,12 @@
           127,
           128
         ],
+        "chapter_title": "主流因子解读",
         "source_sections": [
           "3.4.1 价值因子起源",
           "3.4.2 价值因子成因",
           "3.4.3 价值因子实证"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -616,12 +616,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "3",
-        "chapter_title": "主流因子解读",
-        "section": "3.5",
-        "number": 18,
         "part": "第二部分 · 因子与模型",
+        "number": 18,
+        "chapter": "3",
+        "edition": "2026-10",
         "minutes": 24,
+        "section": "3.5",
         "source_pages": [
           129,
           130,
@@ -632,12 +632,12 @@
           135,
           136
         ],
+        "chapter_title": "主流因子解读",
         "source_sections": [
           "3.5.1 动量因子起源",
           "3.5.2 动量因子成因",
           "3.5.3 动量因子实证"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -652,12 +652,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "3",
-        "chapter_title": "主流因子解读",
-        "section": "3.6",
-        "number": 19,
         "part": "第二部分 · 因子与模型",
+        "number": 19,
+        "chapter": "3",
+        "edition": "2026-10",
         "minutes": 23,
+        "section": "3.6",
         "source_pages": [
           137,
           138,
@@ -667,12 +667,12 @@
           142,
           143
         ],
+        "chapter_title": "主流因子解读",
         "source_sections": [
           "3.6.1 盈利因子起源",
           "3.6.2 盈利因子成因",
           "3.6.3 盈利因子实证"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -687,12 +687,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "3",
-        "chapter_title": "主流因子解读",
-        "section": "3.7",
-        "number": 20,
         "part": "第二部分 · 因子与模型",
+        "number": 20,
+        "chapter": "3",
+        "edition": "2026-10",
         "minutes": 23,
+        "section": "3.7",
         "source_pages": [
           144,
           145,
@@ -703,12 +703,12 @@
           150,
           151
         ],
+        "chapter_title": "主流因子解读",
         "source_sections": [
           "3.7.1 投资因子起源",
           "3.7.2 投资因子成因",
           "3.7.3 投资因子实证"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -723,12 +723,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "3",
-        "chapter_title": "主流因子解读",
-        "section": "3.8",
-        "number": 21,
         "part": "第二部分 · 因子与模型",
+        "number": 21,
+        "chapter": "3",
+        "edition": "2026-10",
         "minutes": 22,
+        "section": "3.8",
         "source_pages": [
           152,
           153,
@@ -737,12 +737,12 @@
           156,
           157
         ],
+        "chapter_title": "主流因子解读",
         "source_sections": [
           "3.8.1 换手率因子起源",
           "3.8.2 换手率因子成因",
           "3.8.3 换手率因子实证"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -757,12 +757,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "4",
-        "chapter_title": "多因子模型",
-        "section": "4.1",
-        "number": 22,
         "part": "第二部分 · 因子与模型",
+        "number": 22,
+        "chapter": "4",
+        "edition": "2026-10",
         "minutes": 30,
+        "section": "4.1",
         "source_pages": [
           158,
           159,
@@ -782,6 +782,7 @@
           173,
           174
         ],
+        "chapter_title": "多因子模型",
         "source_sections": [
           "4.1.1 Fama–French 三因子模型",
           "4.1.2 Carhart四因子模型",
@@ -790,8 +791,7 @@
           "4.1.5 Hou–Xue–Zhang四因子模型",
           "4.1.6 Stambaugh–Yuan四因子模型",
           "4.1.7 Daniel–Hirshleifer–Sun三因子模型"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -806,21 +806,21 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "4",
-        "chapter_title": "多因子模型",
-        "section": "4.2",
-        "number": 23,
         "part": "第二部分 · 因子与模型",
+        "number": 23,
+        "chapter": "4",
+        "edition": "2026-10",
         "minutes": 20,
+        "section": "4.2",
         "source_pages": [
           175,
           176
         ],
+        "chapter_title": "多因子模型",
         "source_sections": [
           "4.2.1 Fama–MacBeth回归实证设定",
           "4.2.2 Fama–MacBeth回归结果"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -835,12 +835,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "4",
-        "chapter_title": "多因子模型",
-        "section": "4.3",
-        "number": 24,
         "part": "第二部分 · 因子与模型",
+        "number": 24,
+        "chapter": "4",
+        "edition": "2026-10",
         "minutes": 25,
+        "section": "4.3",
         "source_pages": [
           177,
           178,
@@ -856,12 +856,12 @@
           188,
           189
         ],
+        "chapter_title": "多因子模型",
         "source_sections": [
           "4.3.1 两个模型",
           "4.3.2 BM、ROE与预期收益",
           "4.3.3 模型比较的实证结果"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -876,18 +876,18 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "4",
-        "chapter_title": "多因子模型",
-        "section": "4.4",
-        "number": 25,
         "part": "第二部分 · 因子与模型",
+        "number": 25,
+        "chapter": "4",
+        "edition": "2026-10",
         "minutes": 20,
+        "section": "4.4",
         "source_pages": [
           190,
           191
         ],
-        "source_sections": [],
-        "edition": "2026-10"
+        "chapter_title": "多因子模型",
+        "source_sections": []
       }
     }
   },
@@ -902,12 +902,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "5",
-        "chapter_title": "异象研究",
-        "section": "5.1",
-        "number": 26,
         "part": "第二部分 · 因子与模型",
+        "number": 26,
+        "chapter": "5",
+        "edition": "2026-10",
         "minutes": 25,
+        "section": "5.1",
         "source_pages": [
           192,
           193,
@@ -923,13 +923,13 @@
           203,
           204
         ],
+        "chapter_title": "异象研究",
         "source_sections": [
           "5.1.1 价值因子与价值投资",
           "5.1.2 F-Score",
           "5.1.3 G-Score",
           "5.1.4 通过预期差获取超额收益"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -944,12 +944,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "5",
-        "chapter_title": "异象研究",
-        "section": "5.2",
-        "number": 27,
         "part": "第二部分 · 因子与模型",
+        "number": 27,
+        "chapter": "5",
+        "edition": "2026-10",
         "minutes": 20,
+        "section": "5.2",
         "source_pages": [
           205,
           206,
@@ -961,11 +961,11 @@
           212,
           213
         ],
+        "chapter_title": "异象研究",
         "source_sections": [
           "5.2.1 金融学依据",
           "5.2.2 A股市场中的基本面锚定反转"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -980,12 +980,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "5",
-        "chapter_title": "异象研究",
-        "section": "5.3",
-        "number": 28,
         "part": "第二部分 · 因子与模型",
+        "number": 28,
+        "chapter": "5",
+        "edition": "2026-10",
         "minutes": 25,
+        "section": "5.3",
         "source_pages": [
           214,
           215,
@@ -998,11 +998,11 @@
           222,
           223
         ],
+        "chapter_title": "异象研究",
         "source_sections": [
           "5.3.1 套利不对称性和特质性波动率",
           "5.3.2 A股市场中的特质性波动率异象"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -1017,12 +1017,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "6",
-        "chapter_title": "因子研究现状",
-        "section": "6.1",
-        "number": 29,
         "part": "第三部分 · 研究与实践",
+        "number": 29,
+        "chapter": "6",
+        "edition": "2026-10",
         "minutes": 25,
+        "section": "6.1",
         "source_pages": [
           224,
           225,
@@ -1035,6 +1035,7 @@
           232,
           233
         ],
+        "chapter_title": "因子研究现状",
         "source_sections": [
           "6.1.1 何为p-值",
           "6.1.2 在追逐p-值的道路上狂奔",
@@ -1042,8 +1043,7 @@
           "6.1.4 正确认识p-值的含义",
           "6.1.5 多重假设检验",
           "6.1.6 先验的重要性"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -1058,12 +1058,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "6",
-        "chapter_title": "因子研究现状",
-        "section": "6.2",
-        "number": 30,
         "part": "第三部分 · 研究与实践",
+        "number": 30,
+        "chapter": "6",
+        "edition": "2026-10",
         "minutes": 20,
+        "section": "6.2",
         "source_pages": [
           234,
           235,
@@ -1071,12 +1071,12 @@
           237,
           238
         ],
+        "chapter_title": "因子研究现状",
         "source_sections": [
           "6.2.1 形同意不同的投资因子",
           "6.2.2 q5模型",
           "6.2.3 因子大战"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -1091,12 +1091,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "6",
-        "chapter_title": "因子研究现状",
-        "section": "6.3",
-        "number": 31,
         "part": "第三部分 · 研究与实践",
+        "number": 31,
+        "chapter": "6",
+        "edition": "2026-10",
         "minutes": 25,
+        "section": "6.3",
         "source_pages": [
           239,
           240,
@@ -1117,6 +1117,7 @@
           255,
           256
         ],
+        "chapter_title": "因子研究现状",
         "source_sections": [
           "6.3.1 套利限制",
           "6.3.2 预期中的偏差",
@@ -1124,8 +1125,7 @@
           "6.3.4 认知限制",
           "6.3.5 行为金融学与市场异象",
           "6.3.6 行为有效市场"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -1140,12 +1140,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "6",
-        "chapter_title": "因子研究现状",
-        "section": "6.4",
-        "number": 32,
         "part": "第三部分 · 研究与实践",
+        "number": 32,
+        "chapter": "6",
+        "edition": "2026-10",
         "minutes": 20,
+        "section": "6.4",
         "source_pages": [
           257,
           258,
@@ -1154,12 +1154,12 @@
           261,
           262
         ],
+        "chapter_title": "因子研究现状",
         "source_sections": [
           "6.4.1 投资者情绪的度量",
           "6.4.2 投资者情绪与异象表现",
           "6.4.3 投资者情绪与市场表现"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -1174,12 +1174,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "6",
-        "chapter_title": "因子研究现状",
-        "section": "6.5",
-        "number": 33,
         "part": "第三部分 · 研究与实践",
+        "number": 33,
+        "chapter": "6",
+        "edition": "2026-10",
         "minutes": 20,
+        "section": "6.5",
         "source_pages": [
           263,
           264,
@@ -1188,12 +1188,12 @@
           267,
           268
         ],
+        "chapter_title": "因子研究现状",
         "source_sections": [
           "6.5.1 风险补偿检验",
           "6.5.2 错误定价检验",
           "6.5.3 数据窥探检验"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -1208,12 +1208,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "6",
-        "chapter_title": "因子研究现状",
-        "section": "6.6",
-        "number": 34,
         "part": "第三部分 · 研究与实践",
+        "number": 34,
+        "chapter": "6",
+        "edition": "2026-10",
         "minutes": 20,
+        "section": "6.6",
         "source_pages": [
           269,
           270,
@@ -1221,12 +1221,12 @@
           272,
           273
         ],
+        "chapter_title": "因子研究现状",
         "source_sections": [
           "6.6.1 曝光导致错误定价减弱",
           "6.6.2 因子拥挤",
           "6.6.3 交易成本"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -1241,12 +1241,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "6",
-        "chapter_title": "因子研究现状",
-        "section": "6.7",
-        "number": 35,
         "part": "第三部分 · 研究与实践",
+        "number": 35,
+        "chapter": "6",
+        "edition": "2026-10",
         "minutes": 20,
+        "section": "6.7",
         "source_pages": [
           274,
           275,
@@ -1256,13 +1256,13 @@
           279,
           280
         ],
+        "chapter_title": "因子研究现状",
         "source_sections": [
           "6.7.1 基本面分析",
           "6.7.2 基本面量化投资",
           "6.7.3 基本面投资“因子化”的不足",
           "6.7.4 思考和讨论"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -1277,12 +1277,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "6",
-        "chapter_title": "因子研究现状",
-        "section": "6.8",
-        "number": 36,
         "part": "第三部分 · 研究与实践",
+        "number": 36,
+        "chapter": "6",
+        "edition": "2026-10",
         "minutes": 30,
+        "section": "6.8",
         "source_pages": [
           281,
           282,
@@ -1295,14 +1295,14 @@
           289,
           290
         ],
+        "chapter_title": "因子研究现状",
         "source_sections": [
           "6.8.1 线性模型",
           "6.8.2 非线性模型",
           "6.8.3 模型评估与实证研究",
           "6.8.4 主成分分析和因子选择",
           "6.8.5 机器学习的问题"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -1317,12 +1317,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "7",
-        "chapter_title": "因子投资实践",
-        "section": "7.1",
-        "number": 37,
         "part": "第三部分 · 研究与实践",
+        "number": 37,
+        "chapter": "7",
+        "edition": "2026-10",
         "minutes": 27,
+        "section": "7.1",
         "source_pages": [
           291,
           292,
@@ -1340,13 +1340,13 @@
           304,
           305
         ],
+        "chapter_title": "因子投资实践",
         "source_sections": [
           "7.1.1 基本术语",
           "7.1.2 寻找预测变量",
           "7.1.3 挑选预测变量",
           "7.1.4 收益率预测"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -1361,12 +1361,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "7",
-        "chapter_title": "因子投资实践",
-        "section": "7.2",
-        "number": 38,
         "part": "第三部分 · 研究与实践",
+        "number": 38,
+        "chapter": "7",
+        "edition": "2026-10",
         "minutes": 34,
+        "section": "7.2",
         "source_pages": [
           306,
           307,
@@ -1380,13 +1380,13 @@
           315,
           316
         ],
+        "chapter_title": "因子投资实践",
         "source_sections": [
           "7.2.1 Barra多因子模型",
           "7.2.2 模型求解",
           "7.2.3 纯因子投资组合",
           "7.2.4 协方差矩阵求解及调整"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -1401,12 +1401,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "7",
-        "chapter_title": "因子投资实践",
-        "section": "7.3",
-        "number": 39,
         "part": "第三部分 · 研究与实践",
+        "number": 39,
+        "chapter": "7",
+        "edition": "2026-10",
         "minutes": 34,
+        "section": "7.3",
         "source_pages": [
           317,
           318,
@@ -1420,14 +1420,14 @@
           326,
           327
         ],
+        "chapter_title": "因子投资实践",
         "source_sections": [
           "7.3.1 错位的收益与风险模型",
           "7.3.2 目标函数",
           "7.3.3 不同目标函数的比较",
           "7.3.4 约束条件",
           "7.3.5 交易成本模型"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -1442,12 +1442,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "7",
-        "chapter_title": "因子投资实践",
-        "section": "7.4",
-        "number": 40,
         "part": "第三部分 · 研究与实践",
+        "number": 40,
+        "chapter": "7",
+        "edition": "2026-10",
         "minutes": 35,
+        "section": "7.4",
         "source_pages": [
           328,
           329,
@@ -1474,14 +1474,14 @@
           350,
           351
         ],
+        "chapter_title": "因子投资实践",
         "source_sections": [
           "7.4.1 因子指数和Smart Beta",
           "7.4.2 为什么要投资Smart Beta",
           "7.4.3 如何投资Smart Beta",
           "7.4.4 应用实践",
           "7.4.5 更多讨论"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -1496,12 +1496,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "7",
-        "chapter_title": "因子投资实践",
-        "section": "7.5",
-        "number": 41,
         "part": "第三部分 · 研究与实践",
+        "number": 41,
+        "chapter": "7",
+        "edition": "2026-10",
         "minutes": 25,
+        "section": "7.5",
         "source_pages": [
           352,
           353,
@@ -1510,6 +1510,7 @@
           356,
           357
         ],
+        "chapter_title": "因子投资实践",
         "source_sections": [
           "7.5.1 按因子估值择时",
           "7.5.2 按因子动量择时",
@@ -1517,8 +1518,7 @@
           "7.5.4 按市场情绪择时",
           "7.5.5 按宏观因素择时",
           "7.5.6 因子择时很难"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -1533,12 +1533,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "7",
-        "chapter_title": "因子投资实践",
-        "section": "7.6",
-        "number": 42,
         "part": "第三部分 · 研究与实践",
+        "number": 42,
+        "chapter": "7",
+        "edition": "2026-10",
         "minutes": 25,
+        "section": "7.6",
         "source_pages": [
           358,
           359,
@@ -1547,12 +1547,12 @@
           362,
           363
         ],
+        "chapter_title": "因子投资实践",
         "source_sections": [
           "7.6.1 经典风格分析",
           "7.6.2 基于多空因子的风格分析",
           "7.6.3 实例：巴菲特的投资风格"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -1567,12 +1567,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "7",
-        "chapter_title": "因子投资实践",
-        "section": "7.7",
-        "number": 43,
         "part": "第三部分 · 研究与实践",
+        "number": 43,
+        "chapter": "7",
+        "edition": "2026-10",
         "minutes": 25,
+        "section": "7.7",
         "source_pages": [
           364,
           365,
@@ -1581,13 +1581,13 @@
           368,
           369
         ],
+        "chapter_title": "因子投资实践",
         "source_sections": [
           "7.7.1 两种传统风险归因方法",
           "7.7.2 风险的三要素",
           "7.7.3 从风险角度看收益相关性",
           "7.7.4 将三要素公式应用于多因子模型"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -1602,12 +1602,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "7",
-        "chapter_title": "因子投资实践",
-        "section": "7.8",
-        "number": 44,
         "part": "第三部分 · 研究与实践",
+        "number": 44,
+        "chapter": "7",
+        "edition": "2026-10",
         "minutes": 26,
+        "section": "7.8",
         "source_pages": [
           370,
           371,
@@ -1618,11 +1618,11 @@
           376,
           377
         ],
+        "chapter_title": "因子投资实践",
         "source_sections": [
           "7.8.1 另类数据",
           "7.8.2 用因子实现大类资产配置"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -1637,21 +1637,21 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "R",
-        "chapter_title": "后记",
-        "section": "R",
-        "number": 45,
         "part": "附录与参考",
+        "number": 45,
+        "chapter": "R",
+        "edition": "2026-10",
         "minutes": 10,
+        "section": "R",
         "source_pages": [
           378,
           379,
           380
         ],
+        "chapter_title": "后记",
         "source_sections": [
           "后记"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -1666,12 +1666,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "A",
-        "chapter_title": "理解资产价格",
-        "section": "A",
-        "number": 46,
         "part": "附录与参考",
+        "number": 46,
+        "chapter": "A",
+        "edition": "2026-10",
         "minutes": 25,
+        "section": "A",
         "source_pages": [
           381,
           382,
@@ -1682,6 +1682,7 @@
           387,
           388
         ],
+        "chapter_title": "理解资产价格",
         "source_sections": [
           "1 无套利定价公式P=E[mx]",
           "2 短期不可预测性",
@@ -1690,8 +1691,7 @@
           "5 行为金融学",
           "6 预期收益率的截面差异",
           "7 结语"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -1706,12 +1706,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "L",
-        "chapter_title": "参考文献",
-        "section": "L",
-        "number": 47,
         "part": "附录与参考",
+        "number": 47,
+        "chapter": "L",
+        "edition": "2026-10",
         "minutes": 15,
+        "section": "L",
         "source_pages": [
           389,
           390,
@@ -1748,10 +1748,10 @@
           421,
           422
         ],
+        "chapter_title": "参考文献",
         "source_sections": [
           "参考文献"
-        ],
-        "edition": "2026-10"
+        ]
       }
     }
   }
