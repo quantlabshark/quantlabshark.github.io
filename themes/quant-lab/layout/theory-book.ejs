@@ -1,14 +1,14 @@
-<% const rows=theory_rows(page.theory_book); %>
+<% const rows=theory_rows(page.theory_book),book=theory_book(page.theory_book); %>
 <div class="page-wrap" data-theory-book="<%= page.theory_book %>">
- <div class="eyebrow">QUANTLAB · 因子投资</div>
- <div class="page-heading"><h1>因子投资：方法与实践</h1><p>从收益率、风险和统计基础出发，学习因子构建、模型检验与投资组合管理。</p></div>
- <div class="prose section-page-intro" data-section-page-body><p>因子模型用少数共同变量描述许多资产的收益。定价研究比较不同资产的长期平均收益，风险模型分析收益如何共同波动，投资实践则结合收益预测、交易成本与持仓约束确定组合。</p><p>若尚不熟悉收益率、回归或矩阵运算，可先阅读<a href="/read/?slug=factor-book-guide">阅读导引与基础知识</a>。</p></div>
- <div class="fvm-book-meta"><span id="theory-count">7 章 · <%= rows.length %> 个阅读单元</span><span>导读 · 附录 · 参考文献</span></div>
- <p class="theory-actions"><a class="button" id="theory-start" href="/read/?slug=factor-book-guide">开始阅读 →</a><a class="button secondary" href="/assets/downloads/factor-investing-examples.zip">下载配套 Python 示例</a></p>
- <div class="theory-toolbar"><label class="search-field"><%- icon('search') %><input id="theory-query" type="search" maxlength="100" placeholder="查找章节或概念，例如：回归、价值因子、风险归因" aria-label="查找因子投资课程"></label><button type="button" class="button secondary" id="theory-expand" aria-expanded="false">展开全部</button></div>
+ <div class="eyebrow">QUANTLAB · <%= book.kicker %></div>
+ <div class="page-heading"><h1><%= book.title %></h1><p><%= book.description %></p></div>
+ <div class="prose section-page-intro" data-section-page-body><p><%= book.introduction %></p><p><%= book.preparation %><a href="/read/?slug=<%= book.guide %>"><%= book.guide_title %></a>。</p></div>
+ <div class="fvm-book-meta"><span id="theory-count"><%= book.chapters %> 章 · <%= rows.length %> 个阅读单元</span><span><%= book.extras %></span></div>
+ <p class="theory-actions"><a class="button" id="theory-start" href="/read/?slug=<%= book.guide %>">开始阅读 →</a><a class="button secondary" href="<%= book.examples %>">下载配套 Python 示例</a></p>
+ <div class="theory-toolbar"><label class="search-field"><%- icon('search') %><input id="theory-query" type="search" maxlength="100" placeholder="查找章节或概念，例如：<%= book.keywords %>" aria-label="查找<%= book.kicker %>课程"></label><button type="button" class="button secondary" id="theory-expand" aria-expanded="false">展开全部</button></div>
  <p id="theory-result" class="muted" role="status" aria-live="polite"><%= rows.length %> 个阅读单元</p>
- <div id="theory-catalog" data-lab-catalog="factor-investing" data-catalog-custom><%- theory_catalog(page.theory_book) %></div>
+ <div id="theory-catalog" data-lab-catalog="<%= book.key %>" data-catalog-custom><%- theory_catalog(page.theory_book) %></div>
  <p id="theory-empty" class="lab-empty" hidden>没有匹配的章节，请尝试其他关键词。</p><p id="theory-sync" class="muted" role="status"></p>
  <noscript><p>可直接浏览章节目录；搜索和登录阅读需要启用 JavaScript。</p></noscript>
- <p class="muted">参考书：石川、刘洋溢、连祥斌，《因子投资：方法与实践》，电子工业出版社，2020 年。</p>
+ <p class="muted">参考书：<%= book.reference %></p>
 </div>

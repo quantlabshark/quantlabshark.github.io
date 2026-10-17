@@ -70,12 +70,25 @@
     "name": "基础理论与原理",
     "parent_id": null,
     "href": "/theory/",
-    "description": "收益与风险、统计检验、投资组合。",
+    "description": "资产定价、投资组合与市场微观结构。",
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 31,
-    "revision": 3,
+    "revision": 4,
     "read_access": "inherit"
+  },
+  {
+    "id": "44e2f2e9-a852-5af5-8a72-788df5e2df9d",
+    "key": "trading-and-exchanges",
+    "name": "交易与交易所：市场微观结构",
+    "parent_id": "6c937a0e-545c-56f5-a699-90c4325073d4",
+    "href": "/theory/trading-and-exchanges/",
+    "description": "Larry Harris 著。订单与撮合、交易者与经纪商、买卖价差、流动性、交易成本和市场结构。",
+    "nav_group": "学习与研究",
+    "visible": true,
+    "sort_order": 33,
+    "read_access": "inherit",
+    "revision": 2
   },
   {
     "id": "e4929cee-404a-50b6-a5b7-e76678ca05dd",

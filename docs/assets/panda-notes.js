@@ -2,7 +2,7 @@
 (() => {
  const mark=window.foamPandaArt(true);
  const namedPrefix=/^\s*鲨鱼说(?:\s*[：:]\s*|\s*$)/;
- const containers='blockquote,.tip,.callout-tip,.note,.panda-note';
+ const containers='blockquote,.tip,.callout-tip,.note,.panda-note,.shark-note';
  function headingIcon(el){
   if(!el.querySelector(':scope > .panda-face'))el.insertAdjacentHTML('afterbegin',mark);
   el.classList.add('panda-note-heading');
@@ -18,7 +18,7 @@
   element.querySelectorAll('strong,b').forEach(el=>{if(!el.textContent.trim())el.remove();});
  }
  function enhance(){
-  // Explicit Panda notes also occur as plain paragraphs or section headings.
+  // Explicit learning notes can also be paragraphs or section headings.
   // Preserve their original content, links, formulas and heading anchors.
   document.querySelectorAll('.prose p,.prose h2,.prose h3,.prose h4,.prose h5,.prose h6,.prose summary').forEach(el=>{
    if(!namedPrefix.test(el.textContent)||el.closest('pre,code,.lab-preview,.panda-note-label'))return;
@@ -27,13 +27,13 @@
    else headingIcon(el);
   });
   // Only explicit short learning tips, never source quotations or warnings.
-  document.querySelectorAll('.prose blockquote,.prose .tip,.prose .callout-tip,.prose .note,.prose .panda-note').forEach(el=>{
+  document.querySelectorAll('.prose blockquote,.prose .tip,.prose .callout-tip,.prose .note,.prose .panda-note,.prose .shark-note').forEach(el=>{
    if(el.closest('pre,code,.lab-preview'))return;
    const existing=el.querySelector(':scope > .panda-note-label');
    if(existing){headingIcon(existing);el.dataset.pandaNote='true';el.classList.add('panda-note');return;}
    const first=el.firstElementChild,lead=first?.querySelector(':scope > strong:first-child');
    const named=(first?.textContent||el.textContent).match(namedPrefix);
-   const explicit=el.matches('.tip,.callout-tip,.note');
+   const explicit=el.matches('.tip,.callout-tip,.note,.shark-note');
    if(!named&&(el.querySelector('pre,figure,table')||el.textContent.length>450))return;
    if(!named&&!explicit&&!(lead&&/^(提示|小提示|小技巧|操作提示|学习提示)[：:]?$/.test(lead.textContent.trim())))return;
    el.dataset.pandaNote='true';el.classList.add('panda-note');

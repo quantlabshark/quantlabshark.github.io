@@ -2,8 +2,8 @@
   {
     "id": "e02b9523-e47e-5893-abf2-7a4e526076b8",
     "slug": "factor-book-guide",
-    "title": "阅读导引与基础知识",
-    "summary": "收益率、均值与波动、回归、统计检验和矩阵运算。",
+    "title": "收益、风险与因子：阅读所需的基础知识",
+    "summary": "通过收益率、回归和两资产组合的计算，理解因子研究中的常用概念。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3000,
@@ -13,7 +13,7 @@
         "part": "阅读准备",
         "number": 1,
         "chapter": "G",
-        "edition": "2026-10",
+        "edition": "2026-10-revised",
         "minutes": 25,
         "section": "G",
         "source_pages": [
@@ -36,20 +36,20 @@
   {
     "id": "4aa3bad4-2c1e-501c-ba9b-2110e4b6730d",
     "slug": "factor-book-01-01",
-    "title": "1.1 统一视角下的因子投资",
-    "summary": "区分因子暴露、因子溢价和定价误差，建立收益解释、风险估计与因子择时之间的联系。",
+    "title": "收益从哪里来：特征、暴露、溢价与定价误差",
+    "summary": "用两只股票的收益差异理解因子模型，分清长期收益、当期涨跌和组合风险。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3001,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第一部分 · 基础与方法",
-        "number": 2,
         "chapter": "1",
-        "edition": "2026-10",
-        "minutes": 22,
+        "chapter_title": "因子投资基础",
         "section": "1.1",
+        "number": 2,
+        "part": "第一部分 · 基础与方法",
+        "minutes": 12,
         "source_pages": [
           7,
           8,
@@ -62,122 +62,122 @@
           15,
           16
         ],
-        "chapter_title": "因子投资基础",
         "source_sections": [
           "1.1.1 一个公式",
           "1.1.2 因子、多因子模型和异象",
           "1.1.3 再论异象和因子",
           "1.1.4 因子投资包含的内容",
           "1.1.5 实证资产定价与因子投资"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "e6077e9e-1cab-5a71-9533-8fa677f5c6b8",
     "slug": "factor-book-01-02",
-    "title": "1.2 因子投资的学术起源",
-    "summary": "理解 CAPM、有效市场联合假说、行为金融与 GMM 的研究分工，认识多重检验和样本外检验。",
+    "title": "一个收益规律如何成为研究证据",
+    "summary": "理解联合假说、风险与行为解释，以及多重检验和样本外验证在因子研究中的作用。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3002,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第一部分 · 基础与方法",
-        "number": 3,
         "chapter": "1",
-        "edition": "2026-10",
-        "minutes": 17,
+        "chapter_title": "因子投资基础",
         "section": "1.2",
+        "number": 3,
+        "part": "第一部分 · 基础与方法",
+        "minutes": 12,
         "source_pages": [
           17,
           18,
           19,
           20
         ],
-        "chapter_title": "因子投资基础",
         "source_sections": [
           "1.2.1 实证资产定价",
           "1.2.2 研究现状"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "fe3b7361-9522-5a45-bc48-220d4ab2644f",
     "slug": "factor-book-01-03",
-    "title": "1.3 因子投资的业界发展",
-    "summary": "从管理人与投资者两个角度理解收益模型、风险模型、因子拥挤、择时及风格产品比较。",
+    "title": "因子怎样进入基金组合与业绩评价",
+    "summary": "区分预测收益、控制风险与风格配置，理解拥挤、择时及指数产品的比较方法。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3003,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第一部分 · 基础与方法",
-        "number": 4,
         "chapter": "1",
-        "edition": "2026-10",
-        "minutes": 18,
+        "chapter_title": "因子投资基础",
         "section": "1.3",
+        "number": 4,
+        "part": "第一部分 · 基础与方法",
+        "minutes": 12,
         "source_pages": [
           21,
           22,
           23,
           24
         ],
-        "chapter_title": "因子投资基础",
         "source_sections": [
           "1.3.1 因子投资和管理人",
           "1.3.2 因子投资和投资者"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "d7c70de2-1e52-57a7-83cf-659c5c170bfc",
     "slug": "factor-book-01-04",
-    "title": "1.4 全书结构与学习安排",
-    "summary": "按概念、研究方法、主要因子、模型与实践的顺序安排阅读，建立可以逐步完成的研究记录。",
+    "title": "盈利指标研究：数据、组合、检验与交易",
+    "summary": "把盈利指标的定义、组合形成、模型检验和实际交易连接成完整流程。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3004,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第一部分 · 基础与方法",
-        "number": 5,
         "chapter": "1",
-        "edition": "2026-10",
-        "minutes": 10,
+        "chapter_title": "因子投资基础",
         "section": "1.4",
+        "number": 5,
+        "part": "第一部分 · 基础与方法",
+        "minutes": 8,
         "source_pages": [
           25,
           26
         ],
-        "chapter_title": "因子投资基础",
-        "source_sections": []
+        "source_sections": [],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "a9a7d49e-e25a-5d82-a4bd-e909b765aa34",
     "slug": "factor-book-02-01",
-    "title": "2.1 投资组合排序法",
-    "summary": "从指标排序构造多空收益，理解单变量排序、独立双重排序与条件双重排序的不同用途。",
+    "title": "怎样用股票分组计算因子收益",
+    "summary": "从高低组收益差理解因子组合，计算单变量、独立双重与条件双重排序。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3005,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第一部分 · 基础与方法",
-        "number": 6,
         "chapter": "2",
-        "edition": "2026-10",
-        "minutes": 24,
+        "chapter_title": "因子投资方法论",
         "section": "2.1",
+        "number": 6,
+        "part": "第一部分 · 基础与方法",
+        "minutes": 14,
         "source_pages": [
           27,
           28,
@@ -193,33 +193,33 @@
           38,
           39
         ],
-        "chapter_title": "因子投资方法论",
         "source_sections": [
           "2.1.1 因子模拟投资组合",
           "2.1.2 排序法及其检验",
           "2.1.3 多重排序法",
           "2.1.4 因子命名约定"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "70e19d47-c2e6-56f4-91e6-b3757fb985da",
     "slug": "factor-book-02-02",
-    "title": "2.2 多因子模型的回归检验",
-    "summary": "比较时间序列回归、两阶段截面回归和 Fama–MacBeth 回归，区分因子溢价与定价误差。",
+    "title": "回归怎样区分因子暴露与风险溢价",
+    "summary": "从散点和小数据计算理解时序回归、截面回归与 Fama–MacBeth 检验。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3006,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第一部分 · 基础与方法",
-        "number": 7,
         "chapter": "2",
-        "edition": "2026-10",
-        "minutes": 26,
+        "chapter_title": "因子投资方法论",
         "section": "2.2",
+        "number": 7,
+        "part": "第一部分 · 基础与方法",
+        "minutes": 15,
         "source_pages": [
           40,
           41,
@@ -237,34 +237,34 @@
           53,
           54
         ],
-        "chapter_title": "因子投资方法论",
         "source_sections": [
           "2.2.1 时间序列回归",
           "2.2.2 截面回归",
           "2.2.3 时序回归vs截面回归",
           "2.2.4 Fama–MacBeth回归",
           "2.2.5 不同回归方法比较"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "80bc5043-a95e-53eb-ad94-23cbd0c752e1",
     "slug": "factor-book-02-03",
-    "title": "2.3 因子暴露和因子收益率",
-    "summary": "解释暴露估计误差、工具变量与公司特征，比较时序模型和截面模型的构造逻辑。",
+    "title": "公司特征与回归暴露为什么会给出不同结果",
+    "summary": "解释暴露估计误差、工具变量和公司特征模型，辨别不同因子收益的来源。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3007,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第一部分 · 基础与方法",
-        "number": 8,
         "chapter": "2",
-        "edition": "2026-10",
-        "minutes": 23,
+        "chapter_title": "因子投资方法论",
         "section": "2.3",
+        "number": 8,
+        "part": "第一部分 · 基础与方法",
+        "minutes": 11,
         "source_pages": [
           55,
           56,
@@ -272,32 +272,32 @@
           58,
           59
         ],
-        "chapter_title": "因子投资方法论",
         "source_sections": [
           "2.3.1 引入工具变量",
           "2.3.2 使用公司特征",
           "2.3.3 两类模型"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "5d946e0f-2f39-552d-b6de-80f8b46c1d34",
     "slug": "factor-book-02-04",
-    "title": "2.4 异象检验与稳健标准误",
-    "summary": "以回归截距检验模型无法解释的收益，计算 White 与 Newey–West 标准误，并理解截面异象检验。",
+    "title": "怎样检验模型解释不了的收益",
+    "summary": "逐步估计异象组合的 alpha，理解异方差、自相关与 White、Newey–West 标准误。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3008,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第一部分 · 基础与方法",
-        "number": 9,
         "chapter": "2",
-        "edition": "2026-10",
-        "minutes": 26,
+        "chapter_title": "因子投资方法论",
         "section": "2.4",
+        "number": 9,
+        "part": "第一部分 · 基础与方法",
+        "minutes": 10,
         "source_pages": [
           60,
           61,
@@ -307,33 +307,33 @@
           65,
           66
         ],
-        "chapter_title": "因子投资方法论",
         "source_sections": [
           "2.4.1 时序回归检验异象",
           "2.4.2 计量经济学问题",
           "2.4.3 White估计量和Newey–West估计量",
           "2.4.4 截面回归检验异象"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "235afd89-7e1d-5eba-a365-ae8c50dbf0c3",
     "slug": "factor-book-02-05",
-    "title": "2.5 多因子模型比较",
-    "summary": "理解联合定价误差、有效前沿与最大夏普比率，区分 GRS、张成、α 评价和贝叶斯比较。",
+    "title": "新增因子是否改善了定价与组合机会",
+    "summary": "解释 GRS、均值—方差张成、alpha 摘要和贝叶斯比较，连接统计量与投资含义。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3009,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第一部分 · 基础与方法",
-        "number": 10,
         "chapter": "2",
-        "edition": "2026-10",
-        "minutes": 28,
+        "chapter_title": "因子投资方法论",
         "section": "2.5",
+        "number": 10,
+        "part": "第一部分 · 基础与方法",
+        "minutes": 14,
         "source_pages": [
           67,
           68,
@@ -347,34 +347,34 @@
           76,
           77
         ],
-        "chapter_title": "因子投资方法论",
         "source_sections": [
           "2.5.1 GRS检验",
           "2.5.2 均值—方差张成检验",
           "2.5.3 从几何角度比较GRS 和均值—方差张成",
           "2.5.4 α检验",
           "2.5.5 贝叶斯方法"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "1a5102e4-a2b2-5c00-838f-208f06deb8d2",
     "slug": "factor-book-02-06",
-    "title": "2.6 因子正交化",
-    "summary": "从投影和残差理解控制其他变量后的增量信息，掌握共线性、逐步正交化与回归系数之间的关系。",
+    "title": "相关指标怎样分离出各自的增量信息",
+    "summary": "用残差、几何投影和完整数值例子理解正交化与多元回归。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3010,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第一部分 · 基础与方法",
-        "number": 11,
         "chapter": "2",
-        "edition": "2026-10",
-        "minutes": 25,
+        "chapter_title": "因子投资方法论",
         "section": "2.6",
+        "number": 11,
+        "part": "第一部分 · 基础与方法",
+        "minutes": 8,
         "source_pages": [
           78,
           79,
@@ -383,32 +383,32 @@
           82,
           83
         ],
-        "chapter_title": "因子投资方法论",
         "source_sections": [
           "2.6.1 简单一元回归",
           "2.6.2 回归的几何意义",
           "2.6.3 用正交化过程求解多元回归"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "e44624c0-c72e-5da1-a872-1a162357364e",
     "slug": "factor-book-02-07",
-    "title": "2.7 广义矩估计",
-    "summary": "从样本均值及其误差理解矩条件、GMM 目标函数、有效权重与过度识别检验。",
+    "title": "用平均关系估计价格模型：广义矩估计",
+    "summary": "从两种状态下的一元钱开始，建立随机折现、矩条件、参数估计和过度识别检验。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3011,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第一部分 · 基础与方法",
-        "number": 12,
         "chapter": "2",
-        "edition": "2026-10",
-        "minutes": 30,
+        "chapter_title": "因子投资方法论",
         "section": "2.7",
+        "number": 12,
+        "part": "第一部分 · 基础与方法",
+        "minutes": 13,
         "source_pages": [
           84,
           85,
@@ -422,60 +422,60 @@
           93,
           94
         ],
-        "chapter_title": "因子投资方法论",
         "source_sections": [
           "2.7.1 样本均值的方差",
           "2.7.2 分析框架",
           "2.7.3 数学基础",
           "2.7.4 有效性",
           "2.7.5 不应成为黑箱"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "9b17ed2e-907d-50f8-a663-0511eb3f1aaa",
     "slug": "factor-book-02-08",
-    "title": "2.8 研究方法建议",
-    "summary": "把排序、回归、模型比较和稳健性检查串成完整研究流程，明确每一步所回答的问题。",
+    "title": "排序、回归和模型比较分别检验什么",
+    "summary": "把同一个盈利信号依次用于收益差、增量预测与定价模型检验，避免检验目标混淆。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3012,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第一部分 · 基础与方法",
-        "number": 13,
         "chapter": "2",
-        "edition": "2026-10",
-        "minutes": 20,
+        "chapter_title": "因子投资方法论",
         "section": "2.8",
+        "number": 13,
+        "part": "第一部分 · 基础与方法",
+        "minutes": 9,
         "source_pages": [
           95,
           96
         ],
-        "chapter_title": "因子投资方法论",
-        "source_sections": []
+        "source_sections": [],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "7e9f4c61-d448-5315-af53-ff1b15b7a179",
     "slug": "factor-book-03-01",
-    "title": "3.1 数据和流程",
-    "summary": "按当时可得的信息构造价格与财务变量，理解复权、财报修订、单季度、TTM 和原书样本设定。",
+    "title": "财务数据怎样按真实时间进入因子计算",
+    "summary": "处理复权、停牌、财报修订、单季度与 TTM 数据，建立可复现的月度因子流程。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3013,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第二部分 · 因子与模型",
-        "number": 14,
         "chapter": "3",
-        "edition": "2026-10",
-        "minutes": 30,
+        "chapter_title": "主流因子解读",
         "section": "3.1",
+        "number": 14,
+        "part": "第二部分 · 因子与模型",
+        "minutes": 16,
         "source_pages": [
           97,
           98,
@@ -493,34 +493,34 @@
           110,
           111
         ],
-        "chapter_title": "主流因子解读",
         "source_sections": [
           "3.1.1 数据来源",
           "3.1.2 量价数据处理",
           "3.1.3 财务数据处理",
           "3.1.4 因子构造流程",
           "3.1.5 实证设定"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "d805ceba-29c8-5eb7-955a-b766ae036d12",
     "slug": "factor-book-03-02",
-    "title": "3.2 市场因子",
-    "summary": "从均值–方差选择推导市场风险补偿，区分时间序列解释能力与横截面定价能力。",
+    "title": "市场贝塔能解释涨跌，也能解释平均收益吗",
+    "summary": "从市场组合和协方差理解 CAPM，区分共动解释、截面定价与零贝塔模型。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3014,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第二部分 · 因子与模型",
-        "number": 15,
         "chapter": "3",
-        "edition": "2026-10",
-        "minutes": 23,
+        "chapter_title": "主流因子解读",
         "section": "3.2",
+        "number": 15,
+        "part": "第二部分 · 因子与模型",
+        "minutes": 9,
         "source_pages": [
           112,
           113,
@@ -528,32 +528,32 @@
           115,
           116
         ],
-        "chapter_title": "主流因子解读",
         "source_sections": [
           "3.2.1 市场因子起源",
           "3.2.2 对CAPM的质疑",
           "3.2.3 市场因子实证"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "834668c7-5a69-500e-8df7-2fb0cc8159ed",
     "slug": "factor-book-03-03",
-    "title": "3.3 规模因子",
-    "summary": "理解总市值、小盘溢价的解释与历史证据，检验收益是否依赖微型股和特定时期。",
+    "title": "公司规模与股票收益：小市值差异怎样计算",
+    "summary": "定义总市值、构造规模价差，理解风险、投资者基础和样本选择的影响。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3015,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第二部分 · 因子与模型",
-        "number": 16,
         "chapter": "3",
-        "edition": "2026-10",
-        "minutes": 21,
+        "chapter_title": "主流因子解读",
         "section": "3.3",
+        "number": 16,
+        "part": "第二部分 · 因子与模型",
+        "minutes": 9,
         "source_pages": [
           117,
           118,
@@ -561,32 +561,32 @@
           120,
           121
         ],
-        "chapter_title": "主流因子解读",
         "source_sections": [
           "3.3.1 规模因子起源",
           "3.3.2 规模因子成因",
           "3.3.3 规模因子实证"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "dfe33735-9e84-5457-a491-2009dd8a2f99",
     "slug": "factor-book-03-04",
-    "title": "3.4 价值因子",
-    "summary": "从账面市值比理解相对估值，区分风险补偿与预期偏差，并分析规模、盈利对价值结果的影响。",
+    "title": "账面市值比怎样形成价值因子",
+    "summary": "计算 BM、EP 与盈利之间的关系，区分低价格、风险补偿和预期偏差。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3016,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第二部分 · 因子与模型",
-        "number": 17,
         "chapter": "3",
-        "edition": "2026-10",
-        "minutes": 22,
+        "chapter_title": "主流因子解读",
         "section": "3.4",
+        "number": 17,
+        "part": "第二部分 · 因子与模型",
+        "minutes": 10,
         "source_pages": [
           122,
           123,
@@ -596,32 +596,32 @@
           127,
           128
         ],
-        "chapter_title": "主流因子解读",
         "source_sections": [
           "3.4.1 价值因子起源",
           "3.4.2 价值因子成因",
           "3.4.3 价值因子实证"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "b1083187-c1ab-58cc-8fa3-5460c79c7cb4",
     "slug": "factor-book-03-05",
-    "title": "3.5 动量因子",
-    "summary": "明确截面动量的排序窗口与持有期，理解反应不足、动量崩溃和原书 A 股样本的非显著结果。",
+    "title": "动量比较的是哪些过去收益",
+    "summary": "区分截面动量、短期反转和复合收益，理解窗口选择、尾部风险及历史 A 股证据。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3017,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第二部分 · 因子与模型",
-        "number": 18,
         "chapter": "3",
-        "edition": "2026-10",
-        "minutes": 24,
+        "chapter_title": "主流因子解读",
         "section": "3.5",
+        "number": 18,
+        "part": "第二部分 · 因子与模型",
+        "minutes": 11,
         "source_pages": [
           129,
           130,
@@ -632,32 +632,32 @@
           135,
           136
         ],
-        "chapter_title": "主流因子解读",
         "source_sections": [
           "3.5.1 动量因子起源",
           "3.5.2 动量因子成因",
           "3.5.3 动量因子实证"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "36fcef98-d173-5219-b400-ba1d88ee4395",
     "slug": "factor-book-03-06",
-    "title": "3.6 盈利因子",
-    "summary": "比较 ROE、ROA 等盈利指标，理解盈利水平、质量、稳定性与增长，并识别盈利和规模的交叉影响。",
+    "title": "盈利能力怎样转化为可比较的选股指标",
+    "summary": "分清利润、资本基数、盈利质量和增长，计算 ROE 并解释规模控制后的收益差异。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3018,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第二部分 · 因子与模型",
-        "number": 19,
         "chapter": "3",
-        "edition": "2026-10",
-        "minutes": 23,
+        "chapter_title": "主流因子解读",
         "section": "3.6",
+        "number": 19,
+        "part": "第二部分 · 因子与模型",
+        "minutes": 15,
         "source_pages": [
           137,
           138,
@@ -667,32 +667,32 @@
           142,
           143
         ],
-        "chapter_title": "主流因子解读",
         "source_sections": [
           "3.6.1 盈利因子起源",
           "3.6.2 盈利因子成因",
           "3.6.3 盈利因子实证"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "8c896417-30c1-5aba-b70c-746ff309bfb2",
     "slug": "factor-book-03-07",
-    "title": "3.7 投资因子",
-    "summary": "理解企业投资与要求回报率的条件关系，区分投资代理变量、盈利混杂与原书的不显著结果。",
+    "title": "企业扩张为什么可能对应较低预期回报",
+    "summary": "解释投资因子的条件关系、资产增长代理和盈利控制，比较历史 A 股检验结果。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3019,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第二部分 · 因子与模型",
-        "number": 20,
         "chapter": "3",
-        "edition": "2026-10",
-        "minutes": 23,
+        "chapter_title": "主流因子解读",
         "section": "3.7",
+        "number": 20,
+        "part": "第二部分 · 因子与模型",
+        "minutes": 10,
         "source_pages": [
           144,
           145,
@@ -703,32 +703,32 @@
           150,
           151
         ],
-        "chapter_title": "主流因子解读",
         "source_sections": [
           "3.7.1 投资因子起源",
           "3.7.2 投资因子成因",
           "3.7.3 投资因子实证"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "fd7a218a-c719-50b8-9340-f87636b809ef",
     "slug": "factor-book-03-08",
-    "title": "3.8 换手率因子",
-    "summary": "区分成交活跃度、异常换手与流动性，理解低异常换手组合的历史收益及空头贡献。",
+    "title": "异常换手率怎样衡量交易热度变化",
+    "summary": "计算相对自身历史的换手指标，区分交易活跃、流动性、情绪与收益来源。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3020,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第二部分 · 因子与模型",
-        "number": 21,
         "chapter": "3",
-        "edition": "2026-10",
-        "minutes": 22,
+        "chapter_title": "主流因子解读",
         "section": "3.8",
+        "number": 21,
+        "part": "第二部分 · 因子与模型",
+        "minutes": 10,
         "source_pages": [
           152,
           153,
@@ -737,32 +737,32 @@
           156,
           157
         ],
-        "chapter_title": "主流因子解读",
         "source_sections": [
           "3.8.1 换手率因子起源",
           "3.8.2 换手率因子成因",
           "3.8.3 换手率因子实证"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "8e91b990-b1b1-5ee4-abb5-0e5b7b43a46f",
     "slug": "factor-book-04-01",
-    "title": "4.1 主流多因子模型的结构与构造",
-    "summary": "比较七类经典模型，理解排序变量、因子组合、经济解释及再平衡规则之间的关系。",
+    "title": "4.1 多因子模型的经济含义与组合构造",
+    "summary": "从六组股票计算规模与价值收益，比较七类模型的经济解释、排序指标和调仓规则。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3021,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第二部分 · 因子与模型",
-        "number": 22,
         "chapter": "4",
-        "edition": "2026-10",
-        "minutes": 30,
+        "chapter_title": "多因子模型",
         "section": "4.1",
+        "number": 22,
+        "part": "第二部分 · 因子与模型",
+        "minutes": 30,
         "source_pages": [
           158,
           159,
@@ -782,7 +782,6 @@
           173,
           174
         ],
-        "chapter_title": "多因子模型",
         "source_sections": [
           "4.1.1 Fama–French 三因子模型",
           "4.1.2 Carhart四因子模型",
@@ -791,56 +790,57 @@
           "4.1.5 Hou–Xue–Zhang四因子模型",
           "4.1.6 Stambaugh–Yuan四因子模型",
           "4.1.7 Daniel–Hirshleifer–Sun三因子模型"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "2367419b-05b8-5bb8-8ee2-95d7f47f40b9",
     "slug": "factor-book-04-02",
-    "title": "4.2 A股因子定价的截面检验",
-    "summary": "按 Fama–MacBeth 设定检验公司特征，区分系数大小、统计显著性和经济影响。",
+    "title": "4.2 用截面回归识别因子的独立作用",
+    "summary": "逐步计算月度斜率、平均收益与标准误，理解A股历史结果和一个标准差的经济影响。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3022,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第二部分 · 因子与模型",
-        "number": 23,
         "chapter": "4",
-        "edition": "2026-10",
-        "minutes": 20,
+        "chapter_title": "多因子模型",
         "section": "4.2",
+        "number": 23,
+        "part": "第二部分 · 因子与模型",
+        "minutes": 20,
         "source_pages": [
           175,
           176
         ],
-        "chapter_title": "多因子模型",
         "source_sections": [
           "4.2.1 Fama–MacBeth回归实证设定",
           "4.2.2 Fama–MacBeth回归结果"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "0c822068-227a-53e4-9cf3-ec00e1ac88fe",
     "slug": "factor-book-04-03",
-    "title": "4.3 A股多因子模型的比较方法",
-    "summary": "以 EP 三因子和 BM、ROE 四因子为例，理解定价误差、联合检验及股票池的影响。",
+    "title": "4.3 比较模型的定价误差与解释范围",
+    "summary": "用EP、BM和ROE连接公司估值与收益，比较截距、GRS联合检验及股票池变化的影响。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3023,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第二部分 · 因子与模型",
-        "number": 24,
         "chapter": "4",
-        "edition": "2026-10",
-        "minutes": 25,
+        "chapter_title": "多因子模型",
         "section": "4.3",
+        "number": 24,
+        "part": "第二部分 · 因子与模型",
+        "minutes": 25,
         "source_pages": [
           177,
           178,
@@ -856,58 +856,58 @@
           188,
           189
         ],
-        "chapter_title": "多因子模型",
         "source_sections": [
           "4.3.1 两个模型",
           "4.3.2 BM、ROE与预期收益",
           "4.3.3 模型比较的实证结果"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "ef801d8f-0882-5ad6-8b93-4e35446a4d7c",
     "slug": "factor-book-04-04",
-    "title": "4.4 模型简约性与复杂度控制",
-    "summary": "理解两种简约指数，区分因子数量、输入变量与样本内解释能力。",
+    "title": "4.4 因子模型的复杂度与样本外表现",
+    "summary": "分别计算因子构造次数和独立输入数量，理解简约指数及复杂模型为何需要独立验证。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3024,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第二部分 · 因子与模型",
-        "number": 25,
         "chapter": "4",
-        "edition": "2026-10",
-        "minutes": 20,
+        "chapter_title": "多因子模型",
         "section": "4.4",
+        "number": 25,
+        "part": "第二部分 · 因子与模型",
+        "minutes": 20,
         "source_pages": [
           190,
           191
         ],
-        "chapter_title": "多因子模型",
-        "source_sections": []
+        "source_sections": [],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "7786ad3a-2489-58e8-9b81-0570b1027754",
     "slug": "factor-book-05-01",
-    "title": "5.1 估值、基本面与预期差",
-    "summary": "F-Score、G-Score 的指标构造，以及估值与基本面共同反映的价格预期差。",
+    "title": "5.1 估值与财务质量怎样共同影响收益",
+    "summary": "计算F-Score和G-Score，区分价格便宜、财务健康和成长持续性，并构造预期差组合。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3025,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第二部分 · 因子与模型",
-        "number": 26,
         "chapter": "5",
-        "edition": "2026-10",
-        "minutes": 25,
+        "chapter_title": "异象研究",
         "section": "5.1",
+        "number": 26,
+        "part": "第二部分 · 因子与模型",
+        "minutes": 25,
         "source_pages": [
           192,
           193,
@@ -923,33 +923,33 @@
           203,
           204
         ],
-        "chapter_title": "异象研究",
         "source_sections": [
           "5.1.1 价值因子与价值投资",
           "5.1.2 F-Score",
           "5.1.3 G-Score",
           "5.1.4 通过预期差获取超额收益"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "ac3614d9-b8c9-5853-a0fb-e57d15310053",
     "slug": "factor-book-05-02",
-    "title": "5.2 基本面锚定反转的构造与检验",
-    "summary": "将短期反转与 F-Score 结合，区分暂时价格冲击和基本面恶化造成的下跌。",
+    "title": "5.2 用基本面区分价格反转",
+    "summary": "从下跌的三种来源解释残余收益，再用收益率和F-Score交叉分组构造基本面锚定反转。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3026,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第二部分 · 因子与模型",
-        "number": 27,
         "chapter": "5",
-        "edition": "2026-10",
-        "minutes": 20,
+        "chapter_title": "异象研究",
         "section": "5.2",
+        "number": 27,
+        "part": "第二部分 · 因子与模型",
+        "minutes": 20,
         "source_pages": [
           205,
           206,
@@ -961,31 +961,31 @@
           212,
           213
         ],
-        "chapter_title": "异象研究",
         "source_sections": [
           "5.2.1 金融学依据",
           "5.2.2 A股市场中的基本面锚定反转"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "5f072c76-5149-55ff-91f1-f457251b6177",
     "slug": "factor-book-05-03",
-    "title": "5.3 特质性波动率与套利不对称",
-    "summary": "理解残差波动、错误定价分组和卖空限制，复核低特质性波动异象的证据。",
+    "title": "5.3 特质性波动率与低波动异象",
+    "summary": "计算模型残差波动，解释套利不对称，并通过条件排序比较高估与低估股票的历史表现。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3027,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第二部分 · 因子与模型",
-        "number": 28,
         "chapter": "5",
-        "edition": "2026-10",
-        "minutes": 25,
+        "chapter_title": "异象研究",
         "section": "5.3",
+        "number": 28,
+        "part": "第二部分 · 因子与模型",
+        "minutes": 25,
         "source_pages": [
           214,
           215,
@@ -998,31 +998,31 @@
           222,
           223
         ],
-        "chapter_title": "异象研究",
         "source_sections": [
           "5.3.1 套利不对称性和特质性波动率",
           "5.3.2 A股市场中的特质性波动率异象"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "1c0b4894-a2a5-56ff-bb0c-44aac1d1e0b0",
     "slug": "factor-book-06-01",
-    "title": "6.1 显著性、多重检验与研究偏差",
-    "summary": "从一次检验和多次尝试的区别出发，解释 p 值、族错误率、发现率及先验。",
+    "title": "6.1 多重检验、发表偏差与先验证据",
+    "summary": "从100次无效检验的误报概率出发，计算FWER、FDR和贝叶斯后验，理解低p值为何需要结合研究过程。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3028,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第三部分 · 研究与实践",
-        "number": 29,
         "chapter": "6",
-        "edition": "2026-10",
-        "minutes": 25,
+        "chapter_title": "因子研究现状",
         "section": "6.1",
+        "number": 29,
+        "part": "第三部分 · 研究与实践",
+        "minutes": 25,
         "source_pages": [
           224,
           225,
@@ -1035,7 +1035,6 @@
           232,
           233
         ],
-        "chapter_title": "因子研究现状",
         "source_sections": [
           "6.1.1 何为p-值",
           "6.1.2 在追逐p-值的道路上狂奔",
@@ -1043,27 +1042,28 @@
           "6.1.4 正确认识p-值的含义",
           "6.1.5 多重假设检验",
           "6.1.6 先验的重要性"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "64cb0bd7-9c91-54ae-80fc-2fb3323861fc",
     "slug": "factor-book-06-02",
-    "title": "6.2 多因子模型竞争与经济解释",
-    "summary": "比较投资因子的两种理论出发点，介绍 q5 扩展及模型比较应回答的问题。",
+    "title": "6.2 历史投资、预期投资与模型比较",
+    "summary": "从单期回报推导投资系数的条件关系，解释q5新增预期投资增长以及模型比较的经济要求。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3029,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第三部分 · 研究与实践",
-        "number": 30,
         "chapter": "6",
-        "edition": "2026-10",
-        "minutes": 20,
+        "chapter_title": "因子研究现状",
         "section": "6.2",
+        "number": 30,
+        "part": "第三部分 · 研究与实践",
+        "minutes": 20,
         "source_pages": [
           234,
           235,
@@ -1071,32 +1071,32 @@
           237,
           238
         ],
-        "chapter_title": "因子研究现状",
         "source_sections": [
           "6.2.1 形同意不同的投资因子",
           "6.2.2 q5模型",
           "6.2.3 因子大战"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "6df21c82-82c0-5404-a5a1-7e9dcb7f0646",
     "slug": "factor-book-06-03",
-    "title": "6.3 行为金融学与因子收益",
-    "summary": "用套利限制、预期偏差、前景理论和注意力约束理解价格为何可能偏离基本面。",
+    "title": "6.3 行为偏差如何影响价格与交易",
+    "summary": "结合套利限制、预期偏差、累积前景理论和注意力，解释动量、反转、公告漂移及彩票型股票。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3030,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第三部分 · 研究与实践",
-        "number": 31,
         "chapter": "6",
-        "edition": "2026-10",
-        "minutes": 25,
+        "chapter_title": "因子研究现状",
         "section": "6.3",
+        "number": 31,
+        "part": "第三部分 · 研究与实践",
+        "minutes": 25,
         "source_pages": [
           239,
           240,
@@ -1117,7 +1117,6 @@
           255,
           256
         ],
-        "chapter_title": "因子研究现状",
         "source_sections": [
           "6.3.1 套利限制",
           "6.3.2 预期中的偏差",
@@ -1125,27 +1124,28 @@
           "6.3.4 认知限制",
           "6.3.5 行为金融学与市场异象",
           "6.3.6 行为有效市场"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "123ef47b-d4b2-5c54-9925-925c570b8dc4",
     "slug": "factor-book-06-04",
-    "title": "6.4 投资者情绪的度量与检验",
-    "summary": "理解情绪代理指标、主成分合成和预测性回归，区分同期表现与未来预测。",
+    "title": "6.4 情绪指标的构造与收益预测",
+    "summary": "用六类代理指标合成情绪，拆分多空两端，并考察风险收益关系、跨市场传导和管理者情绪。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3031,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第三部分 · 研究与实践",
-        "number": 32,
         "chapter": "6",
-        "edition": "2026-10",
-        "minutes": 20,
+        "chapter_title": "因子研究现状",
         "section": "6.4",
+        "number": 32,
+        "part": "第三部分 · 研究与实践",
+        "minutes": 20,
         "source_pages": [
           257,
           258,
@@ -1154,32 +1154,32 @@
           261,
           262
         ],
-        "chapter_title": "因子研究现状",
         "source_sections": [
           "6.4.1 投资者情绪的度量",
           "6.4.2 投资者情绪与异象表现",
           "6.4.3 投资者情绪与市场表现"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "d8e7096b-c306-5f31-8083-a70232479f76",
     "slug": "factor-book-06-05",
-    "title": "6.5 风险补偿、错误定价与数据窥探",
-    "summary": "将异象解释转成可检验的假设，整理宏观状态、公告窗口、注意力与样本外检验。",
+    "title": "6.5 区分风险补偿、错误定价与偶然发现",
+    "summary": "把收益现象转为条件预测，使用公告交互项、预期外盈利和前后样本外数据检验不同机制。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3032,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第三部分 · 研究与实践",
-        "number": 33,
         "chapter": "6",
-        "edition": "2026-10",
-        "minutes": 20,
+        "chapter_title": "因子研究现状",
         "section": "6.5",
+        "number": 33,
+        "part": "第三部分 · 研究与实践",
+        "minutes": 20,
         "source_pages": [
           263,
           264,
@@ -1188,32 +1188,32 @@
           267,
           268
         ],
-        "chapter_title": "因子研究现状",
         "source_sections": [
           "6.5.1 风险补偿检验",
           "6.5.2 错误定价检验",
           "6.5.3 数据窥探检验"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "26f9511b-1414-50e9-bb56-6f5bef7ce91d",
     "slug": "factor-book-06-06",
-    "title": "6.6 因子样本外失效与交易成本",
-    "summary": "区分曝光、拥挤和交易费用造成的收益衰减，并理解贝叶斯收缩的作用。",
+    "title": "6.6 因子衰减、拥挤与成本后的收益",
+    "summary": "拆分信息曝光、同步持仓和交易成本，用经验贝叶斯收缩修正不稳定的高收益估计。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3033,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第三部分 · 研究与实践",
-        "number": 34,
         "chapter": "6",
-        "edition": "2026-10",
-        "minutes": 20,
+        "chapter_title": "因子研究现状",
         "section": "6.6",
+        "number": 34,
+        "part": "第三部分 · 研究与实践",
+        "minutes": 20,
         "source_pages": [
           269,
           270,
@@ -1221,32 +1221,32 @@
           272,
           273
         ],
-        "chapter_title": "因子研究现状",
         "source_sections": [
           "6.6.1 曝光导致错误定价减弱",
           "6.6.2 因子拥挤",
           "6.6.3 交易成本"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "c7f9ff3d-8b9a-5ae0-aa1e-f6598f8c482a",
     "slug": "factor-book-06-07",
-    "title": "6.7 基本面分析与量化指标的结合",
-    "summary": "理解财务比率的经济背景，通过 ROA 分解、一次性项目与财报核验改进因子。",
+    "title": "6.7 财务比率背后的经营与会计含义",
+    "summary": "通过一次性利润、权益分母和ROA分解，理解基本面分析怎样改进量化筛选。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3034,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第三部分 · 研究与实践",
-        "number": 35,
         "chapter": "6",
-        "edition": "2026-10",
-        "minutes": 20,
+        "chapter_title": "因子研究现状",
         "section": "6.7",
+        "number": 35,
+        "part": "第三部分 · 研究与实践",
+        "minutes": 20,
         "source_pages": [
           274,
           275,
@@ -1256,33 +1256,33 @@
           279,
           280
         ],
-        "chapter_title": "因子研究现状",
         "source_sections": [
           "6.7.1 基本面分析",
           "6.7.2 基本面量化投资",
           "6.7.3 基本面投资“因子化”的不足",
           "6.7.4 思考和讨论"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "50f91250-516d-56af-bf91-5662ee0002a8",
     "slug": "factor-book-06-08",
-    "title": "6.8 机器学习在因子研究中的作用",
-    "summary": "从线性基准进入非线性预测，理解时间验证、PCA 扩展及模型解释。",
+    "title": "6.8 机器学习的预测、降维与样本外检验",
+    "summary": "由线性预测进入树模型与神经网络，计算样本外误差，并解释PCA、IPCA与风险溢价PCA。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3035,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第三部分 · 研究与实践",
-        "number": 36,
         "chapter": "6",
-        "edition": "2026-10",
-        "minutes": 30,
+        "chapter_title": "因子研究现状",
         "section": "6.8",
+        "number": 36,
+        "part": "第三部分 · 研究与实践",
+        "minutes": 30,
         "source_pages": [
           281,
           282,
@@ -1295,34 +1295,34 @@
           289,
           290
         ],
-        "chapter_title": "因子研究现状",
         "source_sections": [
           "6.8.1 线性模型",
           "6.8.2 非线性模型",
           "6.8.3 模型评估与实证研究",
           "6.8.4 主成分分析和因子选择",
           "6.8.5 机器学习的问题"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "6dd9eb66-cea4-5bf7-b7ae-fed032f01357",
     "slug": "factor-book-07-01",
-    "title": "7.1 收益率模型：从选股指标到收益预测",
-    "summary": "说明预测变量的筛选、标准化、组合与回归预测，并区分选股得分和可用于优化的预期收益率。",
+    "title": "7.1 从选股指标到预期收益",
+    "summary": "学习选股指标的检验、数据处理与收益标定，理解排名信号如何转为组合可使用的预测值。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3036,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第三部分 · 研究与实践",
-        "number": 37,
         "chapter": "7",
-        "edition": "2026-10",
-        "minutes": 27,
+        "chapter_title": "因子投资实践",
         "section": "7.1",
+        "number": 37,
+        "part": "第三部分 · 研究与实践",
+        "minutes": 27,
         "source_pages": [
           291,
           292,
@@ -1340,33 +1340,33 @@
           304,
           305
         ],
-        "chapter_title": "因子投资实践",
         "source_sections": [
           "7.1.1 基本术语",
           "7.1.2 寻找预测变量",
           "7.1.3 挑选预测变量",
           "7.1.4 收益率预测"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "ed683324-b2e0-5b81-89fa-fc5291b9a560",
     "slug": "factor-book-07-02",
-    "title": "7.2 Barra 风险模型：共同风险、约束回归与协方差",
-    "summary": "以四只股票解释国家、行业和风格因子，推导受约束回归，并说明风险矩阵的估计和校准。",
+    "title": "7.2 风险模型与纯因子组合",
+    "summary": "通过国家、行业和风格暴露解释共同波动，推导约束回归、纯因子组合和风险预测的校准方法。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3037,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第三部分 · 研究与实践",
-        "number": 38,
         "chapter": "7",
-        "edition": "2026-10",
-        "minutes": 34,
+        "chapter_title": "因子投资实践",
         "section": "7.2",
+        "number": 38,
+        "part": "第三部分 · 研究与实践",
+        "minutes": 34,
         "source_pages": [
           306,
           307,
@@ -1380,33 +1380,33 @@
           315,
           316
         ],
-        "chapter_title": "因子投资实践",
         "source_sections": [
           "7.2.1 Barra多因子模型",
           "7.2.2 模型求解",
           "7.2.3 纯因子投资组合",
           "7.2.4 协方差矩阵求解及调整"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "4a3e9a6d-0a72-5009-875c-4f8929d27ec1",
     "slug": "factor-book-07-03",
-    "title": "7.3 组合优化：目标函数、模型一致性与交易约束",
-    "summary": "从两资产例子推导均值方差、最小方差和风险平价，说明预算约束、杠杆、换手和成本。",
+    "title": "7.3 收益预测、风险与组合优化",
+    "summary": "推导预算约束下的均值方差配置，比较最小方差、最大分散度、风险平价，并把交易成本和模型失配纳入组合决策。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3038,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第三部分 · 研究与实践",
-        "number": 39,
         "chapter": "7",
-        "edition": "2026-10",
-        "minutes": 34,
+        "chapter_title": "因子投资实践",
         "section": "7.3",
+        "number": 39,
+        "part": "第三部分 · 研究与实践",
+        "minutes": 34,
         "source_pages": [
           317,
           318,
@@ -1420,34 +1420,34 @@
           326,
           327
         ],
-        "chapter_title": "因子投资实践",
         "source_sections": [
           "7.3.1 错位的收益与风险模型",
           "7.3.2 目标函数",
           "7.3.3 不同目标函数的比较",
           "7.3.4 约束条件",
           "7.3.5 交易成本模型"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "82ae385e-1a51-5067-b70e-14497af3495c",
     "slug": "factor-book-07-04",
-    "title": "7.4 Smart Beta：因子指数的设计与评价",
-    "summary": "连接学术多空因子与可交易指数，说明选股、权重、组合方式和原书 BetaPlus 历史案例。",
+    "title": "7.4 因子指数的构建与评价",
+    "summary": "从质量指数的具体权重出发，说明Smart Beta的规则、可投资性、基金评价以及多因子混合和整合。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3039,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第三部分 · 研究与实践",
-        "number": 40,
         "chapter": "7",
-        "edition": "2026-10",
-        "minutes": 35,
+        "chapter_title": "因子投资实践",
         "section": "7.4",
+        "number": 40,
+        "part": "第三部分 · 研究与实践",
+        "minutes": 35,
         "source_pages": [
           328,
           329,
@@ -1474,34 +1474,34 @@
           350,
           351
         ],
-        "chapter_title": "因子投资实践",
         "source_sections": [
           "7.4.1 因子指数和Smart Beta",
           "7.4.2 为什么要投资Smart Beta",
           "7.4.3 如何投资Smart Beta",
           "7.4.4 应用实践",
           "7.4.5 更多讨论"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "2d3b7223-9446-51d0-bdaa-b32675a1277c",
     "slug": "factor-book-07-05",
-    "title": "7.5 因子择时：预测条件收益与控制交易误差",
-    "summary": "梳理估值、动量、波动、情绪和宏观五类择时信息，并用滞后权重例子解释真实可实施的检验。",
+    "title": "7.5 因子择时的信号与验证",
+    "summary": "区分估值、动量、波动、情绪和宏观信号，推导权重规则，并用数据发布时间与成本检验动态配置的价值。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3040,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第三部分 · 研究与实践",
-        "number": 41,
         "chapter": "7",
-        "edition": "2026-10",
-        "minutes": 25,
+        "chapter_title": "因子投资实践",
         "section": "7.5",
+        "number": 41,
+        "part": "第三部分 · 研究与实践",
+        "minutes": 25,
         "source_pages": [
           352,
           353,
@@ -1510,7 +1510,6 @@
           356,
           357
         ],
-        "chapter_title": "因子投资实践",
         "source_sections": [
           "7.5.1 按因子估值择时",
           "7.5.2 按因子动量择时",
@@ -1518,27 +1517,28 @@
           "7.5.4 按市场情绪择时",
           "7.5.5 按宏观因素择时",
           "7.5.6 因子择时很难"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "2b68f375-eaf6-5dd9-9ba8-8dccd8aea0b4",
     "slug": "factor-book-07-06",
-    "title": "7.6 风格分析：从基金收益识别因子暴露",
-    "summary": "区分持仓分析、经典资产类别回归和多因子回归，并解释巴菲特案例中的收益归因。",
+    "title": "7.6 基金风格与收益来源",
+    "summary": "比较持仓分析、受约束的资产类别拟合和多空因子回归，结合历史价值投资案例解释风格暴露及α。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3041,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第三部分 · 研究与实践",
-        "number": 42,
         "chapter": "7",
-        "edition": "2026-10",
-        "minutes": 25,
+        "chapter_title": "因子投资实践",
         "section": "7.6",
+        "number": 42,
+        "part": "第三部分 · 研究与实践",
+        "minutes": 25,
         "source_pages": [
           358,
           359,
@@ -1547,32 +1547,32 @@
           362,
           363
         ],
-        "chapter_title": "因子投资实践",
         "source_sections": [
           "7.6.1 经典风格分析",
           "7.6.2 基于多空因子的风格分析",
           "7.6.3 实例：巴菲特的投资风格"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "89722b9e-9125-54d7-9a04-078504683cbe",
     "slug": "factor-book-07-07",
-    "title": "7.7 风险归因：把组合波动分配到资产和因子",
-    "summary": "推导波动率贡献与相关性关系，用两资产例子说明等资金不等风险，并保留特质风险项。",
+    "title": "7.7 组合风险的分解与归因",
+    "summary": "从协方差推导边际风险和组成风险，解释暴露、波动、相关性三要素，并把共同因子与特质风险完整加总。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3042,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第三部分 · 研究与实践",
-        "number": 43,
         "chapter": "7",
-        "edition": "2026-10",
-        "minutes": 25,
+        "chapter_title": "因子投资实践",
         "section": "7.7",
+        "number": 43,
+        "part": "第三部分 · 研究与实践",
+        "minutes": 25,
         "source_pages": [
           364,
           365,
@@ -1581,33 +1581,33 @@
           368,
           369
         ],
-        "chapter_title": "因子投资实践",
         "source_sections": [
           "7.7.1 两种传统风险归因方法",
           "7.7.2 风险的三要素",
           "7.7.3 从风险角度看收益相关性",
           "7.7.4 将三要素公式应用于多因子模型"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "648924bb-16bf-522e-b997-b016dd9fb784",
     "slug": "factor-book-07-08",
-    "title": "7.8 因子投资的发展：另类数据与跨资产配置",
-    "summary": "另类数据的研究流程与风险因子配置，以及信息增量、样本偏差和相关性变化的检验。",
+    "title": "7.8 另类数据与跨资产风险配置",
+    "summary": "研究新数据的信息增量和采集偏差，构建宏观因子模拟组合，并用风险偏好与分散化指标观察组合脆弱性。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3043,
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "part": "第三部分 · 研究与实践",
-        "number": 44,
         "chapter": "7",
-        "edition": "2026-10",
-        "minutes": 26,
+        "chapter_title": "因子投资实践",
         "section": "7.8",
+        "number": 44,
+        "part": "第三部分 · 研究与实践",
+        "minutes": 26,
         "source_pages": [
           370,
           371,
@@ -1618,19 +1618,19 @@
           376,
           377
         ],
-        "chapter_title": "因子投资实践",
         "source_sections": [
           "7.8.1 另类数据",
           "7.8.2 用因子实现大类资产配置"
-        ]
+        ],
+        "edition": "2026-10-revised"
       }
     }
   },
   {
     "id": "abcfb7a2-336b-5d47-85e5-b367d360c02b",
     "slug": "factor-book-afterword",
-    "title": "后记：研究方法与后续学习",
-    "summary": "以可复核的研究过程连接全书方法，衔接实证资产定价、定价理论与信息套利三条进阶阅读路径。",
+    "title": "完成一项因子研究：数据、证据与文献",
+    "summary": "把因子构造、模型检验与投资实施连接起来，并据此选择进阶文献。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3044,
@@ -1640,7 +1640,7 @@
         "part": "附录与参考",
         "number": 45,
         "chapter": "R",
-        "edition": "2026-10",
+        "edition": "2026-10-revised",
         "minutes": 10,
         "section": "R",
         "source_pages": [
@@ -1658,8 +1658,8 @@
   {
     "id": "9d7664be-1b34-5f6e-865e-5e357132c2fb",
     "slug": "factor-book-appendix-a",
-    "title": "附录 A：理解资产价格",
-    "summary": "从现金流与随机折现因子出发，理解短期预测、过度波动、消费风险、行为解释和预期收益差异，计算两种状态下的资产价格。",
+    "title": "资产价格、消费风险与市场有效性",
+    "summary": "用两种经济状态解释随机折现因子，再连接有效市场、消费模型、行为金融与截面定价。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3045,
@@ -1669,7 +1669,7 @@
         "part": "附录与参考",
         "number": 46,
         "chapter": "A",
-        "edition": "2026-10",
+        "edition": "2026-10-revised",
         "minutes": 25,
         "section": "A",
         "source_pages": [
@@ -1698,8 +1698,8 @@
   {
     "id": "996383be-de8a-58dd-8c7b-eec31f0cce25",
     "slug": "factor-book-references",
-    "title": "参考文献索引与查阅方法",
-    "summary": "按研究主题选择阅读起点，并按原书来源页查找作者、题名与发表信息。",
+    "title": "参考文献与主题检索",
+    "summary": "按研究问题查找资产定价、因子构造、统计检验与投资实施的文献。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 3046,
@@ -1709,7 +1709,7 @@
         "part": "附录与参考",
         "number": 47,
         "chapter": "L",
-        "edition": "2026-10",
+        "edition": "2026-10-revised",
         "minutes": 15,
         "section": "L",
         "source_pages": [
@@ -1752,6 +1752,3311 @@
         "source_sections": [
           "参考文献"
         ]
+      }
+    }
+  },
+  {
+    "id": "6c693f43-647d-5dbb-8ff6-368237ce36bf",
+    "slug": "harris-book-guide",
+    "title": "报价、订单簿与交易成本基础",
+    "summary": "买卖方向、基点、逐档成交、条件概率与费用后的收益。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4000,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "G",
+        "chapter_title": "阅读准备",
+        "section": "G.1",
+        "number": 1,
+        "part": "阅读准备",
+        "minutes": 22,
+        "source_pages": [
+          4,
+          5,
+          12,
+          13,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "source_sections": [
+          "1.1–1.8 Introduction",
+          "初学者补充：报价、基点与订单簿算例"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "75bd6818-b716-5561-a44e-64d153a18b6b",
+    "slug": "harris-book-01-01",
+    "title": "1.1 交易、流动性与价格发现",
+    "summary": "从买卖双方的匹配过程理解流动性、价差、信息与交易规则。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4001,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "1",
+        "chapter_title": "交易与市场微观结构",
+        "section": "1.1",
+        "number": 2,
+        "part": "交易入门",
+        "minutes": 8,
+        "source_pages": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "source_sections": [
+          "1.1 SCOPE OF THE BOOK",
+          "1.2 OBJECTIVES",
+          "1.3 INSTRUMENTS AND MARKETS",
+          "1.4 A BRIEF OVERVIEW OF TRADING AND EXCHANGES",
+          "1.5 KEY RECURRENT THEMES",
+          "1.6 OUTLINE OF THE BOOK",
+          "1.7 AN IMPORTANT DISCLAIMER",
+          "1.8 SUMMARY"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "29935475-2bdf-55ba-bcf1-b03cc4eea4c6",
+    "slug": "harris-book-02-01",
+    "title": "2.1 从委托到交收：一笔股票交易的完整过程",
+    "summary": "读懂报价、订单路由、成交确认和交收，区分经纪代理与交易商承接。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4002,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "2",
+        "chapter_title": "交易过程中的实际问题",
+        "section": "2.1",
+        "number": 3,
+        "part": "交易入门",
+        "minutes": 6,
+        "source_pages": [
+          24,
+          25,
+          26,
+          27,
+          28
+        ],
+        "source_sections": [
+          "2.1 A RETAIL TRADE IN AN NYSE-LISTED STOCK",
+          "2.2 A RETAIL TRADE IN A NASDAQ STOCK"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "35c339db-4943-5e51-8f76-a51b83c195ae",
+    "slug": "harris-book-02-02",
+    "title": "2.2 大额订单、成交数量与信息暴露",
+    "summary": "理解拆单、交叉撮合、大宗协商和交易意图泄露之间的关系。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4003,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "2",
+        "chapter_title": "交易过程中的实际问题",
+        "section": "2.2",
+        "number": 4,
+        "part": "交易入门",
+        "minutes": 6,
+        "source_pages": [
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35
+        ],
+        "source_sections": [
+          "2.3 AN INSTITUTIONAL TRADE IN A NYSE STOCK",
+          "2.4 AN INSTITUTIONAL TRADE IN A NASDAQ STOCK",
+          "2.5 A VERY LARGE BLOCK STOCK TRADE"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "5ced4058-36d1-541a-b205-4dbc8538987f",
+    "slug": "harris-book-02-03",
+    "title": "2.3 现货、期货、期权与场外协商",
+    "summary": "通过库存套保、保护性期权、债券询价和外汇兑换理解不同交易流程。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4004,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "2",
+        "chapter_title": "交易过程中的实际问题",
+        "section": "2.3",
+        "number": 5,
+        "part": "交易入门",
+        "minutes": 7,
+        "source_pages": [
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43
+        ],
+        "source_sections": [
+          "2.6 SOME CASH COMMODITY AND ASSOCIATED FUTURES MARKET TRADES",
+          "2.7 AN OPTIONS MARKET TRADE",
+          "2.8 A BOND MARKET TRADE",
+          "2.9 A FOREIGN EXCHANGE TRADE"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "ce016ab0-0249-5f93-844e-9b81a5d3e4e8",
+    "slug": "harris-book-03-01",
+    "title": "3.1 交易参与者、清算与托管",
+    "summary": "区分买方、卖方、经纪商、交易商及交易后服务机构。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4005,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "3",
+        "chapter_title": "交易行业与市场组织",
+        "section": "3.1",
+        "number": 6,
+        "part": "第一部分 · 交易结构",
+        "minutes": 7,
+        "source_pages": [
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51
+        ],
+        "source_sections": [
+          "3.1 WHO ARE THE PLAYERS?",
+          "3.2 TRADE FACILITATORS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "44d63bb5-bac9-5fd5-a717-203d63bbcf5a",
+    "slug": "harris-book-03-02",
+    "title": "3.2 资产、证券与衍生合约",
+    "summary": "理解实物资产、权益和债务请求权，以及远期、期货、期权和互换的现金流。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4006,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "3",
+        "chapter_title": "交易行业与市场组织",
+        "section": "3.2",
+        "number": 7,
+        "part": "第一部分 · 交易结构",
+        "minutes": 7,
+        "source_pages": [
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57
+        ],
+        "source_sections": [
+          "3.3 TRADING INSTRUMENTS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "74027a61-9c3f-5373-80a4-03c1a477fffa",
+    "slug": "harris-book-03-03",
+    "title": "3.3 不同品种为何形成不同市场",
+    "summary": "从标准化程度、合约数量、交易频率及成交统计理解市场组织差异。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4007,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "3",
+        "chapter_title": "交易行业与市场组织",
+        "section": "3.3",
+        "number": 8,
+        "part": "第一部分 · 交易结构",
+        "minutes": 8,
+        "source_pages": [
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72
+        ],
+        "source_sections": [
+          "3.4 WHERE ARE THE TRADING MARKETS?"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "0acd9d79-143b-5d9e-b11b-dcaef8e906d2",
+    "slug": "harris-book-03-04",
+    "title": "3.4 监管、自律与市场竞争",
+    "summary": "理解规则制定、履约保障、信息披露及监管激励之间的联系。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4008,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "3",
+        "chapter_title": "交易行业与市场组织",
+        "section": "3.4",
+        "number": 9,
+        "part": "第一部分 · 交易结构",
+        "minutes": 7,
+        "source_pages": [
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80
+        ],
+        "source_sections": [
+          "3.5 MARKET REGULATION",
+          "3.6 SUMMARY",
+          "3.7 SOME POINTS TO REMEMBER",
+          "3.8 QUESTIONS FOR THOUGHT"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "5766a916-2140-591b-8351-b562ba4d1069",
+    "slug": "harris-book-04-01",
+    "title": "4.1 市价单、限价单与订单簿",
+    "summary": "理解报价数量、流动性供求、执行价格不确定性及挂单风险。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4009,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "4",
+        "chapter_title": "订单及其执行条件",
+        "section": "4.1",
+        "number": 10,
+        "part": "第一部分 · 交易结构",
+        "minutes": 6,
+        "source_pages": [
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91
+        ],
+        "source_sections": [
+          "4.1 WHAT ARE ORDERS, AND WHY DO PEOPLE USE THEM?",
+          "4.2 SOME IMPORTANT TERMS",
+          "4.3 MARKET ORDERS",
+          "4.4 LIMIT ORDERS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "de0f5ccb-c8c1-5067-8d2a-8283b8e7462a",
+    "slug": "harris-book-04-02",
+    "title": "4.2 触发价格、成交价格与订单有效期",
+    "summary": "区分止损、触价、限价、涨跌档条件及有效时间。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4010,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "4",
+        "chapter_title": "订单及其执行条件",
+        "section": "4.2",
+        "number": 11,
+        "part": "第一部分 · 交易结构",
+        "minutes": 7,
+        "source_pages": [
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97
+        ],
+        "source_sections": [
+          "4.5 STOP ORDERS",
+          "4.6 MARKET-IF-TOUCHED ORDERS",
+          "4.7 TICK-SENSITIVE ORDERS",
+          "4.8 MARKET-NOT-HELD ORDERS",
+          "4.9 VALIDITY AND EXPIRATION INSTRUCTIONS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "ce126262-487a-593e-afec-5a8033defa93",
+    "slug": "harris-book-04-03",
+    "title": "4.3 数量、展示、组合与交收条件",
+    "summary": "理解整笔成交、最小数量、冰山单、价差单和特殊交收对匹配的影响。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4011,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "4",
+        "chapter_title": "订单及其执行条件",
+        "section": "4.3",
+        "number": 12,
+        "part": "第一部分 · 交易结构",
+        "minutes": 7,
+        "source_pages": [
+          96,
+          97,
+          98,
+          99,
+          100,
+          101
+        ],
+        "source_sections": [
+          "4.10 QUANTITY INSTRUCTIONS",
+          "4.11 OTHER ORDER INSTRUCTIONS",
+          "4.12 SUMMARY",
+          "4.13 SOME POINTS TO REMEMBER",
+          "4.14 QUESTIONS FOR THOUGHT"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "45fc689f-564c-5dc7-9a2b-92bf94290d55",
+    "slug": "harris-book-05-01",
+    "title": "5.1 连续交易、集合交易与执行系统",
+    "summary": "比较交易时间安排及报价驱动、订单驱动、经纪撮合三类组织方式。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4012,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "5",
+        "chapter_title": "市场结构与信息系统",
+        "section": "5.1",
+        "number": 13,
+        "part": "第一部分 · 交易结构",
+        "minutes": 6,
+        "source_pages": [
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110
+        ],
+        "source_sections": [
+          "5.1 OVERVIEW",
+          "5.2 TRADING SESSIONS",
+          "5.3 EXECUTION SYSTEMS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "17ac69e7-d89e-5dd6-a0db-14f1a83de6c8",
+    "slug": "harris-book-05-02",
+    "title": "5.2 行情、订单路由与市场透明度",
+    "summary": "区分交易前后信息、实时和延迟数据、可执行报价和交易意向。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4013,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "5",
+        "chapter_title": "市场结构与信息系统",
+        "section": "5.2",
+        "number": 14,
+        "part": "第一部分 · 交易结构",
+        "minutes": 7,
+        "source_pages": [
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120,
+          121,
+          122,
+          123,
+          124
+        ],
+        "source_sections": [
+          "5.4 MARKET INFORMATION SYSTEMS",
+          "5.5 SUMMARY",
+          "5.6 SOME POINTS TO REMEMBER",
+          "5.7 QUESTIONS FOR THOUGHT"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "ee6ebf93-09d0-58f1-83d1-e77217991785",
+    "slug": "harris-book-06-01",
+    "title": "6.1 优先规则与连续撮合",
+    "summary": "理解价格、时间、展示和数量优先，并逐步计算订单成交。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4014,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "6",
+        "chapter_title": "订单驱动市场与撮合规则",
+        "section": "6.1",
+        "number": 15,
+        "part": "第一部分 · 交易结构",
+        "minutes": 6,
+        "source_pages": [
+          125,
+          126,
+          127,
+          128,
+          129,
+          130,
+          131,
+          132,
+          133
+        ],
+        "source_sections": [
+          "6.1 ORAL AUCTIONS",
+          "6.2 RULE-BASED ORDER-MATCHING SYSTEMS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "7b8fe4cd-4100-56bf-ab8b-2c2a5fa72a03",
+    "slug": "harris-book-06-02",
+    "title": "6.2 集合竞价的供需曲线与交易剩余",
+    "summary": "计算统一成交价，并区分成交量最大化与真实交易收益。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4015,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "6",
+        "chapter_title": "订单驱动市场与撮合规则",
+        "section": "6.2",
+        "number": 16,
+        "part": "第一部分 · 交易结构",
+        "minutes": 7,
+        "source_pages": [
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          144,
+          145
+        ],
+        "source_sections": [
+          "6.3 THE UNIFORM PRICING RULE AND SINGLE PRICE AUCTIONS",
+          "6.4 THE DISCRIMINATORY PRICING RULE AND CONTINUOUS TWO-SIDED AUCTIONS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "6c9b6307-bde3-5fa0-a29d-fa98ef150cfb",
+    "slug": "harris-book-06-03",
+    "title": "6.3 交叉撮合、参考价格与逆向选择",
+    "summary": "理解借用外部价格的撮合方式、成交比例和过时价格风险。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4016,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "6",
+        "chapter_title": "订单驱动市场与撮合规则",
+        "section": "6.3",
+        "number": 17,
+        "part": "第一部分 · 交易结构",
+        "minutes": 6,
+        "source_pages": [
+          145,
+          146,
+          147,
+          148,
+          149,
+          150,
+          151
+        ],
+        "source_sections": [
+          "6.5 THE DERIVATIVE PRICING RULE AND CROSSING NETWORKS",
+          "6.6 SUMMARY",
+          "6.7 SOME POINTS TO REMEMBER",
+          "6.8 QUESTIONS FOR THOUGHT"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "07bd25a7-4186-586f-9151-0c8402c088c1",
+    "slug": "harris-book-07-01",
+    "title": "7.1 经纪服务与交易信用",
+    "summary": "理解经纪商为何不仅传递订单，还承担搜索、信用审核和履约协调。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4017,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "7",
+        "chapter_title": "经纪业务与委托关系",
+        "section": "7.1",
+        "number": 18,
+        "part": "第一部分 · 交易结构",
+        "minutes": 7,
+        "source_pages": [
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160
+        ],
+        "source_sections": [
+          "7.1 WHAT BROKERS DO"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "97ae1191-c91c-5d6a-811d-3426cd5ac7e7",
+    "slug": "harris-book-07-02",
+    "title": "7.2 经纪公司的运营、收入与规模效应",
+    "summary": "梳理前台后台、自营风险、佣金、资金利差、借券及研究服务的成本。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4018,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "7",
+        "chapter_title": "经纪业务与委托关系",
+        "section": "7.2",
+        "number": 19,
+        "part": "第一部分 · 交易结构",
+        "minutes": 7,
+        "source_pages": [
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166,
+          167,
+          168,
+          169,
+          170,
+          171,
+          172
+        ],
+        "source_sections": [
+          "7.2 THE STRUCTURE OF A BROKERAGE FIRM",
+          "7.3 BROKER PROFITABILITY"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "5dafbe6d-4c3b-50dd-a744-930cb3463f6c",
+    "slug": "harris-book-07-03",
+    "title": "7.3 委托代理、执行评价与订单路由",
+    "summary": "理解经纪人与客户目标不一致时，如何用记录和可比较指标评价服务。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4019,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "7",
+        "chapter_title": "经纪业务与委托关系",
+        "section": "7.3",
+        "number": 20,
+        "part": "第一部分 · 交易结构",
+        "minutes": 7,
+        "source_pages": [
+          172,
+          173,
+          174,
+          175,
+          176
+        ],
+        "source_sections": [
+          "7.4 THE PRINCIPAL—AGENT PROBLEM"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "c4952b25-1c2c-5af7-8f64-f253058b7615",
+    "slug": "harris-book-07-04",
+    "title": "7.4 订单审计、资产保管与异常交易",
+    "summary": "认识抢先交易、订单泄露、成交分配、过度交易及托管中的控制环节。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4020,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "7",
+        "chapter_title": "经纪业务与委托关系",
+        "section": "7.4",
+        "number": 21,
+        "part": "第一部分 · 交易结构",
+        "minutes": 7,
+        "source_pages": [
+          176,
+          177,
+          178,
+          179,
+          180,
+          181,
+          182,
+          183,
+          184,
+          185,
+          186,
+          187
+        ],
+        "source_sections": [
+          "7.5 DISHONEST BROKERS",
+          "7.6 SUMMARY",
+          "7.7 SOME POINTS TO REMEMBER",
+          "7.8 QUESTIONS FOR THOUGHT"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "07b52357-d7ef-59f4-bfa5-a5d131191a08",
+    "slug": "harris-book-08-01",
+    "title": "8.1 投资、融资与资产交换",
+    "summary": "从现金流时间安排区分投资收益、信息优势和即时资产用途。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4021,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "8",
+        "chapter_title": "交易动机",
+        "section": "8.1",
+        "number": 22,
+        "part": "第二部分 · 交易的作用",
+        "minutes": 7,
+        "source_pages": [
+          189,
+          190,
+          191,
+          192,
+          193,
+          194,
+          195
+        ],
+        "source_sections": [
+          "8.1 UTILITARIAN TRADERS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "4a02810d-6f61-5202-876b-2d192cd635bf",
+    "slug": "harris-book-08-02",
+    "title": "8.2 套期保值、基差与风险转移",
+    "summary": "从商品、股票和利率现金流理解线性及非线性套保。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4022,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "8",
+        "chapter_title": "交易动机",
+        "section": "8.2",
+        "number": 23,
+        "part": "第二部分 · 交易的作用",
+        "minutes": 7,
+        "source_pages": [
+          195,
+          196,
+          197,
+          198,
+          199,
+          200,
+          201,
+          202
+        ],
+        "source_sections": [
+          "8.1 UTILITARIAN TRADERS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "4b4f93d6-b304-5f8f-9959-932bfd50bfd1",
+    "slug": "harris-book-08-03",
+    "title": "8.3 交易利润、学习成本与失效策略",
+    "summary": "区分信息交易、流动性服务、娱乐动机及缺少优势的反复交易。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4023,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "8",
+        "chapter_title": "交易动机",
+        "section": "8.3",
+        "number": 24,
+        "part": "第二部分 · 交易的作用",
+        "minutes": 7,
+        "source_pages": [
+          202,
+          203,
+          204,
+          205,
+          206,
+          207,
+          208,
+          209,
+          210,
+          211,
+          212,
+          213,
+          214
+        ],
+        "source_sections": [
+          "8.1 UTILITARIAN TRADERS",
+          "8.2 PROFIT-MOTIVATED TRADERS",
+          "8.3 FUTILE TRADERS",
+          "8.4 SUMMARY",
+          "8.5 SOME POINTS TO REMEMBER",
+          "8.6 QUESTIONS FOR THOUGHT"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "9df0c739-2205-5c17-a1ea-46a194e6076e",
+    "slug": "harris-book-09-01",
+    "title": "9.1 信息价格、资本配置与管理评价",
+    "summary": "理解价格如何帮助项目融资和管理监督，并区分事实判断与政策目标。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4024,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "9",
+        "chapter_title": "市场的社会功能",
+        "section": "9.1",
+        "number": 25,
+        "part": "第二部分 · 交易的作用",
+        "minutes": 6,
+        "source_pages": [
+          215,
+          216,
+          217,
+          218,
+          219,
+          220,
+          221,
+          222,
+          223,
+          224,
+          225,
+          226,
+          227
+        ],
+        "source_sections": [
+          "9.1 WELFARE ECONOMICS",
+          "9.2 PRIVATE BENEFITS OF TRADING",
+          "9.3 PUBLIC BENEFITS OF TRADING",
+          "9.4 PUBLIC BENEFITS FROM INFORMATIVE PRICES"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "a2ed0a48-d36a-586b-8f82-5027b09aa3b5",
+    "slug": "harris-book-09-02",
+    "title": "9.2 流动性的社会收益与政策权衡",
+    "summary": "理解低交易成本如何支持专业化、风险分担，并形成可评价的市场目标。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4025,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "9",
+        "chapter_title": "市场的社会功能",
+        "section": "9.2",
+        "number": 26,
+        "part": "第二部分 · 交易的作用",
+        "minutes": 7,
+        "source_pages": [
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ],
+        "source_sections": [
+          "9.4 PUBLIC BENEFITS FROM INFORMATIVE PRICES",
+          "9.5 PUBLIC BENEFITS OF LIQUID MARKETS",
+          "9.6 SOME OBJECTIVES FOR EVALUATING MARKETS",
+          "9.7 SUMMARY",
+          "9.8 SOME POINTS TO REMEMBER",
+          "9.9 QUESTIONS FOR THOUGHT"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "87fe8282-557d-553a-a929-3e48c320c309",
+    "slug": "harris-book-10-01",
+    "title": "10.1 基本价值、信息汇集与价格发现",
+    "summary": "区分当前信息下的估值与事后结果，理解交易如何把分散信息带入价格。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4026,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "10",
+        "chapter_title": "知情交易与价格发现",
+        "section": "10.1",
+        "number": 27,
+        "part": "第三部分 · 信息与交易",
+        "minutes": 6,
+        "source_pages": [
+          235,
+          236,
+          237,
+          238,
+          239
+        ],
+        "source_sections": [
+          "10.1 FUNDAMENTAL VALUES",
+          "10.2 INFORMED TRADERS",
+          "10.3 INFORMED TRADERS MAKE PRICES INFORMATIVE",
+          "10.4 INFORMED TRADING STRATEGIES"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "ae45b992-ff2d-5622-b291-3ee34df2c49a",
+    "slug": "harris-book-10-02",
+    "title": "10.2 价值研究与新闻交易",
+    "summary": "比较整体估值和新增信息分析，识别旧消息、反应不足与反应过度。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4027,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "10",
+        "chapter_title": "知情交易与价格发现",
+        "section": "10.2",
+        "number": 28,
+        "part": "第三部分 · 信息与交易",
+        "minutes": 7,
+        "source_pages": [
+          239,
+          240,
+          241,
+          242,
+          243
+        ],
+        "source_sections": [
+          "10.5 STYLES OF INFORMED TRADING"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "365b946b-ef4a-542c-852e-1d0695f7b9c7",
+    "slug": "harris-book-10-03",
+    "title": "10.3 统计价格规律与相对价值",
+    "summary": "理解技术信号、共同因子和套利判断中的模型风险。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4028,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "10",
+        "chapter_title": "知情交易与价格发现",
+        "section": "10.3",
+        "number": 29,
+        "part": "第三部分 · 信息与交易",
+        "minutes": 7,
+        "source_pages": [
+          243,
+          244,
+          245,
+          246,
+          247,
+          248
+        ],
+        "source_sections": [
+          "10.5 STYLES OF INFORMED TRADING"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "4496163a-567a-53f5-af9f-52c36a4e4dd1",
+    "slug": "harris-book-10-04",
+    "title": "10.4 信息成本、交易冲击与市场效率",
+    "summary": "理解知情交易的利润边界、竞争进入以及公共信息的作用。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4029,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "10",
+        "chapter_title": "知情交易与价格发现",
+        "section": "10.4",
+        "number": 30,
+        "part": "第三部分 · 信息与交易",
+        "minutes": 7,
+        "source_pages": [
+          248,
+          249,
+          250,
+          251,
+          252,
+          253,
+          254,
+          255,
+          256,
+          257
+        ],
+        "source_sections": [
+          "10.6 COMPETITION, TRADING PROFITS, AND INFORMATIVE PRICES",
+          "10.7 SUMMARY",
+          "10.8 SOME POINTS TO REMEMBER",
+          "10.9 QUESTIONS FOR THOUGHT"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "a510d523-af7b-5195-8330-96007fdad977",
+    "slug": "harris-book-11-01",
+    "title": "11.1 订单信息如何改变交易成本",
+    "summary": "区分价值信息与订单信息，理解大单暴露、抢先交易和执行成本之间的关系。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4030,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "11",
+        "chapter_title": "订单预期交易",
+        "section": "11.1",
+        "number": 31,
+        "part": "第三部分 · 信息与交易",
+        "minutes": 8,
+        "source_pages": [
+          258,
+          259,
+          260,
+          261,
+          262,
+          263,
+          264
+        ],
+        "source_sections": [
+          "11.1 FRONT RUNNERS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "aaeee314-f60e-5d84-b1bc-5963872eec50",
+    "slug": "harris-book-11-02",
+    "title": "11.2 排队优先权与限价单的选择权",
+    "summary": "理解限价单为什么具有选择权价值，以及最小价格变动单位怎样影响显示订单的激励。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4031,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "11",
+        "chapter_title": "订单预期交易",
+        "section": "11.2",
+        "number": 32,
+        "part": "第三部分 · 信息与交易",
+        "minutes": 8,
+        "source_pages": [
+          261,
+          262,
+          263,
+          264
+        ],
+        "source_sections": [
+          "11.1 FRONT RUNNERS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "a7498ab4-1a23-5741-84f3-e98390723314",
+    "slug": "harris-book-11-03",
+    "title": "11.3 资金流预期、逼仓与止损触发",
+    "summary": "区分尚未形成的交易需求、被迫平仓需求与止损条件触发，识别流动性突然减弱的原因。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4032,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "11",
+        "chapter_title": "订单预期交易",
+        "section": "11.3",
+        "number": 33,
+        "part": "第三部分 · 信息与交易",
+        "minutes": 8,
+        "source_pages": [
+          264,
+          265,
+          266,
+          267,
+          268,
+          269,
+          270,
+          271
+        ],
+        "source_sections": [
+          "11.2 SENTIMENT-ORIENTED TECHNICAL TRADERS",
+          "11.3 SQUEEZERS",
+          "11.4 MANIPULATION OF STOP ORDERS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "0a17dac0-e0f1-58a3-a746-f155b770342f",
+    "slug": "harris-book-12-01",
+    "title": "12.1 价格上涨为何不能证明消息可靠",
+    "summary": "通过信息来源、价格反馈与价值约束，分析误导性交易信息怎样影响市场判断。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4033,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "12",
+        "chapter_title": "交易欺骗与价格操纵",
+        "section": "12.1",
+        "number": 34,
+        "part": "第三部分 · 信息与交易",
+        "minutes": 8,
+        "source_pages": [
+          272,
+          273,
+          274,
+          275,
+          276,
+          277,
+          278,
+          279,
+          280,
+          281,
+          282,
+          283
+        ],
+        "source_sections": [
+          "12.1 A LONG-SIDE BLUFF",
+          "12.2 THE FUNDAMENTALS OF BLUFFING"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "e841a238-b94d-5342-b420-a542a8ca2be7",
+    "slug": "harris-book-12-02",
+    "title": "12.2 交易冲击模型的往返一致性",
+    "summary": "用买卖方向、累计数量和费用检查报价模型，理解为什么价格冲击不能任意设置。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4034,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "12",
+        "chapter_title": "交易欺骗与价格操纵",
+        "section": "12.2",
+        "number": 35,
+        "part": "第三部分 · 信息与交易",
+        "minutes": 8,
+        "source_pages": [
+          283,
+          284,
+          285,
+          286,
+          287,
+          288
+        ],
+        "source_sections": [
+          "12.3 BLUFFERS DISCIPLINE LIQUIDITY PROVIDERS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "f74c353d-5253-58bf-bc36-ff5c65a57ea5",
+    "slug": "harris-book-13-01",
+    "title": "13.1 做市服务、报价与订单流",
+    "summary": "掌握买价、卖价、最优价差和实际价差，理解做市商如何吸引交易。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4035,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "13",
+        "chapter_title": "做市商",
+        "section": "13.1",
+        "number": 36,
+        "part": "第四部分 · 流动性供给",
+        "minutes": 8,
+        "source_pages": [
+          291,
+          292,
+          293,
+          294,
+          295,
+          296
+        ],
+        "source_sections": [
+          "13.1 WHO ARE DEALERS?",
+          "13.2 DEALER QUOTATIONS",
+          "13.3 TRADING WITH DEALERS",
+          "13.4 ATTRACTING ORDER FLOW",
+          "13.5 DEALER QUOTATION DECISIONS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "1321e2a4-254f-518b-8310-c495800591cb",
+    "slug": "harris-book-13-02",
+    "title": "13.2 库存控制与两类持仓风险",
+    "summary": "用库存变化解释双边报价的移动，区分一般价格风险与逆向选择损失。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4036,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "13",
+        "chapter_title": "做市商",
+        "section": "13.2",
+        "number": 37,
+        "part": "第四部分 · 流动性供给",
+        "minutes": 8,
+        "source_pages": [
+          296,
+          297,
+          298,
+          299,
+          300
+        ],
+        "source_sections": [
+          "13.6 DEALER INVENTORIES",
+          "13.7 INVENTORY RISK"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "8580a8d3-f4be-59fb-ac1a-b296f6f05583",
+    "slug": "harris-book-13-03",
+    "title": "13.3 从订单流学习价值",
+    "summary": "理解条件估值、定价错误以及做市商与价值交易者之间的关系。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4037,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "13",
+        "chapter_title": "做市商",
+        "section": "13.3",
+        "number": 38,
+        "part": "第四部分 · 流动性供给",
+        "minutes": 8,
+        "source_pages": [
+          300,
+          301,
+          302,
+          303,
+          304,
+          305,
+          306,
+          307,
+          308,
+          309
+        ],
+        "source_sections": [
+          "13.8 DEALER RESPONSES TO ADVERSE SELECTION",
+          "13.9 PRICING MISTAKES DEALERS MAKE, AND HOW THEY AVOID THEM",
+          "13.10 WELL-INFORMED AND POORLY INFORMED DEALERS",
+          "13.11 DEALERS AND VALUE TRADERS",
+          "13.12 DEALERS AND BLUFFERS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "f54e21b4-b995-5af3-966a-8ae43a7a1728",
+    "slug": "harris-book-14-01",
+    "title": "14.1 价差补偿了哪些成本",
+    "summary": "分解运营成本与逆向选择，理解非信息交易者使用不同订单仍会承担成本的原因。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4038,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "14",
+        "chapter_title": "买卖价差",
+        "section": "14.1",
+        "number": 39,
+        "part": "第四部分 · 流动性供给",
+        "minutes": 8,
+        "source_pages": [
+          310,
+          311,
+          312,
+          313,
+          314,
+          315,
+          316
+        ],
+        "source_sections": [
+          "14.1 DEALER BID/ASK SPREADS",
+          "14.2 SPREAD COMPONENTS",
+          "14.3 ADVERSE SELECTION AND UNINFORMED TRADERS: THE MOST IMPORTANT LESSON IN THIS BOOK FOR MOST READERS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "1f525762-cca9-5016-a062-c0bdad02357f",
+    "slug": "harris-book-14-02",
+    "title": "14.2 限价单与市价单如何形成均衡",
+    "summary": "通过等待、撤单延迟和成交选择，理解订单驱动市场中的价差。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4039,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "14",
+        "chapter_title": "买卖价差",
+        "section": "14.2",
+        "number": 40,
+        "part": "第四部分 · 流动性供给",
+        "minutes": 8,
+        "source_pages": [
+          316,
+          317,
+          318,
+          319,
+          320,
+          321,
+          322,
+          323,
+          324
+        ],
+        "source_sections": [
+          "14.4 EQUILIBRIUM SPREADS IN CONTINUOUS ORDER-DRIVEN AUCTION MARKETS",
+          "14.5 SPREADS WHEN PUBLIC TRADERS COMPETE WITH DEALERS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "d50bb4f2-16f0-59ba-876d-a967a58f3a87",
+    "slug": "harris-book-14-03",
+    "title": "14.3 为什么不同资产的价差不同",
+    "summary": "以信息差、波动和交易需求解释相对价差，并区分可观察指标与经济原因。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4040,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "14",
+        "chapter_title": "买卖价差",
+        "section": "14.3",
+        "number": 41,
+        "part": "第四部分 · 流动性供给",
+        "minutes": 8,
+        "source_pages": [
+          324,
+          325,
+          326,
+          327,
+          328,
+          329,
+          330,
+          331,
+          332,
+          333
+        ],
+        "source_sections": [
+          "14.6 CROSS-SECTIONAL SPREAD PREDICTIONS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "f571e318-5218-5118-aafe-b77e78fb9808",
+    "slug": "harris-book-14-04",
+    "title": "14.4 Glosten–Milgrom 模型的价差推导",
+    "summary": "从条件期望和盈亏平衡两条路径，计算由信息不对称形成的买卖价差。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4041,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "14",
+        "chapter_title": "买卖价差",
+        "section": "14.4",
+        "number": 42,
+        "part": "第四部分 · 流动性供给",
+        "minutes": 8,
+        "source_pages": [
+          333,
+          334
+        ],
+        "source_sections": [
+          "14.10 APPENDIX: A SIMPLE GLOSTEN- MILGROM MODEL OF THE ADVERSE SELECTION SPREAD COMPONENT"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "4fb28a5a-20f4-534b-9725-076cedf27f67",
+    "slug": "harris-book-15-01",
+    "title": "15.1 大宗交易为什么难以直接成交",
+    "summary": "用相对交易规模和四类信息问题，解释大额订单面对的流动性约束。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4042,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "15",
+        "chapter_title": "大宗交易",
+        "section": "15.1",
+        "number": 43,
+        "part": "第四部分 · 流动性供给",
+        "minutes": 8,
+        "source_pages": [
+          335,
+          336,
+          337,
+          338,
+          339,
+          340
+        ],
+        "source_sections": [
+          "15.1 STATISTICAL DEFINITIONS OF BLOCK TRADES",
+          "15.2 BLOCK TRADING PROBLEMS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "f98855ad-85a9-5709-b264-f982b23521c5",
+    "slug": "harris-book-15-02",
+    "title": "15.2 大宗经纪、承接交易与交易动机",
+    "summary": "理解直接公开交易意图和通过中介组织交易的差异，以及声誉为什么有经济价值。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4043,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "15",
+        "chapter_title": "大宗交易",
+        "section": "15.2",
+        "number": 44,
+        "part": "第四部分 · 流动性供给",
+        "minutes": 8,
+        "source_pages": [
+          340,
+          341,
+          342,
+          343,
+          344,
+          345
+        ],
+        "source_sections": [
+          "15.3 SUNSHINE TRADING",
+          "15.4 THE UPSTAIRS MARKET"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "bb74c0fd-d237-5902-b6c7-b09cdc4f09ab",
+    "slug": "harris-book-15-03",
+    "title": "15.3 大宗成交方向与公开市场的衔接",
+    "summary": "理解主动买卖方向的估计、卖方大宗成交的历史特征，以及价格优先与组织大单之间的权衡。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4044,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "15",
+        "chapter_title": "大宗交易",
+        "section": "15.3",
+        "number": 45,
+        "part": "第四部分 · 流动性供给",
+        "minutes": 8,
+        "source_pages": [
+          345,
+          346,
+          347,
+          348,
+          349,
+          350
+        ],
+        "source_sections": [
+          "15.5 A TELLING STATISTIC",
+          "15.6 THE RELATION BETWEEN BLOCK MARKETS AND REGULAR MARKETS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "d28d43aa-9a31-5b23-88ef-09f49d50d4b0",
+    "slug": "harris-book-16-01",
+    "title": "16.1 价值交易者如何提供市场深度",
+    "summary": "区分消息引起的价值变化与资金需求引起的价格偏离，解释价值交易者、做市商和市场恢复能力。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4045,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "16",
+        "chapter_title": "价值交易者",
+        "section": "16.1",
+        "number": 46,
+        "part": "第四部分 · 流动性供给",
+        "minutes": 8,
+        "source_pages": [
+          351,
+          352,
+          353,
+          357,
+          358,
+          359
+        ],
+        "source_sections": [
+          "16.1 VALUE TRADERS SUPPLY LIQUIDITY",
+          "16.3 OUTSIDE VERSUS DEALER SPREADS",
+          "16.4 VALUE TRADERS AND NEWS TRADERS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "d9e69c16-0b2b-5ed5-917c-64db6b063e9a",
+    "slug": "harris-book-16-02",
+    "title": "16.2 估值误差与赢家诅咒",
+    "summary": "理解为什么赢得交易机会本身带有信息，以及价值交易者为什么需要保留不交易区间。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4046,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "16",
+        "chapter_title": "价值交易者",
+        "section": "16.2",
+        "number": 47,
+        "part": "第四部分 · 流动性供给",
+        "minutes": 8,
+        "source_pages": [
+          353,
+          354,
+          355,
+          356,
+          357
+        ],
+        "source_sections": [
+          "16.2 THE OUTSIDE SPREAD AND ITS DETERMINANTS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "4bfb66f1-8f3a-5bfd-adf7-96fe13ccfc51",
+    "slug": "harris-book-17-01",
+    "title": "17.1 基差、对冲组合与可交割套利",
+    "summary": "从相对价值出发，理解运输、交割和转换机制怎样约束价格差异。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4047,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "17",
+        "chapter_title": "套利交易",
+        "section": "17.1",
+        "number": 48,
+        "part": "第四部分 · 流动性供给",
+        "minutes": 8,
+        "source_pages": [
+          360,
+          361,
+          362,
+          363,
+          364,
+          365,
+          366,
+          367,
+          368,
+          369
+        ],
+        "source_sections": [
+          "17.1 DEFINITIONS",
+          "17.2 A SIMPLE CHARACTERIZATION OF ARBITRAGE",
+          "17.3 TYPES OF ARBITRAGE"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "d1da675d-755e-5b10-bcfc-3550539b5dd4",
+    "slug": "harris-book-17-02",
+    "title": "17.2 价差交易、统计套利与并购套利",
+    "summary": "区分价格相关与价差收敛，理解共同因素、个别因素和事件条件在套利中的作用。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4048,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "17",
+        "chapter_title": "套利交易",
+        "section": "17.2",
+        "number": 49,
+        "part": "第四部分 · 流动性供给",
+        "minutes": 8,
+        "source_pages": [
+          369,
+          370,
+          371,
+          372,
+          373,
+          374,
+          375,
+          376,
+          377,
+          378
+        ],
+        "source_sections": [
+          "17.3 TYPES OF ARBITRAGE"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "48525d16-1536-5b91-b4e6-1fd3947d7cf1",
+    "slug": "harris-book-17-03",
+    "title": "17.3 套利的执行、融资与模型风险",
+    "summary": "分析多腿成交、基差扩大和持有成本，理解最终收敛为何不能保证账户中途存续。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4049,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "17",
+        "chapter_title": "套利交易",
+        "section": "17.3",
+        "number": 50,
+        "part": "第四部分 · 流动性供给",
+        "minutes": 8,
+        "source_pages": [
+          376,
+          377,
+          378,
+          379,
+          380,
+          381,
+          382,
+          383,
+          384,
+          385,
+          386,
+          387,
+          390
+        ],
+        "source_sections": [
+          "17.4 ARBITRAGE RISKS",
+          "17.7 ARBITRAGEURS, DEALERS, AND BROKERS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "2b22d86d-46fc-5172-9cdd-76a19e881a8a",
+    "slug": "harris-book-17-04",
+    "title": "17.4 套利如何连接市场与转移流动性",
+    "summary": "从价格修正和风险转移两种角度，理解套利机会的来源、服务作用和竞争边界。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4050,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "17",
+        "chapter_title": "套利交易",
+        "section": "17.4",
+        "number": 51,
+        "part": "第四部分 · 流动性供给",
+        "minutes": 8,
+        "source_pages": [
+          369,
+          370,
+          386,
+          387,
+          388,
+          389,
+          390,
+          391,
+          392
+        ],
+        "source_sections": [
+          "17.3 TYPES OF ARBITRAGE",
+          "17.5 THE CAUSES OF ARBITRAGE OPPORTUNITIES",
+          "17.6 QUANTITY CHARACTERIZATIONS OF ARBITRAGE",
+          "17.7 ARBITRAGEURS, DEALERS, AND BROKERS",
+          "17.8 COMPETITION AMONG ARBITRAGEURS AND EQUILIBRIUM ARBITRAGE SPREADS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "12fcf0eb-fa2a-570a-b911-83b442212358",
+    "slug": "harris-book-18-01",
+    "title": "18.1 市价与限价的执行权衡",
+    "summary": "根据完成期限、成交概率和失败后果选择订单，避免把较好成交价格误认为较低总成本。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4051,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "18",
+        "chapter_title": "买方交易决策",
+        "section": "18.1",
+        "number": 52,
+        "part": "第四部分 · 流动性供给",
+        "minutes": 8,
+        "source_pages": [
+          393,
+          394,
+          395
+        ],
+        "source_sections": [
+          "18.1 MARKET VERSUS LIMIT ORDERS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "d24cb058-4de9-5eb7-ab65-27e0fdb5d3b7",
+    "slug": "harris-book-18-02",
+    "title": "18.2 订单展示带来的匹配收益与信息成本",
+    "summary": "区分主动搜寻与被动响应，理解公开意图怎样同时增加成交机会和改变对手方行为。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4052,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "18",
+        "chapter_title": "买方交易决策",
+        "section": "18.2",
+        "number": 53,
+        "part": "第四部分 · 流动性供给",
+        "minutes": 8,
+        "source_pages": [
+          395,
+          396,
+          397,
+          398,
+          399
+        ],
+        "source_sections": [
+          "18.2 THE ORDER EXPOSURE DECISION",
+          "18.3 THE BENEFITS OF EXPOSURE",
+          "18.4 THE COSTS OF EXPOSURE"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "1dd1a0d8-6a30-52ad-9d03-9556d4d33066",
+    "slug": "harris-book-18-03",
+    "title": "18.3 订单保密与交易机制保护",
+    "summary": "理解选择性展示、隐藏订单、时间优先和审计记录如何影响执行风险。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4053,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "18",
+        "chapter_title": "买方交易决策",
+        "section": "18.3",
+        "number": 54,
+        "part": "第四部分 · 流动性供给",
+        "minutes": 8,
+        "source_pages": [
+          399,
+          400,
+          401,
+          402,
+          403,
+          404,
+          405
+        ],
+        "source_sections": [
+          "18.5 DEFENSIVE STRATEGIES",
+          "18.6 HOW MARKETS HELP TRADERS CONTROL EXPOSURE COSTS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "4a644f9e-ad4f-5723-9d94-dd2f4d6d47f1",
+    "slug": "harris-book-19-01",
+    "title": "19.1 流动性是怎样被找到的",
+    "summary": "把交易理解为双方同时搜寻，解释报价系统、经纪人和等待时间的作用。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4054,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "19",
+        "chapter_title": "流动性",
+        "section": "19.1",
+        "number": 55,
+        "part": "第五部分 · 流动性与波动",
+        "minutes": 8,
+        "source_pages": [
+          407,
+          408,
+          409,
+          410,
+          411
+        ],
+        "source_sections": [
+          "19.1 THE SEARCH FOR LIQUIDITY"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "3aff1a5e-b564-5ff6-bed6-f0f4735f379f",
+    "slug": "harris-book-19-02",
+    "title": "19.2 即时性、价差、深度与恢复能力",
+    "summary": "用时间、数量和价格三维描述流动性，避免以成交量或一档价差替代完整执行条件。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4055,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "19",
+        "chapter_title": "流动性",
+        "section": "19.2",
+        "number": 56,
+        "part": "第五部分 · 流动性与波动",
+        "minutes": 8,
+        "source_pages": [
+          411,
+          412,
+          413
+        ],
+        "source_sections": [
+          "19.2 LIQUIDITY DIMENSIONS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "2782af28-617a-56a0-bfda-e79457ee2f4d",
+    "slug": "harris-book-19-03",
+    "title": "19.3 谁在提供流动性",
+    "summary": "把做市商、大宗交易商、价值交易者、既定需求交易者与套利者放入同一条风险转移过程。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4056,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "19",
+        "chapter_title": "流动性",
+        "section": "19.3",
+        "number": 57,
+        "part": "第五部分 · 流动性与波动",
+        "minutes": 8,
+        "source_pages": [
+          413,
+          414,
+          415,
+          416,
+          417,
+          418,
+          419,
+          420,
+          421,
+          422
+        ],
+        "source_sections": [
+          "19.3 THE WHO, HOW, AND WHY OF LIQUIDITY",
+          "19.4 AN ILLUSTRATIVE EXAMPLE"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "4a02b4e9-5980-5078-a118-6d39a9e7622a",
+    "slug": "harris-book-20-01",
+    "title": "20.1 基本面波动与暂时性波动",
+    "summary": "区分价值变化和交易需求引起的价格变化，理解成交量、储存与杠杆的作用。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4057,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "20",
+        "chapter_title": "价格波动",
+        "section": "20.1",
+        "number": 58,
+        "part": "第五部分 · 流动性与波动",
+        "minutes": 8,
+        "source_pages": [
+          423,
+          424,
+          425,
+          426,
+          427
+        ],
+        "source_sections": [
+          "20.1 FUNDAMENTAL VOLATILITY",
+          "20.2 TRANSITORY VOLATILITY"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "a43461e5-665a-5a35-87d4-256596580425",
+    "slug": "harris-book-20-02",
+    "title": "20.2 用 Roll 模型理解价差与波动测量",
+    "summary": "从逐笔成交价格出发，推导负序列协方差与价差的关系，并用模拟检验估计方法。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4058,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "20",
+        "chapter_title": "价格波动",
+        "section": "20.2",
+        "number": 59,
+        "part": "第五部分 · 流动性与波动",
+        "minutes": 8,
+        "source_pages": [
+          427,
+          428,
+          429,
+          430
+        ],
+        "source_sections": [
+          "20.3 MEASURING VOLATILITY AND ITS COMPONENTS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "69fb22d5-5cc4-5255-9c07-1c4ab269bef7",
+    "slug": "harris-book-21-01",
+    "title": "21.1 交易成本的构成与价格基准",
+    "summary": "区分显性费用、价格冲击与未成交成本，计算有效价差、实现价差和成交量加权均价。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4059,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "21",
+        "chapter_title": "流动性与交易成本的测量",
+        "section": "21.1",
+        "number": 60,
+        "part": "第六部分 · 衡量与评价",
+        "minutes": 7,
+        "source_pages": [
+          434,
+          435,
+          436,
+          437,
+          438,
+          439
+        ],
+        "source_sections": [
+          "21.1 TRANSACTION COST COMPONENTS",
+          "21.2 IMPLICIT TRANSACTION COST ESTIMATION METHODS",
+          "21.3 MEASURING TRANSACTION COSTS WITH SPECIFIED PRICE BENCHMARKS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "e6d5eb15-db83-5a59-a70d-5a3fd0e11d93",
+    "slug": "harris-book-21-02",
+    "title": "21.2 实现缺口与未成交机会成本",
+    "summary": "从决策时的理想组合出发，把实际交易差异拆分为成交成本、等待成本、费用和未成交成本。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4060,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "21",
+        "chapter_title": "流动性与交易成本的测量",
+        "section": "21.2",
+        "number": 61,
+        "part": "第六部分 · 衡量与评价",
+        "minutes": 7,
+        "source_pages": [
+          439,
+          440,
+          441,
+          442,
+          443,
+          444,
+          447,
+          448,
+          449,
+          450
+        ],
+        "source_sections": [
+          "21.3 MEASURING TRANSACTION COSTS WITH SPECIFIED PRICE BENCHMARKS",
+          "21.4 PROPERTIES OF TRANSACTION COST PRICE BENCHMARK ESTIMATORS",
+          "21.6 MISSED TRADE OPPORTUNITY COSTS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "ce725bf2-91a3-588d-98a3-feb0647b9e34",
+    "slug": "harris-book-21-03",
+    "title": "21.3 成本估计的偏差与订单流模型",
+    "summary": "识别基准选择、拆单和交易动机造成的偏差，理解反转模型与永久、暂时价格影响。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4061,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "21",
+        "chapter_title": "流动性与交易成本的测量",
+        "section": "21.3",
+        "number": 62,
+        "part": "第六部分 · 衡量与评价",
+        "minutes": 7,
+        "source_pages": [
+          440,
+          441,
+          442,
+          443,
+          444,
+          445,
+          446,
+          447,
+          448
+        ],
+        "source_sections": [
+          "21.4 PROPERTIES OF TRANSACTION COST PRICE BENCHMARK ESTIMATORS",
+          "21.5 MEASURING IMPLICIT TRANSACTION COSTS WITH ECONOMETRIC METHODS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "8c9d177e-3b96-5049-87a9-d6696f0f0da8",
+    "slug": "harris-book-21-04",
+    "title": "21.4 预测交易成本并选择执行速度",
+    "summary": "把订单规模、盘口、波动和信息有效期纳入执行决策，以边际成本协调研究与交易。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4062,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "21",
+        "chapter_title": "流动性与交易成本的测量",
+        "section": "21.4",
+        "number": 63,
+        "part": "第六部分 · 衡量与评价",
+        "minutes": 7,
+        "source_pages": [
+          447,
+          448,
+          449,
+          450,
+          451,
+          452,
+          453,
+          454
+        ],
+        "source_sections": [
+          "21.6 MISSED TRADE OPPORTUNITY COSTS",
+          "21.7 TRANSACTION COST PREDICTION",
+          "21.8 CLOSING COMMENTS ON INTELLIGENT TRANSACTION COST MANAGEMENT",
+          "21.9 SUMMARY",
+          "21.10 SOME POINTS TO REMEMBER",
+          "21.11 QUESTIONS FOR THOUGHT"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "a3649dc7-325e-57bc-89b0-3111f83aaec2",
+    "slug": "harris-book-22-01",
+    "title": "22.1 正确计算收益并选择比较对象",
+    "summary": "区分投资收益和外部资金流，理解时间加权、资金加权以及市场和风险调整后的收益。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4063,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "22",
+        "chapter_title": "业绩评价与预测",
+        "section": "22.1",
+        "number": 64,
+        "part": "第六部分 · 衡量与评价",
+        "minutes": 7,
+        "source_pages": [
+          455,
+          456,
+          457,
+          458,
+          459,
+          460,
+          461,
+          462,
+          463
+        ],
+        "source_sections": [
+          "22.1 THE PERFORMANCE EVALUATION PROBLEM",
+          "22.2 PERFORMANCE EVALUATION METHODS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "b8611dd4-12ab-5549-a80d-e9e54b25f574",
+    "slug": "harris-book-22-02",
+    "title": "22.2 用统计检验区分能力与运气",
+    "summary": "解释标准误、显著性与检验功效，并计算识别微弱超额收益所需的时间。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4064,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "22",
+        "chapter_title": "业绩评价与预测",
+        "section": "22.2",
+        "number": 65,
+        "part": "第六部分 · 衡量与评价",
+        "minutes": 7,
+        "source_pages": [
+          463,
+          464,
+          465,
+          466,
+          467,
+          468,
+          469,
+          470,
+          471,
+          472,
+          473,
+          476,
+          477,
+          478,
+          479
+        ],
+        "source_sections": [
+          "22.3 THE PERFORMANCE PREDICTION PROBLEM",
+          "22.4 STATISTICAL PERFORMANCE EVALUATION"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "1a7a2039-2790-5221-b6cf-8e5afb098ba8",
+    "slug": "harris-book-22-03",
+    "title": "22.3 冠军筛选、幸存者偏差与均值回归",
+    "summary": "说明大量候选者和选择性展示如何制造优秀记录，建立完整样本与独立验证。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4065,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "22",
+        "chapter_title": "业绩评价与预测",
+        "section": "22.3",
+        "number": 66,
+        "part": "第六部分 · 衡量与评价",
+        "minutes": 7,
+        "source_pages": [
+          473,
+          474,
+          475,
+          476,
+          477,
+          483,
+          484,
+          485,
+          486,
+          487,
+          488
+        ],
+        "source_sections": [
+          "22.4 STATISTICAL PERFORMANCE EVALUATION",
+          "22.6 THE SAMPLE SELECTION BIAS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "ecbe8f86-ba87-521c-ad32-53109f54249d",
+    "slug": "harris-book-22-04",
+    "title": "22.4 厚尾收益、比索问题与净值真实性",
+    "summary": "识别长期小赚偶尔大亏、收益平滑和虚假资金回报对业绩评价的影响。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4066,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "22",
+        "chapter_title": "业绩评价与预测",
+        "section": "22.4",
+        "number": 67,
+        "part": "第六部分 · 衡量与评价",
+        "minutes": 7,
+        "source_pages": [
+          479,
+          480,
+          481,
+          482,
+          483,
+          484
+        ],
+        "source_sections": [
+          "22.5 MORE IMPORTANT PROBLEMS WITH STATISTICAL PERFORMANCE EVALUATION"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "ba44f5e2-a508-538d-8950-d7e94db0f291",
+    "slug": "harris-book-22-05",
+    "title": "22.5 从竞争优势评价策略与管理人",
+    "summary": "把历史结果与研究资源、交易能力、组织流程和收益归属联系起来。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4067,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "22",
+        "chapter_title": "业绩评价与预测",
+        "section": "22.5",
+        "number": 68,
+        "part": "第六部分 · 衡量与评价",
+        "minutes": 7,
+        "source_pages": [
+          488,
+          489,
+          490,
+          491,
+          492,
+          493,
+          494
+        ],
+        "source_sections": [
+          "22.7 ECONOMIC APPROACHES TO PERFORMANCE PREDICTION",
+          "22.8 SUMMARY",
+          "22.9 SOME POINTS TO REMEMBER",
+          "22.10 QUESTIONS FOR THOUGHT"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "b66f15bf-cb0e-51c7-8eef-f1d4fc818b49",
+    "slug": "harris-book-23-01",
+    "title": "23.1 指数怎样计算，基金怎样复制",
+    "summary": "理解价格加权、市值加权、等权和全收益指数，以及复制过程中产生的跟踪偏离。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4068,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "23",
+        "chapter_title": "指数与组合交易",
+        "section": "23.1",
+        "number": 69,
+        "part": "第七部分 · 市场组织与制度",
+        "minutes": 7,
+        "source_pages": [
+          497,
+          498,
+          499,
+          500
+        ],
+        "source_sections": [
+          "23.1 PRICE INDEXES",
+          "23.2 INDEX FUNDS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "89c3c4c2-c3c5-5b3f-a939-093b8eee4831",
+    "slug": "harris-book-23-02",
+    "title": "23.2 指数化的成本逻辑与价格发现",
+    "summary": "从整体收益核算理解被动管理，解释指数产品如何汇集流动性并与成分市场联系。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4069,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "23",
+        "chapter_title": "指数与组合交易",
+        "section": "23.2",
+        "number": 70,
+        "part": "第七部分 · 市场组织与制度",
+        "minutes": 7,
+        "source_pages": [
+          500,
+          501,
+          502,
+          503
+        ],
+        "source_sections": [
+          "23.2 INDEX FUNDS",
+          "23.3 THE ARGUMENT FOR INDEXATION",
+          "23.4 LIQUIDITY AND PRICE FORMATION IN INDEX MARKETS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "af8c8b12-7980-5f0b-935a-8e54658acd8d",
+    "slug": "harris-book-23-03",
+    "title": "23.3 指数基金、ETF、期货与期权",
+    "summary": "比较不同指数工具的交易方式、资金占用和风险结构，并理解整篮子成交。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4070,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "23",
+        "chapter_title": "指数与组合交易",
+        "section": "23.3",
+        "number": 71,
+        "part": "第七部分 · 市场组织与制度",
+        "minutes": 7,
+        "source_pages": [
+          502,
+          503,
+          504,
+          505,
+          506
+        ],
+        "source_sections": [
+          "23.4 LIQUIDITY AND PRICE FORMATION IN INDEX MARKETS",
+          "23.5 INDEX PRODUCTS",
+          "23.6 SUMMARY",
+          "23.7 SOME POINTS TO REMEMBER",
+          "23.8 QUESTIONS FOR THOUGHT"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "14930d06-d054-5d21-9cbf-d9c7fe3c7af8",
+    "slug": "harris-book-24-01",
+    "title": "24.1 专营商的三重角色与流动性义务",
+    "summary": "结合 2003 年前后的交易所制度解释自营、代理和拍卖主持之间的职责与约束。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4071,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "24",
+        "chapter_title": "专营商制度",
+        "section": "24.1",
+        "number": 72,
+        "part": "第七部分 · 市场组织与制度",
+        "minutes": 7,
+        "source_pages": [
+          507,
+          508,
+          509,
+          510,
+          511,
+          512,
+          513,
+          514
+        ],
+        "source_sections": [
+          "24.1 OVERVIEW",
+          "24.2 SPECIALISTS AS DEALERS",
+          "24.3 SPECIALISTS AS BROKERS",
+          "24.4 SPECIALISTS AS AUCTIONEERS AND EXCHANGE OFFICIALS"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "586ac65c-cfcb-583a-8b1c-e569eb84c17b",
+    "slug": "harris-book-24-02",
+    "title": "24.2 订单信息、选择成交与停止执行的价值",
+    "summary": "理解专营商的信息优势、择单和历史停止执行机制对不同交易者的影响。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4072,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "24",
+        "chapter_title": "专营商制度",
+        "section": "24.2",
+        "number": 73,
+        "part": "第七部分 · 市场组织与制度",
+        "minutes": 7,
+        "source_pages": [
+          514,
+          515,
+          516,
+          517,
+          518,
+          519,
+          520,
+          521,
+          522
+        ],
+        "source_sections": [
+          "24.5 SPECIALIST PRIVILEGES"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "1ba7640e-a534-5e1a-823b-008e6b32ff69",
+    "slug": "harris-book-24-03",
+    "title": "24.3 指定资格、特权补偿与公共流动性",
+    "summary": "讨论专营权分配、服务考核、资本约束与跨市场搭便车问题。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4073,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "24",
+        "chapter_title": "专营商制度",
+        "section": "24.3",
+        "number": 74,
+        "part": "第七部分 · 市场组织与制度",
+        "minutes": 7,
+        "source_pages": [
+          522,
+          523,
+          524,
+          525,
+          526
+        ],
+        "source_sections": [
+          "24.6 WHO ASSIGNS SPECIALISTS?",
+          "24.7 REGULATORY ISSUES AND PERSPECTIVES",
+          "24.8 SUMMARY",
+          "24.9 SOME POINTS TO REMEMBER",
+          "24.10 QUESTIONS FOR THOUGHT"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "5107861c-c26f-563a-be26-032a5c31f9a7",
+    "slug": "harris-book-25-01",
+    "title": "25.1 订单内部化与最佳执行",
+    "summary": "理解订单流付款、经纪佣金和成交价格的关系，按完整执行质量比较服务。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4074,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "25",
+        "chapter_title": "内部化、定向路由与内部交叉成交",
+        "section": "25.1",
+        "number": 75,
+        "part": "第七部分 · 市场组织与制度",
+        "minutes": 7,
+        "source_pages": [
+          527,
+          528,
+          529,
+          530,
+          531,
+          532
+        ],
+        "source_sections": [
+          "25.1 BEST EXECUTION PRACTICES",
+          "25.2 THE ECONOMICS OF BEST EXECUTION"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "417598e3-16dc-52c8-8251-2571e42cd7ce",
+    "slug": "harris-book-25-02",
+    "title": "25.2 内部成交对公开报价与代理关系的影响",
+    "summary": "分析订单被分流后谁仍愿意公开报好价格，以及内部交叉成交的利益冲突。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4075,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "25",
+        "chapter_title": "内部化、定向路由与内部交叉成交",
+        "section": "25.2",
+        "number": 76,
+        "part": "第七部分 · 市场组织与制度",
+        "minutes": 7,
+        "source_pages": [
+          532,
+          533,
+          534,
+          535,
+          536
+        ],
+        "source_sections": [
+          "25.2 THE ECONOMICS OF BEST EXECUTION",
+          "25.3 ANTICOMPETITIVE ASPECTS OF INTERNALIZATION AND PREFERENCING",
+          "25.4 INTERNAL ORDER CROSSING",
+          "25.5 SUMMARY",
+          "25.6 SOME POINTS TO REMEMBER",
+          "25.7 QUESTIONS FOR THOUGHT"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "c4020f70-f826-5bbe-9d12-bb3878b7f8af",
+    "slug": "harris-book-26-01",
+    "title": "26.1 市场为何集中，又为何分散",
+    "summary": "从订单流网络效应和交易需求差异解释交易场所的形成与竞争。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4076,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "26",
+        "chapter_title": "市场内部与市场之间的竞争",
+        "section": "26.1",
+        "number": 77,
+        "part": "第七部分 · 市场组织与制度",
+        "minutes": 7,
+        "source_pages": [
+          537,
+          538,
+          539,
+          540,
+          541,
+          542,
+          543,
+          544,
+          545,
+          546
+        ],
+        "source_sections": [
+          "26.1 TRADING SYSTEMS AND TECHNOLOGY",
+          "26.2 MARKET CONSOLIDATION",
+          "26.3 MARKET FRAGMENTATION"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "e572c84b-6808-5d5a-8b38-323edc301315",
+    "slug": "harris-book-26-02",
+    "title": "26.2 分散市场怎样形成共同价格",
+    "summary": "解释信息传播、智能路由和套利的互联作用，计算考虑费用后的交易路径。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4077,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "26",
+        "chapter_title": "市场内部与市场之间的竞争",
+        "section": "26.2",
+        "number": 78,
+        "part": "第七部分 · 市场组织与制度",
+        "minutes": 7,
+        "source_pages": [
+          546,
+          547,
+          548
+        ],
+        "source_sections": [
+          "26.4 MARKET SEGMENTATION: HOW FRAGMENTED MARKETS CONSOLIDATE"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "f5de87ea-398d-51f5-9d8c-f948ccfa8661",
+    "slug": "harris-book-26-03",
+    "title": "26.3 时间优先、监管服务与交易所整合",
+    "summary": "分析市场竞争中的外部性，并区分订单集中与运营机构合并。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4078,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "26",
+        "chapter_title": "市场内部与市场之间的竞争",
+        "section": "26.3",
+        "number": 79,
+        "part": "第七部分 · 市场组织与制度",
+        "minutes": 7,
+        "source_pages": [
+          548,
+          549,
+          550,
+          551,
+          552,
+          553,
+          554,
+          555
+        ],
+        "source_sections": [
+          "26.5 EXTERNALITIES IN THE COMPETITION AMONG MARKET CENTERS",
+          "26.6 CONSOLIDATION OF MARKETPLACES",
+          "26.7 SUMMARY",
+          "26.8 SOME POINTS TO REMEMBER",
+          "26.9 QUESTIONS FOR THOUGHT"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "fcf856c3-9fd3-5030-8452-42a05550ec7a",
+    "slug": "harris-book-27-01",
+    "title": "27.1 自动化如何改变公平、容量与交易速度",
+    "summary": "比较规则执行、市场准入、信息传输与大额协商，区分技术能力和交易制度。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4079,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "27",
+        "chapter_title": "场内交易与自动化交易系统",
+        "section": "27.1",
+        "number": 80,
+        "part": "第七部分 · 市场组织与制度",
+        "minutes": 7,
+        "source_pages": [
+          556,
+          557,
+          558,
+          559,
+          560,
+          561,
+          562
+        ],
+        "source_sections": [
+          "27.1 FAIRNESS",
+          "27.2 THE CONVENIENCE OF DISTRIBUTED ACCESS",
+          "27.3 SYSTEM CAPACITY",
+          "27.4 NEGOTIATION SPEED",
+          "27.5 EXCHANGE OF INFORMATION ON TRADING FLOORS",
+          "27.6 MARKET DATA REPORTING"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "b99eaa77-8409-5608-91fd-63b6a2019397",
+    "slug": "harris-book-27-02",
+    "title": "27.2 交易系统的成本与故障风险",
+    "summary": "把建设、运行、审计和故障损失纳入交易系统比较，理解不确定成交状态。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4080,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "27",
+        "chapter_title": "场内交易与自动化交易系统",
+        "section": "27.2",
+        "number": 81,
+        "part": "第七部分 · 市场组织与制度",
+        "minutes": 7,
+        "source_pages": [
+          562,
+          563,
+          564,
+          565,
+          566,
+          567
+        ],
+        "source_sections": [
+          "27.7 COST",
+          "27.8 SUMMARY",
+          "27.9 SOME POINTS TO REMEMBER",
+          "27.10 QUESTIONS FOR THOUGHT"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "430ade6c-cbab-54ac-ad93-e707efb3488c",
+    "slug": "harris-book-28-01",
+    "title": "28.1 泡沫形成、杠杆与正反馈",
+    "summary": "区分基本价值变化和暂时价格偏离，理解追涨、保证金与套利限制如何放大行情。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4081,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "28",
+        "chapter_title": "泡沫、崩盘与熔断机制",
+        "section": "28.1",
+        "number": 82,
+        "part": "第七部分 · 市场组织与制度",
+        "minutes": 7,
+        "source_pages": [
+          568,
+          569,
+          570,
+          571
+        ],
+        "source_sections": [
+          "28.1 BUBBLES AND CRASHES"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "123585c9-9a4e-55c3-8d4e-50a77a976986",
+    "slug": "harris-book-28-02",
+    "title": "28.2 历史崩盘中的共同机制与不同原因",
+    "summary": "比较七组历史案例，重点解释1987年动态对冲、容量与期现脱节。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4082,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "28",
+        "chapter_title": "泡沫、崩盘与熔断机制",
+        "section": "28.2",
+        "number": 83,
+        "part": "第七部分 · 市场组织与制度",
+        "minutes": 7,
+        "source_pages": [
+          571,
+          572,
+          573,
+          574,
+          575,
+          576,
+          577,
+          578,
+          579,
+          580,
+          581,
+          582,
+          583,
+          584
+        ],
+        "source_sections": [
+          "28.2 SOME BUBBLE AND CRASH EXAMPLES"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "8e9b9c87-f8e6-5935-a6b4-dd33c5341929",
+    "slug": "harris-book-28-03",
+    "title": "28.3 停牌、价格限制与其他波动控制措施",
+    "summary": "分析暂停交易的潜在收益、提前抢跑效应以及保证金和交易税的不同影响。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4083,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "28",
+        "chapter_title": "泡沫、崩盘与熔断机制",
+        "section": "28.3",
+        "number": 84,
+        "part": "第七部分 · 市场组织与制度",
+        "minutes": 7,
+        "source_pages": [
+          585,
+          586,
+          587,
+          588,
+          589,
+          590,
+          591
+        ],
+        "source_sections": [
+          "28.3 REGULATORY RESPONSES TO EXTREME VOLATILITY"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "07a939a9-72e8-5992-8126-20df3db32186",
+    "slug": "harris-book-28-04",
+    "title": "28.4 制度评价中的激励与公共成本",
+    "summary": "区分改善系统能力、回应公众压力和利益集团诉求，建立波动政策的评价框架。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4084,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "28",
+        "chapter_title": "泡沫、崩盘与熔断机制",
+        "section": "28.4",
+        "number": 85,
+        "part": "第七部分 · 市场组织与制度",
+        "minutes": 7,
+        "source_pages": [
+          590,
+          591,
+          592,
+          593,
+          594,
+          595,
+          596
+        ],
+        "source_sections": [
+          "28.3 REGULATORY RESPONSES TO EXTREME VOLATILITY",
+          "28.4 THE POLITICS OF REGULATORY INTERVENTION",
+          "28.5 SUMMARY",
+          "28.6 SOME POINTS TO REMEMBER",
+          "28.7 QUESTIONS FOR THOUGHT"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "1eeef2fc-ba81-57fd-8fd2-9a6b3155f064",
+    "slug": "harris-book-29-01",
+    "title": "29.1 私人研究与内幕信息的区别",
+    "summary": "结合历史制度区分信息来源、知情身份和交易行为，理解调查证据的边界。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4085,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "29",
+        "chapter_title": "内幕交易的经济分析",
+        "section": "29.1",
+        "number": 86,
+        "part": "第七部分 · 市场组织与制度",
+        "minutes": 7,
+        "source_pages": [
+          597,
+          598,
+          599,
+          600,
+          601,
+          602,
+          603,
+          604
+        ],
+        "source_sections": [
+          "29.1 INSIDE INFORMATION AND INSIDER TRADING",
+          "29.2 PRACTICAL JUDICIAL ISSUES"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "3b98f1b0-b479-5833-b8dc-281e3d14cdfb",
+    "slug": "harris-book-29-02",
+    "title": "29.2 内幕交易、逆向选择与公司治理",
+    "summary": "分析信息交易对价差、投资者信任、管理人薪酬和企业决策的影响。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4086,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "29",
+        "chapter_title": "内幕交易的经济分析",
+        "section": "29.2",
+        "number": 87,
+        "part": "第七部分 · 市场组织与制度",
+        "minutes": 7,
+        "source_pages": [
+          604,
+          605,
+          606,
+          607
+        ],
+        "source_sections": [
+          "29.3 THE DEBATE OVER INSIDER TRADING"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "2b67e2a8-e09b-51c3-bd4b-21d42446c7a9",
+    "slug": "harris-book-29-03",
+    "title": "29.3 价格信息、执法成本与创业激励的权衡",
+    "summary": "比较内幕交易争论中的不同经济机制，区分提前承担风险和事后获取信息租金。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4087,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "29",
+        "chapter_title": "内幕交易的经济分析",
+        "section": "29.3",
+        "number": 88,
+        "part": "第七部分 · 市场组织与制度",
+        "minutes": 7,
+        "source_pages": [
+          607,
+          608,
+          609,
+          610,
+          611,
+          612
+        ],
+        "source_sections": [
+          "29.3 THE DEBATE OVER INSIDER TRADING",
+          "29.4 SUMMARY",
+          "29.5 SOME POINTS TO REMEMBER",
+          "29.6 QUESTIONS FOR THOUGHT"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "860fe30e-9267-5b02-870a-f0f32e567ed5",
+    "slug": "harris-book-glossary",
+    "title": "市场微观结构中英文术语",
+    "summary": "报价与订单、撮合规则、参与者、流动性、执行评估和市场制度。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4088,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "A",
+        "chapter_title": "术语与参考",
+        "section": "A.1",
+        "number": 89,
+        "part": "术语与参考",
+        "minutes": 25,
+        "source_pages": [
+          632,
+          633,
+          634,
+          635,
+          636,
+          637,
+          638,
+          639,
+          640,
+          641,
+          642,
+          643,
+          644,
+          645,
+          646,
+          647,
+          648,
+          649,
+          650,
+          651,
+          652,
+          653,
+          654,
+          655,
+          656
+        ],
+        "source_sections": [
+          "Index（常用术语选释）"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
+      }
+    }
+  },
+  {
+    "id": "5aa60822-5f81-543b-9fc2-b9ecefb2668b",
+    "slug": "harris-book-references",
+    "title": "市场微观结构参考文献",
+    "summary": "综合书目及各章参考文献，按研究问题查找作者、题名与出版信息。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 4089,
+    "metadata": {
+      "theory_book": {
+        "book": "trading-and-exchanges",
+        "chapter": "A",
+        "chapter_title": "术语与参考",
+        "section": "A.2",
+        "number": 90,
+        "part": "术语与参考",
+        "minutes": 30,
+        "source_pages": [
+          614,
+          615,
+          616,
+          617,
+          618,
+          619,
+          620,
+          621,
+          622,
+          623,
+          624,
+          625,
+          626,
+          627,
+          628,
+          629,
+          630
+        ],
+        "source_sections": [
+          "Bibliography, printed pages 601–617"
+        ],
+        "source_year": 2003,
+        "edition": "2026-10"
       }
     }
   }

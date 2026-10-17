@@ -54,6 +54,15 @@
     "sort_order": 31
   },
   {
+    "id": "44e2f2e9-a852-5af5-8a72-788df5e2df9d",
+    "key": "trading-and-exchanges",
+    "name": "交易与交易所：市场微观结构",
+    "parent_id": "6c937a0e-545c-56f5-a699-90c4325073d4",
+    "href": "/theory/trading-and-exchanges/",
+    "visible": true,
+    "sort_order": 33
+  },
+  {
     "id": "e4929cee-404a-50b6-a5b7-e76678ca05dd",
     "key": "interview",
     "name": "量化笔面试",

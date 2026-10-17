@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="584.39952pt" height="260.39952pt" viewBox="0 0 584.39952 260.39952" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-17T23:15:56.711484</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 260.39952
+L 584.39952 260.39952
+L 584.39952 -0
+L 0 -0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="text_1">
+    <text style="font-size: 18px; font-family: 'Microsoft YaHei'; fill: #245d8a" transform="translate(65.699928 51.904474)">买入价</text>
+    <text style="font-size: 18px; font-family: 'Microsoft YaHei'; fill: #245d8a" transform="translate(76.866959 71.16131)">100</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 18px; font-family: 'Microsoft YaHei'; fill: #245d8a" transform="translate(65.699928 199.601218)">期末价</text>
+    <text style="font-size: 18px; font-family: 'Microsoft YaHei'; fill: #245d8a" transform="translate(76.866959 218.858054)">105</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 18px; font-family: 'Microsoft YaHei'; fill: #245d8a" transform="translate(265.19976 125.888549)">价格差</text>
+    <text style="font-size: 18px; font-family: 'Microsoft YaHei'; fill: #245d8a" transform="translate(286.922104 145.145385)">5</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 18px; font-family: 'Microsoft YaHei'; fill: #278574" transform="translate(464.699592 52.045099)">收益率</text>
+    <text style="font-size: 18px; font-family: 'Microsoft YaHei'; fill: #278574" transform="translate(478.414748 71.301935)">5%</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 18px; font-family: 'Microsoft YaHei'; fill: #278574" transform="translate(451.480842 199.398542)">20 股盈亏</text>
+    <text style="font-size: 18px; font-family: 'Microsoft YaHei'; fill: #278574" transform="translate(464.203186 218.655378)">100 元</text>
+   </g>
+   <g id="patch_2">
+    <path d="M 145.768957 62.253053
+Q 195.299708 88.379771 243.347121 113.724051
+" style="fill: none; stroke: #71838d; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 239.439838 108.27124
+L 243.347121 113.724051
+L 236.640503 113.57819
+" style="fill: none; stroke: #71838d; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 145.768957 198.146467
+Q 195.299708 172.019749 243.347121 146.675469
+" style="fill: none; stroke: #71838d; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 236.640503 146.82133
+L 243.347121 146.675469
+L 239.439838 152.12828
+" style="fill: none; stroke: #71838d; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 339.568794 114.50663
+Q 389.099544 88.379912 437.146957 63.035632
+" style="fill: none; stroke: #71838d; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 430.44034 63.181493
+L 437.146957 63.035632
+L 433.239675 68.488443
+" style="fill: none; stroke: #71838d; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 339.568794 145.89289
+Q 389.099544 172.019608 437.146957 197.363888
+" style="fill: none; stroke: #71838d; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 433.239675 191.911077
+L 437.146957 197.363888
+L 430.44034 197.218027
+" style="fill: none; stroke: #71838d; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #263842" x="389.099678" y="71.159875" transform="rotate(-0 389.099678 71.159875)">÷ 100</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #263842" x="389.099678" y="191.69964" transform="rotate(-0 389.099678 191.69964)">× 20</text>
+   </g>
+  </g>
+ </g>
+</svg>

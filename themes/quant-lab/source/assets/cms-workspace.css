@@ -49,3 +49,5 @@
 .cms-page .cms-operation-filters input{box-sizing:border-box;min-height:43px}
 @media(max-width:900px){.cms-page .cms-operation-filters{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:480px){.cms-page .cms-operation-filters{grid-template-columns:minmax(0,1fr)}.cms-operation-filters .button{width:100%}}
+
+.cms-cover-preview{display:block;width:min(100%,360px);height:160px;object-fit:cover;border:1px solid var(--line);border-radius:10px;margin-top:10px}.cms-cover-preview[hidden]{display:none}

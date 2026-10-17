@@ -9,12 +9,21 @@ const questions=JSON.parse(fs.readFileSync(path.join(__dirname,'content/intervie
 for(const book of ['zhou','practice']){const html=fs.readFileSync(path.join(root,'interview',book,'index.html'),'utf8');assert.equal((html.match(/data-interview-question /g)||[]).length,questions.filter(r=>r.metadata.interview.book===book).length,'Incomplete static question catalog');}
 const courses=JSON.parse(fs.readFileSync(path.join(__dirname,'content/course-catalog.json'),'utf8')),courseHTML=fs.readFileSync(path.join(root,'courses/index.html'),'utf8');
 assert.equal(courses.length,66);assert.equal((courseHTML.match(/data-course-row /g)||[]).length,66);assert.equal((courseHTML.match(/class="curriculum-stage"/g)||[]).length,11);
+for(const course of courses){
+ const archive=path.join(root,'assets/downloads/courses',course.slug+'.zip');assert(fs.existsSync(archive),'Missing lesson code '+course.slug);assert.equal(fs.readFileSync(archive).subarray(0,4).toString('hex'),'504b0304','Invalid lesson archive '+course.slug);
+ const figure=path.join(root,'assets/figures/curriculum','course-'+String(course.metadata.curriculum.number).padStart(2,'0')+'.svg');assert(fs.existsSync(figure),'Missing lesson figure '+course.slug);
+}
 const coverage=JSON.parse(fs.readFileSync(path.join(root,'assets/source-coverage.json'),'utf8')),slugs=new Set(questions.map(q=>q.slug));
 assert.equal(questions.length,100);assert.equal(coverage.files.length,97);
 for(const source of coverage.files)for(const slug of source.unit_slugs)assert(slugs.has(slug),'Missing source destination '+slug);
 assert.equal(new Set(coverage.book_coverage.map(x=>x.pdf_page)).size,96);
-const theory=JSON.parse(fs.readFileSync(path.join(__dirname,'content/theory-catalog.json'),'utf8')),theoryHTML=fs.readFileSync(path.join(root,'theory/factor-investing/index.html'),'utf8');
-assert.equal(theory.length,47);assert.equal((theoryHTML.match(/data-theory-unit/g)||[]).length,47);
+const theory=JSON.parse(fs.readFileSync(path.join(__dirname,'content/theory-catalog.json'),'utf8')),books=JSON.parse(fs.readFileSync(path.join(__dirname,'content/theory-books.json'),'utf8'));
+for(const book of books){const rows=theory.filter(r=>r.metadata.theory_book.book===book.key),html=fs.readFileSync(path.join(root,'theory',book.key,'index.html'),'utf8');assert.equal(rows.length,book.units,book.key);assert.equal((html.match(/data-theory-unit/g)||[]).length,book.units,book.key);assert.equal(new Set(rows.map(r=>String(r.metadata.theory_book.chapter)).filter(c=>/^\d+$/.test(c))).size,book.chapters,book.key);}
 const bookCoverage=JSON.parse(fs.readFileSync(path.join(root,'assets/factor-book-coverage.json'),'utf8')),theorySlugs=new Set(theory.map(r=>r.slug));
 assert.equal(bookCoverage.coverage.length,422);for(const row of bookCoverage.coverage)for(const slug of row.unit_slugs)assert(theorySlugs.has(slug));
-console.log('Checked '+pages+' pages: internal links, service config, navigation, 66 system lessons, 100 interview units, 97 source records and 47 theory units passed.');
+const harrisCoverage=JSON.parse(fs.readFileSync(path.join(root,'assets/harris-book-coverage.json'),'utf8'));
+assert.equal(harrisCoverage.chapters.length,29);for(const chapter of harrisCoverage.chapters){assert(chapter.unit_slugs.length>0);for(const slug of chapter.unit_slugs)assert(theorySlugs.has(slug));assert.equal(chapter.missing_sections.length,0,'Missing Harris sections: '+chapter.chapter);}
+const practice=questions.filter(r=>r.metadata.interview.book==='practice'),groups=new Map();
+for(const row of practice){const m=row.metadata.interview;assert.equal(m.topic,m.company||'其他');assert(!/[0-9]|回忆|扫描|图像|有限合伙/.test(m.topic));if(!groups.has(m.topic))groups.set(m.topic,m.chapter);assert.equal(groups.get(m.topic),m.chapter);}
+for(const route of ['index.html','start/index.html','interview/practice/index.html','theory/trading-and-exchanges/index.html']){const html=fs.readFileSync(path.join(root,route),'utf8');assert(html.indexOf('data-nav-section="topics"')<html.indexOf('data-nav-section="theory"'));assert(html.includes('data-nav-section="trading-and-exchanges"'));}
+console.log('Checked '+pages+' pages: internal links, service config, navigation, 66 system lessons, 100 interview units, company groups and '+theory.length+' theory units passed.');

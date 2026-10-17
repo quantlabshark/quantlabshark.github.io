@@ -18,7 +18,7 @@
  lab.updateBreadcrumb=item=>{let parent={url:'/',label:'学习概览'};const track=String(item.track||''),canonical=String(item.metadata?.canonical_path||'');
   if(item.metadata?.admin_only)parent={url:'/admin/',label:'管理平台'};
   else if(item.metadata?.interview)parent={url:'/interview/'+item.metadata.interview.book+'/',label:item.metadata.interview.book==='zhou'?'经典书籍题解':'笔面试实战'};
-  else if(item.metadata?.theory_book)parent={url:'/theory/'+item.metadata.theory_book.book+'/',label:'因子投资：方法与实践'};
+  else if(item.metadata?.theory_book)parent={url:'/theory/'+item.metadata.theory_book.book+'/',label:item.series||'基础理论与原理'};
   else if(item.metadata?.legacy_course)parent={url:'/courses/',label:'系统学习'};
   else if(canonical==='/start/')parent={url:'/',label:'学习概览'};
   else if(canonical.startsWith('/dictionaries/')||String(item.slug).startsWith('dictionary-'))parent={url:'/dictionaries/',label:'研究方法速查'};
@@ -75,6 +75,13 @@
  lab.recordCompletion=async(contentId,completed)=>{await lab.ready;if(!lab.user)throw Error('请先登录。');if(typeof contentId!=='string'||!/^[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}$/i.test(contentId))throw Error('新版课程使用独立内容 ID，不能使用旧讲次编号。');lab.check(await lab.client.from('foamlab_learning_progress').upsert({user_id:lab.user.id,content_id:contentId,completed,updated_at:new Date().toISOString()},{onConflict:'user_id,content_id'}));const progress=new Set(window.foamAuth.progress||[]);if(completed)progress.add(contentId);else progress.delete(contentId);window.foamAuth.progress=[...progress];window.dispatchEvent(new CustomEvent('foam-auth-change',{detail:{user:lab.user,progress:[...progress]}}));await lab.refreshAccountProgress();};
  lab.settingsReady=lab.ready.then(async()=>{
   const r=await lab.client.from('foamlab_settings').select('value').eq('key','site').maybeSingle();const cfg=r.data?.value||{};lab.settings=cfg;
+  document.querySelectorAll('.quant-topic[data-card-art]').forEach(card=>{
+   const image=card.querySelector('.quant-cover'),url=lab.safeURL(cfg.home_covers?.[card.dataset.cardArt]);
+   if(!image||!url)return;
+   image.onload=()=>{image.hidden=false;image.parentElement.classList.add('has-cover');};
+   image.onerror=()=>{image.hidden=true;image.parentElement.classList.remove('has-cover');};
+   image.src=url;
+  });
   if(cfg.name){const brand=document.querySelector('.brand>span:last-child');if(brand&&cfg.name!=='QuantLab')brand.firstChild.textContent=cfg.name;}
   for(const [path,label] of Object.entries(cfg.nav||{})){const a=[...document.querySelectorAll('.sidebar nav a')].find(x=>x.getAttribute('href')===path);if(a){const span=a.querySelector('span');if(span)span.textContent=label;}}
   if(lab.user&&document.querySelector('.account-page')){

@@ -61,6 +61,12 @@
 .prose .lesson-figure.engineering-figure img { max-height: 420px; }
 .prose figure figcaption,
 .prose figure[class] figcaption { text-align: center; }
+
+/* Teaching diagrams interrupt long paragraphs without narrowing the text. */
+.lab-reader .prose p:has(>img[src^="/assets/figures/"]) { margin: 2rem 0; }
+.lab-reader .prose img[src^="/assets/figures/"] { display: block; width: 100%; height: auto; max-height: none; border: 1px solid var(--line); border-radius: 12px; }
+.lab-reader .prose figure:has(img[src^="/assets/figures/"]) { margin: 2rem 0; }
+.lab-reader .prose .shark-note { margin: 1.8rem 0; }
 @media (max-width: 640px) {
   .article .prose figure.wolf-figure { margin: 22px auto; }
   .prose .reference-case-figure img,

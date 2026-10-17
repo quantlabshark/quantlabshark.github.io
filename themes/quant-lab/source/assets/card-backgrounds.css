@@ -1,7 +1,7 @@
-/* Shared Panda Town artwork; text stays fully opaque above a paper veil. */
-:root { --card-scene: linear-gradient(135deg,transparent 40%,color-mix(in srgb,var(--accent) 14%,transparent)); }
+/* QuantLab pixel illustrations, revealed from left to right under the active palette. */
+:root { --card-scene: url('/assets/illustrations/quant-market-observatory-v1.webp'); }
 html[data-theme] body[data-section] :is(
- .lab-card,.lab-topic-card,.fl-card,.stage-card,.course-route-card,.topic-collection-card,.topic-collection,
+ .lab-card,.lab-topic-card,.fl-card,.interview-book-card,.interview-chapter,.fvm-chapter,.curriculum-stage,.stage-card,.course-route-card,.topic-collection-card,.topic-collection,
  .foundation-card,.command-card,.dictionary-card,.fo-quick-card,.resource-card,
  .community-topic-card,.issue-card,.science-panel,.lab-bottom-card,.reference-entry,
  .continue-panel,.refine-panel,.lab-panel,.account-panel,.panda-badge-card,.image-card,
@@ -15,38 +15,45 @@ html[data-theme] body[data-section] :is(
  --lab-muted: var(--muted);
  background-color: var(--card-paper);
  background-image: linear-gradient(90deg,
-   color-mix(in srgb,var(--card-paper) 97%,transparent) 0%,
-   color-mix(in srgb,var(--card-paper) 94%,transparent) 40%,
-   color-mix(in srgb,var(--card-paper) 78%,transparent) 100%), var(--card-art);
+   color-mix(in srgb,var(--card-paper) var(--card-veil-start,97%),transparent) 0%,
+   color-mix(in srgb,var(--card-paper) var(--card-veil-middle,92%),transparent) 40%,
+   color-mix(in srgb,var(--card-paper) var(--card-veil-end,72%),transparent) 100%), var(--card-art);
  background-position: center, var(--card-art-position);
  background-size: cover, var(--card-art-size);
  background-repeat: no-repeat;
  border-color: var(--line-strong);
 }
 html[data-theme="dark"] body[data-section] :is(
- .lab-card,.lab-topic-card,.fl-card,.stage-card,.course-route-card,.topic-collection-card,.topic-collection,
+ .lab-card,.lab-topic-card,.fl-card,.interview-book-card,.interview-chapter,.fvm-chapter,.curriculum-stage,.stage-card,.course-route-card,.topic-collection-card,.topic-collection,
  .foundation-card,.command-card,.dictionary-card,.fo-quick-card,.resource-card,
  .community-topic-card,.issue-card,.science-panel,.lab-bottom-card,.reference-entry,
  .continue-panel,.refine-panel,.lab-panel,.account-panel,.panda-badge-card,.image-card,
  .cms-panel,.cms-moderation-card,.footer-contact-card,.fl-panel,.fl-community>a
 ) { --muted: var(--card-muted,#b3c6bc); }
-/* Categories, rather than item order, determine the artwork. */
-html[data-theme] body[data-section] :is(.command-card,.dictionary-card,.reference-entry:has(a[href^="/commands/"]),.reference-entry:has(a[href^="/dictionaries/"])) {
- --card-art: linear-gradient(135deg,transparent 40%,color-mix(in srgb,var(--accent) 14%,transparent)); --card-art-position: center;
+/* Subject categories share an illustration, independent of card order. */
+html[data-theme] body[data-section] :is(.command-card,.dictionary-card,.reference-entry:has(a[href^="/commands/"]),.lab-card:has(a[href^="/programming/"]),[data-card-art="data"]) {
+ --card-art:url('/assets/illustrations/quant-data-workshop-v1.webp');
 }
-html[data-theme] body[data-section] :is(
- .fo-quick-card,.reference-entry:has(a[href^="/function-objects/"]),
- .reference-entry:has(a[href^="/numerical-methods/"]),.reference-entry:has(a[href^="/linear-solvers/"]),
- .reference-entry:has(a[href^="/radiation-models/"]),.lab-card:has(a[href^="/programming/"])
-) { --card-art: linear-gradient(135deg,transparent 40%,color-mix(in srgb,var(--accent) 14%,transparent)); --card-art-size: cover; --card-art-position: center; }
-html[data-theme] :is(body[data-section="solvers"],body[data-section="turbulence-models"],body[data-section="mesh-motion"]) .fo-quick-card,
-html[data-theme] body[data-section] :is(.topic-collection,.reference-entry:has(a[href^="/solvers/"]),.reference-entry:has(a[href^="/turbulence-models/"]),.reference-entry:has(a[href^="/mesh-motion/"])) {
- --card-art: linear-gradient(135deg,transparent 40%,color-mix(in srgb,var(--accent) 14%,transparent)); --card-art-size: cover; --card-art-position: center;
+html[data-theme] body[data-section] :is(.course-route-card,.stage-card,.curriculum-stage,.topic-collection,.interview-chapter,[data-card-art="strategy"]) {
+ --card-art:url('/assets/illustrations/quant-strategy-laboratory-v1.webp');
 }
-html[data-theme] :is(body[data-section="multiphase-models"],body[data-section="transport-models"],body[data-section="boundary-conditions"]) .fo-quick-card,
-html[data-theme] body[data-section] :is(.reference-entry:has(a[href^="/multiphase-models/"]),.reference-entry:has(a[href^="/transport-models/"]),.reference-entry:has(a[href^="/boundary-conditions/"]),.resource-card) {
- --card-art: linear-gradient(135deg,transparent 40%,color-mix(in srgb,var(--accent) 14%,transparent)); --card-art-size: cover; --card-art-position: center;
+html[data-theme] body[data-section] :is(.resource-card,.fvm-chapter,.interview-book-card,.lab-card:has(a[href^="/theory/"]),[data-card-art="portfolio"]) {
+ --card-art:url('/assets/illustrations/quant-portfolio-library-v1.webp');
 }
+html[data-theme] body[data-section] .quant-topic {
+ --card-veil-start:97%;--card-veil-middle:91%;--card-veil-end:58%;
+ background-image:none;
+ --card-art-position:75% 65%;
+}
+html[data-theme] body[data-section] .fl-cards .quant-topic[data-card-art="data"] { --card-art:url('/assets/illustrations/quant-data-workshop-v1.webp'); }
+html[data-theme] body[data-section] .fl-cards .quant-topic[data-card-art="market"] { --card-art:url('/assets/illustrations/quant-market-observatory-v1.webp'); }
+html[data-theme] body[data-section] .fl-cards .quant-topic[data-card-art="strategy"] { --card-art:url('/assets/illustrations/quant-strategy-laboratory-v1.webp'); }
+html[data-theme] body[data-section] .fl-cards .quant-topic[data-card-art="portfolio"] { --card-art:url('/assets/illustrations/quant-portfolio-library-v1.webp'); }
+html[data-theme] body[data-section] .quant-topic .quant-topic-art {position:relative;background:linear-gradient(120deg,var(--mint),var(--surface-2));color:var(--accent);border-bottom:1px solid var(--line)}
+.quant-topic-art .quant-cover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.quant-topic-art .quant-cover[hidden]{display:none}
+.quant-topic-art.has-cover>span,.quant-topic-art.has-cover>.icon{visibility:hidden}
+html[data-theme] body[data-section] .quant-topic .fl-card-text {flex:1;background-color:var(--surface);background-image:linear-gradient(90deg,color-mix(in srgb,var(--surface) var(--card-veil-start),transparent) 0%,color-mix(in srgb,var(--surface) var(--card-veil-middle),transparent) 40%,color-mix(in srgb,var(--surface) var(--card-veil-end),transparent) 100%),var(--card-art);background-position:center,80% 58%;background-size:cover;background-repeat:no-repeat}
 html[data-theme] body[data-section] :is(.lab-card-body,.fl-card-text,.topic-collection-body) { background-color: transparent; }
 html[data-theme] body[data-section] .topic-collection:not(:has(> img)) { grid-template-columns: minmax(0,1fr); }
 /* Keep selected and focused cards distinct, including keyboard navigation. */
@@ -62,5 +69,5 @@ html[data-theme] body[data-section] :is(.lab-card,.fo-quick-card,.stage-card,.pa
 
 /* Artwork belongs to cards; the page keeps its normal reading background. */
 @media(max-width:760px) {
- :root { --card-scene: linear-gradient(135deg,transparent 40%,color-mix(in srgb,var(--accent) 14%,transparent)); }
+ :root { --card-scene: url('/assets/illustrations/quant-market-observatory-v1.webp'); }
 }

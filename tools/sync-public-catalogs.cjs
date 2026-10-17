@@ -9,10 +9,11 @@ async function main(){
  if(!nodes.some(n=>n.key==='tools')||!nodes.some(n=>n.key==='interview'))throw Error('Missing expected navigation roots');
  const rows=(await pages('foamlab_content','slug,title,summary,kind,status,sort_order,metadata',q=>q.eq('status','published').not('metadata->interview','is',null))).map(r=>({...r,metadata:{interview:r.metadata.interview}}));
  if(!rows.length)throw Error('Empty interview catalog');
- const courses=(await pages('foamlab_content','id,slug,title,summary,kind,status,sort_order,metadata',q=>q.eq('status','published').eq('kind','lesson').eq('metadata->curriculum->>edition','2026-10'))).map(r=>({...r,metadata:{curriculum:r.metadata.curriculum}}));
+ const courses=(await pages('foamlab_content','id,slug,title,summary,kind,status,sort_order,metadata',q=>q.eq('status','published').eq('kind','lesson').not('metadata->curriculum','is',null))).map(r=>({...r,metadata:{curriculum:r.metadata.curriculum}}));
  if(courses.length!==66)throw Error('Expected 66 system lessons, received '+courses.length);
- const theory=(await pages('foamlab_content','id,slug,title,summary,kind,status,sort_order,metadata',q=>q.eq('status','published').eq('metadata->theory_book->>book','factor-investing'))).map(r=>({...r,metadata:{theory_book:r.metadata.theory_book}}));
- if(theory.length!==47)throw Error('Expected 47 factor book units, received '+theory.length);
+ const theory=(await pages('foamlab_content','id,slug,title,summary,kind,status,sort_order,metadata',q=>q.eq('status','published').not('metadata->theory_book','is',null))).map(r=>({...r,metadata:{theory_book:r.metadata.theory_book}}));
+ const books=JSON.parse(fs.readFileSync(path.join(root,'tools/content/theory-books.json'),'utf8'));
+ for(const book of books){const count=theory.filter(r=>r.metadata.theory_book.book===book.key).length;if(!book.units||count!==book.units)throw Error(`Expected ${book.units} units for ${book.key}, received ${count}`);}
  const write=(file,data)=>fs.writeFileSync(path.join(root,file),JSON.stringify(data,null,2)+'\n');
  write('tools/content/navigation.json',nodes);write('tools/content/interview-catalog.json',rows);
  write('tools/content/course-catalog.json',courses);

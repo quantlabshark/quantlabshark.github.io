@@ -2,5 +2,5 @@
 title: 基础理论与原理
 layout: theory
 section: theory
-description: 收益与风险、统计检验、投资组合。
+description: 资产定价、投资组合与市场微观结构。
 ---

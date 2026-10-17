@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="584.39952pt" height="339.59952pt" viewBox="0 0 584.39952 339.59952" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-17T23:15:58.440505</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 339.59952
+L 584.39952 339.59952
+L 584.39952 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="text_1">
+    <text style="font-size: 17px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #263842" x="64.199952" y="174.547807" transform="rotate(-0 64.199952 174.547807)">100 天</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 17px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #263842" x="263.699784" y="93.505749" transform="rotate(-0 263.699784 93.505749)">市场涨 40</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 17px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #263842" x="263.699784" y="256.105509" transform="rotate(-0 263.699784 256.105509)">市场未涨 60</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 17px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #245d8a" x="497.399587" y="52.705731" transform="rotate(-0 497.399587 52.705731)">股票涨 28</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 17px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #263842" x="497.399587" y="134.064049" transform="rotate(-0 497.399587 134.064049)">未涨 12</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 17px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #263842" x="497.399587" y="215.305491" transform="rotate(-0 497.399587 215.305491)">股票涨 18</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 17px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #263842" x="497.399587" y="296.663809" transform="rotate(-0 497.399587 296.663809)">未涨 42</text>
+   </g>
+   <g id="patch_2">
+    <path d="M 111.394166 160.457022
+Q 152.551938 129.148253 192.374957 98.854832
+" style="fill: none; stroke: #71838d; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 185.783286 100.099774
+L 192.374957 98.854832
+L 189.415908 104.875133
+" style="fill: none; stroke: #71838d; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 111.394166 179.142498
+Q 152.551938 210.451267 192.374957 240.744688
+" style="fill: none; stroke: #71838d; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 189.415908 234.724387
+L 192.374957 240.744688
+L 185.783286 239.499746
+" style="fill: none; stroke: #71838d; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 334.025353 79.835841
+Q 383.39932 66.142514 431.157234 52.897381
+" style="fill: none; stroke: #71838d; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 424.573719 51.610009
+L 431.157234 52.897381
+L 426.177227 57.39177
+" style="fill: none; stroke: #71838d; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 334.025353 97.163919
+Q 383.39932 110.857246 431.157234 124.102379
+" style="fill: none; stroke: #71838d; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 426.177227 119.60799
+L 431.157234 124.102379
+L 424.573719 125.389751
+" style="fill: none; stroke: #71838d; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 345.406209 242.374814
+Q 389.097805 228.742757 431.188465 215.610203
+" style="fill: none; stroke: #71838d; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 424.567244 214.533435
+L 431.188465 215.610203
+L 426.354318 220.261119
+" style="fill: none; stroke: #71838d; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 345.406209 259.824466
+Q 389.097805 273.456523 431.188465 286.589077
+" style="fill: none; stroke: #71838d; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 426.354318 281.938161
+L 431.188465 286.589077
+L 424.567244 287.665845
+" style="fill: none; stroke: #71838d; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+  </g>
+ </g>
+</svg>

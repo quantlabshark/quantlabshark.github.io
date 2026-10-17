@@ -30,7 +30,7 @@
 .curriculum-card:hover{border-color:var(--accent);box-shadow:0 8px 24px color-mix(in srgb,var(--accent) 10%,transparent);transform:translateY(-2px)}
 .curriculum-card>a{display:flex;flex-direction:column;width:100%;min-width:0}
 .curriculum-card-top{display:flex;justify-content:space-between;gap:14px;align-items:center;padding:17px 22px;background:linear-gradient(110deg,var(--mint),var(--surface));border-bottom:1px solid var(--line)}
-.curriculum-lesson-number{font:12px var(--mono);color:var(--accent)}.curriculum-level{font-size:11px;color:var(--muted)}
+.curriculum-lesson-number{font:600 16px/1.6 var(--font);font-variant-numeric:tabular-nums;color:var(--accent);letter-spacing:.04em}.curriculum-level{font-size:11px;color:var(--muted)}
 .curriculum-card-body{padding:22px 22px 20px;flex:1;display:flex;flex-direction:column;align-items:flex-start}
 .curriculum-card h3{font-size:18px;line-height:1.65;margin:0 0 12px;font-weight:600}
 .curriculum-card p{font-size:13px;line-height:1.9;color:var(--muted);margin:0 0 18px;overflow-wrap:anywhere}
