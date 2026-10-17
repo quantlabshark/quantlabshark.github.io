@@ -22,7 +22,7 @@
    const D=await window.FoamDirectory.ready;if(!D.available)throw Error('directory');const node=D.nodes.find(n=>n.key===page.dataset.labCatalog);if(!node)throw Error('missing directory');
    const rows=(await D.content(node)).filter(r=>r.metadata?.interview?.book===page.dataset.interviewBook).sort((a,b)=>a.sort_order-b.sort_order);
    const opened=new Set([...host.querySelectorAll('details[open]')].map(c=>c.id));host.innerHTML=V.render(rows);for(const c of host.querySelectorAll('details'))c.open=opened.has(c.id);
-   const chapters=V.chapters(rows);document.getElementById('interview-count').textContent=`${chapters.length} 章 · ${rows.length} 节 · 题目与解答`;
+   const chapters=V.chapters(rows);document.getElementById('interview-count').textContent=`${chapters.length} ${page.dataset.interviewBook==='zhou'?'章':'组'} · ${rows.length} 节 · 题目与解答`;
    document.getElementById('interview-toc').innerHTML=chapters.map(c=>`<a href="#chapter-${esc(c.number)}"><span>${String(c.number).padStart(2,'0')}</span>${esc(c.title)}</a>`).join('');
    const start=document.getElementById('interview-start');start.hidden=!rows.length;if(rows.length)start.href='/read/?slug='+encodeURIComponent(rows[0].slug);
    filter(false);openHash();host.dataset.live='true';
@@ -43,12 +43,12 @@
    const button=toolbar.querySelector('button'),update=()=>{const all=answers.every(d=>d.open);button.textContent=all?'收起本页解答':'展开本页解答';button.setAttribute('aria-expanded',String(all));};
    button.addEventListener('click',()=>{const open=button.getAttribute('aria-expanded')!=='true';answers.forEach(d=>d.open=open);update();});prose.addEventListener('toggle',update,true);revealAnswerHash();update();
   }
-  const nav=document.createElement('nav');nav.className='lesson-navigation interview-reader-nav';nav.setAttribute('aria-label','阅读单元翻页');nav.innerHTML=`<a href="${bookURL}#chapter-${esc(meta.chapter)}">← 返回本章目录</a>`;article.querySelector('.lesson-actions')?.before(nav);
+  const nav=document.createElement('nav');nav.className='lesson-navigation interview-reader-nav';nav.setAttribute('aria-label','阅读单元翻页');nav.innerHTML=`<a href="${bookURL}#chapter-${esc(meta.chapter)}">← 返回${meta.book==='zhou'?'本章':'公司'}目录</a>`;article.querySelector('.lesson-actions')?.before(nav);
   try{
    const D=await window.FoamDirectory.ready;if(!D.available)return;const node=D.nodes.find(n=>n.key==='interview-'+meta.book);if(!node)return;
    const rows=(await D.content(node)).filter(r=>r.metadata?.interview?.book===meta.book).sort((a,b)=>a.sort_order-b.sort_order),index=rows.findIndex(r=>r.slug===item.slug);if(index<0)return;
    const prev=rows[index-1],next=rows[index+1],control=(r,text)=>r?`<a class="chapter-control" href="/read/?slug=${encodeURIComponent(r.slug)}" title="${esc(r.title)}">${text}</a>`:`<button class="chapter-control" type="button" disabled>${text}</button>`;
-   nav.innerHTML=`<div class="chapter-heading"><div><span>${label} · ${esc(meta.topic)}</span><strong>第 ${index+1} / ${rows.length} 节</strong></div><a href="${bookURL}#chapter-${esc(meta.chapter)}">本章目录 ↗</a></div><div class="chapter-controls">${control(prev,'← 上一节')}${control(next,'下一节 →')}</div><div class="chapter-neighbors"><p><span>上一节</span><strong>${esc(prev?.title||'已是第一节')}</strong></p><p><span>下一节</span><strong>${esc(next?.title||'已是最后一节')}</strong></p></div>`;
+   nav.innerHTML=`<div class="chapter-heading"><div><span>${label} · ${esc(meta.topic)}</span><strong>第 ${index+1} / ${rows.length} 节</strong></div><a href="${bookURL}#chapter-${esc(meta.chapter)}">${meta.book==='zhou'?'本章':'公司'}目录 ↗</a></div><div class="chapter-controls">${control(prev,'← 上一节')}${control(next,'下一节 →')}</div><div class="chapter-neighbors"><p><span>上一节</span><strong>${esc(prev?.title||'已是第一节')}</strong></p><p><span>下一节</span><strong>${esc(next?.title||'已是最后一节')}</strong></p></div>`;
    const outline=document.getElementById('reader-chapters');if(outline){outline.hidden=false;outline.querySelector('summary').textContent=`本册目录 · ${rows.length} 节`;outline.querySelector('.chapter-series').textContent=label;document.getElementById('chapter-list').innerHTML=V.chapters(rows).map(c=>`<p class="interview-outline-heading">${esc(c.title)}</p>`+c.rows.map(r=>`<a href="/read/?slug=${encodeURIComponent(r.slug)}"${r.slug===item.slug?' aria-current="page"':''}>${String(r.metadata.interview.number).padStart(2,'0')} · ${esc(r.title)}</a>`).join('')).join('');}
   }catch{nav.insertAdjacentHTML('beforeend','<p class="muted">阅读顺序暂时无法读取，请从目录继续。</p>');}
  }

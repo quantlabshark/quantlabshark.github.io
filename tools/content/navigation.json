@@ -39,19 +39,6 @@
     "read_access": "inherit"
   },
   {
-    "id": "6c937a0e-545c-56f5-a699-90c4325073d4",
-    "key": "theory",
-    "name": "基础理论与原理",
-    "parent_id": null,
-    "href": "/theory/",
-    "description": "收益与风险、统计检验、投资组合。",
-    "nav_group": "学习与研究",
-    "visible": true,
-    "sort_order": 25,
-    "revision": 2,
-    "read_access": "inherit"
-  },
-  {
     "id": "0d99264a-7913-52fc-8f8e-a4c784c92834",
     "key": "factor-investing",
     "name": "因子投资：方法与实践",
@@ -75,6 +62,19 @@
     "visible": true,
     "sort_order": 30,
     "revision": 2,
+    "read_access": "inherit"
+  },
+  {
+    "id": "6c937a0e-545c-56f5-a699-90c4325073d4",
+    "key": "theory",
+    "name": "基础理论与原理",
+    "parent_id": null,
+    "href": "/theory/",
+    "description": "收益与风险、统计检验、投资组合。",
+    "nav_group": "学习与研究",
+    "visible": true,
+    "sort_order": 31,
+    "revision": 3,
     "read_access": "inherit"
   },
   {
