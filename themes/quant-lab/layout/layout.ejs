@@ -33,14 +33,15 @@
   <% if(page.layout==='curriculum'){ %><script src="/assets/curriculum-view.js" defer></script><script src="/assets/curriculum.js" defer></script><link rel="stylesheet" href="/assets/curriculum.css"><% } %>
   <% if(['theory','theory-book'].includes(page.layout)){ %><script src="/assets/theory-view.js" defer></script><script src="/assets/theory.js" defer></script><link rel="stylesheet" href="/assets/theory.css"><% } %>
   <% if(['topics','topic'].includes(page.layout)){ %><script src="/assets/topics-view.js" defer></script><script src="/assets/topics.js" defer></script><link rel="stylesheet" href="/assets/theory.css"><link rel="stylesheet" href="/assets/curriculum.css"><link rel="stylesheet" href="/assets/topics.css"><% } %>
-  <% if(page.layout==='interview-experience'){ %><link rel="stylesheet" href="/assets/interview-experience.css"><script src="/assets/interview-experience.js" defer></script><% } %>
+  <% if(['interview-experience','interview-experience-page'].includes(page.layout)){ %><link rel="stylesheet" href="/assets/interview-experience.css"><% } %>
+  <% if(page.layout==='interview-experience-page'&&['records','plan'].includes(page.experience_key)){ %><script src="/assets/interview-experience.js" defer></script><% } %>
   <% if(page.layout==='resources'){ %><link rel="stylesheet" href="/assets/resource-library.css"><script src="/assets/resource-library.js" defer></script><% } %>
   <script src="/assets/runtime-panda-art.js" defer fetchpriority="low"></script>
   <script src="/assets/runtime-panda-pet.js" defer fetchpriority="low"></script>
   <link rel="stylesheet" href="/assets/site-extras.css">
   <link rel="stylesheet" href="/assets/card-backgrounds.css">
 <link rel="stylesheet" href="/assets/quant.css"></head>
-<body data-section="<%= page.section || page.layout || '' %>" data-lesson="<%= page.lesson_id || '' %>">
+<body data-section="<%= page.section || page.layout || '' %>" data-nav-section="<%= page.nav_section || '' %>" data-lesson="<%= page.lesson_id || '' %>">
 <a class="skip" href="#main">跳到主要内容</a>
 <aside class="sidebar" id="sidebar">
   <button class="icon-button sidebar-close" type="button" data-close-nav aria-label="关闭导航">×</button>

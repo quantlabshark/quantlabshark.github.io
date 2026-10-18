@@ -1,0 +1,10 @@
+ <section id="experience-records" aria-labelledby="experience-heading">
+  
+  <div class="experience-filters"><label class="experience-search"><span class="sr-only">搜索经验与招聘</span><input id="experience-search" type="search" placeholder="搜索公司、岗位、面试主题或技能"></label><label>公司<select id="experience-company"><option value="">全部公司</option><% companies.forEach(x=>{ %><option><%= x %></option><% }) %></select></label><label>岗位<select id="experience-role"><option value="">全部岗位</option><% roles.forEach(x=>{ %><option><%= x %></option><% }) %></select></label><label>类型<select id="experience-kind"><option value="">全部类型</option><% kinds.forEach(x=>{ %><option><%= x %></option><% }) %></select></label><button type="button" class="button secondary" id="experience-reset">清除筛选</button></div>
+  <p class="experience-note">个人记录标注了作者披露的时间；招聘条件以相应岗位页面为准。查阅日期：<%= data.checked %>。</p>
+  <p id="experience-status" aria-live="polite"></p>
+  <div class="lab-card-grid experience-grid"><% entries.forEach(r=>{ %>
+   <article class="lab-card experience-card" data-experience-card data-company="<%= r.company %>" data-role="<%= r.role %>" data-kind="<%= r.kind %>"><div class="lab-card-body"><div class="experience-meta"><span><%= r.company %></span><span><%= r.kind %></span></div><h3><a href="<%= r.url %>" target="_blank" rel="noopener noreferrer"><%= r.title %></a></h3><p class="experience-source"><%= r.role %> · <%= r.platform %><% if(r.date){ %> · <%= r.date %><% } %></p><p><%= r.summary %></p><p class="experience-focus"><strong>准备重点</strong><%= r.focus %></p><a class="button secondary" href="<%= r.url %>" target="_blank" rel="noopener noreferrer"><%= r.kind==='个人经验'?'查看原帖':'查看详情' %> ↗</a></div></article>
+  <% }) %></div><p class="lab-empty" id="experience-empty" hidden>没有匹配内容，可减少筛选条件。</p>
+  <nav class="experience-pager" id="experience-pager" aria-label="经验列表翻页"></nav>
+ </section>

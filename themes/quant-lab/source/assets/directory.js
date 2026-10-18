@@ -72,7 +72,7 @@
   if(!D.available)return;const nav=document.querySelector('#sidebar nav');if(!nav)return;
   const scroller=document.getElementById('sidebar'),scrollTop=scroller.scrollTop;
   const focus=nav.contains(document.activeElement)?{key:document.activeElement.closest('[data-nav-section]')?.dataset.navSection,arrow:document.activeElement.matches('.nav-expand')}:null;
-  nav.innerHTML=window.QuantNavTree.render(D.nodes,{currentId:D.current()?.id,isOpen:key=>window.FoamNavigation?.isOpen(key)===true,courseRows:window.QuantCourseNavigation||[],currentHref:location.href});
+  nav.innerHTML=window.QuantNavTree.render(D.nodes,{currentId:(D.current()||D.nodes.find(n=>n.key===document.body.dataset.navSection))?.id,isOpen:key=>window.FoamNavigation?.isOpen(key)===true,courseRows:window.QuantCourseNavigation||[],currentHref:location.href});
   scroller.scrollTop=scrollTop;
   if(focus?.key){const group=[...nav.querySelectorAll('[data-nav-section]')].find(g=>g.dataset.navSection===focus.key);group?.querySelector(focus.arrow?':scope > .nav-parent > .nav-expand':':scope > .nav-parent > a')?.focus({preventScroll:true});}
  };

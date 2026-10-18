@@ -1,0 +1,5 @@
+<% const data=interview_experience(),entries=data.entries,companies=[...new Set(entries.map(r=>r.company))],roles=[...new Set(entries.map(r=>r.role))],kinds=[...new Set(entries.map(r=>r.kind))]; %>
+<div class="page-wrap experience-page">
+ <header class="page-heading"><div class="eyebrow">经验与求职</div><h1 id="experience-heading"><%= page.title %></h1></header>
+ <%- partial('_partial/experience-'+page.experience_key,{data,entries,companies,roles,kinds}) %>
+</div>
