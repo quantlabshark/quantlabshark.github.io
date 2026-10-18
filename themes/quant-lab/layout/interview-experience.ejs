@@ -2,10 +2,10 @@
 <div class="page-wrap experience-hub">
  <header class="page-heading"><div class="eyebrow">量化求职</div><h1>经验与求职</h1><p>按公司查阅面试记录和岗位要求，选择适合自己的准备路线。</p></header>
  <nav class="interview-books experience-modules" aria-label="经验与求职模块">
-  <%- partial('_partial/interview-module-card',{card:{number:'01',label:'公司资料',lines:['经验 · 招聘','要求 · 准备'],caption:'面试经历与招聘信息',title:'经验与招聘',description:'按公司、岗位与类型筛选面试记录和招聘信息，查看常见考查内容与准备重点。',tags:[entries.length+' 条记录','公司筛选','岗位筛选'],href:'#experience-records',action:'查看经验与招聘'}}) %>
-  <%- partial('_partial/interview-module-card',{card:{number:'02',label:'岗位选择',tone:'practice',lines:['研究 · 开发','交易 · 数据'],caption:'工作内容与技能要求',title:'岗位介绍',description:'比较研究、开发、交易、机器学习和数据工程岗位的工作内容、基础知识与项目要求。',tags:['5 类岗位','技能要求','项目准备'],href:'#experience-roles',action:'了解岗位'}}) %>
-  <%- partial('_partial/interview-module-card',{card:{number:'03',label:'准备安排',tone:'career',lines:['学习 · 练习','面试 · 投递'],caption:'每周任务与投递记录',title:'准备时间线',description:'按研究、开发或交易方向安排八周准备任务，结合申请截止日调整进度。',tags:['8 周安排','3 个方向','投递记录表'],href:'#experience-plan',action:'查看准备安排'}}) %>
-  <%- partial('_partial/interview-module-card',{card:{number:'04',label:'经验检索',tone:'platform',lines:['平台 · 检索','原帖 · 阅读'],caption:'公开帖子与平台入口',title:'平台入口',description:'打开小红书、微信公众号等平台的原帖入口，按公司与岗位查找更多求职经验。',tags:['小红书','微信公众号','公开网站'],href:'#experience-platforms',action:'查看平台入口'}}) %>
+  <%- partial('_partial/interview-module-card',{card:{title:'经验与招聘',description:'按公司、岗位和类型查阅面试记录、招聘要求及准备重点。',tags:[entries.length+' 条记录','公司筛选','岗位筛选'],href:'#experience-records',action:'查看经验与招聘'}}) %>
+  <%- partial('_partial/interview-module-card',{card:{title:'岗位介绍',description:'了解五类量化岗位的工作内容、技能要求和项目准备重点。',tags:['5 类岗位','技能要求','项目准备'],href:'#experience-roles',action:'了解岗位'}}) %>
+  <%- partial('_partial/interview-module-card',{card:{title:'准备时间线',description:'按研究、开发或交易方向安排八周任务，并记录投递进度。',tags:['8 周安排','3 个方向','投递记录表'],href:'#experience-plan',action:'查看准备安排'}}) %>
+  <%- partial('_partial/interview-module-card',{card:{title:'平台入口',description:'查找小红书、微信公众号等平台的量化求职经验，跳转阅读原帖。',tags:['小红书','微信公众号','公开网站'],href:'#experience-platforms',action:'查看平台入口'}}) %>
  </nav>
  <section id="experience-records" aria-labelledby="experience-heading">
   <h2 id="experience-heading">经验与招聘</h2>

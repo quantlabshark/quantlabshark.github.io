@@ -6,8 +6,8 @@
  </section>
  <div class="interview-section-heading"><h2>模块入口</h2></div>
  <div class="interview-books">
-  <%- partial('_partial/interview-module-card',{card:{number:'01',label:'经典书籍题解',lines:['概率 · 数学','金融 · 算法'],caption:'基础题目与推导',title:'经典量化面试教材',description:'涵盖逻辑、数学、概率、随机过程、金融与数值方法，配有题目分析和解答。',tags:[zhou.length+' 节',interview_chapters('zhou').length+' 章','题目与解答'],href:'/interview/zhou/',action:'查看章节目录'}}) %>
-  <%- partial('_partial/interview-module-card',{card:{number:'02',label:'笔面试实战',tone:'practice',lines:['统计 · 模型','代码 · 研究'],caption:'公司题目与分析',title:'量化笔面试资料',description:'按公司查阅概率统计、机器学习、编程、因子研究及数据分析题解。',tags:[practice.length+' 节',interview_chapters('practice').filter(c=>c.title!=='其他').length+' 家公司','代码与研究分析'],href:'/interview/practice/',action:'查看章节目录'}}) %>
-  <%- partial('_partial/interview-module-card',{card:{number:'03',label:'求职准备',tone:'career',lines:['经验 · 岗位','计划 · 投递'],caption:'面试记录与准备安排',title:'经验与求职',description:'查阅公司面试记录和招聘要求，了解岗位职责，安排准备进度并记录投递情况。',tags:['公司经验','岗位介绍','准备时间线'],href:'/interview/experience/',action:'进入经验与求职'}}) %>
+  <%- partial('_partial/interview-module-card',{card:{title:'经典量化面试教材',description:'涵盖逻辑、数学、概率、随机过程、金融与数值方法，配有题目分析和解答。',tags:[zhou.length+' 节',interview_chapters('zhou').length+' 章','题目与解答'],href:'/interview/zhou/',action:'查看章节目录'}}) %>
+  <%- partial('_partial/interview-module-card',{card:{title:'量化笔面试资料',description:'按公司查阅概率统计、机器学习、编程、因子研究及数据分析题解。',tags:[practice.length+' 节',interview_chapters('practice').filter(c=>c.title!=='其他').length+' 家公司','代码与研究分析'],href:'/interview/practice/',action:'查看章节目录'}}) %>
+  <%- partial('_partial/interview-module-card',{card:{title:'经验与求职',description:'查阅公司面试记录和招聘要求，了解岗位职责，安排准备进度并记录投递情况。',tags:['公司经验','岗位介绍','准备时间线'],href:'/interview/experience/',action:'进入经验与求职'}}) %>
  </div>
 </div>

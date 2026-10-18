@@ -1,23 +1,15 @@
-/* Shared module cards for the interview and career pages. */
+/* Shared compact module cards for the interview and career pages. */
 .interview-books { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
 .experience-modules { margin:28px 0 40px; }
-.interview-book-card { display:flex; flex-direction:column; min-width:0; border:1px solid var(--line); border-radius:16px; overflow:hidden; background:var(--surface); transition:transform .18s,border-color .18s; }
+.interview-book-card { display:flex; min-width:0; border:1px solid var(--line); border-radius:16px; overflow:hidden; background:var(--surface); transition:transform .18s,border-color .18s; }
 .interview-book-card:hover { transform:translateY(-3px); border-color:var(--accent); }
 .interview-book-card:focus-visible { outline:3px solid var(--accent); outline-offset:4px; }
-.interview-cover { position:relative; min-height:210px; padding:26px 24px; display:flex; flex-direction:column; align-items:flex-start; gap:16px; color:var(--ink); border-left:8px solid var(--accent); background:linear-gradient(115deg,var(--mint),var(--surface-2)); }
-.interview-cover.practice { background:linear-gradient(115deg,var(--surface-2),var(--mint)); }
-.interview-cover.career { background:linear-gradient(145deg,var(--mint),var(--surface)); }
-.interview-cover.platform { background:linear-gradient(115deg,var(--surface-2),var(--surface)); }
-.interview-cover>span { font-size:12px; letter-spacing:1px; color:var(--accent); }
-.interview-cover>strong { font-size:27px; line-height:1.55; letter-spacing:1px; font-weight:600; }
-.interview-cover>small { font-size:12px; letter-spacing:1px; color:var(--muted); }
-.interview-book-copy { padding:26px; display:flex; flex-direction:column; flex:1; }
-.interview-book-copy .eyebrow { margin-bottom:12px; }
-.interview-book-copy h2 { font-size:24px; line-height:1.5; }
-.interview-book-copy p { color:var(--muted); font-size:15px; line-height:1.9; }
+.interview-book-copy { padding:26px; display:flex; flex-direction:column; flex:1; min-width:0; }
+.interview-book-copy h2 { font-size:23px; line-height:1.45; margin:0 0 14px; }
+.interview-book-copy p { color:var(--muted); font-size:15px; line-height:1.85; margin:0 0 18px; }
 .interview-book-copy>b { color:var(--accent); margin-top:auto; padding-top:22px; font-size:14px; }
 .interview-book-tags { display:flex; flex-wrap:wrap; gap:8px; font-size:12px; }
 .interview-book-tags span { border:1px solid var(--line); padding:4px 8px; border-radius:5px; }
 @media(max-width:1200px) { .interview-books { grid-template-columns:repeat(2,minmax(0,1fr)); } }
-@media(max-width:700px) { .interview-books { grid-template-columns:1fr; } .interview-cover { min-height:180px; } .interview-book-copy { padding:24px; } }
+@media(max-width:700px) { .interview-books { grid-template-columns:1fr; gap:18px; } .interview-book-copy { padding:24px; } }
 @media(prefers-reduced-motion:reduce) { .interview-book-card { transition:none; } }

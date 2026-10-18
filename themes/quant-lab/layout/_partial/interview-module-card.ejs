@@ -1,4 +1,3 @@
 <a class="interview-book-card" href="<%= card.href %>">
- <div class="interview-cover <%= card.tone || '' %>"><span><%= card.number %> / <%= card.label %></span><strong><%= card.lines[0] %><br><%= card.lines[1] %></strong><small><%= card.caption %></small></div>
- <div class="interview-book-copy"><span class="eyebrow"><%= card.label %></span><h2><%= card.title %></h2><p><%= card.description %></p><div class="interview-book-tags"><% card.tags.forEach(tag=>{ %><span><%= tag %></span><% }) %></div><b><%= card.action %> →</b></div>
+ <div class="interview-book-copy"><h2><%= card.title %></h2><p><%= card.description %></p><div class="interview-book-tags"><% card.tags.forEach(tag=>{ %><span><%= tag %></span><% }) %></div><b><%= card.action %> →</b></div>
 </a>
