@@ -1,1 +1,21 @@
-.topic-module-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.topic-module>a,.topic-lesson>a{display:block;height:100%;color:inherit;text-decoration:none}.topic-module-image{position:relative;height:190px;overflow:hidden}.topic-module-image img{width:100%;height:100%;object-fit:cover}.topic-module-image:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--surface),transparent 85%);opacity:.55}.topic-module-image>span{position:absolute;z-index:1;left:26px;bottom:20px;font:600 38px Georgia,serif;color:var(--ink)}.topic-module .lab-card-body h2{font-size:23px;margin:0 0 12px}.topic-lesson-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.topic-lesson[hidden]{display:none!important}.topic-lesson-cover{display:block;object-fit:cover;width:100%;height:125px}.topic-lesson .lab-card-body h2{font-size:19px;line-height:1.55;margin:12px 0}.topic-lesson-label{color:var(--muted);font-size:13px}.topic-read{display:block;margin-top:18px;font-weight:600;color:var(--accent)}.topic-toolbar{display:flex;gap:20px;align-items:end;margin:28px 0 18px}.topic-toolbar .search-field{flex:1;margin:0}.topic-filter-label{display:flex;flex-direction:column;gap:6px;color:var(--muted);font-size:13px}.topic-filter-label select{min-width:180px;padding:11px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);font:inherit}#topic-catalog{scroll-margin-top:90px}#topic-catalog:focus-visible{outline:2px solid var(--accent);outline-offset:6px}@media(max-width:1100px){.topic-lesson-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:620px){.topic-module-grid,.topic-lesson-grid{grid-template-columns:1fr}.topic-toolbar{align-items:stretch;flex-direction:column;gap:12px}.topic-module-image{height:155px}}
+.topic-module-grid,.topic-lesson-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
+.topic-module>a,.topic-lesson>a{display:grid;grid-template-columns:42% minmax(0,1fr);height:100%;min-height:285px;color:inherit;text-decoration:none}
+.topic-module-image{display:flex;align-items:center;justify-content:center;background:#fff;overflow:hidden;border-right:1px solid var(--line)}
+.topic-module-image img{display:block;width:100%;height:100%;min-height:220px;object-fit:contain;padding:12px;box-sizing:border-box}
+.topic-module .lab-card-body,.topic-lesson .lab-card-body{padding:26px;display:flex;flex-direction:column;min-width:0}
+.topic-module-count{font-size:14px;color:var(--accent);margin-bottom:16px}
+.topic-module .lab-card-body h2{font-size:26px;line-height:1.5;margin:0 0 16px}
+.topic-module .lab-card-body p{font-size:15px;line-height:1.9;margin:0 0 20px}
+.topic-read{display:block;margin-top:auto;padding-top:12px;font-weight:600;color:var(--accent)}
+.topic-lesson[hidden]{display:none!important}
+.topic-lesson-cover{display:block;object-fit:contain;width:100%;height:100%;min-height:220px;padding:12px;box-sizing:border-box;background:#fff;border-right:1px solid var(--line)}
+.topic-lesson .lab-card-body h2{font-size:21px;line-height:1.55;margin:12px 0}
+.topic-lesson .lab-card-body p{font-size:14px;line-height:1.85;margin:0 0 12px}
+.topic-lesson-label{color:var(--muted);font-size:13px}
+.topic-toolbar{display:flex;gap:20px;align-items:end;margin:28px 0 18px}
+.topic-toolbar .search-field{flex:1;margin:0}
+.topic-filter-label{display:flex;flex-direction:column;gap:6px;color:var(--muted);font-size:13px}
+.topic-filter-label select{min-width:180px;padding:11px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);font:inherit}
+#topic-catalog{scroll-margin-top:90px}#topic-catalog:focus-visible{outline:2px solid var(--accent);outline-offset:6px}
+@media(max-width:1150px){.topic-module-grid,.topic-lesson-grid{grid-template-columns:1fr}.topic-module>a,.topic-lesson>a{min-height:240px;grid-template-columns:38% minmax(0,1fr)}}
+@media(max-width:620px){.topic-module>a,.topic-lesson>a{grid-template-columns:1fr}.topic-module-image,.topic-lesson-cover{height:190px;min-height:0;border-right:0;border-bottom:1px solid var(--line)}.topic-module-image img{min-height:0}.topic-module .lab-card-body,.topic-lesson .lab-card-body{padding:24px}.topic-module .lab-card-body h2{font-size:24px}.topic-toolbar{align-items:stretch;flex-direction:column;gap:12px}}

@@ -10,7 +10,7 @@ for(const book of ['zhou','practice']){const html=fs.readFileSync(path.join(root
 const courses=JSON.parse(fs.readFileSync(path.join(__dirname,'content/course-catalog.json'),'utf8')),courseHTML=fs.readFileSync(path.join(root,'courses/index.html'),'utf8');
 assert.equal(courses.length,66);assert.equal((courseHTML.match(/data-course-row /g)||[]).length,66);assert.equal((courseHTML.match(/class="curriculum-stage"/g)||[]).length,11);
 for(const course of courses){
- const cover=course.metadata.curriculum.cover;assert(cover&&cover.startsWith('/assets/illustrations/courses/'),'Missing course cover '+course.slug);assert(fs.existsSync(path.join(root,cover)),'Missing cover image '+course.slug);
+ const cover=course.metadata.curriculum.cover;assert(cover&&cover.startsWith('/assets/figures/curriculum/'),'Missing course figure cover '+course.slug);assert(fs.existsSync(path.join(root,cover)),'Missing cover image '+course.slug);
  const archive=path.join(root,'assets/downloads/courses',course.slug+'.zip');assert(fs.existsSync(archive),'Missing lesson code '+course.slug);assert.equal(fs.readFileSync(archive).subarray(0,4).toString('hex'),'504b0304','Invalid lesson archive '+course.slug);
  const figure=path.join(root,'assets/figures/curriculum','course-'+String(course.metadata.curriculum.number).padStart(2,'0')+'.svg');assert(fs.existsSync(figure),'Missing lesson figure '+course.slug);
 }

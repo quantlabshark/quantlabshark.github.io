@@ -7,15 +7,15 @@
     "track": "专题学习",
     "series": "人工智能在量化领域的应用",
     "sort_order": 7001,
-    "cover_url": "/assets/illustrations/quant-strategy-laboratory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/ai/topic-ai-03.svg",
     "metadata": {
       "topic": {
         "key": "ai",
         "number": 1,
         "chapter": "1",
-        "chapter_title": "预测任务、数据时点与收益标签",
+        "edition": "2026-10",
         "minutes": 35,
-        "edition": "2026-10"
+        "chapter_title": "预测任务、数据时点与收益标签"
       }
     },
     "section_ids": [
@@ -30,15 +30,15 @@
     "track": "专题学习",
     "series": "人工智能在量化领域的应用",
     "sort_order": 7002,
-    "cover_url": "/assets/illustrations/quant-strategy-laboratory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/ai/topic-ai-03.svg",
     "metadata": {
       "topic": {
         "key": "ai",
         "number": 2,
         "chapter": "2",
-        "chapter_title": "线性模型、正则化与预测基线",
+        "edition": "2026-10",
         "minutes": 40,
-        "edition": "2026-10"
+        "chapter_title": "线性模型、正则化与预测基线"
       }
     },
     "section_ids": [
@@ -53,15 +53,15 @@
     "track": "专题学习",
     "series": "人工智能在量化领域的应用",
     "sort_order": 7003,
-    "cover_url": "/assets/illustrations/quant-strategy-laboratory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/ai/topic-ai-03.svg",
     "metadata": {
       "topic": {
         "key": "ai",
         "number": 3,
         "chapter": "3",
-        "chapter_title": "决策树与梯度提升",
+        "edition": "2026-10",
         "minutes": 40,
-        "edition": "2026-10"
+        "chapter_title": "决策树与梯度提升"
       }
     },
     "section_ids": [
@@ -76,15 +76,15 @@
     "track": "专题学习",
     "series": "人工智能在量化领域的应用",
     "sort_order": 7004,
-    "cover_url": "/assets/illustrations/quant-strategy-laboratory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/ai/topic-ai-03.svg",
     "metadata": {
       "topic": {
         "key": "ai",
         "number": 4,
         "chapter": "4",
-        "chapter_title": "时间序列神经网络与注意力",
+        "edition": "2026-10",
         "minutes": 45,
-        "edition": "2026-10"
+        "chapter_title": "时间序列神经网络与注意力"
       }
     },
     "section_ids": [
@@ -99,15 +99,15 @@
     "track": "专题学习",
     "series": "人工智能在量化领域的应用",
     "sort_order": 7005,
-    "cover_url": "/assets/illustrations/quant-strategy-laboratory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/ai/topic-ai-03.svg",
     "metadata": {
       "topic": {
         "key": "ai",
         "number": 5,
         "chapter": "5",
-        "chapter_title": "截面排序与组合信号",
+        "edition": "2026-10",
         "minutes": 40,
-        "edition": "2026-10"
+        "chapter_title": "截面排序与组合信号"
       }
     },
     "section_ids": [
@@ -122,15 +122,15 @@
     "track": "专题学习",
     "series": "人工智能在量化领域的应用",
     "sort_order": 7006,
-    "cover_url": "/assets/illustrations/quant-strategy-laboratory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/ai/topic-ai-03.svg",
     "metadata": {
       "topic": {
         "key": "ai",
         "number": 6,
         "chapter": "6",
-        "chapter_title": "财务文本、语言模型与事件信息",
+        "edition": "2026-10",
         "minutes": 40,
-        "edition": "2026-10"
+        "chapter_title": "财务文本、语言模型与事件信息"
       }
     },
     "section_ids": [
@@ -145,15 +145,15 @@
     "track": "专题学习",
     "series": "人工智能在量化领域的应用",
     "sort_order": 7007,
-    "cover_url": "/assets/illustrations/quant-strategy-laboratory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/ai/topic-ai-03.svg",
     "metadata": {
       "topic": {
         "key": "ai",
         "number": 7,
         "chapter": "7",
-        "chapter_title": "自动因子生成与组合增量",
+        "edition": "2026-10",
         "minutes": 45,
-        "edition": "2026-10"
+        "chapter_title": "自动因子生成与组合增量"
       }
     },
     "section_ids": [
@@ -168,15 +168,15 @@
     "track": "专题学习",
     "series": "人工智能在量化领域的应用",
     "sort_order": 7008,
-    "cover_url": "/assets/illustrations/quant-strategy-laboratory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/ai/topic-ai-03.svg",
     "metadata": {
       "topic": {
         "key": "ai",
         "number": 8,
         "chapter": "8",
-        "chapter_title": "强化学习与交易执行",
+        "edition": "2026-10",
         "minutes": 45,
-        "edition": "2026-10"
+        "chapter_title": "强化学习与交易执行"
       }
     },
     "section_ids": [
@@ -191,15 +191,15 @@
     "track": "专题学习",
     "series": "人工智能在量化领域的应用",
     "sort_order": 7009,
-    "cover_url": "/assets/illustrations/quant-strategy-laboratory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/ai/topic-ai-03.svg",
     "metadata": {
       "topic": {
         "key": "ai",
         "number": 9,
         "chapter": "9",
-        "chapter_title": "时间序列验证、标签重叠与信息泄漏",
+        "edition": "2026-10",
         "minutes": 40,
-        "edition": "2026-10"
+        "chapter_title": "时间序列验证、标签重叠与信息泄漏"
       }
     },
     "section_ids": [
@@ -214,15 +214,15 @@
     "track": "专题学习",
     "series": "人工智能在量化领域的应用",
     "sort_order": 7010,
-    "cover_url": "/assets/illustrations/quant-strategy-laboratory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/ai/topic-ai-03.svg",
     "metadata": {
       "topic": {
         "key": "ai",
         "number": 10,
         "chapter": "10",
-        "chapter_title": "模型漂移、监测与部署",
+        "edition": "2026-10",
         "minutes": 40,
-        "edition": "2026-10"
+        "chapter_title": "模型漂移、监测与部署"
       }
     },
     "section_ids": [
@@ -237,15 +237,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8001,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 1,
         "chapter": "0",
-        "chapter_title": "计算与检验基础",
+        "edition": "2026-10",
         "minutes": 16,
-        "edition": "2026-10"
+        "chapter_title": "计算与检验基础"
       }
     },
     "section_ids": [
@@ -260,15 +260,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8002,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 2,
         "chapter": "0",
-        "chapter_title": "计算与检验基础",
+        "edition": "2026-10",
         "minutes": 16,
-        "edition": "2026-10"
+        "chapter_title": "计算与检验基础"
       }
     },
     "section_ids": [
@@ -283,15 +283,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8003,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 3,
         "chapter": "0",
-        "chapter_title": "计算与检验基础",
+        "edition": "2026-10",
         "minutes": 19,
-        "edition": "2026-10"
+        "chapter_title": "计算与检验基础"
       }
     },
     "section_ids": [
@@ -306,15 +306,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8004,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 4,
         "chapter": "0",
-        "chapter_title": "计算与检验基础",
+        "edition": "2026-10",
         "minutes": 15,
-        "edition": "2026-10"
+        "chapter_title": "计算与检验基础"
       }
     },
     "section_ids": [
@@ -329,15 +329,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8005,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 5,
         "chapter": "0",
-        "chapter_title": "计算与检验基础",
+        "edition": "2026-10",
         "minutes": 16,
-        "edition": "2026-10"
+        "chapter_title": "计算与检验基础"
       }
     },
     "section_ids": [
@@ -352,15 +352,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8006,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 6,
         "chapter": "1",
-        "chapter_title": "Alpha 001—010",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 001—010"
       }
     },
     "section_ids": [
@@ -375,15 +375,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8007,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 7,
         "chapter": "1",
-        "chapter_title": "Alpha 001—010",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 001—010"
       }
     },
     "section_ids": [
@@ -398,15 +398,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8008,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 8,
         "chapter": "1",
-        "chapter_title": "Alpha 001—010",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 001—010"
       }
     },
     "section_ids": [
@@ -421,15 +421,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8009,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 9,
         "chapter": "1",
-        "chapter_title": "Alpha 001—010",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 001—010"
       }
     },
     "section_ids": [
@@ -444,15 +444,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8010,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 10,
         "chapter": "1",
-        "chapter_title": "Alpha 001—010",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 001—010"
       }
     },
     "section_ids": [
@@ -467,15 +467,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8011,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 11,
         "chapter": "1",
-        "chapter_title": "Alpha 001—010",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 001—010"
       }
     },
     "section_ids": [
@@ -490,15 +490,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8012,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 12,
         "chapter": "1",
-        "chapter_title": "Alpha 001—010",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 001—010"
       }
     },
     "section_ids": [
@@ -513,15 +513,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8013,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 13,
         "chapter": "1",
-        "chapter_title": "Alpha 001—010",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 001—010"
       }
     },
     "section_ids": [
@@ -536,15 +536,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8014,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 14,
         "chapter": "1",
-        "chapter_title": "Alpha 001—010",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 001—010"
       }
     },
     "section_ids": [
@@ -559,15 +559,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8015,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 15,
         "chapter": "1",
-        "chapter_title": "Alpha 001—010",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 001—010"
       }
     },
     "section_ids": [
@@ -582,15 +582,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8016,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 16,
         "chapter": "2",
-        "chapter_title": "Alpha 011—020",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 011—020"
       }
     },
     "section_ids": [
@@ -605,15 +605,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8017,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 17,
         "chapter": "2",
-        "chapter_title": "Alpha 011—020",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 011—020"
       }
     },
     "section_ids": [
@@ -628,15 +628,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8018,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 18,
         "chapter": "2",
-        "chapter_title": "Alpha 011—020",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 011—020"
       }
     },
     "section_ids": [
@@ -651,15 +651,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8019,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 19,
         "chapter": "2",
-        "chapter_title": "Alpha 011—020",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 011—020"
       }
     },
     "section_ids": [
@@ -674,15 +674,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8020,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 20,
         "chapter": "2",
-        "chapter_title": "Alpha 011—020",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 011—020"
       }
     },
     "section_ids": [
@@ -697,15 +697,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8021,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 21,
         "chapter": "2",
-        "chapter_title": "Alpha 011—020",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 011—020"
       }
     },
     "section_ids": [
@@ -720,15 +720,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8022,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 22,
         "chapter": "2",
-        "chapter_title": "Alpha 011—020",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 011—020"
       }
     },
     "section_ids": [
@@ -743,15 +743,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8023,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 23,
         "chapter": "2",
-        "chapter_title": "Alpha 011—020",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 011—020"
       }
     },
     "section_ids": [
@@ -766,15 +766,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8024,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 24,
         "chapter": "2",
-        "chapter_title": "Alpha 011—020",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 011—020"
       }
     },
     "section_ids": [
@@ -789,15 +789,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8025,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 25,
         "chapter": "2",
-        "chapter_title": "Alpha 011—020",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 011—020"
       }
     },
     "section_ids": [
@@ -812,15 +812,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8026,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 26,
         "chapter": "3",
-        "chapter_title": "Alpha 021—030",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 021—030"
       }
     },
     "section_ids": [
@@ -835,15 +835,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8027,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 27,
         "chapter": "3",
-        "chapter_title": "Alpha 021—030",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 021—030"
       }
     },
     "section_ids": [
@@ -858,15 +858,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8028,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 28,
         "chapter": "3",
-        "chapter_title": "Alpha 021—030",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 021—030"
       }
     },
     "section_ids": [
@@ -881,15 +881,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8029,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 29,
         "chapter": "3",
-        "chapter_title": "Alpha 021—030",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 021—030"
       }
     },
     "section_ids": [
@@ -904,15 +904,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8030,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 30,
         "chapter": "3",
-        "chapter_title": "Alpha 021—030",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 021—030"
       }
     },
     "section_ids": [
@@ -927,15 +927,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8031,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 31,
         "chapter": "3",
-        "chapter_title": "Alpha 021—030",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 021—030"
       }
     },
     "section_ids": [
@@ -950,15 +950,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8032,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 32,
         "chapter": "3",
-        "chapter_title": "Alpha 021—030",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 021—030"
       }
     },
     "section_ids": [
@@ -973,15 +973,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8033,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 33,
         "chapter": "3",
-        "chapter_title": "Alpha 021—030",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 021—030"
       }
     },
     "section_ids": [
@@ -996,15 +996,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8034,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 34,
         "chapter": "3",
-        "chapter_title": "Alpha 021—030",
+        "edition": "2026-10",
         "minutes": 13,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 021—030"
       }
     },
     "section_ids": [
@@ -1019,15 +1019,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8035,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 35,
         "chapter": "3",
-        "chapter_title": "Alpha 021—030",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 021—030"
       }
     },
     "section_ids": [
@@ -1042,15 +1042,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8036,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 36,
         "chapter": "4",
-        "chapter_title": "Alpha 031—040",
+        "edition": "2026-10",
         "minutes": 13,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 031—040"
       }
     },
     "section_ids": [
@@ -1065,15 +1065,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8037,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 37,
         "chapter": "4",
-        "chapter_title": "Alpha 031—040",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 031—040"
       }
     },
     "section_ids": [
@@ -1088,15 +1088,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8038,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 38,
         "chapter": "4",
-        "chapter_title": "Alpha 031—040",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 031—040"
       }
     },
     "section_ids": [
@@ -1111,15 +1111,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8039,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 39,
         "chapter": "4",
-        "chapter_title": "Alpha 031—040",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 031—040"
       }
     },
     "section_ids": [
@@ -1134,15 +1134,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8040,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 40,
         "chapter": "4",
-        "chapter_title": "Alpha 031—040",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 031—040"
       }
     },
     "section_ids": [
@@ -1157,15 +1157,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8041,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 41,
         "chapter": "4",
-        "chapter_title": "Alpha 031—040",
+        "edition": "2026-10",
         "minutes": 15,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 031—040"
       }
     },
     "section_ids": [
@@ -1180,15 +1180,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8042,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 42,
         "chapter": "4",
-        "chapter_title": "Alpha 031—040",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 031—040"
       }
     },
     "section_ids": [
@@ -1203,15 +1203,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8043,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 43,
         "chapter": "4",
-        "chapter_title": "Alpha 031—040",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 031—040"
       }
     },
     "section_ids": [
@@ -1226,15 +1226,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8044,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 44,
         "chapter": "4",
-        "chapter_title": "Alpha 031—040",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 031—040"
       }
     },
     "section_ids": [
@@ -1249,15 +1249,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8045,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 45,
         "chapter": "4",
-        "chapter_title": "Alpha 031—040",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 031—040"
       }
     },
     "section_ids": [
@@ -1272,15 +1272,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8046,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 46,
         "chapter": "5",
-        "chapter_title": "Alpha 041—050",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 041—050"
       }
     },
     "section_ids": [
@@ -1295,15 +1295,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8047,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 47,
         "chapter": "5",
-        "chapter_title": "Alpha 041—050",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 041—050"
       }
     },
     "section_ids": [
@@ -1318,15 +1318,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8048,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 48,
         "chapter": "5",
-        "chapter_title": "Alpha 041—050",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 041—050"
       }
     },
     "section_ids": [
@@ -1341,15 +1341,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8049,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 49,
         "chapter": "5",
-        "chapter_title": "Alpha 041—050",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 041—050"
       }
     },
     "section_ids": [
@@ -1364,15 +1364,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8050,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 50,
         "chapter": "5",
-        "chapter_title": "Alpha 041—050",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 041—050"
       }
     },
     "section_ids": [
@@ -1387,15 +1387,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8051,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 51,
         "chapter": "5",
-        "chapter_title": "Alpha 041—050",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 041—050"
       }
     },
     "section_ids": [
@@ -1410,15 +1410,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8052,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 52,
         "chapter": "5",
-        "chapter_title": "Alpha 041—050",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 041—050"
       }
     },
     "section_ids": [
@@ -1433,15 +1433,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8053,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 53,
         "chapter": "5",
-        "chapter_title": "Alpha 041—050",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 041—050"
       }
     },
     "section_ids": [
@@ -1456,15 +1456,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8054,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 54,
         "chapter": "5",
-        "chapter_title": "Alpha 041—050",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 041—050"
       }
     },
     "section_ids": [
@@ -1479,15 +1479,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8055,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 55,
         "chapter": "5",
-        "chapter_title": "Alpha 041—050",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 041—050"
       }
     },
     "section_ids": [
@@ -1502,15 +1502,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8056,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 56,
         "chapter": "6",
-        "chapter_title": "Alpha 051—060",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 051—060"
       }
     },
     "section_ids": [
@@ -1525,15 +1525,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8057,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 57,
         "chapter": "6",
-        "chapter_title": "Alpha 051—060",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 051—060"
       }
     },
     "section_ids": [
@@ -1548,15 +1548,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8058,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 58,
         "chapter": "6",
-        "chapter_title": "Alpha 051—060",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 051—060"
       }
     },
     "section_ids": [
@@ -1571,15 +1571,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8059,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 59,
         "chapter": "6",
-        "chapter_title": "Alpha 051—060",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 051—060"
       }
     },
     "section_ids": [
@@ -1594,15 +1594,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8060,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 60,
         "chapter": "6",
-        "chapter_title": "Alpha 051—060",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 051—060"
       }
     },
     "section_ids": [
@@ -1617,15 +1617,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8061,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 61,
         "chapter": "6",
-        "chapter_title": "Alpha 051—060",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 051—060"
       }
     },
     "section_ids": [
@@ -1640,15 +1640,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8062,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 62,
         "chapter": "6",
-        "chapter_title": "Alpha 051—060",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 051—060"
       }
     },
     "section_ids": [
@@ -1663,15 +1663,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8063,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 63,
         "chapter": "6",
-        "chapter_title": "Alpha 051—060",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 051—060"
       }
     },
     "section_ids": [
@@ -1686,15 +1686,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8064,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 64,
         "chapter": "6",
-        "chapter_title": "Alpha 051—060",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 051—060"
       }
     },
     "section_ids": [
@@ -1709,15 +1709,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8065,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 65,
         "chapter": "6",
-        "chapter_title": "Alpha 051—060",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 051—060"
       }
     },
     "section_ids": [
@@ -1732,15 +1732,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8066,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 66,
         "chapter": "7",
-        "chapter_title": "Alpha 061—070",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 061—070"
       }
     },
     "section_ids": [
@@ -1755,15 +1755,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8067,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 67,
         "chapter": "7",
-        "chapter_title": "Alpha 061—070",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 061—070"
       }
     },
     "section_ids": [
@@ -1778,15 +1778,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8068,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 68,
         "chapter": "7",
-        "chapter_title": "Alpha 061—070",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 061—070"
       }
     },
     "section_ids": [
@@ -1801,15 +1801,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8069,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 69,
         "chapter": "7",
-        "chapter_title": "Alpha 061—070",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 061—070"
       }
     },
     "section_ids": [
@@ -1824,15 +1824,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8070,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 70,
         "chapter": "7",
-        "chapter_title": "Alpha 061—070",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 061—070"
       }
     },
     "section_ids": [
@@ -1847,15 +1847,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8071,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 71,
         "chapter": "7",
-        "chapter_title": "Alpha 061—070",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 061—070"
       }
     },
     "section_ids": [
@@ -1870,15 +1870,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8072,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 72,
         "chapter": "7",
-        "chapter_title": "Alpha 061—070",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 061—070"
       }
     },
     "section_ids": [
@@ -1893,15 +1893,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8073,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 73,
         "chapter": "7",
-        "chapter_title": "Alpha 061—070",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 061—070"
       }
     },
     "section_ids": [
@@ -1916,15 +1916,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8074,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 74,
         "chapter": "7",
-        "chapter_title": "Alpha 061—070",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 061—070"
       }
     },
     "section_ids": [
@@ -1939,15 +1939,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8075,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 75,
         "chapter": "7",
-        "chapter_title": "Alpha 061—070",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 061—070"
       }
     },
     "section_ids": [
@@ -1962,15 +1962,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8076,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 76,
         "chapter": "8",
-        "chapter_title": "Alpha 071—080",
+        "edition": "2026-10",
         "minutes": 13,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 071—080"
       }
     },
     "section_ids": [
@@ -1985,15 +1985,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8077,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 77,
         "chapter": "8",
-        "chapter_title": "Alpha 071—080",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 071—080"
       }
     },
     "section_ids": [
@@ -2008,15 +2008,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8078,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 78,
         "chapter": "8",
-        "chapter_title": "Alpha 071—080",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 071—080"
       }
     },
     "section_ids": [
@@ -2031,15 +2031,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8079,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 79,
         "chapter": "8",
-        "chapter_title": "Alpha 071—080",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 071—080"
       }
     },
     "section_ids": [
@@ -2054,15 +2054,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8080,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 80,
         "chapter": "8",
-        "chapter_title": "Alpha 071—080",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 071—080"
       }
     },
     "section_ids": [
@@ -2077,15 +2077,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8081,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 81,
         "chapter": "8",
-        "chapter_title": "Alpha 071—080",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 071—080"
       }
     },
     "section_ids": [
@@ -2100,15 +2100,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8082,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 82,
         "chapter": "8",
-        "chapter_title": "Alpha 071—080",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 071—080"
       }
     },
     "section_ids": [
@@ -2123,15 +2123,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8083,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 83,
         "chapter": "8",
-        "chapter_title": "Alpha 071—080",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 071—080"
       }
     },
     "section_ids": [
@@ -2146,15 +2146,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8084,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 84,
         "chapter": "8",
-        "chapter_title": "Alpha 071—080",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 071—080"
       }
     },
     "section_ids": [
@@ -2169,15 +2169,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8085,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 85,
         "chapter": "8",
-        "chapter_title": "Alpha 071—080",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 071—080"
       }
     },
     "section_ids": [
@@ -2192,15 +2192,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8086,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 86,
         "chapter": "9",
-        "chapter_title": "Alpha 081—090",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 081—090"
       }
     },
     "section_ids": [
@@ -2215,15 +2215,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8087,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 87,
         "chapter": "9",
-        "chapter_title": "Alpha 081—090",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 081—090"
       }
     },
     "section_ids": [
@@ -2238,15 +2238,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8088,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 88,
         "chapter": "9",
-        "chapter_title": "Alpha 081—090",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 081—090"
       }
     },
     "section_ids": [
@@ -2261,15 +2261,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8089,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 89,
         "chapter": "9",
-        "chapter_title": "Alpha 081—090",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 081—090"
       }
     },
     "section_ids": [
@@ -2284,15 +2284,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8090,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 90,
         "chapter": "9",
-        "chapter_title": "Alpha 081—090",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 081—090"
       }
     },
     "section_ids": [
@@ -2307,15 +2307,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8091,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 91,
         "chapter": "9",
-        "chapter_title": "Alpha 081—090",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 081—090"
       }
     },
     "section_ids": [
@@ -2330,15 +2330,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8092,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 92,
         "chapter": "9",
-        "chapter_title": "Alpha 081—090",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 081—090"
       }
     },
     "section_ids": [
@@ -2353,15 +2353,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8093,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 93,
         "chapter": "9",
-        "chapter_title": "Alpha 081—090",
+        "edition": "2026-10",
         "minutes": 13,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 081—090"
       }
     },
     "section_ids": [
@@ -2376,15 +2376,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8094,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 94,
         "chapter": "9",
-        "chapter_title": "Alpha 081—090",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 081—090"
       }
     },
     "section_ids": [
@@ -2399,15 +2399,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8095,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 95,
         "chapter": "9",
-        "chapter_title": "Alpha 081—090",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 081—090"
       }
     },
     "section_ids": [
@@ -2422,15 +2422,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8096,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 96,
         "chapter": "10",
-        "chapter_title": "Alpha 091—100",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 091—100"
       }
     },
     "section_ids": [
@@ -2445,15 +2445,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8097,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 97,
         "chapter": "10",
-        "chapter_title": "Alpha 091—100",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 091—100"
       }
     },
     "section_ids": [
@@ -2468,15 +2468,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8098,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 98,
         "chapter": "10",
-        "chapter_title": "Alpha 091—100",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 091—100"
       }
     },
     "section_ids": [
@@ -2491,15 +2491,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8099,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 99,
         "chapter": "10",
-        "chapter_title": "Alpha 091—100",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 091—100"
       }
     },
     "section_ids": [
@@ -2514,15 +2514,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8100,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 100,
         "chapter": "10",
-        "chapter_title": "Alpha 091—100",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 091—100"
       }
     },
     "section_ids": [
@@ -2537,15 +2537,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8101,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 101,
         "chapter": "10",
-        "chapter_title": "Alpha 091—100",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 091—100"
       }
     },
     "section_ids": [
@@ -2560,15 +2560,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8102,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 102,
         "chapter": "10",
-        "chapter_title": "Alpha 091—100",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 091—100"
       }
     },
     "section_ids": [
@@ -2583,15 +2583,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8103,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 103,
         "chapter": "10",
-        "chapter_title": "Alpha 091—100",
+        "edition": "2026-10",
         "minutes": 13,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 091—100"
       }
     },
     "section_ids": [
@@ -2606,15 +2606,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8104,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 104,
         "chapter": "10",
-        "chapter_title": "Alpha 091—100",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 091—100"
       }
     },
     "section_ids": [
@@ -2629,15 +2629,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8105,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 105,
         "chapter": "10",
-        "chapter_title": "Alpha 091—100",
+        "edition": "2026-10",
         "minutes": 13,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 091—100"
       }
     },
     "section_ids": [
@@ -2652,15 +2652,15 @@
     "track": "专题学习",
     "series": "Alpha101 全解读",
     "sort_order": 8106,
-    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "cover_url": "/assets/illustrations/topics/alpha101/alpha-001.svg",
     "metadata": {
       "topic": {
         "key": "alpha101",
         "number": 106,
         "chapter": "11",
-        "chapter_title": "Alpha 101—101",
+        "edition": "2026-10",
         "minutes": 12,
-        "edition": "2026-10"
+        "chapter_title": "Alpha 101—101"
       }
     },
     "section_ids": [
@@ -2675,15 +2675,15 @@
     "track": "专题学习",
     "series": "股票截面因子挖掘",
     "sort_order": 9001,
-    "cover_url": "/assets/illustrations/quant-data-workshop-v1.webp",
+    "cover_url": "/assets/figures/curriculum/course-26.svg",
     "metadata": {
       "topic": {
         "key": "factors",
         "number": 1,
         "chapter": "1",
-        "chapter_title": "因子与数据",
+        "edition": "2026-10",
         "minutes": 32,
-        "edition": "2026-10"
+        "chapter_title": "因子与数据"
       }
     },
     "section_ids": [
@@ -2698,15 +2698,15 @@
     "track": "专题学习",
     "series": "股票截面因子挖掘",
     "sort_order": 9002,
-    "cover_url": "/assets/illustrations/quant-data-workshop-v1.webp",
+    "cover_url": "/assets/figures/curriculum/course-26.svg",
     "metadata": {
       "topic": {
         "key": "factors",
         "number": 2,
         "chapter": "1",
-        "chapter_title": "因子与数据",
+        "edition": "2026-10",
         "minutes": 38,
-        "edition": "2026-10"
+        "chapter_title": "因子与数据"
       }
     },
     "section_ids": [
@@ -2721,15 +2721,15 @@
     "track": "专题学习",
     "series": "股票截面因子挖掘",
     "sort_order": 9003,
-    "cover_url": "/assets/illustrations/quant-data-workshop-v1.webp",
+    "cover_url": "/assets/figures/curriculum/course-26.svg",
     "metadata": {
       "topic": {
         "key": "factors",
         "number": 3,
         "chapter": "1",
-        "chapter_title": "因子与数据",
+        "edition": "2026-10",
         "minutes": 40,
-        "edition": "2026-10"
+        "chapter_title": "因子与数据"
       }
     },
     "section_ids": [
@@ -2744,15 +2744,15 @@
     "track": "专题学习",
     "series": "股票截面因子挖掘",
     "sort_order": 9004,
-    "cover_url": "/assets/illustrations/quant-data-workshop-v1.webp",
+    "cover_url": "/assets/figures/curriculum/course-26.svg",
     "metadata": {
       "topic": {
         "key": "factors",
         "number": 4,
         "chapter": "2",
-        "chapter_title": "因子处理与检验",
+        "edition": "2026-10",
         "minutes": 36,
-        "edition": "2026-10"
+        "chapter_title": "因子处理与检验"
       }
     },
     "section_ids": [
@@ -2767,15 +2767,15 @@
     "track": "专题学习",
     "series": "股票截面因子挖掘",
     "sort_order": 9005,
-    "cover_url": "/assets/illustrations/quant-data-workshop-v1.webp",
+    "cover_url": "/assets/figures/curriculum/course-26.svg",
     "metadata": {
       "topic": {
         "key": "factors",
         "number": 5,
         "chapter": "2",
-        "chapter_title": "因子处理与检验",
+        "edition": "2026-10",
         "minutes": 42,
-        "edition": "2026-10"
+        "chapter_title": "因子处理与检验"
       }
     },
     "section_ids": [
@@ -2790,15 +2790,15 @@
     "track": "专题学习",
     "series": "股票截面因子挖掘",
     "sort_order": 9006,
-    "cover_url": "/assets/illustrations/quant-data-workshop-v1.webp",
+    "cover_url": "/assets/figures/curriculum/course-26.svg",
     "metadata": {
       "topic": {
         "key": "factors",
         "number": 6,
         "chapter": "2",
-        "chapter_title": "因子处理与检验",
+        "edition": "2026-10",
         "minutes": 48,
-        "edition": "2026-10"
+        "chapter_title": "因子处理与检验"
       }
     },
     "section_ids": [
@@ -2813,15 +2813,15 @@
     "track": "专题学习",
     "series": "股票截面因子挖掘",
     "sort_order": 9007,
-    "cover_url": "/assets/illustrations/quant-data-workshop-v1.webp",
+    "cover_url": "/assets/figures/curriculum/course-26.svg",
     "metadata": {
       "topic": {
         "key": "factors",
         "number": 7,
         "chapter": "3",
-        "chapter_title": "组合与研究验证",
+        "edition": "2026-10",
         "minutes": 46,
-        "edition": "2026-10"
+        "chapter_title": "组合与研究验证"
       }
     },
     "section_ids": [
@@ -2836,15 +2836,15 @@
     "track": "专题学习",
     "series": "股票截面因子挖掘",
     "sort_order": 9008,
-    "cover_url": "/assets/illustrations/quant-data-workshop-v1.webp",
+    "cover_url": "/assets/figures/curriculum/course-26.svg",
     "metadata": {
       "topic": {
         "key": "factors",
         "number": 8,
         "chapter": "3",
-        "chapter_title": "组合与研究验证",
+        "edition": "2026-10",
         "minutes": 43,
-        "edition": "2026-10"
+        "chapter_title": "组合与研究验证"
       }
     },
     "section_ids": [
@@ -2859,15 +2859,15 @@
     "track": "专题学习",
     "series": "股票截面因子挖掘",
     "sort_order": 9009,
-    "cover_url": "/assets/illustrations/quant-data-workshop-v1.webp",
+    "cover_url": "/assets/figures/curriculum/course-26.svg",
     "metadata": {
       "topic": {
         "key": "factors",
         "number": 9,
         "chapter": "3",
-        "chapter_title": "组合与研究验证",
+        "edition": "2026-10",
         "minutes": 45,
-        "edition": "2026-10"
+        "chapter_title": "组合与研究验证"
       }
     },
     "section_ids": [
@@ -2882,15 +2882,15 @@
     "track": "专题学习",
     "series": "股票截面因子挖掘",
     "sort_order": 9010,
-    "cover_url": "/assets/illustrations/quant-data-workshop-v1.webp",
+    "cover_url": "/assets/figures/curriculum/course-26.svg",
     "metadata": {
       "topic": {
         "key": "factors",
         "number": 10,
         "chapter": "3",
-        "chapter_title": "组合与研究验证",
+        "edition": "2026-10",
         "minutes": 48,
-        "edition": "2026-10"
+        "chapter_title": "组合与研究验证"
       }
     },
     "section_ids": [
@@ -2905,15 +2905,15 @@
     "track": "专题学习",
     "series": "择时研究",
     "sort_order": 10001,
-    "cover_url": "/assets/illustrations/quant-portfolio-library-v1.webp",
+    "cover_url": "/assets/illustrations/topics/timing/moving-average-breakout.svg",
     "metadata": {
       "topic": {
         "key": "timing",
         "number": 1,
         "chapter": "1",
-        "chapter_title": "时序动量与截面动量",
+        "edition": "2026-10",
         "minutes": 15,
-        "edition": "2026-10"
+        "chapter_title": "时序动量与截面动量"
       }
     },
     "section_ids": [
@@ -2928,15 +2928,15 @@
     "track": "专题学习",
     "series": "择时研究",
     "sort_order": 10002,
-    "cover_url": "/assets/illustrations/quant-portfolio-library-v1.webp",
+    "cover_url": "/assets/illustrations/topics/timing/moving-average-breakout.svg",
     "metadata": {
       "topic": {
         "key": "timing",
         "number": 2,
         "chapter": "2",
-        "chapter_title": "均线与突破规则",
+        "edition": "2026-10",
         "minutes": 15,
-        "edition": "2026-10"
+        "chapter_title": "均线与突破规则"
       }
     },
     "section_ids": [
@@ -2951,15 +2951,15 @@
     "track": "专题学习",
     "series": "择时研究",
     "sort_order": 10003,
-    "cover_url": "/assets/illustrations/quant-portfolio-library-v1.webp",
+    "cover_url": "/assets/illustrations/topics/timing/moving-average-breakout.svg",
     "metadata": {
       "topic": {
         "key": "timing",
         "number": 3,
         "chapter": "3",
-        "chapter_title": "趋势强度与路径稳定性",
+        "edition": "2026-10",
         "minutes": 15,
-        "edition": "2026-10"
+        "chapter_title": "趋势强度与路径稳定性"
       }
     },
     "section_ids": [
@@ -2974,15 +2974,15 @@
     "track": "专题学习",
     "series": "择时研究",
     "sort_order": 10004,
-    "cover_url": "/assets/illustrations/quant-portfolio-library-v1.webp",
+    "cover_url": "/assets/illustrations/topics/timing/moving-average-breakout.svg",
     "metadata": {
       "topic": {
         "key": "timing",
         "number": 4,
         "chapter": "4",
-        "chapter_title": "波动率目标与仓位调整",
+        "edition": "2026-10",
         "minutes": 15,
-        "edition": "2026-10"
+        "chapter_title": "波动率目标与仓位调整"
       }
     },
     "section_ids": [
@@ -2997,15 +2997,15 @@
     "track": "专题学习",
     "series": "择时研究",
     "sort_order": 10005,
-    "cover_url": "/assets/illustrations/quant-portfolio-library-v1.webp",
+    "cover_url": "/assets/illustrations/topics/timing/moving-average-breakout.svg",
     "metadata": {
       "topic": {
         "key": "timing",
         "number": 5,
         "chapter": "5",
-        "chapter_title": "市场状态的逐步过滤",
+        "edition": "2026-10",
         "minutes": 15,
-        "edition": "2026-10"
+        "chapter_title": "市场状态的逐步过滤"
       }
     },
     "section_ids": [
@@ -3020,15 +3020,15 @@
     "track": "专题学习",
     "series": "择时研究",
     "sort_order": 10006,
-    "cover_url": "/assets/illustrations/quant-portfolio-library-v1.webp",
+    "cover_url": "/assets/illustrations/topics/timing/moving-average-breakout.svg",
     "metadata": {
       "topic": {
         "key": "timing",
         "number": 6,
         "chapter": "6",
-        "chapter_title": "宏观信息的发布时间与修订",
+        "edition": "2026-10",
         "minutes": 15,
-        "edition": "2026-10"
+        "chapter_title": "宏观信息的发布时间与修订"
       }
     },
     "section_ids": [
@@ -3043,15 +3043,15 @@
     "track": "专题学习",
     "series": "择时研究",
     "sort_order": 10007,
-    "cover_url": "/assets/illustrations/quant-portfolio-library-v1.webp",
+    "cover_url": "/assets/illustrations/topics/timing/moving-average-breakout.svg",
     "metadata": {
       "topic": {
         "key": "timing",
         "number": 7,
         "chapter": "7",
-        "chapter_title": "多资产择时与组合风险",
+        "edition": "2026-10",
         "minutes": 15,
-        "edition": "2026-10"
+        "chapter_title": "多资产择时与组合风险"
       }
     },
     "section_ids": [
@@ -3066,15 +3066,15 @@
     "track": "专题学习",
     "series": "择时研究",
     "sort_order": 10008,
-    "cover_url": "/assets/illustrations/quant-portfolio-library-v1.webp",
+    "cover_url": "/assets/illustrations/topics/timing/moving-average-breakout.svg",
     "metadata": {
       "topic": {
         "key": "timing",
         "number": 8,
         "chapter": "8",
-        "chapter_title": "成交时点、成本与假突破",
+        "edition": "2026-10",
         "minutes": 15,
-        "edition": "2026-10"
+        "chapter_title": "成交时点、成本与假突破"
       }
     },
     "section_ids": [
@@ -3089,15 +3089,15 @@
     "track": "专题学习",
     "series": "择时研究",
     "sort_order": 10009,
-    "cover_url": "/assets/illustrations/quant-portfolio-library-v1.webp",
+    "cover_url": "/assets/illustrations/topics/timing/moving-average-breakout.svg",
     "metadata": {
       "topic": {
         "key": "timing",
         "number": 9,
         "chapter": "9",
-        "chapter_title": "滚动检验与不确定性",
+        "edition": "2026-10",
         "minutes": 15,
-        "edition": "2026-10"
+        "chapter_title": "滚动检验与不确定性"
       }
     },
     "section_ids": [
@@ -3112,15 +3112,15 @@
     "track": "专题学习",
     "series": "择时研究",
     "sort_order": 10010,
-    "cover_url": "/assets/illustrations/quant-portfolio-library-v1.webp",
+    "cover_url": "/assets/illustrations/topics/timing/moving-average-breakout.svg",
     "metadata": {
       "topic": {
         "key": "timing",
         "number": 10,
         "chapter": "10",
-        "chapter_title": "三只 ETF 的趋势规则复现",
+        "edition": "2026-10",
         "minutes": 25,
-        "edition": "2026-10"
+        "chapter_title": "三只 ETF 的趋势规则复现"
       }
     },
     "section_ids": [

@@ -9,7 +9,7 @@
     "sort_order": 1,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-01-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-01.svg",
         "level": "入门",
         "stage": 1,
         "number": 1,
@@ -37,7 +37,8 @@
         ],
         "stage_title": "市场与研究"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-01.svg"
   },
   {
     "id": "bf77a999-026d-5673-a412-031aa96a529a",
@@ -49,7 +50,7 @@
     "sort_order": 2,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-02-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-02.svg",
         "level": "入门",
         "stage": 1,
         "number": 2,
@@ -78,7 +79,8 @@
         ],
         "stage_title": "市场与研究"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-02.svg"
   },
   {
     "id": "3b58df3a-dab5-55b4-a352-9836534fd4fe",
@@ -90,7 +92,7 @@
     "sort_order": 3,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-03-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-03.svg",
         "level": "入门",
         "stage": 1,
         "number": 3,
@@ -111,7 +113,8 @@
         ],
         "stage_title": "市场与研究"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-03.svg"
   },
   {
     "id": "44d8a7a7-1905-521b-b308-01d828060076",
@@ -123,7 +126,7 @@
     "sort_order": 4,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-04-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-04.svg",
         "level": "入门",
         "stage": 1,
         "number": 4,
@@ -149,7 +152,8 @@
         ],
         "stage_title": "市场与研究"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-04.svg"
   },
   {
     "id": "79821632-ab2d-5168-843a-f837f6a32ae3",
@@ -161,7 +165,7 @@
     "sort_order": 5,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-05-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-05.svg",
         "level": "入门",
         "stage": 1,
         "number": 5,
@@ -189,7 +193,8 @@
         ],
         "stage_title": "市场与研究"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-05.svg"
   },
   {
     "id": "8ca90937-ec25-5ffb-ac48-a407aeddad7d",
@@ -201,7 +206,7 @@
     "sort_order": 6,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-06-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-06.svg",
         "level": "入门",
         "stage": 1,
         "number": 6,
@@ -232,7 +237,8 @@
         ],
         "stage_title": "市场与研究"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-06.svg"
   },
   {
     "id": "a1e835b0-e9e0-5483-9fa4-181fa681b099",
@@ -244,7 +250,7 @@
     "sort_order": 7,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-07-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-07.svg",
         "level": "入门",
         "stage": 2,
         "number": 7,
@@ -274,7 +280,8 @@
         ],
         "stage_title": "Python与数据"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-07.svg"
   },
   {
     "id": "ff1d3a80-45b0-53cd-8d86-b1e09f126f89",
@@ -286,7 +293,7 @@
     "sort_order": 8,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-07-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-08.svg",
         "level": "入门",
         "stage": 2,
         "number": 8,
@@ -316,7 +323,8 @@
         ],
         "stage_title": "Python与数据"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-08.svg"
   },
   {
     "id": "b835bc80-0f25-5563-96cd-e4ff3971487d",
@@ -328,7 +336,7 @@
     "sort_order": 9,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-07-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-09.svg",
         "level": "入门",
         "stage": 2,
         "number": 9,
@@ -355,7 +363,8 @@
         ],
         "stage_title": "Python与数据"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-09.svg"
   },
   {
     "id": "ae71b735-4ad5-5a1c-8766-745909819e53",
@@ -367,7 +376,7 @@
     "sort_order": 10,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-10-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-10.svg",
         "level": "入门",
         "stage": 2,
         "number": 10,
@@ -394,7 +403,8 @@
         ],
         "stage_title": "Python与数据"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-10.svg"
   },
   {
     "id": "4a046f20-d764-512c-94aa-14a796b854f7",
@@ -406,7 +416,7 @@
     "sort_order": 11,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-10-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-11.svg",
         "level": "入门",
         "stage": 2,
         "number": 11,
@@ -442,7 +452,8 @@
         ],
         "stage_title": "Python与数据"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-11.svg"
   },
   {
     "id": "2b4d4273-0270-5900-b14e-aefab04296f4",
@@ -454,7 +465,7 @@
     "sort_order": 12,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-10-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-12.svg",
         "level": "入门",
         "stage": 2,
         "number": 12,
@@ -484,7 +495,8 @@
         ],
         "stage_title": "Python与数据"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-12.svg"
   },
   {
     "id": "237fa8a0-bf2f-5e11-9c8a-d4383df630bd",
@@ -496,7 +508,7 @@
     "sort_order": 13,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-13-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-13.svg",
         "level": "基础",
         "stage": 3,
         "number": 13,
@@ -521,7 +533,8 @@
         ],
         "stage_title": "概率与统计"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-13.svg"
   },
   {
     "id": "e573e560-5fd1-5378-8901-f2a803686f22",
@@ -533,7 +546,7 @@
     "sort_order": 14,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-13-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-14.svg",
         "level": "基础",
         "stage": 3,
         "number": 14,
@@ -559,7 +572,8 @@
         ],
         "stage_title": "概率与统计"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-14.svg"
   },
   {
     "id": "bc6dd424-51d8-5950-8366-e28d6a521dfd",
@@ -571,7 +585,7 @@
     "sort_order": 15,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-13-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-15.svg",
         "level": "基础",
         "stage": 3,
         "number": 15,
@@ -598,7 +612,8 @@
         ],
         "stage_title": "概率与统计"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-15.svg"
   },
   {
     "id": "ec346cf4-47b8-5afc-bc33-aedc69939138",
@@ -610,7 +625,7 @@
     "sort_order": 16,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-13-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-16.svg",
         "level": "基础",
         "stage": 3,
         "number": 16,
@@ -640,7 +655,8 @@
         ],
         "stage_title": "概率与统计"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-16.svg"
   },
   {
     "id": "3da0cd68-07ac-5565-b36d-242351fe8630",
@@ -652,7 +668,7 @@
     "sort_order": 17,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-17-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-17.svg",
         "level": "基础",
         "stage": 3,
         "number": 17,
@@ -672,7 +688,8 @@
         ],
         "stage_title": "概率与统计"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-17.svg"
   },
   {
     "id": "f2a4811d-5543-583b-9a54-927961a0205e",
@@ -684,7 +701,7 @@
     "sort_order": 18,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-17-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-18.svg",
         "level": "基础",
         "stage": 3,
         "number": 18,
@@ -712,7 +729,8 @@
         ],
         "stage_title": "概率与统计"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-18.svg"
   },
   {
     "id": "bff8b1d6-dd3b-5493-bfa7-0af90dd52206",
@@ -724,7 +742,7 @@
     "sort_order": 19,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-19-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-19.svg",
         "level": "基础",
         "stage": 4,
         "number": 19,
@@ -757,7 +775,8 @@
         ],
         "stage_title": "策略与回测"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-19.svg"
   },
   {
     "id": "12c2360c-d927-5fc1-94f3-e3ff3093c3b5",
@@ -769,7 +788,7 @@
     "sort_order": 20,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-19-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-20.svg",
         "level": "基础",
         "stage": 4,
         "number": 20,
@@ -810,7 +829,8 @@
         ],
         "stage_title": "策略与回测"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-20.svg"
   },
   {
     "id": "dab15665-41af-5125-843c-44e3bc961be9",
@@ -822,7 +842,7 @@
     "sort_order": 21,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-19-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-21.svg",
         "level": "基础",
         "stage": 4,
         "number": 21,
@@ -852,7 +872,8 @@
         ],
         "stage_title": "策略与回测"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-21.svg"
   },
   {
     "id": "4b39aaec-38bf-5cfa-9ff5-dad73d78445e",
@@ -864,7 +885,7 @@
     "sort_order": 22,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-19-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-22.svg",
         "level": "基础",
         "stage": 4,
         "number": 22,
@@ -890,7 +911,8 @@
         ],
         "stage_title": "策略与回测"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-22.svg"
   },
   {
     "id": "9b18eb6a-ce0b-5e4c-a21f-d631e699d633",
@@ -902,7 +924,7 @@
     "sort_order": 23,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-19-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-23.svg",
         "level": "基础",
         "stage": 4,
         "number": 23,
@@ -931,7 +953,8 @@
         ],
         "stage_title": "策略与回测"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-23.svg"
   },
   {
     "id": "bb59a320-bea8-5e95-8bed-b91f651b20e8",
@@ -943,7 +966,7 @@
     "sort_order": 24,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-19-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-24.svg",
         "level": "基础",
         "stage": 4,
         "number": 24,
@@ -984,7 +1007,8 @@
         ],
         "stage_title": "策略与回测"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-24.svg"
   },
   {
     "id": "e18257bb-3716-54cc-9f36-8db039bfb88d",
@@ -996,7 +1020,7 @@
     "sort_order": 25,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-25-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-25.svg",
         "level": "进阶",
         "stage": 5,
         "number": 25,
@@ -1033,7 +1057,8 @@
         ],
         "stage_title": "因子与预测"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-25.svg"
   },
   {
     "id": "81047555-1573-51c5-a5f5-245e1ad153f5",
@@ -1045,7 +1070,7 @@
     "sort_order": 26,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-25-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-26.svg",
         "level": "进阶",
         "stage": 5,
         "number": 26,
@@ -1070,7 +1095,8 @@
         ],
         "stage_title": "因子与预测"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-26.svg"
   },
   {
     "id": "38fd9ae1-d702-56b8-a44b-23e0b0d3d8dd",
@@ -1082,7 +1108,7 @@
     "sort_order": 27,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-25-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-27.svg",
         "level": "进阶",
         "stage": 5,
         "number": 27,
@@ -1112,7 +1138,8 @@
         ],
         "stage_title": "因子与预测"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-27.svg"
   },
   {
     "id": "efa82629-1882-52a0-b5f0-fd516b02437f",
@@ -1124,7 +1151,7 @@
     "sort_order": 28,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-25-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-28.svg",
         "level": "进阶",
         "stage": 5,
         "number": 28,
@@ -1156,7 +1183,8 @@
         ],
         "stage_title": "因子与预测"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-28.svg"
   },
   {
     "id": "81071396-696a-5dc9-8192-571a62e37dd8",
@@ -1168,7 +1196,7 @@
     "sort_order": 29,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-30-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-29.svg",
         "level": "进阶",
         "stage": 5,
         "number": 29,
@@ -1201,7 +1229,8 @@
         ],
         "stage_title": "因子与预测"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-29.svg"
   },
   {
     "id": "97fbc4ce-5b58-5b72-baf1-4eb4f0c5b830",
@@ -1213,7 +1242,7 @@
     "sort_order": 30,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-30-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-30.svg",
         "level": "进阶",
         "stage": 5,
         "number": 30,
@@ -1246,7 +1275,8 @@
         ],
         "stage_title": "因子与预测"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-30.svg"
   },
   {
     "id": "89aee971-99c2-547b-8d1f-8ebefeeeca43",
@@ -1258,7 +1288,7 @@
     "sort_order": 31,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-30-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-31.svg",
         "level": "进阶",
         "stage": 6,
         "number": 31,
@@ -1293,7 +1323,8 @@
         ],
         "stage_title": "机器学习与文本"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-31.svg"
   },
   {
     "id": "65550964-5045-5251-8f46-e6fdb1ee8a98",
@@ -1305,7 +1336,7 @@
     "sort_order": 32,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-32-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-32.svg",
         "level": "进阶",
         "stage": 6,
         "number": 32,
@@ -1338,7 +1369,8 @@
         ],
         "stage_title": "机器学习与文本"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-32.svg"
   },
   {
     "id": "7ab10e25-6782-5bc7-ad39-775539177f1a",
@@ -1350,7 +1382,7 @@
     "sort_order": 33,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-32-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-33.svg",
         "level": "进阶",
         "stage": 6,
         "number": 33,
@@ -1376,7 +1408,8 @@
         ],
         "stage_title": "机器学习与文本"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-33.svg"
   },
   {
     "id": "d4f83c06-0dd3-57e7-9502-adc27474ef87",
@@ -1388,7 +1421,7 @@
     "sort_order": 34,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-32-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-34.svg",
         "level": "进阶",
         "stage": 6,
         "number": 34,
@@ -1415,7 +1448,8 @@
         ],
         "stage_title": "机器学习与文本"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-34.svg"
   },
   {
     "id": "42dd0cf1-08f8-521a-9127-60fc264e9322",
@@ -1427,7 +1461,7 @@
     "sort_order": 35,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-32-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-35.svg",
         "level": "进阶",
         "stage": 6,
         "number": 35,
@@ -1471,7 +1505,8 @@
         ],
         "stage_title": "机器学习与文本"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-35.svg"
   },
   {
     "id": "88299838-1c38-5891-867d-2c45f19fabf1",
@@ -1483,7 +1518,7 @@
     "sort_order": 36,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-32-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-36.svg",
         "level": "进阶",
         "stage": 6,
         "number": 36,
@@ -1528,7 +1563,8 @@
         ],
         "stage_title": "机器学习与文本"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-36.svg"
   },
   {
     "id": "187a0959-e828-5cfb-9b99-62d4c634b3ad",
@@ -1540,7 +1576,7 @@
     "sort_order": 37,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-05-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-37.svg",
         "level": "进阶",
         "stage": 7,
         "number": 37,
@@ -1562,7 +1598,8 @@
         ],
         "stage_title": "投资组合"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-37.svg"
   },
   {
     "id": "c4d7f105-3bf4-5140-bf3e-82b502db6ad4",
@@ -1574,7 +1611,7 @@
     "sort_order": 38,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-05-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-38.svg",
         "level": "进阶",
         "stage": 7,
         "number": 38,
@@ -1599,7 +1636,8 @@
         ],
         "stage_title": "投资组合"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-38.svg"
   },
   {
     "id": "db9a0e89-8ba3-50a3-b957-cada67896023",
@@ -1611,7 +1649,7 @@
     "sort_order": 39,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-05-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-39.svg",
         "level": "进阶",
         "stage": 7,
         "number": 39,
@@ -1632,7 +1670,8 @@
         ],
         "stage_title": "投资组合"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-39.svg"
   },
   {
     "id": "f8e9e189-08d2-5bf9-b976-abc1b5650b04",
@@ -1644,7 +1683,7 @@
     "sort_order": 40,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-05-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-40.svg",
         "level": "进阶",
         "stage": 7,
         "number": 40,
@@ -1671,7 +1710,8 @@
         ],
         "stage_title": "投资组合"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-40.svg"
   },
   {
     "id": "6fef7183-fa1f-5677-9399-443e22a36c41",
@@ -1683,7 +1723,7 @@
     "sort_order": 41,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-05-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-41.svg",
         "level": "进阶",
         "stage": 7,
         "number": 41,
@@ -1712,7 +1752,8 @@
         ],
         "stage_title": "投资组合"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-41.svg"
   },
   {
     "id": "f80ad2ab-41c7-5ad4-be82-277c2a4d8a1d",
@@ -1724,7 +1765,7 @@
     "sort_order": 42,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-05-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-42.svg",
         "level": "进阶",
         "stage": 7,
         "number": 42,
@@ -1748,7 +1789,8 @@
         ],
         "stage_title": "投资组合"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-42.svg"
   },
   {
     "id": "07349390-27cb-56f2-ae71-08c7155a7d49",
@@ -1760,7 +1802,7 @@
     "sort_order": 43,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-17-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-43.svg",
         "level": "进阶",
         "stage": 8,
         "number": 43,
@@ -1794,7 +1836,8 @@
         ],
         "stage_title": "订单簿与随机模型"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-43.svg"
   },
   {
     "id": "97001f23-12e2-5bec-a4fe-8aa30f7d7f0f",
@@ -1806,7 +1849,7 @@
     "sort_order": 44,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-17-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-44.svg",
         "level": "进阶",
         "stage": 8,
         "number": 44,
@@ -1833,7 +1876,8 @@
         ],
         "stage_title": "订单簿与随机模型"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-44.svg"
   },
   {
     "id": "8e6f594f-705f-529e-9b55-d546a1670d0d",
@@ -1845,7 +1889,7 @@
     "sort_order": 45,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-17-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-45.svg",
         "level": "进阶",
         "stage": 8,
         "number": 45,
@@ -1876,7 +1920,8 @@
         ],
         "stage_title": "订单簿与随机模型"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-45.svg"
   },
   {
     "id": "eea13418-4ca0-5528-863e-81e094d1558a",
@@ -1888,7 +1933,7 @@
     "sort_order": 46,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-03-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-46.svg",
         "level": "进阶",
         "stage": 8,
         "number": 46,
@@ -1910,7 +1955,8 @@
         ],
         "stage_title": "订单簿与随机模型"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-46.svg"
   },
   {
     "id": "b0019fe2-60ee-5006-9ee4-59fec028b7e1",
@@ -1922,7 +1968,7 @@
     "sort_order": 47,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-03-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-47.svg",
         "level": "进阶",
         "stage": 8,
         "number": 47,
@@ -1948,7 +1994,8 @@
         ],
         "stage_title": "订单簿与随机模型"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-47.svg"
   },
   {
     "id": "bd45d731-0e3c-5993-b6d4-3cb5535cf58c",
@@ -1960,7 +2007,7 @@
     "sort_order": 48,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-03-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-48.svg",
         "level": "进阶",
         "stage": 8,
         "number": 48,
@@ -1993,7 +2040,8 @@
         ],
         "stage_title": "订单簿与随机模型"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-48.svg"
   },
   {
     "id": "e2be0403-ec36-5fb4-b7a8-a6ac7cd63363",
@@ -2005,7 +2053,7 @@
     "sort_order": 49,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-17-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-49.svg",
         "level": "进阶",
         "stage": 9,
         "number": 49,
@@ -2028,7 +2076,8 @@
         ],
         "stage_title": "高频数据分析"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-49.svg"
   },
   {
     "id": "6edd7547-f11a-51a7-899f-866e2e4c1c15",
@@ -2040,7 +2089,7 @@
     "sort_order": 50,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-17-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-50.svg",
         "level": "进阶",
         "stage": 9,
         "number": 50,
@@ -2063,7 +2112,8 @@
         ],
         "stage_title": "高频数据分析"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-50.svg"
   },
   {
     "id": "db8a0687-f554-59ce-a4fc-9b7a36f30a8a",
@@ -2075,7 +2125,7 @@
     "sort_order": 51,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-17-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-51.svg",
         "level": "进阶",
         "stage": 9,
         "number": 51,
@@ -2098,7 +2148,8 @@
         ],
         "stage_title": "高频数据分析"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-51.svg"
   },
   {
     "id": "41b81729-02bc-507c-95b3-de03bc7a120e",
@@ -2110,7 +2161,7 @@
     "sort_order": 52,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-17-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-52.svg",
         "level": "进阶",
         "stage": 9,
         "number": 52,
@@ -2139,7 +2190,8 @@
         ],
         "stage_title": "高频数据分析"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-52.svg"
   },
   {
     "id": "33a4f835-6eff-532a-8b8f-780c5986d1c3",
@@ -2151,7 +2203,7 @@
     "sort_order": 53,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-17-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-53.svg",
         "level": "进阶",
         "stage": 9,
         "number": 53,
@@ -2177,7 +2229,8 @@
         ],
         "stage_title": "高频数据分析"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-53.svg"
   },
   {
     "id": "197cdde1-90eb-56ca-8dbf-465ed26a1056",
@@ -2189,7 +2242,7 @@
     "sort_order": 54,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-17-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-54.svg",
         "level": "进阶",
         "stage": 9,
         "number": 54,
@@ -2216,7 +2269,8 @@
         ],
         "stage_title": "高频数据分析"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-54.svg"
   },
   {
     "id": "8b619abd-f1eb-5d43-b522-168455ec1dfb",
@@ -2228,7 +2282,7 @@
     "sort_order": 55,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-03-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-55.svg",
         "level": "进阶",
         "stage": 10,
         "number": 55,
@@ -2254,7 +2308,8 @@
         ],
         "stage_title": "执行与做市"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-55.svg"
   },
   {
     "id": "f6ca8471-4398-5c78-ad6e-18ea385de29f",
@@ -2266,7 +2321,7 @@
     "sort_order": 56,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-03-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-56.svg",
         "level": "进阶",
         "stage": 10,
         "number": 56,
@@ -2299,7 +2354,8 @@
         ],
         "stage_title": "执行与做市"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-56.svg"
   },
   {
     "id": "46f50a2f-9165-55e5-869d-3d978499fe29",
@@ -2311,7 +2367,7 @@
     "sort_order": 57,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-03-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-57.svg",
         "level": "进阶",
         "stage": 10,
         "number": 57,
@@ -2342,7 +2398,8 @@
         ],
         "stage_title": "执行与做市"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-57.svg"
   },
   {
     "id": "dbb612fc-f8d1-5405-a870-c124b0605e5a",
@@ -2354,7 +2411,7 @@
     "sort_order": 58,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-03-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-58.svg",
         "level": "进阶",
         "stage": 10,
         "number": 58,
@@ -2379,7 +2436,8 @@
         ],
         "stage_title": "执行与做市"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-58.svg"
   },
   {
     "id": "66a57da6-89b2-510c-9eb1-c71f0ab5d3e0",
@@ -2391,7 +2449,7 @@
     "sort_order": 59,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-03-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-59.svg",
         "level": "进阶",
         "stage": 10,
         "number": 59,
@@ -2418,7 +2476,8 @@
         ],
         "stage_title": "执行与做市"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-59.svg"
   },
   {
     "id": "c5683531-8cf1-59fa-9d91-b3b8e135296e",
@@ -2430,7 +2489,7 @@
     "sort_order": 60,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-03-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-60.svg",
         "level": "进阶",
         "stage": 10,
         "number": 60,
@@ -2457,7 +2516,8 @@
         ],
         "stage_title": "执行与做市"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-60.svg"
   },
   {
     "id": "90248828-253b-5489-85a6-3724a727b023",
@@ -2469,7 +2529,7 @@
     "sort_order": 61,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-06-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-61.svg",
         "level": "进阶",
         "stage": 11,
         "number": 61,
@@ -2505,7 +2565,8 @@
         ],
         "stage_title": "研究系统与综合实践"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-61.svg"
   },
   {
     "id": "0749fe40-8e5f-56d6-99e3-2479caab89c9",
@@ -2517,7 +2578,7 @@
     "sort_order": 62,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-06-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-62.svg",
         "level": "进阶",
         "stage": 11,
         "number": 62,
@@ -2546,7 +2607,8 @@
         ],
         "stage_title": "研究系统与综合实践"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-62.svg"
   },
   {
     "id": "2ba16614-9474-5862-9cdd-8d7b600cb3fc",
@@ -2558,7 +2620,7 @@
     "sort_order": 63,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-06-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-63.svg",
         "level": "进阶",
         "stage": 11,
         "number": 63,
@@ -2579,7 +2641,8 @@
         ],
         "stage_title": "研究系统与综合实践"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-63.svg"
   },
   {
     "id": "c0c2c15b-6de9-5856-af1c-90c2eed3b0e1",
@@ -2591,7 +2654,7 @@
     "sort_order": 64,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-06-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-64.svg",
         "level": "进阶",
         "stage": 11,
         "number": 64,
@@ -2630,7 +2693,8 @@
         ],
         "stage_title": "研究系统与综合实践"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-64.svg"
   },
   {
     "id": "78427355-3eda-5a51-92ea-a7691d1e6381",
@@ -2642,7 +2706,7 @@
     "sort_order": 65,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-06-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-65.svg",
         "level": "进阶",
         "stage": 11,
         "number": 65,
@@ -2711,7 +2775,8 @@
         ],
         "stage_title": "研究系统与综合实践"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-65.svg"
   },
   {
     "id": "4334f49d-afe9-5b33-9bc5-4d1ce23de306",
@@ -2723,7 +2788,7 @@
     "sort_order": 66,
     "metadata": {
       "curriculum": {
-        "cover": "/assets/illustrations/courses/course-06-cover-v1.webp",
+        "cover": "/assets/figures/curriculum/course-66.svg",
         "level": "进阶",
         "stage": 11,
         "number": 66,
@@ -2781,6 +2846,7 @@
         ],
         "stage_title": "研究系统与综合实践"
       }
-    }
+    },
+    "cover_url": "/assets/figures/curriculum/course-66.svg"
   }
 ]

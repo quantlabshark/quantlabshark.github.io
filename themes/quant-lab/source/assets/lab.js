@@ -110,8 +110,29 @@
  window.addEventListener('foam-avatar-change',e=>authorReadAt.delete(e.detail?.userId));
  lab.authorMeta=(item,fallback='社区成员')=>{const author=authorProfiles.get(item.author_id),name=author?.name||item.author_name||fallback,published=item.published_at||item.created_at,modified=item.updated_at||published;const time=(label,value)=>'<span>'+label+' <time datetime="'+esc(value||'')+'">'+esc(lab.dateTime(value))+'</time></span>';return '<span class="author-identity">'+(item.author_id&&window.FoamAvatar?'<span class="author-avatar" aria-hidden="true">'+window.FoamAvatar.markup(window.FoamAvatar.get(item.author_id),true)+'</span>':'')+'<strong>'+esc(name)+'</strong>'+(item.author_id?'<span class="author-level" aria-label="作者等级">Lv.'+esc(author?.level??'—')+'</span>':'')+'</span>'+time('发布于',published)+time('修改于',modified);};
  lab.topicLabels={};
- lab.courseDownloads=item=>{const manifest=window.QuantDownloadManifest||{},files=new Map();for(const d of (Array.isArray(item.metadata?.downloads)?item.metadata.downloads:[])){if(!d||typeof d!=='object'||!safeURL(d.url))continue;const url=safeURL(d.url),known=new URL(url).origin===location.origin?manifest[new URL(url).pathname]:null;files.set(url,{...d,...known,url,label:String(d.label||known?.label||'下载案例')});}for(const match of String(item.body||'').matchAll(/\[([^\]]+)\]\((\/assets\/downloads\/[^\s)]+)\)/g)){const url=safeURL(match[2]),known=manifest[new URL(url).pathname];if(known&&!files.has(url))files.set(url,{...known,url,label:known.label||match[1]});}return [...files.values()].slice(0,20);};
- lab.articleBody=item=>{const host=document.createElement('div');host.innerHTML=lab.markdown(item.body);const downloads=new Set(lab.courseDownloads(item).map(d=>d.url));for(const a of host.querySelectorAll('a[href]')){if(!downloads.has(a.href))continue;const p=a.closest('p');if(p&&p.textContent.trim()===a.textContent.trim()&&p.querySelectorAll('a').length===1)p.remove();}for(const h of [...host.querySelectorAll('h2,h3')].reverse()){if(/^(配套代码|代码与附件|配套程序|示例代码|代码下载|本课代码|配套示例)$/.test(h.textContent.trim())&&(!h.nextElementSibling||/^H[23]$/.test(h.nextElementSibling.tagName)))h.remove();}return host.innerHTML;};
+ const downloadKey=value=>{const href=safeURL(value);if(!href)return '';const u=new URL(href);return [location.origin,'https://quantlabshark.github.io'].includes(u.origin)?u.pathname:u.href;};
+ lab.courseDownloads=item=>{
+  const manifest=window.QuantDownloadManifest||{},files=new Map();
+  for(const d of (Array.isArray(item.metadata?.downloads)?item.metadata.downloads:[])){if(!d||typeof d!=='object'||!safeURL(d.url))continue;const url=safeURL(d.url),key=downloadKey(url),known=manifest[key];files.set(key,{...d,...known,url,label:String(d.label||known?.label||'下载案例')});}
+  for(const match of String(item.body||'').matchAll(/\[([^\]]+)\]\(([^\s)]+)\)/g)){const url=safeURL(match[2]),key=downloadKey(url),known=manifest[key];if(known&&!files.has(key))files.set(key,{...known,url,label:known.label||match[1]});}
+  return [...files.values()].slice(0,20);
+ };
+ lab.articleBody=item=>{
+  const host=document.createElement('div');host.innerHTML=lab.markdown(item.body);
+  const downloads=new Set(lab.courseDownloads(item).map(d=>downloadKey(d.url)));
+  for(const p of host.querySelectorAll('p')){
+   const links=[...p.querySelectorAll('a[href]')].filter(a=>downloads.has(downloadKey(a.href)));if(!links.length)continue;
+   const rest=p.cloneNode(true);rest.querySelectorAll('a[href]').forEach(a=>{if(downloads.has(downloadKey(a.href)))a.remove();});
+   const text=rest.textContent.replace(/^[\s。·|｜,，;；、]+|[\s。·|｜,，;；、]+$/g,'');
+   if(!rest.querySelector('a,code,pre,img')&&(!text||/^(?:压缩包|代码包|附件)(?:中)?(?:包含|含有|提供)[^。！？\n]*[。]?$/.test(text))){p.remove();continue;}
+   // Keep other navigation links while moving the download into its attachment box.
+   if([...p.childNodes].every(n=>n.nodeType===3?/^[\s·|｜、。]*$/.test(n.textContent):n.nodeName==='A')){
+    for(const a of links){const before=a.previousSibling,after=a.nextSibling;if(before?.nodeType===3)before.textContent=before.textContent.replace(/[\s·|｜、。]+$/,'');else if(after?.nodeType===3)after.textContent=after.textContent.replace(/^[\s·|｜、。]+/,'');a.remove();}
+   }
+  }
+  for(const h of [...host.querySelectorAll('h2,h3')].reverse())if(/^(配套代码|代码与附件|配套程序|示例代码|代码下载|本课代码|配套示例|本课案例与附件)$/.test(h.textContent.trim())&&(!h.nextElementSibling||/^H[23]$/.test(h.nextElementSibling.tagName)))h.remove();
+  return host.innerHTML;
+ };
  lab.fileSize=n=>Number.isFinite(Number(n))&&Number(n)>0?(n>=1048576?(n/1048576).toFixed(1)+' MB':Math.ceil(n/1024)+' KB'):'';
  lab.downloadLink=(d,cls='')=>'<a class="'+cls+'" href="'+esc(d.url)+'" '+(new URL(d.url).origin===location.origin?'download':'target="_blank" rel="noopener noreferrer"')+'><span>↓ '+esc(d.label)+'</span><span>'+esc(lab.fileSize(d.size_bytes))+'</span></a>';
  lab.topicLinks=item=>{const D=window.FoamDirectory;if(D?.available){const nodes=(item.section_ids||[]).map(D.get).filter(n=>n&&D.isVisible(n));return nodes.length?'<nav class="lesson-topic-links" aria-label="所在目录">'+nodes.map(n=>'<a href="'+esc(D.url(n))+'">'+esc(D.path(n.id))+' →</a>').join('')+'</nav>':'';}const keys=Array.isArray(item.metadata?.topics)?item.metadata.topics:[];return keys.some(x=>lab.topicLabels[x])?'<nav class="lesson-topic-links" aria-label="相关专题">'+keys.filter(x=>lab.topicLabels[x]).map(key=>'<a href="/topics/'+key+'/">'+esc(lab.topicLabels[key])+'专题 →</a>').join('')+'</nav>':'';};

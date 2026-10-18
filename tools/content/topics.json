@@ -1,6 +1,38 @@
 [
-  {"key":"ai","section":"topic-ai","title":"人工智能在量化领域的应用","description":"从收益预测、截面排序和文本分析，学习模型训练、验证与交易应用。","cover":"/assets/illustrations/quant-strategy-laboratory-v1.webp","keywords":"正则化、树模型、深度学习、大模型、强化学习"},
-  {"key":"alpha101","section":"topic-alpha101","title":"Alpha101 全解读","description":"逐项拆解 101 个公式，连接计算步骤、信号含义、实现口径与历史检验。","cover":"/assets/illustrations/quant-market-observatory-v1.webp","keywords":"Alpha 编号、算子、量价、反转、行业中性化"},
-  {"key":"factors","section":"topic-factors","title":"股票截面因子挖掘","description":"从数据可用时间和经济假设出发，构建因子并检验其增量信息。","cover":"/assets/illustrations/quant-data-workshop-v1.webp","keywords":"截面、Rank IC、中性化、因子组合、多重检验"},
-  {"key":"timing","section":"topic-timing","title":"择时研究","description":"研究趋势、波动率和市场状态，分析仓位调整的收益、成本与回撤。","cover":"/assets/illustrations/quant-portfolio-library-v1.webp","keywords":"趋势、均线、突破、波动率、状态模型"}
+  {
+    "key": "ai",
+    "section": "topic-ai",
+    "title": "人工智能在量化领域的应用",
+    "description": "从收益预测、截面排序和文本分析，学习模型训练、验证与交易应用。",
+    "cover": "/assets/illustrations/topics/ai/topic-ai-03.svg",
+    "keywords": "正则化、树模型、深度学习、大模型、强化学习",
+    "cover_alt": "不同深度的决策树对非线性数据的拟合"
+  },
+  {
+    "key": "alpha101",
+    "section": "topic-alpha101",
+    "title": "Alpha101 全解读",
+    "description": "逐项拆解 101 个公式，连接计算步骤、信号含义、实现口径与历史检验。",
+    "cover": "/assets/illustrations/topics/alpha101/alpha-001.svg",
+    "keywords": "Alpha 编号、算子、量价、反转、行业中性化",
+    "cover_alt": "Alpha 信号分布与年度 Rank IC 检验"
+  },
+  {
+    "key": "factors",
+    "section": "topic-factors",
+    "title": "股票截面因子挖掘",
+    "description": "从数据可用时间和经济假设出发，构建因子并检验其增量信息。",
+    "cover": "/assets/figures/curriculum/course-26.svg",
+    "keywords": "截面、Rank IC、中性化、因子组合、多重检验",
+    "cover_alt": "股票因子排名、随后收益与分组比较"
+  },
+  {
+    "key": "timing",
+    "section": "topic-timing",
+    "title": "择时研究",
+    "description": "研究趋势、波动率和市场状态，分析仓位调整的收益、成本与回撤。",
+    "cover": "/assets/illustrations/topics/timing/moving-average-breakout.svg",
+    "keywords": "趋势、均线、突破、波动率、状态模型",
+    "cover_alt": "均线与价格突破信号示意图"
+  }
 ]
