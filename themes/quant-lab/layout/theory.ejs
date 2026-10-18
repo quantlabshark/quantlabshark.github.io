@@ -1,8 +1,8 @@
 <div class="page-wrap" data-theory-hub data-lab-catalog="theory" data-catalog-custom>
  <div class="eyebrow">QUANTLAB · 基础理论</div>
- <div class="page-heading"><h1>基础理论与原理</h1><p>资产定价、投资组合与市场微观结构。</p></div>
- <div class="prose section-page-intro" data-section-page-body><p>资产定价解释收益差异，统计方法检验数据证据，组合理论处理收益与风险。市场微观结构进一步研究订单如何成交、价格如何形成，以及交易成本如何影响投资结果。</p></div>
- <div class="lab-card-grid" id="theory-modules">
-  <% theory_books().forEach(book=>{ %><article class="lab-card"><div class="lab-card-body"><h2><a href="/theory/<%= book.key %>/"><%= book.title %></a></h2><p><%= book.card_description %></p><a class="button secondary" href="/theory/<%= book.key %>/">查看课程目录 →</a></div></article><% }); %>
- </div>
+ <div class="page-heading"><h1>基础理论与原理</h1><p>数学基础、资产定价、投资组合与交易机制。</p></div>
+ <div class="prose section-page-intro" data-section-page-body><p>从概率与随机过程理解价格的不确定性，通过因子模型分析收益与风险，再学习交易策略、订单执行和市场运行机制。</p></div>
+ <nav class="theory-category-nav" aria-label="书籍分类"><a href="#theory-category-mathematics">数学基础</a><a href="#theory-category-asset-pricing">资产定价与组合</a><a href="#theory-category-trading">交易建模与市场机制</a></nav>
+ <script type="application/json" id="theory-books-data"><%- theory_books_data() %></script>
+ <div id="theory-modules"><%- theory_hub() %></div>
 </div>

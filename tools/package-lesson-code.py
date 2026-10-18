@@ -66,7 +66,7 @@ python example.py
         for name,data in files.items():
             if not name.startswith('expected-files/'):(dest/name).write_text(data,'utf8')
         url=f'/assets/downloads/{folder}/{slug}.zip'
-        row['body']=re.sub(r'\n## 配套代码\n[\s\S]*$','',row['body']).rstrip()+f'\n\n## 配套代码\n\n[下载本节代码（ZIP）]({url})\n\n压缩包包含完整脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n'
+        row['body']=re.sub(r'\n## 配套代码\n[\s\S]*$','',row['body']).rstrip()+f'\n\n## 配套代码\n\n[下载本节代码（ZIP）]({url})\n\n压缩包包含脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n'
         row.setdefault('metadata',{})['code_download']={'url':url,'examples':len(blocks)}
         result={'slug':slug,'title':title,'examples':len(blocks),'dependencies':dependencies,'exit_code':run.returncode,'stdout':output,'stderr':run.stderr,'generated_files':list(generated),'url':url,'sha256':hashlib.sha256(archive.read_bytes()).hexdigest()}
         results.append(result)

@@ -1,6 +1,7 @@
 'use strict';
 (() => {
  const nav=document.querySelector('#sidebar nav');if(!nav)return;
+ try{window.QuantCourseNavigation=JSON.parse(document.getElementById('course-navigation-data')?.textContent||'[]');}catch{window.QuantCourseNavigation=[];}
  const groups=()=>[...nav.querySelectorAll('[data-nav-section]')];
  let saved={};try{saved=JSON.parse(localStorage.getItem('foamlab-nav-groups')||'{}');}catch{}
  if(!saved||typeof saved!=='object'||Array.isArray(saved))saved={};
@@ -15,7 +16,7 @@
  window.addEventListener('pagehide',()=>{try{sessionStorage.setItem('quantlab.nav-scroll',String(document.getElementById('sidebar').scrollTop));}catch{}});
  nav.addEventListener('click',e=>{const button=e.target.closest('.nav-expand');if(!button||!nav.contains(button))return;e.preventDefault();const group=button.closest('[data-nav-section]'),open=button.getAttribute('aria-expanded')!=='true';saved[group.dataset.navSection]=open;toggle(group,open);try{localStorage.setItem('foamlab-nav-groups',JSON.stringify(saved));}catch{}});
  function activate(item){
-  if(window.FoamDirectory?.available){if(item)window.FoamDirectory.breadcrumb(item);return;}
+  if(window.FoamDirectory?.available){if(item)window.FoamDirectory.breadcrumb(item);else window.FoamDirectory.nav();return;}
   const current=new URL(location.href);let winner=null;
   for(const link of document.querySelectorAll('.nav-subitem')){
    const url=new URL(link.href),specific=[...url.searchParams];
@@ -45,6 +46,7 @@
  activate(window.foamCurrentContent);
  document.addEventListener('foamlab:content-ready',e=>activate(e.detail));
  window.addEventListener('popstate',()=>activate(window.foamCurrentContent));
+ document.addEventListener('quantlab:curriculum-change',()=>activate());
  // Catalog filters update the URL without leaving the page.
  document.addEventListener('click',e=>{if(e.target.closest('[data-command-filter],[data-dictionary-filter],[data-track],[data-catalog-kind]'))queueMicrotask(()=>activate(window.foamCurrentContent));});
  // Warm only the static shell of a link the reader is about to open. These

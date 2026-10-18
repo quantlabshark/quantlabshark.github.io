@@ -2,7 +2,7 @@
 (() => {
  const L=window.QuantLab,esc=L.esc,V=window.QuantTheoryView;
  const hub=document.getElementById('theory-modules');
- if(hub)(async()=>{try{const D=await window.FoamDirectory.ready;if(!D.available)return;const root=D.nodes.find(n=>n.key==='theory');if(!root)return;const books=D.children(root.id).filter(n=>n.visible);if(books.length)hub.innerHTML=books.map(n=>`<article class="lab-card"><div class="lab-card-body"><h2><a href="${esc(D.url(n))}">${esc(n.name)}</a></h2><p>${esc(n.description)}</p><a class="button secondary" href="${esc(D.url(n))}">查看课程目录 →</a></div></article>`).join('');}catch{/* The published cards remain available. */}})();
+ if(hub)(async()=>{try{const registry=JSON.parse(document.getElementById('theory-books-data').textContent),D=await window.FoamDirectory.ready;if(!D.available)return;const root=D.nodes.find(n=>n.key==='theory');if(!root)return;const books=D.children(root.id).filter(n=>n.visible).map(n=>{const original=registry.find(b=>b.key===n.key)||{};return {...original,key:n.key,title:n.name,card_description:n.description||original.card_description};});if(books.length)hub.innerHTML=V.hub(books);}catch{/* Keep the published catalog when the service is unavailable. */}})();
  const page=document.querySelector('[data-theory-book]'),host=document.getElementById('theory-catalog');if(!page||!host)return;
  const query=document.getElementById('theory-query'),expand=document.getElementById('theory-expand');query.value=new URLSearchParams(location.search).get('q')||'';
  function updateExpand(){const groups=[...host.querySelectorAll('details:not([hidden])')],all=groups.length>0&&groups.every(c=>c.open);expand.textContent=all?'收起全部':'展开全部';expand.setAttribute('aria-expanded',String(all));}

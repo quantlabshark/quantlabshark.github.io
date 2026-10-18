@@ -1,0 +1,2094 @@
+{
+  "edition": "2026-10",
+  "books": [
+    {
+      "key": "stochastic-calculus",
+      "unit_count": 68,
+      "numbered_section_count": 104,
+      "coverage": [
+        {
+          "section": "1.1",
+          "pdf_page": 16,
+          "units": [
+            "calin-book-01-01"
+          ]
+        },
+        {
+          "section": "1.2",
+          "pdf_page": 18,
+          "units": [
+            "calin-book-01-01"
+          ]
+        },
+        {
+          "section": "1.3",
+          "pdf_page": 18,
+          "units": [
+            "calin-book-01-02"
+          ]
+        },
+        {
+          "section": "1.4",
+          "pdf_page": 18,
+          "units": [
+            "calin-book-01-02"
+          ]
+        },
+        {
+          "section": "1.5",
+          "pdf_page": 19,
+          "units": [
+            "calin-book-01-02"
+          ]
+        },
+        {
+          "section": "1.6",
+          "pdf_page": 19,
+          "units": [
+            "calin-book-01-02"
+          ]
+        },
+        {
+          "section": "1.7",
+          "pdf_page": 20,
+          "units": [
+            "calin-book-01-02"
+          ]
+        },
+        {
+          "section": "1.8",
+          "pdf_page": 21,
+          "units": [
+            "calin-book-01-03"
+          ]
+        },
+        {
+          "section": "2.1",
+          "pdf_page": 26,
+          "units": [
+            "calin-book-02-01"
+          ]
+        },
+        {
+          "section": "2.2",
+          "pdf_page": 26,
+          "units": [
+            "calin-book-02-01"
+          ]
+        },
+        {
+          "section": "2.3",
+          "pdf_page": 27,
+          "units": [
+            "calin-book-02-01"
+          ]
+        },
+        {
+          "section": "2.4",
+          "pdf_page": 28,
+          "units": [
+            "calin-book-02-01"
+          ]
+        },
+        {
+          "section": "2.5",
+          "pdf_page": 29,
+          "units": [
+            "calin-book-02-02"
+          ]
+        },
+        {
+          "section": "2.6",
+          "pdf_page": 30,
+          "units": [
+            "calin-book-02-02"
+          ]
+        },
+        {
+          "section": "2.7",
+          "pdf_page": 31,
+          "units": [
+            "calin-book-02-03"
+          ]
+        },
+        {
+          "section": "2.8",
+          "pdf_page": 32,
+          "units": [
+            "calin-book-02-03"
+          ]
+        },
+        {
+          "section": "2.9",
+          "pdf_page": 33,
+          "units": [
+            "calin-book-02-04"
+          ]
+        },
+        {
+          "section": "2.9.1",
+          "pdf_page": 35,
+          "units": [
+            "calin-book-02-04"
+          ]
+        },
+        {
+          "section": "2.9.2",
+          "pdf_page": 36,
+          "units": [
+            "calin-book-02-04"
+          ]
+        },
+        {
+          "section": "2.10",
+          "pdf_page": 36,
+          "units": [
+            "calin-book-02-05",
+            "calin-book-02-06"
+          ]
+        },
+        {
+          "section": "2.11",
+          "pdf_page": 40,
+          "units": [
+            "calin-book-02-05"
+          ]
+        },
+        {
+          "section": "2.12",
+          "pdf_page": 42,
+          "units": [
+            "calin-book-02-07",
+            "calin-book-02-08"
+          ]
+        },
+        {
+          "section": "2.13",
+          "pdf_page": 47,
+          "units": [
+            "calin-book-02-09"
+          ]
+        },
+        {
+          "section": "2.14",
+          "pdf_page": 52,
+          "units": [
+            "calin-book-02-10"
+          ]
+        },
+        {
+          "section": "2.15",
+          "pdf_page": 55,
+          "units": [
+            "calin-book-02-10"
+          ]
+        },
+        {
+          "section": "2.16",
+          "pdf_page": 56,
+          "units": [
+            "calin-book-02-11"
+          ]
+        },
+        {
+          "section": "3.1",
+          "pdf_page": 60,
+          "units": [
+            "calin-book-03-01"
+          ]
+        },
+        {
+          "section": "3.2",
+          "pdf_page": 66,
+          "units": [
+            "calin-book-03-02"
+          ]
+        },
+        {
+          "section": "3.3",
+          "pdf_page": 68,
+          "units": [
+            "calin-book-03-03"
+          ]
+        },
+        {
+          "section": "3.4",
+          "pdf_page": 72,
+          "units": [
+            "calin-book-03-03"
+          ]
+        },
+        {
+          "section": "3.5",
+          "pdf_page": 72,
+          "units": [
+            "calin-book-03-04"
+          ]
+        },
+        {
+          "section": "3.6",
+          "pdf_page": 73,
+          "units": [
+            "calin-book-03-01"
+          ]
+        },
+        {
+          "section": "3.7",
+          "pdf_page": 73,
+          "units": [
+            "calin-book-03-04"
+          ]
+        },
+        {
+          "section": "3.8",
+          "pdf_page": 76,
+          "units": [
+            "calin-book-03-05"
+          ]
+        },
+        {
+          "section": "3.9",
+          "pdf_page": 79,
+          "units": [
+            "calin-book-03-05"
+          ]
+        },
+        {
+          "section": "3.10",
+          "pdf_page": 81,
+          "units": [
+            "calin-book-03-06"
+          ]
+        },
+        {
+          "section": "3.11",
+          "pdf_page": 81,
+          "units": [
+            "calin-book-03-06"
+          ]
+        },
+        {
+          "section": "3.12",
+          "pdf_page": 84,
+          "units": [
+            "calin-book-03-07"
+          ]
+        },
+        {
+          "section": "4.1",
+          "pdf_page": 88,
+          "units": [
+            "calin-book-04-01"
+          ]
+        },
+        {
+          "section": "4.2",
+          "pdf_page": 92,
+          "units": [
+            "calin-book-04-02"
+          ]
+        },
+        {
+          "section": "4.3",
+          "pdf_page": 94,
+          "units": [
+            "calin-book-04-03"
+          ]
+        },
+        {
+          "section": "4.4",
+          "pdf_page": 99,
+          "units": [
+            "calin-book-04-04"
+          ]
+        },
+        {
+          "section": "4.5",
+          "pdf_page": 103,
+          "units": [
+            "calin-book-04-05"
+          ]
+        },
+        {
+          "section": "4.6",
+          "pdf_page": 106,
+          "units": [
+            "calin-book-04-05"
+          ]
+        },
+        {
+          "section": "4.7",
+          "pdf_page": 113,
+          "units": [
+            "calin-book-04-06"
+          ]
+        },
+        {
+          "section": "4.8",
+          "pdf_page": 119,
+          "units": [
+            "calin-book-04-07"
+          ]
+        },
+        {
+          "section": "4.9",
+          "pdf_page": 119,
+          "units": [
+            "calin-book-04-07"
+          ]
+        },
+        {
+          "section": "4.10",
+          "pdf_page": 121,
+          "units": [
+            "calin-book-04-07"
+          ]
+        },
+        {
+          "section": "4.11",
+          "pdf_page": 123,
+          "units": [
+            "calin-book-04-08"
+          ]
+        },
+        {
+          "section": "4.11.1",
+          "pdf_page": 124,
+          "units": [
+            "calin-book-04-08"
+          ]
+        },
+        {
+          "section": "4.12",
+          "pdf_page": 126,
+          "units": [
+            "calin-book-04-08"
+          ]
+        },
+        {
+          "section": "4.12.1",
+          "pdf_page": 127,
+          "units": [
+            "calin-book-04-08"
+          ]
+        },
+        {
+          "section": "5.1",
+          "pdf_page": 132,
+          "units": [
+            "calin-book-05-01"
+          ]
+        },
+        {
+          "section": "5.2",
+          "pdf_page": 133,
+          "units": [
+            "calin-book-05-01"
+          ]
+        },
+        {
+          "section": "5.3",
+          "pdf_page": 134,
+          "units": [
+            "calin-book-05-02"
+          ]
+        },
+        {
+          "section": "5.4",
+          "pdf_page": 135,
+          "units": [
+            "calin-book-05-02"
+          ]
+        },
+        {
+          "section": "5.4.1",
+          "pdf_page": 135,
+          "units": [
+            "calin-book-05-02"
+          ]
+        },
+        {
+          "section": "5.4.2",
+          "pdf_page": 136,
+          "units": [
+            "calin-book-05-02"
+          ]
+        },
+        {
+          "section": "5.5",
+          "pdf_page": 137,
+          "units": [
+            "calin-book-05-03"
+          ]
+        },
+        {
+          "section": "5.6",
+          "pdf_page": 142,
+          "units": [
+            "calin-book-05-04"
+          ]
+        },
+        {
+          "section": "5.7",
+          "pdf_page": 144,
+          "units": [
+            "calin-book-05-05"
+          ]
+        },
+        {
+          "section": "5.8",
+          "pdf_page": 145,
+          "units": [
+            "calin-book-05-05"
+          ]
+        },
+        {
+          "section": "5.9",
+          "pdf_page": 151,
+          "units": [
+            "calin-book-05-06"
+          ]
+        },
+        {
+          "section": "6.1",
+          "pdf_page": 154,
+          "units": [
+            "calin-book-06-01"
+          ]
+        },
+        {
+          "section": "6.2",
+          "pdf_page": 157,
+          "units": [
+            "calin-book-06-02"
+          ]
+        },
+        {
+          "section": "6.2.1",
+          "pdf_page": 160,
+          "units": [
+            "calin-book-06-02"
+          ]
+        },
+        {
+          "section": "6.2.2",
+          "pdf_page": 161,
+          "units": [
+            "calin-book-06-04"
+          ]
+        },
+        {
+          "section": "6.2.3",
+          "pdf_page": 162,
+          "units": [
+            "calin-book-06-03"
+          ]
+        },
+        {
+          "section": "7.1",
+          "pdf_page": 164,
+          "units": [
+            "calin-book-07-01"
+          ]
+        },
+        {
+          "section": "7.2",
+          "pdf_page": 167,
+          "units": [
+            "calin-book-07-01"
+          ]
+        },
+        {
+          "section": "7.3",
+          "pdf_page": 172,
+          "units": [
+            "calin-book-07-02"
+          ]
+        },
+        {
+          "section": "7.4",
+          "pdf_page": 178,
+          "units": [
+            "calin-book-07-03"
+          ]
+        },
+        {
+          "section": "8.1",
+          "pdf_page": 180,
+          "units": [
+            "calin-book-08-01"
+          ]
+        },
+        {
+          "section": "8.2",
+          "pdf_page": 182,
+          "units": [
+            "calin-book-08-02"
+          ]
+        },
+        {
+          "section": "8.3",
+          "pdf_page": 187,
+          "units": [
+            "calin-book-08-03"
+          ]
+        },
+        {
+          "section": "8.4",
+          "pdf_page": 190,
+          "units": [
+            "calin-book-08-03"
+          ]
+        },
+        {
+          "section": "8.5",
+          "pdf_page": 193,
+          "units": [
+            "calin-book-08-04"
+          ]
+        },
+        {
+          "section": "8.6",
+          "pdf_page": 198,
+          "units": [
+            "calin-book-08-05"
+          ]
+        },
+        {
+          "section": "8.7",
+          "pdf_page": 199,
+          "units": [
+            "calin-book-08-06"
+          ]
+        },
+        {
+          "section": "8.8",
+          "pdf_page": 202,
+          "units": [
+            "calin-book-08-06"
+          ]
+        },
+        {
+          "section": "8.9",
+          "pdf_page": 204,
+          "units": [
+            "calin-book-08-07"
+          ]
+        },
+        {
+          "section": "8.10",
+          "pdf_page": 206,
+          "units": [
+            "calin-book-08-08"
+          ]
+        },
+        {
+          "section": "9.1",
+          "pdf_page": 214,
+          "units": [
+            "calin-book-09-01"
+          ]
+        },
+        {
+          "section": "9.2",
+          "pdf_page": 215,
+          "units": [
+            "calin-book-09-01"
+          ]
+        },
+        {
+          "section": "9.3",
+          "pdf_page": 218,
+          "units": [
+            "calin-book-09-02"
+          ]
+        },
+        {
+          "section": "9.4",
+          "pdf_page": 219,
+          "units": [
+            "calin-book-09-02"
+          ]
+        },
+        {
+          "section": "9.5",
+          "pdf_page": 220,
+          "units": [
+            "calin-book-09-03"
+          ]
+        },
+        {
+          "section": "9.6",
+          "pdf_page": 221,
+          "units": [
+            "calin-book-09-04"
+          ]
+        },
+        {
+          "section": "9.7",
+          "pdf_page": 226,
+          "units": [
+            "calin-book-09-05"
+          ]
+        },
+        {
+          "section": "9.7.1",
+          "pdf_page": 226,
+          "units": [
+            "calin-book-09-05"
+          ]
+        },
+        {
+          "section": "9.7.2",
+          "pdf_page": 227,
+          "units": [
+            "calin-book-09-05"
+          ]
+        },
+        {
+          "section": "10.1",
+          "pdf_page": 230,
+          "units": [
+            "calin-book-10-01"
+          ]
+        },
+        {
+          "section": "10.2",
+          "pdf_page": 236,
+          "units": [
+            "calin-book-10-02"
+          ]
+        },
+        {
+          "section": "10.3",
+          "pdf_page": 240,
+          "units": [
+            "calin-book-10-03"
+          ]
+        },
+        {
+          "section": "10.4",
+          "pdf_page": 247,
+          "units": [
+            "calin-book-10-04"
+          ]
+        },
+        {
+          "section": "11.1",
+          "pdf_page": 256,
+          "units": [
+            "calin-book-11-01"
+          ]
+        },
+        {
+          "section": "11.2",
+          "pdf_page": 259,
+          "units": [
+            "calin-book-11-01"
+          ]
+        },
+        {
+          "section": "11.3",
+          "pdf_page": 262,
+          "units": [
+            "calin-book-11-02"
+          ]
+        },
+        {
+          "section": "11.4",
+          "pdf_page": 265,
+          "units": [
+            "calin-book-11-03"
+          ]
+        },
+        {
+          "section": "11.5",
+          "pdf_page": 270,
+          "units": [
+            "calin-book-11-04"
+          ]
+        },
+        {
+          "section": "11.6",
+          "pdf_page": 276,
+          "units": [
+            "calin-book-11-05"
+          ]
+        },
+        {
+          "section": "11.7",
+          "pdf_page": 277,
+          "units": [
+            "calin-book-11-06"
+          ]
+        },
+        {
+          "section": "11.8",
+          "pdf_page": 278,
+          "units": [
+            "calin-book-11-07"
+          ]
+        },
+        {
+          "section": "11.9",
+          "pdf_page": 280,
+          "units": [
+            "calin-book-11-08"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "quantitative-trading",
+      "unit_count": 60,
+      "numbered_section_count": 167,
+      "coverage": [
+        {
+          "section": "1.1",
+          "pdf_page": 19,
+          "units": [
+            "guo-book-01-01"
+          ]
+        },
+        {
+          "section": "1.2",
+          "pdf_page": 23,
+          "units": [
+            "guo-book-01-02"
+          ]
+        },
+        {
+          "section": "1.3",
+          "pdf_page": 24,
+          "units": [
+            "guo-book-01-02"
+          ]
+        },
+        {
+          "section": "1.4",
+          "pdf_page": 25,
+          "units": [
+            "guo-book-01-02"
+          ]
+        },
+        {
+          "section": "1.5",
+          "pdf_page": 27,
+          "units": [
+            "guo-book-01-03"
+          ]
+        },
+        {
+          "section": "1.6",
+          "pdf_page": 28,
+          "units": [
+            "guo-book-01-03"
+          ]
+        },
+        {
+          "section": "1.7",
+          "pdf_page": 30,
+          "units": [
+            "guo-book-01-01",
+            "guo-book-01-02",
+            "guo-book-02-06"
+          ]
+        },
+        {
+          "section": "2.1",
+          "pdf_page": 35,
+          "units": [
+            "guo-book-02-01"
+          ]
+        },
+        {
+          "section": "2.1.1",
+          "pdf_page": 35,
+          "units": [
+            "guo-book-02-01"
+          ]
+        },
+        {
+          "section": "2.1.2",
+          "pdf_page": 35,
+          "units": [
+            "guo-book-02-01"
+          ]
+        },
+        {
+          "section": "2.2",
+          "pdf_page": 38,
+          "units": [
+            "guo-book-02-01"
+          ]
+        },
+        {
+          "section": "2.3",
+          "pdf_page": 39,
+          "units": [
+            "guo-book-02-02"
+          ]
+        },
+        {
+          "section": "2.4",
+          "pdf_page": 40,
+          "units": [
+            "guo-book-02-02",
+            "guo-book-02-03",
+            "guo-book-02-04"
+          ]
+        },
+        {
+          "section": "2.4.1",
+          "pdf_page": 41,
+          "units": [
+            "guo-book-02-02"
+          ]
+        },
+        {
+          "section": "2.4.2",
+          "pdf_page": 41,
+          "units": [
+            "guo-book-02-03"
+          ]
+        },
+        {
+          "section": "2.4.3",
+          "pdf_page": 43,
+          "units": [
+            "guo-book-02-04"
+          ]
+        },
+        {
+          "section": "2.5",
+          "pdf_page": 43,
+          "units": [
+            "guo-book-02-04"
+          ]
+        },
+        {
+          "section": "2.5.1",
+          "pdf_page": 44,
+          "units": [
+            "guo-book-02-04"
+          ]
+        },
+        {
+          "section": "2.5.2",
+          "pdf_page": 45,
+          "units": [
+            "guo-book-02-04"
+          ]
+        },
+        {
+          "section": "2.5.3",
+          "pdf_page": 46,
+          "units": [
+            "guo-book-02-04"
+          ]
+        },
+        {
+          "section": "2.6",
+          "pdf_page": 47,
+          "units": [
+            "guo-book-02-05",
+            "guo-book-02-06"
+          ]
+        },
+        {
+          "section": "2.6.1",
+          "pdf_page": 48,
+          "units": [
+            "guo-book-02-05"
+          ]
+        },
+        {
+          "section": "2.6.2",
+          "pdf_page": 49,
+          "units": [
+            "guo-book-02-05"
+          ]
+        },
+        {
+          "section": "2.6.3",
+          "pdf_page": 52,
+          "units": [
+            "guo-book-02-06"
+          ]
+        },
+        {
+          "section": "2.7",
+          "pdf_page": 55,
+          "units": [
+            "guo-book-02-07"
+          ]
+        },
+        {
+          "section": "2.7.1",
+          "pdf_page": 55,
+          "units": [
+            "guo-book-02-07"
+          ]
+        },
+        {
+          "section": "2.7.2",
+          "pdf_page": 56,
+          "units": [
+            "guo-book-02-07"
+          ]
+        },
+        {
+          "section": "2.7.3",
+          "pdf_page": 56,
+          "units": [
+            "guo-book-02-07"
+          ]
+        },
+        {
+          "section": "2.8",
+          "pdf_page": 58,
+          "units": [
+            "guo-book-02-08",
+            "guo-book-02-09",
+            "guo-book-02-10"
+          ]
+        },
+        {
+          "section": "2.8.1",
+          "pdf_page": 59,
+          "units": [
+            "guo-book-02-08"
+          ]
+        },
+        {
+          "section": "2.8.2",
+          "pdf_page": 60,
+          "units": [
+            "guo-book-02-08"
+          ]
+        },
+        {
+          "section": "2.8.3",
+          "pdf_page": 61,
+          "units": [
+            "guo-book-02-09"
+          ]
+        },
+        {
+          "section": "2.8.4",
+          "pdf_page": 62,
+          "units": [
+            "guo-book-02-09"
+          ]
+        },
+        {
+          "section": "2.8.5",
+          "pdf_page": 62,
+          "units": [
+            "guo-book-02-10"
+          ]
+        },
+        {
+          "section": "2.9",
+          "pdf_page": 63,
+          "units": [
+            "guo-book-01-02",
+            "guo-book-01-03",
+            "guo-book-02-02",
+            "guo-book-02-03",
+            "guo-book-02-04",
+            "guo-book-02-05",
+            "guo-book-02-06",
+            "guo-book-02-07",
+            "guo-book-02-08",
+            "guo-book-02-09",
+            "guo-book-02-10"
+          ]
+        },
+        {
+          "section": "3.1",
+          "pdf_page": 76,
+          "units": [
+            "guo-book-03-01"
+          ]
+        },
+        {
+          "section": "3.1.1",
+          "pdf_page": 77,
+          "units": [
+            "guo-book-03-01"
+          ]
+        },
+        {
+          "section": "3.1.2",
+          "pdf_page": 77,
+          "units": [
+            "guo-book-03-01"
+          ]
+        },
+        {
+          "section": "3.1.3",
+          "pdf_page": 78,
+          "units": [
+            "guo-book-03-01"
+          ]
+        },
+        {
+          "section": "3.2",
+          "pdf_page": 80,
+          "units": [
+            "guo-book-03-02"
+          ]
+        },
+        {
+          "section": "3.2.1",
+          "pdf_page": 80,
+          "units": [
+            "guo-book-03-02"
+          ]
+        },
+        {
+          "section": "3.2.2",
+          "pdf_page": 81,
+          "units": [
+            "guo-book-03-02"
+          ]
+        },
+        {
+          "section": "3.3",
+          "pdf_page": 82,
+          "units": [
+            "guo-book-03-03",
+            "guo-book-03-04",
+            "guo-book-03-05"
+          ]
+        },
+        {
+          "section": "3.3.1",
+          "pdf_page": 83,
+          "units": [
+            "guo-book-03-03"
+          ]
+        },
+        {
+          "section": "3.3.2",
+          "pdf_page": 85,
+          "units": [
+            "guo-book-03-03"
+          ]
+        },
+        {
+          "section": "3.3.3",
+          "pdf_page": 86,
+          "units": [
+            "guo-book-03-04"
+          ]
+        },
+        {
+          "section": "3.3.4",
+          "pdf_page": 87,
+          "units": [
+            "guo-book-03-05"
+          ]
+        },
+        {
+          "section": "3.3.5",
+          "pdf_page": 88,
+          "units": [
+            "guo-book-03-05"
+          ]
+        },
+        {
+          "section": "3.3.6",
+          "pdf_page": 90,
+          "units": [
+            "guo-book-03-05"
+          ]
+        },
+        {
+          "section": "3.4",
+          "pdf_page": 92,
+          "units": [
+            "guo-book-03-01",
+            "guo-book-03-02",
+            "guo-book-03-03",
+            "guo-book-03-04",
+            "guo-book-03-05",
+            "guo-book-03-06",
+            "guo-book-03-07",
+            "guo-book-03-08"
+          ]
+        },
+        {
+          "section": "3.5",
+          "pdf_page": 114,
+          "units": [
+            "guo-book-03-03",
+            "guo-book-03-05",
+            "guo-book-03-07",
+            "guo-book-03-08"
+          ]
+        },
+        {
+          "section": "4.1",
+          "pdf_page": 116,
+          "units": [
+            "guo-book-04-01"
+          ]
+        },
+        {
+          "section": "4.2",
+          "pdf_page": 117,
+          "units": [
+            "guo-book-04-01"
+          ]
+        },
+        {
+          "section": "4.2.1",
+          "pdf_page": 117,
+          "units": [
+            "guo-book-04-01"
+          ]
+        },
+        {
+          "section": "4.2.2",
+          "pdf_page": 117,
+          "units": [
+            "guo-book-04-01"
+          ]
+        },
+        {
+          "section": "4.3",
+          "pdf_page": 119,
+          "units": [
+            "guo-book-04-02",
+            "guo-book-04-03",
+            "guo-book-04-04"
+          ]
+        },
+        {
+          "section": "4.3.1",
+          "pdf_page": 120,
+          "units": [
+            "guo-book-04-02"
+          ]
+        },
+        {
+          "section": "4.3.2",
+          "pdf_page": 121,
+          "units": [
+            "guo-book-04-02"
+          ]
+        },
+        {
+          "section": "4.3.3",
+          "pdf_page": 121,
+          "units": [
+            "guo-book-04-02"
+          ]
+        },
+        {
+          "section": "4.3.4",
+          "pdf_page": 122,
+          "units": [
+            "guo-book-04-03"
+          ]
+        },
+        {
+          "section": "4.3.5",
+          "pdf_page": 123,
+          "units": [
+            "guo-book-04-03"
+          ]
+        },
+        {
+          "section": "4.3.6",
+          "pdf_page": 124,
+          "units": [
+            "guo-book-04-04"
+          ]
+        },
+        {
+          "section": "4.4",
+          "pdf_page": 125,
+          "units": [
+            "guo-book-04-05",
+            "guo-book-04-06"
+          ]
+        },
+        {
+          "section": "4.4.1",
+          "pdf_page": 125,
+          "units": [
+            "guo-book-04-05"
+          ]
+        },
+        {
+          "section": "4.4.2",
+          "pdf_page": 126,
+          "units": [
+            "guo-book-04-05"
+          ]
+        },
+        {
+          "section": "4.4.3",
+          "pdf_page": 127,
+          "units": [
+            "guo-book-04-06"
+          ]
+        },
+        {
+          "section": "4.4.4",
+          "pdf_page": 128,
+          "units": [
+            "guo-book-04-06"
+          ]
+        },
+        {
+          "section": "4.5",
+          "pdf_page": 129,
+          "units": [
+            "guo-book-04-07"
+          ]
+        },
+        {
+          "section": "4.5.1",
+          "pdf_page": 130,
+          "units": [
+            "guo-book-04-07"
+          ]
+        },
+        {
+          "section": "4.5.2",
+          "pdf_page": 131,
+          "units": [
+            "guo-book-04-07"
+          ]
+        },
+        {
+          "section": "4.5.3",
+          "pdf_page": 133,
+          "units": [
+            "guo-book-04-07"
+          ]
+        },
+        {
+          "section": "4.6",
+          "pdf_page": 134,
+          "units": [
+            "guo-book-04-08",
+            "guo-book-04-09",
+            "guo-book-04-10"
+          ]
+        },
+        {
+          "section": "4.6.1",
+          "pdf_page": 135,
+          "units": [
+            "guo-book-04-08"
+          ]
+        },
+        {
+          "section": "4.6.2",
+          "pdf_page": 136,
+          "units": [
+            "guo-book-04-08"
+          ]
+        },
+        {
+          "section": "4.6.3",
+          "pdf_page": 137,
+          "units": [
+            "guo-book-04-09"
+          ]
+        },
+        {
+          "section": "4.6.4",
+          "pdf_page": 138,
+          "units": [
+            "guo-book-04-09"
+          ]
+        },
+        {
+          "section": "4.6.5",
+          "pdf_page": 139,
+          "units": [
+            "guo-book-04-09"
+          ]
+        },
+        {
+          "section": "4.6.6",
+          "pdf_page": 140,
+          "units": [
+            "guo-book-04-10"
+          ]
+        },
+        {
+          "section": "4.6.7",
+          "pdf_page": 142,
+          "units": [
+            "guo-book-04-10"
+          ]
+        },
+        {
+          "section": "4.7",
+          "pdf_page": 143,
+          "units": [
+            "guo-book-04-01",
+            "guo-book-04-02",
+            "guo-book-04-03",
+            "guo-book-04-04",
+            "guo-book-04-05",
+            "guo-book-04-06",
+            "guo-book-04-07",
+            "guo-book-04-10"
+          ]
+        },
+        {
+          "section": "4.8",
+          "pdf_page": 151,
+          "units": [
+            "guo-book-04-01",
+            "guo-book-04-02",
+            "guo-book-04-03",
+            "guo-book-04-04",
+            "guo-book-04-05",
+            "guo-book-04-06",
+            "guo-book-04-07",
+            "guo-book-04-08",
+            "guo-book-04-09",
+            "guo-book-04-10"
+          ]
+        },
+        {
+          "section": "5.1",
+          "pdf_page": 155,
+          "units": [
+            "guo-book-05-01"
+          ]
+        },
+        {
+          "section": "5.2",
+          "pdf_page": 156,
+          "units": [
+            "guo-book-05-01"
+          ]
+        },
+        {
+          "section": "5.2.1",
+          "pdf_page": 156,
+          "units": [
+            "guo-book-05-01"
+          ]
+        },
+        {
+          "section": "5.2.2",
+          "pdf_page": 158,
+          "units": [
+            "guo-book-05-01"
+          ]
+        },
+        {
+          "section": "5.3",
+          "pdf_page": 160,
+          "units": [
+            "guo-book-05-02"
+          ]
+        },
+        {
+          "section": "5.3.1",
+          "pdf_page": 161,
+          "units": [
+            "guo-book-05-02"
+          ]
+        },
+        {
+          "section": "5.3.2",
+          "pdf_page": 163,
+          "units": [
+            "guo-book-05-02"
+          ]
+        },
+        {
+          "section": "5.4",
+          "pdf_page": 167,
+          "units": [
+            "guo-book-05-03"
+          ]
+        },
+        {
+          "section": "5.5",
+          "pdf_page": 169,
+          "units": [
+            "guo-book-05-04",
+            "guo-book-05-05"
+          ]
+        },
+        {
+          "section": "5.5.1",
+          "pdf_page": 169,
+          "units": [
+            "guo-book-05-04"
+          ]
+        },
+        {
+          "section": "5.5.2",
+          "pdf_page": 172,
+          "units": [
+            "guo-book-05-05"
+          ]
+        },
+        {
+          "section": "5.5.3",
+          "pdf_page": 176,
+          "units": [
+            "guo-book-05-05"
+          ]
+        },
+        {
+          "section": "5.6",
+          "pdf_page": 179,
+          "units": [
+            "guo-book-04-01",
+            "guo-book-05-01",
+            "guo-book-05-02",
+            "guo-book-05-03",
+            "guo-book-05-04",
+            "guo-book-05-05",
+            "guo-book-05-06"
+          ]
+        },
+        {
+          "section": "6.1",
+          "pdf_page": 191,
+          "units": [
+            "guo-book-06-01",
+            "guo-book-06-02"
+          ]
+        },
+        {
+          "section": "6.1.1",
+          "pdf_page": 192,
+          "units": [
+            "guo-book-06-01"
+          ]
+        },
+        {
+          "section": "6.1.2",
+          "pdf_page": 194,
+          "units": [
+            "guo-book-06-02"
+          ]
+        },
+        {
+          "section": "6.1.3",
+          "pdf_page": 196,
+          "units": [
+            "guo-book-06-02"
+          ]
+        },
+        {
+          "section": "6.2",
+          "pdf_page": 197,
+          "units": [
+            "guo-book-06-03",
+            "guo-book-06-04"
+          ]
+        },
+        {
+          "section": "6.2.1",
+          "pdf_page": 197,
+          "units": [
+            "guo-book-06-03"
+          ]
+        },
+        {
+          "section": "6.2.2",
+          "pdf_page": 198,
+          "units": [
+            "guo-book-06-03"
+          ]
+        },
+        {
+          "section": "6.2.3",
+          "pdf_page": 200,
+          "units": [
+            "guo-book-06-03"
+          ]
+        },
+        {
+          "section": "6.2.4",
+          "pdf_page": 202,
+          "units": [
+            "guo-book-06-04"
+          ]
+        },
+        {
+          "section": "6.3",
+          "pdf_page": 202,
+          "units": [
+            "guo-book-06-04",
+            "guo-book-06-05"
+          ]
+        },
+        {
+          "section": "6.3.1",
+          "pdf_page": 205,
+          "units": [
+            "guo-book-06-04"
+          ]
+        },
+        {
+          "section": "6.3.2",
+          "pdf_page": 208,
+          "units": [
+            "guo-book-06-05"
+          ]
+        },
+        {
+          "section": "6.3.3",
+          "pdf_page": 209,
+          "units": [
+            "guo-book-06-05"
+          ]
+        },
+        {
+          "section": "6.3.4",
+          "pdf_page": 210,
+          "units": [
+            "guo-book-06-05"
+          ]
+        },
+        {
+          "section": "6.4",
+          "pdf_page": 210,
+          "units": [
+            "guo-book-06-06"
+          ]
+        },
+        {
+          "section": "6.5",
+          "pdf_page": 213,
+          "units": [
+            "guo-book-06-07"
+          ]
+        },
+        {
+          "section": "6.5.1",
+          "pdf_page": 214,
+          "units": [
+            "guo-book-06-07"
+          ]
+        },
+        {
+          "section": "6.5.2",
+          "pdf_page": 217,
+          "units": [
+            "guo-book-06-07"
+          ]
+        },
+        {
+          "section": "6.6",
+          "pdf_page": 221,
+          "units": [
+            "guo-book-06-01",
+            "guo-book-06-02",
+            "guo-book-06-03",
+            "guo-book-06-04",
+            "guo-book-06-06",
+            "guo-book-06-07"
+          ]
+        },
+        {
+          "section": "7.1",
+          "pdf_page": 228,
+          "units": [
+            "guo-book-07-01"
+          ]
+        },
+        {
+          "section": "7.2",
+          "pdf_page": 229,
+          "units": [
+            "guo-book-07-01"
+          ]
+        },
+        {
+          "section": "7.3",
+          "pdf_page": 231,
+          "units": [
+            "guo-book-07-02"
+          ]
+        },
+        {
+          "section": "7.3.1",
+          "pdf_page": 231,
+          "units": [
+            "guo-book-07-02"
+          ]
+        },
+        {
+          "section": "7.3.2",
+          "pdf_page": 232,
+          "units": [
+            "guo-book-07-02"
+          ]
+        },
+        {
+          "section": "7.4",
+          "pdf_page": 234,
+          "units": [
+            "guo-book-07-03"
+          ]
+        },
+        {
+          "section": "7.5",
+          "pdf_page": 236,
+          "units": [
+            "guo-book-07-03",
+            "guo-book-07-04"
+          ]
+        },
+        {
+          "section": "7.5.1",
+          "pdf_page": 236,
+          "units": [
+            "guo-book-07-03"
+          ]
+        },
+        {
+          "section": "7.5.2",
+          "pdf_page": 238,
+          "units": [
+            "guo-book-07-04"
+          ]
+        },
+        {
+          "section": "7.5.3",
+          "pdf_page": 238,
+          "units": [
+            "guo-book-07-04"
+          ]
+        },
+        {
+          "section": "7.6",
+          "pdf_page": 239,
+          "units": [
+            "guo-book-07-05",
+            "guo-book-07-06"
+          ]
+        },
+        {
+          "section": "7.6.1",
+          "pdf_page": 239,
+          "units": [
+            "guo-book-07-06"
+          ]
+        },
+        {
+          "section": "7.6.2",
+          "pdf_page": 240,
+          "units": [
+            "guo-book-07-05"
+          ]
+        },
+        {
+          "section": "7.6.3",
+          "pdf_page": 242,
+          "units": [
+            "guo-book-07-06"
+          ]
+        },
+        {
+          "section": "7.7",
+          "pdf_page": 243,
+          "units": [
+            "guo-book-07-07"
+          ]
+        },
+        {
+          "section": "7.7.1",
+          "pdf_page": 244,
+          "units": [
+            "guo-book-07-07"
+          ]
+        },
+        {
+          "section": "7.7.2",
+          "pdf_page": 245,
+          "units": [
+            "guo-book-07-07"
+          ]
+        },
+        {
+          "section": "7.8",
+          "pdf_page": 246,
+          "units": [
+            "guo-book-07-01",
+            "guo-book-07-02",
+            "guo-book-07-04",
+            "guo-book-07-05",
+            "guo-book-07-07"
+          ]
+        },
+        {
+          "section": "7.9",
+          "pdf_page": 253,
+          "units": [
+            "guo-book-07-01",
+            "guo-book-07-02",
+            "guo-book-07-06",
+            "guo-book-07-07"
+          ]
+        },
+        {
+          "section": "8.1",
+          "pdf_page": 256,
+          "units": [
+            "guo-book-08-01"
+          ]
+        },
+        {
+          "section": "8.2",
+          "pdf_page": 258,
+          "units": [
+            "guo-book-08-01"
+          ]
+        },
+        {
+          "section": "8.2.1",
+          "pdf_page": 260,
+          "units": [
+            "guo-book-08-01"
+          ]
+        },
+        {
+          "section": "8.2.2",
+          "pdf_page": 261,
+          "units": [
+            "guo-book-08-01"
+          ]
+        },
+        {
+          "section": "8.2.3",
+          "pdf_page": 262,
+          "units": [
+            "guo-book-08-02"
+          ]
+        },
+        {
+          "section": "8.2.4",
+          "pdf_page": 263,
+          "units": [
+            "guo-book-08-01"
+          ]
+        },
+        {
+          "section": "8.2.5",
+          "pdf_page": 264,
+          "units": [
+            "guo-book-08-01"
+          ]
+        },
+        {
+          "section": "8.2.6",
+          "pdf_page": 264,
+          "units": [
+            "guo-book-08-01"
+          ]
+        },
+        {
+          "section": "8.3",
+          "pdf_page": 265,
+          "units": [
+            "guo-book-08-02"
+          ]
+        },
+        {
+          "section": "8.3.1",
+          "pdf_page": 265,
+          "units": [
+            "guo-book-08-02"
+          ]
+        },
+        {
+          "section": "8.3.2",
+          "pdf_page": 267,
+          "units": [
+            "guo-book-08-03"
+          ]
+        },
+        {
+          "section": "8.3.3",
+          "pdf_page": 267,
+          "units": [
+            "guo-book-08-03"
+          ]
+        },
+        {
+          "section": "8.3.4",
+          "pdf_page": 268,
+          "units": [
+            "guo-book-08-03"
+          ]
+        },
+        {
+          "section": "8.4",
+          "pdf_page": 270,
+          "units": [
+            "guo-book-08-04"
+          ]
+        },
+        {
+          "section": "8.4.1",
+          "pdf_page": 270,
+          "units": [
+            "guo-book-08-04"
+          ]
+        },
+        {
+          "section": "8.4.2",
+          "pdf_page": 273,
+          "units": [
+            "guo-book-08-04"
+          ]
+        },
+        {
+          "section": "8.4.3",
+          "pdf_page": 274,
+          "units": [
+            "guo-book-08-04"
+          ]
+        },
+        {
+          "section": "8.4.4",
+          "pdf_page": 274,
+          "units": [
+            "guo-book-08-04"
+          ]
+        },
+        {
+          "section": "8.4.5",
+          "pdf_page": 274,
+          "units": [
+            "guo-book-08-04"
+          ]
+        },
+        {
+          "section": "8.5",
+          "pdf_page": 275,
+          "units": [
+            "guo-book-08-05"
+          ]
+        },
+        {
+          "section": "8.5.1",
+          "pdf_page": 275,
+          "units": [
+            "guo-book-08-05"
+          ]
+        },
+        {
+          "section": "8.5.2",
+          "pdf_page": 277,
+          "units": [
+            "guo-book-08-05"
+          ]
+        },
+        {
+          "section": "8.6",
+          "pdf_page": 278,
+          "units": [
+            "guo-book-08-01",
+            "guo-book-08-02",
+            "guo-book-08-03",
+            "guo-book-08-04",
+            "guo-book-08-05"
+          ]
+        },
+        {
+          "section": "8.7",
+          "pdf_page": 287,
+          "units": [
+            "guo-book-08-02",
+            "guo-book-08-03",
+            "guo-book-08-05"
+          ]
+        },
+        {
+          "section": "A.1",
+          "pdf_page": 292,
+          "units": [
+            "guo-book-a-01"
+          ]
+        },
+        {
+          "section": "A.2",
+          "pdf_page": 295,
+          "units": [
+            "guo-book-a-01"
+          ]
+        },
+        {
+          "section": "B.1",
+          "pdf_page": 300,
+          "units": [
+            "guo-book-b-01"
+          ]
+        },
+        {
+          "section": "B.2",
+          "pdf_page": 301,
+          "units": [
+            "guo-book-b-01"
+          ]
+        },
+        {
+          "section": "B.3",
+          "pdf_page": 301,
+          "units": [
+            "guo-book-b-01"
+          ]
+        },
+        {
+          "section": "C.1",
+          "pdf_page": 303,
+          "units": [
+            "guo-book-c-01"
+          ]
+        },
+        {
+          "section": "C.2",
+          "pdf_page": 304,
+          "units": [
+            "guo-book-c-01"
+          ]
+        },
+        {
+          "section": "C.3",
+          "pdf_page": 305,
+          "units": [
+            "guo-book-c-01"
+          ]
+        },
+        {
+          "section": "C.4",
+          "pdf_page": 308,
+          "units": [
+            "guo-book-c-01"
+          ]
+        },
+        {
+          "section": "D.1",
+          "pdf_page": 311,
+          "units": [
+            "guo-book-d-01"
+          ]
+        },
+        {
+          "section": "D.2",
+          "pdf_page": 312,
+          "units": [
+            "guo-book-d-01"
+          ]
+        }
+      ]
+    }
+  ],
+  "calin_solution_sections": {
+    "2": [
+      "calin-book-02-01",
+      "calin-book-02-02",
+      "calin-book-02-03",
+      "calin-book-02-04",
+      "calin-book-02-05",
+      "calin-book-02-06",
+      "calin-book-02-07",
+      "calin-book-02-08",
+      "calin-book-02-09",
+      "calin-book-02-10",
+      "calin-book-02-11",
+      "calin-book-12-01"
+    ],
+    "3": [
+      "calin-book-03-01",
+      "calin-book-03-02",
+      "calin-book-03-03",
+      "calin-book-03-04",
+      "calin-book-03-05",
+      "calin-book-03-06",
+      "calin-book-03-07",
+      "calin-book-12-01"
+    ],
+    "4": [
+      "calin-book-04-01",
+      "calin-book-04-02",
+      "calin-book-04-03",
+      "calin-book-04-04",
+      "calin-book-04-05",
+      "calin-book-04-06",
+      "calin-book-04-07",
+      "calin-book-04-08",
+      "calin-book-12-01"
+    ],
+    "5": [
+      "calin-book-05-01",
+      "calin-book-05-02",
+      "calin-book-05-03",
+      "calin-book-05-04",
+      "calin-book-05-05",
+      "calin-book-05-06",
+      "calin-book-12-01"
+    ],
+    "6": [
+      "calin-book-06-01",
+      "calin-book-06-02",
+      "calin-book-06-03",
+      "calin-book-06-04",
+      "calin-book-12-01"
+    ],
+    "7": [
+      "calin-book-07-01",
+      "calin-book-07-02",
+      "calin-book-07-03",
+      "calin-book-12-01"
+    ],
+    "8": [
+      "calin-book-08-01",
+      "calin-book-08-02",
+      "calin-book-08-03",
+      "calin-book-08-04",
+      "calin-book-08-05",
+      "calin-book-08-06",
+      "calin-book-08-07",
+      "calin-book-08-08",
+      "calin-book-12-01"
+    ],
+    "9": [
+      "calin-book-09-01",
+      "calin-book-09-02",
+      "calin-book-09-03",
+      "calin-book-09-04",
+      "calin-book-09-05",
+      "calin-book-12-01"
+    ],
+    "10": [
+      "calin-book-10-01",
+      "calin-book-10-02",
+      "calin-book-10-03",
+      "calin-book-10-04",
+      "calin-book-12-01"
+    ],
+    "11": [
+      "calin-book-11-01",
+      "calin-book-11-02",
+      "calin-book-11-03",
+      "calin-book-11-04",
+      "calin-book-11-05",
+      "calin-book-11-06",
+      "calin-book-11-07",
+      "calin-book-11-08",
+      "calin-book-12-01"
+    ]
+  }
+}

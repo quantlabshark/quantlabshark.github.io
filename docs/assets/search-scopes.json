@@ -295,5 +295,23 @@
     "href": "/courses/#stage-11",
     "visible": true,
     "sort_order": 161
+  },
+  {
+    "id": "17859c88-b779-5654-b120-7a4cc7b39714",
+    "key": "stochastic-calculus",
+    "name": "随机微积分及其应用",
+    "parent_id": "6c937a0e-545c-56f5-a699-90c4325073d4",
+    "href": "/theory/stochastic-calculus/",
+    "visible": true,
+    "sort_order": 25
+  },
+  {
+    "id": "19808db5-aef6-5fc5-b233-d9732a29916b",
+    "key": "quantitative-trading",
+    "name": "量化交易：算法、分析、数据、模型和优化",
+    "parent_id": "6c937a0e-545c-56f5-a699-90c4325073d4",
+    "href": "/theory/quantitative-trading/",
+    "visible": true,
+    "sort_order": 32
   }
 ]

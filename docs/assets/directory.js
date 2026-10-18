@@ -72,11 +72,16 @@
   if(!D.available)return;const nav=document.querySelector('#sidebar nav');if(!nav)return;
   const scroller=document.getElementById('sidebar'),scrollTop=scroller.scrollTop;
   const focus=nav.contains(document.activeElement)?{key:document.activeElement.closest('[data-nav-section]')?.dataset.navSection,arrow:document.activeElement.matches('.nav-expand')}:null;
-  nav.innerHTML=window.QuantNavTree.render(D.nodes,{currentId:D.current()?.id,isOpen:key=>window.FoamNavigation?.isOpen(key)===true});
+  nav.innerHTML=window.QuantNavTree.render(D.nodes,{currentId:D.current()?.id,isOpen:key=>window.FoamNavigation?.isOpen(key)===true,courseRows:window.QuantCourseNavigation||[],currentHref:location.href});
   scroller.scrollTop=scrollTop;
   if(focus?.key){const group=[...nav.querySelectorAll('[data-nav-section]')].find(g=>g.dataset.navSection===focus.key);group?.querySelector(focus.arrow?':scope > .nav-parent > .nav-expand':':scope > .nav-parent > a')?.focus({preventScroll:true});}
  };
  D.breadcrumb=item=>{
+  if(item?.metadata?.curriculum){
+   const level=window.QuantNavTree.levelOf(item.metadata.curriculum.number),name={beginner:'入门',foundation:'基础',advanced:'进阶'}[level];
+   let href='/courses/?level='+level;try{const from=new URL(sessionStorage.getItem('foamlab.returnFor:'+location.pathname+location.search)||href,location.origin);if(from.origin===location.origin&&from.pathname==='/courses/')href=from.pathname+from.search+from.hash;}catch{}
+   const link=document.querySelector('#breadcrumb-parent'),back=document.querySelector('#page-back-link');if(link){link.href=href;link.textContent='系统学习 / '+name;}if(back){back.href=href;back.textContent='← 返回'+name+'课程';}D.nav();return;
+  }
   const ids=(item?.section_ids||[]).filter(id=>D.get(id)&&D.isVisible(D.get(id)));if(!ids.length)return;
   let node=D.primary(item)||D.get(ids[0]),returnTo='';try{const from=sessionStorage.getItem('foamlab.returnFor:'+location.pathname+location.search);if(from){const url=new URL(from,location.origin),matches=D.nodes.filter(n=>{const target=new URL(D.url(n),location.origin);return url.origin===location.origin&&target.pathname===url.pathname&&[...target.searchParams].every(([k,v])=>url.searchParams.get(k)===v);}).sort((a,b)=>new URL(D.url(b),location.origin).search.length-new URL(D.url(a),location.origin).search.length),found=matches[0];if(found&&ids.some(id=>D.descendants(found.id).includes(id))){node=found;returnTo=url.pathname+url.search+url.hash;}}}catch{}
   // A directory's own page returns to its parent, or the overview at the root.
@@ -92,6 +97,8 @@
  D.ready.then(async()=>{
   D.nav();if(window.foamCurrentContent)D.breadcrumb(window.foamCurrentContent);
   if(!D.available)return;
+  const courseRoot=D.nodes.find(n=>n.key==='courses');
+  if(courseRoot)void D.content(courseRoot).then(rows=>{const courses=rows.filter(r=>r.kind==='lesson'&&r.metadata?.curriculum).sort((a,b)=>a.sort_order-b.sort_order);if(courses.length){window.QuantCourseNavigation=courses.map(r=>({slug:r.slug,title:r.title,number:r.metadata.curriculum.number}));D.nav();}}).catch(()=>{});
   // Home, quick start and functional pages can host newly placed content too.
   const current=D.current();
   if(current&&!document.querySelector('[data-lab-catalog],#live-article,.article[data-cms-slug],#cms-root')&&!location.pathname.startsWith('/admin/')){

@@ -1,0 +1,172 @@
+{
+  "generator": "Built-in image_gen",
+  "style": "Pixel-art lesson covers without text",
+  "assets": [
+    {
+      "number": 1,
+      "slug": "quant-course-01",
+      "title": "01 · 量化研究、交易规则与账户核算",
+      "file": "source-quant/assets/illustrations/courses/course-01-cover-v1.webp",
+      "prompt": "Use case: stylized-concept. Asset type: one finished landscape cover illustration for lesson 01 of QuantLab, a quantitative finance learning website. Topic: quantitative research, trading rules and account bookkeeping. Make a beautiful detailed pixel-art coastal study, a blue-gray friendly small shark studying an open ledger beside a brass balance, neatly arranged colored asset tokens and an abstract tiny chart screen; warm morning light through a window, ocean outside. Crisp intentional square pixel clusters, sophisticated 16-bit adventure-game art, sage teal, navy, pale sky and amber highlights. Wide 3:2 composition with a strong central scene, safe for center crop to 16:9. No text, letters, numbers, equations, titles, logos, watermarks, frames, panel grid or UI layout. One cohesive illustration, no panda, no photorealism, no glossy 3D. Calm scholarly visual, attractive at 350px width."
+    },
+    {
+      "number": 2,
+      "slug": "quant-course-02",
+      "title": "02 · 股票、债券与衍生品怎样产生盈亏",
+      "file": "source-quant/assets/illustrations/courses/course-02-cover-v1.webp",
+      "prompt": "Use case: stylized-concept. Asset type: one finished landscape lesson cover for QuantLab, a quantitative-finance learning site. Detailed crisp pixel art with deliberate square pixel clusters, polished 16-bit adventure-game scenery, calm scholarly coastal world. A small friendly blue-gray shark with white belly is the mascot, no pandas. Restrained teal, navy, sky blue, cream and amber, beautiful atmospheric natural light. A cohesive immersive scene, NOT a diagram, slide, UI mockup, panel grid or infographic. Wide 3:2 composition, all key subjects safe within the central area for a 16:9 crop, readable at 350px width. No text, letters, digits, equations, headlines, labels, logos, watermarks or borders; books and screens contain only abstract marks. No photorealism or glossy 3D. Topic: 股票、债券与衍生品怎样产生盈亏. Scene: A miniature harbor on a desk with three different vessels, a blossoming ownership tree, a clock beside a sealed bond scroll and a hinged payoff-shaped bridge; a shark studies the arrangement."
+    },
+    {
+      "number": 3,
+      "slug": "quant-course-03",
+      "title": "03 · 订单簿中的价格、数量与成交成本",
+      "file": "source-quant/assets/illustrations/courses/course-03-cover-v1.webp",
+      "prompt": "Use case: stylized-concept. Asset type: one finished landscape lesson cover for QuantLab, a quantitative-finance learning site. Detailed crisp pixel art with deliberate square pixel clusters, polished 16-bit adventure-game scenery, calm scholarly coastal world. A small friendly blue-gray shark with white belly is the mascot, no pandas. Restrained teal, navy, sky blue, cream and amber, beautiful atmospheric natural light. A cohesive immersive scene, NOT a diagram, slide, UI mockup, panel grid or infographic. Wide 3:2 composition, all key subjects safe within the central area for a 16:9 crop, readable at 350px width. No text, letters, digits, equations, headlines, labels, logos, watermarks or borders; books and screens contain only abstract marks. No photorealism or glossy 3D. Topic: 订单簿中的价格、数量与成交成本. Scene: Two facing harbor docks with blue and coral stacks of crates on stepped piers, boats moving between the closest docks; a shark harbourmaster studies supply and demand."
+    },
+    {
+      "number": 4,
+      "slug": "quant-course-04",
+      "title": "04 · 收益率、现金流与复利净值",
+      "file": "source-quant/assets/illustrations/courses/course-04-cover-v1.webp",
+      "prompt": "Use case: stylized-concept. Asset type: one finished landscape lesson cover for QuantLab, a quantitative-finance learning site. Detailed crisp pixel art with deliberate square pixel clusters, polished 16-bit adventure-game scenery, calm scholarly coastal world. A small friendly blue-gray shark with white belly is the mascot, no pandas. Restrained teal, navy, sky blue, cream and amber, beautiful atmospheric natural light. A cohesive immersive scene, NOT a diagram, slide, UI mockup, panel grid or infographic. Wide 3:2 composition, all key subjects safe within the central area for a 16:9 crop, readable at 350px width. No text, letters, digits, equations, headlines, labels, logos, watermarks or borders; books and screens contain only abstract marks. No photorealism or glossy 3D. Topic: 收益率、现金流与复利净值. Scene: A clear stream passing through several water wheels that progressively fill a larger reservoir, a shark observing from a stone bridge; a visual metaphor for compounding."
+    },
+    {
+      "number": 5,
+      "slug": "quant-course-05",
+      "title": "05 · 波动、回撤与分散投资各衡量什么",
+      "file": "source-quant/assets/illustrations/courses/course-05-cover-v1.webp",
+      "prompt": "Use case: stylized-concept. Asset type: one finished landscape lesson cover for QuantLab, a quantitative-finance learning site. Detailed crisp pixel art with deliberate square pixel clusters, polished 16-bit adventure-game scenery, calm scholarly coastal world. A small friendly blue-gray shark with white belly is the mascot, no pandas. Restrained teal, navy, sky blue, cream and amber, beautiful atmospheric natural light. A cohesive immersive scene, NOT a diagram, slide, UI mockup, panel grid or infographic. Wide 3:2 composition, all key subjects safe within the central area for a 16:9 crop, readable at 350px width. No text, letters, digits, equations, headlines, labels, logos, watermarks or borders; books and screens contain only abstract marks. No photorealism or glossy 3D. Topic: 波动、回撤与分散投资各衡量什么. Scene: Three small sailboats taking different wave paths around islands and reuniting near a lighthouse, a shark navigator at the helm; calm versus rough seas and diversification."
+    },
+    {
+      "number": 6,
+      "slug": "quant-course-06",
+      "title": "06 · 设计样本、验证样本与研究假说",
+      "file": "source-quant/assets/illustrations/courses/course-06-cover-v1.webp",
+      "prompt": "Use case: stylized-concept. Asset type: one finished landscape lesson cover for QuantLab, a quantitative-finance learning site. Detailed crisp pixel art with deliberate square pixel clusters, polished 16-bit adventure-game scenery, calm scholarly coastal world. A small friendly blue-gray shark with white belly is the mascot, no pandas. Restrained teal, navy, sky blue, cream and amber, beautiful atmospheric natural light. A cohesive immersive scene, NOT a diagram, slide, UI mockup, panel grid or infographic. Wide 3:2 composition, all key subjects safe within the central area for a 16:9 crop, readable at 350px width. No text, letters, digits, equations, headlines, labels, logos, watermarks or borders; books and screens contain only abstract marks. No photorealism or glossy 3D. Topic: 设计样本、验证样本与研究假说. Scene: A quiet research greenhouse with three separated garden plots at different growth stages, a shark comparing seedlings and recording observations in a blank notebook."
+    },
+    {
+      "number": 7,
+      "slug": "quant-course-07",
+      "title": "07 · 运行 Python 与保存结果",
+      "file": "source-quant/assets/illustrations/courses/course-07-cover-v1.webp",
+      "prompt": "Use case: stylized-concept. Asset type: one finished landscape lesson cover for QuantLab, a quantitative-finance learning site. Detailed crisp pixel art with deliberate square pixel clusters, polished 16-bit adventure-game scenery, calm scholarly coastal world. A small friendly blue-gray shark with white belly is the mascot, no pandas. Restrained teal, navy, sky blue, cream and amber, beautiful atmospheric natural light. A cohesive immersive scene, NOT a diagram, slide, UI mockup, panel grid or infographic. Wide 3:2 composition, all key subjects safe within the central area for a 16:9 crop, readable at 350px width. No text, letters, digits, equations, headlines, labels, logos, watermarks or borders; books and screens contain only abstract marks. No photorealism or glossy 3D. Topic: 运行 Python 与保存结果. Scene: A cozy seaside coding desk with a laptop showing only abstract colored pixel marks, a tiny shark pressing a key, a tidy output drawer and a warm lamp."
+    },
+    {
+      "number": 10,
+      "slug": "quant-course-10",
+      "title": "10 · 用 pandas 整理日期、重复记录与缺失值",
+      "file": "source-quant/assets/illustrations/courses/course-10-cover-v1.webp",
+      "prompt": "Use case: stylized-concept. Asset type: one finished landscape lesson cover for QuantLab, a quantitative-finance learning site. Detailed crisp pixel art with deliberate square pixel clusters, polished 16-bit adventure-game scenery, calm scholarly coastal world. A small friendly blue-gray shark with white belly is the mascot, no pandas. Restrained teal, navy, sky blue, cream and amber, beautiful atmospheric natural light. A cohesive immersive scene, NOT a diagram, slide, UI mockup, panel grid or infographic. Wide 3:2 composition, all key subjects safe within the central area for a 16:9 crop, readable at 350px width. No text, letters, digits, equations, headlines, labels, logos, watermarks or borders; books and screens contain only abstract marks. No photorealism or glossy 3D. Topic: 用 pandas 整理日期、重复记录与缺失值. Scene: A shark archivist sorting scattered data tiles into a neat calendar-like cabinet; missing spaces and duplicate tiles visible as physical objects, no symbols or numbers."
+    },
+    {
+      "number": 13,
+      "slug": "quant-course-13",
+      "title": "13 · 条件概率怎样表达市场信息",
+      "file": "source-quant/assets/illustrations/courses/course-13-cover-v1.webp",
+      "prompt": "Use case: stylized-concept. Asset type: one finished landscape lesson cover for QuantLab, a quantitative-finance learning site. Detailed crisp pixel art with deliberate square pixel clusters, polished 16-bit adventure-game scenery, calm scholarly coastal world. A small friendly blue-gray shark with white belly is the mascot, no pandas. Restrained teal, navy, sky blue, cream and amber, beautiful atmospheric natural light. A cohesive immersive scene, NOT a diagram, slide, UI mockup, panel grid or infographic. Wide 3:2 composition, all key subjects safe within the central area for a 16:9 crop, readable at 350px width. No text, letters, digits, equations, headlines, labels, logos, watermarks or borders; books and screens contain only abstract marks. No photorealism or glossy 3D. Topic: 条件概率怎样表达市场信息. Scene: A branching garden path through a coastal orchard, different colored shells grouped in baskets at the forks; a shark considers a fork in the path."
+    },
+    {
+      "number": 17,
+      "slug": "quant-course-17",
+      "title": "17 · 价格趋势、收益平稳性与波动聚集",
+      "file": "source-quant/assets/illustrations/courses/course-17-cover-v1.webp",
+      "prompt": "Use case: stylized-concept. Asset type: one finished landscape lesson cover for QuantLab, a quantitative-finance learning site. Detailed crisp pixel art with deliberate square pixel clusters, polished 16-bit adventure-game scenery, calm scholarly coastal world. A small friendly blue-gray shark with white belly is the mascot, no pandas. Restrained teal, navy, sky blue, cream and amber, beautiful atmospheric natural light. A cohesive immersive scene, NOT a diagram, slide, UI mockup, panel grid or infographic. Wide 3:2 composition, all key subjects safe within the central area for a 16:9 crop, readable at 350px width. No text, letters, digits, equations, headlines, labels, logos, watermarks or borders; books and screens contain only abstract marks. No photorealism or glossy 3D. Topic: 价格趋势、收益平稳性与波动聚集. Scene: A shoreline with a drifting buoy, ripples and clusters of larger waves under changing sky, a shark monitoring a tide gauge without written markings."
+    },
+    {
+      "number": 19,
+      "slug": "quant-course-19",
+      "title": "19 · 从收盘信号到下一次成交的账户路径",
+      "file": "source-quant/assets/illustrations/courses/course-19-cover-v1.webp",
+      "prompt": "Use case: stylized-concept. Asset type: one finished landscape lesson cover for QuantLab, a quantitative-finance learning site. Detailed crisp pixel art with deliberate square pixel clusters, polished 16-bit adventure-game scenery, calm scholarly coastal world. A small friendly blue-gray shark with white belly is the mascot, no pandas. Restrained teal, navy, sky blue, cream and amber, beautiful atmospheric natural light. A cohesive immersive scene, NOT a diagram, slide, UI mockup, panel grid or infographic. Wide 3:2 composition, all key subjects safe within the central area for a 16:9 crop, readable at 350px width. No text, letters, digits, equations, headlines, labels, logos, watermarks or borders; books and screens contain only abstract marks. No photorealism or glossy 3D. Topic: 从收盘信号到下一次成交的账户路径. Scene: A tiny shark guiding a parcel from a sunset signal tower to a sunrise trading dock along a winding rail; distinct evening and morning scenery."
+    },
+    {
+      "number": 25,
+      "slug": "quant-course-25",
+      "title": "25 · 因子定义与截面选股",
+      "file": "source-quant/assets/illustrations/courses/course-25-cover-v1.webp",
+      "prompt": "Use case: stylized-concept. Asset type: one finished landscape lesson cover for QuantLab, a quantitative-finance learning site. Detailed crisp pixel art with deliberate square pixel clusters, polished 16-bit adventure-game scenery, calm scholarly coastal world. A small friendly blue-gray shark with white belly is the mascot, no pandas. Restrained teal, navy, sky blue, cream and amber, beautiful atmospheric natural light. A cohesive immersive scene, NOT a diagram, slide, UI mockup, panel grid or infographic. Wide 3:2 composition, all key subjects safe within the central area for a 16:9 crop, readable at 350px width. No text, letters, digits, equations, headlines, labels, logos, watermarks or borders; books and screens contain only abstract marks. No photorealism or glossy 3D. Topic: 因子定义与截面选股. Scene: A shark botanist sorting company-like trees by different fruit colors and sizes in a seaside orchard, several labeled-free measurement instruments on a bench."
+    },
+    {
+      "number": 30,
+      "slug": "quant-course-30",
+      "title": "30 · 决策树与随机森林",
+      "file": "source-quant/assets/illustrations/courses/course-30-cover-v1.webp",
+      "prompt": "Use case: stylized-concept. Asset type: one finished landscape lesson cover for QuantLab, a quantitative-finance learning site. Detailed crisp pixel art with deliberate square pixel clusters, polished 16-bit adventure-game scenery, calm scholarly coastal world. A small friendly blue-gray shark with white belly is the mascot, no pandas. Restrained teal, navy, sky blue, cream and amber, beautiful atmospheric natural light. A cohesive immersive scene, NOT a diagram, slide, UI mockup, panel grid or infographic. Wide 3:2 composition, all key subjects safe within the central area for a 16:9 crop, readable at 350px width. No text, letters, digits, equations, headlines, labels, logos, watermarks or borders; books and screens contain only abstract marks. No photorealism or glossy 3D. Topic: 决策树与随机森林. Scene: A branching tree growing from a research desk and a small grove of varied trees behind it, a shark tending the grove; forest model visual metaphor."
+    },
+    {
+      "number": 32,
+      "slug": "quant-course-32",
+      "title": "32 · 新闻文本、分词与信息时点",
+      "file": "source-quant/assets/illustrations/courses/course-32-cover-v1.webp",
+      "prompt": "Use case: stylized-concept. Asset type: one finished landscape lesson cover for QuantLab, a quantitative-finance learning site. Detailed crisp pixel art with deliberate square pixel clusters, polished 16-bit adventure-game scenery, calm scholarly coastal world. A small friendly blue-gray shark with white belly is the mascot, no pandas. Restrained teal, navy, sky blue, cream and amber, beautiful atmospheric natural light. A cohesive immersive scene, NOT a diagram, slide, UI mockup, panel grid or infographic. Wide 3:2 composition, all key subjects safe within the central area for a 16:9 crop, readable at 350px width. No text, letters, digits, equations, headlines, labels, logos, watermarks or borders; books and screens contain only abstract marks. No photorealism or glossy 3D. Topic: 新闻文本、分词与信息时点. Scene: A shark archivist opening a stream of blank news sheets and sorting fragments into small trays, a clock and harbor window in the background."
+    }
+  ],
+  "course_covers": {
+    "quant-course-01": "/assets/illustrations/courses/course-01-cover-v1.webp",
+    "quant-course-02": "/assets/illustrations/courses/course-02-cover-v1.webp",
+    "quant-course-03": "/assets/illustrations/courses/course-03-cover-v1.webp",
+    "quant-course-04": "/assets/illustrations/courses/course-04-cover-v1.webp",
+    "quant-course-05": "/assets/illustrations/courses/course-05-cover-v1.webp",
+    "quant-course-06": "/assets/illustrations/courses/course-06-cover-v1.webp",
+    "quant-course-07": "/assets/illustrations/courses/course-07-cover-v1.webp",
+    "quant-course-08": "/assets/illustrations/courses/course-07-cover-v1.webp",
+    "quant-course-09": "/assets/illustrations/courses/course-07-cover-v1.webp",
+    "quant-course-10": "/assets/illustrations/courses/course-10-cover-v1.webp",
+    "quant-course-11": "/assets/illustrations/courses/course-10-cover-v1.webp",
+    "quant-course-12": "/assets/illustrations/courses/course-10-cover-v1.webp",
+    "quant-course-13": "/assets/illustrations/courses/course-13-cover-v1.webp",
+    "quant-course-14": "/assets/illustrations/courses/course-13-cover-v1.webp",
+    "quant-course-15": "/assets/illustrations/courses/course-13-cover-v1.webp",
+    "quant-course-16": "/assets/illustrations/courses/course-13-cover-v1.webp",
+    "quant-course-17": "/assets/illustrations/courses/course-17-cover-v1.webp",
+    "quant-course-18": "/assets/illustrations/courses/course-17-cover-v1.webp",
+    "quant-course-19": "/assets/illustrations/courses/course-19-cover-v1.webp",
+    "quant-course-20": "/assets/illustrations/courses/course-19-cover-v1.webp",
+    "quant-course-21": "/assets/illustrations/courses/course-19-cover-v1.webp",
+    "quant-course-22": "/assets/illustrations/courses/course-19-cover-v1.webp",
+    "quant-course-23": "/assets/illustrations/courses/course-19-cover-v1.webp",
+    "quant-course-24": "/assets/illustrations/courses/course-19-cover-v1.webp",
+    "quant-course-25": "/assets/illustrations/courses/course-25-cover-v1.webp",
+    "quant-course-26": "/assets/illustrations/courses/course-25-cover-v1.webp",
+    "quant-course-27": "/assets/illustrations/courses/course-25-cover-v1.webp",
+    "quant-course-28": "/assets/illustrations/courses/course-25-cover-v1.webp",
+    "quant-course-29": "/assets/illustrations/courses/course-30-cover-v1.webp",
+    "quant-course-30": "/assets/illustrations/courses/course-30-cover-v1.webp",
+    "quant-course-31": "/assets/illustrations/courses/course-30-cover-v1.webp",
+    "quant-course-32": "/assets/illustrations/courses/course-32-cover-v1.webp",
+    "quant-course-33": "/assets/illustrations/courses/course-32-cover-v1.webp",
+    "quant-course-34": "/assets/illustrations/courses/course-32-cover-v1.webp",
+    "quant-course-35": "/assets/illustrations/courses/course-32-cover-v1.webp",
+    "quant-course-36": "/assets/illustrations/courses/course-32-cover-v1.webp",
+    "quant-course-37": "/assets/illustrations/courses/course-05-cover-v1.webp",
+    "quant-course-38": "/assets/illustrations/courses/course-05-cover-v1.webp",
+    "quant-course-39": "/assets/illustrations/courses/course-05-cover-v1.webp",
+    "quant-course-40": "/assets/illustrations/courses/course-05-cover-v1.webp",
+    "quant-course-41": "/assets/illustrations/courses/course-05-cover-v1.webp",
+    "quant-course-42": "/assets/illustrations/courses/course-05-cover-v1.webp",
+    "quant-course-43": "/assets/illustrations/courses/course-17-cover-v1.webp",
+    "quant-course-44": "/assets/illustrations/courses/course-17-cover-v1.webp",
+    "quant-course-45": "/assets/illustrations/courses/course-17-cover-v1.webp",
+    "quant-course-46": "/assets/illustrations/courses/course-03-cover-v1.webp",
+    "quant-course-47": "/assets/illustrations/courses/course-03-cover-v1.webp",
+    "quant-course-48": "/assets/illustrations/courses/course-03-cover-v1.webp",
+    "quant-course-49": "/assets/illustrations/courses/course-17-cover-v1.webp",
+    "quant-course-50": "/assets/illustrations/courses/course-17-cover-v1.webp",
+    "quant-course-51": "/assets/illustrations/courses/course-17-cover-v1.webp",
+    "quant-course-52": "/assets/illustrations/courses/course-17-cover-v1.webp",
+    "quant-course-53": "/assets/illustrations/courses/course-17-cover-v1.webp",
+    "quant-course-54": "/assets/illustrations/courses/course-17-cover-v1.webp",
+    "quant-course-55": "/assets/illustrations/courses/course-03-cover-v1.webp",
+    "quant-course-56": "/assets/illustrations/courses/course-03-cover-v1.webp",
+    "quant-course-57": "/assets/illustrations/courses/course-03-cover-v1.webp",
+    "quant-course-58": "/assets/illustrations/courses/course-03-cover-v1.webp",
+    "quant-course-59": "/assets/illustrations/courses/course-03-cover-v1.webp",
+    "quant-course-60": "/assets/illustrations/courses/course-03-cover-v1.webp",
+    "quant-course-61": "/assets/illustrations/courses/course-06-cover-v1.webp",
+    "quant-course-62": "/assets/illustrations/courses/course-06-cover-v1.webp",
+    "quant-course-63": "/assets/illustrations/courses/course-06-cover-v1.webp",
+    "quant-course-64": "/assets/illustrations/courses/course-06-cover-v1.webp",
+    "quant-course-65": "/assets/illustrations/courses/course-06-cover-v1.webp",
+    "quant-course-66": "/assets/illustrations/courses/course-06-cover-v1.webp"
+  }
+}

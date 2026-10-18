@@ -5059,5 +5059,4333 @@
         "edition": "2026-10"
       }
     }
+  },
+  {
+    "id": "1ae1ea73-3850-50e4-8d2e-f50e0e7bda3e",
+    "slug": "calin-book-01-01",
+    "title": "随机增长与贴现：从变化率写出模型",
+    "summary": "用人口增长和到期现金流认识漂移、噪声、指数增长与随机贴现。",
+    "kind": "lesson",
+    "sort_order": 5001,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "1",
+        "chapter_title": "随机模型的起点",
+        "section": "1",
+        "number": 1,
+        "part": "第一部分 · 概率与随机过程",
+        "minutes": 23,
+        "source_pages": [
+          16,
+          17,
+          18
+        ],
+        "source_sections": [
+          "1.1",
+          "1.2"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "4d464652-90d0-5d87-b415-e88258141a29",
+    "slug": "calin-book-01-02",
+    "title": "从连续扰动到白噪声",
+    "summary": "通过摆动、扩散、均值回复和三维运动，区分状态、漂移与随机扰动。",
+    "kind": "lesson",
+    "sort_order": 5002,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "1",
+        "chapter_title": "随机模型的起点",
+        "section": "2",
+        "number": 2,
+        "part": "第一部分 · 概率与随机过程",
+        "minutes": 24,
+        "source_pages": [
+          18,
+          19,
+          20,
+          21
+        ],
+        "source_sections": [
+          "1.3",
+          "1.4",
+          "1.5",
+          "1.6",
+          "1.7"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "68fbf5f8-54a8-531d-8c56-2dd14ef94be4",
+    "slug": "calin-book-01-03",
+    "title": "总变差与二次变差",
+    "summary": "比较直线、折线和布朗路径，解释随机微积分为什么保留增量的平方。",
+    "kind": "lesson",
+    "sort_order": 5003,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "1",
+        "chapter_title": "随机模型的起点",
+        "section": "3",
+        "number": 3,
+        "part": "第一部分 · 概率与随机过程",
+        "minutes": 23,
+        "source_pages": [
+          21,
+          22,
+          23,
+          24
+        ],
+        "source_sections": [
+          "1.8"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "1a332241-aa4f-58ab-a991-bb12d09ed338",
+    "slug": "calin-book-02-01",
+    "title": "概率空间：结果、事件与随机变量",
+    "summary": "用连续抛硬币建立概率空间，区分一次结果、事件、信息与数值记录。",
+    "kind": "lesson",
+    "sort_order": 5004,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "2",
+        "chapter_title": "概率与条件期望",
+        "section": "1",
+        "number": 4,
+        "part": "第一部分 · 概率与随机过程",
+        "minutes": 21,
+        "source_pages": [
+          26,
+          27,
+          28,
+          29
+        ],
+        "source_sections": [
+          "2.1",
+          "2.2",
+          "2.3",
+          "2.4"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "3fd5fdd8-50b9-56ce-bf58-abd106193629",
+    "slug": "calin-book-02-02",
+    "title": "概率积分与极限交换",
+    "summary": "从加权平均构造期望，掌握单调收敛、控制收敛及其失效方式。",
+    "kind": "lesson",
+    "sort_order": 5005,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "2",
+        "chapter_title": "概率与条件期望",
+        "section": "2",
+        "number": 5,
+        "part": "第一部分 · 概率与随机过程",
+        "minutes": 23,
+        "source_pages": [
+          29,
+          30,
+          31
+        ],
+        "source_sections": [
+          "2.5",
+          "2.6"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "59b72757-4d1e-5ca5-8601-d8605aa012be",
+    "slug": "calin-book-02-03",
+    "title": "分布函数、密度与独立性",
+    "summary": "读懂分布函数的跳跃与连续部分，区分独立、零相关和联合正态。",
+    "kind": "lesson",
+    "sort_order": 5006,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "2",
+        "chapter_title": "概率与条件期望",
+        "section": "3",
+        "number": 6,
+        "part": "第一部分 · 概率与随机过程",
+        "minutes": 19,
+        "source_pages": [
+          31,
+          32,
+          33
+        ],
+        "source_sections": [
+          "2.7",
+          "2.8"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "8690440e-7889-5d2d-93bd-2af11a476e31",
+    "slug": "calin-book-02-04",
+    "title": "期望、最小二乘与概率权重",
+    "summary": "从平均误差推导均值的最优性，并用密度比理解测度变换。",
+    "kind": "lesson",
+    "sort_order": 5007,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "2",
+        "chapter_title": "概率与条件期望",
+        "section": "4",
+        "number": 7,
+        "part": "第一部分 · 概率与随机过程",
+        "minutes": 21,
+        "source_pages": [
+          33,
+          34,
+          35,
+          36
+        ],
+        "source_sections": [
+          "2.9",
+          "2.9.1",
+          "2.9.2"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "6d800d5f-a665-51dd-8a4a-245838d43ca4",
+    "slug": "calin-book-02-05",
+    "title": "正态、对数正态与 Gamma 分布",
+    "summary": "从加性误差、乘性变化和等待时间认识正态、对数正态、Gamma 与卡方分布。",
+    "kind": "lesson",
+    "sort_order": 5008,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "2",
+        "chapter_title": "概率与条件期望",
+        "section": "5",
+        "number": 8,
+        "part": "第一部分 · 概率与随机过程",
+        "minutes": 25,
+        "source_pages": [
+          36,
+          37,
+          38,
+          40,
+          41
+        ],
+        "source_sections": [
+          "2.10",
+          "2.11"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "f909d8b0-cff4-5bd3-a2d8-363e7d47aeb8",
+    "slug": "calin-book-02-06",
+    "title": "比例、计数与首达时间分布",
+    "summary": "理解 Beta、Poisson、逆 Gamma 与逆高斯分布的取值范围、参数和矩。",
+    "kind": "lesson",
+    "sort_order": 5009,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "2",
+        "chapter_title": "概率与条件期望",
+        "section": "6",
+        "number": 9,
+        "part": "第一部分 · 概率与随机过程",
+        "minutes": 26,
+        "source_pages": [
+          38,
+          39,
+          40
+        ],
+        "source_sections": [
+          "2.10"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "3f40a509-dcdc-5d58-89e7-38f0febfa271",
+    "slug": "calin-book-02-07",
+    "title": "条件期望：根据已知信息更新平均值",
+    "summary": "从分组平均建立条件期望，再用正交分解解释最佳平方误差预测。",
+    "kind": "lesson",
+    "sort_order": 5010,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "2",
+        "chapter_title": "概率与条件期望",
+        "section": "7",
+        "number": 10,
+        "part": "第一部分 · 概率与随机过程",
+        "minutes": 20,
+        "source_pages": [
+          42,
+          43,
+          44,
+          45,
+          46
+        ],
+        "source_sections": [
+          "2.12"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "62436037-e7d8-5b0e-8bff-721d852da2ce",
+    "slug": "calin-book-02-08",
+    "title": "条件期望的计算规则与方差分解",
+    "summary": "用塔式法则、提取已知量和条件 Jensen 不等式组织多阶段计算。",
+    "kind": "lesson",
+    "sort_order": 5011,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "2",
+        "chapter_title": "概率与条件期望",
+        "section": "8",
+        "number": 11,
+        "part": "第一部分 · 概率与随机过程",
+        "minutes": 24,
+        "source_pages": [
+          42,
+          43,
+          44,
+          45,
+          46
+        ],
+        "source_sections": [
+          "2.12"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "1051ab0b-95d6-5114-97e8-fb45cde5e3eb",
+    "slug": "calin-book-02-09",
+    "title": "概率不等式：从矩估计尾部风险",
+    "summary": "推导 Jensen、Cauchy–Schwarz、Markov、Chebyshev 与 Chernoff 界，并解释适用差别。",
+    "kind": "lesson",
+    "sort_order": 5012,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "2",
+        "chapter_title": "概率与条件期望",
+        "section": "9",
+        "number": 12,
+        "part": "第一部分 · 概率与随机过程",
+        "minutes": 24,
+        "source_pages": [
+          47,
+          48,
+          49,
+          50,
+          51,
+          52
+        ],
+        "source_sections": [
+          "2.13"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "1d077a3d-3844-5c06-9d85-2af3bc37d107",
+    "slug": "calin-book-02-10",
+    "title": "随机变量的四种收敛",
+    "summary": "区分几乎必然、均方、概率与分布收敛，并检查均方极限中的乘积和条件期望。",
+    "kind": "lesson",
+    "sort_order": 5013,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "2",
+        "chapter_title": "概率与条件期望",
+        "section": "10",
+        "number": 13,
+        "part": "第一部分 · 概率与随机过程",
+        "minutes": 23,
+        "source_pages": [
+          52,
+          53,
+          54,
+          55,
+          56
+        ],
+        "source_sections": [
+          "2.14",
+          "2.15"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "b190d0ce-319c-5305-819b-a484e7d6dc27",
+    "slug": "calin-book-02-11",
+    "title": "随机过程、信息流与鞅",
+    "summary": "把一串随机变量看成随时间发展的系统，建立适应性、独立增量和鞅的条件预测观点。",
+    "kind": "lesson",
+    "sort_order": 5014,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "2",
+        "chapter_title": "概率与条件期望",
+        "section": "11",
+        "number": 14,
+        "part": "第一部分 · 概率与随机过程",
+        "minutes": 23,
+        "source_pages": [
+          56,
+          57,
+          58,
+          59
+        ],
+        "source_sections": [
+          "2.16"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "b9464a10-5526-5c9e-9516-63d18b0df2d9",
+    "slug": "calin-book-03-01",
+    "title": "布朗运动与带漂移的连续波动",
+    "summary": "从独立正态增量建立布朗运动，计算协方差、条件矩与时间缩放。",
+    "kind": "lesson",
+    "sort_order": 5015,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "3",
+        "chapter_title": "常用随机过程",
+        "section": "1",
+        "number": 15,
+        "part": "第一部分 · 概率与随机过程",
+        "minutes": 20,
+        "source_pages": [
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          73
+        ],
+        "source_sections": [
+          "3.1",
+          "3.6"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "78c4c8c4-489a-529e-afb6-b97ddfc29124",
+    "slug": "calin-book-03-02",
+    "title": "几何布朗运动：乘性波动与均值修正",
+    "summary": "推导对数正态矩、条件预测和指数鞅，比较平均路径与中位数路径。",
+    "kind": "lesson",
+    "sort_order": 5016,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "3",
+        "chapter_title": "常用随机过程",
+        "section": "2",
+        "number": 16,
+        "part": "第一部分 · 概率与随机过程",
+        "minutes": 22,
+        "source_pages": [
+          66,
+          67,
+          68
+        ],
+        "source_sections": [
+          "3.2"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "6cea5c42-e7f7-523f-bae9-fc94e414f211",
+    "slug": "calin-book-03-03",
+    "title": "积分布朗运动与累计随机影响",
+    "summary": "计算布朗路径的时间积分及其指数，理解协方差、条件预测和积累效应。",
+    "kind": "lesson",
+    "sort_order": 5017,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "3",
+        "chapter_title": "常用随机过程",
+        "section": "3",
+        "number": 17,
+        "part": "第一部分 · 概率与随机过程",
+        "minutes": 21,
+        "source_pages": [
+          68,
+          69,
+          70,
+          71,
+          72
+        ],
+        "source_sections": [
+          "3.3",
+          "3.4"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "427531af-4698-5803-84f6-13d588e17d21",
+    "slug": "calin-book-03-04",
+    "title": "布朗桥与 Bessel 过程",
+    "summary": "认识固定终点的高斯路径和多维布朗运动的距离，推导协方差与径向分布。",
+    "kind": "lesson",
+    "sort_order": 5018,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "3",
+        "chapter_title": "常用随机过程",
+        "section": "4",
+        "number": 18,
+        "part": "第一部分 · 概率与随机过程",
+        "minutes": 21,
+        "source_pages": [
+          72,
+          73,
+          74,
+          75
+        ],
+        "source_sections": [
+          "3.5",
+          "3.7"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "c7ed8205-38bc-57b8-8a94-403be4b42e6a",
+    "slug": "calin-book-03-05",
+    "title": "Poisson 过程与相邻事件的等待时间",
+    "summary": "由事件计数建立 Poisson 过程，推导独立增量、补偿鞅和指数间隔。",
+    "kind": "lesson",
+    "sort_order": 5019,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "3",
+        "chapter_title": "常用随机过程",
+        "section": "5",
+        "number": 19,
+        "part": "第一部分 · 概率与随机过程",
+        "minutes": 21,
+        "source_pages": [
+          76,
+          77,
+          78,
+          79,
+          80
+        ],
+        "source_sections": [
+          "3.8",
+          "3.9"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "b72402c4-fee2-5871-b239-6879ccf119fb",
+    "slug": "calin-book-03-06",
+    "title": "第 n 次到达与累计计数",
+    "summary": "利用 Gamma 分布和均匀次序统计量计算等待时间、累计工作量及其条件分布。",
+    "kind": "lesson",
+    "sort_order": 5020,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "3",
+        "chapter_title": "常用随机过程",
+        "section": "6",
+        "number": 20,
+        "part": "第一部分 · 概率与随机过程",
+        "minutes": 22,
+        "source_pages": [
+          81,
+          82,
+          83,
+          84
+        ],
+        "source_sections": [
+          "3.10",
+          "3.11"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "9d9e23f8-3cdc-51c3-a206-a1a21454890b",
+    "slug": "calin-book-03-07",
+    "title": "下鞅、最大值不等式与长期平均",
+    "summary": "认识条件均值向上的过程，利用 Doob 不等式控制整段路径的最大波动。",
+    "kind": "lesson",
+    "sort_order": 5021,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "3",
+        "chapter_title": "常用随机过程",
+        "section": "7",
+        "number": 21,
+        "part": "第一部分 · 概率与随机过程",
+        "minutes": 19,
+        "source_pages": [
+          84,
+          85,
+          86,
+          87
+        ],
+        "source_sections": [
+          "3.12"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "0d9c50d0-ebea-5371-991f-f4abd0130343",
+    "slug": "calin-book-04-01",
+    "title": "停止时间：何时可以根据当前信息作出决定",
+    "summary": "用首次越界与未来最大值区分停止规则，建立停止信息和离散近似。",
+    "kind": "lesson",
+    "sort_order": 5022,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "4",
+        "chapter_title": "停止时间与路径性质",
+        "section": "1",
+        "number": 22,
+        "part": "第二部分 · 路径性质与随机微积分",
+        "minutes": 22,
+        "source_pages": [
+          88,
+          89,
+          90,
+          91,
+          92
+        ],
+        "source_sections": [
+          "4.1"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "c898f175-7dd5-51ca-9228-5b4d6935c185",
+    "slug": "calin-book-04-02",
+    "title": "停止鞅：条件、退出概率与平均等待",
+    "summary": "理解有界停止和一致可积的作用，用停止布朗运动计算双边退出问题。",
+    "kind": "lesson",
+    "sort_order": 5023,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "4",
+        "chapter_title": "停止时间与路径性质",
+        "section": "2",
+        "number": 23,
+        "part": "第二部分 · 路径性质与随机微积分",
+        "minutes": 19,
+        "source_pages": [
+          92,
+          93,
+          94
+        ],
+        "source_sections": [
+          "4.2"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "1bb4b59f-78f0-58c2-ae22-b2fb80da55fd",
+    "slug": "calin-book-04-03",
+    "title": "首次到达与反射原理",
+    "summary": "推导布朗运动最大值和单边首达时间分布，解释几乎必到但平均等待无穷。",
+    "kind": "lesson",
+    "sort_order": 5024,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "4",
+        "chapter_title": "停止时间与路径性质",
+        "section": "3",
+        "number": 24,
+        "part": "第二部分 · 路径性质与随机微积分",
+        "minutes": 20,
+        "source_pages": [
+          94,
+          95,
+          96,
+          97,
+          98,
+          99
+        ],
+        "source_sections": [
+          "4.3"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "1b12664f-591e-5b6f-9194-8f05a0759782",
+    "slug": "calin-book-04-04",
+    "title": "反正弦律：随机路径为何常偏向两端",
+    "summary": "比较正区间占用时间、最后零点和最大值时刻，理解相同分布与不同路径统计量。",
+    "kind": "lesson",
+    "sort_order": 5025,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "4",
+        "chapter_title": "停止时间与路径性质",
+        "section": "4",
+        "number": 25,
+        "part": "第二部分 · 路径性质与随机微积分",
+        "minutes": 18,
+        "source_pages": [
+          99,
+          100,
+          101,
+          102
+        ],
+        "source_sections": [
+          "4.4"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "846ca77b-8da7-5155-bf46-a82cf72aa610",
+    "slug": "calin-book-04-05",
+    "title": "带漂移的首达时间与 Laplace 变换",
+    "summary": "用指数鞅和边值方程计算单边、双边首达概率及时间矩，处理未到达与跳跃超调。",
+    "kind": "lesson",
+    "sort_order": 5026,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "4",
+        "chapter_title": "停止时间与路径性质",
+        "section": "5",
+        "number": 26,
+        "part": "第二部分 · 路径性质与随机微积分",
+        "minutes": 25,
+        "source_pages": [
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113
+        ],
+        "source_sections": [
+          "4.5",
+          "4.6"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "e044ebcd-dfed-5216-b3bb-1c7a85c34f31",
+    "slug": "calin-book-04-06",
+    "title": "最大值变换：Lévy 与 Pitman 定理",
+    "summary": "从终点和历史最大值的联合密度，理解反射布朗运动与三维 Bessel 过程。",
+    "kind": "lesson",
+    "sort_order": 5027,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "4",
+        "chapter_title": "停止时间与路径性质",
+        "section": "6",
+        "number": 27,
+        "part": "第二部分 · 路径性质与随机微积分",
+        "minutes": 19,
+        "source_pages": [
+          113,
+          114,
+          115,
+          116,
+          117,
+          118
+        ],
+        "source_sections": [
+          "4.7"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "a1b530dc-2aab-54aa-b9a7-f5097314ecea",
+    "slug": "calin-book-04-07",
+    "title": "长期极限与鞅收敛",
+    "summary": "比较均方、路径和均值极限，用指数鞅解释一致可积为何必要。",
+    "kind": "lesson",
+    "sort_order": 5028,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "4",
+        "chapter_title": "停止时间与路径性质",
+        "section": "7",
+        "number": 28,
+        "part": "第二部分 · 路径性质与随机微积分",
+        "minutes": 21,
+        "source_pages": [
+          119,
+          120,
+          121,
+          122
+        ],
+        "source_sections": [
+          "4.8",
+          "4.9",
+          "4.10"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "eb01dfe0-e91f-54b1-be0b-0b8edfe0f2f6",
+    "slug": "calin-book-04-08",
+    "title": "二次变差、总变差与跳跃补偿",
+    "summary": "严格计算布朗与补偿 Poisson 的平方增量和，区分路径二次变差和可预测括号。",
+    "kind": "lesson",
+    "sort_order": 5029,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "4",
+        "chapter_title": "停止时间与路径性质",
+        "section": "8",
+        "number": 29,
+        "part": "第二部分 · 路径性质与随机微积分",
+        "minutes": 20,
+        "source_pages": [
+          123,
+          124,
+          125,
+          126,
+          127,
+          128,
+          129,
+          130,
+          131
+        ],
+        "source_sections": [
+          "4.11",
+          "4.11.1",
+          "4.12",
+          "4.12.1"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "f3f66e53-3fc8-5bff-bc6d-ab5b26377d2c",
+    "slug": "calin-book-05-01",
+    "title": "随机积分中的信息顺序与增量尺度",
+    "summary": "解释为何用左端点信息加权噪声，以及布朗增量的二阶、四阶矩如何决定积分规则。",
+    "kind": "lesson",
+    "sort_order": 5030,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "5",
+        "chapter_title": "随机积分",
+        "section": "1",
+        "number": 30,
+        "part": "第二部分 · 路径性质与随机微积分",
+        "minutes": 20,
+        "source_pages": [
+          132,
+          133
+        ],
+        "source_sections": [
+          "5.1",
+          "5.2"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "f7357535-b149-580e-987c-9a8551d542ae",
+    "slug": "calin-book-05-02",
+    "title": "伊藤积分的构造与两个基本例子",
+    "summary": "由简单可预测过程的均方极限定义积分，计算常数积分和布朗运动自身的积分。",
+    "kind": "lesson",
+    "sort_order": 5031,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "5",
+        "chapter_title": "随机积分",
+        "section": "2",
+        "number": 31,
+        "part": "第二部分 · 路径性质与随机微积分",
+        "minutes": 20,
+        "source_pages": [
+          134,
+          135,
+          136,
+          137
+        ],
+        "source_sections": [
+          "5.3",
+          "5.4",
+          "5.4.1",
+          "5.4.2"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "7ee3239c-58a5-5aa4-9197-306fd0b2e545",
+    "slug": "calin-book-05-03",
+    "title": "伊藤等距、鞅性质与连续版本",
+    "summary": "证明随机积分的均值、协方差和条件预测性质，区分零条件均值与独立增量。",
+    "kind": "lesson",
+    "sort_order": 5032,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "5",
+        "chapter_title": "随机积分",
+        "section": "3",
+        "number": 32,
+        "part": "第二部分 · 路径性质与随机微积分",
+        "minutes": 21,
+        "source_pages": [
+          137,
+          138,
+          139,
+          140,
+          141,
+          142
+        ],
+        "source_sections": [
+          "5.5"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "56764b84-1a20-5c69-9cbd-8ac8e0c87660",
+    "slug": "calin-book-05-04",
+    "title": "Wiener 积分：确定性权重下的高斯变量",
+    "summary": "计算核函数积分的正态分布、协方差和奇异性，识别仅方差相同的非布朗过程。",
+    "kind": "lesson",
+    "sort_order": 5033,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "5",
+        "chapter_title": "随机积分",
+        "section": "4",
+        "number": 33,
+        "part": "第二部分 · 路径性质与随机微积分",
+        "minutes": 20,
+        "source_pages": [
+          142,
+          143,
+          144
+        ],
+        "source_sections": [
+          "5.6"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "c7ec6345-3289-57c2-9161-9bd2418d4a7e",
+    "slug": "calin-book-05-05",
+    "title": "Poisson 随机积分与跳跃前的权重",
+    "summary": "将积分写成事件时刻求和，推导补偿等距、计数积分和跳跃乘积公式。",
+    "kind": "lesson",
+    "sort_order": 5034,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "5",
+        "chapter_title": "随机积分",
+        "section": "5",
+        "number": 34,
+        "part": "第二部分 · 路径性质与随机微积分",
+        "minutes": 22,
+        "source_pages": [
+          144,
+          145,
+          146,
+          147,
+          148,
+          149,
+          150
+        ],
+        "source_sections": [
+          "5.7",
+          "5.8"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "55f90001-ef33-5e4e-87a8-9b154385928c",
+    "slug": "calin-book-05-06",
+    "title": "Poisson 积分的分布与随机支付模型",
+    "summary": "用条件计数和均匀事件时刻推导复合 Poisson 分布，计算累计支付并处理零点概率与超调。",
+    "kind": "lesson",
+    "sort_order": 5035,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "5",
+        "chapter_title": "随机积分",
+        "section": "6",
+        "number": 35,
+        "part": "第二部分 · 路径性质与随机微积分",
+        "minutes": 27,
+        "source_pages": [
+          151,
+          152,
+          153
+        ],
+        "source_sections": [
+          "5.9"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "18d49709-0498-5265-a4ed-3812341010ff",
+    "slug": "calin-book-06-01",
+    "title": "随机微分与乘积法则",
+    "summary": "从增量乘积解释二次变差，并计算乘积、商和时间平均。",
+    "kind": "lesson",
+    "sort_order": 5036,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "6",
+        "chapter_title": "随机微分",
+        "section": "1",
+        "number": 36,
+        "part": "第二部分 · 路径性质与随机微积分",
+        "minutes": 23,
+        "source_pages": [
+          154,
+          155,
+          156,
+          157
+        ],
+        "source_sections": [
+          "6.1"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "79a21d92-2862-5a74-808b-aa2185e369ca",
+    "slug": "calin-book-06-02",
+    "title": "伊藤公式与扩散过程",
+    "summary": "把二阶泰勒展开转化为随机链式法则，区分漂移和扩散的作用。",
+    "kind": "lesson",
+    "sort_order": 5037,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "6",
+        "chapter_title": "随机微分",
+        "section": "2",
+        "number": 37,
+        "part": "第二部分 · 路径性质与随机微积分",
+        "minutes": 17,
+        "source_pages": [
+          157,
+          158,
+          159,
+          160
+        ],
+        "source_sections": [
+          "6.2",
+          "6.2.1"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "d4aaec4d-6608-5465-88f2-534fb097cc92",
+    "slug": "calin-book-06-03",
+    "title": "多维伊藤公式与相关噪声",
+    "summary": "用协方差矩阵组织交叉项，计算二维半径和调和函数。",
+    "kind": "lesson",
+    "sort_order": 5038,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "6",
+        "chapter_title": "随机微分",
+        "section": "3",
+        "number": 38,
+        "part": "第二部分 · 路径性质与随机微积分",
+        "minutes": 17,
+        "source_pages": [
+          162,
+          163,
+          314
+        ],
+        "source_sections": [
+          "6.2.3"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "a061595e-1c18-5d10-8947-a5d92d6b7a25",
+    "slug": "calin-book-06-04",
+    "title": "泊松跳跃的链式法则",
+    "summary": "通过一次跳跃的函数变化量推导公式，区分跳前值和跳后值。",
+    "kind": "lesson",
+    "sort_order": 5039,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "6",
+        "chapter_title": "随机微分",
+        "section": "4",
+        "number": 39,
+        "part": "第二部分 · 路径性质与随机微积分",
+        "minutes": 18,
+        "source_pages": [
+          161,
+          162,
+          313
+        ],
+        "source_sections": [
+          "6.2.2"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "a5a9dbb6-e1f9-51a1-810e-42285bc0c03a",
+    "slug": "calin-book-07-01",
+    "title": "随机积分的原函数与分部积分",
+    "summary": "从微分恒等式识别随机积分，解释端点项与时间积分。",
+    "kind": "lesson",
+    "sort_order": 5040,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "7",
+        "chapter_title": "随机积分的计算",
+        "section": "1",
+        "number": 40,
+        "part": "第二部分 · 路径性质与随机微积分",
+        "minutes": 22,
+        "source_pages": [
+          164,
+          165,
+          166,
+          167,
+          168,
+          169,
+          170,
+          171,
+          172
+        ],
+        "source_sections": [
+          "7.1",
+          "7.2"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "16883487-05d9-54b9-b62e-7662b07822ac",
+    "slug": "calin-book-07-02",
+    "title": "热方程与随机积分",
+    "summary": "用后向热方程消去漂移，并区分时间方向和剩余时间。",
+    "kind": "lesson",
+    "sort_order": 5041,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "7",
+        "chapter_title": "随机积分的计算",
+        "section": "2",
+        "number": 41,
+        "part": "第二部分 · 路径性质与随机微积分",
+        "minutes": 24,
+        "source_pages": [
+          172,
+          173,
+          174,
+          175,
+          176,
+          177
+        ],
+        "source_sections": [
+          "7.3"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "15f915bd-03c7-5c89-8a14-a4acfc0aad58",
+    "slug": "calin-book-07-03",
+    "title": "常用随机积分与计算方法选择",
+    "summary": "按多项式、指数、三角函数和路径积分分类建立计算清单。",
+    "kind": "lesson",
+    "sort_order": 5042,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "7",
+        "chapter_title": "随机积分的计算",
+        "section": "3",
+        "number": 42,
+        "part": "第二部分 · 路径性质与随机微积分",
+        "minutes": 18,
+        "source_pages": [
+          178,
+          179,
+          314,
+          315
+        ],
+        "source_sections": [
+          "7.4"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "75b25d55-8100-5281-baf7-64e4e2e24352",
+    "slug": "calin-book-08-01",
+    "title": "随机微分方程的解与数值路径",
+    "summary": "用积分形式定义强解，并建立漂移、噪声和初值之间的关系。",
+    "kind": "lesson",
+    "sort_order": 5043,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "8",
+        "chapter_title": "随机微分方程",
+        "section": "1",
+        "number": 43,
+        "part": "第三部分 · 随机方程与测度变换",
+        "minutes": 16,
+        "source_pages": [
+          180,
+          181,
+          182
+        ],
+        "source_sections": [
+          "8.1"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "89b3a852-5a62-517a-ac40-0d41ecb46341",
+    "slug": "calin-book-08-02",
+    "title": "直接积分与状态变换",
+    "summary": "计算加性随机方程，区分确定系数和随机系数下的分布。",
+    "kind": "lesson",
+    "sort_order": 5044,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "8",
+        "chapter_title": "随机微分方程",
+        "section": "2",
+        "number": 44,
+        "part": "第三部分 · 随机方程与测度变换",
+        "minutes": 17,
+        "source_pages": [
+          182,
+          183,
+          184,
+          185,
+          186,
+          187
+        ],
+        "source_sections": [
+          "8.2"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "5efacf45-abe8-5dd0-b4e3-0a430cd9f9ba",
+    "slug": "calin-book-08-03",
+    "title": "恰当随机方程与观察法",
+    "summary": "判断状态表达式是否存在，并通过匹配导数确定积分常数。",
+    "kind": "lesson",
+    "sort_order": 5045,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "8",
+        "chapter_title": "随机微分方程",
+        "section": "3",
+        "number": 45,
+        "part": "第三部分 · 随机方程与测度变换",
+        "minutes": 16,
+        "source_pages": [
+          187,
+          188,
+          189,
+          190,
+          191,
+          192
+        ],
+        "source_sections": [
+          "8.3",
+          "8.4"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "84d1d87c-c5d8-5bc4-9344-df81aeb61977",
+    "slug": "calin-book-08-04",
+    "title": "线性方程、均值回复与布朗桥",
+    "summary": "用确定积分因子求解线性扩散，并解释稳态方差和终点约束。",
+    "kind": "lesson",
+    "sort_order": 5046,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "8",
+        "chapter_title": "随机微分方程",
+        "section": "4",
+        "number": 46,
+        "part": "第三部分 · 随机方程与测度变换",
+        "minutes": 22,
+        "source_pages": [
+          193,
+          194,
+          195,
+          196,
+          197,
+          198
+        ],
+        "source_sections": [
+          "8.5"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "e734e9de-2937-593c-a156-c9553a3853c2",
+    "slug": "calin-book-08-05",
+    "title": "泊松驱动的随机方程",
+    "summary": "计算跳跃冲击的衰减累积，区分计数噪声与补偿噪声。",
+    "kind": "lesson",
+    "sort_order": 5047,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "8",
+        "chapter_title": "随机微分方程",
+        "section": "5",
+        "number": 47,
+        "part": "第三部分 · 随机方程与测度变换",
+        "minutes": 22,
+        "source_pages": [
+          198,
+          199
+        ],
+        "source_sections": [
+          "8.6"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "38581358-2153-56c9-bebf-0701aa8e494b",
+    "slug": "calin-book-08-06",
+    "title": "随机积分因子与参数变易",
+    "summary": "求解乘性噪声方程，解释交叉变差造成的额外漂移。",
+    "kind": "lesson",
+    "sort_order": 5048,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "8",
+        "chapter_title": "随机微分方程",
+        "section": "6",
+        "number": 48,
+        "part": "第三部分 · 随机方程与测度变换",
+        "minutes": 21,
+        "source_pages": [
+          199,
+          200,
+          201,
+          202,
+          203
+        ],
+        "source_sections": [
+          "8.7",
+          "8.8"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "648b2555-4e8b-5497-acb0-7c6777810af6",
+    "slug": "calin-book-08-07",
+    "title": "解的存在、唯一性与边界",
+    "summary": "理解 Lipschitz 条件的作用，并区分局部解、爆炸和平方根扩散。",
+    "kind": "lesson",
+    "sort_order": 5049,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "8",
+        "chapter_title": "随机微分方程",
+        "section": "7",
+        "number": 49,
+        "part": "第三部分 · 随机方程与测度变换",
+        "minutes": 16,
+        "source_pages": [
+          204,
+          205
+        ],
+        "source_sections": [
+          "8.9"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "b81953ad-f126-554c-9856-d94f3dc2658a",
+    "slug": "calin-book-08-08",
+    "title": "均值、方差与高阶矩方程",
+    "summary": "由伊藤公式推导矩方程，识别非线性模型中的矩不封闭。",
+    "kind": "lesson",
+    "sort_order": 5050,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "8",
+        "chapter_title": "随机微分方程",
+        "section": "8",
+        "number": 50,
+        "part": "第三部分 · 随机方程与测度变换",
+        "minutes": 23,
+        "source_pages": [
+          206,
+          207,
+          208,
+          209,
+          210,
+          211,
+          212
+        ],
+        "source_sections": [
+          "8.10"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "e583282b-aaf3-5fea-925f-b8a26e1531aa",
+    "slug": "calin-book-09-01",
+    "title": "方向导数与扩散生成元",
+    "summary": "从短时平均变化率理解生成元，并计算相关和退化扩散。",
+    "kind": "lesson",
+    "sort_order": 5051,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "9",
+        "chapter_title": "扩散过程与偏微分方程",
+        "section": "1",
+        "number": 51,
+        "part": "第三部分 · 随机方程与测度变换",
+        "minutes": 19,
+        "source_pages": [
+          214,
+          215,
+          216,
+          217
+        ],
+        "source_sections": [
+          "9.1",
+          "9.2"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "ee97cf2f-2209-5e43-b593-47fe9676f873",
+    "slug": "calin-book-09-02",
+    "title": "Dynkin 公式与后向方程",
+    "summary": "把随机微分的平均结果写成积分恒等式，再推导条件期望的演化。",
+    "kind": "lesson",
+    "sort_order": 5052,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "9",
+        "chapter_title": "扩散过程与偏微分方程",
+        "section": "2",
+        "number": 52,
+        "part": "第三部分 · 随机方程与测度变换",
+        "minutes": 16,
+        "source_pages": [
+          218,
+          219,
+          220
+        ],
+        "source_sections": [
+          "9.3",
+          "9.4"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "9dae15d3-80f4-5af9-8c13-2446b6dadf37",
+    "slug": "calin-book-09-03",
+    "title": "退出概率与平均退出时间",
+    "summary": "用边界值问题计算先到哪一端以及需要多久。",
+    "kind": "lesson",
+    "sort_order": 5053,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "9",
+        "chapter_title": "扩散过程与偏微分方程",
+        "section": "3",
+        "number": 53,
+        "part": "第三部分 · 随机方程与测度变换",
+        "minutes": 21,
+        "source_pages": [
+          220,
+          221,
+          319
+        ],
+        "source_sections": [
+          "9.5"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "fd824f3f-1d07-5d0d-a76d-ae57b58cec50",
+    "slug": "calin-book-09-04",
+    "title": "布朗运动的再返与暂留",
+    "summary": "通过球壳命中概率理解维数如何改变长期访问行为。",
+    "kind": "lesson",
+    "sort_order": 5054,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "9",
+        "chapter_title": "扩散过程与偏微分方程",
+        "section": "4",
+        "number": 54,
+        "part": "第三部分 · 随机方程与测度变换",
+        "minutes": 20,
+        "source_pages": [
+          221,
+          222,
+          223,
+          224,
+          225,
+          226
+        ],
+        "source_sections": [
+          "9.6"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "3d27e5ef-d3cd-5f2e-b457-4aee2a443d40",
+    "slug": "calin-book-09-05",
+    "title": "特征线与 Feynman–Kac 表示",
+    "summary": "把输运和扩散方程转为沿路径累积的期望。",
+    "kind": "lesson",
+    "sort_order": 5055,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "9",
+        "chapter_title": "扩散过程与偏微分方程",
+        "section": "5",
+        "number": 55,
+        "part": "第三部分 · 随机方程与测度变换",
+        "minutes": 22,
+        "source_pages": [
+          226,
+          227,
+          228,
+          319
+        ],
+        "source_sections": [
+          "9.7",
+          "9.7.1",
+          "9.7.2"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "c9353088-4b7c-534f-b29f-6441c05af6b7",
+    "slug": "calin-book-10-01",
+    "title": "指数鞅与漂移补偿",
+    "summary": "从零条件均值的积分构造鞅，并理解指数归一化和可积条件。",
+    "kind": "lesson",
+    "sort_order": 5056,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "10",
+        "chapter_title": "鞅、时间变换与测度变换",
+        "section": "1",
+        "number": 56,
+        "part": "第三部分 · 随机方程与测度变换",
+        "minutes": 22,
+        "source_pages": [
+          230,
+          231,
+          232,
+          233,
+          234,
+          235,
+          236
+        ],
+        "source_sections": [
+          "10.1"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "225dcfa1-7d81-57be-921a-5b43e03cbb51",
+    "slug": "calin-book-10-02",
+    "title": "如何识别布朗运动",
+    "summary": "通过连续性、鞅性质与二次变差识别新噪声，构造 Bessel 过程。",
+    "kind": "lesson",
+    "sort_order": 5057,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "10",
+        "chapter_title": "鞅、时间变换与测度变换",
+        "section": "2",
+        "number": 57,
+        "part": "第三部分 · 随机方程与测度变换",
+        "minutes": 16,
+        "source_pages": [
+          236,
+          237,
+          238,
+          239,
+          240
+        ],
+        "source_sections": [
+          "10.2"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "066d71a6-1a05-5d12-a86d-632b24e88d57",
+    "slug": "calin-book-10-03",
+    "title": "随机时钟与鞅的时间变换",
+    "summary": "用二次变差校准时间，并分析 OU、布朗桥和指数变换。",
+    "kind": "lesson",
+    "sort_order": 5058,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "10",
+        "chapter_title": "鞅、时间变换与测度变换",
+        "section": "3",
+        "number": 58,
+        "part": "第三部分 · 随机方程与测度变换",
+        "minutes": 22,
+        "source_pages": [
+          240,
+          241,
+          242,
+          243,
+          244,
+          245,
+          246
+        ],
+        "source_sections": [
+          "10.3"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "7168312f-341e-5342-925a-590f3587a071",
+    "slug": "calin-book-10-04",
+    "title": "Girsanov 定理与漂移变换",
+    "summary": "用指数密度改变路径权重，推导新测度下的布朗运动和漂移。",
+    "kind": "lesson",
+    "sort_order": 5059,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "10",
+        "chapter_title": "鞅、时间变换与测度变换",
+        "section": "4",
+        "number": 59,
+        "part": "第三部分 · 随机方程与测度变换",
+        "minutes": 24,
+        "source_pages": [
+          247,
+          248,
+          249,
+          250,
+          251,
+          252,
+          253,
+          254
+        ],
+        "source_sections": [
+          "10.4"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "87af852e-5978-5f92-a2ec-9cd65c8503fb",
+    "slug": "calin-book-11-01",
+    "title": "白噪声、速度与随机位移",
+    "summary": "从时间平均定义白噪声，再求均值回复速度和位置的分布。",
+    "kind": "lesson",
+    "sort_order": 5060,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "11",
+        "chapter_title": "随机模型的应用",
+        "section": "1",
+        "number": 60,
+        "part": "第四部分 · 应用与练习",
+        "minutes": 23,
+        "source_pages": [
+          256,
+          257,
+          258,
+          259,
+          260,
+          261,
+          262
+        ],
+        "source_sections": [
+          "11.1",
+          "11.2"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "c4411cc5-9595-57cf-94cf-97777567f8c9",
+    "slug": "calin-book-11-02",
+    "title": "衰变计数与连续测量模型",
+    "summary": "区分随机存活数量、纯死亡过程和叠加测量波动的连续状态。",
+    "kind": "lesson",
+    "sort_order": 5061,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "11",
+        "chapter_title": "随机模型的应用",
+        "section": "2",
+        "number": 61,
+        "part": "第四部分 · 应用与练习",
+        "minutes": 22,
+        "source_pages": [
+          262,
+          263,
+          264,
+          265,
+          322
+        ],
+        "source_sections": [
+          "11.3"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "575c4afc-4542-5099-a49d-fd445959f5de",
+    "slug": "calin-book-11-03",
+    "title": "随机摆与线性振动",
+    "summary": "把二阶振动方程写成状态系统，计算协方差和能量输入。",
+    "kind": "lesson",
+    "sort_order": 5062,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "11",
+        "chapter_title": "随机模型的应用",
+        "section": "3",
+        "number": 62,
+        "part": "第四部分 · 应用与练习",
+        "minutes": 23,
+        "source_pages": [
+          265,
+          266,
+          267,
+          268,
+          269
+        ],
+        "source_sections": [
+          "11.4"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "a05f3ce5-da14-5251-812e-b9cca8609f25",
+    "slug": "calin-book-11-04",
+    "title": "随机增长、容量限制与灾变",
+    "summary": "比较乘性扩散、逻辑斯谛增长、泊松灾变和持续收获。",
+    "kind": "lesson",
+    "sort_order": 5063,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "11",
+        "chapter_title": "随机模型的应用",
+        "section": "4",
+        "number": 63,
+        "part": "第四部分 · 应用与练习",
+        "minutes": 24,
+        "source_pages": [
+          270,
+          271,
+          272,
+          273,
+          274,
+          275,
+          276
+        ],
+        "source_sections": [
+          "11.5"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "24b947a5-ef52-51ea-a113-af18dfe5e074",
+    "slug": "calin-book-11-05",
+    "title": "随机利率与零息支付",
+    "summary": "从贴现因子的条件期望出发，计算高斯累计利率下的债券价格。",
+    "kind": "lesson",
+    "sort_order": 5064,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "11",
+        "chapter_title": "随机模型的应用",
+        "section": "5",
+        "number": 64,
+        "part": "第四部分 · 应用与练习",
+        "minutes": 23,
+        "source_pages": [
+          276,
+          277
+        ],
+        "source_sections": [
+          "11.6"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "0067c586-7a74-5b53-81dd-8a333caba5af",
+    "slug": "calin-book-11-06",
+    "title": "胆固醇水平的随机模型",
+    "summary": "用线性反馈模型分析浓度均值、波动和超过阈值的概率。",
+    "kind": "lesson",
+    "sort_order": 5065,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "11",
+        "chapter_title": "随机模型的应用",
+        "section": "6",
+        "number": 65,
+        "part": "第四部分 · 应用与练习",
+        "minutes": 23,
+        "source_pages": [
+          277,
+          278,
+          322
+        ],
+        "source_sections": [
+          "11.7"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "c5d4e38f-59bf-5ed8-a5f4-d3a8f3c9a49a",
+    "slug": "calin-book-11-07",
+    "title": "光子散射与扩散逃逸时间",
+    "summary": "从随机步长推导扩散系数，再计算球形区域的平均退出时间。",
+    "kind": "lesson",
+    "sort_order": 5066,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "11",
+        "chapter_title": "随机模型的应用",
+        "section": "7",
+        "number": 66,
+        "part": "第四部分 · 应用与练习",
+        "minutes": 23,
+        "source_pages": [
+          278,
+          279,
+          280
+        ],
+        "source_sections": [
+          "11.8"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "c7b88d6a-152e-50b2-b95d-85168c08780c",
+    "slug": "calin-book-11-08",
+    "title": "连续时间滤波与信息更新",
+    "summary": "区分真实状态和观测噪声，推导 Kalman–Bucy 更新及误差方程。",
+    "kind": "lesson",
+    "sort_order": 5067,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "11",
+        "chapter_title": "随机模型的应用",
+        "section": "8",
+        "number": 67,
+        "part": "第四部分 · 应用与练习",
+        "minutes": 25,
+        "source_pages": [
+          280,
+          281,
+          282,
+          283,
+          284,
+          285,
+          286,
+          287,
+          288,
+          289,
+          290
+        ],
+        "source_sections": [
+          "11.9"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "8bd6891d-7387-5154-bd65-b4e850832199",
+    "slug": "calin-book-12-01",
+    "title": "随机分析综合练习：条件期望、停止与模型求解",
+    "summary": "通过五组相互衔接的练习，选择并核对随机分析的主要方法。",
+    "kind": "lesson",
+    "sort_order": 5068,
+    "metadata": {
+      "theory_book": {
+        "book": "stochastic-calculus",
+        "chapter": "12",
+        "chapter_title": "综合方法练习",
+        "section": "1",
+        "number": 68,
+        "part": "第四部分 · 应用与练习",
+        "minutes": 33,
+        "source_pages": [
+          292,
+          293,
+          294,
+          295,
+          296,
+          297,
+          298,
+          299,
+          300,
+          301,
+          302,
+          303,
+          304,
+          305,
+          306,
+          307,
+          308,
+          309,
+          310,
+          311,
+          312,
+          313,
+          314,
+          315,
+          316,
+          317,
+          318,
+          319,
+          320,
+          321,
+          322,
+          323
+        ],
+        "source_sections": [
+          "12",
+          "12: Chapter 2",
+          "12: Chapter 3",
+          "12: Chapter 4",
+          "12: Chapter 5",
+          "12: Chapter 6",
+          "12: Chapter 7",
+          "12: Chapter 8",
+          "12: Chapter 9",
+          "12: Chapter 10",
+          "12: Chapter 11"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "1e068f46-43b9-5c9b-aed2-8a10fd08aafa",
+    "slug": "guo-book-01-01",
+    "title": "双向拍卖、交易机制与逆向选择",
+    "summary": "从买卖报价、成交规则与信息差异理解价格形成，再用小型拍卖计算可成交数量和交易盈余。",
+    "kind": "lesson",
+    "sort_order": 6001,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "1",
+        "chapter_title": "交易与研究基础",
+        "section": 1,
+        "number": 1,
+        "part": "第一部分 · 统计与投资组合",
+        "minutes": 14,
+        "source_pages": [
+          19,
+          20,
+          21,
+          22,
+          30,
+          31,
+          32,
+          33
+        ],
+        "source_sections": [
+          "1.1",
+          "1.7"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "4e779f47-8199-5cf6-bcff-8c2f5fad18dc",
+    "slug": "guo-book-01-02",
+    "title": "策略期限、基金形态与业绩指标",
+    "summary": "把策略的持有期限、基金组织形式与收益评价分别讨论，计算 Sharpe、信息比率和下行风险。",
+    "kind": "lesson",
+    "sort_order": 6002,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "1",
+        "chapter_title": "交易与研究基础",
+        "section": 2,
+        "number": 2,
+        "part": "第一部分 · 统计与投资组合",
+        "minutes": 12,
+        "source_pages": [
+          23,
+          24,
+          25,
+          26,
+          27,
+          33,
+          64
+        ],
+        "source_sections": [
+          "1.2",
+          "1.3",
+          "1.4",
+          "1.7",
+          "2.9"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "33192760-fbe3-59a7-90f3-2da3c7fd63fe",
+    "slug": "guo-book-01-03",
+    "title": "数据、模型、决策与研究流程",
+    "summary": "用一次两资产决策说明数据处理、预测、风险优化和执行各自的作用，并建立可检查的研究记录。",
+    "kind": "lesson",
+    "sort_order": 6003,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "1",
+        "chapter_title": "交易与研究基础",
+        "section": 3,
+        "number": 3,
+        "part": "第一部分 · 统计与投资组合",
+        "minutes": 13,
+        "source_pages": [
+          27,
+          28,
+          29,
+          67
+        ],
+        "source_sections": [
+          "1.5",
+          "1.6",
+          "2.9"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "e74d6eab-ae70-5cd0-83e7-d4dfc4bf09a2",
+    "slug": "guo-book-02-01",
+    "title": "收益分布、价格离散与随机游走",
+    "summary": "比较价格与收益、日历时间与交易时间，说明随机游走和布朗运动能描述什么，以及逐笔价格为何呈现离散和反弹。",
+    "kind": "lesson",
+    "sort_order": 6004,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "2",
+        "chapter_title": "统计模型与投资组合",
+        "section": 1,
+        "number": 4,
+        "part": "第一部分 · 统计与投资组合",
+        "minutes": 10,
+        "source_pages": [
+          35,
+          36,
+          37,
+          38
+        ],
+        "source_sections": [
+          "2.1",
+          "2.1.1",
+          "2.1.2",
+          "2.2"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "f93c979b-21d0-53fd-889f-c80b7e2bee43",
+    "slug": "guo-book-02-02",
+    "title": "均值方差组合与多因子风险",
+    "summary": "从协方差展开组合风险，连接有效前沿、多因子模型与高维协方差估计，并区分可交易因子和统计因子。",
+    "kind": "lesson",
+    "sort_order": 6005,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "2",
+        "chapter_title": "统计模型与投资组合",
+        "section": 2,
+        "number": 5,
+        "part": "第一部分 · 统计与投资组合",
+        "minutes": 12,
+        "source_pages": [
+          39,
+          40,
+          41,
+          66,
+          67,
+          68,
+          69
+        ],
+        "source_sections": [
+          "2.3",
+          "2.4.1",
+          "2.9"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "6addc8c1-39f4-572a-bb89-258e07a1a059",
+    "slug": "guo-book-02-03",
+    "title": "收缩估计与 Black–Litterman 观点融合",
+    "summary": "利用收缩稳定均值与协方差，将市场基准和主观观点写成同一贝叶斯更新，并用数值例子解释观点置信度。",
+    "kind": "lesson",
+    "sort_order": 6006,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "2",
+        "chapter_title": "统计模型与投资组合",
+        "section": 3,
+        "number": 6,
+        "part": "第一部分 · 统计与投资组合",
+        "minutes": 10,
+        "source_pages": [
+          41,
+          42,
+          43,
+          64,
+          65
+        ],
+        "source_sections": [
+          "2.4.2",
+          "2.9"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "d7ab2b66-2a6a-51d3-969a-5debade45faa",
+    "slug": "guo-book-02-04",
+    "title": "Bootstrap、参数不确定性与 NPEB",
+    "summary": "把估计误差纳入组合风险，理解重抽样组合、预测二阶矩与非参数经验贝叶斯方法。",
+    "kind": "lesson",
+    "sort_order": 6007,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "2",
+        "chapter_title": "统计模型与投资组合",
+        "section": 4,
+        "number": 7,
+        "part": "第一部分 · 统计与投资组合",
+        "minutes": 10,
+        "source_pages": [
+          43,
+          44,
+          45,
+          46,
+          47,
+          65,
+          66
+        ],
+        "source_sections": [
+          "2.4.3",
+          "2.5",
+          "2.5.1",
+          "2.5.2",
+          "2.5.3",
+          "2.9"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "7d4cc911-2b9a-5336-b930-de5eceb3429e",
+    "slug": "guo-book-02-05",
+    "title": "厚尾、随机时钟与条件分布",
+    "summary": "从尾部概率和交易活跃度理解非正态收益，区分稳定分布、混合分布与随机时钟。",
+    "kind": "lesson",
+    "sort_order": 6008,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "2",
+        "chapter_title": "统计模型与投资组合",
+        "section": 5,
+        "number": 8,
+        "part": "第一部分 · 统计与投资组合",
+        "minutes": 10,
+        "source_pages": [
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          63,
+          64
+        ],
+        "source_sections": [
+          "2.6.1",
+          "2.6.2",
+          "2.9"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "a3e07421-b623-5f57-96e4-993e2300c541",
+    "slug": "guo-book-02-06",
+    "title": "ARIMA、GARCH 与鞅回归",
+    "summary": "区分均值预测与波动预测，推导 GARCH 的平方收益关系，并说明高维回归如何控制复杂度。",
+    "kind": "lesson",
+    "sort_order": 6009,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "2",
+        "chapter_title": "统计模型与投资组合",
+        "section": 6,
+        "number": 9,
+        "part": "第一部分 · 统计与投资组合",
+        "minutes": 10,
+        "source_pages": [
+          33,
+          52,
+          53,
+          54,
+          55,
+          69,
+          70,
+          71
+        ],
+        "source_sections": [
+          "1.7",
+          "2.6.3",
+          "2.9"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "97270627-6414-5cad-8757-703ebaaee5b7",
+    "slug": "guo-book-02-07",
+    "title": "条件预测、残差重抽样与信息比率",
+    "summary": "用联合残差重抽样生成多资产情景，把条件预测、因子模型和主动风险连接起来。",
+    "kind": "lesson",
+    "sort_order": 6010,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "2",
+        "chapter_title": "统计模型与投资组合",
+        "section": 7,
+        "number": 10,
+        "part": "第一部分 · 统计与投资组合",
+        "minutes": 10,
+        "source_pages": [
+          55,
+          56,
+          57,
+          58,
+          65,
+          66,
+          67,
+          71,
+          72
+        ],
+        "source_sections": [
+          "2.7",
+          "2.7.1",
+          "2.7.2",
+          "2.7.3",
+          "2.9"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "76b0a64e-75d5-5855-96a4-62842e42d7ff",
+    "slug": "guo-book-02-08",
+    "title": "非参数信号、变点与配对交易",
+    "summary": "把形态识别转化为可检验的统计规则，比较趋势、变点和均值回复信号。",
+    "kind": "lesson",
+    "sort_order": 6011,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "2",
+        "chapter_title": "统计模型与投资组合",
+        "section": 8,
+        "number": 11,
+        "part": "第一部分 · 统计与投资组合",
+        "minutes": 10,
+        "source_pages": [
+          58,
+          59,
+          60,
+          61,
+          72,
+          73
+        ],
+        "source_sections": [
+          "2.8.1",
+          "2.8.2",
+          "2.9"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "167cbf88-d75a-5638-b112-bcbd41732e0a",
+    "slug": "guo-book-02-09",
+    "title": "逆向、价值与宏观策略的收益机制",
+    "summary": "从现金流、风险暴露和投资者行为解释策略收益，明确估值误差与持有期限的影响。",
+    "kind": "lesson",
+    "sort_order": 6012,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "2",
+        "chapter_title": "统计模型与投资组合",
+        "section": 9,
+        "number": 12,
+        "part": "第一部分 · 统计与投资组合",
+        "minutes": 10,
+        "source_pages": [
+          61,
+          62,
+          73,
+          74
+        ],
+        "source_sections": [
+          "2.8.3",
+          "2.8.4",
+          "2.9"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "df14d0e2-2b7f-513e-a1a8-94ef00902cf3",
+    "slug": "guo-book-02-10",
+    "title": "样本外评价、多重检验与尾部风险",
+    "summary": "区分调参与检验，使用时间划分、联合重抽样和尾部损失评价策略。",
+    "kind": "lesson",
+    "sort_order": 6013,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "2",
+        "chapter_title": "统计模型与投资组合",
+        "section": 10,
+        "number": 13,
+        "part": "第一部分 · 统计与投资组合",
+        "minutes": 10,
+        "source_pages": [
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74
+        ],
+        "source_sections": [
+          "2.8.5",
+          "2.9"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "a272dc3f-5507-585c-98ef-04a51aca38a9",
+    "slug": "guo-book-03-01",
+    "title": "主动收益、另类风险暴露与基准",
+    "summary": "从主动权重和可投资基准出发，辨别超额收益、因子暴露与跟踪误差。",
+    "kind": "lesson",
+    "sort_order": 6014,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "3",
+        "chapter_title": "主动组合与动态决策",
+        "section": 1,
+        "number": 14,
+        "part": "第一部分 · 统计与投资组合",
+        "minutes": 10,
+        "source_pages": [
+          76,
+          77,
+          78,
+          79,
+          80,
+          92,
+          93
+        ],
+        "source_sections": [
+          "3.1",
+          "3.1.1",
+          "3.1.2",
+          "3.1.3",
+          "3.4"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "297d09e8-7ff5-5113-90b1-6feacb4712cf",
+    "slug": "guo-book-03-02",
+    "title": "交易成本、约束与持仓数量优化",
+    "summary": "把买卖成本写在调仓量上，比较凸约束、持仓数量约束和离散搜索方法。",
+    "kind": "lesson",
+    "sort_order": 6015,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "3",
+        "chapter_title": "主动组合与动态决策",
+        "section": 2,
+        "number": 15,
+        "part": "第一部分 · 统计与投资组合",
+        "minutes": 10,
+        "source_pages": [
+          80,
+          81,
+          82,
+          94,
+          95,
+          96,
+          97
+        ],
+        "source_sections": [
+          "3.2",
+          "3.2.1",
+          "3.2.2",
+          "3.4"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "8ceacfa9-5a4b-500a-87d4-b657729f2e25",
+    "slug": "guo-book-03-03",
+    "title": "Merton 配置、消费与不交易区间",
+    "summary": "从财富变化推导 Merton 比例，解释消费选择和交易成本产生的不交易区间。",
+    "kind": "lesson",
+    "sort_order": 6016,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "3",
+        "chapter_title": "主动组合与动态决策",
+        "section": 3,
+        "number": 16,
+        "part": "第一部分 · 统计与投资组合",
+        "minutes": 10,
+        "source_pages": [
+          83,
+          84,
+          85,
+          86,
+          103,
+          104,
+          114
+        ],
+        "source_sections": [
+          "3.3.1",
+          "3.3.2",
+          "3.4",
+          "3.5"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "c5790e6a-7328-5957-b7b0-7c92eebaa41f",
+    "slug": "guo-book-03-04",
+    "title": "长期增长、再平衡与通用组合",
+    "summary": "区分算术收益与长期增长，推导 Kelly 比例并计算通用组合的在线更新。",
+    "kind": "lesson",
+    "sort_order": 6017,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "3",
+        "chapter_title": "主动组合与动态决策",
+        "section": 4,
+        "number": 17,
+        "part": "第一部分 · 统计与投资组合",
+        "minutes": 10,
+        "source_pages": [
+          86,
+          87,
+          109,
+          110,
+          111
+        ],
+        "source_sections": [
+          "3.3.3",
+          "3.4"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "5cb30666-2893-56ed-b47d-b230e534c2e0",
+    "slug": "guo-book-03-05",
+    "title": "动态均值方差与参数不确定性",
+    "summary": "理解多期均值方差的时间不一致，利用信号衰减、交易成本和参数学习决定调仓速度。",
+    "kind": "lesson",
+    "sort_order": 6018,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "3",
+        "chapter_title": "主动组合与动态决策",
+        "section": 5,
+        "number": 18,
+        "part": "第一部分 · 统计与投资组合",
+        "minutes": 10,
+        "source_pages": [
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          113,
+          114
+        ],
+        "source_sections": [
+          "3.3.4",
+          "3.3.5",
+          "3.3.6",
+          "3.4",
+          "3.5"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "bc5546a3-a11d-59f5-8074-32a2dff23e3a",
+    "slug": "guo-book-03-06",
+    "title": "Bellman 递推与连续时间 HJB",
+    "summary": "用库存小例子推导 Bellman 递推，再从短时间展开得到连续时间 HJB 方程。",
+    "kind": "lesson",
+    "sort_order": 6019,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "3",
+        "chapter_title": "主动组合与动态决策",
+        "section": 6,
+        "number": 19,
+        "part": "第一部分 · 统计与投资组合",
+        "minutes": 10,
+        "source_pages": [
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103
+        ],
+        "source_sections": [
+          "3.4"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "b13149ff-d652-518f-9966-0c6a4cb08895",
+    "slug": "guo-book-03-07",
+    "title": "近似动态规划与价值函数学习",
+    "summary": "比较策略迭代、Rollout、回归蒙特卡罗与 Q 学习，识别近似误差来自哪里。",
+    "kind": "lesson",
+    "sort_order": 6020,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "3",
+        "chapter_title": "主动组合与动态决策",
+        "section": 7,
+        "number": 20,
+        "part": "第一部分 · 统计与投资组合",
+        "minutes": 10,
+        "source_pages": [
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          113,
+          114
+        ],
+        "source_sections": [
+          "3.4",
+          "3.5"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "176f8c38-a6f8-56d8-99a9-6f668dae5f5c",
+    "slug": "guo-book-03-08",
+    "title": "Kalman 滤波、LQG 与分离原理",
+    "summary": "用预测与修正两步估计隐藏状态，推导 Kalman 增益和 LQG 控制中的分离关系。",
+    "kind": "lesson",
+    "sort_order": 6021,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "3",
+        "chapter_title": "主动组合与动态决策",
+        "section": 8,
+        "number": 21,
+        "part": "第一部分 · 统计与投资组合",
+        "minutes": 10,
+        "source_pages": [
+          111,
+          112,
+          113,
+          114
+        ],
+        "source_sections": [
+          "3.4",
+          "3.5"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "1bc59b56-7b04-5620-927f-30b5cf41782d",
+    "slug": "guo-book-04-01",
+    "title": "逐笔数据、买卖价反弹与微观噪声",
+    "summary": "区分有效价格与成交价格，推导微观噪声对已实现方差的影响。",
+    "kind": "lesson",
+    "sort_order": 6022,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "4",
+        "chapter_title": "电子交易计量",
+        "section": 1,
+        "number": 22,
+        "part": "第二部分 · 高频数据与订单簿",
+        "minutes": 10,
+        "source_pages": [
+          116,
+          117,
+          118,
+          119,
+          147,
+          148,
+          151,
+          185
+        ],
+        "source_sections": [
+          "4.1",
+          "4.2",
+          "4.2.1",
+          "4.2.2",
+          "4.7",
+          "4.8",
+          "5.6"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "6c111e2b-8ea0-5007-807e-90846728f9e2",
+    "slug": "guo-book-04-02",
+    "title": "稀疏抽样、子样本与双尺度估计",
+    "summary": "比较稀疏抽样、子样本平均和双尺度修正，理解噪声偏差与离散误差的权衡。",
+    "kind": "lesson",
+    "sort_order": 6023,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "4",
+        "chapter_title": "电子交易计量",
+        "section": 2,
+        "number": 23,
+        "part": "第二部分 · 高频数据与订单簿",
+        "minutes": 10,
+        "source_pages": [
+          119,
+          120,
+          121,
+          122,
+          143,
+          144,
+          152
+        ],
+        "source_sections": [
+          "4.3.1",
+          "4.3.2",
+          "4.3.3",
+          "4.7",
+          "4.8"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "f83bf5cf-2d02-5c7a-9252-7db8f962a353",
+    "slug": "guo-book-04-03",
+    "title": "已实现核与预平均",
+    "summary": "利用相邻收益相关修正噪声，并推导预平均统计量的信号和噪声系数。",
+    "kind": "lesson",
+    "sort_order": 6024,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "4",
+        "chapter_title": "电子交易计量",
+        "section": 3,
+        "number": 24,
+        "part": "第二部分 · 高频数据与订单簿",
+        "minutes": 10,
+        "source_pages": [
+          122,
+          123,
+          124,
+          150,
+          151,
+          152
+        ],
+        "source_sections": [
+          "4.3.4",
+          "4.3.5",
+          "4.7",
+          "4.8"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "177a7f7e-3ec9-5f62-ae43-ab83b1a66d70",
+    "slug": "guo-book-04-04",
+    "title": "噪声模型下的准极大似然",
+    "summary": "从三对角协方差构造准似然，利用谱分解区分有效波动与观测噪声。",
+    "kind": "lesson",
+    "sort_order": 6025,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "4",
+        "chapter_title": "电子交易计量",
+        "section": 4,
+        "number": 25,
+        "part": "第二部分 · 高频数据与订单簿",
+        "minutes": 10,
+        "source_pages": [
+          124,
+          125,
+          144,
+          145,
+          146,
+          147,
+          151,
+          152
+        ],
+        "source_sections": [
+          "4.3.6",
+          "4.7",
+          "4.8"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "25199335-1b3d-5301-ba67-29af45f08c6a",
+    "slug": "guo-book-04-05",
+    "title": "异步交易、Epps 效应与同步",
+    "summary": "通过异步成交例子理解相关系数衰减，比较前值同步、刷新时间和重叠区间估计。",
+    "kind": "lesson",
+    "sort_order": 6026,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "4",
+        "chapter_title": "电子交易计量",
+        "section": 5,
+        "number": 26,
+        "part": "第二部分 · 高频数据与订单簿",
+        "minutes": 10,
+        "source_pages": [
+          125,
+          126,
+          127,
+          148,
+          149,
+          152
+        ],
+        "source_sections": [
+          "4.4.1",
+          "4.4.2",
+          "4.7",
+          "4.8"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "f2bcdc4a-80e3-522a-8ed0-9a2ed4155910",
+    "slug": "guo-book-04-06",
+    "title": "多资产协方差与半正定估计",
+    "summary": "从协变差恒等式出发，构造多资产估计并检查协方差矩阵的半正定性。",
+    "kind": "lesson",
+    "sort_order": 6027,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "4",
+        "chapter_title": "电子交易计量",
+        "section": 6,
+        "number": 27,
+        "part": "第二部分 · 高频数据与订单簿",
+        "minutes": 10,
+        "source_pages": [
+          127,
+          128,
+          129,
+          149,
+          150,
+          151,
+          152
+        ],
+        "source_sections": [
+          "4.4.3",
+          "4.4.4",
+          "4.7",
+          "4.8"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "f1b6f308-4ee4-517f-9202-e90e4f12757c",
+    "slug": "guo-book-04-07",
+    "title": "傅里叶估计与瞬时波动率",
+    "summary": "通过频率系数估计积分方差与瞬时波动，理解频率截断和时间分辨率的关系。",
+    "kind": "lesson",
+    "sort_order": 6028,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "4",
+        "chapter_title": "电子交易计量",
+        "section": 7,
+        "number": 28,
+        "part": "第二部分 · 高频数据与订单簿",
+        "minutes": 10,
+        "source_pages": [
+          129,
+          130,
+          131,
+          132,
+          133,
+          134,
+          149,
+          150,
+          151,
+          152
+        ],
+        "source_sections": [
+          "4.5",
+          "4.5.1",
+          "4.5.2",
+          "4.5.3",
+          "4.7",
+          "4.8"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "d1daeb7f-bed0-59e0-baee-941b7104e5e1",
+    "slug": "guo-book-04-08",
+    "title": "交易间隔、ACD 与 Hawkes 强度",
+    "summary": "从交易间隔走向事件强度，推导 ACD 的长期均值与 Hawkes 的分支比率。",
+    "kind": "lesson",
+    "sort_order": 6029,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "4",
+        "chapter_title": "电子交易计量",
+        "section": 8,
+        "number": 29,
+        "part": "第二部分 · 高频数据与订单簿",
+        "minutes": 10,
+        "source_pages": [
+          134,
+          135,
+          136,
+          137,
+          153
+        ],
+        "source_sections": [
+          "4.6.1",
+          "4.6.2",
+          "4.8"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "85b032b1-e98b-5f61-a07d-4a06cf4a419d",
+    "slug": "guo-book-04-09",
+    "title": "离散价格标记与点过程联合模型",
+    "summary": "分解价格是否变化、方向和幅度，并把事件间隔与交易标记放入联合模型。",
+    "kind": "lesson",
+    "sort_order": 6030,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "4",
+        "chapter_title": "电子交易计量",
+        "section": 9,
+        "number": 30,
+        "part": "第二部分 · 高频数据与订单簿",
+        "minutes": 10,
+        "source_pages": [
+          137,
+          138,
+          139,
+          140,
+          153
+        ],
+        "source_sections": [
+          "4.6.3",
+          "4.6.4",
+          "4.6.5",
+          "4.8"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "77b039f5-bf40-5f78-b05d-43da86a86b93",
+    "slug": "guo-book-04-10",
+    "title": "已实现 GARCH、跳跃与波动预测",
+    "summary": "连接日内波动测度与日度预测，并区分连续波动、跳跃和幂变差。",
+    "kind": "lesson",
+    "sort_order": 6031,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "4",
+        "chapter_title": "电子交易计量",
+        "section": 10,
+        "number": 31,
+        "part": "第二部分 · 高频数据与订单簿",
+        "minutes": 10,
+        "source_pages": [
+          140,
+          141,
+          142,
+          143,
+          148,
+          151,
+          152,
+          153
+        ],
+        "source_sections": [
+          "4.6.6",
+          "4.6.7",
+          "4.7",
+          "4.8"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "ed466b3f-dd8a-5180-82aa-559595ff68b2",
+    "slug": "guo-book-05-01",
+    "title": "订单簿重建、价格变化与订单流",
+    "summary": "重建订单簿的事件状态，计算深度、不平衡、微价格和给定规模的成交成本。",
+    "kind": "lesson",
+    "sort_order": 6032,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "5",
+        "chapter_title": "订单簿数据与动态",
+        "section": 1,
+        "number": 32,
+        "part": "第二部分 · 高频数据与订单簿",
+        "minutes": 10,
+        "source_pages": [
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          182,
+          183,
+          184,
+          185
+        ],
+        "source_sections": [
+          "5.1",
+          "5.2",
+          "5.2.1",
+          "5.2.2",
+          "5.6"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "c9f6ba28-f939-5eb2-9341-0d4a51780a0c",
+    "slug": "guo-book-05-02",
+    "title": "多元订单强度与相互激励",
+    "summary": "建立多类订单相互激励模型，计算长期强度，并用时间变换检验拟合。",
+    "kind": "lesson",
+    "sort_order": 6033,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "5",
+        "chapter_title": "订单簿数据与动态",
+        "section": 2,
+        "number": 33,
+        "part": "第二部分 · 高频数据与订单簿",
+        "minutes": 10,
+        "source_pages": [
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166,
+          167,
+          179,
+          180,
+          181
+        ],
+        "source_sections": [
+          "5.3",
+          "5.3.1",
+          "5.3.2",
+          "5.6"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "6964c458-d676-5173-8e1a-2c3d1d6a0c62",
+    "slug": "guo-book-05-03",
+    "title": "订单簿机器学习与事件标签",
+    "summary": "把订单簿特征、预测标签和成交评价分开，建立按时间验证的机器学习流程。",
+    "kind": "lesson",
+    "sort_order": 6034,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "5",
+        "chapter_title": "订单簿数据与动态",
+        "section": 3,
+        "number": 34,
+        "part": "第二部分 · 高频数据与订单簿",
+        "minutes": 10,
+        "source_pages": [
+          167,
+          168,
+          169,
+          182,
+          183,
+          184,
+          185,
+          186
+        ],
+        "source_sections": [
+          "5.4",
+          "5.6"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "ce8e1abb-c514-5ef5-ae8d-cdc357ff60f6",
+    "slug": "guo-book-05-04",
+    "title": "买卖队列与扩散近似",
+    "summary": "把买卖队列视为生灭过程，说明先耗尽概率、扩散近似和时间缩放。",
+    "kind": "lesson",
+    "sort_order": 6035,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "5",
+        "chapter_title": "订单簿数据与动态",
+        "section": 4,
+        "number": 35,
+        "part": "第二部分 · 高频数据与订单簿",
+        "minutes": 10,
+        "source_pages": [
+          169,
+          170,
+          171,
+          172,
+          180,
+          181,
+          182,
+          185,
+          186
+        ],
+        "source_sections": [
+          "5.5.1",
+          "5.6"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "17c0b056-614c-5dd4-b20b-a92eeef6cc71",
+    "slug": "guo-book-05-05",
+    "title": "队列位置、流体极限与序列反应",
+    "summary": "计算前方排队量的流体变化，并建立依赖订单簿状态的队列反应模型。",
+    "kind": "lesson",
+    "sort_order": 6036,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "5",
+        "chapter_title": "订单簿数据与动态",
+        "section": 5,
+        "number": 36,
+        "part": "第二部分 · 高频数据与订单簿",
+        "minutes": 10,
+        "source_pages": [
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178,
+          179,
+          181,
+          182
+        ],
+        "source_sections": [
+          "5.5.2",
+          "5.5.3",
+          "5.6"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "077927c0-0bef-5b19-bac8-f7b4c85f345b",
+    "slug": "guo-book-05-06",
+    "title": "多主体市场与平均场近似",
+    "summary": "比较随机订单流、异质主体与平均场博弈，用固定点理解市场相互作用。",
+    "kind": "lesson",
+    "sort_order": 6037,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "5",
+        "chapter_title": "订单簿数据与动态",
+        "section": 6,
+        "number": 37,
+        "part": "第二部分 · 高频数据与订单簿",
+        "minutes": 10,
+        "source_pages": [
+          185,
+          186,
+          187,
+          188,
+          189
+        ],
+        "source_sections": [
+          "5.6"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "a3aedadd-c4cf-5e8c-83b6-b7853c53a660",
+    "slug": "guo-book-06-01",
+    "title": "执行成本、库存状态与离散动态规划",
+    "summary": "从实施差额定义成本，推导线性冲击下的等量执行，并区分 TWAP、VWAP 与参与率。",
+    "kind": "lesson",
+    "sort_order": 6038,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "6",
+        "chapter_title": "最优执行与订单配置",
+        "section": 1,
+        "number": 38,
+        "part": "第三部分 · 执行、做市与路由",
+        "minutes": 10,
+        "source_pages": [
+          191,
+          192,
+          193,
+          194,
+          221,
+          222,
+          223
+        ],
+        "source_sections": [
+          "6.1.1",
+          "6.6"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "bdeee8a7-1698-5c0b-8b1f-eb929af62362",
+    "slug": "guo-book-06-02",
+    "title": "连续执行、变分法与风险速度",
+    "summary": "推导风险与冲击之间的连续时间最优路径，并说明不同风险惩罚如何改变执行速度。",
+    "kind": "lesson",
+    "sort_order": 6039,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "6",
+        "chapter_title": "最优执行与订单配置",
+        "section": 2,
+        "number": 39,
+        "part": "第三部分 · 执行、做市与路由",
+        "minutes": 10,
+        "source_pages": [
+          194,
+          195,
+          196,
+          197,
+          222,
+          223
+        ],
+        "source_sections": [
+          "6.1.2",
+          "6.1.3",
+          "6.6"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "08b94996-b6cc-52c8-81d9-98aff8980685",
+    "slug": "guo-book-06-03",
+    "title": "乘数冲击、HJB 与清算边界",
+    "summary": "从逐单位成交积分推导乘数冲击，建立等待与清算的梯度约束和价格边界。",
+    "kind": "lesson",
+    "sort_order": 6040,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "6",
+        "chapter_title": "最优执行与订单配置",
+        "section": 3,
+        "number": 40,
+        "part": "第三部分 · 执行、做市与路由",
+        "minutes": 10,
+        "source_pages": [
+          197,
+          198,
+          199,
+          200,
+          201,
+          202,
+          223,
+          224
+        ],
+        "source_sections": [
+          "6.2.1",
+          "6.2.2",
+          "6.2.3",
+          "6.6"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "e4e6a0f0-f42b-5f15-8a73-b5005c4af43c",
+    "slug": "guo-book-06-04",
+    "title": "瞬态冲击、韧性与价格操纵",
+    "summary": "区分永久、暂时与瞬态冲击，利用衰减核计算往返交易成本和流动性恢复。",
+    "kind": "lesson",
+    "sort_order": 6041,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "6",
+        "chapter_title": "最优执行与订单配置",
+        "section": 4,
+        "number": 41,
+        "part": "第三部分 · 执行、做市与路由",
+        "minutes": 10,
+        "source_pages": [
+          202,
+          203,
+          204,
+          205,
+          206,
+          207,
+          208,
+          224,
+          225
+        ],
+        "source_sections": [
+          "6.2.4",
+          "6.3.1",
+          "6.6"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "2f254100-f4f7-5f25-b2f0-f3f64aacb6d0",
+    "slug": "guo-book-06-05",
+    "title": "订单簿形状与最优交易分拆",
+    "summary": "从订单簿形状积分计算冲击成本，求解块状深度下首尾较大的执行日程。",
+    "kind": "lesson",
+    "sort_order": 6042,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "6",
+        "chapter_title": "最优执行与订单配置",
+        "section": 5,
+        "number": 42,
+        "part": "第三部分 · 执行、做市与路由",
+        "minutes": 10,
+        "source_pages": [
+          208,
+          209,
+          210
+        ],
+        "source_sections": [
+          "6.3.2",
+          "6.3.3",
+          "6.3.4"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "fa58ce4d-a4dc-5d6e-b3d6-66afc78b5089",
+    "slug": "guo-book-06-06",
+    "title": "多资产执行与交叉风险",
+    "summary": "把相关库存风险和交叉冲击纳入联合执行，理解风险因子方向上的不同清算速度。",
+    "kind": "lesson",
+    "sort_order": 6043,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "6",
+        "chapter_title": "最优执行与订单配置",
+        "section": 6,
+        "number": 43,
+        "part": "第三部分 · 执行、做市与路由",
+        "minutes": 10,
+        "source_pages": [
+          210,
+          211,
+          212,
+          213,
+          225,
+          226
+        ],
+        "source_sections": [
+          "6.4",
+          "6.6"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "9a3ac689-3da4-54fd-b565-655227e3a8df",
+    "slug": "guo-book-06-07",
+    "title": "订单配置、均值回归与马尔可夫决策",
+    "summary": "把限价成交、到期补单和排队位置纳入马尔可夫决策，并连接执行数量与报价选择。",
+    "kind": "lesson",
+    "sort_order": 6044,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "6",
+        "chapter_title": "最优执行与订单配置",
+        "section": 7,
+        "number": 44,
+        "part": "第三部分 · 执行、做市与路由",
+        "minutes": 10,
+        "source_pages": [
+          213,
+          214,
+          215,
+          216,
+          217,
+          218,
+          219,
+          220,
+          221,
+          224,
+          225,
+          226
+        ],
+        "source_sections": [
+          "6.5",
+          "6.5.1",
+          "6.5.2",
+          "6.6"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "843ad2e4-772c-5b49-b497-9f61580bfb6d",
+    "slug": "guo-book-07-01",
+    "title": "库存风险、保留价格与最优报价",
+    "summary": "由库存损益推导保留价格和最优报价，并用有限库存状态计算报价随风险变化的幅度。",
+    "kind": "lesson",
+    "sort_order": 6045,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "7",
+        "chapter_title": "做市与智能路由",
+        "section": 1,
+        "number": 45,
+        "part": "第三部分 · 执行、做市与路由",
+        "minutes": 10,
+        "source_pages": [
+          228,
+          229,
+          230,
+          231,
+          246,
+          247,
+          248,
+          249,
+          253
+        ],
+        "source_sections": [
+          "7.1",
+          "7.2",
+          "7.8",
+          "7.9"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "7d47a45b-d4f6-534e-a714-e0ee67070a08",
+    "slug": "guo-book-07-02",
+    "title": "限价与市价的脉冲控制",
+    "summary": "区分持续挂单与主动成交，解释含固定费用的库存控制区间和准变分不等式。",
+    "kind": "lesson",
+    "sort_order": 6046,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "7",
+        "chapter_title": "做市与智能路由",
+        "section": 2,
+        "number": 46,
+        "part": "第三部分 · 执行、做市与路由",
+        "minutes": 10,
+        "source_pages": [
+          231,
+          232,
+          233,
+          234,
+          246,
+          247,
+          248,
+          253
+        ],
+        "source_sections": [
+          "7.3",
+          "7.3.1",
+          "7.3.2",
+          "7.8",
+          "7.9"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "8ae55867-2210-5401-a896-72d5e4fc5b16",
+    "slug": "guo-book-07-03",
+    "title": "跨市场路由、暗池与交易成本",
+    "summary": "把价格、费用、队列与未成交成本放入同一订单路由模型，比较公开市场和暗池的成交条件。",
+    "kind": "lesson",
+    "sort_order": 6047,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "7",
+        "chapter_title": "做市与智能路由",
+        "section": 3,
+        "number": 47,
+        "part": "第三部分 · 执行、做市与路由",
+        "minutes": 10,
+        "source_pages": [
+          234,
+          235,
+          236,
+          237,
+          238
+        ],
+        "source_sections": [
+          "7.4",
+          "7.5.1"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "c9bbe008-eb3e-5a31-8816-a325834e3baa",
+    "slug": "guo-book-07-04",
+    "title": "多交易所订单分拆与随机梯度",
+    "summary": "推导跨市场订单量的随机梯度，在给定市价量的例子中用成交样本求解最优分配。",
+    "kind": "lesson",
+    "sort_order": 6048,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "7",
+        "chapter_title": "做市与智能路由",
+        "section": 4,
+        "number": 48,
+        "part": "第三部分 · 执行、做市与路由",
+        "minutes": 10,
+        "source_pages": [
+          238,
+          239,
+          250,
+          251,
+          252
+        ],
+        "source_sections": [
+          "7.5.2",
+          "7.5.3",
+          "7.8"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "7f9a3b17-f2bc-59b4-8c30-6d316746c571",
+    "slug": "guo-book-07-05",
+    "title": "删失成交量与 Kaplan–Meier 估计",
+    "summary": "从部分成交和全部成交的区别出发，构造离散 Kaplan–Meier 估计并识别尚未观察到的容量尾部。",
+    "kind": "lesson",
+    "sort_order": 6049,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "7",
+        "chapter_title": "做市与智能路由",
+        "section": 5,
+        "number": 49,
+        "part": "第三部分 · 执行、做市与路由",
+        "minutes": 10,
+        "source_pages": [
+          240,
+          241,
+          242,
+          249,
+          250
+        ],
+        "source_sections": [
+          "7.6.2",
+          "7.8"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "0729f6c2-2592-575a-9a1b-926543add261",
+    "slug": "guo-book-07-06",
+    "title": "贪心配置、探索与开发",
+    "summary": "利用容量尾概率证明逐股贪心分配的最优性，并解释未知容量下为什么需要探索。",
+    "kind": "lesson",
+    "sort_order": 6050,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "7",
+        "chapter_title": "做市与智能路由",
+        "section": 6,
+        "number": 50,
+        "part": "第三部分 · 执行、做市与路由",
+        "minutes": 10,
+        "source_pages": [
+          239,
+          240,
+          241,
+          242,
+          243,
+          253
+        ],
+        "source_sections": [
+          "7.6.1",
+          "7.6.3",
+          "7.9"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "91f1d1db-2f90-55a2-bccc-7a8d95f59e2d",
+    "slug": "guo-book-07-07",
+    "title": "随机拉格朗日优化与收敛",
+    "summary": "以连续订单比例推导边际收益条件，用成交反馈进行投影随机逼近，并区分收敛与跟踪。",
+    "kind": "lesson",
+    "sort_order": 6051,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "7",
+        "chapter_title": "做市与智能路由",
+        "section": 7,
+        "number": 51,
+        "part": "第三部分 · 执行、做市与路由",
+        "minutes": 10,
+        "source_pages": [
+          243,
+          244,
+          245,
+          246,
+          250,
+          251,
+          252,
+          253,
+          254
+        ],
+        "source_sections": [
+          "7.7",
+          "7.7.1",
+          "7.7.2",
+          "7.8",
+          "7.9"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "5d6e8bb0-8793-5a89-ad77-d545e3d0317f",
+    "slug": "guo-book-08-01",
+    "title": "交易系统、网关与撮合引擎",
+    "summary": "从一笔订单的传递过程理解网关、撮合、费用和清算，并比较不同成交分配规则。",
+    "kind": "lesson",
+    "sort_order": 6052,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "8",
+        "chapter_title": "交易系统与风险",
+        "section": 1,
+        "number": 52,
+        "part": "第四部分 · 系统与风险",
+        "minutes": 22,
+        "source_pages": [
+          255,
+          256,
+          257,
+          258,
+          259,
+          260,
+          261,
+          262,
+          263,
+          264,
+          265,
+          278,
+          279
+        ],
+        "source_sections": [
+          "8.1",
+          "8.2.1",
+          "8.2.2",
+          "8.2.4",
+          "8.2.5",
+          "8.2.6",
+          "8.6",
+          "8.2"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "c6f95410-befc-5a6b-9129-82065ba4d901",
+    "slug": "guo-book-08-02",
+    "title": "行情传播、网络与事件顺序",
+    "summary": "区分数据包、消息和市场事件，处理双路行情、丢包、时间戳与订单簿恢复。",
+    "kind": "lesson",
+    "sort_order": 6053,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "8",
+        "chapter_title": "交易系统与风险",
+        "section": 2,
+        "number": 53,
+        "part": "第四部分 · 系统与风险",
+        "minutes": 22,
+        "source_pages": [
+          262,
+          263,
+          265,
+          266,
+          267,
+          279,
+          280,
+          281,
+          289,
+          291
+        ],
+        "source_sections": [
+          "8.2.3",
+          "8.3.1",
+          "8.6",
+          "8.3",
+          "8.7"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "23b57872-8568-55fd-a46f-1caa0d186330",
+    "slug": "guo-book-08-03",
+    "title": "信号引擎、订单状态与性能",
+    "summary": "将预测转换为订单状态机，并用尾部延迟、内存访问和浮点误差检查实现。",
+    "kind": "lesson",
+    "sort_order": 6054,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "8",
+        "chapter_title": "交易系统与风险",
+        "section": 3,
+        "number": 54,
+        "part": "第四部分 · 系统与风险",
+        "minutes": 22,
+        "source_pages": [
+          267,
+          268,
+          269,
+          270,
+          281,
+          282,
+          283,
+          284,
+          285,
+          289,
+          290,
+          291
+        ],
+        "source_sections": [
+          "8.3.2",
+          "8.3.3",
+          "8.3.4",
+          "8.6",
+          "8.7"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "e51d8e34-022b-50e3-ad15-c2696baa9921",
+    "slug": "guo-book-08-04",
+    "title": "市场制度、卖空与异常交易",
+    "summary": "理解报价保护、卖空价格限制、暂停交易与异常订单识别，区分不同制度的约束对象。",
+    "kind": "lesson",
+    "sort_order": 6055,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "8",
+        "chapter_title": "交易系统与风险",
+        "section": 4,
+        "number": 55,
+        "part": "第四部分 · 系统与风险",
+        "minutes": 22,
+        "source_pages": [
+          270,
+          271,
+          272,
+          273,
+          274,
+          275,
+          285,
+          286
+        ],
+        "source_sections": [
+          "8.4",
+          "8.4.1",
+          "8.4.2",
+          "8.4.3",
+          "8.4.4",
+          "8.4.5",
+          "8.6"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "7a20daef-73ab-5b03-868d-029ba86a1166",
+    "slug": "guo-book-08-05",
+    "title": "操作风险、策略风险与压力测试",
+    "summary": "用潜在仓位、压力情景和消息故障检查交易系统，并完成二进制行情解码练习。",
+    "kind": "lesson",
+    "sort_order": 6056,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "8",
+        "chapter_title": "交易系统与风险",
+        "section": 5,
+        "number": 56,
+        "part": "第四部分 · 系统与风险",
+        "minutes": 22,
+        "source_pages": [
+          275,
+          276,
+          277,
+          278,
+          286,
+          287,
+          288,
+          289,
+          290,
+          291
+        ],
+        "source_sections": [
+          "8.5",
+          "8.5.1",
+          "8.5.2",
+          "8.6",
+          "8.7"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "16a2a3dc-9706-59da-bbb4-b5d8db385372",
+    "slug": "guo-book-a-01",
+    "title": "鞅、停止时间与随机积分",
+    "summary": "用逐步获知的信息定义鞅，理解停止时间、集中不等式、二次变差与含跳跃的伊藤公式。",
+    "kind": "lesson",
+    "sort_order": 6057,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "A",
+        "chapter_title": "数学工具：鞅",
+        "section": 1,
+        "number": 57,
+        "part": "附录 · 数学工具",
+        "minutes": 45,
+        "source_pages": [
+          292,
+          293,
+          294,
+          295,
+          296,
+          297,
+          298,
+          299
+        ],
+        "source_sections": [
+          "A.1",
+          "A.2"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "693d5dd2-5196-5a53-8a26-799fb114ecd0",
+    "slug": "guo-book-b-01",
+    "title": "马尔可夫链、生成元与决策",
+    "summary": "从状态转移率计算停留时间与平稳分布，用退出成本方程和 Bellman 方程比较等待与主动成交。",
+    "kind": "lesson",
+    "sort_order": 6058,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "B",
+        "chapter_title": "数学工具：马尔可夫决策",
+        "section": 1,
+        "number": 58,
+        "part": "附录 · 数学工具",
+        "minutes": 30,
+        "source_pages": [
+          300,
+          301,
+          302
+        ],
+        "source_sections": [
+          "B.1",
+          "B.2",
+          "B.3"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "c997d684-3d93-5083-a014-5858daed9990",
+    "slug": "guo-book-c-01",
+    "title": "点过程补偿、似然与模拟",
+    "summary": "从事件计数构造条件强度与补偿，推导 Hawkes 似然，使用递推和拒绝抽样完成估计与模拟。",
+    "kind": "lesson",
+    "sort_order": 6059,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "C",
+        "chapter_title": "数学工具：点过程",
+        "section": 1,
+        "number": 59,
+        "part": "附录 · 数学工具",
+        "minutes": 45,
+        "source_pages": [
+          303,
+          304,
+          305,
+          306,
+          307,
+          308,
+          309
+        ],
+        "source_sections": [
+          "C.1",
+          "C.2",
+          "C.3",
+          "C.4"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
+  },
+  {
+    "id": "c224240f-7ec1-5873-a1bf-a92c6f4b2a93",
+    "slug": "guo-book-d-01",
+    "title": "弱收敛、流体极限与扩散极限",
+    "summary": "区分单个时点的中心极限定理与整条路径的弱收敛，用反射映射建立队列的流体和扩散近似。",
+    "kind": "lesson",
+    "sort_order": 6060,
+    "metadata": {
+      "theory_book": {
+        "book": "quantitative-trading",
+        "chapter": "D",
+        "chapter_title": "数学工具：极限近似",
+        "section": 1,
+        "number": 60,
+        "part": "附录 · 数学工具",
+        "minutes": 35,
+        "source_pages": [
+          310,
+          311,
+          312,
+          313
+        ],
+        "source_sections": [
+          "D.1",
+          "D.2"
+        ],
+        "edition": "2026-10"
+      }
+    },
+    "status": "published"
   }
 ]

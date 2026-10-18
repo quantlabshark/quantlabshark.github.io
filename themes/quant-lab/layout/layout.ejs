@@ -18,6 +18,7 @@
   <script src="/assets/appearance.js" defer></script>
   <script src="/assets/sidebar-resize.js" defer></script>
   <script src="/assets/navigation-tree.js" defer></script>
+  <script type="application/json" id="course-navigation-data"><%- quant_course_navigation_data() %></script>
   <script src="/assets/navigation.js" defer></script>
   <% const catalogHint=foam_catalog_hint(page); if(catalogHint){ %><script type="application/json" id="catalog-hint"><%- catalogHint %></script><% } %>
   <script src="/assets/search-matches.js" defer></script>

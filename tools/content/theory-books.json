@@ -14,7 +14,10 @@
     "extras": "导读 · 附录 · 参考文献",
     "examples": "/assets/downloads/factor-investing-examples.zip",
     "keywords": "回归、价值因子、风险归因",
-    "reference": "石川、刘洋溢、连祥斌，《因子投资：方法与实践》，电子工业出版社，2020 年。"
+    "reference": "石川、刘洋溢、连祥斌，《因子投资：方法与实践》，电子工业出版社，2020 年。",
+    "category": "asset-pricing",
+    "author": "石川 · 刘洋溢 · 连祥斌",
+    "cover": "/assets/illustrations/courses/course-25-cover-v1.webp"
   },
   {
     "key": "trading-and-exchanges",
@@ -31,6 +34,49 @@
     "extras": "基础导读 · 术语索引 · 参考文献",
     "examples": "/assets/downloads/trading-and-exchanges-examples.zip",
     "keywords": "限价单、逆向选择、执行缺口",
-    "reference": "Larry Harris, Trading and Exchanges: Market Microstructure for Practitioners, Oxford University Press, 2003。制度案例对应 2003 年出版时的市场环境。"
+    "reference": "Larry Harris, Trading and Exchanges: Market Microstructure for Practitioners, Oxford University Press, 2003。制度案例对应 2003 年出版时的市场环境。",
+    "category": "trading",
+    "author": "Larry Harris",
+    "cover": "/assets/illustrations/courses/course-03-cover-v1.webp"
+  },
+  {
+    "key": "stochastic-calculus",
+    "title": "随机微积分及其应用",
+    "kicker": "随机微积分",
+    "category": "mathematics",
+    "author": "Ovidiu Calin",
+    "description": "从概率与随机过程出发，理解伊藤积分、随机微分方程及其应用。",
+    "card_description": "概率与条件期望、布朗运动、停止时间、伊藤积分、随机微分方程、换测度与滤波。",
+    "introduction": "普通微积分处理平滑变化，随机微积分处理含有持续随机扰动的过程。先从随机游走和布朗运动认识路径，再学习二次变差、伊藤公式以及随机微分方程，用这些工具计算分布、首达时间和条件预测。",
+    "preparation": "可先从",
+    "guide": "calin-book-01-01",
+    "guide_title": "随机增长与贴现：从变化率写出模型",
+    "chapters": 12,
+    "units": 68,
+    "extras": "概率基础 · 推导与练习 · 数值模拟",
+    "examples": "/assets/downloads/stochastic-calculus-examples.zip",
+    "keywords": "布朗运动、伊藤公式、Girsanov",
+    "reference": "Ovidiu Calin, An Informal Introduction to Stochastic Calculus with Applications, World Scientific, 2015。",
+    "cover": "/assets/illustrations/courses/course-17-cover-v1.webp"
+  },
+  {
+    "key": "quantitative-trading",
+    "title": "量化交易：算法、分析、数据、模型和优化",
+    "kicker": "量化交易",
+    "category": "trading",
+    "author": "Xin Guo · Tze Leung Lai · Howard Shek · Samuel Po-Shing Wong",
+    "description": "学习量化交易中的统计建模、组合优化、高频数据分析、最优执行和做市。",
+    "card_description": "统计策略与主动组合、高频计量、订单簿模型、最优执行、做市、订单路由及交易系统。",
+    "introduction": "交易研究需要把数据、统计模型和实际订单连接起来。收益预测决定希望持有什么，组合优化决定持有多少，执行模型决定如何成交。学习这些环节时，同时分析参数误差、交易成本、库存风险和系统约束。",
+    "preparation": "初次接触量化交易，可从",
+    "guide": "guo-book-01-01",
+    "guide_title": "双向拍卖、交易机制与逆向选择",
+    "chapters": 8,
+    "units": 60,
+    "extras": "附录 A–D · 数学工具与数值示例",
+    "examples": "/assets/downloads/quantitative-trading-examples.zip",
+    "keywords": "参数不确定性、订单簿、HJB",
+    "reference": "郭新等著，冯玉林、刘庆富译，《量化交易：算法、分析、数据、模型和优化》，高等教育出版社，2020 年。英文版出版于 2017 年，市场制度案例按其历史语境讲解。",
+    "cover": "/assets/illustrations/courses/course-19-cover-v1.webp"
   }
 ]

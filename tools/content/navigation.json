@@ -70,11 +70,11 @@
     "name": "基础理论与原理",
     "parent_id": null,
     "href": "/theory/",
-    "description": "资产定价、投资组合与市场微观结构。",
+    "description": "数学基础、资产定价、投资组合与交易机制。",
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 31,
-    "revision": 4,
+    "revision": 5,
     "read_access": "inherit"
   },
   {
@@ -425,6 +425,32 @@
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 161,
+    "revision": 2,
+    "read_access": "inherit"
+  },
+  {
+    "id": "17859c88-b779-5654-b120-7a4cc7b39714",
+    "key": "stochastic-calculus",
+    "name": "随机微积分及其应用",
+    "parent_id": "6c937a0e-545c-56f5-a699-90c4325073d4",
+    "href": "/theory/stochastic-calculus/",
+    "description": "概率与条件期望、布朗运动、停止时间、伊藤积分、随机微分方程、换测度与滤波。",
+    "nav_group": "学习与研究",
+    "visible": true,
+    "sort_order": 25,
+    "revision": 2,
+    "read_access": "inherit"
+  },
+  {
+    "id": "19808db5-aef6-5fc5-b233-d9732a29916b",
+    "key": "quantitative-trading",
+    "name": "量化交易：算法、分析、数据、模型和优化",
+    "parent_id": "6c937a0e-545c-56f5-a699-90c4325073d4",
+    "href": "/theory/quantitative-trading/",
+    "description": "统计策略与主动组合、高频计量、订单簿模型、最优执行、做市、订单路由及交易系统。",
+    "nav_group": "学习与研究",
+    "visible": true,
+    "sort_order": 32,
     "revision": 2,
     "read_access": "inherit"
   }
