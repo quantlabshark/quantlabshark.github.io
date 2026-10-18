@@ -7,6 +7,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 1,
+    "cover_url": "/assets/figures/curriculum/course-01.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-01.svg",
@@ -37,8 +38,7 @@
         ],
         "stage_title": "市场与研究"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-01.svg"
+    }
   },
   {
     "id": "bf77a999-026d-5673-a412-031aa96a529a",
@@ -48,6 +48,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 2,
+    "cover_url": "/assets/figures/curriculum/course-02.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-02.svg",
@@ -79,8 +80,7 @@
         ],
         "stage_title": "市场与研究"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-02.svg"
+    }
   },
   {
     "id": "3b58df3a-dab5-55b4-a352-9836534fd4fe",
@@ -90,6 +90,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 3,
+    "cover_url": "/assets/figures/curriculum/course-03.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-03.svg",
@@ -113,8 +114,7 @@
         ],
         "stage_title": "市场与研究"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-03.svg"
+    }
   },
   {
     "id": "44d8a7a7-1905-521b-b308-01d828060076",
@@ -124,6 +124,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 4,
+    "cover_url": "/assets/figures/curriculum/course-04.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-04.svg",
@@ -152,8 +153,7 @@
         ],
         "stage_title": "市场与研究"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-04.svg"
+    }
   },
   {
     "id": "79821632-ab2d-5168-843a-f837f6a32ae3",
@@ -163,6 +163,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 5,
+    "cover_url": "/assets/figures/curriculum/course-05.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-05.svg",
@@ -193,8 +194,7 @@
         ],
         "stage_title": "市场与研究"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-05.svg"
+    }
   },
   {
     "id": "8ca90937-ec25-5ffb-ac48-a407aeddad7d",
@@ -204,6 +204,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 6,
+    "cover_url": "/assets/figures/curriculum/course-06.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-06.svg",
@@ -237,8 +238,7 @@
         ],
         "stage_title": "市场与研究"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-06.svg"
+    }
   },
   {
     "id": "a1e835b0-e9e0-5483-9fa4-181fa681b099",
@@ -248,6 +248,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 7,
+    "cover_url": "/assets/figures/curriculum/course-07.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-07.svg",
@@ -280,8 +281,7 @@
         ],
         "stage_title": "Python与数据"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-07.svg"
+    }
   },
   {
     "id": "ff1d3a80-45b0-53cd-8d86-b1e09f126f89",
@@ -291,6 +291,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 8,
+    "cover_url": "/assets/figures/curriculum/course-08.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-08.svg",
@@ -323,8 +324,7 @@
         ],
         "stage_title": "Python与数据"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-08.svg"
+    }
   },
   {
     "id": "b835bc80-0f25-5563-96cd-e4ff3971487d",
@@ -334,6 +334,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 9,
+    "cover_url": "/assets/figures/curriculum/course-09.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-09.svg",
@@ -363,8 +364,7 @@
         ],
         "stage_title": "Python与数据"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-09.svg"
+    }
   },
   {
     "id": "ae71b735-4ad5-5a1c-8766-745909819e53",
@@ -374,6 +374,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 10,
+    "cover_url": "/assets/figures/curriculum/course-10.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-10.svg",
@@ -403,8 +404,7 @@
         ],
         "stage_title": "Python与数据"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-10.svg"
+    }
   },
   {
     "id": "4a046f20-d764-512c-94aa-14a796b854f7",
@@ -414,6 +414,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 11,
+    "cover_url": "/assets/figures/curriculum/course-11.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-11.svg",
@@ -452,8 +453,7 @@
         ],
         "stage_title": "Python与数据"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-11.svg"
+    }
   },
   {
     "id": "2b4d4273-0270-5900-b14e-aefab04296f4",
@@ -463,6 +463,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 12,
+    "cover_url": "/assets/figures/curriculum/course-12.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-12.svg",
@@ -495,8 +496,7 @@
         ],
         "stage_title": "Python与数据"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-12.svg"
+    }
   },
   {
     "id": "237fa8a0-bf2f-5e11-9c8a-d4383df630bd",
@@ -506,6 +506,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 13,
+    "cover_url": "/assets/figures/curriculum/course-13.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-13.svg",
@@ -533,8 +534,7 @@
         ],
         "stage_title": "概率与统计"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-13.svg"
+    }
   },
   {
     "id": "e573e560-5fd1-5378-8901-f2a803686f22",
@@ -544,6 +544,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 14,
+    "cover_url": "/assets/figures/curriculum/course-14.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-14.svg",
@@ -572,8 +573,7 @@
         ],
         "stage_title": "概率与统计"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-14.svg"
+    }
   },
   {
     "id": "bc6dd424-51d8-5950-8366-e28d6a521dfd",
@@ -583,6 +583,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 15,
+    "cover_url": "/assets/figures/curriculum/course-15.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-15.svg",
@@ -612,8 +613,7 @@
         ],
         "stage_title": "概率与统计"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-15.svg"
+    }
   },
   {
     "id": "ec346cf4-47b8-5afc-bc33-aedc69939138",
@@ -623,6 +623,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 16,
+    "cover_url": "/assets/figures/curriculum/course-16.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-16.svg",
@@ -655,8 +656,7 @@
         ],
         "stage_title": "概率与统计"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-16.svg"
+    }
   },
   {
     "id": "3da0cd68-07ac-5565-b36d-242351fe8630",
@@ -666,6 +666,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 17,
+    "cover_url": "/assets/figures/curriculum/course-17.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-17.svg",
@@ -688,8 +689,7 @@
         ],
         "stage_title": "概率与统计"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-17.svg"
+    }
   },
   {
     "id": "f2a4811d-5543-583b-9a54-927961a0205e",
@@ -699,6 +699,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 18,
+    "cover_url": "/assets/figures/curriculum/course-18.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-18.svg",
@@ -729,8 +730,7 @@
         ],
         "stage_title": "概率与统计"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-18.svg"
+    }
   },
   {
     "id": "bff8b1d6-dd3b-5493-bfa7-0af90dd52206",
@@ -740,6 +740,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 19,
+    "cover_url": "/assets/figures/curriculum/course-19.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-19.svg",
@@ -775,8 +776,7 @@
         ],
         "stage_title": "策略与回测"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-19.svg"
+    }
   },
   {
     "id": "12c2360c-d927-5fc1-94f3-e3ff3093c3b5",
@@ -786,6 +786,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 20,
+    "cover_url": "/assets/figures/curriculum/course-20.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-20.svg",
@@ -829,8 +830,7 @@
         ],
         "stage_title": "策略与回测"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-20.svg"
+    }
   },
   {
     "id": "dab15665-41af-5125-843c-44e3bc961be9",
@@ -840,6 +840,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 21,
+    "cover_url": "/assets/figures/curriculum/course-21.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-21.svg",
@@ -872,8 +873,7 @@
         ],
         "stage_title": "策略与回测"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-21.svg"
+    }
   },
   {
     "id": "4b39aaec-38bf-5cfa-9ff5-dad73d78445e",
@@ -883,6 +883,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 22,
+    "cover_url": "/assets/figures/curriculum/course-22.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-22.svg",
@@ -911,8 +912,7 @@
         ],
         "stage_title": "策略与回测"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-22.svg"
+    }
   },
   {
     "id": "9b18eb6a-ce0b-5e4c-a21f-d631e699d633",
@@ -922,6 +922,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 23,
+    "cover_url": "/assets/figures/curriculum/course-23.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-23.svg",
@@ -953,8 +954,7 @@
         ],
         "stage_title": "策略与回测"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-23.svg"
+    }
   },
   {
     "id": "bb59a320-bea8-5e95-8bed-b91f651b20e8",
@@ -964,6 +964,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 24,
+    "cover_url": "/assets/figures/curriculum/course-24.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-24.svg",
@@ -1007,8 +1008,7 @@
         ],
         "stage_title": "策略与回测"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-24.svg"
+    }
   },
   {
     "id": "e18257bb-3716-54cc-9f36-8db039bfb88d",
@@ -1018,6 +1018,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 25,
+    "cover_url": "/assets/figures/curriculum/course-25.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-25.svg",
@@ -1057,8 +1058,7 @@
         ],
         "stage_title": "因子与预测"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-25.svg"
+    }
   },
   {
     "id": "81047555-1573-51c5-a5f5-245e1ad153f5",
@@ -1068,6 +1068,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 26,
+    "cover_url": "/assets/figures/curriculum/course-26.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-26.svg",
@@ -1095,8 +1096,7 @@
         ],
         "stage_title": "因子与预测"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-26.svg"
+    }
   },
   {
     "id": "38fd9ae1-d702-56b8-a44b-23e0b0d3d8dd",
@@ -1106,6 +1106,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 27,
+    "cover_url": "/assets/figures/curriculum/course-27.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-27.svg",
@@ -1138,8 +1139,7 @@
         ],
         "stage_title": "因子与预测"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-27.svg"
+    }
   },
   {
     "id": "efa82629-1882-52a0-b5f0-fd516b02437f",
@@ -1149,6 +1149,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 28,
+    "cover_url": "/assets/figures/curriculum/course-28.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-28.svg",
@@ -1183,8 +1184,7 @@
         ],
         "stage_title": "因子与预测"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-28.svg"
+    }
   },
   {
     "id": "81071396-696a-5dc9-8192-571a62e37dd8",
@@ -1194,6 +1194,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 29,
+    "cover_url": "/assets/figures/curriculum/course-29.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-29.svg",
@@ -1229,8 +1230,7 @@
         ],
         "stage_title": "因子与预测"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-29.svg"
+    }
   },
   {
     "id": "97fbc4ce-5b58-5b72-baf1-4eb4f0c5b830",
@@ -1240,6 +1240,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 30,
+    "cover_url": "/assets/figures/curriculum/course-30.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-30.svg",
@@ -1275,8 +1276,7 @@
         ],
         "stage_title": "因子与预测"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-30.svg"
+    }
   },
   {
     "id": "89aee971-99c2-547b-8d1f-8ebefeeeca43",
@@ -1286,6 +1286,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 31,
+    "cover_url": "/assets/figures/curriculum/course-31.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-31.svg",
@@ -1323,8 +1324,7 @@
         ],
         "stage_title": "机器学习与文本"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-31.svg"
+    }
   },
   {
     "id": "65550964-5045-5251-8f46-e6fdb1ee8a98",
@@ -1334,6 +1334,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 32,
+    "cover_url": "/assets/figures/curriculum/course-32.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-32.svg",
@@ -1369,8 +1370,7 @@
         ],
         "stage_title": "机器学习与文本"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-32.svg"
+    }
   },
   {
     "id": "7ab10e25-6782-5bc7-ad39-775539177f1a",
@@ -1380,6 +1380,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 33,
+    "cover_url": "/assets/figures/curriculum/course-33.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-33.svg",
@@ -1408,8 +1409,7 @@
         ],
         "stage_title": "机器学习与文本"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-33.svg"
+    }
   },
   {
     "id": "d4f83c06-0dd3-57e7-9502-adc27474ef87",
@@ -1419,6 +1419,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 34,
+    "cover_url": "/assets/figures/curriculum/course-34.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-34.svg",
@@ -1448,8 +1449,7 @@
         ],
         "stage_title": "机器学习与文本"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-34.svg"
+    }
   },
   {
     "id": "42dd0cf1-08f8-521a-9127-60fc264e9322",
@@ -1459,6 +1459,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 35,
+    "cover_url": "/assets/figures/curriculum/course-35.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-35.svg",
@@ -1505,8 +1506,7 @@
         ],
         "stage_title": "机器学习与文本"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-35.svg"
+    }
   },
   {
     "id": "88299838-1c38-5891-867d-2c45f19fabf1",
@@ -1516,6 +1516,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 36,
+    "cover_url": "/assets/figures/curriculum/course-36.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-36.svg",
@@ -1563,8 +1564,7 @@
         ],
         "stage_title": "机器学习与文本"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-36.svg"
+    }
   },
   {
     "id": "187a0959-e828-5cfb-9b99-62d4c634b3ad",
@@ -1574,6 +1574,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 37,
+    "cover_url": "/assets/figures/curriculum/course-37.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-37.svg",
@@ -1598,8 +1599,7 @@
         ],
         "stage_title": "投资组合"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-37.svg"
+    }
   },
   {
     "id": "c4d7f105-3bf4-5140-bf3e-82b502db6ad4",
@@ -1609,6 +1609,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 38,
+    "cover_url": "/assets/figures/curriculum/course-38.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-38.svg",
@@ -1636,8 +1637,7 @@
         ],
         "stage_title": "投资组合"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-38.svg"
+    }
   },
   {
     "id": "db9a0e89-8ba3-50a3-b957-cada67896023",
@@ -1647,6 +1647,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 39,
+    "cover_url": "/assets/figures/curriculum/course-39.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-39.svg",
@@ -1670,8 +1671,7 @@
         ],
         "stage_title": "投资组合"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-39.svg"
+    }
   },
   {
     "id": "f8e9e189-08d2-5bf9-b976-abc1b5650b04",
@@ -1681,6 +1681,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 40,
+    "cover_url": "/assets/figures/curriculum/course-40.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-40.svg",
@@ -1710,8 +1711,7 @@
         ],
         "stage_title": "投资组合"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-40.svg"
+    }
   },
   {
     "id": "6fef7183-fa1f-5677-9399-443e22a36c41",
@@ -1721,6 +1721,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 41,
+    "cover_url": "/assets/figures/curriculum/course-41.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-41.svg",
@@ -1752,8 +1753,7 @@
         ],
         "stage_title": "投资组合"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-41.svg"
+    }
   },
   {
     "id": "f80ad2ab-41c7-5ad4-be82-277c2a4d8a1d",
@@ -1763,6 +1763,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 42,
+    "cover_url": "/assets/figures/curriculum/course-42.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-42.svg",
@@ -1789,8 +1790,7 @@
         ],
         "stage_title": "投资组合"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-42.svg"
+    }
   },
   {
     "id": "07349390-27cb-56f2-ae71-08c7155a7d49",
@@ -1800,6 +1800,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 43,
+    "cover_url": "/assets/figures/curriculum/course-43.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-43.svg",
@@ -1836,8 +1837,7 @@
         ],
         "stage_title": "订单簿与随机模型"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-43.svg"
+    }
   },
   {
     "id": "97001f23-12e2-5bec-a4fe-8aa30f7d7f0f",
@@ -1847,6 +1847,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 44,
+    "cover_url": "/assets/figures/curriculum/course-44.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-44.svg",
@@ -1876,8 +1877,7 @@
         ],
         "stage_title": "订单簿与随机模型"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-44.svg"
+    }
   },
   {
     "id": "8e6f594f-705f-529e-9b55-d546a1670d0d",
@@ -1887,6 +1887,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 45,
+    "cover_url": "/assets/figures/curriculum/course-45.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-45.svg",
@@ -1920,8 +1921,7 @@
         ],
         "stage_title": "订单簿与随机模型"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-45.svg"
+    }
   },
   {
     "id": "eea13418-4ca0-5528-863e-81e094d1558a",
@@ -1931,6 +1931,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 46,
+    "cover_url": "/assets/figures/curriculum/course-46.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-46.svg",
@@ -1955,8 +1956,7 @@
         ],
         "stage_title": "订单簿与随机模型"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-46.svg"
+    }
   },
   {
     "id": "b0019fe2-60ee-5006-9ee4-59fec028b7e1",
@@ -1966,6 +1966,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 47,
+    "cover_url": "/assets/figures/curriculum/course-47.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-47.svg",
@@ -1994,8 +1995,7 @@
         ],
         "stage_title": "订单簿与随机模型"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-47.svg"
+    }
   },
   {
     "id": "bd45d731-0e3c-5993-b6d4-3cb5535cf58c",
@@ -2005,6 +2005,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 48,
+    "cover_url": "/assets/figures/curriculum/course-48.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-48.svg",
@@ -2040,8 +2041,7 @@
         ],
         "stage_title": "订单簿与随机模型"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-48.svg"
+    }
   },
   {
     "id": "e2be0403-ec36-5fb4-b7a8-a6ac7cd63363",
@@ -2051,6 +2051,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 49,
+    "cover_url": "/assets/figures/curriculum/course-49.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-49.svg",
@@ -2076,8 +2077,7 @@
         ],
         "stage_title": "高频数据分析"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-49.svg"
+    }
   },
   {
     "id": "6edd7547-f11a-51a7-899f-866e2e4c1c15",
@@ -2087,6 +2087,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 50,
+    "cover_url": "/assets/figures/curriculum/course-50.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-50.svg",
@@ -2112,8 +2113,7 @@
         ],
         "stage_title": "高频数据分析"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-50.svg"
+    }
   },
   {
     "id": "db8a0687-f554-59ce-a4fc-9b7a36f30a8a",
@@ -2123,6 +2123,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 51,
+    "cover_url": "/assets/figures/curriculum/course-51.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-51.svg",
@@ -2148,8 +2149,7 @@
         ],
         "stage_title": "高频数据分析"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-51.svg"
+    }
   },
   {
     "id": "41b81729-02bc-507c-95b3-de03bc7a120e",
@@ -2159,6 +2159,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 52,
+    "cover_url": "/assets/figures/curriculum/course-52.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-52.svg",
@@ -2190,8 +2191,7 @@
         ],
         "stage_title": "高频数据分析"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-52.svg"
+    }
   },
   {
     "id": "33a4f835-6eff-532a-8b8f-780c5986d1c3",
@@ -2201,6 +2201,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 53,
+    "cover_url": "/assets/figures/curriculum/course-53.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-53.svg",
@@ -2229,8 +2230,7 @@
         ],
         "stage_title": "高频数据分析"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-53.svg"
+    }
   },
   {
     "id": "197cdde1-90eb-56ca-8dbf-465ed26a1056",
@@ -2240,6 +2240,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 54,
+    "cover_url": "/assets/figures/curriculum/course-54.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-54.svg",
@@ -2269,8 +2270,7 @@
         ],
         "stage_title": "高频数据分析"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-54.svg"
+    }
   },
   {
     "id": "8b619abd-f1eb-5d43-b522-168455ec1dfb",
@@ -2280,6 +2280,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 55,
+    "cover_url": "/assets/figures/curriculum/course-55.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-55.svg",
@@ -2308,8 +2309,7 @@
         ],
         "stage_title": "执行与做市"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-55.svg"
+    }
   },
   {
     "id": "f6ca8471-4398-5c78-ad6e-18ea385de29f",
@@ -2319,6 +2319,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 56,
+    "cover_url": "/assets/figures/curriculum/course-56.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-56.svg",
@@ -2354,8 +2355,7 @@
         ],
         "stage_title": "执行与做市"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-56.svg"
+    }
   },
   {
     "id": "46f50a2f-9165-55e5-869d-3d978499fe29",
@@ -2365,6 +2365,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 57,
+    "cover_url": "/assets/figures/curriculum/course-57.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-57.svg",
@@ -2398,8 +2399,7 @@
         ],
         "stage_title": "执行与做市"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-57.svg"
+    }
   },
   {
     "id": "dbb612fc-f8d1-5405-a870-c124b0605e5a",
@@ -2409,6 +2409,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 58,
+    "cover_url": "/assets/figures/curriculum/course-58.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-58.svg",
@@ -2436,8 +2437,7 @@
         ],
         "stage_title": "执行与做市"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-58.svg"
+    }
   },
   {
     "id": "66a57da6-89b2-510c-9eb1-c71f0ab5d3e0",
@@ -2447,6 +2447,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 59,
+    "cover_url": "/assets/figures/curriculum/course-59.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-59.svg",
@@ -2476,8 +2477,7 @@
         ],
         "stage_title": "执行与做市"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-59.svg"
+    }
   },
   {
     "id": "c5683531-8cf1-59fa-9d91-b3b8e135296e",
@@ -2487,6 +2487,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 60,
+    "cover_url": "/assets/figures/curriculum/course-60.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-60.svg",
@@ -2516,8 +2517,7 @@
         ],
         "stage_title": "执行与做市"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-60.svg"
+    }
   },
   {
     "id": "90248828-253b-5489-85a6-3724a727b023",
@@ -2527,6 +2527,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 61,
+    "cover_url": "/assets/figures/curriculum/course-61.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-61.svg",
@@ -2565,8 +2566,7 @@
         ],
         "stage_title": "研究系统与综合实践"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-61.svg"
+    }
   },
   {
     "id": "0749fe40-8e5f-56d6-99e3-2479caab89c9",
@@ -2576,6 +2576,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 62,
+    "cover_url": "/assets/figures/curriculum/course-62.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-62.svg",
@@ -2607,8 +2608,7 @@
         ],
         "stage_title": "研究系统与综合实践"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-62.svg"
+    }
   },
   {
     "id": "2ba16614-9474-5862-9cdd-8d7b600cb3fc",
@@ -2618,6 +2618,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 63,
+    "cover_url": "/assets/figures/curriculum/course-63.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-63.svg",
@@ -2641,8 +2642,7 @@
         ],
         "stage_title": "研究系统与综合实践"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-63.svg"
+    }
   },
   {
     "id": "c0c2c15b-6de9-5856-af1c-90c2eed3b0e1",
@@ -2652,6 +2652,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 64,
+    "cover_url": "/assets/figures/curriculum/course-64.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-64.svg",
@@ -2693,8 +2694,7 @@
         ],
         "stage_title": "研究系统与综合实践"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-64.svg"
+    }
   },
   {
     "id": "78427355-3eda-5a51-92ea-a7691d1e6381",
@@ -2704,6 +2704,7 @@
     "kind": "lesson",
     "status": "published",
     "sort_order": 65,
+    "cover_url": "/assets/figures/curriculum/course-65.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-65.svg",
@@ -2775,17 +2776,17 @@
         ],
         "stage_title": "研究系统与综合实践"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-65.svg"
+    }
   },
   {
     "id": "4334f49d-afe9-5b33-9bc5-4d1ce23de306",
     "slug": "quant-course-66",
     "title": "66 · 学习资料索引与职业准备",
-    "summary": "按知识依赖定位三份资料，以可复现项目和具体题目检验学习成果。",
+    "summary": "按数学、市场、数据、模型和执行方向安排学习，并梳理求职项目。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 66,
+    "cover_url": "/assets/figures/curriculum/course-66.svg",
     "metadata": {
       "curriculum": {
         "cover": "/assets/figures/curriculum/course-66.svg",
@@ -2846,7 +2847,6 @@
         ],
         "stage_title": "研究系统与综合实践"
       }
-    },
-    "cover_url": "/assets/figures/curriculum/course-66.svg"
+    }
   }
 ]

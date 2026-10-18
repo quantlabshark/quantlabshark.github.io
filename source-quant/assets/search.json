@@ -1,1 +1,237 @@
-[{"title": "01 · 从问题到可检验的研究假设", "url": "/read/?slug=research-workflow", "text": "把模糊想法写成有数据、时间边界和失败条件的研究计划。"}, {"title": "02 · 建立可重复运行的 Python 环境", "url": "/read/?slug=python-environment", "text": "理解解释器、依赖和数据路径，先把一个小实验稳定运行起来。"}, {"title": "03 · 用 NumPy 理解数组与向量计算", "url": "/read/?slug=numpy-arrays", "text": "把价格序列变成收益数组，检查形状、切片和计算单位。"}, {"title": "04 · 用 pandas 建立干净的时间索引", "url": "/read/?slug=pandas-data-cleaning", "text": "处理日期、排序和重复记录，并保留缺失数据的含义。"}, {"title": "05 · 判断一条数据何时真正可用", "url": "/read/?slug=point-in-time-data", "text": "区分报告期、披露日和修订日，建立研究的信息时间边界。"}, {"title": "06 · 从单期收益到净值与复利", "url": "/read/?slug=returns-compounding", "text": "区分简单收益、对数收益和累计净值，理解亏损后的恢复幅度。"}, {"title": "07 · 统计描述、相关性与时间依赖", "url": "/read/?slug=statistics-correlation", "text": "用小样本理解均值、波动和相关，避免把相关关系当作预测证据。"}, {"title": "08 · 构造只使用历史数据的滚动特征", "url": "/read/?slug=rolling-features", "text": "把窗口、可用时点与持仓时点分开，检查滚动计算的边界。"}, {"title": "09 · 为研究建立公平的基准", "url": "/read/?slug=benchmarks-hypotheses", "text": "用相同观察区间与口径比较规则，提前定义什么结果算支持假设。"}, {"title": "10 · 识别回测中最常见的偏差", "url": "/read/?slug=research-biases", "text": "用可见信息、历史股票池和完整实验记录约束研究过程。"}, {"title": "11 · 写出能逐笔核对的回测账本", "url": "/read/?slug=backtest-ledger", "text": "用标准库实现现金、持仓、成交费用和权益，明确新仓位从何时贡献收益。"}, {"title": "12 · 将交易成本纳入每次成交", "url": "/read/?slug=costs-and-turnover", "text": "区分成交金额、单边费率和往返成本，观察高换手规则的敏感性。"}, {"title": "13 · 阅读收益、回撤和夏普比率", "url": "/read/?slug=performance-risk", "text": "给指标写清样本、频率和年化假设，同时展示净值与下行风险。"}, {"title": "14 · 按时间划分样本外验证", "url": "/read/?slug=out-of-sample-validation", "text": "让模型只从过去学习，并为重叠标签、参数选择和最终测试留出边界。"}, {"title": "15 · 用稳健性实验检验研究结论", "url": "/read/?slug=robustness-experiments", "text": "观察参数邻域、不同区间和成本变化，保留研究失败的证据。"}, {"title": "16 · 理解组合权重与再平衡", "url": "/read/?slug=portfolio-weights", "text": "计算组合收益和价格变化后的权重，识别再平衡的真实交易需求。"}, {"title": "17 · 建立不泄漏信息的机器学习基线", "url": "/read/?slug=machine-learning-baseline", "text": "让预处理进入时间验证流程，先与朴素预测比较，再讨论交易表现。"}, {"title": "18 · 保存数据版本与实验记录", "url": "/read/?slug=reproducible-research", "text": "让一次研究可以被别人复核，记录输入、配置、环境与结果。"}, {"title": "19 · 用模拟交易检查运行过程", "url": "/read/?slug=paper-trading-monitoring", "text": "把数据、订单和持仓状态串起来，记录模拟执行与研究假设的差异。"}, {"title": "20 · 完成一份可以复核的研究报告", "url": "/read/?slug=capstone-research-report", "text": "把假设、数据、执行、验证和局限连成完整证据，交付可重复运行的项目。"}, {"title": "简单收益率", "url": "/read/?slug=ref-returns", "text": "相邻价格的比例变化。"}, {"title": "复利净值", "url": "/read/?slug=ref-compound", "text": "按顺序累乘各期增长因子。"}, {"title": "最大回撤", "url": "/read/?slug=ref-drawdown", "text": "净值相对历史高点的最大跌幅。"}, {"title": "交易成本与换手", "url": "/read/?slug=ref-cost", "text": "以成交额为基准计算手续费和滑点。"}, {"title": "未来信息与数据泄漏", "url": "/read/?slug=ref-lookahead", "text": "特征只能使用决策时已知的信息。"}, {"title": "时间序列验证", "url": "/read/?slug=ref-timesplit", "text": "保留时间顺序，并隔离标签覆盖区间。"}, {"title": "read_csv：读取表格", "url": "/read/?slug=ref-read-csv", "text": "指定日期列、数据类型和缺失值规则。"}, {"title": "sort_index：按时间排序", "url": "/read/?slug=ref-sort-index", "text": "时间顺序是滚动计算的前提。"}, {"title": "rolling：滚动窗口", "url": "/read/?slug=ref-rolling", "text": "明确窗口长度与所需最少样本。"}, {"title": "shift：移动数据位置", "url": "/read/?slug=ref-shift", "text": "用移位表达信号与成交的时间关系。"}, {"title": "isna：检查缺失数据", "url": "/read/?slug=ref-missing", "text": "先报告缺失，再决定处理方式。"}, {"title": "merge_asof：按已知时间连接", "url": "/read/?slug=ref-join", "text": "将记录与当时已经公布的数据连接。"}, {"title": "NumPy 官方文档", "url": "/read/?slug=resource-numpy", "text": "数组与数值计算的基础。"}, {"title": "pandas 官方文档", "url": "/read/?slug=resource-pandas", "text": "时间索引、表格清洗与滚动计算。"}, {"title": "scikit-learn 官方文档", "url": "/read/?slug=resource-sklearn", "text": "预处理、模型基线与防止数据泄漏。"}, {"title": "statsmodels 官方文档", "url": "/read/?slug=resource-statsmodels", "text": "统计模型与时间序列分析。"}, {"title": "Python 官方文档", "url": "/read/?slug=resource-python", "text": "解释器、数据结构与标准库。"}, {"title": "Matplotlib 官方文档", "url": "/read/?slug=resource-matplotlib", "text": "绘制研究图表并保存输出。"}, {"title": "合成价格与 Python 回测", "url": "/read/?slug=synthetic-data", "text": "504 个工作日价格点，含同口径回测程序。"}, {"title": "实践 1 · 数据审计", "url": "/read/?slug=assignment-1", "text": "提交数据来源、字段说明、重复日期和缺失值检查。"}, {"title": "实践 2 · 收益与回撤", "url": "/read/?slug=assignment-2", "text": "用合成价格计算收益和回撤，并与交互实验核对。"}, {"title": "实践 3 · 成交时间账本", "url": "/read/?slug=assignment-3", "text": "手工构造八个价格点，逐日记录信号、成交和持仓。"}, {"title": "实践 4 · 成本敏感性", "url": "/read/?slug=assignment-4", "text": "固定窗口，比较单边 0、5、10、20 基点成本。"}, {"title": "实践 5 · 样本外验证", "url": "/read/?slug=assignment-5", "text": "预先固定训练、间隔和测试区间，记录方案选择过程。"}, {"title": "实践 6 · 复现研究报告", "url": "/read/?slug=assignment-6", "text": "把数据、代码、环境和失败条件整理为可交接的研究。"}, {"title": "QuantLab 开放学习", "url": "/read/?slug=launch", "text": "20 节课程、3 个实验与 6 个任务上线。"}, {"title": "资料来源与研究约定", "url": "/read/?slug=sources-and-validation", "text": "合成数据、参考资料与实验边界。"}]
+[
+  {
+    "title": "01 · 研究问题与检验方法",
+    "url": "/read/?slug=research-workflow",
+    "text": "明确研究对象、数据范围、交易规则与评价指标。"
+  },
+  {
+    "title": "02 · 建立可重复运行的 Python 环境",
+    "url": "/read/?slug=python-environment",
+    "text": "配置解释器与依赖，检查项目路径和程序输出。"
+  },
+  {
+    "title": "03 · 用 NumPy 理解数组与向量计算",
+    "url": "/read/?slug=numpy-arrays",
+    "text": "把价格序列变成收益数组，检查形状、切片和计算单位。"
+  },
+  {
+    "title": "04 · 用 pandas 建立干净的时间索引",
+    "url": "/read/?slug=pandas-data-cleaning",
+    "text": "处理日期、排序和重复记录，并保留缺失数据的含义。"
+  },
+  {
+    "title": "05 · 数据披露与历史可用时间",
+    "url": "/read/?slug=point-in-time-data",
+    "text": "区分报告期、披露日和修订日，重建决策时可用的数据。"
+  },
+  {
+    "title": "06 · 从单期收益到净值与复利",
+    "url": "/read/?slug=returns-compounding",
+    "text": "区分简单收益、对数收益和累计净值，理解亏损后的恢复幅度。"
+  },
+  {
+    "title": "07 · 统计描述、相关性与时间依赖",
+    "url": "/read/?slug=statistics-correlation",
+    "text": "用数值示例理解均值、波动、相关性与时间依赖。"
+  },
+  {
+    "title": "08 · 构造只使用历史数据的滚动特征",
+    "url": "/read/?slug=rolling-features",
+    "text": "计算滚动特征，对齐数据可用、信号生成和持仓时间。"
+  },
+  {
+    "title": "09 · 为研究建立公平的基准",
+    "url": "/read/?slug=benchmarks-hypotheses",
+    "text": "用相同观察区间与口径比较规则，提前定义什么结果算支持假设。"
+  },
+  {
+    "title": "10 · 识别回测中最常见的偏差",
+    "url": "/read/?slug=research-biases",
+    "text": "识别未来信息、样本筛选和参数搜索引入的偏差。"
+  },
+  {
+    "title": "11 · 写出能逐笔核对的回测账本",
+    "url": "/read/?slug=backtest-ledger",
+    "text": "用标准库实现现金、持仓、成交费用和权益，明确新仓位从何时贡献收益。"
+  },
+  {
+    "title": "12 · 将交易成本纳入每次成交",
+    "url": "/read/?slug=costs-and-turnover",
+    "text": "区分成交金额、单边费率和往返成本，观察高换手规则的敏感性。"
+  },
+  {
+    "title": "13 · 阅读收益、回撤和夏普比率",
+    "url": "/read/?slug=performance-risk",
+    "text": "给指标写清样本、频率和年化假设，同时展示净值与下行风险。"
+  },
+  {
+    "title": "14 · 按时间划分样本外验证",
+    "url": "/read/?slug=out-of-sample-validation",
+    "text": "按时间划分训练、验证和测试数据，处理标签重叠与参数选择。"
+  },
+  {
+    "title": "15 · 用稳健性实验检验研究结论",
+    "url": "/read/?slug=robustness-experiments",
+    "text": "比较参数、样本区间和费用变化对研究结果的影响。"
+  },
+  {
+    "title": "16 · 理解组合权重与再平衡",
+    "url": "/read/?slug=portfolio-weights",
+    "text": "计算组合收益和价格变化后的权重，识别再平衡的真实交易需求。"
+  },
+  {
+    "title": "17 · 建立不泄漏信息的机器学习基线",
+    "url": "/read/?slug=machine-learning-baseline",
+    "text": "结合时间验证与预处理，比较线性模型和均值预测，再评价交易结果。"
+  },
+  {
+    "title": "18 · 保存数据版本与实验记录",
+    "url": "/read/?slug=reproducible-research",
+    "text": "保存输入、参数、代码版本和环境，追踪结果变化。"
+  },
+  {
+    "title": "19 · 用模拟交易检查运行过程",
+    "url": "/read/?slug=paper-trading-monitoring",
+    "text": "记录数据、订单与持仓状态，比较模拟执行与回测假设。"
+  },
+  {
+    "title": "20 · 策略研究报告的编写与复现",
+    "url": "/read/?slug=capstone-research-report",
+    "text": "组织研究假设、数据、方法与结果，附上代码和运行说明。"
+  },
+  {
+    "title": "简单收益率",
+    "url": "/read/?slug=ref-returns",
+    "text": "相邻价格的比例变化。"
+  },
+  {
+    "title": "复利净值",
+    "url": "/read/?slug=ref-compound",
+    "text": "按顺序累乘各期增长因子。"
+  },
+  {
+    "title": "最大回撤",
+    "url": "/read/?slug=ref-drawdown",
+    "text": "净值相对历史高点的最大跌幅。"
+  },
+  {
+    "title": "交易成本与换手",
+    "url": "/read/?slug=ref-cost",
+    "text": "以成交额为基准计算手续费和滑点。"
+  },
+  {
+    "title": "未来信息与数据泄漏",
+    "url": "/read/?slug=ref-lookahead",
+    "text": "特征只能使用决策时已知的信息。"
+  },
+  {
+    "title": "时间序列验证",
+    "url": "/read/?slug=ref-timesplit",
+    "text": "保留时间顺序，并隔离标签覆盖区间。"
+  },
+  {
+    "title": "read_csv：读取表格",
+    "url": "/read/?slug=ref-read-csv",
+    "text": "指定日期列、数据类型和缺失值规则。"
+  },
+  {
+    "title": "sort_index：按时间排序",
+    "url": "/read/?slug=ref-sort-index",
+    "text": "时间顺序是滚动计算的前提。"
+  },
+  {
+    "title": "rolling：滚动窗口",
+    "url": "/read/?slug=ref-rolling",
+    "text": "明确窗口长度与所需最少样本。"
+  },
+  {
+    "title": "shift：移动数据位置",
+    "url": "/read/?slug=ref-shift",
+    "text": "用移位表达信号与成交的时间关系。"
+  },
+  {
+    "title": "isna：检查缺失数据",
+    "url": "/read/?slug=ref-missing",
+    "text": "统计缺失数量，区分停牌、未上市与采集缺失。"
+  },
+  {
+    "title": "merge_asof：按已知时间连接",
+    "url": "/read/?slug=ref-join",
+    "text": "将记录与当时已经公布的数据连接。"
+  },
+  {
+    "title": "NumPy 官方文档",
+    "url": "/read/?slug=resource-numpy",
+    "text": "数组与数值计算的基础。"
+  },
+  {
+    "title": "pandas 官方文档",
+    "url": "/read/?slug=resource-pandas",
+    "text": "时间索引、表格清洗与滚动计算。"
+  },
+  {
+    "title": "scikit-learn 官方文档",
+    "url": "/read/?slug=resource-sklearn",
+    "text": "预处理、模型基线与防止数据泄漏。"
+  },
+  {
+    "title": "statsmodels 官方文档",
+    "url": "/read/?slug=resource-statsmodels",
+    "text": "统计模型与时间序列分析。"
+  },
+  {
+    "title": "Python 官方文档",
+    "url": "/read/?slug=resource-python",
+    "text": "解释器、数据结构与标准库。"
+  },
+  {
+    "title": "Matplotlib 官方文档",
+    "url": "/read/?slug=resource-matplotlib",
+    "text": "绘制研究图表并保存输出。"
+  },
+  {
+    "title": "合成价格与 Python 回测",
+    "url": "/read/?slug=synthetic-data",
+    "text": "504 个工作日价格点，含同口径回测程序。"
+  },
+  {
+    "title": "实践 1 · 数据审计",
+    "url": "/read/?slug=assignment-1",
+    "text": "提交数据来源、字段说明、重复日期和缺失值检查。"
+  },
+  {
+    "title": "实践 2 · 收益与回撤",
+    "url": "/read/?slug=assignment-2",
+    "text": "用合成价格计算收益和回撤，并与交互实验核对。"
+  },
+  {
+    "title": "实践 3 · 成交时间账本",
+    "url": "/read/?slug=assignment-3",
+    "text": "手工构造八个价格点，逐日记录信号、成交和持仓。"
+  },
+  {
+    "title": "实践 4 · 成本敏感性",
+    "url": "/read/?slug=assignment-4",
+    "text": "固定窗口，比较单边 0、5、10、20 基点成本。"
+  },
+  {
+    "title": "实践 5 · 样本外验证",
+    "url": "/read/?slug=assignment-5",
+    "text": "预先固定训练、间隔和测试区间，记录方案选择过程。"
+  },
+  {
+    "title": "实践 6 · 复现研究报告",
+    "url": "/read/?slug=assignment-6",
+    "text": "整理数据、代码、环境和验证结果，形成可复现的研究报告。"
+  },
+  {
+    "title": "QuantLab 开放学习",
+    "url": "/read/?slug=launch",
+    "text": "按入门、基础与进阶学习量化研究，结合专题、理论和笔面试练习。"
+  },
+  {
+    "title": "资料来源与研究约定",
+    "url": "/read/?slug=sources-and-validation",
+    "text": "模拟数据的生成方式、历史数据要求与结果解释。"
+  }
+]

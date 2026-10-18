@@ -2640,11 +2640,20 @@ window.foamArticleAliases=Object.freeze({"kolev-2-01-02-02":{"slug":"kolev-2-01-
   const manifest=window.QuantDownloadManifest||{},files=new Map();
   for(const d of (Array.isArray(item.metadata?.downloads)?item.metadata.downloads:[])){if(!d||typeof d!=='object'||!safeURL(d.url))continue;const url=safeURL(d.url),key=downloadKey(url),known=manifest[key];files.set(key,{...d,...known,url,label:String(d.label||known?.label||'下载案例')});}
   for(const match of String(item.body||'').matchAll(/\[([^\]]+)\]\(([^\s)]+)\)/g)){const url=safeURL(match[2]),key=downloadKey(url),known=manifest[key];if(known&&!files.has(key))files.set(key,{...known,url,label:known.label||match[1]});}
+  // Keep run instructions with the attachment when a section contains only a download and prose.
+  const sections=String(item.body||'').replace(/\r/g,'').matchAll(/^#{2,3} (?:配套代码|代码与附件|配套程序|示例代码|代码下载|本课代码|配套示例|本课案例与附件)\s*\n([\s\S]*?)(?=^#{1,3} |$(?![\s\S]))/gm);
+  for(const section of sections){const text=section[1];if(/^(?:```|~~~|\|)|!\[/m.test(text))continue;const links=[...text.matchAll(/\[([^\]]+)\]\(([^\s)]+)\)/g)],keys=[...new Set(links.map(m=>downloadKey(m[2])))];if(keys.length!==1||!files.has(keys[0]))continue;const description=text.replace(/\[[^\]]+\]\([^\s)]+\)/g,'').replace(/`([^`]+)`/g,'$1').replace(/^[\s。·|｜,，;；、]+|[\s。·|｜,，;；、]+$/g,'').replace(/\s*\n\s*/g,' ');if(description&&!/[<>]/.test(description))files.get(keys[0]).description=description;}
   return [...files.values()].slice(0,20);
  };
  lab.articleBody=item=>{
   const host=document.createElement('div');host.innerHTML=lab.markdown(item.body);
   const downloads=new Set(lab.courseDownloads(item).map(d=>downloadKey(d.url)));
+  for(const h of [...host.querySelectorAll('h2,h3')]){
+   if(!/^(配套代码|代码与附件|配套程序|示例代码|代码下载|本课代码|配套示例|本课案例与附件)$/.test(h.textContent.trim()))continue;
+   const nodes=[];let next=h.nextElementSibling;while(next&&!/^H[123]$/.test(next.tagName)){nodes.push(next);next=next.nextElementSibling;}
+   const links=nodes.flatMap(n=>[...n.querySelectorAll('a[href]')]);
+   if(links.length&&links.every(a=>downloads.has(downloadKey(a.href)))&&nodes.every(n=>n.tagName==='P'&&!n.querySelector('pre,img,table,aside,details,ul,ol'))){for(const n of nodes)n.remove();h.remove();}
+  }
   for(const p of host.querySelectorAll('p')){
    const links=[...p.querySelectorAll('a[href]')].filter(a=>downloads.has(downloadKey(a.href)));if(!links.length)continue;
    const rest=p.cloneNode(true);rest.querySelectorAll('a[href]').forEach(a=>{if(downloads.has(downloadKey(a.href)))a.remove();});

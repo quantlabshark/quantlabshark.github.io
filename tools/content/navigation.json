@@ -13,6 +13,58 @@
     "read_access": "inherit"
   },
   {
+    "id": "e3c5a0d9-13af-5cfa-b8ea-a9301bdcfd6c",
+    "key": "topic-ai",
+    "name": "人工智能在量化领域的应用",
+    "parent_id": "a99b73bc-8dcb-4d7d-84f2-a0f30d259ede",
+    "href": "/topics/ai/",
+    "description": "从收益预测、截面排序和文本分析，学习模型训练、验证与交易应用。",
+    "nav_group": "学习与研究",
+    "visible": true,
+    "sort_order": 1,
+    "revision": 2,
+    "read_access": "inherit"
+  },
+  {
+    "id": "afe3747e-9ef6-5c65-aed0-acd6a7560aac",
+    "key": "topic-alpha101",
+    "name": "Alpha101 全解读",
+    "parent_id": "a99b73bc-8dcb-4d7d-84f2-a0f30d259ede",
+    "href": "/topics/alpha101/",
+    "description": "逐项拆解 101 个公式，连接计算步骤、信号含义、实现口径与历史检验。",
+    "nav_group": "学习与研究",
+    "visible": true,
+    "sort_order": 2,
+    "revision": 2,
+    "read_access": "inherit"
+  },
+  {
+    "id": "0c1a2b30-f667-5143-a559-35e10c155085",
+    "key": "topic-factors",
+    "name": "股票截面因子挖掘",
+    "parent_id": "a99b73bc-8dcb-4d7d-84f2-a0f30d259ede",
+    "href": "/topics/factors/",
+    "description": "从数据可用时间和经济假设出发，构建因子并检验其增量信息。",
+    "nav_group": "学习与研究",
+    "visible": true,
+    "sort_order": 3,
+    "revision": 2,
+    "read_access": "inherit"
+  },
+  {
+    "id": "f6b5feeb-2b5e-552e-9f24-32acf9c49495",
+    "key": "topic-timing",
+    "name": "择时研究",
+    "parent_id": "a99b73bc-8dcb-4d7d-84f2-a0f30d259ede",
+    "href": "/topics/timing/",
+    "description": "研究趋势、波动率和市场状态，分析仓位调整的收益、成本与回撤。",
+    "nav_group": "学习与研究",
+    "visible": true,
+    "sort_order": 4,
+    "revision": 2,
+    "read_access": "inherit"
+  },
+  {
     "id": "773a34b4-8d48-4fca-9258-927b946d2914",
     "key": "start",
     "name": "快速开始",
@@ -35,6 +87,19 @@
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 20,
+    "revision": 2,
+    "read_access": "inherit"
+  },
+  {
+    "id": "17859c88-b779-5654-b120-7a4cc7b39714",
+    "key": "stochastic-calculus",
+    "name": "随机微积分及其应用",
+    "parent_id": "6c937a0e-545c-56f5-a699-90c4325073d4",
+    "href": "/theory/stochastic-calculus/",
+    "description": "概率与条件期望、布朗运动、停止时间、伊藤积分、随机微分方程、换测度与滤波。",
+    "nav_group": "学习与研究",
+    "visible": true,
+    "sort_order": 25,
     "revision": 2,
     "read_access": "inherit"
   },
@@ -78,6 +143,19 @@
     "read_access": "inherit"
   },
   {
+    "id": "19808db5-aef6-5fc5-b233-d9732a29916b",
+    "key": "quantitative-trading",
+    "name": "量化交易：算法、分析、数据、模型和优化",
+    "parent_id": "6c937a0e-545c-56f5-a699-90c4325073d4",
+    "href": "/theory/quantitative-trading/",
+    "description": "统计策略与主动组合、高频计量、订单簿模型、最优执行、做市、订单路由及交易系统。",
+    "nav_group": "学习与研究",
+    "visible": true,
+    "sort_order": 32,
+    "revision": 2,
+    "read_access": "inherit"
+  },
+  {
     "id": "44e2f2e9-a852-5af5-8a72-788df5e2df9d",
     "key": "trading-and-exchanges",
     "name": "交易与交易所：市场微观结构",
@@ -87,8 +165,8 @@
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 33,
-    "read_access": "inherit",
-    "revision": 2
+    "revision": 2,
+    "read_access": "inherit"
   },
   {
     "id": "e4929cee-404a-50b6-a5b7-e76678ca05dd",
@@ -114,6 +192,19 @@
     "visible": true,
     "sort_order": 36,
     "revision": 2,
+    "read_access": "inherit"
+  },
+  {
+    "id": "97fdde0a-c962-59ac-bdc6-f393c05faf5c",
+    "key": "interview-experience",
+    "name": "经验与求职",
+    "parent_id": null,
+    "href": "/interview/experience/",
+    "description": "公司经验、岗位要求与准备安排",
+    "nav_group": "笔试与面试",
+    "visible": true,
+    "sort_order": 36,
+    "revision": 3,
     "read_access": "inherit"
   },
   {
@@ -426,97 +517,6 @@
     "visible": true,
     "sort_order": 161,
     "revision": 2,
-    "read_access": "inherit"
-  },
-  {
-    "id": "17859c88-b779-5654-b120-7a4cc7b39714",
-    "key": "stochastic-calculus",
-    "name": "随机微积分及其应用",
-    "parent_id": "6c937a0e-545c-56f5-a699-90c4325073d4",
-    "href": "/theory/stochastic-calculus/",
-    "description": "概率与条件期望、布朗运动、停止时间、伊藤积分、随机微分方程、换测度与滤波。",
-    "nav_group": "学习与研究",
-    "visible": true,
-    "sort_order": 25,
-    "revision": 2,
-    "read_access": "inherit"
-  },
-  {
-    "id": "19808db5-aef6-5fc5-b233-d9732a29916b",
-    "key": "quantitative-trading",
-    "name": "量化交易：算法、分析、数据、模型和优化",
-    "parent_id": "6c937a0e-545c-56f5-a699-90c4325073d4",
-    "href": "/theory/quantitative-trading/",
-    "description": "统计策略与主动组合、高频计量、订单簿模型、最优执行、做市、订单路由及交易系统。",
-    "nav_group": "学习与研究",
-    "visible": true,
-    "sort_order": 32,
-    "revision": 2,
-    "read_access": "inherit"
-  },
-  {
-    "id": "e3c5a0d9-13af-5cfa-b8ea-a9301bdcfd6c",
-    "key": "topic-ai",
-    "name": "人工智能在量化领域的应用",
-    "parent_id": "a99b73bc-8dcb-4d7d-84f2-a0f30d259ede",
-    "href": "/topics/ai/",
-    "description": "从收益预测、截面排序和文本分析，学习模型训练、验证与交易应用。",
-    "nav_group": "学习与研究",
-    "visible": true,
-    "sort_order": 1,
-    "revision": 2,
-    "read_access": "inherit"
-  },
-  {
-    "id": "afe3747e-9ef6-5c65-aed0-acd6a7560aac",
-    "key": "topic-alpha101",
-    "name": "Alpha101 全解读",
-    "parent_id": "a99b73bc-8dcb-4d7d-84f2-a0f30d259ede",
-    "href": "/topics/alpha101/",
-    "description": "逐项拆解 101 个公式，连接计算步骤、信号含义、实现口径与历史检验。",
-    "nav_group": "学习与研究",
-    "visible": true,
-    "sort_order": 2,
-    "revision": 2,
-    "read_access": "inherit"
-  },
-  {
-    "id": "0c1a2b30-f667-5143-a559-35e10c155085",
-    "key": "topic-factors",
-    "name": "股票截面因子挖掘",
-    "parent_id": "a99b73bc-8dcb-4d7d-84f2-a0f30d259ede",
-    "href": "/topics/factors/",
-    "description": "从数据可用时间和经济假设出发，构建因子并检验其增量信息。",
-    "nav_group": "学习与研究",
-    "visible": true,
-    "sort_order": 3,
-    "revision": 2,
-    "read_access": "inherit"
-  },
-  {
-    "id": "f6b5feeb-2b5e-552e-9f24-32acf9c49495",
-    "key": "topic-timing",
-    "name": "择时研究",
-    "parent_id": "a99b73bc-8dcb-4d7d-84f2-a0f30d259ede",
-    "href": "/topics/timing/",
-    "description": "研究趋势、波动率和市场状态，分析仓位调整的收益、成本与回撤。",
-    "nav_group": "学习与研究",
-    "visible": true,
-    "sort_order": 4,
-    "revision": 2,
-    "read_access": "inherit"
-  },
-  {
-    "id": "97fdde0a-c962-59ac-bdc6-f393c05faf5c",
-    "key": "interview-experience",
-    "name": "经验与求职",
-    "parent_id": null,
-    "href": "/interview/experience/",
-    "description": "公司经验、岗位要求与准备安排",
-    "nav_group": "笔试与面试",
-    "visible": true,
-    "sort_order": 36,
-    "revision": 3,
     "read_access": "inherit"
   }
 ]

@@ -757,12 +757,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "4",
-        "chapter_title": "多因子模型",
-        "section": "4.1",
-        "number": 22,
         "part": "第二部分 · 因子与模型",
+        "number": 22,
+        "chapter": "4",
+        "edition": "2026-10-revised",
         "minutes": 30,
+        "section": "4.1",
         "source_pages": [
           158,
           159,
@@ -782,6 +782,7 @@
           173,
           174
         ],
+        "chapter_title": "多因子模型",
         "source_sections": [
           "4.1.1 Fama–French 三因子模型",
           "4.1.2 Carhart四因子模型",
@@ -790,8 +791,7 @@
           "4.1.5 Hou–Xue–Zhang四因子模型",
           "4.1.6 Stambaugh–Yuan四因子模型",
           "4.1.7 Daniel–Hirshleifer–Sun三因子模型"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -806,21 +806,21 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "4",
-        "chapter_title": "多因子模型",
-        "section": "4.2",
-        "number": 23,
         "part": "第二部分 · 因子与模型",
+        "number": 23,
+        "chapter": "4",
+        "edition": "2026-10-revised",
         "minutes": 20,
+        "section": "4.2",
         "source_pages": [
           175,
           176
         ],
+        "chapter_title": "多因子模型",
         "source_sections": [
           "4.2.1 Fama–MacBeth回归实证设定",
           "4.2.2 Fama–MacBeth回归结果"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -835,12 +835,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "4",
-        "chapter_title": "多因子模型",
-        "section": "4.3",
-        "number": 24,
         "part": "第二部分 · 因子与模型",
+        "number": 24,
+        "chapter": "4",
+        "edition": "2026-10-revised",
         "minutes": 25,
+        "section": "4.3",
         "source_pages": [
           177,
           178,
@@ -856,12 +856,12 @@
           188,
           189
         ],
+        "chapter_title": "多因子模型",
         "source_sections": [
           "4.3.1 两个模型",
           "4.3.2 BM、ROE与预期收益",
           "4.3.3 模型比较的实证结果"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -876,18 +876,18 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "4",
-        "chapter_title": "多因子模型",
-        "section": "4.4",
-        "number": 25,
         "part": "第二部分 · 因子与模型",
+        "number": 25,
+        "chapter": "4",
+        "edition": "2026-10-revised",
         "minutes": 20,
+        "section": "4.4",
         "source_pages": [
           190,
           191
         ],
-        "source_sections": [],
-        "edition": "2026-10-revised"
+        "chapter_title": "多因子模型",
+        "source_sections": []
       }
     }
   },
@@ -902,12 +902,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "5",
-        "chapter_title": "异象研究",
-        "section": "5.1",
-        "number": 26,
         "part": "第二部分 · 因子与模型",
+        "number": 26,
+        "chapter": "5",
+        "edition": "2026-10-revised",
         "minutes": 25,
+        "section": "5.1",
         "source_pages": [
           192,
           193,
@@ -923,13 +923,13 @@
           203,
           204
         ],
+        "chapter_title": "异象研究",
         "source_sections": [
           "5.1.1 价值因子与价值投资",
           "5.1.2 F-Score",
           "5.1.3 G-Score",
           "5.1.4 通过预期差获取超额收益"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -944,12 +944,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "5",
-        "chapter_title": "异象研究",
-        "section": "5.2",
-        "number": 27,
         "part": "第二部分 · 因子与模型",
+        "number": 27,
+        "chapter": "5",
+        "edition": "2026-10-revised",
         "minutes": 20,
+        "section": "5.2",
         "source_pages": [
           205,
           206,
@@ -961,11 +961,11 @@
           212,
           213
         ],
+        "chapter_title": "异象研究",
         "source_sections": [
           "5.2.1 金融学依据",
           "5.2.2 A股市场中的基本面锚定反转"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -980,12 +980,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "5",
-        "chapter_title": "异象研究",
-        "section": "5.3",
-        "number": 28,
         "part": "第二部分 · 因子与模型",
+        "number": 28,
+        "chapter": "5",
+        "edition": "2026-10-revised",
         "minutes": 25,
+        "section": "5.3",
         "source_pages": [
           214,
           215,
@@ -998,11 +998,11 @@
           222,
           223
         ],
+        "chapter_title": "异象研究",
         "source_sections": [
           "5.3.1 套利不对称性和特质性波动率",
           "5.3.2 A股市场中的特质性波动率异象"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -1017,12 +1017,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "6",
-        "chapter_title": "因子研究现状",
-        "section": "6.1",
-        "number": 29,
         "part": "第三部分 · 研究与实践",
+        "number": 29,
+        "chapter": "6",
+        "edition": "2026-10-revised",
         "minutes": 25,
+        "section": "6.1",
         "source_pages": [
           224,
           225,
@@ -1035,6 +1035,7 @@
           232,
           233
         ],
+        "chapter_title": "因子研究现状",
         "source_sections": [
           "6.1.1 何为p-值",
           "6.1.2 在追逐p-值的道路上狂奔",
@@ -1042,8 +1043,7 @@
           "6.1.4 正确认识p-值的含义",
           "6.1.5 多重假设检验",
           "6.1.6 先验的重要性"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -1058,12 +1058,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "6",
-        "chapter_title": "因子研究现状",
-        "section": "6.2",
-        "number": 30,
         "part": "第三部分 · 研究与实践",
+        "number": 30,
+        "chapter": "6",
+        "edition": "2026-10-revised",
         "minutes": 20,
+        "section": "6.2",
         "source_pages": [
           234,
           235,
@@ -1071,12 +1071,12 @@
           237,
           238
         ],
+        "chapter_title": "因子研究现状",
         "source_sections": [
           "6.2.1 形同意不同的投资因子",
           "6.2.2 q5模型",
           "6.2.3 因子大战"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -1091,12 +1091,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "6",
-        "chapter_title": "因子研究现状",
-        "section": "6.3",
-        "number": 31,
         "part": "第三部分 · 研究与实践",
+        "number": 31,
+        "chapter": "6",
+        "edition": "2026-10-revised",
         "minutes": 25,
+        "section": "6.3",
         "source_pages": [
           239,
           240,
@@ -1117,6 +1117,7 @@
           255,
           256
         ],
+        "chapter_title": "因子研究现状",
         "source_sections": [
           "6.3.1 套利限制",
           "6.3.2 预期中的偏差",
@@ -1124,8 +1125,7 @@
           "6.3.4 认知限制",
           "6.3.5 行为金融学与市场异象",
           "6.3.6 行为有效市场"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -1140,12 +1140,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "6",
-        "chapter_title": "因子研究现状",
-        "section": "6.4",
-        "number": 32,
         "part": "第三部分 · 研究与实践",
+        "number": 32,
+        "chapter": "6",
+        "edition": "2026-10-revised",
         "minutes": 20,
+        "section": "6.4",
         "source_pages": [
           257,
           258,
@@ -1154,12 +1154,12 @@
           261,
           262
         ],
+        "chapter_title": "因子研究现状",
         "source_sections": [
           "6.4.1 投资者情绪的度量",
           "6.4.2 投资者情绪与异象表现",
           "6.4.3 投资者情绪与市场表现"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -1174,12 +1174,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "6",
-        "chapter_title": "因子研究现状",
-        "section": "6.5",
-        "number": 33,
         "part": "第三部分 · 研究与实践",
+        "number": 33,
+        "chapter": "6",
+        "edition": "2026-10-revised",
         "minutes": 20,
+        "section": "6.5",
         "source_pages": [
           263,
           264,
@@ -1188,12 +1188,12 @@
           267,
           268
         ],
+        "chapter_title": "因子研究现状",
         "source_sections": [
           "6.5.1 风险补偿检验",
           "6.5.2 错误定价检验",
           "6.5.3 数据窥探检验"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -1208,12 +1208,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "6",
-        "chapter_title": "因子研究现状",
-        "section": "6.6",
-        "number": 34,
         "part": "第三部分 · 研究与实践",
+        "number": 34,
+        "chapter": "6",
+        "edition": "2026-10-revised",
         "minutes": 20,
+        "section": "6.6",
         "source_pages": [
           269,
           270,
@@ -1221,12 +1221,12 @@
           272,
           273
         ],
+        "chapter_title": "因子研究现状",
         "source_sections": [
           "6.6.1 曝光导致错误定价减弱",
           "6.6.2 因子拥挤",
           "6.6.3 交易成本"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -1241,12 +1241,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "6",
-        "chapter_title": "因子研究现状",
-        "section": "6.7",
-        "number": 35,
         "part": "第三部分 · 研究与实践",
+        "number": 35,
+        "chapter": "6",
+        "edition": "2026-10-revised",
         "minutes": 20,
+        "section": "6.7",
         "source_pages": [
           274,
           275,
@@ -1256,13 +1256,13 @@
           279,
           280
         ],
+        "chapter_title": "因子研究现状",
         "source_sections": [
           "6.7.1 基本面分析",
           "6.7.2 基本面量化投资",
           "6.7.3 基本面投资“因子化”的不足",
           "6.7.4 思考和讨论"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -1277,12 +1277,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "6",
-        "chapter_title": "因子研究现状",
-        "section": "6.8",
-        "number": 36,
         "part": "第三部分 · 研究与实践",
+        "number": 36,
+        "chapter": "6",
+        "edition": "2026-10-revised",
         "minutes": 30,
+        "section": "6.8",
         "source_pages": [
           281,
           282,
@@ -1295,14 +1295,14 @@
           289,
           290
         ],
+        "chapter_title": "因子研究现状",
         "source_sections": [
           "6.8.1 线性模型",
           "6.8.2 非线性模型",
           "6.8.3 模型评估与实证研究",
           "6.8.4 主成分分析和因子选择",
           "6.8.5 机器学习的问题"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -1317,12 +1317,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "7",
-        "chapter_title": "因子投资实践",
-        "section": "7.1",
-        "number": 37,
         "part": "第三部分 · 研究与实践",
+        "number": 37,
+        "chapter": "7",
+        "edition": "2026-10-revised",
         "minutes": 27,
+        "section": "7.1",
         "source_pages": [
           291,
           292,
@@ -1340,13 +1340,13 @@
           304,
           305
         ],
+        "chapter_title": "因子投资实践",
         "source_sections": [
           "7.1.1 基本术语",
           "7.1.2 寻找预测变量",
           "7.1.3 挑选预测变量",
           "7.1.4 收益率预测"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -1361,12 +1361,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "7",
-        "chapter_title": "因子投资实践",
-        "section": "7.2",
-        "number": 38,
         "part": "第三部分 · 研究与实践",
+        "number": 38,
+        "chapter": "7",
+        "edition": "2026-10-revised",
         "minutes": 34,
+        "section": "7.2",
         "source_pages": [
           306,
           307,
@@ -1380,13 +1380,13 @@
           315,
           316
         ],
+        "chapter_title": "因子投资实践",
         "source_sections": [
           "7.2.1 Barra多因子模型",
           "7.2.2 模型求解",
           "7.2.3 纯因子投资组合",
           "7.2.4 协方差矩阵求解及调整"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -1401,12 +1401,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "7",
-        "chapter_title": "因子投资实践",
-        "section": "7.3",
-        "number": 39,
         "part": "第三部分 · 研究与实践",
+        "number": 39,
+        "chapter": "7",
+        "edition": "2026-10-revised",
         "minutes": 34,
+        "section": "7.3",
         "source_pages": [
           317,
           318,
@@ -1420,14 +1420,14 @@
           326,
           327
         ],
+        "chapter_title": "因子投资实践",
         "source_sections": [
           "7.3.1 错位的收益与风险模型",
           "7.3.2 目标函数",
           "7.3.3 不同目标函数的比较",
           "7.3.4 约束条件",
           "7.3.5 交易成本模型"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -1442,12 +1442,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "7",
-        "chapter_title": "因子投资实践",
-        "section": "7.4",
-        "number": 40,
         "part": "第三部分 · 研究与实践",
+        "number": 40,
+        "chapter": "7",
+        "edition": "2026-10-revised",
         "minutes": 35,
+        "section": "7.4",
         "source_pages": [
           328,
           329,
@@ -1474,14 +1474,14 @@
           350,
           351
         ],
+        "chapter_title": "因子投资实践",
         "source_sections": [
           "7.4.1 因子指数和Smart Beta",
           "7.4.2 为什么要投资Smart Beta",
           "7.4.3 如何投资Smart Beta",
           "7.4.4 应用实践",
           "7.4.5 更多讨论"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -1496,12 +1496,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "7",
-        "chapter_title": "因子投资实践",
-        "section": "7.5",
-        "number": 41,
         "part": "第三部分 · 研究与实践",
+        "number": 41,
+        "chapter": "7",
+        "edition": "2026-10-revised",
         "minutes": 25,
+        "section": "7.5",
         "source_pages": [
           352,
           353,
@@ -1510,6 +1510,7 @@
           356,
           357
         ],
+        "chapter_title": "因子投资实践",
         "source_sections": [
           "7.5.1 按因子估值择时",
           "7.5.2 按因子动量择时",
@@ -1517,8 +1518,7 @@
           "7.5.4 按市场情绪择时",
           "7.5.5 按宏观因素择时",
           "7.5.6 因子择时很难"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -1533,12 +1533,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "7",
-        "chapter_title": "因子投资实践",
-        "section": "7.6",
-        "number": 42,
         "part": "第三部分 · 研究与实践",
+        "number": 42,
+        "chapter": "7",
+        "edition": "2026-10-revised",
         "minutes": 25,
+        "section": "7.6",
         "source_pages": [
           358,
           359,
@@ -1547,12 +1547,12 @@
           362,
           363
         ],
+        "chapter_title": "因子投资实践",
         "source_sections": [
           "7.6.1 经典风格分析",
           "7.6.2 基于多空因子的风格分析",
           "7.6.3 实例：巴菲特的投资风格"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -1567,12 +1567,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "7",
-        "chapter_title": "因子投资实践",
-        "section": "7.7",
-        "number": 43,
         "part": "第三部分 · 研究与实践",
+        "number": 43,
+        "chapter": "7",
+        "edition": "2026-10-revised",
         "minutes": 25,
+        "section": "7.7",
         "source_pages": [
           364,
           365,
@@ -1581,13 +1581,13 @@
           368,
           369
         ],
+        "chapter_title": "因子投资实践",
         "source_sections": [
           "7.7.1 两种传统风险归因方法",
           "7.7.2 风险的三要素",
           "7.7.3 从风险角度看收益相关性",
           "7.7.4 将三要素公式应用于多因子模型"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -1602,12 +1602,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "7",
-        "chapter_title": "因子投资实践",
-        "section": "7.8",
-        "number": 44,
         "part": "第三部分 · 研究与实践",
+        "number": 44,
+        "chapter": "7",
+        "edition": "2026-10-revised",
         "minutes": 26,
+        "section": "7.8",
         "source_pages": [
           370,
           371,
@@ -1618,11 +1618,11 @@
           376,
           377
         ],
+        "chapter_title": "因子投资实践",
         "source_sections": [
           "7.8.1 另类数据",
           "7.8.2 用因子实现大类资产配置"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -4865,7 +4865,7 @@
     "id": "1eeef2fc-ba81-57fd-8fd2-9a6b3155f064",
     "slug": "harris-book-29-01",
     "title": "29.1 私人研究与内幕信息的区别",
-    "summary": "结合历史制度区分信息来源、知情身份和交易行为，理解调查证据的边界。",
+    "summary": "结合历史制度区分信息来源、知情身份与交易行为，解释调查中需要核查的记录。",
     "kind": "lesson",
     "status": "published",
     "sort_order": 4085,
@@ -5027,12 +5027,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "A",
-        "chapter_title": "术语与参考",
-        "section": "A.2",
-        "number": 90,
         "part": "术语与参考",
+        "number": 90,
+        "chapter": "A",
+        "edition": "2026-10",
         "minutes": 30,
+        "section": "A.2",
+        "source_year": 2003,
         "source_pages": [
           614,
           615,
@@ -5052,11 +5053,10 @@
           629,
           630
         ],
+        "chapter_title": "术语与参考",
         "source_sections": [
           "Bibliography, printed pages 601–617"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -5066,6 +5066,7 @@
     "title": "随机增长与贴现：从变化率写出模型",
     "summary": "用人口增长和到期现金流认识漂移、噪声、指数增长与随机贴现。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5001,
     "metadata": {
       "theory_book": {
@@ -5087,8 +5088,7 @@
           "1.2"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "4d464652-90d0-5d87-b415-e88258141a29",
@@ -5096,6 +5096,7 @@
     "title": "从连续扰动到白噪声",
     "summary": "通过摆动、扩散、均值回复和三维运动，区分状态、漂移与随机扰动。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5002,
     "metadata": {
       "theory_book": {
@@ -5121,8 +5122,7 @@
           "1.7"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "68fbf5f8-54a8-531d-8c56-2dd14ef94be4",
@@ -5130,6 +5130,7 @@
     "title": "总变差与二次变差",
     "summary": "比较直线、折线和布朗路径，解释随机微积分为什么保留增量的平方。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5003,
     "metadata": {
       "theory_book": {
@@ -5151,8 +5152,7 @@
           "1.8"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "1a332241-aa4f-58ab-a991-bb12d09ed338",
@@ -5160,6 +5160,7 @@
     "title": "概率空间：结果、事件与随机变量",
     "summary": "用连续抛硬币建立概率空间，区分一次结果、事件、信息与数值记录。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5004,
     "metadata": {
       "theory_book": {
@@ -5184,8 +5185,7 @@
           "2.4"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "3fd5fdd8-50b9-56ce-bf58-abd106193629",
@@ -5193,6 +5193,7 @@
     "title": "概率积分与极限交换",
     "summary": "从加权平均构造期望，掌握单调收敛、控制收敛及其失效方式。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5005,
     "metadata": {
       "theory_book": {
@@ -5214,8 +5215,7 @@
           "2.6"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "59b72757-4d1e-5ca5-8601-d8605aa012be",
@@ -5223,6 +5223,7 @@
     "title": "分布函数、密度与独立性",
     "summary": "读懂分布函数的跳跃与连续部分，区分独立、零相关和联合正态。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5006,
     "metadata": {
       "theory_book": {
@@ -5244,8 +5245,7 @@
           "2.8"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "8690440e-7889-5d2d-93bd-2af11a476e31",
@@ -5253,6 +5253,7 @@
     "title": "期望、最小二乘与概率权重",
     "summary": "从平均误差推导均值的最优性，并用密度比理解测度变换。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5007,
     "metadata": {
       "theory_book": {
@@ -5276,8 +5277,7 @@
           "2.9.2"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "6d800d5f-a665-51dd-8a4a-245838d43ca4",
@@ -5285,6 +5285,7 @@
     "title": "正态、对数正态与 Gamma 分布",
     "summary": "从加性误差、乘性变化和等待时间认识正态、对数正态、Gamma 与卡方分布。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5008,
     "metadata": {
       "theory_book": {
@@ -5308,8 +5309,7 @@
           "2.11"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "f909d8b0-cff4-5bd3-a2d8-363e7d47aeb8",
@@ -5317,6 +5317,7 @@
     "title": "比例、计数与首达时间分布",
     "summary": "理解 Beta、Poisson、逆 Gamma 与逆高斯分布的取值范围、参数和矩。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5009,
     "metadata": {
       "theory_book": {
@@ -5337,8 +5338,7 @@
           "2.10"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "3f40a509-dcdc-5d58-89e7-38f0febfa271",
@@ -5346,6 +5346,7 @@
     "title": "条件期望：根据已知信息更新平均值",
     "summary": "从分组平均建立条件期望，再用正交分解解释最佳平方误差预测。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5010,
     "metadata": {
       "theory_book": {
@@ -5368,8 +5369,7 @@
           "2.12"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "62436037-e7d8-5b0e-8bff-721d852da2ce",
@@ -5377,6 +5377,7 @@
     "title": "条件期望的计算规则与方差分解",
     "summary": "用塔式法则、提取已知量和条件 Jensen 不等式组织多阶段计算。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5011,
     "metadata": {
       "theory_book": {
@@ -5399,8 +5400,7 @@
           "2.12"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "1051ab0b-95d6-5114-97e8-fb45cde5e3eb",
@@ -5408,6 +5408,7 @@
     "title": "概率不等式：从矩估计尾部风险",
     "summary": "推导 Jensen、Cauchy–Schwarz、Markov、Chebyshev 与 Chernoff 界，并解释适用差别。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5012,
     "metadata": {
       "theory_book": {
@@ -5431,8 +5432,7 @@
           "2.13"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "1d077a3d-3844-5c06-9d85-2af3bc37d107",
@@ -5440,6 +5440,7 @@
     "title": "随机变量的四种收敛",
     "summary": "区分几乎必然、均方、概率与分布收敛，并检查均方极限中的乘积和条件期望。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5013,
     "metadata": {
       "theory_book": {
@@ -5463,8 +5464,7 @@
           "2.15"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "b190d0ce-319c-5305-819b-a484e7d6dc27",
@@ -5472,6 +5472,7 @@
     "title": "随机过程、信息流与鞅",
     "summary": "把一串随机变量看成随时间发展的系统，建立适应性、独立增量和鞅的条件预测观点。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5014,
     "metadata": {
       "theory_book": {
@@ -5493,8 +5494,7 @@
           "2.16"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "b9464a10-5526-5c9e-9516-63d18b0df2d9",
@@ -5502,6 +5502,7 @@
     "title": "布朗运动与带漂移的连续波动",
     "summary": "从独立正态增量建立布朗运动，计算协方差、条件矩与时间缩放。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5015,
     "metadata": {
       "theory_book": {
@@ -5528,8 +5529,7 @@
           "3.6"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "78c4c8c4-489a-529e-afb6-b97ddfc29124",
@@ -5537,6 +5537,7 @@
     "title": "几何布朗运动：乘性波动与均值修正",
     "summary": "推导对数正态矩、条件预测和指数鞅，比较平均路径与中位数路径。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5016,
     "metadata": {
       "theory_book": {
@@ -5557,8 +5558,7 @@
           "3.2"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "6cea5c42-e7f7-523f-bae9-fc94e414f211",
@@ -5566,6 +5566,7 @@
     "title": "积分布朗运动与累计随机影响",
     "summary": "计算布朗路径的时间积分及其指数，理解协方差、条件预测和积累效应。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5017,
     "metadata": {
       "theory_book": {
@@ -5589,8 +5590,7 @@
           "3.4"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "427531af-4698-5803-84f6-13d588e17d21",
@@ -5598,6 +5598,7 @@
     "title": "布朗桥与 Bessel 过程",
     "summary": "认识固定终点的高斯路径和多维布朗运动的距离，推导协方差与径向分布。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5018,
     "metadata": {
       "theory_book": {
@@ -5620,8 +5621,7 @@
           "3.7"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "c7ed8205-38bc-57b8-8a94-403be4b42e6a",
@@ -5629,6 +5629,7 @@
     "title": "Poisson 过程与相邻事件的等待时间",
     "summary": "由事件计数建立 Poisson 过程，推导独立增量、补偿鞅和指数间隔。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5019,
     "metadata": {
       "theory_book": {
@@ -5652,8 +5653,7 @@
           "3.9"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "b72402c4-fee2-5871-b239-6879ccf119fb",
@@ -5661,6 +5661,7 @@
     "title": "第 n 次到达与累计计数",
     "summary": "利用 Gamma 分布和均匀次序统计量计算等待时间、累计工作量及其条件分布。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5020,
     "metadata": {
       "theory_book": {
@@ -5683,8 +5684,7 @@
           "3.11"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "9d9e23f8-3cdc-51c3-a206-a1a21454890b",
@@ -5692,6 +5692,7 @@
     "title": "下鞅、最大值不等式与长期平均",
     "summary": "认识条件均值向上的过程，利用 Doob 不等式控制整段路径的最大波动。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5021,
     "metadata": {
       "theory_book": {
@@ -5713,8 +5714,7 @@
           "3.12"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "0d9c50d0-ebea-5371-991f-f4abd0130343",
@@ -5722,6 +5722,7 @@
     "title": "停止时间：何时可以根据当前信息作出决定",
     "summary": "用首次越界与未来最大值区分停止规则，建立停止信息和离散近似。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5022,
     "metadata": {
       "theory_book": {
@@ -5744,8 +5745,7 @@
           "4.1"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "c898f175-7dd5-51ca-9228-5b4d6935c185",
@@ -5753,6 +5753,7 @@
     "title": "停止鞅：条件、退出概率与平均等待",
     "summary": "理解有界停止和一致可积的作用，用停止布朗运动计算双边退出问题。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5023,
     "metadata": {
       "theory_book": {
@@ -5773,8 +5774,7 @@
           "4.2"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "1bb4b59f-78f0-58c2-ae22-b2fb80da55fd",
@@ -5782,6 +5782,7 @@
     "title": "首次到达与反射原理",
     "summary": "推导布朗运动最大值和单边首达时间分布，解释几乎必到但平均等待无穷。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5024,
     "metadata": {
       "theory_book": {
@@ -5805,8 +5806,7 @@
           "4.3"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "1b12664f-591e-5b6f-9194-8f05a0759782",
@@ -5814,6 +5814,7 @@
     "title": "反正弦律：随机路径为何常偏向两端",
     "summary": "比较正区间占用时间、最后零点和最大值时刻，理解相同分布与不同路径统计量。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5025,
     "metadata": {
       "theory_book": {
@@ -5835,8 +5836,7 @@
           "4.4"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "846ca77b-8da7-5155-bf46-a82cf72aa610",
@@ -5844,6 +5844,7 @@
     "title": "带漂移的首达时间与 Laplace 变换",
     "summary": "用指数鞅和边值方程计算单边、双边首达概率及时间矩，处理未到达与跳跃超调。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5026,
     "metadata": {
       "theory_book": {
@@ -5873,8 +5874,7 @@
           "4.6"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "e044ebcd-dfed-5216-b3bb-1c7a85c34f31",
@@ -5882,6 +5882,7 @@
     "title": "最大值变换：Lévy 与 Pitman 定理",
     "summary": "从终点和历史最大值的联合密度，理解反射布朗运动与三维 Bessel 过程。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5027,
     "metadata": {
       "theory_book": {
@@ -5905,8 +5906,7 @@
           "4.7"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "a1b530dc-2aab-54aa-b9a7-f5097314ecea",
@@ -5914,6 +5914,7 @@
     "title": "长期极限与鞅收敛",
     "summary": "比较均方、路径和均值极限，用指数鞅解释一致可积为何必要。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5028,
     "metadata": {
       "theory_book": {
@@ -5937,8 +5938,7 @@
           "4.10"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "eb01dfe0-e91f-54b1-be0b-0b8edfe0f2f6",
@@ -5946,6 +5946,7 @@
     "title": "二次变差、总变差与跳跃补偿",
     "summary": "严格计算布朗与补偿 Poisson 的平方增量和，区分路径二次变差和可预测括号。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5029,
     "metadata": {
       "theory_book": {
@@ -5975,8 +5976,7 @@
           "4.12.1"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "f3f66e53-3fc8-5bff-bc6d-ab5b26377d2c",
@@ -5984,6 +5984,7 @@
     "title": "随机积分中的信息顺序与增量尺度",
     "summary": "解释为何用左端点信息加权噪声，以及布朗增量的二阶、四阶矩如何决定积分规则。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5030,
     "metadata": {
       "theory_book": {
@@ -6004,8 +6005,7 @@
           "5.2"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "f7357535-b149-580e-987c-9a8551d542ae",
@@ -6013,6 +6013,7 @@
     "title": "伊藤积分的构造与两个基本例子",
     "summary": "由简单可预测过程的均方极限定义积分，计算常数积分和布朗运动自身的积分。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5031,
     "metadata": {
       "theory_book": {
@@ -6037,8 +6038,7 @@
           "5.4.2"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "7ee3239c-58a5-5aa4-9197-306fd0b2e545",
@@ -6046,6 +6046,7 @@
     "title": "伊藤等距、鞅性质与连续版本",
     "summary": "证明随机积分的均值、协方差和条件预测性质，区分零条件均值与独立增量。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5032,
     "metadata": {
       "theory_book": {
@@ -6069,8 +6070,7 @@
           "5.5"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "56764b84-1a20-5c69-9cbd-8ac8e0c87660",
@@ -6078,6 +6078,7 @@
     "title": "Wiener 积分：确定性权重下的高斯变量",
     "summary": "计算核函数积分的正态分布、协方差和奇异性，识别仅方差相同的非布朗过程。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5033,
     "metadata": {
       "theory_book": {
@@ -6098,8 +6099,7 @@
           "5.6"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "c7ec6345-3289-57c2-9161-9bd2418d4a7e",
@@ -6107,6 +6107,7 @@
     "title": "Poisson 随机积分与跳跃前的权重",
     "summary": "将积分写成事件时刻求和，推导补偿等距、计数积分和跳跃乘积公式。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5034,
     "metadata": {
       "theory_book": {
@@ -6132,8 +6133,7 @@
           "5.8"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "55f90001-ef33-5e4e-87a8-9b154385928c",
@@ -6141,6 +6141,7 @@
     "title": "Poisson 积分的分布与随机支付模型",
     "summary": "用条件计数和均匀事件时刻推导复合 Poisson 分布，计算累计支付并处理零点概率与超调。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5035,
     "metadata": {
       "theory_book": {
@@ -6161,8 +6162,7 @@
           "5.9"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "18d49709-0498-5265-a4ed-3812341010ff",
@@ -6170,6 +6170,7 @@
     "title": "随机微分与乘积法则",
     "summary": "从增量乘积解释二次变差，并计算乘积、商和时间平均。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5036,
     "metadata": {
       "theory_book": {
@@ -6191,8 +6192,7 @@
           "6.1"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "79a21d92-2862-5a74-808b-aa2185e369ca",
@@ -6200,6 +6200,7 @@
     "title": "伊藤公式与扩散过程",
     "summary": "把二阶泰勒展开转化为随机链式法则，区分漂移和扩散的作用。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5037,
     "metadata": {
       "theory_book": {
@@ -6222,8 +6223,7 @@
           "6.2.1"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "d4aaec4d-6608-5465-88f2-534fb097cc92",
@@ -6231,6 +6231,7 @@
     "title": "多维伊藤公式与相关噪声",
     "summary": "用协方差矩阵组织交叉项，计算二维半径和调和函数。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5038,
     "metadata": {
       "theory_book": {
@@ -6251,8 +6252,7 @@
           "6.2.3"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "a061595e-1c18-5d10-8947-a5d92d6b7a25",
@@ -6260,6 +6260,7 @@
     "title": "泊松跳跃的链式法则",
     "summary": "通过一次跳跃的函数变化量推导公式，区分跳前值和跳后值。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5039,
     "metadata": {
       "theory_book": {
@@ -6280,8 +6281,7 @@
           "6.2.2"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "a5a9dbb6-e1f9-51a1-810e-42285bc0c03a",
@@ -6289,6 +6289,7 @@
     "title": "随机积分的原函数与分部积分",
     "summary": "从微分恒等式识别随机积分，解释端点项与时间积分。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5040,
     "metadata": {
       "theory_book": {
@@ -6316,8 +6317,7 @@
           "7.2"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "16883487-05d9-54b9-b62e-7662b07822ac",
@@ -6325,6 +6325,7 @@
     "title": "热方程与随机积分",
     "summary": "用后向热方程消去漂移，并区分时间方向和剩余时间。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5041,
     "metadata": {
       "theory_book": {
@@ -6348,8 +6349,7 @@
           "7.3"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "15f915bd-03c7-5c89-8a14-a4acfc0aad58",
@@ -6357,6 +6357,7 @@
     "title": "常用随机积分与计算方法选择",
     "summary": "按多项式、指数、三角函数和路径积分分类建立计算清单。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5042,
     "metadata": {
       "theory_book": {
@@ -6378,8 +6379,7 @@
           "7.4"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "75b25d55-8100-5281-baf7-64e4e2e24352",
@@ -6387,6 +6387,7 @@
     "title": "随机微分方程的解与数值路径",
     "summary": "用积分形式定义强解，并建立漂移、噪声和初值之间的关系。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5043,
     "metadata": {
       "theory_book": {
@@ -6407,8 +6408,7 @@
           "8.1"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "89b3a852-5a62-517a-ac40-0d41ecb46341",
@@ -6416,6 +6416,7 @@
     "title": "直接积分与状态变换",
     "summary": "计算加性随机方程，区分确定系数和随机系数下的分布。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5044,
     "metadata": {
       "theory_book": {
@@ -6439,8 +6440,7 @@
           "8.2"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "5efacf45-abe8-5dd0-b4e3-0a430cd9f9ba",
@@ -6448,6 +6448,7 @@
     "title": "恰当随机方程与观察法",
     "summary": "判断状态表达式是否存在，并通过匹配导数确定积分常数。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5045,
     "metadata": {
       "theory_book": {
@@ -6472,8 +6473,7 @@
           "8.4"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "84d1d87c-c5d8-5bc4-9344-df81aeb61977",
@@ -6481,6 +6481,7 @@
     "title": "线性方程、均值回复与布朗桥",
     "summary": "用确定积分因子求解线性扩散，并解释稳态方差和终点约束。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5046,
     "metadata": {
       "theory_book": {
@@ -6504,8 +6505,7 @@
           "8.5"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "e734e9de-2937-593c-a156-c9553a3853c2",
@@ -6513,6 +6513,7 @@
     "title": "泊松驱动的随机方程",
     "summary": "计算跳跃冲击的衰减累积，区分计数噪声与补偿噪声。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5047,
     "metadata": {
       "theory_book": {
@@ -6532,8 +6533,7 @@
           "8.6"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "38581358-2153-56c9-bebf-0701aa8e494b",
@@ -6541,6 +6541,7 @@
     "title": "随机积分因子与参数变易",
     "summary": "求解乘性噪声方程，解释交叉变差造成的额外漂移。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5048,
     "metadata": {
       "theory_book": {
@@ -6564,8 +6565,7 @@
           "8.8"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "648b2555-4e8b-5497-acb0-7c6777810af6",
@@ -6573,6 +6573,7 @@
     "title": "解的存在、唯一性与边界",
     "summary": "理解 Lipschitz 条件的作用，并区分局部解、爆炸和平方根扩散。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5049,
     "metadata": {
       "theory_book": {
@@ -6592,8 +6593,7 @@
           "8.9"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "b81953ad-f126-554c-9856-d94f3dc2658a",
@@ -6601,6 +6601,7 @@
     "title": "均值、方差与高阶矩方程",
     "summary": "由伊藤公式推导矩方程，识别非线性模型中的矩不封闭。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5050,
     "metadata": {
       "theory_book": {
@@ -6625,8 +6626,7 @@
           "8.10"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "e583282b-aaf3-5fea-925f-b8a26e1531aa",
@@ -6634,6 +6634,7 @@
     "title": "方向导数与扩散生成元",
     "summary": "从短时平均变化率理解生成元，并计算相关和退化扩散。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5051,
     "metadata": {
       "theory_book": {
@@ -6656,8 +6657,7 @@
           "9.2"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "ee97cf2f-2209-5e43-b593-47fe9676f873",
@@ -6665,6 +6665,7 @@
     "title": "Dynkin 公式与后向方程",
     "summary": "把随机微分的平均结果写成积分恒等式，再推导条件期望的演化。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5052,
     "metadata": {
       "theory_book": {
@@ -6686,8 +6687,7 @@
           "9.4"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "9dae15d3-80f4-5af9-8c13-2446b6dadf37",
@@ -6695,6 +6695,7 @@
     "title": "退出概率与平均退出时间",
     "summary": "用边界值问题计算先到哪一端以及需要多久。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5053,
     "metadata": {
       "theory_book": {
@@ -6715,8 +6716,7 @@
           "9.5"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "fd824f3f-1d07-5d0d-a76d-ae57b58cec50",
@@ -6724,6 +6724,7 @@
     "title": "布朗运动的再返与暂留",
     "summary": "通过球壳命中概率理解维数如何改变长期访问行为。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5054,
     "metadata": {
       "theory_book": {
@@ -6747,8 +6748,7 @@
           "9.6"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "3d27e5ef-d3cd-5f2e-b457-4aee2a443d40",
@@ -6756,6 +6756,7 @@
     "title": "特征线与 Feynman–Kac 表示",
     "summary": "把输运和扩散方程转为沿路径累积的期望。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5055,
     "metadata": {
       "theory_book": {
@@ -6779,8 +6780,7 @@
           "9.7.2"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "c9353088-4b7c-534f-b29f-6441c05af6b7",
@@ -6788,6 +6788,7 @@
     "title": "指数鞅与漂移补偿",
     "summary": "从零条件均值的积分构造鞅，并理解指数归一化和可积条件。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5056,
     "metadata": {
       "theory_book": {
@@ -6812,8 +6813,7 @@
           "10.1"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "225dcfa1-7d81-57be-921a-5b43e03cbb51",
@@ -6821,6 +6821,7 @@
     "title": "如何识别布朗运动",
     "summary": "通过连续性、鞅性质与二次变差识别新噪声，构造 Bessel 过程。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5057,
     "metadata": {
       "theory_book": {
@@ -6843,8 +6844,7 @@
           "10.2"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "066d71a6-1a05-5d12-a86d-632b24e88d57",
@@ -6852,6 +6852,7 @@
     "title": "随机时钟与鞅的时间变换",
     "summary": "用二次变差校准时间，并分析 OU、布朗桥和指数变换。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5058,
     "metadata": {
       "theory_book": {
@@ -6876,8 +6877,7 @@
           "10.3"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "7168312f-341e-5342-925a-590f3587a071",
@@ -6885,6 +6885,7 @@
     "title": "Girsanov 定理与漂移变换",
     "summary": "用指数密度改变路径权重，推导新测度下的布朗运动和漂移。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5059,
     "metadata": {
       "theory_book": {
@@ -6910,8 +6911,7 @@
           "10.4"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "87af852e-5978-5f92-a2ec-9cd65c8503fb",
@@ -6919,6 +6919,7 @@
     "title": "白噪声、速度与随机位移",
     "summary": "从时间平均定义白噪声，再求均值回复速度和位置的分布。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5060,
     "metadata": {
       "theory_book": {
@@ -6944,8 +6945,7 @@
           "11.2"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "c4411cc5-9595-57cf-94cf-97777567f8c9",
@@ -6953,6 +6953,7 @@
     "title": "衰变计数与连续测量模型",
     "summary": "区分随机存活数量、纯死亡过程和叠加测量波动的连续状态。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5061,
     "metadata": {
       "theory_book": {
@@ -6975,8 +6976,7 @@
           "11.3"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "575c4afc-4542-5099-a49d-fd445959f5de",
@@ -6984,6 +6984,7 @@
     "title": "随机摆与线性振动",
     "summary": "把二阶振动方程写成状态系统，计算协方差和能量输入。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5062,
     "metadata": {
       "theory_book": {
@@ -7006,8 +7007,7 @@
           "11.4"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "a05f3ce5-da14-5251-812e-b9cca8609f25",
@@ -7015,6 +7015,7 @@
     "title": "随机增长、容量限制与灾变",
     "summary": "比较乘性扩散、逻辑斯谛增长、泊松灾变和持续收获。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5063,
     "metadata": {
       "theory_book": {
@@ -7039,8 +7040,7 @@
           "11.5"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "24b947a5-ef52-51ea-a113-af18dfe5e074",
@@ -7048,6 +7048,7 @@
     "title": "随机利率与零息支付",
     "summary": "从贴现因子的条件期望出发，计算高斯累计利率下的债券价格。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5064,
     "metadata": {
       "theory_book": {
@@ -7067,8 +7068,7 @@
           "11.6"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "0067c586-7a74-5b53-81dd-8a333caba5af",
@@ -7076,6 +7076,7 @@
     "title": "胆固醇水平的随机模型",
     "summary": "用线性反馈模型分析浓度均值、波动和超过阈值的概率。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5065,
     "metadata": {
       "theory_book": {
@@ -7096,8 +7097,7 @@
           "11.7"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "c5d4e38f-59bf-5ed8-a5f4-d3a8f3c9a49a",
@@ -7105,6 +7105,7 @@
     "title": "光子散射与扩散逃逸时间",
     "summary": "从随机步长推导扩散系数，再计算球形区域的平均退出时间。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5066,
     "metadata": {
       "theory_book": {
@@ -7125,8 +7126,7 @@
           "11.8"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "c7b88d6a-152e-50b2-b95d-85168c08780c",
@@ -7134,6 +7134,7 @@
     "title": "连续时间滤波与信息更新",
     "summary": "区分真实状态和观测噪声，推导 Kalman–Bucy 更新及误差方程。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5067,
     "metadata": {
       "theory_book": {
@@ -7162,8 +7163,7 @@
           "11.9"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "8bd6891d-7387-5154-bd65-b4e850832199",
@@ -7171,6 +7171,7 @@
     "title": "随机分析综合练习：条件期望、停止与模型求解",
     "summary": "通过五组相互衔接的练习，选择并核对随机分析的主要方法。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 5068,
     "metadata": {
       "theory_book": {
@@ -7230,8 +7231,7 @@
           "12: Chapter 11"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "1e068f46-43b9-5c9b-aed2-8a10fd08aafa",
@@ -7239,6 +7239,7 @@
     "title": "双向拍卖、交易机制与逆向选择",
     "summary": "从买卖报价、成交规则与信息差异理解价格形成，再用小型拍卖计算可成交数量和交易盈余。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6001,
     "metadata": {
       "theory_book": {
@@ -7265,8 +7266,7 @@
           "1.7"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "4e779f47-8199-5cf6-bcff-8c2f5fad18dc",
@@ -7274,6 +7274,7 @@
     "title": "策略期限、基金形态与业绩指标",
     "summary": "把策略的持有期限、基金组织形式与收益评价分别讨论，计算 Sharpe、信息比率和下行风险。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6002,
     "metadata": {
       "theory_book": {
@@ -7302,8 +7303,7 @@
           "2.9"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "33192760-fbe3-59a7-90f3-2da3c7fd63fe",
@@ -7311,6 +7311,7 @@
     "title": "数据、模型、决策与研究流程",
     "summary": "用一次两资产决策说明数据处理、预测、风险优化和执行各自的作用，并建立可检查的研究记录。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6003,
     "metadata": {
       "theory_book": {
@@ -7334,8 +7335,7 @@
           "2.9"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "e74d6eab-ae70-5cd0-83e7-d4dfc4bf09a2",
@@ -7343,6 +7343,7 @@
     "title": "收益分布、价格离散与随机游走",
     "summary": "比较价格与收益、日历时间与交易时间，说明随机游走和布朗运动能描述什么，以及逐笔价格为何呈现离散和反弹。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6004,
     "metadata": {
       "theory_book": {
@@ -7367,8 +7368,7 @@
           "2.2"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "f93c979b-21d0-53fd-889f-c80b7e2bee43",
@@ -7376,6 +7376,7 @@
     "title": "均值方差组合与多因子风险",
     "summary": "从协方差展开组合风险，连接有效前沿、多因子模型与高维协方差估计，并区分可交易因子和统计因子。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6005,
     "metadata": {
       "theory_book": {
@@ -7402,8 +7403,7 @@
           "2.9"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "6addc8c1-39f4-572a-bb89-258e07a1a059",
@@ -7411,6 +7411,7 @@
     "title": "收缩估计与 Black–Litterman 观点融合",
     "summary": "利用收缩稳定均值与协方差，将市场基准和主观观点写成同一贝叶斯更新，并用数值例子解释观点置信度。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6006,
     "metadata": {
       "theory_book": {
@@ -7434,8 +7435,7 @@
           "2.9"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "d7ab2b66-2a6a-51d3-969a-5debade45faa",
@@ -7443,6 +7443,7 @@
     "title": "Bootstrap、参数不确定性与 NPEB",
     "summary": "把估计误差纳入组合风险，理解重抽样组合、预测二阶矩与非参数经验贝叶斯方法。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6007,
     "metadata": {
       "theory_book": {
@@ -7472,8 +7473,7 @@
           "2.9"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "7d4cc911-2b9a-5336-b930-de5eceb3429e",
@@ -7481,6 +7481,7 @@
     "title": "厚尾、随机时钟与条件分布",
     "summary": "从尾部概率和交易活跃度理解非正态收益，区分稳定分布、混合分布与随机时钟。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6008,
     "metadata": {
       "theory_book": {
@@ -7508,8 +7509,7 @@
           "2.9"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "a3e07421-b623-5f57-96e4-993e2300c541",
@@ -7517,6 +7517,7 @@
     "title": "ARIMA、GARCH 与鞅回归",
     "summary": "区分均值预测与波动预测，推导 GARCH 的平方收益关系，并说明高维回归如何控制复杂度。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6009,
     "metadata": {
       "theory_book": {
@@ -7544,8 +7545,7 @@
           "2.9"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "97270627-6414-5cad-8757-703ebaaee5b7",
@@ -7553,6 +7553,7 @@
     "title": "条件预测、残差重抽样与信息比率",
     "summary": "用联合残差重抽样生成多资产情景，把条件预测、因子模型和主动风险连接起来。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6010,
     "metadata": {
       "theory_book": {
@@ -7583,8 +7584,7 @@
           "2.9"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "76b0a64e-75d5-5855-96a4-62842e42d7ff",
@@ -7592,6 +7592,7 @@
     "title": "非参数信号、变点与配对交易",
     "summary": "把形态识别转化为可检验的统计规则，比较趋势、变点和均值回复信号。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6011,
     "metadata": {
       "theory_book": {
@@ -7617,8 +7618,7 @@
           "2.9"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "167cbf88-d75a-5638-b112-bcbd41732e0a",
@@ -7626,6 +7626,7 @@
     "title": "逆向、价值与宏观策略的收益机制",
     "summary": "从现金流、风险暴露和投资者行为解释策略收益，明确估值误差与持有期限的影响。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6012,
     "metadata": {
       "theory_book": {
@@ -7649,8 +7650,7 @@
           "2.9"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "df14d0e2-2b7f-513e-a1a8-94ef00902cf3",
@@ -7658,6 +7658,7 @@
     "title": "样本外评价、多重检验与尾部风险",
     "summary": "区分调参与检验，使用时间划分、联合重抽样和尾部损失评价策略。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6013,
     "metadata": {
       "theory_book": {
@@ -7689,8 +7690,7 @@
           "2.9"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "a272dc3f-5507-585c-98ef-04a51aca38a9",
@@ -7698,6 +7698,7 @@
     "title": "主动收益、另类风险暴露与基准",
     "summary": "从主动权重和可投资基准出发，辨别超额收益、因子暴露与跟踪误差。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6014,
     "metadata": {
       "theory_book": {
@@ -7726,8 +7727,7 @@
           "3.4"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "297d09e8-7ff5-5113-90b1-6feacb4712cf",
@@ -7735,6 +7735,7 @@
     "title": "交易成本、约束与持仓数量优化",
     "summary": "把买卖成本写在调仓量上，比较凸约束、持仓数量约束和离散搜索方法。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6015,
     "metadata": {
       "theory_book": {
@@ -7762,8 +7763,7 @@
           "3.4"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "8ceacfa9-5a4b-500a-87d4-b657729f2e25",
@@ -7771,6 +7771,7 @@
     "title": "Merton 配置、消费与不交易区间",
     "summary": "从财富变化推导 Merton 比例，解释消费选择和交易成本产生的不交易区间。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6016,
     "metadata": {
       "theory_book": {
@@ -7798,8 +7799,7 @@
           "3.5"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "c5790e6a-7328-5957-b7b0-7c92eebaa41f",
@@ -7807,6 +7807,7 @@
     "title": "长期增长、再平衡与通用组合",
     "summary": "区分算术收益与长期增长，推导 Kelly 比例并计算通用组合的在线更新。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6017,
     "metadata": {
       "theory_book": {
@@ -7830,8 +7831,7 @@
           "3.4"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "5cb30666-2893-56ed-b47d-b230e534c2e0",
@@ -7839,6 +7839,7 @@
     "title": "动态均值方差与参数不确定性",
     "summary": "理解多期均值方差的时间不一致，利用信号衰减、交易成本和参数学习决定调仓速度。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6018,
     "metadata": {
       "theory_book": {
@@ -7868,8 +7869,7 @@
           "3.5"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "bc5546a3-a11d-59f5-8074-32a2dff23e3a",
@@ -7877,6 +7877,7 @@
     "title": "Bellman 递推与连续时间 HJB",
     "summary": "用库存小例子推导 Bellman 递推，再从短时间展开得到连续时间 HJB 方程。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6019,
     "metadata": {
       "theory_book": {
@@ -7901,8 +7902,7 @@
           "3.4"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "b13149ff-d652-518f-9966-0c6a4cb08895",
@@ -7910,6 +7910,7 @@
     "title": "近似动态规划与价值函数学习",
     "summary": "比较策略迭代、Rollout、回归蒙特卡罗与 Q 学习，识别近似误差来自哪里。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6020,
     "metadata": {
       "theory_book": {
@@ -7936,8 +7937,7 @@
           "3.5"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "176f8c38-a6f8-56d8-99a9-6f668dae5f5c",
@@ -7945,6 +7945,7 @@
     "title": "Kalman 滤波、LQG 与分离原理",
     "summary": "用预测与修正两步估计隐藏状态，推导 Kalman 增益和 LQG 控制中的分离关系。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6021,
     "metadata": {
       "theory_book": {
@@ -7967,8 +7968,7 @@
           "3.5"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "1bc59b56-7b04-5620-927f-30b5cf41782d",
@@ -7976,6 +7976,7 @@
     "title": "逐笔数据、买卖价反弹与微观噪声",
     "summary": "区分有效价格与成交价格，推导微观噪声对已实现方差的影响。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6022,
     "metadata": {
       "theory_book": {
@@ -8007,8 +8008,7 @@
           "5.6"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "6c111e2b-8ea0-5007-807e-90846728f9e2",
@@ -8016,6 +8016,7 @@
     "title": "稀疏抽样、子样本与双尺度估计",
     "summary": "比较稀疏抽样、子样本平均和双尺度修正，理解噪声偏差与离散误差的权衡。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6023,
     "metadata": {
       "theory_book": {
@@ -8044,8 +8045,7 @@
           "4.8"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "f83bf5cf-2d02-5c7a-9252-7db8f962a353",
@@ -8053,6 +8053,7 @@
     "title": "已实现核与预平均",
     "summary": "利用相邻收益相关修正噪声，并推导预平均统计量的信号和噪声系数。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6024,
     "metadata": {
       "theory_book": {
@@ -8079,8 +8080,7 @@
           "4.8"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "177a7f7e-3ec9-5f62-ae43-ab83b1a66d70",
@@ -8088,6 +8088,7 @@
     "title": "噪声模型下的准极大似然",
     "summary": "从三对角协方差构造准似然，利用谱分解区分有效波动与观测噪声。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6025,
     "metadata": {
       "theory_book": {
@@ -8115,8 +8116,7 @@
           "4.8"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "25199335-1b3d-5301-ba67-29af45f08c6a",
@@ -8124,6 +8124,7 @@
     "title": "异步交易、Epps 效应与同步",
     "summary": "通过异步成交例子理解相关系数衰减，比较前值同步、刷新时间和重叠区间估计。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6026,
     "metadata": {
       "theory_book": {
@@ -8150,8 +8151,7 @@
           "4.8"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "f2bcdc4a-80e3-522a-8ed0-9a2ed4155910",
@@ -8159,6 +8159,7 @@
     "title": "多资产协方差与半正定估计",
     "summary": "从协变差恒等式出发，构造多资产估计并检查协方差矩阵的半正定性。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6027,
     "metadata": {
       "theory_book": {
@@ -8186,8 +8187,7 @@
           "4.8"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "f1b6f308-4ee4-517f-9202-e90e4f12757c",
@@ -8195,6 +8195,7 @@
     "title": "傅里叶估计与瞬时波动率",
     "summary": "通过频率系数估计积分方差与瞬时波动，理解频率截断和时间分辨率的关系。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6028,
     "metadata": {
       "theory_book": {
@@ -8227,8 +8228,7 @@
           "4.8"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "d1daeb7f-bed0-59e0-baee-941b7104e5e1",
@@ -8236,6 +8236,7 @@
     "title": "交易间隔、ACD 与 Hawkes 强度",
     "summary": "从交易间隔走向事件强度，推导 ACD 的长期均值与 Hawkes 的分支比率。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6029,
     "metadata": {
       "theory_book": {
@@ -8260,8 +8261,7 @@
           "4.8"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "85b032b1-e98b-5f61-a07d-4a06cf4a419d",
@@ -8269,6 +8269,7 @@
     "title": "离散价格标记与点过程联合模型",
     "summary": "分解价格是否变化、方向和幅度，并把事件间隔与交易标记放入联合模型。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6030,
     "metadata": {
       "theory_book": {
@@ -8294,8 +8295,7 @@
           "4.8"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "77b039f5-bf40-5f78-b05d-43da86a86b93",
@@ -8303,6 +8303,7 @@
     "title": "已实现 GARCH、跳跃与波动预测",
     "summary": "连接日内波动测度与日度预测，并区分连续波动、跳跃和幂变差。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6031,
     "metadata": {
       "theory_book": {
@@ -8331,8 +8332,7 @@
           "4.8"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "ed466b3f-dd8a-5180-82aa-559595ff68b2",
@@ -8340,6 +8340,7 @@
     "title": "订单簿重建、价格变化与订单流",
     "summary": "重建订单簿的事件状态，计算深度、不平衡、微价格和给定规模的成交成本。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6032,
     "metadata": {
       "theory_book": {
@@ -8371,8 +8372,7 @@
           "5.6"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "c9f6ba28-f939-5eb2-9341-0d4a51780a0c",
@@ -8380,6 +8380,7 @@
     "title": "多元订单强度与相互激励",
     "summary": "建立多类订单相互激励模型，计算长期强度，并用时间变换检验拟合。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6033,
     "metadata": {
       "theory_book": {
@@ -8411,8 +8412,7 @@
           "5.6"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "6964c458-d676-5173-8e1a-2c3d1d6a0c62",
@@ -8420,6 +8420,7 @@
     "title": "订单簿机器学习与事件标签",
     "summary": "把订单簿特征、预测标签和成交评价分开，建立按时间验证的机器学习流程。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6034,
     "metadata": {
       "theory_book": {
@@ -8446,8 +8447,7 @@
           "5.6"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "ce8e1abb-c514-5ef5-ae8d-cdc357ff60f6",
@@ -8455,6 +8455,7 @@
     "title": "买卖队列与扩散近似",
     "summary": "把买卖队列视为生灭过程，说明先耗尽概率、扩散近似和时间缩放。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6035,
     "metadata": {
       "theory_book": {
@@ -8482,8 +8483,7 @@
           "5.6"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "17c0b056-614c-5dd4-b20b-a92eeef6cc71",
@@ -8491,6 +8491,7 @@
     "title": "队列位置、流体极限与序列反应",
     "summary": "计算前方排队量的流体变化，并建立依赖订单簿状态的队列反应模型。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6036,
     "metadata": {
       "theory_book": {
@@ -8520,8 +8521,7 @@
           "5.6"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "077927c0-0bef-5b19-bac8-f7b4c85f345b",
@@ -8529,6 +8529,7 @@
     "title": "多主体市场与平均场近似",
     "summary": "比较随机订单流、异质主体与平均场博弈，用固定点理解市场相互作用。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6037,
     "metadata": {
       "theory_book": {
@@ -8551,8 +8552,7 @@
           "5.6"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "a3aedadd-c4cf-5e8c-83b6-b7853c53a660",
@@ -8560,6 +8560,7 @@
     "title": "执行成本、库存状态与离散动态规划",
     "summary": "从实施差额定义成本，推导线性冲击下的等量执行，并区分 TWAP、VWAP 与参与率。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6038,
     "metadata": {
       "theory_book": {
@@ -8585,8 +8586,7 @@
           "6.6"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "bdeee8a7-1698-5c0b-8b1f-eb929af62362",
@@ -8594,6 +8594,7 @@
     "title": "连续执行、变分法与风险速度",
     "summary": "推导风险与冲击之间的连续时间最优路径，并说明不同风险惩罚如何改变执行速度。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6039,
     "metadata": {
       "theory_book": {
@@ -8619,8 +8620,7 @@
           "6.6"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "08b94996-b6cc-52c8-81d9-98aff8980685",
@@ -8628,6 +8628,7 @@
     "title": "乘数冲击、HJB 与清算边界",
     "summary": "从逐单位成交积分推导乘数冲击，建立等待与清算的梯度约束和价格边界。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6040,
     "metadata": {
       "theory_book": {
@@ -8656,8 +8657,7 @@
           "6.6"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "e4e6a0f0-f42b-5f15-8a73-b5005c4af43c",
@@ -8665,6 +8665,7 @@
     "title": "瞬态冲击、韧性与价格操纵",
     "summary": "区分永久、暂时与瞬态冲击，利用衰减核计算往返交易成本和流动性恢复。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6041,
     "metadata": {
       "theory_book": {
@@ -8693,8 +8694,7 @@
           "6.6"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "2f254100-f4f7-5f25-b2f0-f3f64aacb6d0",
@@ -8702,6 +8702,7 @@
     "title": "订单簿形状与最优交易分拆",
     "summary": "从订单簿形状积分计算冲击成本，求解块状深度下首尾较大的执行日程。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6042,
     "metadata": {
       "theory_book": {
@@ -8724,8 +8725,7 @@
           "6.3.4"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "fa58ce4d-a4dc-5d6e-b3d6-66afc78b5089",
@@ -8733,6 +8733,7 @@
     "title": "多资产执行与交叉风险",
     "summary": "把相关库存风险和交叉冲击纳入联合执行，理解风险因子方向上的不同清算速度。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6043,
     "metadata": {
       "theory_book": {
@@ -8757,8 +8758,7 @@
           "6.6"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "9a3ac689-3da4-54fd-b565-655227e3a8df",
@@ -8766,6 +8766,7 @@
     "title": "订单配置、均值回归与马尔可夫决策",
     "summary": "把限价成交、到期补单和排队位置纳入马尔可夫决策，并连接执行数量与报价选择。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6044,
     "metadata": {
       "theory_book": {
@@ -8798,8 +8799,7 @@
           "6.6"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "843ad2e4-772c-5b49-b497-9f61580bfb6d",
@@ -8807,6 +8807,7 @@
     "title": "库存风险、保留价格与最优报价",
     "summary": "由库存损益推导保留价格和最优报价，并用有限库存状态计算报价随风险变化的幅度。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6045,
     "metadata": {
       "theory_book": {
@@ -8836,8 +8837,7 @@
           "7.9"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "7d47a45b-d4f6-534e-a714-e0ee67070a08",
@@ -8845,6 +8845,7 @@
     "title": "限价与市价的脉冲控制",
     "summary": "区分持续挂单与主动成交，解释含固定费用的库存控制区间和准变分不等式。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6046,
     "metadata": {
       "theory_book": {
@@ -8874,8 +8875,7 @@
           "7.9"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "8ae55867-2210-5401-a896-72d5e4fc5b16",
@@ -8883,6 +8883,7 @@
     "title": "跨市场路由、暗池与交易成本",
     "summary": "把价格、费用、队列与未成交成本放入同一订单路由模型，比较公开市场和暗池的成交条件。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6047,
     "metadata": {
       "theory_book": {
@@ -8906,8 +8907,7 @@
           "7.5.1"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "c9bbe008-eb3e-5a31-8816-a325834e3baa",
@@ -8915,6 +8915,7 @@
     "title": "多交易所订单分拆与随机梯度",
     "summary": "推导跨市场订单量的随机梯度，在给定市价量的例子中用成交样本求解最优分配。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6048,
     "metadata": {
       "theory_book": {
@@ -8939,8 +8940,7 @@
           "7.8"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "7f9a3b17-f2bc-59b4-8c30-6d316746c571",
@@ -8948,6 +8948,7 @@
     "title": "删失成交量与 Kaplan–Meier 估计",
     "summary": "从部分成交和全部成交的区别出发，构造离散 Kaplan–Meier 估计并识别尚未观察到的容量尾部。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6049,
     "metadata": {
       "theory_book": {
@@ -8971,8 +8972,7 @@
           "7.8"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "0729f6c2-2592-575a-9a1b-926543add261",
@@ -8980,6 +8980,7 @@
     "title": "贪心配置、探索与开发",
     "summary": "利用容量尾概率证明逐股贪心分配的最优性，并解释未知容量下为什么需要探索。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6050,
     "metadata": {
       "theory_book": {
@@ -9005,8 +9006,7 @@
           "7.9"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "91f1d1db-2f90-55a2-bccc-7a8d95f59e2d",
@@ -9014,6 +9014,7 @@
     "title": "随机拉格朗日优化与收敛",
     "summary": "以连续订单比例推导边际收益条件，用成交反馈进行投影随机逼近，并区分收敛与跟踪。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6051,
     "metadata": {
       "theory_book": {
@@ -9044,8 +9045,7 @@
           "7.9"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "5d6e8bb0-8793-5a89-ad77-d545e3d0317f",
@@ -9053,6 +9053,7 @@
     "title": "交易系统、网关与撮合引擎",
     "summary": "从一笔订单的传递过程理解网关、撮合、费用和清算，并比较不同成交分配规则。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6052,
     "metadata": {
       "theory_book": {
@@ -9090,8 +9091,7 @@
           "8.2"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "c6f95410-befc-5a6b-9129-82065ba4d901",
@@ -9099,6 +9099,7 @@
     "title": "行情传播、网络与事件顺序",
     "summary": "区分数据包、消息和市场事件，处理双路行情、丢包、时间戳与订单簿恢复。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6053,
     "metadata": {
       "theory_book": {
@@ -9130,8 +9131,7 @@
           "8.7"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "23b57872-8568-55fd-a46f-1caa0d186330",
@@ -9139,6 +9139,7 @@
     "title": "信号引擎、订单状态与性能",
     "summary": "将预测转换为订单状态机，并用尾部延迟、内存访问和浮点误差检查实现。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6054,
     "metadata": {
       "theory_book": {
@@ -9172,8 +9173,7 @@
           "8.7"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "e51d8e34-022b-50e3-ad15-c2696baa9921",
@@ -9181,6 +9181,7 @@
     "title": "市场制度、卖空与异常交易",
     "summary": "理解报价保护、卖空价格限制、暂停交易与异常订单识别，区分不同制度的约束对象。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6055,
     "metadata": {
       "theory_book": {
@@ -9212,8 +9213,7 @@
           "8.6"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "7a20daef-73ab-5b03-868d-029ba86a1166",
@@ -9221,6 +9221,7 @@
     "title": "操作风险、策略风险与压力测试",
     "summary": "用潜在仓位、压力情景和消息故障检查交易系统，并完成二进制行情解码练习。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6056,
     "metadata": {
       "theory_book": {
@@ -9252,8 +9253,7 @@
           "8.7"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "16a2a3dc-9706-59da-bbb4-b5d8db385372",
@@ -9261,6 +9261,7 @@
     "title": "鞅、停止时间与随机积分",
     "summary": "用逐步获知的信息定义鞅，理解停止时间、集中不等式、二次变差与含跳跃的伊藤公式。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6057,
     "metadata": {
       "theory_book": {
@@ -9287,8 +9288,7 @@
           "A.2"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "693d5dd2-5196-5a53-8a26-799fb114ecd0",
@@ -9296,6 +9296,7 @@
     "title": "马尔可夫链、生成元与决策",
     "summary": "从状态转移率计算停留时间与平稳分布，用退出成本方程和 Bellman 方程比较等待与主动成交。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6058,
     "metadata": {
       "theory_book": {
@@ -9318,8 +9319,7 @@
           "B.3"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "c997d684-3d93-5083-a014-5858daed9990",
@@ -9327,6 +9327,7 @@
     "title": "点过程补偿、似然与模拟",
     "summary": "从事件计数构造条件强度与补偿，推导 Hawkes 似然，使用递推和拒绝抽样完成估计与模拟。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6059,
     "metadata": {
       "theory_book": {
@@ -9354,8 +9355,7 @@
           "C.4"
         ]
       }
-    },
-    "status": "published"
+    }
   },
   {
     "id": "c224240f-7ec1-5873-a1bf-a92c6f4b2a93",
@@ -9363,6 +9363,7 @@
     "title": "弱收敛、流体极限与扩散极限",
     "summary": "区分单个时点的中心极限定理与整条路径的弱收敛，用反射映射建立队列的流体和扩散近似。",
     "kind": "lesson",
+    "status": "published",
     "sort_order": 6060,
     "metadata": {
       "theory_book": {
@@ -9385,7 +9386,6 @@
           "D.2"
         ]
       }
-    },
-    "status": "published"
+    }
   }
 ]
