@@ -91,6 +91,19 @@
     "read_access": "inherit"
   },
   {
+    "id": "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a",
+    "key": "mathematical-statistics",
+    "name": "数理统计及其应用",
+    "parent_id": "6c937a0e-545c-56f5-a699-90c4325073d4",
+    "href": "/theory/mathematical-statistics/",
+    "description": "概率分布、参数估计、假设检验、回归、方差分析、非参数统计与实验设计。",
+    "nav_group": "学习与研究",
+    "visible": true,
+    "sort_order": 24,
+    "revision": 2,
+    "read_access": "inherit"
+  },
+  {
     "id": "17859c88-b779-5654-b120-7a4cc7b39714",
     "key": "stochastic-calculus",
     "name": "随机微积分及其应用",
@@ -109,11 +122,11 @@
     "name": "因子投资：方法与实践",
     "parent_id": "6c937a0e-545c-56f5-a699-90c4325073d4",
     "href": "/theory/factor-investing/",
-    "description": "石川、刘洋溢、连祥斌著。因子构建与检验、主流多因子模型、市场异象、风险估计和投资组合管理。",
+    "description": "因子构建与检验、主流多因子模型、市场异象、风险估计和投资组合管理。",
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 26,
-    "revision": 2,
+    "revision": 3,
     "read_access": "inherit"
   },
   {
@@ -135,11 +148,11 @@
     "name": "基础理论与原理",
     "parent_id": null,
     "href": "/theory/",
-    "description": "数学基础、资产定价、投资组合与交易机制。",
+    "description": "数学基础、编程基础、资产定价、投资组合与交易机制。",
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 31,
-    "revision": 5,
+    "revision": 6,
     "read_access": "inherit"
   },
   {
@@ -161,10 +174,23 @@
     "name": "交易与交易所：市场微观结构",
     "parent_id": "6c937a0e-545c-56f5-a699-90c4325073d4",
     "href": "/theory/trading-and-exchanges/",
-    "description": "Larry Harris 著。订单与撮合、交易者与经纪商、买卖价差、流动性、交易成本和市场结构。",
+    "description": "订单与撮合、交易者与经纪商、买卖价差、流动性、交易成本和市场结构。",
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 33,
+    "revision": 3,
+    "read_access": "inherit"
+  },
+  {
+    "id": "3ba9f7c0-467b-529b-9ae6-4e5dd9022046",
+    "key": "python-data-structures",
+    "name": "Python 数据结构与算法分析",
+    "parent_id": "6c937a0e-545c-56f5-a699-90c4325073d4",
+    "href": "/theory/python-data-structures/",
+    "description": "Python 基础、复杂度、栈与队列、递归、排序、树与图、跳表、图像量化和字符串匹配。",
+    "nav_group": "学习与研究",
+    "visible": true,
+    "sort_order": 34,
     "revision": 2,
     "read_access": "inherit"
   },

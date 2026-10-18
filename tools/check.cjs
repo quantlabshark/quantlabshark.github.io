@@ -22,11 +22,22 @@ assert.equal(questions.length,100);assert.equal(coverage.files.length,97);
 for(const source of coverage.files)for(const slug of source.unit_slugs)assert(slugs.has(slug),'Missing source destination '+slug);
 assert.equal(new Set(coverage.book_coverage.map(x=>x.pdf_page)).size,96);
 const theory=JSON.parse(fs.readFileSync(path.join(__dirname,'content/theory-catalog.json'),'utf8')),books=JSON.parse(fs.readFileSync(path.join(__dirname,'content/theory-books.json'),'utf8'));
-const theoryHub=fs.readFileSync(path.join(root,'theory/index.html'),'utf8');assert.equal((theoryHub.match(/class="theory-category"/g)||[]).length,3);assert.equal((theoryHub.match(/class="lab-card theory-book-card"/g)||[]).length,books.length);
+const theoryHub=fs.readFileSync(path.join(root,'theory/index.html'),'utf8');assert.equal((theoryHub.match(/class="theory-category"/g)||[]).length,new Set(books.map(b=>b.category)).size);assert.equal((theoryHub.match(/class="lab-card theory-book-card"/g)||[]).length,books.length);
 for(const book of books){const rows=theory.filter(r=>r.metadata.theory_book.book===book.key),html=fs.readFileSync(path.join(root,'theory',book.key,'index.html'),'utf8');assert.equal(rows.length,book.units,book.key);assert.equal((html.match(/data-theory-unit/g)||[]).length,book.units,book.key);assert.equal(new Set(rows.map(r=>String(r.metadata.theory_book.chapter)).filter(c=>/^\d+$/.test(c))).size,book.chapters,book.key);}
 const bookCoverage=JSON.parse(fs.readFileSync(path.join(root,'assets/factor-book-coverage.json'),'utf8')),theorySlugs=new Set(theory.map(r=>r.slug));
 assert.equal(bookCoverage.coverage.length,422);for(const row of bookCoverage.coverage)for(const slug of row.unit_slugs)assert(theorySlugs.has(slug));
 const harrisCoverage=JSON.parse(fs.readFileSync(path.join(root,'assets/harris-book-coverage.json'),'utf8'));
+const foundations=JSON.parse(fs.readFileSync(path.join(__dirname,'content/foundations-coverage.json'),'utf8'));
+for(const book of foundations.books){
+ const rows=theory.filter(r=>r.metadata.theory_book.book===book.key);
+ assert.equal(rows.length,book.units,book.key+' unit coverage');
+ assert.equal(rows.filter(r=>r.metadata.theory_book.unit_type==='exercise').length,book.exercise_units);
+ assert.equal(rows.reduce((n,r)=>n+(r.metadata.theory_book.questions||0),0),book.questions);
+ for(const section of book.sections){assert(section.units.length>0,book.key+' '+section.section);for(const slug of section.units)assert(theorySlugs.has(slug),slug);}
+ const seen=new Set();for(const row of rows){const m=row.metadata.theory_book,key=m.chapter+'.'+m.section;assert(!seen.has(key),book.key+' duplicate '+key);seen.add(key);}
+}
+for(const f of foundations.figures)assert(fs.existsSync(path.join(root,f.url)),f.url);
+assert(!/石川、刘洋溢、连祥斌著|Larry Harris 著/.test(theoryHub),'Author names on theory cards');
 assert.equal(harrisCoverage.chapters.length,29);for(const chapter of harrisCoverage.chapters){assert(chapter.unit_slugs.length>0);for(const slug of chapter.unit_slugs)assert(theorySlugs.has(slug));assert.equal(chapter.missing_sections.length,0,'Missing Harris sections: '+chapter.chapter);}
 const expansion=JSON.parse(fs.readFileSync(path.join(__dirname,'content/theory-expansion-coverage.json'),'utf8'));
 for(const book of expansion.books){assert.equal(theory.filter(r=>r.metadata.theory_book.book===book.key).length,book.unit_count);assert.equal(book.coverage.length,book.numbered_section_count);for(const section of book.coverage){assert(section.units.length>0);for(const slug of section.units)assert(theorySlugs.has(slug),'Unlinked textbook section '+slug);}}

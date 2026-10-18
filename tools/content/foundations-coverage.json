@@ -1,0 +1,2274 @@
+{
+  "books": [
+    {
+      "key": "mathematical-statistics",
+      "chapters": 15,
+      "units": 77,
+      "teaching_units": 64,
+      "exercise_units": 13,
+      "questions": 1135,
+      "sections": [
+        {
+          "section": "1.1",
+          "title": "1.1 An Overview",
+          "units": [
+            "larsen-book-01-01"
+          ]
+        },
+        {
+          "section": "1.2",
+          "title": "1.2 Some Examples",
+          "units": [
+            "larsen-book-01-01"
+          ]
+        },
+        {
+          "section": "1.3",
+          "title": "1.3 A Brief History",
+          "units": [
+            "larsen-book-01-02"
+          ]
+        },
+        {
+          "section": "1.4",
+          "title": "1.4 A Chapter Summary",
+          "units": [
+            "larsen-book-01-01"
+          ]
+        },
+        {
+          "section": "2.1",
+          "title": "2.1 Introduction",
+          "units": [
+            "larsen-book-02-01"
+          ]
+        },
+        {
+          "section": "2.2",
+          "title": "2.2 Sample Spaces and the Algebra of Sets",
+          "units": [
+            "larsen-book-02-01",
+            "larsen-book-02-07"
+          ]
+        },
+        {
+          "section": "2.3",
+          "title": "2.3 The Probability Function",
+          "units": [
+            "larsen-book-02-01",
+            "larsen-book-02-07"
+          ]
+        },
+        {
+          "section": "2.4",
+          "title": "2.4 Conditional Probability",
+          "units": [
+            "larsen-book-02-02",
+            "larsen-book-02-07"
+          ]
+        },
+        {
+          "section": "2.5",
+          "title": "2.5 Independence",
+          "units": [
+            "larsen-book-02-03",
+            "larsen-book-02-07"
+          ]
+        },
+        {
+          "section": "2.6",
+          "title": "2.6 Combinatorics",
+          "units": [
+            "larsen-book-02-04",
+            "larsen-book-02-07"
+          ]
+        },
+        {
+          "section": "2.7",
+          "title": "2.7 Combinatorial Probability",
+          "units": [
+            "larsen-book-02-05",
+            "larsen-book-02-07"
+          ]
+        },
+        {
+          "section": "2.8",
+          "title": "2.8 Taking a Second Look at Statistics (Monte Carlo Techniques)",
+          "units": [
+            "larsen-book-02-06"
+          ]
+        },
+        {
+          "section": "3.1",
+          "title": "3.1 Introduction",
+          "units": [
+            "larsen-book-03-01"
+          ]
+        },
+        {
+          "section": "3.2",
+          "title": "3.2 Binomial and Hypergeometric Probabilities",
+          "units": [
+            "larsen-book-03-01",
+            "larsen-book-03-11"
+          ]
+        },
+        {
+          "section": "3.3",
+          "title": "3.3 Discrete Random Variables",
+          "units": [
+            "larsen-book-03-02",
+            "larsen-book-03-11"
+          ]
+        },
+        {
+          "section": "3.4",
+          "title": "3.4 Continuous Random Variables",
+          "units": [
+            "larsen-book-03-03",
+            "larsen-book-03-11"
+          ]
+        },
+        {
+          "section": "3.5",
+          "title": "3.5 Expected Values",
+          "units": [
+            "larsen-book-03-04",
+            "larsen-book-03-11"
+          ]
+        },
+        {
+          "section": "3.6",
+          "title": "3.6 The Variance",
+          "units": [
+            "larsen-book-03-05",
+            "larsen-book-03-11"
+          ]
+        },
+        {
+          "section": "3.7",
+          "title": "3.7 Joint Densities",
+          "units": [
+            "larsen-book-03-06",
+            "larsen-book-03-11"
+          ]
+        },
+        {
+          "section": "3.8",
+          "title": "3.8 Transforming and Combining Random Variables",
+          "units": [
+            "larsen-book-03-07",
+            "larsen-book-03-11"
+          ]
+        },
+        {
+          "section": "3.9",
+          "title": "3.9 Further Properties of the Mean and Variance",
+          "units": [
+            "larsen-book-03-05",
+            "larsen-book-03-11"
+          ]
+        },
+        {
+          "section": "3.10",
+          "title": "3.10 Order Statistics",
+          "units": [
+            "larsen-book-03-08",
+            "larsen-book-03-11"
+          ]
+        },
+        {
+          "section": "3.11",
+          "title": "3.11 Conditional Densities",
+          "units": [
+            "larsen-book-03-09",
+            "larsen-book-03-11"
+          ]
+        },
+        {
+          "section": "3.12",
+          "title": "3.12 Moment-Generating Functions",
+          "units": [
+            "larsen-book-03-10",
+            "larsen-book-03-11"
+          ]
+        },
+        {
+          "section": "3.13",
+          "title": "3.13 Taking a Second Look at Statistics (Interpreting Means)",
+          "units": [
+            "larsen-book-03-04"
+          ]
+        },
+        {
+          "section": "4.1",
+          "title": "4.1 Introduction",
+          "units": [
+            "larsen-book-04-01"
+          ]
+        },
+        {
+          "section": "4.2",
+          "title": "4.2 The Poisson Distribution",
+          "units": [
+            "larsen-book-04-01",
+            "larsen-book-04-06"
+          ]
+        },
+        {
+          "section": "4.3",
+          "title": "4.3 The Normal Distribution",
+          "units": [
+            "larsen-book-04-02",
+            "larsen-book-04-06"
+          ]
+        },
+        {
+          "section": "4.4",
+          "title": "4.4 The Geometric Distribution",
+          "units": [
+            "larsen-book-04-03",
+            "larsen-book-04-06"
+          ]
+        },
+        {
+          "section": "4.5",
+          "title": "4.5 The Negative Binomial Distribution",
+          "units": [
+            "larsen-book-04-03",
+            "larsen-book-04-06"
+          ]
+        },
+        {
+          "section": "4.6",
+          "title": "4.6 The Gamma Distribution",
+          "units": [
+            "larsen-book-04-04",
+            "larsen-book-04-06"
+          ]
+        },
+        {
+          "section": "4.7",
+          "title": "4.7 Taking a Second Look at Statistics (Monte Carlo Simulations)",
+          "units": [
+            "larsen-book-04-05"
+          ]
+        },
+        {
+          "section": "4.A.1",
+          "title": "Appendix 4.A.1 Properties of Frequently-Used pdfs",
+          "units": [
+            "larsen-book-04-05"
+          ]
+        },
+        {
+          "section": "4.A.2",
+          "title": "Appendix 4.A.2 A Proof of the Central Limit Theorem",
+          "units": [
+            "larsen-book-04-02"
+          ]
+        },
+        {
+          "section": "5.1",
+          "title": "5.1 Introduction",
+          "units": [
+            "larsen-book-05-01"
+          ]
+        },
+        {
+          "section": "5.2",
+          "title": "5.2 Estimating Parameters: The Method of Maximum Likelihood and the Method of Moments",
+          "units": [
+            "larsen-book-05-01",
+            "larsen-book-05-08"
+          ]
+        },
+        {
+          "section": "5.3",
+          "title": "5.3 Interval Estimation",
+          "units": [
+            "larsen-book-05-02",
+            "larsen-book-05-08"
+          ]
+        },
+        {
+          "section": "5.4",
+          "title": "5.4 Properties of Estimators",
+          "units": [
+            "larsen-book-05-03",
+            "larsen-book-05-08"
+          ]
+        },
+        {
+          "section": "5.5",
+          "title": "5.5 Minimum-Variance Estimators: The Cram´er-Rao Lower Bound",
+          "units": [
+            "larsen-book-05-04",
+            "larsen-book-05-08"
+          ]
+        },
+        {
+          "section": "5.6",
+          "title": "5.6 Sufficient Estimators",
+          "units": [
+            "larsen-book-05-05",
+            "larsen-book-05-08"
+          ]
+        },
+        {
+          "section": "5.7",
+          "title": "5.7 Consistency",
+          "units": [
+            "larsen-book-05-06",
+            "larsen-book-05-08"
+          ]
+        },
+        {
+          "section": "5.8",
+          "title": "5.8 Bayesian Estimation",
+          "units": [
+            "larsen-book-05-07",
+            "larsen-book-05-08"
+          ]
+        },
+        {
+          "section": "5.9",
+          "title": "5.9 Taking a Second Look at Statistics (Beyond Classical Estimation)",
+          "units": [
+            "larsen-book-05-06"
+          ]
+        },
+        {
+          "section": "6.1",
+          "title": "6.1 Introduction",
+          "units": [
+            "larsen-book-06-01"
+          ]
+        },
+        {
+          "section": "6.2",
+          "title": "6.2 The Decision Rule",
+          "units": [
+            "larsen-book-06-01",
+            "larsen-book-06-05"
+          ]
+        },
+        {
+          "section": "6.3",
+          "title": "6.3 Testing Binomial Data—H0: p = po",
+          "units": [
+            "larsen-book-06-01",
+            "larsen-book-06-05"
+          ]
+        },
+        {
+          "section": "6.4",
+          "title": "6.4 Type I and Type II Errors",
+          "units": [
+            "larsen-book-06-02",
+            "larsen-book-06-05"
+          ]
+        },
+        {
+          "section": "6.5",
+          "title": "6.5 A Notion of Optimality: The Generalized Likelihood Ratio",
+          "units": [
+            "larsen-book-06-03",
+            "larsen-book-06-05"
+          ]
+        },
+        {
+          "section": "6.6",
+          "title": "6.6 Taking a Second Look at Hypothesis Testing (Statistical Significance versus “Practical” Significance)",
+          "units": [
+            "larsen-book-06-04"
+          ]
+        },
+        {
+          "section": "7.1",
+          "title": "7.1 Introduction",
+          "units": [
+            "larsen-book-07-01"
+          ]
+        },
+        {
+          "section": "7.2",
+          "title": "7.2 Comparing Y−μσ/√n and Y−μS/√n",
+          "units": [
+            "larsen-book-07-01"
+          ]
+        },
+        {
+          "section": "7.3",
+          "title": "7.3 Deriving the Distribution of Y−μS/√n",
+          "units": [
+            "larsen-book-07-01",
+            "larsen-book-07-05"
+          ]
+        },
+        {
+          "section": "7.4",
+          "title": "7.4 Drawing Inferences About µ",
+          "units": [
+            "larsen-book-07-02",
+            "larsen-book-07-05"
+          ]
+        },
+        {
+          "section": "7.5",
+          "title": "7.5 Drawing Inferences About σ2",
+          "units": [
+            "larsen-book-07-03",
+            "larsen-book-07-05"
+          ]
+        },
+        {
+          "section": "7.6",
+          "title": "7.6 Taking a Second Look at Statistics (Type II Error)",
+          "units": [
+            "larsen-book-07-04"
+          ]
+        },
+        {
+          "section": "7.A.1",
+          "title": "Appendix 7.A.1 Some Distribution Results for Y and S2",
+          "units": [
+            "larsen-book-07-01"
+          ]
+        },
+        {
+          "section": "7.A.2",
+          "title": "Appendix 7.A.2 A Proof That the One-Sample t Test Is a GLRT",
+          "units": [
+            "larsen-book-07-02"
+          ]
+        },
+        {
+          "section": "7.A.3",
+          "title": "Appendix 7.A.3 A Proof of Theorem 7.5.2",
+          "units": [
+            "larsen-book-07-03"
+          ]
+        },
+        {
+          "section": "8.1",
+          "title": "8.1 Introduction",
+          "units": [
+            "larsen-book-08-01"
+          ]
+        },
+        {
+          "section": "8.2",
+          "title": "8.2 Classifying Data",
+          "units": [
+            "larsen-book-08-01",
+            "larsen-book-08-02",
+            "larsen-book-08-03"
+          ]
+        },
+        {
+          "section": "8.3",
+          "title": "8.3 Taking a Second Look at Statistics (Why Samples Are Not “Valid”!)",
+          "units": [
+            "larsen-book-08-01"
+          ]
+        },
+        {
+          "section": "9.1",
+          "title": "9.1 Introduction",
+          "units": [
+            "larsen-book-09-01"
+          ]
+        },
+        {
+          "section": "9.2",
+          "title": "9.2 Testing H0: µX = µY",
+          "units": [
+            "larsen-book-09-01",
+            "larsen-book-09-04"
+          ]
+        },
+        {
+          "section": "9.3",
+          "title": "9.3 Testing H0: s2X= s2Y—The F Test",
+          "units": [
+            "larsen-book-09-02",
+            "larsen-book-09-04"
+          ]
+        },
+        {
+          "section": "9.4",
+          "title": "9.4 Binomial Data: Testing H0: pX= pY",
+          "units": [
+            "larsen-book-09-03",
+            "larsen-book-09-04"
+          ]
+        },
+        {
+          "section": "9.5",
+          "title": "9.5 Confidence Intervals for the Two-Sample Problem",
+          "units": [
+            "larsen-book-09-03",
+            "larsen-book-09-04"
+          ]
+        },
+        {
+          "section": "9.6",
+          "title": "9.6 Taking a Second Look at Statistics (Choosing Samples)",
+          "units": [
+            "larsen-book-09-03"
+          ]
+        },
+        {
+          "section": "9.A.1",
+          "title": "Appendix 9.A.1 A Derivation of the Two-Sample t Test (A Proof of Theorem 9.2.2)",
+          "units": [
+            "larsen-book-09-01"
+          ]
+        },
+        {
+          "section": "10.1",
+          "title": "10.1 Introduction",
+          "units": [
+            "larsen-book-10-01"
+          ]
+        },
+        {
+          "section": "10.2",
+          "title": "10.2 The Multinomial Distribution",
+          "units": [
+            "larsen-book-10-01",
+            "larsen-book-10-04"
+          ]
+        },
+        {
+          "section": "10.3",
+          "title": "10.3 Goodness-of-Fit Tests: All Parameters Known",
+          "units": [
+            "larsen-book-10-01",
+            "larsen-book-10-04"
+          ]
+        },
+        {
+          "section": "10.4",
+          "title": "10.4 Goodness-of-Fit Tests: Parameters Unknown",
+          "units": [
+            "larsen-book-10-02",
+            "larsen-book-10-04"
+          ]
+        },
+        {
+          "section": "10.5",
+          "title": "10.5 Contingency Tables",
+          "units": [
+            "larsen-book-10-03",
+            "larsen-book-10-04"
+          ]
+        },
+        {
+          "section": "10.6",
+          "title": "10.6 Taking a Second Look at Statistics (Outliers)",
+          "units": [
+            "larsen-book-10-03"
+          ]
+        },
+        {
+          "section": "11.1",
+          "title": "11.1 Introduction",
+          "units": [
+            "larsen-book-11-01"
+          ]
+        },
+        {
+          "section": "11.2",
+          "title": "11.2 The Method of Least Squares",
+          "units": [
+            "larsen-book-11-01",
+            "larsen-book-11-04"
+          ]
+        },
+        {
+          "section": "11.3",
+          "title": "11.3 The Linear Model",
+          "units": [
+            "larsen-book-11-02",
+            "larsen-book-11-04"
+          ]
+        },
+        {
+          "section": "11.4",
+          "title": "11.4 Covariance and Correlation",
+          "units": [
+            "larsen-book-11-03",
+            "larsen-book-11-04"
+          ]
+        },
+        {
+          "section": "11.5",
+          "title": "11.5 The Bivariate Normal Distribution",
+          "units": [
+            "larsen-book-11-03",
+            "larsen-book-11-04"
+          ]
+        },
+        {
+          "section": "11.6",
+          "title": "11.6 Taking a Second Look at Statistics (How Not to Interpret the Sample Correlation Coefficient)",
+          "units": [
+            "larsen-book-11-03"
+          ]
+        },
+        {
+          "section": "11.A.1",
+          "title": "Appendix 11.A.1 A Proof of Theorem 11.3.3",
+          "units": [
+            "larsen-book-11-02"
+          ]
+        },
+        {
+          "section": "12.1",
+          "title": "12.1 Introduction",
+          "units": [
+            "larsen-book-12-01"
+          ]
+        },
+        {
+          "section": "12.2",
+          "title": "12.2 The F Test",
+          "units": [
+            "larsen-book-12-01",
+            "larsen-book-12-04"
+          ]
+        },
+        {
+          "section": "12.3",
+          "title": "12.3 Multiple Comparisons: Tukey’s Method",
+          "units": [
+            "larsen-book-12-02",
+            "larsen-book-12-04"
+          ]
+        },
+        {
+          "section": "12.4",
+          "title": "12.4 Testing Subhypotheses with Contrasts",
+          "units": [
+            "larsen-book-12-02",
+            "larsen-book-12-04"
+          ]
+        },
+        {
+          "section": "12.5",
+          "title": "12.5 Data Transformations",
+          "units": [
+            "larsen-book-12-03",
+            "larsen-book-12-04"
+          ]
+        },
+        {
+          "section": "12.6",
+          "title": "12.6 Taking a Second Look at Statistics (Putting the Subject of Statistics Together—The Contributions of Ronald A. Fisher)",
+          "units": [
+            "larsen-book-12-03"
+          ]
+        },
+        {
+          "section": "12.A.1",
+          "title": "Appendix 12.A.1 A Proof of Theorem 12.2.2",
+          "units": [
+            "larsen-book-12-01"
+          ]
+        },
+        {
+          "section": "12.A.2",
+          "title": "Appendix 12.A.2 The Distribution of SSTR/(k-1) SSE/(n-k) When H1 Is True",
+          "units": [
+            "larsen-book-12-03",
+            "larsen-book-12-04"
+          ]
+        },
+        {
+          "section": "13.1",
+          "title": "13.1 Introduction",
+          "units": [
+            "larsen-book-13-01"
+          ]
+        },
+        {
+          "section": "13.2",
+          "title": "13.2 The F Test for a Randomized Block Design",
+          "units": [
+            "larsen-book-13-01",
+            "larsen-book-13-03"
+          ]
+        },
+        {
+          "section": "13.3",
+          "title": "13.3 The Paired t Test",
+          "units": [
+            "larsen-book-13-02",
+            "larsen-book-13-03"
+          ]
+        },
+        {
+          "section": "13.4",
+          "title": "13.4 Taking a Second Look at Statistics (Choosing between a Two-Sample t Test and a Paired t Test)",
+          "units": [
+            "larsen-book-13-02"
+          ]
+        },
+        {
+          "section": "14.1",
+          "title": "14.1 Introduction",
+          "units": [
+            "larsen-book-14-01"
+          ]
+        },
+        {
+          "section": "14.2",
+          "title": "14.2 The Sign Test",
+          "units": [
+            "larsen-book-14-01",
+            "larsen-book-14-05"
+          ]
+        },
+        {
+          "section": "14.3",
+          "title": "14.3 Wilcoxon Tests",
+          "units": [
+            "larsen-book-14-02",
+            "larsen-book-14-05"
+          ]
+        },
+        {
+          "section": "14.4",
+          "title": "14.4 The Kruskal-Wallis Test",
+          "units": [
+            "larsen-book-14-03",
+            "larsen-book-14-05"
+          ]
+        },
+        {
+          "section": "14.5",
+          "title": "14.5 The Friedman Test",
+          "units": [
+            "larsen-book-14-03",
+            "larsen-book-14-05"
+          ]
+        },
+        {
+          "section": "14.6",
+          "title": "14.6 Testing for Randomness",
+          "units": [
+            "larsen-book-14-04",
+            "larsen-book-14-05"
+          ]
+        },
+        {
+          "section": "14.7",
+          "title": "14.7 Taking a Second Look at Statistics (Comparing Parametric and Nonparametric Procedures)",
+          "units": [
+            "larsen-book-14-04"
+          ]
+        },
+        {
+          "section": "15.1",
+          "title": "析因设计",
+          "units": [
+            "larsen-book-15-01"
+          ]
+        },
+        {
+          "section": "15.2",
+          "title": "析因设计",
+          "units": [
+            "larsen-book-15-01"
+          ]
+        },
+        {
+          "section": "15.3",
+          "title": "析因设计",
+          "units": [
+            "larsen-book-15-02"
+          ]
+        },
+        {
+          "section": "15.4",
+          "title": "析因设计",
+          "units": [
+            "larsen-book-15-02"
+          ]
+        },
+        {
+          "section": "15.5",
+          "title": "析因设计",
+          "units": [
+            "larsen-book-15-02"
+          ]
+        },
+        {
+          "section": "15.6",
+          "title": "析因设计",
+          "units": [
+            "larsen-book-15-03"
+          ]
+        },
+        {
+          "section": "15.7",
+          "title": "析因设计",
+          "units": [
+            "larsen-book-15-03"
+          ]
+        },
+        {
+          "section": "15.8",
+          "title": "析因设计",
+          "units": [
+            "larsen-book-15-04"
+          ]
+        },
+        {
+          "section": "A",
+          "title": "统计表",
+          "units": [
+            "larsen-book-a-01"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "python-data-structures",
+      "chapters": 8,
+      "units": 52,
+      "teaching_units": 44,
+      "exercise_units": 8,
+      "questions": 176,
+      "sections": [
+        {
+          "section": "1.1",
+          "title": "1.1　本章目标",
+          "units": [
+            "miller-book-01-01"
+          ]
+        },
+        {
+          "section": "1.2",
+          "title": "1.2　入门",
+          "units": [
+            "miller-book-01-01"
+          ]
+        },
+        {
+          "section": "1.3",
+          "title": "1.3　何谓计算机科学",
+          "units": [
+            "miller-book-01-01"
+          ]
+        },
+        {
+          "section": "1.3.1",
+          "title": "1.3.1　何谓编程",
+          "units": [
+            "miller-book-01-01"
+          ]
+        },
+        {
+          "section": "1.3.2",
+          "title": "1.3.2　为何学习数据结构及抽象数据类型",
+          "units": [
+            "miller-book-01-01"
+          ]
+        },
+        {
+          "section": "1.3.3",
+          "title": "1.3.3　为何学习算法",
+          "units": [
+            "miller-book-01-01"
+          ]
+        },
+        {
+          "section": "1.4",
+          "title": "1.4　Python基础",
+          "units": [
+            "miller-book-01-02",
+            "miller-book-01-03",
+            "miller-book-01-04",
+            "miller-book-01-05"
+          ]
+        },
+        {
+          "section": "1.4.1",
+          "title": "1.4.1　数据",
+          "units": [
+            "miller-book-01-02"
+          ]
+        },
+        {
+          "section": "1.4.2",
+          "title": "1.4.2　输入与输出",
+          "units": [
+            "miller-book-01-03"
+          ]
+        },
+        {
+          "section": "1.4.3",
+          "title": "1.4.3　控制结构",
+          "units": [
+            "miller-book-01-03"
+          ]
+        },
+        {
+          "section": "1.4.4",
+          "title": "1.4.4　异常处理",
+          "units": [
+            "miller-book-01-03"
+          ]
+        },
+        {
+          "section": "1.4.5",
+          "title": "1.4.5　定义函数",
+          "units": [
+            "miller-book-01-03"
+          ]
+        },
+        {
+          "section": "1.4.6",
+          "title": "1.4.6　Python面向对象编程：定义类",
+          "units": [
+            "miller-book-01-04",
+            "miller-book-01-05"
+          ]
+        },
+        {
+          "section": "1.5",
+          "title": "1.5　小结",
+          "units": [
+            "miller-book-01-01"
+          ]
+        },
+        {
+          "section": "1.6",
+          "title": "1.6　关键术语",
+          "units": [
+            "miller-book-01-01"
+          ]
+        },
+        {
+          "section": "1.7",
+          "title": "1.7　讨论题",
+          "units": [
+            "miller-book-01-06"
+          ]
+        },
+        {
+          "section": "1.8",
+          "title": "1.8　编程练习",
+          "units": [
+            "miller-book-01-06"
+          ]
+        },
+        {
+          "section": "2.1",
+          "title": "2.1　本章目标",
+          "units": [
+            "miller-book-02-01"
+          ]
+        },
+        {
+          "section": "2.2",
+          "title": "2.2　何谓算法分析",
+          "units": [
+            "miller-book-02-01",
+            "miller-book-02-02"
+          ]
+        },
+        {
+          "section": "2.2.1",
+          "title": "2.2.1　大O记法",
+          "units": [
+            "miller-book-02-01"
+          ]
+        },
+        {
+          "section": "2.2.2",
+          "title": "2.2.2　异序词检测示例",
+          "units": [
+            "miller-book-02-01",
+            "miller-book-02-02"
+          ]
+        },
+        {
+          "section": "2.3",
+          "title": "2.3　Python数据结构的性能",
+          "units": [
+            "miller-book-02-03"
+          ]
+        },
+        {
+          "section": "2.3.1",
+          "title": "2.3.1　列表",
+          "units": [
+            "miller-book-02-03"
+          ]
+        },
+        {
+          "section": "2.3.2",
+          "title": "2.3.2　字典",
+          "units": [
+            "miller-book-02-03"
+          ]
+        },
+        {
+          "section": "2.4",
+          "title": "2.4　小结",
+          "units": [
+            "miller-book-02-01"
+          ]
+        },
+        {
+          "section": "2.5",
+          "title": "2.5　关键术语",
+          "units": [
+            "miller-book-02-01"
+          ]
+        },
+        {
+          "section": "2.6",
+          "title": "2.6　讨论题",
+          "units": [
+            "miller-book-02-04"
+          ]
+        },
+        {
+          "section": "2.7",
+          "title": "2.7　编程练习",
+          "units": [
+            "miller-book-02-04"
+          ]
+        },
+        {
+          "section": "3.1",
+          "title": "3.1　本章目标",
+          "units": [
+            "miller-book-03-01"
+          ]
+        },
+        {
+          "section": "3.2",
+          "title": "3.2　何谓线性数据结构",
+          "units": [
+            "miller-book-03-01"
+          ]
+        },
+        {
+          "section": "3.3",
+          "title": "3.3　栈",
+          "units": [
+            "miller-book-03-01",
+            "miller-book-03-02"
+          ]
+        },
+        {
+          "section": "3.3.1",
+          "title": "3.3.1　何谓栈",
+          "units": [
+            "miller-book-03-01"
+          ]
+        },
+        {
+          "section": "3.3.2",
+          "title": "3.3.2　栈抽象数据类型",
+          "units": [
+            "miller-book-03-01"
+          ]
+        },
+        {
+          "section": "3.3.3",
+          "title": "3.3.3　用Python实现栈",
+          "units": [
+            "miller-book-03-01"
+          ]
+        },
+        {
+          "section": "3.3.4",
+          "title": "3.3.4　匹配括号",
+          "units": [
+            "miller-book-03-01"
+          ]
+        },
+        {
+          "section": "3.3.5",
+          "title": "3.3.5　普通情况：匹配符号",
+          "units": [
+            "miller-book-03-01"
+          ]
+        },
+        {
+          "section": "3.3.6",
+          "title": "3.3.6　将十进制数转换成二进制数",
+          "units": [
+            "miller-book-03-02"
+          ]
+        },
+        {
+          "section": "3.3.7",
+          "title": "3.3.7　前序、中序和后序表达式",
+          "units": [
+            "miller-book-03-02"
+          ]
+        },
+        {
+          "section": "3.4",
+          "title": "3.4　队列",
+          "units": [
+            "miller-book-03-03",
+            "miller-book-03-04"
+          ]
+        },
+        {
+          "section": "3.4.1",
+          "title": "3.4.1　何谓队列",
+          "units": [
+            "miller-book-03-03"
+          ]
+        },
+        {
+          "section": "3.4.2",
+          "title": "3.4.2　队列抽象数据类型",
+          "units": [
+            "miller-book-03-03"
+          ]
+        },
+        {
+          "section": "3.4.3",
+          "title": "3.4.3　用Python实现队列",
+          "units": [
+            "miller-book-03-03"
+          ]
+        },
+        {
+          "section": "3.4.4",
+          "title": "3.4.4　模拟：传土豆",
+          "units": [
+            "miller-book-03-03"
+          ]
+        },
+        {
+          "section": "3.4.5",
+          "title": "3.4.5　模拟：打印任务",
+          "units": [
+            "miller-book-03-04"
+          ]
+        },
+        {
+          "section": "3.5",
+          "title": "3.5　双端队列",
+          "units": [
+            "miller-book-03-03"
+          ]
+        },
+        {
+          "section": "3.5.1",
+          "title": "3.5.1　何谓双端队列",
+          "units": [
+            "miller-book-03-03"
+          ]
+        },
+        {
+          "section": "3.5.2",
+          "title": "3.5.2　双端队列抽象数据类型",
+          "units": [
+            "miller-book-03-03"
+          ]
+        },
+        {
+          "section": "3.5.3",
+          "title": "3.5.3　用Python实现双端队列",
+          "units": [
+            "miller-book-03-03"
+          ]
+        },
+        {
+          "section": "3.5.4",
+          "title": "3.5.4　回文检测器",
+          "units": [
+            "miller-book-03-03"
+          ]
+        },
+        {
+          "section": "3.6",
+          "title": "3.6　列表",
+          "units": [
+            "miller-book-03-05"
+          ]
+        },
+        {
+          "section": "3.6.1",
+          "title": "3.6.1　无序列表抽象数据类型",
+          "units": [
+            "miller-book-03-05"
+          ]
+        },
+        {
+          "section": "3.6.2",
+          "title": "3.6.2　实现无序列表：链表",
+          "units": [
+            "miller-book-03-05"
+          ]
+        },
+        {
+          "section": "3.6.3",
+          "title": "3.6.3　有序列表抽象数据类型",
+          "units": [
+            "miller-book-03-05"
+          ]
+        },
+        {
+          "section": "3.6.4",
+          "title": "3.6.4　实现有序列表",
+          "units": [
+            "miller-book-03-05"
+          ]
+        },
+        {
+          "section": "3.7",
+          "title": "3.7　小结",
+          "units": [
+            "miller-book-03-05"
+          ]
+        },
+        {
+          "section": "3.8",
+          "title": "3.8　关键术语",
+          "units": [
+            "miller-book-03-05"
+          ]
+        },
+        {
+          "section": "3.9",
+          "title": "3.9　讨论题",
+          "units": [
+            "miller-book-03-06"
+          ]
+        },
+        {
+          "section": "3.10",
+          "title": "3.10　编程练习",
+          "units": [
+            "miller-book-03-06"
+          ]
+        },
+        {
+          "section": "4.1",
+          "title": "4.1　本章目标",
+          "units": [
+            "miller-book-04-01"
+          ]
+        },
+        {
+          "section": "4.2",
+          "title": "4.2　何谓递归",
+          "units": [
+            "miller-book-04-01"
+          ]
+        },
+        {
+          "section": "4.2.1",
+          "title": "4.2.1　计算一列数之和",
+          "units": [
+            "miller-book-04-01"
+          ]
+        },
+        {
+          "section": "4.2.2",
+          "title": "4.2.2　递归三原则",
+          "units": [
+            "miller-book-04-01"
+          ]
+        },
+        {
+          "section": "4.2.3",
+          "title": "4.2.3　将整数转换成任意进制的字符串",
+          "units": [
+            "miller-book-04-01"
+          ]
+        },
+        {
+          "section": "4.3",
+          "title": "4.3　栈帧：实现递归",
+          "units": [
+            "miller-book-04-01"
+          ]
+        },
+        {
+          "section": "4.4",
+          "title": "4.4　递归可视化",
+          "units": [
+            "miller-book-04-02"
+          ]
+        },
+        {
+          "section": "4.5",
+          "title": "4.5　复杂的递归问题",
+          "units": [
+            "miller-book-04-03"
+          ]
+        },
+        {
+          "section": "4.6",
+          "title": "4.6　探索迷宫",
+          "units": [
+            "miller-book-04-04"
+          ]
+        },
+        {
+          "section": "4.7",
+          "title": "4.7　动态规划",
+          "units": [
+            "miller-book-04-05"
+          ]
+        },
+        {
+          "section": "4.8",
+          "title": "4.8　小结",
+          "units": [
+            "miller-book-04-01"
+          ]
+        },
+        {
+          "section": "4.9",
+          "title": "4.9　关键术语",
+          "units": [
+            "miller-book-04-01"
+          ]
+        },
+        {
+          "section": "4.10",
+          "title": "4.10　讨论题",
+          "units": [
+            "miller-book-04-06"
+          ]
+        },
+        {
+          "section": "4.11",
+          "title": "4.11　编程练习",
+          "units": [
+            "miller-book-04-06"
+          ]
+        },
+        {
+          "section": "5.1",
+          "title": "5.1　本章目标",
+          "units": [
+            "miller-book-05-01"
+          ]
+        },
+        {
+          "section": "5.2",
+          "title": "5.2　搜索",
+          "units": [
+            "miller-book-05-01",
+            "miller-book-05-02"
+          ]
+        },
+        {
+          "section": "5.2.1",
+          "title": "5.2.1　顺序搜索",
+          "units": [
+            "miller-book-05-01"
+          ]
+        },
+        {
+          "section": "5.2.2",
+          "title": "5.2.2　二分搜索",
+          "units": [
+            "miller-book-05-01"
+          ]
+        },
+        {
+          "section": "5.2.3",
+          "title": "5.2.3　散列",
+          "units": [
+            "miller-book-05-02"
+          ]
+        },
+        {
+          "section": "5.3",
+          "title": "5.3　排序",
+          "units": [
+            "miller-book-05-03",
+            "miller-book-05-04",
+            "miller-book-05-05",
+            "miller-book-05-06"
+          ]
+        },
+        {
+          "section": "5.3.1",
+          "title": "5.3.1　冒泡排序",
+          "units": [
+            "miller-book-05-03"
+          ]
+        },
+        {
+          "section": "5.3.2",
+          "title": "5.3.2　选择排序",
+          "units": [
+            "miller-book-05-03"
+          ]
+        },
+        {
+          "section": "5.3.3",
+          "title": "5.3.3　插入排序",
+          "units": [
+            "miller-book-05-03"
+          ]
+        },
+        {
+          "section": "5.3.4",
+          "title": "5.3.4　希尔排序",
+          "units": [
+            "miller-book-05-04"
+          ]
+        },
+        {
+          "section": "5.3.5",
+          "title": "5.3.5　归并排序",
+          "units": [
+            "miller-book-05-05"
+          ]
+        },
+        {
+          "section": "5.3.6",
+          "title": "5.3.6　快速排序",
+          "units": [
+            "miller-book-05-06"
+          ]
+        },
+        {
+          "section": "5.4",
+          "title": "5.4　小结",
+          "units": [
+            "miller-book-05-06"
+          ]
+        },
+        {
+          "section": "5.5",
+          "title": "5.5　关键术语",
+          "units": [
+            "miller-book-05-06"
+          ]
+        },
+        {
+          "section": "5.6",
+          "title": "5.6　讨论题",
+          "units": [
+            "miller-book-05-07"
+          ]
+        },
+        {
+          "section": "5.7",
+          "title": "5.7　编程练习",
+          "units": [
+            "miller-book-05-07"
+          ]
+        },
+        {
+          "section": "6.1",
+          "title": "6.1　本章目标",
+          "units": [
+            "miller-book-06-01"
+          ]
+        },
+        {
+          "section": "6.2",
+          "title": "6.2　示例",
+          "units": [
+            "miller-book-06-01"
+          ]
+        },
+        {
+          "section": "6.3",
+          "title": "6.3　术语及定义",
+          "units": [
+            "miller-book-06-01"
+          ]
+        },
+        {
+          "section": "6.4",
+          "title": "6.4　实现",
+          "units": [
+            "miller-book-06-01"
+          ]
+        },
+        {
+          "section": "6.4.1",
+          "title": "6.4.1　列表之列表",
+          "units": [
+            "miller-book-06-01"
+          ]
+        },
+        {
+          "section": "6.4.2",
+          "title": "6.4.2　节点与引用",
+          "units": [
+            "miller-book-06-01"
+          ]
+        },
+        {
+          "section": "6.5",
+          "title": "6.5　二叉树的应用",
+          "units": [
+            "miller-book-06-02",
+            "miller-book-06-03"
+          ]
+        },
+        {
+          "section": "6.5.1",
+          "title": "6.5.1　解析树",
+          "units": [
+            "miller-book-06-02"
+          ]
+        },
+        {
+          "section": "6.5.2",
+          "title": "6.5.2　树的遍历",
+          "units": [
+            "miller-book-06-03"
+          ]
+        },
+        {
+          "section": "6.6",
+          "title": "6.6　利用二叉堆实现优先级队列",
+          "units": [
+            "miller-book-06-04"
+          ]
+        },
+        {
+          "section": "6.6.1",
+          "title": "6.6.1　二叉堆的操作",
+          "units": [
+            "miller-book-06-04"
+          ]
+        },
+        {
+          "section": "6.6.2",
+          "title": "6.6.2　二叉堆的实现",
+          "units": [
+            "miller-book-06-04"
+          ]
+        },
+        {
+          "section": "6.7",
+          "title": "6.7　二叉搜索树",
+          "units": [
+            "miller-book-06-05"
+          ]
+        },
+        {
+          "section": "6.7.1",
+          "title": "6.7.1　搜索树的操作",
+          "units": [
+            "miller-book-06-05"
+          ]
+        },
+        {
+          "section": "6.7.2",
+          "title": "6.7.2　搜索树的实现",
+          "units": [
+            "miller-book-06-05"
+          ]
+        },
+        {
+          "section": "6.7.3",
+          "title": "6.7.3　搜索树的分析",
+          "units": [
+            "miller-book-06-05"
+          ]
+        },
+        {
+          "section": "6.8",
+          "title": "6.8　平衡二叉搜索树",
+          "units": [
+            "miller-book-06-06"
+          ]
+        },
+        {
+          "section": "6.8.1",
+          "title": "6.8.1　AVL树的性能",
+          "units": [
+            "miller-book-06-06"
+          ]
+        },
+        {
+          "section": "6.8.2",
+          "title": "6.8.2　AVL树的实现",
+          "units": [
+            "miller-book-06-06"
+          ]
+        },
+        {
+          "section": "6.8.3",
+          "title": "6.8.3　映射实现总结",
+          "units": [
+            "miller-book-06-06"
+          ]
+        },
+        {
+          "section": "6.9",
+          "title": "6.9　小结",
+          "units": [
+            "miller-book-06-01"
+          ]
+        },
+        {
+          "section": "6.10",
+          "title": "6.10　关键术语",
+          "units": [
+            "miller-book-06-01"
+          ]
+        },
+        {
+          "section": "6.11",
+          "title": "6.11　讨论题",
+          "units": [
+            "miller-book-06-07"
+          ]
+        },
+        {
+          "section": "6.12",
+          "title": "6.12　编程练习",
+          "units": [
+            "miller-book-06-07"
+          ]
+        },
+        {
+          "section": "7.1",
+          "title": "7.1　本章目标",
+          "units": [
+            "miller-book-07-01"
+          ]
+        },
+        {
+          "section": "7.2",
+          "title": "7.2　术语及定义",
+          "units": [
+            "miller-book-07-01"
+          ]
+        },
+        {
+          "section": "7.3",
+          "title": "7.3　图的抽象数据类型",
+          "units": [
+            "miller-book-07-01"
+          ]
+        },
+        {
+          "section": "7.3.1",
+          "title": "7.3.1　邻接矩阵",
+          "units": [
+            "miller-book-07-01"
+          ]
+        },
+        {
+          "section": "7.3.2",
+          "title": "7.3.2　邻接表",
+          "units": [
+            "miller-book-07-01"
+          ]
+        },
+        {
+          "section": "7.3.3",
+          "title": "7.3.3　实现",
+          "units": [
+            "miller-book-07-01"
+          ]
+        },
+        {
+          "section": "7.4",
+          "title": "7.4　宽度优先搜索",
+          "units": [
+            "miller-book-07-02"
+          ]
+        },
+        {
+          "section": "7.4.1",
+          "title": "7.4.1　词梯问题",
+          "units": [
+            "miller-book-07-02"
+          ]
+        },
+        {
+          "section": "7.4.2",
+          "title": "7.4.2　构建词梯图",
+          "units": [
+            "miller-book-07-02"
+          ]
+        },
+        {
+          "section": "7.4.3",
+          "title": "7.4.3　实现宽度优先搜索",
+          "units": [
+            "miller-book-07-02"
+          ]
+        },
+        {
+          "section": "7.4.4",
+          "title": "7.4.4　分析宽度优先搜索",
+          "units": [
+            "miller-book-07-02"
+          ]
+        },
+        {
+          "section": "7.5",
+          "title": "7.5　深度优先搜索",
+          "units": [
+            "miller-book-07-03",
+            "miller-book-07-04"
+          ]
+        },
+        {
+          "section": "7.5.1",
+          "title": "7.5.1　骑士周游问题",
+          "units": [
+            "miller-book-07-03"
+          ]
+        },
+        {
+          "section": "7.5.2",
+          "title": "7.5.2　构建骑士周游图",
+          "units": [
+            "miller-book-07-03"
+          ]
+        },
+        {
+          "section": "7.5.3",
+          "title": "7.5.3　实现骑士周游",
+          "units": [
+            "miller-book-07-03"
+          ]
+        },
+        {
+          "section": "7.5.4",
+          "title": "7.5.4　分析骑士周游",
+          "units": [
+            "miller-book-07-03"
+          ]
+        },
+        {
+          "section": "7.5.5",
+          "title": "7.5.5　通用深度优先搜索",
+          "units": [
+            "miller-book-07-04"
+          ]
+        },
+        {
+          "section": "7.5.6",
+          "title": "7.5.6　分析深度优先搜索",
+          "units": [
+            "miller-book-07-04"
+          ]
+        },
+        {
+          "section": "7.6",
+          "title": "7.6　拓扑排序",
+          "units": [
+            "miller-book-07-04"
+          ]
+        },
+        {
+          "section": "7.7",
+          "title": "7.7　强连通单元",
+          "units": [
+            "miller-book-07-05"
+          ]
+        },
+        {
+          "section": "7.8",
+          "title": "7.8　最短路径问题",
+          "units": [
+            "miller-book-07-06",
+            "miller-book-07-07"
+          ]
+        },
+        {
+          "section": "7.8.1",
+          "title": "7.8.1　Dijkstra算法",
+          "units": [
+            "miller-book-07-06"
+          ]
+        },
+        {
+          "section": "7.8.2",
+          "title": "7.8.2　分析Dijkstra算法",
+          "units": [
+            "miller-book-07-06"
+          ]
+        },
+        {
+          "section": "7.8.3",
+          "title": "7.8.3　Prim算法",
+          "units": [
+            "miller-book-07-06",
+            "miller-book-07-07"
+          ]
+        },
+        {
+          "section": "7.9",
+          "title": "7.9　小结",
+          "units": [
+            "miller-book-07-01"
+          ]
+        },
+        {
+          "section": "7.10",
+          "title": "7.10　关键术语",
+          "units": [
+            "miller-book-07-01"
+          ]
+        },
+        {
+          "section": "7.11",
+          "title": "7.11　讨论题",
+          "units": [
+            "miller-book-07-08"
+          ]
+        },
+        {
+          "section": "7.12",
+          "title": "7.12　编程练习",
+          "units": [
+            "miller-book-07-08"
+          ]
+        },
+        {
+          "section": "8.1",
+          "title": "8.1　本章目标",
+          "units": [
+            "miller-book-08-01"
+          ]
+        },
+        {
+          "section": "8.2",
+          "title": "8.2　复习Python列表",
+          "units": [
+            "miller-book-08-01"
+          ]
+        },
+        {
+          "section": "8.3",
+          "title": "8.3　复习递归",
+          "units": [
+            "miller-book-08-02",
+            "miller-book-08-03"
+          ]
+        },
+        {
+          "section": "8.3.1",
+          "title": "8.3.1　同余定理",
+          "units": [
+            "miller-book-08-02",
+            "miller-book-08-03"
+          ]
+        },
+        {
+          "section": "8.3.2",
+          "title": "8.3.2　幂剩余",
+          "units": [
+            "miller-book-08-02",
+            "miller-book-08-03"
+          ]
+        },
+        {
+          "section": "8.3.3",
+          "title": "8.3.3　最大公因数与逆元",
+          "units": [
+            "miller-book-08-02",
+            "miller-book-08-03"
+          ]
+        },
+        {
+          "section": "8.3.4",
+          "title": "8.3.4　RSA算法",
+          "units": [
+            "miller-book-08-03"
+          ]
+        },
+        {
+          "section": "8.4",
+          "title": "8.4　复习字典：跳表",
+          "units": [
+            "miller-book-08-04"
+          ]
+        },
+        {
+          "section": "8.4.1",
+          "title": "8.4.1　映射抽象数据类型",
+          "units": [
+            "miller-book-08-04"
+          ]
+        },
+        {
+          "section": "8.4.2",
+          "title": "8.4.2　用Python实现字典",
+          "units": [
+            "miller-book-08-04"
+          ]
+        },
+        {
+          "section": "8.5",
+          "title": "8.5　复习树：量化图片",
+          "units": [
+            "miller-book-08-05"
+          ]
+        },
+        {
+          "section": "8.5.1",
+          "title": "8.5.1　数字图像概述",
+          "units": [
+            "miller-book-08-05"
+          ]
+        },
+        {
+          "section": "8.5.2",
+          "title": "8.5.2　量化图片",
+          "units": [
+            "miller-book-08-05"
+          ]
+        },
+        {
+          "section": "8.5.3",
+          "title": "8.5.3　使用八叉树改进量化算法",
+          "units": [
+            "miller-book-08-05"
+          ]
+        },
+        {
+          "section": "8.6",
+          "title": "8.6　复习图：模式匹配",
+          "units": [
+            "miller-book-08-06"
+          ]
+        },
+        {
+          "section": "8.6.1",
+          "title": "8.6.1　生物学字符串",
+          "units": [
+            "miller-book-08-06"
+          ]
+        },
+        {
+          "section": "8.6.2",
+          "title": "8.6.2　简单比较",
+          "units": [
+            "miller-book-08-06"
+          ]
+        },
+        {
+          "section": "8.6.3",
+          "title": "8.6.3　使用图：DFA",
+          "units": [
+            "miller-book-08-06"
+          ]
+        },
+        {
+          "section": "8.6.4",
+          "title": "8.6.4　使用图：KMP",
+          "units": [
+            "miller-book-08-06"
+          ]
+        },
+        {
+          "section": "8.7",
+          "title": "8.7　小结",
+          "units": [
+            "miller-book-08-06"
+          ]
+        },
+        {
+          "section": "8.8",
+          "title": "8.8　关键术语",
+          "units": [
+            "miller-book-08-06"
+          ]
+        },
+        {
+          "section": "8.9",
+          "title": "8.9　讨论题",
+          "units": [
+            "miller-book-08-07"
+          ]
+        },
+        {
+          "section": "8.10",
+          "title": "8.10　编程练习",
+          "units": [
+            "miller-book-08-07"
+          ]
+        },
+        {
+          "section": "A",
+          "title": "图形包与开发资料",
+          "units": [
+            "miller-book-a-01"
+          ]
+        },
+        {
+          "section": "B",
+          "title": "Python 资源",
+          "units": [
+            "miller-book-a-01"
+          ]
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "url": "/assets/figures/foundations/calculus.svg",
+      "alt": "密度 2x 下的面积，0 到 0.5 的面积为四分之一。"
+    },
+    {
+      "url": "/assets/figures/foundations/sampling.svg",
+      "alt": "样本量从 4 增至 64 后，独立观测的样本均值分布变窄。"
+    },
+    {
+      "url": "/assets/figures/foundations/sets.svg",
+      "alt": "事件 A 和 B 的重叠区域对应交集，并集计算需要减去重复部分。"
+    },
+    {
+      "url": "/assets/figures/foundations/bayes.svg",
+      "alt": "两车间缺陷概率的树形计算，分支概率分别为 0.03 和 0.04。"
+    },
+    {
+      "url": "/assets/figures/foundations/monte-carlo.svg",
+      "alt": "模拟比例随样本量变化，参考误差带按样本量平方根收窄。"
+    },
+    {
+      "url": "/assets/figures/foundations/counts.svg",
+      "alt": "二项分布与超几何分布在相同抽样比例下的概率差异。"
+    },
+    {
+      "url": "/assets/figures/foundations/cdf.svg",
+      "alt": "离散分布函数在取值 0、1、2 处跳跃。"
+    },
+    {
+      "url": "/assets/figures/foundations/calculus.svg",
+      "alt": "密度 2x 下的面积，0 到 0.5 的面积为四分之一。"
+    },
+    {
+      "url": "/assets/figures/foundations/covariance.svg",
+      "alt": "具有正协方差的两个随机变量，散点呈右上倾斜。"
+    },
+    {
+      "url": "/assets/figures/foundations/joint.svg",
+      "alt": "联合概率表，四个单元格之和为一，沿行列求和得到边际概率。"
+    },
+    {
+      "url": "/assets/figures/foundations/transform.svg",
+      "alt": "两个独立零到一均匀变量之和呈三角形密度。"
+    },
+    {
+      "url": "/assets/figures/foundations/order.svg",
+      "alt": "三个均匀样本的最小值、中位数与最大值密度。"
+    },
+    {
+      "url": "/assets/figures/foundations/poisson.svg",
+      "alt": "泊松分布随事件强度增加向右移动并变宽。"
+    },
+    {
+      "url": "/assets/figures/foundations/clt.svg",
+      "alt": "指数样本的标准化均值分布随样本量增加接近正态曲线。"
+    },
+    {
+      "url": "/assets/figures/foundations/gamma.svg",
+      "alt": "Gamma 分布从一次等待扩展到多次到达的总等待时间。"
+    },
+    {
+      "url": "/assets/figures/foundations/likelihood.svg",
+      "alt": "三次成功两次失败的似然在 p 等于 0.6 处最大。"
+    },
+    {
+      "url": "/assets/figures/foundations/intervals.svg",
+      "alt": "重复抽样构造的置信区间，有的覆盖固定总体均值，有的没有覆盖。"
+    },
+    {
+      "url": "/assets/figures/foundations/bias-variance.svg",
+      "alt": "估计量的偏差控制中心位置，方差控制分布宽度。"
+    },
+    {
+      "url": "/assets/figures/foundations/bootstrap.svg",
+      "alt": "从五个观测中有放回抽样得到样本均值的自助分布。"
+    },
+    {
+      "url": "/assets/figures/foundations/beta-update.svg",
+      "alt": "观察十次试验中六次成功后，Beta 先验更新为后验。"
+    },
+    {
+      "url": "/assets/figures/foundations/testing.svg",
+      "alt": "单侧检验拒绝域的原假设面积对应第一类错误概率。"
+    },
+    {
+      "url": "/assets/figures/foundations/power.svg",
+      "alt": "单侧检验的功效随效应大小和样本量增加。"
+    },
+    {
+      "url": "/assets/figures/foundations/t-distribution.svg",
+      "alt": "自由度较小时 t 分布尾部更厚，随自由度增大接近正态。"
+    },
+    {
+      "url": "/assets/figures/foundations/design.svg",
+      "alt": "每个区组内分别安排两种处理，用分组控制整体水平差异。"
+    },
+    {
+      "url": "/assets/figures/foundations/two-sample.svg",
+      "alt": "比较两个总体时，均值差与组内离散程度共同影响统计量。"
+    },
+    {
+      "url": "/assets/figures/foundations/goodness-fit.svg",
+      "alt": "观测频数与期望频数之差用于拟合优度检验。"
+    },
+    {
+      "url": "/assets/figures/foundations/regression.svg",
+      "alt": "四个数据点的最小二乘直线，虚线表示观测值到拟合值的残差。"
+    },
+    {
+      "url": "/assets/figures/foundations/bivariate.svg",
+      "alt": "二维正态密度等高线与条件均值直线。"
+    },
+    {
+      "url": "/assets/figures/foundations/anova.svg",
+      "alt": "各组观测围绕组均值变化，组均值又围绕总体均值变化。"
+    },
+    {
+      "url": "/assets/figures/foundations/blocks.svg",
+      "alt": "同一区组的处理结果相互接近，区组间整体水平有所不同。"
+    },
+    {
+      "url": "/assets/figures/foundations/ranks.svg",
+      "alt": "三组观测合并排序，颜色表示分组，位置对应全体秩。"
+    },
+    {
+      "url": "/assets/figures/foundations/runs.svg",
+      "alt": "连续相同符号构成一个游程，排序会破坏原有游程信息。"
+    },
+    {
+      "url": "/assets/figures/foundations/interaction.svg",
+      "alt": "两个 A 水平下 B 的效应不同，非平行线表示交互作用。"
+    },
+    {
+      "url": "/assets/figures/foundations/factorial.svg",
+      "alt": "半分数设计中 C 等于 AB，主效应与交互项发生混杂。"
+    },
+    {
+      "url": "/assets/figures/foundations/adt.svg",
+      "alt": "抽象数据类型通过输入、操作与输出约定行为。"
+    },
+    {
+      "url": "/assets/figures/foundations/references.svg",
+      "alt": "变量 a 和 b 可以指向同一个可变列表。"
+    },
+    {
+      "url": "/assets/figures/foundations/complexity.svg",
+      "alt": "四类增长速度在相同输入规模下的比较。"
+    },
+    {
+      "url": "/assets/figures/foundations/stack.svg",
+      "alt": "栈只能从顶部压入或弹出，最后加入的元素最先离开。"
+    },
+    {
+      "url": "/assets/figures/foundations/queue.svg",
+      "alt": "队列从一端加入、另一端取出，保持先进先出顺序。"
+    },
+    {
+      "url": "/assets/figures/foundations/linked-list.svg",
+      "alt": "链表节点通过引用连接，最后一个节点指向空引用。"
+    },
+    {
+      "url": "/assets/figures/foundations/recursion.svg",
+      "alt": "递归调用逐层保留栈帧，最深层返回后依次计算。"
+    },
+    {
+      "url": "/assets/figures/foundations/fractal.svg",
+      "alt": "谢尔平斯基三角形由三个更小的同类图形递归组成。"
+    },
+    {
+      "url": "/assets/figures/foundations/maze.svg",
+      "alt": "迷宫路径按相邻可通行格子延伸，并记录访问位置避免重复。"
+    },
+    {
+      "url": "/assets/figures/foundations/dynamic-programming.svg",
+      "alt": "凑零钱问题的状态依赖，较大金额由较小金额转移得到。"
+    },
+    {
+      "url": "/assets/figures/foundations/binary-search.svg",
+      "alt": "二分查找先比较中点，依据有序性舍弃一半区间。"
+    },
+    {
+      "url": "/assets/figures/foundations/hashing.svg",
+      "alt": "线性探测将散列到同一槽位的键依次放入后面的空槽。"
+    },
+    {
+      "url": "/assets/figures/foundations/sorting.svg",
+      "alt": "冒泡排序从原始数组经过一轮交换到最终有序状态。"
+    },
+    {
+      "url": "/assets/figures/foundations/merge.svg",
+      "alt": "归并排序将数组分成两部分，分别排序后合并。"
+    },
+    {
+      "url": "/assets/figures/foundations/partition.svg",
+      "alt": "快速排序划分后，枢轴两侧分别是不大于和不小于它的元素。"
+    },
+    {
+      "url": "/assets/figures/foundations/tree.svg",
+      "alt": "二叉树的父子关系与层次。"
+    },
+    {
+      "url": "/assets/figures/foundations/heap.svg",
+      "alt": "最小堆满足每个父节点不大于子节点，但同层元素无需有序。"
+    },
+    {
+      "url": "/assets/figures/foundations/bst.svg",
+      "alt": "二叉搜索树每个节点的左子树更小，右子树更大。"
+    },
+    {
+      "url": "/assets/figures/foundations/avl.svg",
+      "alt": "一次左旋将右侧链条变为平衡子树，同时保持中序次序。"
+    },
+    {
+      "url": "/assets/figures/foundations/graph.svg",
+      "alt": "图由顶点和边构成，邻接表只记录实际存在的连接。"
+    },
+    {
+      "url": "/assets/figures/foundations/bfs.svg",
+      "alt": "从 A 开始的宽度优先搜索按距离逐层访问节点。"
+    },
+    {
+      "url": "/assets/figures/foundations/dag.svg",
+      "alt": "有向无环图的边给出先后依赖，拓扑排序必须尊重这些方向。"
+    },
+    {
+      "url": "/assets/figures/foundations/shortest-path.svg",
+      "alt": "带非负权重的图，最短路径比较沿途边权之和。"
+    },
+    {
+      "url": "/assets/figures/foundations/knight.svg",
+      "alt": "棋盘中央骑士可到达的八个位置，每步分别移动一格和两格。"
+    },
+    {
+      "url": "/assets/figures/foundations/dynamic-array.svg",
+      "alt": "动态数组按倍增扩容，容量阶梯上升而元素数连续增长。"
+    },
+    {
+      "url": "/assets/figures/foundations/skip-list.svg",
+      "alt": "跳表高层跨过多个节点，逐层下降后定位底层元素。"
+    },
+    {
+      "url": "/assets/figures/foundations/quantization.svg",
+      "alt": "同一颜色渐变在较多和较少调色板颜色下的对比。"
+    },
+    {
+      "url": "/assets/figures/foundations/kmp.svg",
+      "alt": "模式 ABABACA 的前缀函数记录失配时可以保留的前后缀长度。"
+    }
+  ]
+}

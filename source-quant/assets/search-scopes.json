@@ -63,6 +63,15 @@
     "sort_order": 20
   },
   {
+    "id": "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a",
+    "key": "mathematical-statistics",
+    "name": "数理统计及其应用",
+    "parent_id": "6c937a0e-545c-56f5-a699-90c4325073d4",
+    "href": "/theory/mathematical-statistics/",
+    "visible": true,
+    "sort_order": 24
+  },
+  {
     "id": "17859c88-b779-5654-b120-7a4cc7b39714",
     "key": "stochastic-calculus",
     "name": "随机微积分及其应用",
@@ -115,6 +124,15 @@
     "href": "/theory/trading-and-exchanges/",
     "visible": true,
     "sort_order": 33
+  },
+  {
+    "id": "3ba9f7c0-467b-529b-9ae6-4e5dd9022046",
+    "key": "python-data-structures",
+    "name": "Python 数据结构与算法分析",
+    "parent_id": "6c937a0e-545c-56f5-a699-90c4325073d4",
+    "href": "/theory/python-data-structures/",
+    "visible": true,
+    "sort_order": 34
   },
   {
     "id": "e4929cee-404a-50b6-a5b7-e76678ca05dd",

@@ -17,3 +17,6 @@
 .page-content-loading i{display:block;height:18px;max-width:95%;border-radius:4px;background:var(--line,#e3e9e3);opacity:.55}
 .page-content-loading i:last-child{max-width:65%}
 .has-js .scientific-home>.home-topic-collections:has([data-page-state=loading])~*{display:none}
+
+/* Textbook figures and question sheets share the reader width. */
+.book-concept-figure{margin:30px 0;padding:12px;background:#fff;border:1px solid var(--line);border-radius:10px}.book-concept-figure img{display:block;width:100%;height:auto;margin:0!important}.book-exercise-group{margin:18px 0;border:1px solid var(--line);border-radius:10px;padding:0 18px;background:var(--surface)}.book-exercise-group>summary{cursor:pointer;padding:18px 0;font-weight:600;line-height:1.6}.book-exercise-pages{display:grid;gap:18px;margin:0 0 20px}.book-exercise-pages>a{display:block;max-width:100%;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff;cursor:zoom-in}.book-exercise-pages img{display:block;width:100%;height:auto;max-width:100%;margin:0!important;border-radius:0!important}.book-exercise-pages a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}@media(max-width:600px){.book-concept-figure{padding:4px;margin:22px 0}.book-exercise-group{padding:0 10px}.book-exercise-group>summary{font-size:15px}.book-exercise-pages{gap:12px}}

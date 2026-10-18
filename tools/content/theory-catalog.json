@@ -9387,5 +9387,3314 @@
         ]
       }
     }
+  },
+  {
+    "id": "95728b1c-a356-5ee9-8484-eb75608d956c",
+    "slug": "larsen-book-guide",
+    "title": "求和、函数与微积分基础",
+    "summary": "先用小数组、曲线斜率和面积认识统计推导中的常用符号。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7001,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "阅读准备",
+        "number": 1,
+        "chapter": "G",
+        "section": "1",
+        "chapter_title": "数学预备知识",
+        "edition": "2026-10",
+        "minutes": 21,
+        "source_sections": [
+          "G"
+        ]
+      }
+    }
+  },
+  {
+    "id": "b6deb041-2fee-5491-a1d9-001fd0deb452",
+    "slug": "larsen-book-01-01",
+    "title": "总体、样本与统计推断",
+    "summary": "区分要研究的总体、实际观察的样本和由样本计算的统计量，认识分组比较与混杂。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7002,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第一部分 · 概率与随机变量",
+        "number": 2,
+        "chapter": "1",
+        "section": "1",
+        "chapter_title": "统计研究的基本问题",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "1.1",
+          "1.2",
+          "1.4"
+        ]
+      }
+    }
+  },
+  {
+    "id": "cef5bebf-0949-5a89-ac6c-6274e462ca30",
+    "slug": "larsen-book-01-02",
+    "title": "概率与实验设计的发展",
+    "summary": "从重复试验、测量误差和随机分组理解概率、估计与检验之间的联系。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7003,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第一部分 · 概率与随机变量",
+        "number": 3,
+        "chapter": "1",
+        "section": "2",
+        "chapter_title": "统计研究的基本问题",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "1.3"
+        ]
+      }
+    }
+  },
+  {
+    "id": "03271161-a5e4-509f-90f0-6d0f0a4e36e0",
+    "slug": "larsen-book-02-01",
+    "title": "样本空间、事件与概率运算",
+    "summary": "用集合表示事件，从概率公理推导补事件、并集和容斥公式。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7004,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第一部分 · 概率与随机变量",
+        "number": 4,
+        "chapter": "2",
+        "section": "1",
+        "chapter_title": "概率",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "2.1",
+          "2.2",
+          "2.3"
+        ]
+      }
+    }
+  },
+  {
+    "id": "44f1c9c3-5cdc-5fab-ada5-ba4e21d3a62b",
+    "slug": "larsen-book-02-02",
+    "title": "条件概率、全概率与贝叶斯公式",
+    "summary": "在条件改变后重算样本空间权重，并用树形分支计算逆向概率。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7005,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第一部分 · 概率与随机变量",
+        "number": 5,
+        "chapter": "2",
+        "section": "2",
+        "chapter_title": "概率",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "2.4"
+        ]
+      }
+    }
+  },
+  {
+    "id": "a71bbadb-bbe9-5e77-a52d-c3ecfe863f0a",
+    "slug": "larsen-book-02-03",
+    "title": "独立事件与重复试验",
+    "summary": "区分独立、互斥、两两独立和相互独立，计算重复试验中的至少一次事件。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7006,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第一部分 · 概率与随机变量",
+        "number": 6,
+        "chapter": "2",
+        "section": "3",
+        "chapter_title": "概率",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "2.5"
+        ]
+      }
+    }
+  },
+  {
+    "id": "0b520e70-a603-5a90-9518-76a41b530101",
+    "slug": "larsen-book-02-04",
+    "title": "排列、组合与重复计数",
+    "summary": "从乘法原理推导排列组合，并处理重复元素、分组和二项式展开。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7007,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第一部分 · 概率与随机变量",
+        "number": 7,
+        "chapter": "2",
+        "section": "4",
+        "chapter_title": "概率",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "2.6"
+        ]
+      }
+    }
+  },
+  {
+    "id": "5263bd56-4b83-5243-a06b-6ee1515ba334",
+    "slug": "larsen-book-02-05",
+    "title": "等可能模型与组合概率",
+    "summary": "把事件计数与样本空间计数放在同一规则下，计算抽样、生日碰撞和分配概率。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7008,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第一部分 · 概率与随机变量",
+        "number": 8,
+        "chapter": "2",
+        "section": "5",
+        "chapter_title": "概率",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "2.7"
+        ]
+      }
+    }
+  },
+  {
+    "id": "1d43f859-281a-5610-9477-0b4a056327de",
+    "slug": "larsen-book-02-06",
+    "title": "蒙特卡洛模拟与计算误差",
+    "summary": "用重复模拟估计事件概率，计算模拟标准误并区分模型误差与随机误差。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7009,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第一部分 · 概率与随机变量",
+        "number": 9,
+        "chapter": "2",
+        "section": "6",
+        "chapter_title": "概率",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "2.8"
+        ]
+      }
+    }
+  },
+  {
+    "id": "11dea82f-366d-5f27-bd5d-2afde970bfcd",
+    "slug": "larsen-book-02-07",
+    "title": "概率：习题",
+    "summary": "230 道题，练习概率中的概念、计算与方法选择。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7010,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第一部分 · 概率与随机变量",
+        "number": 10,
+        "chapter": "2",
+        "section": "7",
+        "chapter_title": "概率",
+        "edition": "2026-10",
+        "minutes": 82,
+        "source_sections": [
+          "2.2",
+          "2.3",
+          "2.4",
+          "2.5",
+          "2.6",
+          "2.7"
+        ],
+        "unit_type": "exercise",
+        "questions": 230
+      }
+    }
+  },
+  {
+    "id": "c9fc1bb9-4f4c-5f0d-b9e7-bb03459e52da",
+    "slug": "larsen-book-03-01",
+    "title": "二项分布与超几何分布",
+    "summary": "从逐次试验和不放回抽样两种机制推导计数分布。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7011,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第一部分 · 概率与随机变量",
+        "number": 11,
+        "chapter": "3",
+        "section": "1",
+        "chapter_title": "随机变量",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "3.1",
+          "3.2"
+        ]
+      }
+    }
+  },
+  {
+    "id": "5b79480d-074f-51c9-ad42-975602111dac",
+    "slug": "larsen-book-03-02",
+    "title": "离散分布、分布函数与分位数",
+    "summary": "从概率表构造分布函数，用累计概率理解阈值和分位数。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7012,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第一部分 · 概率与随机变量",
+        "number": 12,
+        "chapter": "3",
+        "section": "2",
+        "chapter_title": "随机变量",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "3.3"
+        ]
+      }
+    }
+  },
+  {
+    "id": "c063d225-0f2c-5ce5-95d7-5274ca6ff22f",
+    "slug": "larsen-book-03-03",
+    "title": "连续密度与积分概率",
+    "summary": "用面积解释密度，连接分布函数、变量单位和区间概率。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7013,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第一部分 · 概率与随机变量",
+        "number": 13,
+        "chapter": "3",
+        "section": "3",
+        "chapter_title": "随机变量",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "3.4"
+        ]
+      }
+    }
+  },
+  {
+    "id": "759e7444-1418-5ebc-90d1-3e19a9c6972b",
+    "slug": "larsen-book-03-04",
+    "title": "期望、函数的期望与平均数",
+    "summary": "计算离散和连续期望，区分总体均值、中位数以及非线性变换后的均值。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7014,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第一部分 · 概率与随机变量",
+        "number": 14,
+        "chapter": "3",
+        "section": "4",
+        "chapter_title": "随机变量",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "3.5",
+          "3.13"
+        ]
+      }
+    }
+  },
+  {
+    "id": "331c962a-5006-5634-b0a3-0e9cdf0608b6",
+    "slug": "larsen-book-03-05",
+    "title": "方差、协方差与误差传播",
+    "summary": "推导方差展开式和线性组合方差，并用协方差解释分散化。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7015,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第一部分 · 概率与随机变量",
+        "number": 15,
+        "chapter": "3",
+        "section": "5",
+        "chapter_title": "随机变量",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "3.6",
+          "3.9"
+        ]
+      }
+    }
+  },
+  {
+    "id": "d0870889-c76b-5f3e-95ab-cf1ca8e3dcb5",
+    "slug": "larsen-book-03-06",
+    "title": "联合分布与边际分布",
+    "summary": "在二维支持区域上计算联合、边际及事件概率，检查独立性。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7016,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第一部分 · 概率与随机变量",
+        "number": 16,
+        "chapter": "3",
+        "section": "6",
+        "chapter_title": "随机变量",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "3.7"
+        ]
+      }
+    }
+  },
+  {
+    "id": "5ce90520-6ae6-59bd-b335-e9034ef3a9bb",
+    "slug": "larsen-book-03-07",
+    "title": "随机变量变换与卷积",
+    "summary": "通过分布函数和雅可比因子推导变量变换，计算两个随机变量的和。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7017,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第一部分 · 概率与随机变量",
+        "number": 17,
+        "chapter": "3",
+        "section": "7",
+        "chapter_title": "随机变量",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "3.8"
+        ]
+      }
+    }
+  },
+  {
+    "id": "37ab0e23-91a1-5d9f-be8a-32d0415f4add",
+    "slug": "larsen-book-03-08",
+    "title": "次序统计量与样本极值",
+    "summary": "推导最大值、最小值和第 k 个次序统计量的分布，理解极值与样本量的关系。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7018,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第一部分 · 概率与随机变量",
+        "number": 18,
+        "chapter": "3",
+        "section": "8",
+        "chapter_title": "随机变量",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "3.10"
+        ]
+      }
+    }
+  },
+  {
+    "id": "4aaa67de-3479-59ff-a46a-05241654fa80",
+    "slug": "larsen-book-03-09",
+    "title": "条件密度与全期望公式",
+    "summary": "在观察到另一个变量后重算密度，推导全期望和全方差。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7019,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第一部分 · 概率与随机变量",
+        "number": 19,
+        "chapter": "3",
+        "section": "9",
+        "chapter_title": "随机变量",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "3.11"
+        ]
+      }
+    }
+  },
+  {
+    "id": "c3023a0d-ad7e-501b-8c3b-846474d3e787",
+    "slug": "larsen-book-03-10",
+    "title": "矩母函数与独立随机变量之和",
+    "summary": "用导数提取矩，用乘积计算独立变量之和的分布。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7020,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第一部分 · 概率与随机变量",
+        "number": 20,
+        "chapter": "3",
+        "section": "10",
+        "chapter_title": "随机变量",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "3.12"
+        ]
+      }
+    }
+  },
+  {
+    "id": "f05b996e-1828-57f9-9e56-caba61e36f02",
+    "slug": "larsen-book-03-11",
+    "title": "随机变量：习题",
+    "summary": "281 道题，练习随机变量中的概念、计算与方法选择。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7021,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第一部分 · 概率与随机变量",
+        "number": 21,
+        "chapter": "3",
+        "section": "11",
+        "chapter_title": "随机变量",
+        "edition": "2026-10",
+        "minutes": 100,
+        "source_sections": [
+          "3.10",
+          "3.11",
+          "3.12",
+          "3.2",
+          "3.3",
+          "3.4",
+          "3.5",
+          "3.6",
+          "3.7",
+          "3.8",
+          "3.9"
+        ],
+        "unit_type": "exercise",
+        "questions": 281
+      }
+    }
+  },
+  {
+    "id": "f2796e11-a455-5b5b-b978-903936b2177d",
+    "slug": "larsen-book-04-01",
+    "title": "泊松分布与稀有事件计数",
+    "summary": "从二项极限推导泊松分布，理解事件强度、时间长度和可加性。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7022,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第一部分 · 概率与随机变量",
+        "number": 22,
+        "chapter": "4",
+        "section": "1",
+        "chapter_title": "常用概率分布",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "4.1",
+          "4.2"
+        ]
+      }
+    }
+  },
+  {
+    "id": "8a223fa3-93d9-57b4-8692-cac6f0abd1cc",
+    "slug": "larsen-book-04-02",
+    "title": "正态分布、标准化与中心极限定理",
+    "summary": "计算正态区间概率，推导样本均值的尺度，并解释中心极限定理的二阶近似。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7023,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第一部分 · 概率与随机变量",
+        "number": 23,
+        "chapter": "4",
+        "section": "2",
+        "chapter_title": "常用概率分布",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "4.3",
+          "4.A.2"
+        ]
+      }
+    }
+  },
+  {
+    "id": "87381bf2-c963-54c9-b29f-89faf52b55ca",
+    "slug": "larsen-book-04-03",
+    "title": "几何分布与负二项分布",
+    "summary": "从首次成功推广到第 r 次成功，区分试验总次数和失败次数的参数约定。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7024,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第一部分 · 概率与随机变量",
+        "number": 24,
+        "chapter": "4",
+        "section": "3",
+        "chapter_title": "常用概率分布",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "4.4",
+          "4.5"
+        ]
+      }
+    }
+  },
+  {
+    "id": "d44c8910-349f-5b09-a9df-c88e87211e1a",
+    "slug": "larsen-book-04-04",
+    "title": "指数分布、Gamma 分布与等待时间",
+    "summary": "从无事件概率推导指数等待时间，再把多段等待相加得到 Gamma 分布。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7025,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第一部分 · 概率与随机变量",
+        "number": 25,
+        "chapter": "4",
+        "section": "4",
+        "chapter_title": "常用概率分布",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "4.6"
+        ]
+      }
+    }
+  },
+  {
+    "id": "87e2768d-83ba-5952-8524-765f8468b498",
+    "slug": "larsen-book-04-05",
+    "title": "分布选择、随机数生成与模拟核验",
+    "summary": "将常用分布与数据机制对应，用逆分布法生成随机数并核验模拟均值和方差。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7026,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第一部分 · 概率与随机变量",
+        "number": 26,
+        "chapter": "4",
+        "section": "5",
+        "chapter_title": "常用概率分布",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "4.7",
+          "4.A.1"
+        ]
+      }
+    }
+  },
+  {
+    "id": "79d76f21-5eac-5927-b0ef-6bfaff40bc88",
+    "slug": "larsen-book-04-06",
+    "title": "常用概率分布：习题",
+    "summary": "98 道题，练习常用概率分布中的概念、计算与方法选择。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7027,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第一部分 · 概率与随机变量",
+        "number": 27,
+        "chapter": "4",
+        "section": "6",
+        "chapter_title": "常用概率分布",
+        "edition": "2026-10",
+        "minutes": 44,
+        "source_sections": [
+          "4.2",
+          "4.3",
+          "4.4",
+          "4.5",
+          "4.6"
+        ],
+        "unit_type": "exercise",
+        "questions": 98
+      }
+    }
+  },
+  {
+    "id": "467443da-93ec-5347-a384-6666ee5fe7cd",
+    "slug": "larsen-book-05-01",
+    "title": "矩估计与最大似然估计",
+    "summary": "由样本矩构造估计，并通过似然函数求解 Bernoulli、正态和均匀分布参数。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7028,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第二部分 · 估计与检验",
+        "number": 28,
+        "chapter": "5",
+        "section": "1",
+        "chapter_title": "参数估计",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "5.1",
+          "5.2"
+        ]
+      }
+    }
+  },
+  {
+    "id": "7699614a-1ac4-5591-b6bb-d634d26230d4",
+    "slug": "larsen-book-05-02",
+    "title": "置信区间、误差界与样本量",
+    "summary": "从枢轴量构造区间，解释置信水平，并计算均值和比例的样本量。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7029,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第二部分 · 估计与检验",
+        "number": 29,
+        "chapter": "5",
+        "section": "2",
+        "chapter_title": "参数估计",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "5.3"
+        ]
+      }
+    }
+  },
+  {
+    "id": "0968b6b6-defc-5435-a0de-2899d1fa0933",
+    "slug": "larsen-book-05-03",
+    "title": "偏差、均方误差与估计效率",
+    "summary": "用重复抽样定义估计误差，推导样本方差的 n−1 分母与偏差方差分解。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7030,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第二部分 · 估计与检验",
+        "number": 30,
+        "chapter": "5",
+        "section": "3",
+        "chapter_title": "参数估计",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "5.4"
+        ]
+      }
+    }
+  },
+  {
+    "id": "e11cdf72-ef59-5d7c-a248-91841aee153f",
+    "slug": "larsen-book-05-04",
+    "title": "Fisher 信息与 Cramér–Rao 下界",
+    "summary": "从得分函数的波动推导无偏估计方差下界，并检查等号成立与正则条件。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7031,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第二部分 · 估计与检验",
+        "number": 31,
+        "chapter": "5",
+        "section": "4",
+        "chapter_title": "参数估计",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "5.5"
+        ]
+      }
+    }
+  },
+  {
+    "id": "a75b579b-6594-5cb3-971f-5498a6fb2808",
+    "slug": "larsen-book-05-05",
+    "title": "充分统计量与信息压缩",
+    "summary": "用条件分布和因子分解识别充分统计量，解释数据压缩与估计精度的关系。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7032,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第二部分 · 估计与检验",
+        "number": 32,
+        "chapter": "5",
+        "section": "5",
+        "chapter_title": "参数估计",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "5.6"
+        ]
+      }
+    }
+  },
+  {
+    "id": "86b8bc3e-3f08-59f1-b674-114f1fcb36a1",
+    "slug": "larsen-book-05-06",
+    "title": "一致性、渐近估计与自助法",
+    "summary": "用概率收敛说明大样本稳定性，并计算自助标准误与近似误差。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7033,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第二部分 · 估计与检验",
+        "number": 33,
+        "chapter": "5",
+        "section": "6",
+        "chapter_title": "参数估计",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "5.7",
+          "5.9"
+        ]
+      }
+    }
+  },
+  {
+    "id": "08461b12-9f2e-567c-a672-3cefde983f13",
+    "slug": "larsen-book-05-07",
+    "title": "贝叶斯估计、先验与损失函数",
+    "summary": "逐步推导 Beta–二项更新，用后验均值和损失函数说明估计选择。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7034,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第二部分 · 估计与检验",
+        "number": 34,
+        "chapter": "5",
+        "section": "7",
+        "chapter_title": "参数估计",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "5.8"
+        ]
+      }
+    }
+  },
+  {
+    "id": "b01aac88-0231-5a7f-bab0-bd758fdd6ece",
+    "slug": "larsen-book-05-08",
+    "title": "参数估计：习题",
+    "summary": "110 道题，练习参数估计中的概念、计算与方法选择。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7035,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第二部分 · 估计与检验",
+        "number": 35,
+        "chapter": "5",
+        "section": "8",
+        "chapter_title": "参数估计",
+        "edition": "2026-10",
+        "minutes": 46,
+        "source_sections": [
+          "5.2",
+          "5.3",
+          "5.4",
+          "5.5",
+          "5.6",
+          "5.7",
+          "5.8"
+        ],
+        "unit_type": "exercise",
+        "questions": 110
+      }
+    }
+  },
+  {
+    "id": "267afe3d-8678-57e3-9cf6-4a38a22f8564",
+    "slug": "larsen-book-06-01",
+    "title": "假设、检验统计量与拒绝域",
+    "summary": "从明确假设开始构造检验，逐项计算二项模型的显著性水平与 p 值。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7036,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第二部分 · 估计与检验",
+        "number": 36,
+        "chapter": "6",
+        "section": "1",
+        "chapter_title": "假设检验",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "6.1",
+          "6.2",
+          "6.3"
+        ]
+      }
+    }
+  },
+  {
+    "id": "51a0a92e-69e0-515e-9d2d-2ac9f7cc0107",
+    "slug": "larsen-book-06-02",
+    "title": "两类错误、功效与样本量",
+    "summary": "把拒绝概率写成参数的函数，计算真实效果下的检出概率。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7037,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第二部分 · 估计与检验",
+        "number": 37,
+        "chapter": "6",
+        "section": "2",
+        "chapter_title": "假设检验",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "6.4"
+        ]
+      }
+    }
+  },
+  {
+    "id": "80956c99-dae4-53a0-a31a-ab725cb16a53",
+    "slug": "larsen-book-06-03",
+    "title": "广义似然比检验",
+    "summary": "比较受约束与不受约束的最佳拟合，并推导正态均值的似然比统计量。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7038,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第二部分 · 估计与检验",
+        "number": 38,
+        "chapter": "6",
+        "section": "3",
+        "chapter_title": "假设检验",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "6.5"
+        ]
+      }
+    }
+  },
+  {
+    "id": "07add53d-eff8-5e5b-9d6a-bbcc61ab7e70",
+    "slug": "larsen-book-06-04",
+    "title": "统计显著性与实际效应",
+    "summary": "把效应量、区间和检验结果放在一起，说明样本量与重复检验的影响。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7039,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第二部分 · 估计与检验",
+        "number": 39,
+        "chapter": "6",
+        "section": "4",
+        "chapter_title": "假设检验",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "6.6"
+        ]
+      }
+    }
+  },
+  {
+    "id": "1f99c7dd-3579-533a-b2ab-542a63267321",
+    "slug": "larsen-book-06-05",
+    "title": "假设检验：习题",
+    "summary": "49 道题，练习假设检验中的概念、计算与方法选择。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7040,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第二部分 · 估计与检验",
+        "number": 40,
+        "chapter": "6",
+        "section": "5",
+        "chapter_title": "假设检验",
+        "edition": "2026-10",
+        "minutes": 25,
+        "source_sections": [
+          "6.2",
+          "6.3",
+          "6.4",
+          "6.5"
+        ],
+        "unit_type": "exercise",
+        "questions": 49
+      }
+    }
+  },
+  {
+    "id": "206bcaf0-ad4a-5dc4-8f47-f9eac54615d2",
+    "slug": "larsen-book-07-01",
+    "title": "样本均值、样本方差与 t 分布",
+    "summary": "解释正态样本中的独立性和自由度，逐步构造 Student t 统计量。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7041,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第二部分 · 估计与检验",
+        "number": 41,
+        "chapter": "7",
+        "section": "1",
+        "chapter_title": "正态总体的统计推断",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "7.1",
+          "7.2",
+          "7.3",
+          "7.A.1"
+        ]
+      }
+    }
+  },
+  {
+    "id": "4f7a56c7-ea1f-5246-b824-14cb915a75f0",
+    "slug": "larsen-book-07-02",
+    "title": "单样本均值的 t 推断",
+    "summary": "用一组数据完成均值、方差、检验和区间计算，并连接 t 检验与似然比。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7042,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第二部分 · 估计与检验",
+        "number": 42,
+        "chapter": "7",
+        "section": "2",
+        "chapter_title": "正态总体的统计推断",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "7.4",
+          "7.A.2"
+        ]
+      }
+    }
+  },
+  {
+    "id": "be7cd0e0-5372-5897-a7aa-48b9b425373a",
+    "slug": "larsen-book-07-03",
+    "title": "正态总体方差的区间与检验",
+    "summary": "利用卡方枢轴量构造方差区间，区分等尾检验与似然比拒绝域。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7043,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第二部分 · 估计与检验",
+        "number": 43,
+        "chapter": "7",
+        "section": "3",
+        "chapter_title": "正态总体的统计推断",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "7.5",
+          "7.A.3"
+        ]
+      }
+    }
+  },
+  {
+    "id": "60bd781d-1a6c-5efd-9e5e-798665614324",
+    "slug": "larsen-book-07-04",
+    "title": "未知方差下的检验功效",
+    "summary": "用非中心 t 分布计算均值检验功效，说明效果大小、样本量与噪声的关系。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7044,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第二部分 · 估计与检验",
+        "number": 44,
+        "chapter": "7",
+        "section": "4",
+        "chapter_title": "正态总体的统计推断",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "7.6"
+        ]
+      }
+    }
+  },
+  {
+    "id": "6500b235-930c-5ffc-82c0-4754c0ef41c9",
+    "slug": "larsen-book-07-05",
+    "title": "正态总体的统计推断：习题",
+    "summary": "59 道题，练习正态总体的统计推断中的概念、计算与方法选择。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7045,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第二部分 · 估计与检验",
+        "number": 45,
+        "chapter": "7",
+        "section": "5",
+        "chapter_title": "正态总体的统计推断",
+        "edition": "2026-10",
+        "minutes": 31,
+        "source_sections": [
+          "7.3",
+          "7.4",
+          "7.5"
+        ],
+        "unit_type": "exercise",
+        "questions": 59
+      }
+    }
+  },
+  {
+    "id": "9bdcfb44-4081-50bd-8b1d-1c4402f0bd1b",
+    "slug": "larsen-book-08-01",
+    "title": "数据类型、抽样与实验结构",
+    "summary": "区分测量尺度、独立样本、配对样本和试验设计，识别抽样偏差。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7046,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第二部分 · 估计与检验",
+        "number": 46,
+        "chapter": "8",
+        "section": "1",
+        "chapter_title": "数据类型与研究设计",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "8.1",
+          "8.2",
+          "8.3"
+        ]
+      }
+    }
+  },
+  {
+    "id": "f85e7ecc-04c3-5636-8419-bfe2331de2c4",
+    "slug": "larsen-book-08-02",
+    "title": "图表、分布摘要与异常观测",
+    "summary": "计算分位数、箱线图与标准化值，保留分组结构并检查数据质量。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7047,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第二部分 · 估计与检验",
+        "number": 47,
+        "chapter": "8",
+        "section": "2",
+        "chapter_title": "数据类型与研究设计",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "8.2"
+        ]
+      }
+    }
+  },
+  {
+    "id": "5ae82bed-9b1f-5f39-b510-21d74bf99026",
+    "slug": "larsen-book-08-03",
+    "title": "数据类型与研究设计：习题",
+    "summary": "32 道题，练习数据类型与研究设计中的概念、计算与方法选择。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7048,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第二部分 · 估计与检验",
+        "number": 48,
+        "chapter": "8",
+        "section": "3",
+        "chapter_title": "数据类型与研究设计",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "8.2"
+        ],
+        "unit_type": "exercise",
+        "questions": 32
+      }
+    }
+  },
+  {
+    "id": "8be18b55-7bae-568d-b15b-116fbbdb2536",
+    "slug": "larsen-book-09-01",
+    "title": "两个独立总体的均值比较",
+    "summary": "从均值差的方差推导合并方差 t 检验与 Welch 检验。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7049,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第三部分 · 比较、回归与实验设计",
+        "number": 49,
+        "chapter": "9",
+        "section": "1",
+        "chapter_title": "两个总体的比较",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "9.1",
+          "9.2",
+          "9.A.1"
+        ]
+      }
+    }
+  },
+  {
+    "id": "e51fd104-d76c-5b3a-bf1d-2a3a9a1fdb63",
+    "slug": "larsen-book-09-02",
+    "title": "方差比与 F 分布",
+    "summary": "由两个独立卡方变量构造 F 分布，计算方差比区间并注意分子分母顺序。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7050,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第三部分 · 比较、回归与实验设计",
+        "number": 50,
+        "chapter": "9",
+        "section": "2",
+        "chapter_title": "两个总体的比较",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "9.3"
+        ]
+      }
+    }
+  },
+  {
+    "id": "58a6679d-3be5-519e-9ebf-6b2726bf8303",
+    "slug": "larsen-book-09-03",
+    "title": "两个比例的检验与区间",
+    "summary": "区分原假设下合并比例与差值区间标准误，并规划样本分配。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7051,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第三部分 · 比较、回归与实验设计",
+        "number": 51,
+        "chapter": "9",
+        "section": "3",
+        "chapter_title": "两个总体的比较",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "9.4",
+          "9.5",
+          "9.6"
+        ]
+      }
+    }
+  },
+  {
+    "id": "8c164143-be60-5d2f-9afa-d7a6da0b6331",
+    "slug": "larsen-book-09-04",
+    "title": "两个总体的比较：习题",
+    "summary": "52 道题，练习两个总体的比较中的概念、计算与方法选择。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7052,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第三部分 · 比较、回归与实验设计",
+        "number": 52,
+        "chapter": "9",
+        "section": "4",
+        "chapter_title": "两个总体的比较",
+        "edition": "2026-10",
+        "minutes": 29,
+        "source_sections": [
+          "9.2",
+          "9.3",
+          "9.4",
+          "9.5"
+        ],
+        "unit_type": "exercise",
+        "questions": 52
+      }
+    }
+  },
+  {
+    "id": "acfc9ed6-e271-5b4b-a87f-f96656788425",
+    "slug": "larsen-book-10-01",
+    "title": "多项分布与 Pearson 卡方统计量",
+    "summary": "从类别计数建立多项模型，解释期望频数和自由度。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7053,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第三部分 · 比较、回归与实验设计",
+        "number": 53,
+        "chapter": "10",
+        "section": "1",
+        "chapter_title": "拟合优度与列联表",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "10.1",
+          "10.2",
+          "10.3"
+        ]
+      }
+    }
+  },
+  {
+    "id": "3ba9b4e7-af7b-5848-b602-010996033bcb",
+    "slug": "larsen-book-10-02",
+    "title": "估计参数后的拟合优度检验",
+    "summary": "先拟合模型再计算频数偏离，说明参数估计为何减少自由度。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7054,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第三部分 · 比较、回归与实验设计",
+        "number": 54,
+        "chapter": "10",
+        "section": "2",
+        "chapter_title": "拟合优度与列联表",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "10.4"
+        ]
+      }
+    }
+  },
+  {
+    "id": "9a75a5a2-6653-5720-a77e-f3ba2b00bea5",
+    "slug": "larsen-book-10-03",
+    "title": "列联表、独立性与异常点",
+    "summary": "由边际比例计算列联表期望频数，解释自由度与局部残差。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7055,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第三部分 · 比较、回归与实验设计",
+        "number": 55,
+        "chapter": "10",
+        "section": "3",
+        "chapter_title": "拟合优度与列联表",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "10.5",
+          "10.6"
+        ]
+      }
+    }
+  },
+  {
+    "id": "94ab5fd5-f759-5434-8f29-7cd71f1b916c",
+    "slug": "larsen-book-10-04",
+    "title": "拟合优度与列联表：习题",
+    "summary": "46 道题，练习拟合优度与列联表中的概念、计算与方法选择。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7056,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第三部分 · 比较、回归与实验设计",
+        "number": 56,
+        "chapter": "10",
+        "section": "4",
+        "chapter_title": "拟合优度与列联表",
+        "edition": "2026-10",
+        "minutes": 26,
+        "source_sections": [
+          "10.2",
+          "10.3",
+          "10.4",
+          "10.5"
+        ],
+        "unit_type": "exercise",
+        "questions": 46
+      }
+    }
+  },
+  {
+    "id": "580db03c-8343-529a-b6b5-ed4ad61ad354",
+    "slug": "larsen-book-11-01",
+    "title": "最小二乘、拟合残差与非线性变换",
+    "summary": "逐步推导直线拟合系数，计算残差，并比较指数、幂律和多项式模型。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7057,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第三部分 · 比较、回归与实验设计",
+        "number": 57,
+        "chapter": "11",
+        "section": "1",
+        "chapter_title": "回归与相关",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "11.1",
+          "11.2"
+        ]
+      }
+    }
+  },
+  {
+    "id": "a0421827-0786-5481-9145-c48cedcbd56b",
+    "slug": "larsen-book-11-02",
+    "title": "回归系数推断与预测区间",
+    "summary": "解释线性模型假设，推导斜率标准误及均值响应区间和新观测预测区间。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7058,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第三部分 · 比较、回归与实验设计",
+        "number": 58,
+        "chapter": "11",
+        "section": "2",
+        "chapter_title": "回归与相关",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "11.3",
+          "11.A.1"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2a53f5fd-0f93-5e2c-ac45-34b570ea79ce",
+    "slug": "larsen-book-11-03",
+    "title": "相关系数、二维正态与条件预测",
+    "summary": "解释相关系数的尺度性质，推导二维正态条件均值与条件方差。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7059,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第三部分 · 比较、回归与实验设计",
+        "number": 59,
+        "chapter": "11",
+        "section": "3",
+        "chapter_title": "回归与相关",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "11.4",
+          "11.5",
+          "11.6"
+        ]
+      }
+    }
+  },
+  {
+    "id": "cac7235e-7c3d-57a4-ad75-35c8795b58cb",
+    "slug": "larsen-book-11-04",
+    "title": "回归与相关：习题",
+    "summary": "81 道题，练习回归与相关中的概念、计算与方法选择。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7060,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第三部分 · 比较、回归与实验设计",
+        "number": 60,
+        "chapter": "11",
+        "section": "4",
+        "chapter_title": "回归与相关",
+        "edition": "2026-10",
+        "minutes": 52,
+        "source_sections": [
+          "11.2",
+          "11.3",
+          "11.4",
+          "11.5"
+        ],
+        "unit_type": "exercise",
+        "questions": 81
+      }
+    }
+  },
+  {
+    "id": "1c8a0581-1b02-5ced-afd5-5d9d294ab824",
+    "slug": "larsen-book-12-01",
+    "title": "单因素方差分析与平方和分解",
+    "summary": "从组间和组内差异推导 F 统计量，用完整小样本构造方差分析表。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7061,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第三部分 · 比较、回归与实验设计",
+        "number": 61,
+        "chapter": "12",
+        "section": "1",
+        "chapter_title": "单因素方差分析",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "12.1",
+          "12.2",
+          "12.A.1"
+        ]
+      }
+    }
+  },
+  {
+    "id": "1a74787c-3c83-5c1b-8d61-b659cbee75e3",
+    "slug": "larsen-book-12-02",
+    "title": "多重比较与线性对比",
+    "summary": "区分全部两两比较与预先指定的对比，推导 Tukey 区间和对比标准误。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7062,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第三部分 · 比较、回归与实验设计",
+        "number": 62,
+        "chapter": "12",
+        "section": "2",
+        "chapter_title": "单因素方差分析",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "12.3",
+          "12.4"
+        ]
+      }
+    }
+  },
+  {
+    "id": "166bedad-f3e8-5944-98a9-4b4368312067",
+    "slug": "larsen-book-12-03",
+    "title": "变换、非中心 F 与实验效率",
+    "summary": "解释方差稳定变换和备择下的 F 分布，连接实验设计与检验功效。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7063,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第三部分 · 比较、回归与实验设计",
+        "number": 63,
+        "chapter": "12",
+        "section": "3",
+        "chapter_title": "单因素方差分析",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "12.5",
+          "12.6",
+          "12.A.2"
+        ]
+      }
+    }
+  },
+  {
+    "id": "c7ecc844-c0c4-510e-a447-c73bf51e3a53",
+    "slug": "larsen-book-12-04",
+    "title": "单因素方差分析：习题",
+    "summary": "34 道题，练习单因素方差分析中的概念、计算与方法选择。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7064,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第三部分 · 比较、回归与实验设计",
+        "number": 64,
+        "chapter": "12",
+        "section": "4",
+        "chapter_title": "单因素方差分析",
+        "edition": "2026-10",
+        "minutes": 25,
+        "source_sections": [
+          "12.2",
+          "12.3",
+          "12.4",
+          "12.5",
+          "12.A.2"
+        ],
+        "unit_type": "exercise",
+        "questions": 34
+      }
+    }
+  },
+  {
+    "id": "485799a1-67d9-510c-b425-ee2cd0e3907c",
+    "slug": "larsen-book-13-01",
+    "title": "随机区组设计",
+    "summary": "在相同区组内比较处理，逐项分解处理、区组和残差平方和。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7065,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第三部分 · 比较、回归与实验设计",
+        "number": 65,
+        "chapter": "13",
+        "section": "1",
+        "chapter_title": "随机区组与配对设计",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "13.1",
+          "13.2"
+        ]
+      }
+    }
+  },
+  {
+    "id": "8c19e11a-1748-52b6-8fda-ce7c9dbc24df",
+    "slug": "larsen-book-13-02",
+    "title": "配对 t 检验与配对设计的选择",
+    "summary": "把配对资料化为差值样本，解释相关性如何改变比较精度。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7066,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第三部分 · 比较、回归与实验设计",
+        "number": 66,
+        "chapter": "13",
+        "section": "2",
+        "chapter_title": "随机区组与配对设计",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "13.3",
+          "13.4"
+        ]
+      }
+    }
+  },
+  {
+    "id": "de407194-9346-5c3b-8d08-dbc98c87e5ea",
+    "slug": "larsen-book-13-03",
+    "title": "随机区组与配对设计：习题",
+    "summary": "22 道题，练习随机区组与配对设计中的概念、计算与方法选择。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7067,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第三部分 · 比较、回归与实验设计",
+        "number": 67,
+        "chapter": "13",
+        "section": "3",
+        "chapter_title": "随机区组与配对设计",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "13.2",
+          "13.3"
+        ],
+        "unit_type": "exercise",
+        "questions": 22
+      }
+    }
+  },
+  {
+    "id": "49732689-242c-536d-a36e-8e1f5c7889a3",
+    "slug": "larsen-book-14-01",
+    "title": "符号检验与中位数推断",
+    "summary": "只用差值符号构造精确二项检验，并用次序统计量形成中位数区间。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7068,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第三部分 · 比较、回归与实验设计",
+        "number": 68,
+        "chapter": "14",
+        "section": "1",
+        "chapter_title": "非参数统计",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "14.1",
+          "14.2"
+        ]
+      }
+    }
+  },
+  {
+    "id": "1aa187da-bed0-53a4-9453-9ec28fa97e1d",
+    "slug": "larsen-book-14-02",
+    "title": "Wilcoxon 符号秩与秩和检验",
+    "summary": "通过排序保留部分大小信息，区分配对符号秩和独立两样本秩和方法。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7069,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第三部分 · 比较、回归与实验设计",
+        "number": 69,
+        "chapter": "14",
+        "section": "2",
+        "chapter_title": "非参数统计",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "14.3"
+        ]
+      }
+    }
+  },
+  {
+    "id": "957537e4-e866-5f6f-be40-4d077886695c",
+    "slug": "larsen-book-14-03",
+    "title": "Kruskal–Wallis 与 Friedman 检验",
+    "summary": "将秩方法扩展到多个独立组与区组设计，计算两种统计量。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7070,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第三部分 · 比较、回归与实验设计",
+        "number": 70,
+        "chapter": "14",
+        "section": "3",
+        "chapter_title": "非参数统计",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "14.4",
+          "14.5"
+        ]
+      }
+    }
+  },
+  {
+    "id": "43453fb7-8e72-5d5e-ab5e-c09794adda24",
+    "slug": "larsen-book-14-04",
+    "title": "游程检验与非参数方法的效率",
+    "summary": "用相邻符号的分段数检查随机排列，比较不同检验保留的信息和假设。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7071,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第三部分 · 比较、回归与实验设计",
+        "number": 71,
+        "chapter": "14",
+        "section": "4",
+        "chapter_title": "非参数统计",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "14.6",
+          "14.7"
+        ]
+      }
+    }
+  },
+  {
+    "id": "b5fc02ad-cc16-5fb4-a874-b5e0220b42ec",
+    "slug": "larsen-book-14-05",
+    "title": "非参数统计：习题",
+    "summary": "41 道题，练习非参数统计中的概念、计算与方法选择。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7072,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第三部分 · 比较、回归与实验设计",
+        "number": 72,
+        "chapter": "14",
+        "section": "5",
+        "chapter_title": "非参数统计",
+        "edition": "2026-10",
+        "minutes": 34,
+        "source_sections": [
+          "14.2",
+          "14.3",
+          "14.4",
+          "14.5",
+          "14.6"
+        ],
+        "unit_type": "exercise",
+        "questions": 41
+      }
+    }
+  },
+  {
+    "id": "709dc183-0b18-5b12-aa36-3d95ecef4f59",
+    "slug": "larsen-book-15-01",
+    "title": "双因素设计与交互作用",
+    "summary": "在因素组合上定义主效应和交互作用，用单元均值计算差中之差。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7073,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第三部分 · 比较、回归与实验设计",
+        "number": 73,
+        "chapter": "15",
+        "section": "1",
+        "chapter_title": "析因设计与交互作用",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "15.1",
+          "15.2"
+        ]
+      }
+    }
+  },
+  {
+    "id": "dc8ca6fc-aff4-50a7-90c8-ebce2db80699",
+    "slug": "larsen-book-15-02",
+    "title": "双因素平方和与均方期望",
+    "summary": "分解平衡设计中的主效应、交互和误差，解释固定效应与随机效应的检验分母。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7074,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第三部分 · 比较、回归与实验设计",
+        "number": 74,
+        "chapter": "15",
+        "section": "2",
+        "chapter_title": "析因设计与交互作用",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "15.3",
+          "15.4",
+          "15.5"
+        ]
+      }
+    }
+  },
+  {
+    "id": "cc6bd92d-448c-5574-81bf-8e69063f9b6b",
+    "slug": "larsen-book-15-03",
+    "title": "三因素设计与二水平效应编码",
+    "summary": "扩展主效应和交互项，用正负号对比计算二水平设计中的效应。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7075,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第三部分 · 比较、回归与实验设计",
+        "number": 75,
+        "chapter": "15",
+        "section": "3",
+        "chapter_title": "析因设计与交互作用",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "15.6",
+          "15.7"
+        ]
+      }
+    }
+  },
+  {
+    "id": "9ebd1186-fee0-5d0f-a427-5662aaabb436",
+    "slug": "larsen-book-15-04",
+    "title": "部分析因、混杂与设计分辨率",
+    "summary": "通过半分设计说明试验次数与可识别效应之间的取舍。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7076,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "第三部分 · 比较、回归与实验设计",
+        "number": 76,
+        "chapter": "15",
+        "section": "4",
+        "chapter_title": "析因设计与交互作用",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "15.8"
+        ]
+      }
+    }
+  },
+  {
+    "id": "59215e9d-4645-515f-836d-ff86f3aed887",
+    "slug": "larsen-book-a-01",
+    "title": "统计表、分位数与数值计算",
+    "summary": "统一常用分布的尾部记号，演示查表、反解分位数和软件核验。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 7077,
+    "metadata": {
+      "theory_book": {
+        "book": "mathematical-statistics",
+        "part": "附录",
+        "number": 77,
+        "chapter": "A",
+        "section": "1",
+        "chapter_title": "统计表与数值计算",
+        "edition": "2026-10",
+        "minutes": 63,
+        "source_sections": [
+          "A"
+        ]
+      }
+    }
+  },
+  {
+    "id": "d0c6a4f7-b782-5038-b7f0-47f6885be430",
+    "slug": "miller-book-01-01",
+    "title": "问题、算法与抽象数据类型",
+    "summary": "区分问题规格、算法步骤、数据结构和程序实现，给操作写出明确约定。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8001,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第一部分 · 编程与算法基础",
+        "number": 1,
+        "chapter": "1",
+        "section": "1",
+        "chapter_title": "Python 与抽象数据类型",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "1.1",
+          "1.2",
+          "1.3",
+          "1.5",
+          "1.6"
+        ]
+      }
+    }
+  },
+  {
+    "id": "d52b7a91-ace3-5b11-94ab-fd2f4a550c25",
+    "slug": "miller-book-01-02",
+    "title": "Python 数据、引用与可变对象",
+    "summary": "认识数值、字符串、列表、元组、集合和字典，解释别名与浅复制。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8002,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第一部分 · 编程与算法基础",
+        "number": 2,
+        "chapter": "1",
+        "section": "2",
+        "chapter_title": "Python 与抽象数据类型",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "1.4.1"
+        ]
+      }
+    }
+  },
+  {
+    "id": "c40cfc1b-37db-56a5-b311-4ca044f5591f",
+    "slug": "miller-book-01-03",
+    "title": "输入输出、控制流程与函数",
+    "summary": "用循环与函数组织计算，处理输入转换、异常和文件资源。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8003,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第一部分 · 编程与算法基础",
+        "number": 3,
+        "chapter": "1",
+        "section": "3",
+        "chapter_title": "Python 与抽象数据类型",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "1.4.2",
+          "1.4.3",
+          "1.4.4",
+          "1.4.5"
+        ]
+      }
+    }
+  },
+  {
+    "id": "8c590ccc-69e6-536a-bf33-cf43f78a51d6",
+    "slug": "miller-book-01-04",
+    "title": "类、分数对象与运算符",
+    "summary": "用不变式定义类，约分分数并实现加法与相等比较。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8004,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第一部分 · 编程与算法基础",
+        "number": 4,
+        "chapter": "1",
+        "section": "4",
+        "chapter_title": "Python 与抽象数据类型",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "1.4.6"
+        ]
+      }
+    }
+  },
+  {
+    "id": "a4adc8b6-cff2-54c0-bf1c-4578580cf24f",
+    "slug": "miller-book-01-05",
+    "title": "继承、组合与逻辑门模型",
+    "summary": "用逻辑门区分继承和组合，理解多态调用及接口复用。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8005,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第一部分 · 编程与算法基础",
+        "number": 5,
+        "chapter": "1",
+        "section": "5",
+        "chapter_title": "Python 与抽象数据类型",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "1.4.6"
+        ]
+      }
+    }
+  },
+  {
+    "id": "7989ac14-329b-5eb5-a3ea-6f207d736091",
+    "slug": "miller-book-01-06",
+    "title": "Python 与抽象数据类型：习题",
+    "summary": "19 道题，练习Python 与抽象数据类型中的概念、计算与方法选择。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8006,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第一部分 · 编程与算法基础",
+        "number": 6,
+        "chapter": "1",
+        "section": "6",
+        "chapter_title": "Python 与抽象数据类型",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "1.7",
+          "1.8"
+        ],
+        "unit_type": "exercise",
+        "questions": 19
+      }
+    }
+  },
+  {
+    "id": "4346b58b-2eb7-54ba-a1bb-e1e6fb36a710",
+    "slug": "miller-book-02-01",
+    "title": "操作次数与渐近复杂度",
+    "summary": "用增长率比较算法，推导线性、平方和对数复杂度。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8007,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第一部分 · 编程与算法基础",
+        "number": 7,
+        "chapter": "2",
+        "section": "1",
+        "chapter_title": "算法分析",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "2.1",
+          "2.2",
+          "2.2.1",
+          "2.4",
+          "2.5"
+        ]
+      }
+    }
+  },
+  {
+    "id": "e76cf965-0ffe-536c-adf3-d422d5e9e0ca",
+    "slug": "miller-book-02-02",
+    "title": "异序词检测与算法改进",
+    "summary": "比较逐项匹配、排序和计数三种实现，解释字符集假设对复杂度的影响。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8008,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第一部分 · 编程与算法基础",
+        "number": 8,
+        "chapter": "2",
+        "section": "2",
+        "chapter_title": "算法分析",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "2.2.2"
+        ]
+      }
+    }
+  },
+  {
+    "id": "aca14a74-e432-5a72-8dbd-ef7317342bea",
+    "slug": "miller-book-02-03",
+    "title": "Python 容器性能与计时实验",
+    "summary": "比较列表和字典操作的成本，设计能够反映输入规模的计时实验。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8009,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第一部分 · 编程与算法基础",
+        "number": 9,
+        "chapter": "2",
+        "section": "3",
+        "chapter_title": "算法分析",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "2.3",
+          "2.3.1",
+          "2.3.2"
+        ]
+      }
+    }
+  },
+  {
+    "id": "d86ab54e-38ea-53f1-84e2-0c39754f256a",
+    "slug": "miller-book-02-04",
+    "title": "算法分析：习题",
+    "summary": "11 道题，练习算法分析中的概念、计算与方法选择。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8010,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第一部分 · 编程与算法基础",
+        "number": 10,
+        "chapter": "2",
+        "section": "4",
+        "chapter_title": "算法分析",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "2.6",
+          "2.7"
+        ],
+        "unit_type": "exercise",
+        "questions": 11
+      }
+    }
+  },
+  {
+    "id": "5ad0254b-792e-582f-bb4b-62fe388c8bc9",
+    "slug": "miller-book-03-01",
+    "title": "栈与括号匹配",
+    "summary": "用后进先出保存尚未匹配的左括号，并逐步追踪栈状态。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8011,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第二部分 · 数据组织与基本算法",
+        "number": 11,
+        "chapter": "3",
+        "section": "1",
+        "chapter_title": "基本数据结构",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "3.1",
+          "3.2",
+          "3.3.1",
+          "3.3.2",
+          "3.3.3",
+          "3.3.4",
+          "3.3.5"
+        ]
+      }
+    }
+  },
+  {
+    "id": "ccabe2ae-f12c-509e-85f5-aba55b08b877",
+    "slug": "miller-book-03-02",
+    "title": "进制转换与表达式求值",
+    "summary": "利用余数栈转换进制，用运算符栈和操作数栈处理表达式。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8012,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第二部分 · 数据组织与基本算法",
+        "number": 12,
+        "chapter": "3",
+        "section": "2",
+        "chapter_title": "基本数据结构",
+        "edition": "2026-10",
+        "minutes": 19,
+        "source_sections": [
+          "3.3.6",
+          "3.3.7"
+        ]
+      }
+    }
+  },
+  {
+    "id": "61f0f355-6586-5f78-b9c3-3046d84547bc",
+    "slug": "miller-book-03-03",
+    "title": "队列、双端队列与循环处理",
+    "summary": "用先进先出实现任务轮转，用双端队列比较字符串两端。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8013,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第二部分 · 数据组织与基本算法",
+        "number": 13,
+        "chapter": "3",
+        "section": "3",
+        "chapter_title": "基本数据结构",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "3.4.1",
+          "3.4.2",
+          "3.4.3",
+          "3.4.4",
+          "3.5"
+        ]
+      }
+    }
+  },
+  {
+    "id": "0732edc9-b911-5b4d-9119-500f89458dad",
+    "slug": "miller-book-03-04",
+    "title": "打印任务的离散时间模拟",
+    "summary": "把到达、排队和服务过程拆开，记录等待时间与未完成任务。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8014,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第二部分 · 数据组织与基本算法",
+        "number": 14,
+        "chapter": "3",
+        "section": "4",
+        "chapter_title": "基本数据结构",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "3.4.5"
+        ]
+      }
+    }
+  },
+  {
+    "id": "d72b4f00-056a-550a-a104-4fd2675a7812",
+    "slug": "miller-book-03-05",
+    "title": "链表、引用更新与有序插入",
+    "summary": "逐步实现单链表插入和删除，分析有序链表的查找及边界情况。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8015,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第二部分 · 数据组织与基本算法",
+        "number": 15,
+        "chapter": "3",
+        "section": "5",
+        "chapter_title": "基本数据结构",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "3.6",
+          "3.7",
+          "3.8"
+        ]
+      }
+    }
+  },
+  {
+    "id": "ec049b67-cdb4-5578-bce5-047cf79f5f84",
+    "slug": "miller-book-03-06",
+    "title": "基本数据结构：习题",
+    "summary": "37 道题，练习基本数据结构中的概念、计算与方法选择。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8016,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第二部分 · 数据组织与基本算法",
+        "number": 16,
+        "chapter": "3",
+        "section": "6",
+        "chapter_title": "基本数据结构",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "3.10",
+          "3.9"
+        ],
+        "unit_type": "exercise",
+        "questions": 37
+      }
+    }
+  },
+  {
+    "id": "00fc7450-a506-5187-99cb-972a64701130",
+    "slug": "miller-book-04-01",
+    "title": "递归、基本情形与调用栈",
+    "summary": "用规模减小保证终止，追踪调用栈并分析递归额外空间。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8017,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第二部分 · 数据组织与基本算法",
+        "number": 17,
+        "chapter": "4",
+        "section": "1",
+        "chapter_title": "递归与动态规划",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "4.1",
+          "4.2",
+          "4.3",
+          "4.8",
+          "4.9"
+        ]
+      }
+    }
+  },
+  {
+    "id": "3315dd30-0e4b-560e-920f-212bcd9cf8c5",
+    "slug": "miller-book-04-02",
+    "title": "递归绘图与自相似结构",
+    "summary": "通过树枝和三角形理解局部变换、递归深度及状态恢复。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8018,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第二部分 · 数据组织与基本算法",
+        "number": 18,
+        "chapter": "4",
+        "section": "2",
+        "chapter_title": "递归与动态规划",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "4.4"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2ff679c8-861c-5035-806a-39e92d1638c4",
+    "slug": "miller-book-04-03",
+    "title": "汉诺塔与递推关系",
+    "summary": "把移动规则分解成三个阶段，推导最少步数并区分递归深度与总调用数。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8019,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第二部分 · 数据组织与基本算法",
+        "number": 19,
+        "chapter": "4",
+        "section": "3",
+        "chapter_title": "递归与动态规划",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "4.5"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2122049a-4343-51b2-a188-a9e2b2f452fe",
+    "slug": "miller-book-04-04",
+    "title": "迷宫搜索、回溯与访问标记",
+    "summary": "用递归深度优先探索网格，区分访问状态和当前路径。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8020,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第二部分 · 数据组织与基本算法",
+        "number": 20,
+        "chapter": "4",
+        "section": "4",
+        "chapter_title": "递归与动态规划",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "4.6"
+        ]
+      }
+    }
+  },
+  {
+    "id": "e40dcc8b-0886-5f40-99ce-c783e2d4cd25",
+    "slug": "miller-book-04-05",
+    "title": "重复子问题、记忆化与动态规划",
+    "summary": "通过找零问题构造状态、转移和回溯信息，比较递归与自底向上计算。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8021,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第二部分 · 数据组织与基本算法",
+        "number": 21,
+        "chapter": "4",
+        "section": "5",
+        "chapter_title": "递归与动态规划",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "4.7"
+        ]
+      }
+    }
+  },
+  {
+    "id": "310cd48e-c7ba-5377-95a3-419845ea7c3a",
+    "slug": "miller-book-04-06",
+    "title": "递归与动态规划：习题",
+    "summary": "18 道题，练习递归与动态规划中的概念、计算与方法选择。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8022,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第二部分 · 数据组织与基本算法",
+        "number": 22,
+        "chapter": "4",
+        "section": "6",
+        "chapter_title": "递归与动态规划",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "4.10",
+          "4.11"
+        ],
+        "unit_type": "exercise",
+        "questions": 18
+      }
+    }
+  },
+  {
+    "id": "59764649-5bb3-5656-aa4e-e78b93318662",
+    "slug": "miller-book-05-01",
+    "title": "顺序查找与二分查找",
+    "summary": "用区间不变式实现二分查找，处理空序列、边界与重复值。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8023,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第二部分 · 数据组织与基本算法",
+        "number": 23,
+        "chapter": "5",
+        "section": "1",
+        "chapter_title": "搜索和排序",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "5.1",
+          "5.2.1",
+          "5.2.2"
+        ]
+      }
+    }
+  },
+  {
+    "id": "9b86f793-3269-513e-8637-b6d08e40a532",
+    "slug": "miller-book-05-02",
+    "title": "散列、冲突与开放寻址",
+    "summary": "从散列函数到线性探测，解释装载因子、删除标记和扩容。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8024,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第二部分 · 数据组织与基本算法",
+        "number": 24,
+        "chapter": "5",
+        "section": "2",
+        "chapter_title": "搜索和排序",
+        "edition": "2026-10",
+        "minutes": 19,
+        "source_sections": [
+          "5.2.3"
+        ]
+      }
+    }
+  },
+  {
+    "id": "b16f3a4a-d86f-512e-91f4-a45a17a2a56c",
+    "slug": "miller-book-05-03",
+    "title": "冒泡、选择与插入排序",
+    "summary": "通过每轮不变式比较三种基本排序，认识稳定性和近乎有序输入。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8025,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第二部分 · 数据组织与基本算法",
+        "number": 25,
+        "chapter": "5",
+        "section": "3",
+        "chapter_title": "搜索和排序",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "5.3.1",
+          "5.3.2",
+          "5.3.3"
+        ]
+      }
+    }
+  },
+  {
+    "id": "9984c211-162c-5b89-a9d4-0168b02bf53e",
+    "slug": "miller-book-05-04",
+    "title": "希尔排序与间隔序列",
+    "summary": "通过分组插入排序移动远距离逆序元素，说明复杂度为何依赖间隔选择。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8026,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第二部分 · 数据组织与基本算法",
+        "number": 26,
+        "chapter": "5",
+        "section": "4",
+        "chapter_title": "搜索和排序",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "5.3.4"
+        ]
+      }
+    }
+  },
+  {
+    "id": "29836e19-2571-5a4a-bb72-29075df68c8a",
+    "slug": "miller-book-05-05",
+    "title": "归并排序与分治",
+    "summary": "从合并两个有序序列推导归并排序，计算层数、时间和额外空间。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8027,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第二部分 · 数据组织与基本算法",
+        "number": 27,
+        "chapter": "5",
+        "section": "5",
+        "chapter_title": "搜索和排序",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "5.3.5"
+        ]
+      }
+    }
+  },
+  {
+    "id": "101925a0-3ce6-543f-a069-a28fd0f678ed",
+    "slug": "miller-book-05-06",
+    "title": "快速排序、划分与枢轴选择",
+    "summary": "推导快速排序的平均与最坏复杂度，处理重复键并控制递归风险。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8028,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第二部分 · 数据组织与基本算法",
+        "number": 28,
+        "chapter": "5",
+        "section": "6",
+        "chapter_title": "搜索和排序",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "5.3.6",
+          "5.4",
+          "5.5"
+        ]
+      }
+    }
+  },
+  {
+    "id": "05dfa3ad-aa55-5fa8-9271-f40862dbc12a",
+    "slug": "miller-book-05-07",
+    "title": "搜索和排序：习题",
+    "summary": "25 道题，练习搜索和排序中的概念、计算与方法选择。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8029,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第二部分 · 数据组织与基本算法",
+        "number": 29,
+        "chapter": "5",
+        "section": "7",
+        "chapter_title": "搜索和排序",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "5.6",
+          "5.7"
+        ],
+        "unit_type": "exercise",
+        "questions": 25
+      }
+    }
+  },
+  {
+    "id": "f94c15ce-c378-5b18-b1c1-07cc63efc6df",
+    "slug": "miller-book-06-01",
+    "title": "树的术语与两种表示",
+    "summary": "用层级结构解释根、路径、高度和子树，比较嵌套列表与节点引用。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8030,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第二部分 · 数据组织与基本算法",
+        "number": 30,
+        "chapter": "6",
+        "section": "1",
+        "chapter_title": "树",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "6.1",
+          "6.2",
+          "6.3",
+          "6.4",
+          "6.9",
+          "6.10"
+        ]
+      }
+    }
+  },
+  {
+    "id": "7674d667-238d-57a2-9968-c5c4b7f45025",
+    "slug": "miller-book-06-02",
+    "title": "解析树与递归求值",
+    "summary": "把表达式的语法结构存为树，使用栈构建完全括号化表达式。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8031,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第二部分 · 数据组织与基本算法",
+        "number": 31,
+        "chapter": "6",
+        "section": "2",
+        "chapter_title": "树",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "6.5.1"
+        ]
+      }
+    }
+  },
+  {
+    "id": "45ed22e7-47e3-547d-b8ca-2440798d60d8",
+    "slug": "miller-book-06-03",
+    "title": "前序、中序、后序与层序遍历",
+    "summary": "按访问时机区分树遍历，连接表达式、搜索树排序和目录处理。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8032,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第二部分 · 数据组织与基本算法",
+        "number": 32,
+        "chapter": "6",
+        "section": "3",
+        "chapter_title": "树",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "6.5.2"
+        ]
+      }
+    }
+  },
+  {
+    "id": "b50d046f-216d-5ed1-a6b9-b0b896483179",
+    "slug": "miller-book-06-04",
+    "title": "二叉堆与优先级队列",
+    "summary": "用完全二叉树实现最小堆，推导上浮、下沉及线性建堆。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8033,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第二部分 · 数据组织与基本算法",
+        "number": 33,
+        "chapter": "6",
+        "section": "4",
+        "chapter_title": "树",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "6.6"
+        ]
+      }
+    }
+  },
+  {
+    "id": "8a8b087b-c498-5628-b3cc-2c179534cdd0",
+    "slug": "miller-book-06-05",
+    "title": "二叉搜索树的查找、插入与删除",
+    "summary": "维护键顺序不变式，分别处理叶子、单孩子和双孩子删除。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8034,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第二部分 · 数据组织与基本算法",
+        "number": 34,
+        "chapter": "6",
+        "section": "5",
+        "chapter_title": "树",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "6.7"
+        ]
+      }
+    }
+  },
+  {
+    "id": "5ccb97df-bfeb-58e3-ae02-0cba44886b99",
+    "slug": "miller-book-06-06",
+    "title": "AVL 平衡树与旋转",
+    "summary": "用高度差控制最坏树高，逐步解释四种旋转及其顺序保持性质。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8035,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第二部分 · 数据组织与基本算法",
+        "number": 35,
+        "chapter": "6",
+        "section": "6",
+        "chapter_title": "树",
+        "edition": "2026-10",
+        "minutes": 21,
+        "source_sections": [
+          "6.8"
+        ]
+      }
+    }
+  },
+  {
+    "id": "c1ba86a8-ffc9-5ac7-8432-b6bf3ed58f82",
+    "slug": "miller-book-06-07",
+    "title": "树：习题",
+    "summary": "26 道题，练习树中的概念、计算与方法选择。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8036,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第二部分 · 数据组织与基本算法",
+        "number": 36,
+        "chapter": "6",
+        "section": "7",
+        "chapter_title": "树",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "6.11",
+          "6.12"
+        ],
+        "unit_type": "exercise",
+        "questions": 26
+      }
+    }
+  },
+  {
+    "id": "6f979575-9c9e-55f1-ba96-81bb9a3d34a4",
+    "slug": "miller-book-07-01",
+    "title": "图的表示与遍历成本",
+    "summary": "用顶点和边表示一般关系，比较邻接矩阵与邻接表。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8037,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第三部分 · 图算法与进阶应用",
+        "number": 37,
+        "chapter": "7",
+        "section": "1",
+        "chapter_title": "图及其算法",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "7.1",
+          "7.2",
+          "7.3",
+          "7.9",
+          "7.10"
+        ]
+      }
+    }
+  },
+  {
+    "id": "4aa5be40-a625-5593-8dcc-1c9ec728e003",
+    "slug": "miller-book-07-02",
+    "title": "宽度优先搜索与词梯",
+    "summary": "按距离分层访问顶点，用前驱还原最少边数路径。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8038,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第三部分 · 图算法与进阶应用",
+        "number": 38,
+        "chapter": "7",
+        "section": "2",
+        "chapter_title": "图及其算法",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "7.4"
+        ]
+      }
+    }
+  },
+  {
+    "id": "56c051a5-e9c9-50d8-93f1-74b01b70244f",
+    "slug": "miller-book-07-03",
+    "title": "骑士周游与回溯搜索",
+    "summary": "将棋盘转换为图，说明访问所有顶点一次与普通可达性搜索的区别。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8039,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第三部分 · 图算法与进阶应用",
+        "number": 39,
+        "chapter": "7",
+        "section": "3",
+        "chapter_title": "图及其算法",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "7.5.1",
+          "7.5.2",
+          "7.5.3",
+          "7.5.4"
+        ]
+      }
+    }
+  },
+  {
+    "id": "c1f00f92-c646-5c2e-9b1e-534a37260c24",
+    "slug": "miller-book-07-04",
+    "title": "深度优先、时间戳与拓扑排序",
+    "summary": "用发现和完成时间解释搜索树，检测有向环并排列依赖任务。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8040,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第三部分 · 图算法与进阶应用",
+        "number": 40,
+        "chapter": "7",
+        "section": "4",
+        "chapter_title": "图及其算法",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "7.5.5",
+          "7.5.6",
+          "7.6"
+        ]
+      }
+    }
+  },
+  {
+    "id": "504e86fa-558b-57fe-8660-4c090acf9da4",
+    "slug": "miller-book-07-05",
+    "title": "强连通分量与缩点图",
+    "summary": "用两次深度优先分解有向图，解释转置图和完成顺序的作用。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8041,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第三部分 · 图算法与进阶应用",
+        "number": 41,
+        "chapter": "7",
+        "section": "5",
+        "chapter_title": "图及其算法",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "7.7"
+        ]
+      }
+    }
+  },
+  {
+    "id": "ed0e4fa6-4960-5a48-af67-1c1b0bb6c01c",
+    "slug": "miller-book-07-06",
+    "title": "Dijkstra 最短路径",
+    "summary": "通过松弛更新距离，解释非负边权保证及优先队列中的过期记录。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8042,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第三部分 · 图算法与进阶应用",
+        "number": 42,
+        "chapter": "7",
+        "section": "6",
+        "chapter_title": "图及其算法",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "7.8",
+          "7.8.1",
+          "7.8.2"
+        ]
+      }
+    }
+  },
+  {
+    "id": "48dc493c-8fc2-510b-96b9-4d26c29f3540",
+    "slug": "miller-book-07-07",
+    "title": "Prim 最小生成树",
+    "summary": "区分最短路径树与最小生成树，用割性质证明贪心选边。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8043,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第三部分 · 图算法与进阶应用",
+        "number": 43,
+        "chapter": "7",
+        "section": "7",
+        "chapter_title": "图及其算法",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "7.8.3"
+        ]
+      }
+    }
+  },
+  {
+    "id": "9fd020b7-c6f9-5d48-9a32-a1d869400283",
+    "slug": "miller-book-07-08",
+    "title": "图及其算法：习题",
+    "summary": "20 道题，练习图及其算法中的概念、计算与方法选择。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8044,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第三部分 · 图算法与进阶应用",
+        "number": 44,
+        "chapter": "7",
+        "section": "8",
+        "chapter_title": "图及其算法",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "7.11",
+          "7.12"
+        ],
+        "unit_type": "exercise",
+        "questions": 20
+      }
+    }
+  },
+  {
+    "id": "152b34f7-0e80-53f6-8c5f-6cf3454f9ccb",
+    "slug": "miller-book-08-01",
+    "title": "动态数组、容量与摊还分析",
+    "summary": "从固定容量数组推导动态扩容，解释列表追加为何具有摊还常数成本。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8045,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第三部分 · 图算法与进阶应用",
+        "number": 45,
+        "chapter": "8",
+        "section": "1",
+        "chapter_title": "进阶数据结构与算法应用",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "8.1",
+          "8.2"
+        ]
+      }
+    }
+  },
+  {
+    "id": "cab6b0d1-a6e8-5fe8-b2fe-e9d262512fda",
+    "slug": "miller-book-08-02",
+    "title": "同余、快速幂与扩展欧几里得",
+    "summary": "用重复平方降低幂运算次数，求最大公因数及模逆元。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8046,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第三部分 · 图算法与进阶应用",
+        "number": 46,
+        "chapter": "8",
+        "section": "2",
+        "chapter_title": "进阶数据结构与算法应用",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "8.3.1",
+          "8.3.2",
+          "8.3.3"
+        ]
+      }
+    }
+  },
+  {
+    "id": "b5efa11e-2311-56d6-a558-a161fd960db3",
+    "slug": "miller-book-08-03",
+    "title": "RSA 的数论结构与教学实现",
+    "summary": "连接素数、欧拉函数、逆元和模幂，完成一组小整数加解密。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8047,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第三部分 · 图算法与进阶应用",
+        "number": 47,
+        "chapter": "8",
+        "section": "3",
+        "chapter_title": "进阶数据结构与算法应用",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "8.3",
+          "8.3.4"
+        ]
+      }
+    }
+  },
+  {
+    "id": "dc6c8655-a3b1-5fde-8e10-db0c18f6f6f0",
+    "slug": "miller-book-08-04",
+    "title": "跳表与随机层级索引",
+    "summary": "在有序链表上增加稀疏层级，解释查找路径、随机提升和插入更新。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8048,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第三部分 · 图算法与进阶应用",
+        "number": 48,
+        "chapter": "8",
+        "section": "4",
+        "chapter_title": "进阶数据结构与算法应用",
+        "edition": "2026-10",
+        "minutes": 20,
+        "source_sections": [
+          "8.4",
+          "8.4.1",
+          "8.4.2"
+        ]
+      }
+    }
+  },
+  {
+    "id": "381511b1-41ef-52ff-8cb1-e6fd5cf4bf47",
+    "slug": "miller-book-08-05",
+    "title": "RGB 图像与八叉树颜色量化",
+    "summary": "将颜色放入三维空间，用树节点聚合颜色并计算代表色和重建误差。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8049,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第三部分 · 图算法与进阶应用",
+        "number": 49,
+        "chapter": "8",
+        "section": "5",
+        "chapter_title": "进阶数据结构与算法应用",
+        "edition": "2026-10",
+        "minutes": 29,
+        "source_sections": [
+          "8.5",
+          "8.5.1",
+          "8.5.2",
+          "8.5.3"
+        ]
+      }
+    }
+  },
+  {
+    "id": "178cb74a-82c1-5499-af86-162dcd4316a3",
+    "slug": "miller-book-08-06",
+    "title": "字符串匹配、自动机与 KMP",
+    "summary": "用匹配前缀长度表示状态，通过失败链接避免重复扫描文本。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8050,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第三部分 · 图算法与进阶应用",
+        "number": 50,
+        "chapter": "8",
+        "section": "6",
+        "chapter_title": "进阶数据结构与算法应用",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "8.6",
+          "8.6.1",
+          "8.6.2",
+          "8.6.3",
+          "8.6.4",
+          "8.7",
+          "8.8"
+        ]
+      }
+    }
+  },
+  {
+    "id": "7b360ade-a7ab-570b-9181-765e228b1f86",
+    "slug": "miller-book-08-07",
+    "title": "进阶数据结构与算法应用：习题",
+    "summary": "20 道题，练习进阶数据结构与算法应用中的概念、计算与方法选择。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8051,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "第三部分 · 图算法与进阶应用",
+        "number": 51,
+        "chapter": "8",
+        "section": "7",
+        "chapter_title": "进阶数据结构与算法应用",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "8.10",
+          "8.9"
+        ],
+        "unit_type": "exercise",
+        "questions": 20
+      }
+    }
+  },
+  {
+    "id": "c26b2890-8737-5533-9cab-166f773e0308",
+    "slug": "miller-book-a-01",
+    "title": "图形接口、程序组织与运行检查",
+    "summary": "将算法、显示和输入输出分开，准备可复现的图形程序与依赖说明。",
+    "kind": "lesson",
+    "status": "published",
+    "sort_order": 8052,
+    "metadata": {
+      "theory_book": {
+        "book": "python-data-structures",
+        "part": "附录",
+        "number": 52,
+        "chapter": "A",
+        "section": "1",
+        "chapter_title": "图形程序与开发资料",
+        "edition": "2026-10",
+        "minutes": 15,
+        "source_sections": [
+          "A",
+          "B"
+        ]
+      }
+    }
   }
 ]
