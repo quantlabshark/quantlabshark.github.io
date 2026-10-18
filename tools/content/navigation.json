@@ -510,13 +510,13 @@
     "id": "97fdde0a-c962-59ac-bdc6-f393c05faf5c",
     "key": "interview-experience",
     "name": "经验与求职",
-    "parent_id": "e4929cee-404a-50b6-a5b7-e76678ca05dd",
+    "parent_id": null,
     "href": "/interview/experience/",
     "description": "公司经验、岗位要求与准备安排",
     "nav_group": "笔试与面试",
     "visible": true,
-    "sort_order": 3,
-    "revision": 2,
+    "sort_order": 36,
+    "revision": 3,
     "read_access": "inherit"
   }
 ]
