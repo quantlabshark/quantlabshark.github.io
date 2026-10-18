@@ -1,0 +1,634 @@
+{
+  "date": "2026-10-19",
+  "articles_reviewed": 100,
+  "articles_rewritten": 98,
+  "answers_rewritten": 637,
+  "structure": [
+    "必要知识",
+    "分析思路",
+    "解答步骤",
+    "同类问题"
+  ],
+  "answers_initially_collapsed": true,
+  "python_blocks_executed": 80,
+  "download_packages_executed": 34,
+  "formulas_rendered": 5537,
+  "browser_checks": {
+    "article_viewports": 12,
+    "widths": [
+      390,
+      1520
+    ],
+    "data": "local member-content fixtures"
+  },
+  "independent_checks": {
+    "increasing_subsequences_exhaustive": 1456,
+    "stone_game_minimax": 560,
+    "pickup_subsets": 300,
+    "rolling_variance_windows": 6000,
+    "ols_residual_orthogonality": 4,
+    "dice_decision_states": 216,
+    "prediction_shared_sample_and_invalid_timestamp": true
+  },
+  "articles": [
+    {
+      "slug": "zhou-full-2-1",
+      "answers": 2,
+      "previous_revision": 5,
+      "body_md5": "7ba92cb42de072a792f2c3a6bf4d8f4e"
+    },
+    {
+      "slug": "zhou-full-2-2",
+      "answers": 8,
+      "previous_revision": 5,
+      "body_md5": "17d246beb39599d0763b028446f3ef97"
+    },
+    {
+      "slug": "zhou-full-2-3",
+      "answers": 7,
+      "previous_revision": 5,
+      "body_md5": "46352f0b98f90997368f8718097572a3"
+    },
+    {
+      "slug": "zhou-full-2-4",
+      "answers": 3,
+      "previous_revision": 5,
+      "body_md5": "4a9aac844092b054cef0744b0adfa9ae"
+    },
+    {
+      "slug": "zhou-full-2-5",
+      "answers": 4,
+      "previous_revision": 5,
+      "body_md5": "7e5b54d1ea7bf9120c91e1a4fc20a6dc"
+    },
+    {
+      "slug": "zhou-full-2-6",
+      "answers": 5,
+      "previous_revision": 5,
+      "body_md5": "f53cef02a038632eb58844a69b451738"
+    },
+    {
+      "slug": "zhou-full-2-7",
+      "answers": 3,
+      "previous_revision": 5,
+      "body_md5": "a7df21d4c6dbc39b9728309672790b81"
+    },
+    {
+      "slug": "zhou-full-2-8",
+      "answers": 3,
+      "previous_revision": 5,
+      "body_md5": "fe34e662672c2dfbc72ad8dff32046af"
+    },
+    {
+      "slug": "zhou-full-2-9",
+      "answers": 2,
+      "previous_revision": 5,
+      "body_md5": "feb64f4b12d93af5df16aab89afae6a9"
+    },
+    {
+      "slug": "zhou-full-3-1",
+      "answers": 3,
+      "previous_revision": 5,
+      "body_md5": "75e7da61cce6fe9e2d5d54ed25718de3"
+    },
+    {
+      "slug": "zhou-full-3-2",
+      "answers": 5,
+      "previous_revision": 5,
+      "body_md5": "c95371d77a7863d4ac2e975647f21f40"
+    },
+    {
+      "slug": "zhou-full-3-3",
+      "answers": 1,
+      "previous_revision": 5,
+      "body_md5": "84e2f44a309bdc2ab9279da3bd613927"
+    },
+    {
+      "slug": "zhou-full-3-4",
+      "answers": 5,
+      "previous_revision": 5,
+      "body_md5": "086722a1367b7c52a13a5d3f186dea51"
+    },
+    {
+      "slug": "zhou-full-3-5",
+      "answers": 6,
+      "previous_revision": 5,
+      "body_md5": "65344b94163d65aae150c703aac5fe99"
+    },
+    {
+      "slug": "zhou-full-3-6",
+      "answers": 5,
+      "previous_revision": 5,
+      "body_md5": "5e4ed237908068b9643a5663b81bf118"
+    },
+    {
+      "slug": "zhou-full-4-1",
+      "answers": 4,
+      "previous_revision": 5,
+      "body_md5": "8b8fbbf0e96b809398a41c80d41d004c"
+    },
+    {
+      "slug": "zhou-full-4-2",
+      "answers": 8,
+      "previous_revision": 5,
+      "body_md5": "b90f8ae38656eaafdc57832368c2b16c"
+    },
+    {
+      "slug": "zhou-full-4-3",
+      "answers": 20,
+      "previous_revision": 5,
+      "body_md5": "ca63399632c9a4190240a650129cfadd"
+    },
+    {
+      "slug": "zhou-full-4-4",
+      "answers": 4,
+      "previous_revision": 5,
+      "body_md5": "b34d3667f823462ec8f03b49089cc53c"
+    },
+    {
+      "slug": "zhou-full-4-5",
+      "answers": 7,
+      "previous_revision": 5,
+      "body_md5": "88f76442e25bef72417aa5cf200f3dd7"
+    },
+    {
+      "slug": "zhou-full-4-6",
+      "answers": 3,
+      "previous_revision": 5,
+      "body_md5": "79783dc8b614ec8a9d3058137cfefdc2"
+    },
+    {
+      "slug": "zhou-05-01",
+      "answers": 6,
+      "previous_revision": 5,
+      "body_md5": "c1fcef0eb5117076b206b44b7edbefca"
+    },
+    {
+      "slug": "zhou-05-02",
+      "answers": 4,
+      "previous_revision": 5,
+      "body_md5": "c694fb22b5b6ba000bfdfc5c0b7204fc"
+    },
+    {
+      "slug": "zhou-05-03",
+      "answers": 4,
+      "previous_revision": 5,
+      "body_md5": "c94dde87047b8c42c7a11138a20256cf"
+    },
+    {
+      "slug": "zhou-05-04",
+      "answers": 9,
+      "previous_revision": 5,
+      "body_md5": "9b369f5e5e4d96f1686ca936a3c56869"
+    },
+    {
+      "slug": "zhou-06-01",
+      "answers": 10,
+      "previous_revision": 5,
+      "body_md5": "ca8f926cfca9b2ca1953245243ebfb76"
+    },
+    {
+      "slug": "zhou-06-02",
+      "answers": 10,
+      "previous_revision": 5,
+      "body_md5": "4174b5e0763af1006b562d3244f2b80f"
+    },
+    {
+      "slug": "zhou-06-03",
+      "answers": 4,
+      "previous_revision": 5,
+      "body_md5": "b795ff69698e1e2b3b2b5e4b7b89fbde"
+    },
+    {
+      "slug": "zhou-06-04",
+      "answers": 5,
+      "previous_revision": 5,
+      "body_md5": "e33bb8b3466f191836cb96fd51c440c2"
+    },
+    {
+      "slug": "zhou-07-01",
+      "answers": 12,
+      "previous_revision": 5,
+      "body_md5": "ee7e2b07b72bb1a2e77726f6de5b04c1"
+    },
+    {
+      "slug": "zhou-07-02",
+      "answers": 4,
+      "previous_revision": 5,
+      "body_md5": "f4aeb72f072bd3bb7b0235de1bb2af10"
+    },
+    {
+      "slug": "zhou-07-03",
+      "answers": 7,
+      "previous_revision": 5,
+      "body_md5": "86143389373c62993266040cc2fd9d1d"
+    },
+    {
+      "slug": "material-001",
+      "answers": 3,
+      "previous_revision": 6,
+      "body_md5": "ee196ce4c16635f2b33823fb744d48e3"
+    },
+    {
+      "slug": "material-002",
+      "answers": 5,
+      "previous_revision": 6,
+      "body_md5": "35d3f5b90228e31856fa8b38336bd15c"
+    },
+    {
+      "slug": "material-003",
+      "answers": 1,
+      "previous_revision": 6,
+      "body_md5": "3e6d32f63eafaf2d835585abb2b8f2dd"
+    },
+    {
+      "slug": "material-004",
+      "answers": 1,
+      "previous_revision": 6,
+      "body_md5": "506816679dd3001a2ef13eaa25afa91d"
+    },
+    {
+      "slug": "material-005",
+      "answers": 2,
+      "previous_revision": 6,
+      "body_md5": "2a20856ff8863d9655d823907767a1d8"
+    },
+    {
+      "slug": "material-006",
+      "answers": 1,
+      "previous_revision": 6,
+      "body_md5": "115ebc8eeede393264aafb8d8707cb0a"
+    },
+    {
+      "slug": "material-007",
+      "answers": 1,
+      "previous_revision": 6,
+      "body_md5": "519a05c547bf538f1afe96e3ef516768"
+    },
+    {
+      "slug": "material-008",
+      "answers": 9,
+      "previous_revision": 6,
+      "body_md5": "e77c74f8e5e357bd550f19d3a4b6e8b2"
+    },
+    {
+      "slug": "material-047",
+      "answers": 9,
+      "previous_revision": 6,
+      "body_md5": "2956a4521a9b6272c9125f6951c2de38"
+    },
+    {
+      "slug": "material-009",
+      "answers": 4,
+      "previous_revision": 6,
+      "body_md5": "47afd5e4d80b53b2cd528913cf473570"
+    },
+    {
+      "slug": "material-010",
+      "answers": 8,
+      "previous_revision": 6,
+      "body_md5": "7ec02509a2e0931cdc8363c3373c68e1"
+    },
+    {
+      "slug": "material-011",
+      "answers": 2,
+      "previous_revision": 6,
+      "body_md5": "b1b45756e84a13eecf159ed4452dd116"
+    },
+    {
+      "slug": "material-012",
+      "answers": 1,
+      "previous_revision": 6,
+      "body_md5": "4df8f500dbbb8c381707011b366a3247"
+    },
+    {
+      "slug": "material-013",
+      "answers": 10,
+      "previous_revision": 6,
+      "body_md5": "ad96e7715df7f116a8db1b5e249b6f12"
+    },
+    {
+      "slug": "material-014",
+      "answers": 5,
+      "previous_revision": 6,
+      "body_md5": "0ccb14088a8c8b24efa6fdb2242b7e5d"
+    },
+    {
+      "slug": "material-016",
+      "answers": 2,
+      "previous_revision": 6,
+      "body_md5": "74220a557bc8cecbbdf8cc2a8e153248"
+    },
+    {
+      "slug": "material-017",
+      "answers": 3,
+      "previous_revision": 6,
+      "body_md5": "268a7d523b6733a8dff9164e9bc39e13"
+    },
+    {
+      "slug": "material-018",
+      "answers": 10,
+      "previous_revision": 6,
+      "body_md5": "0a253fb3357a6a58622c9ec771487333"
+    },
+    {
+      "slug": "material-019",
+      "answers": 4,
+      "previous_revision": 6,
+      "body_md5": "fec1e04e593accf56af5cb3dc3a82625"
+    },
+    {
+      "slug": "material-020",
+      "answers": 9,
+      "previous_revision": 6,
+      "body_md5": "57b7ef96937b65ddb4c6373b621fdf26"
+    },
+    {
+      "slug": "material-021",
+      "answers": 10,
+      "previous_revision": 6,
+      "body_md5": "ac1557cf22faca4cda6c081acda1094c"
+    },
+    {
+      "slug": "material-022",
+      "answers": 12,
+      "previous_revision": 6,
+      "body_md5": "fa074412e5cc0654c982aa8c2a73c340"
+    },
+    {
+      "slug": "material-023",
+      "answers": 8,
+      "previous_revision": 6,
+      "body_md5": "c852b5ddf9d491ebc4eb3ef7f72efe3e"
+    },
+    {
+      "slug": "material-024",
+      "answers": 10,
+      "previous_revision": 6,
+      "body_md5": "b78f8b9482e687b205f859bf75bd709b"
+    },
+    {
+      "slug": "material-045",
+      "answers": 11,
+      "previous_revision": 6,
+      "body_md5": "8bf5b5a3c379481f14a8018416a8a797"
+    },
+    {
+      "slug": "material-025",
+      "answers": 12,
+      "previous_revision": 6,
+      "body_md5": "2aaf6827d0acaf526baa398a6ebac633"
+    },
+    {
+      "slug": "material-026",
+      "answers": 10,
+      "previous_revision": 6,
+      "body_md5": "eafc2e80dcbea1aed60665d688b91aec"
+    },
+    {
+      "slug": "material-027",
+      "answers": 5,
+      "previous_revision": 6,
+      "body_md5": "fe803f8f6018d56b42953e78562232e7"
+    },
+    {
+      "slug": "material-028",
+      "answers": 5,
+      "previous_revision": 6,
+      "body_md5": "9a452479a94a2d12c9e08f0938bb6978"
+    },
+    {
+      "slug": "material-029",
+      "answers": 9,
+      "previous_revision": 6,
+      "body_md5": "82cca382d5be5da9929eba81d0b7d674"
+    },
+    {
+      "slug": "material-lingjun-scans",
+      "answers": 10,
+      "previous_revision": 6,
+      "body_md5": "ef1f9b968773260887e534f6041e6255"
+    },
+    {
+      "slug": "material-030",
+      "answers": 5,
+      "previous_revision": 6,
+      "body_md5": "21bda3571dbc8b77a6970fd52d8b79eb"
+    },
+    {
+      "slug": "material-031",
+      "answers": 7,
+      "previous_revision": 6,
+      "body_md5": "8d80d80a4e53d4ff8083cf2ad99c1f9c"
+    },
+    {
+      "slug": "material-033",
+      "answers": 15,
+      "previous_revision": 6,
+      "body_md5": "75fe4f20280d62802070971d50528573"
+    },
+    {
+      "slug": "material-034",
+      "answers": 4,
+      "previous_revision": 6,
+      "body_md5": "e972ee452b04109bd923ea8cfafdebfa"
+    },
+    {
+      "slug": "material-035",
+      "answers": 7,
+      "previous_revision": 6,
+      "body_md5": "835abc3d331cb74bb9bbc1a22f074955"
+    },
+    {
+      "slug": "material-052",
+      "answers": 5,
+      "previous_revision": 6,
+      "body_md5": "09b76f6f78f480d3fbbc317a4bc74837"
+    },
+    {
+      "slug": "material-053",
+      "answers": 5,
+      "previous_revision": 6,
+      "body_md5": "65fd5079968c35ab03c528d5cda315f1"
+    },
+    {
+      "slug": "material-036",
+      "answers": 3,
+      "previous_revision": 6,
+      "body_md5": "59a3461387484a94f4fbd25ee108aadf"
+    },
+    {
+      "slug": "material-037",
+      "answers": 14,
+      "previous_revision": 6,
+      "body_md5": "9a28c5fadbec3ce49f9b53d92f5c16f6"
+    },
+    {
+      "slug": "material-jiukun-2",
+      "answers": 5,
+      "previous_revision": 6,
+      "body_md5": "58ff2fbd63625e5ff6d2d60cb7510cc0"
+    },
+    {
+      "slug": "material-038",
+      "answers": 5,
+      "previous_revision": 6,
+      "body_md5": "b25785abfcb2a009ed6ef3c3e53298dd"
+    },
+    {
+      "slug": "material-039",
+      "answers": 11,
+      "previous_revision": 6,
+      "body_md5": "f8d809ae794437ffe1c7ed581e92379f"
+    },
+    {
+      "slug": "material-040",
+      "answers": 10,
+      "previous_revision": 6,
+      "body_md5": "dae122170438023481c230bfb8bccc09"
+    },
+    {
+      "slug": "material-041",
+      "answers": 10,
+      "previous_revision": 6,
+      "body_md5": "1ce78a994a5bff723a9c1b7d00bb307c"
+    },
+    {
+      "slug": "material-042",
+      "answers": 20,
+      "previous_revision": 6,
+      "body_md5": "5170cb1e081e9b27ba4121b7e22ddeb5"
+    },
+    {
+      "slug": "material-043",
+      "answers": 7,
+      "previous_revision": 6,
+      "body_md5": "fc51d4ec6bb4de6f6f2877f940937cb7"
+    },
+    {
+      "slug": "material-044",
+      "answers": 17,
+      "previous_revision": 6,
+      "body_md5": "7163444ec19a7c4c5f7dce14fcedfdd9"
+    },
+    {
+      "slug": "material-046",
+      "answers": 8,
+      "previous_revision": 6,
+      "body_md5": "27d46adab1cc5d10b1e2438c7514f1d7"
+    },
+    {
+      "slug": "material-048",
+      "answers": 17,
+      "previous_revision": 6,
+      "body_md5": "c97e9af09f4faddfd82c1a421d803464"
+    },
+    {
+      "slug": "material-049",
+      "answers": 1,
+      "previous_revision": 6,
+      "body_md5": "13c53a0d179c4dd97fb1f29156cdd1f5"
+    },
+    {
+      "slug": "material-050",
+      "answers": 2,
+      "previous_revision": 6,
+      "body_md5": "4dfbc9396e16d3aa06fccb6b933aa111"
+    },
+    {
+      "slug": "material-051",
+      "answers": 2,
+      "previous_revision": 6,
+      "body_md5": "fda5017ac604c8335308e3387b388e3b"
+    },
+    {
+      "slug": "material-054",
+      "answers": 3,
+      "previous_revision": 6,
+      "body_md5": "c62546d96c218e768ee3213d87e24601"
+    },
+    {
+      "slug": "material-055",
+      "answers": 8,
+      "previous_revision": 6,
+      "body_md5": "6d5e06e194b0fb265bcfa538c861d376"
+    },
+    {
+      "slug": "material-huajun",
+      "answers": 3,
+      "previous_revision": 6,
+      "body_md5": "0682ad3094061ebb45df8afb2d36c5d3"
+    },
+    {
+      "slug": "material-zhuoshi",
+      "answers": 6,
+      "previous_revision": 6,
+      "body_md5": "794463446e5f97f8aec4d02624a70823"
+    },
+    {
+      "slug": "material-hande",
+      "answers": 8,
+      "previous_revision": 6,
+      "body_md5": "e59549c7b4bcb7f09bce4d40134823fc"
+    },
+    {
+      "slug": "material-weiguan",
+      "answers": 5,
+      "previous_revision": 6,
+      "body_md5": "830bd0335175a057a7b8cd3f92c7a5aa"
+    },
+    {
+      "slug": "material-jiwei",
+      "answers": 4,
+      "previous_revision": 6,
+      "body_md5": "0f23153a09f55e902eb95ba229351a41"
+    },
+    {
+      "slug": "material-higgs-first",
+      "answers": 20,
+      "previous_revision": 6,
+      "body_md5": "0ff543be4e0d9cd5c638446ce92b09cd"
+    },
+    {
+      "slug": "material-higgs-second",
+      "answers": 7,
+      "previous_revision": 6,
+      "body_md5": "267c76f73606a0d49519b7c18a63dc06"
+    },
+    {
+      "slug": "material-eff",
+      "answers": 7,
+      "previous_revision": 6,
+      "body_md5": "3f648410dc97c4e4bdac708229a4c371"
+    },
+    {
+      "slug": "material-015",
+      "answers": 2,
+      "previous_revision": 6,
+      "body_md5": "8f74dafa533a32a51525ad6eaff397ed"
+    },
+    {
+      "slug": "material-032",
+      "answers": 8,
+      "previous_revision": 6,
+      "body_md5": "9c6dd296307b7f6539ef688409c08bfe"
+    },
+    {
+      "slug": "material-capital-concepts",
+      "answers": 1,
+      "previous_revision": 6,
+      "body_md5": "cac478037f27070fbede8ace49d61c50"
+    }
+  ],
+  "reference_articles_reviewed": [
+    "zhou-full-1",
+    "material-capital-reading"
+  ],
+  "production_verification": {
+    "matched_articles": 100,
+    "updated_articles": 98,
+    "unchanged_reference_articles": 2,
+    "access_unchanged": true,
+    "status_unchanged": true
+  }
+}
