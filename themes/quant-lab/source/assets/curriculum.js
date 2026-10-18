@@ -23,7 +23,7 @@
   all.setAttribute('aria-pressed',String(!level));
   const button=(n,text,disabled=false,current=false)=>`<button type="button" data-page="${n}" ${disabled?'disabled':''} ${current?'aria-current="page"':''} aria-label="${/^\d+$/.test(text)?'第 '+text+' 页':text}">${text}</button>`;
   let previous=0;const numbers=pages(total).map(n=>{const gap=previous&&n>previous+1?'<span class="curriculum-page-gap" aria-hidden="true">…</span>':'';previous=n;return gap+button(n,String(n),false,n===page);}).join('');
-  pager.hidden=!rows.length;pager.innerHTML=`<p>第 ${page} / ${total} 页 · 每页 ${PAGE_SIZE} 课</p><div>${button(1,'首页',page===1)}${button(page-1,'上一页',page===1)}${numbers}${button(page+1,'下一页',page===total)}${button(total,'末页',page===total)}</div>`;
+  pager.hidden=!rows.length;pager.innerHTML=`<p>第 ${page} / ${total} 页</p><div>${button(1,'首页',page===1)}${button(page-1,'上一页',page===1)}${numbers}${button(page+1,'下一页',page===total)}${button(total,'末页',page===total)}</div>`;
  }
  function jumpHash(){const stage=document.getElementById(location.hash.slice(1));if(!stage||!host.contains(stage))return false;let rows=matched(),index=rows.findIndex(r=>stage.contains(r));if(index<0){level='';query.value='';rows=matched();index=rows.findIndex(r=>stage.contains(r));}if(index<0)return false;page=Math.floor(index/PAGE_SIZE)+1;render();save('replace',location.hash);stage.scrollIntoView({block:'start'});return true;}
  function progress(){const done=new Set(window.foamAuth?.progress||[]);host.querySelectorAll('[data-course-row]').forEach(row=>{const complete=done.has(row.dataset.courseId),dot=row.querySelector('.curriculum-complete');dot.classList.toggle('done',complete);dot.setAttribute('aria-label',complete?'已完成':'未标记完成');});}

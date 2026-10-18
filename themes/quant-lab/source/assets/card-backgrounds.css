@@ -1,7 +1,7 @@
 /* QuantLab pixel illustrations, revealed from left to right under the active palette. */
 :root { --card-scene: url('/assets/illustrations/quant-market-observatory-v1.webp'); }
 html[data-theme] body[data-section] :is(
- .lab-card,.lab-topic-card,.fl-card,.interview-book-card,.interview-chapter,.fvm-chapter,.curriculum-stage,.stage-card,.course-route-card,.topic-collection-card,.topic-collection,
+ .curriculum-levels>a,.curriculum-card,.topic-module,.topic-lesson,.interview-summary,.account-summary,.profile-editor,.profile-progress,.lab-card,.lab-topic-card,.fl-card,.interview-book-card,.interview-chapter,.fvm-chapter,.curriculum-stage,.stage-card,.course-route-card,.topic-collection-card,.topic-collection,
  .foundation-card,.command-card,.dictionary-card,.fo-quick-card,.resource-card,
  .community-topic-card,.issue-card,.science-panel,.lab-bottom-card,.reference-entry,
  .continue-panel,.refine-panel,.lab-panel,.account-panel,.panda-badge-card,.image-card,
@@ -24,7 +24,7 @@ html[data-theme] body[data-section] :is(
  border-color: var(--line-strong);
 }
 html[data-theme="dark"] body[data-section] :is(
- .lab-card,.lab-topic-card,.fl-card,.interview-book-card,.interview-chapter,.fvm-chapter,.curriculum-stage,.stage-card,.course-route-card,.topic-collection-card,.topic-collection,
+ .curriculum-levels>a,.curriculum-card,.topic-module,.topic-lesson,.interview-summary,.account-summary,.profile-editor,.profile-progress,.lab-card,.lab-topic-card,.fl-card,.interview-book-card,.interview-chapter,.fvm-chapter,.curriculum-stage,.stage-card,.course-route-card,.topic-collection-card,.topic-collection,
  .foundation-card,.command-card,.dictionary-card,.fo-quick-card,.resource-card,
  .community-topic-card,.issue-card,.science-panel,.lab-bottom-card,.reference-entry,
  .continue-panel,.refine-panel,.lab-panel,.account-panel,.panda-badge-card,.image-card,
@@ -34,7 +34,7 @@ html[data-theme="dark"] body[data-section] :is(
 html[data-theme] body[data-section] :is(.command-card,.dictionary-card,.reference-entry:has(a[href^="/commands/"]),.lab-card:has(a[href^="/programming/"]),[data-card-art="data"]) {
  --card-art:url('/assets/illustrations/quant-data-workshop-v1.webp');
 }
-html[data-theme] body[data-section] :is(.course-route-card,.stage-card,.curriculum-stage,.topic-collection,.interview-chapter,[data-card-art="strategy"]) {
+html[data-theme] body[data-section] :is(.curriculum-levels>a,.curriculum-card,.course-route-card,.stage-card,.curriculum-stage,.topic-collection,.interview-chapter,[data-card-art="strategy"]) {
  --card-art:url('/assets/illustrations/quant-strategy-laboratory-v1.webp');
 }
 html[data-theme] body[data-section] :is(.resource-card,.fvm-chapter,.interview-book-card,.lab-card:has(a[href^="/theory/"]),[data-card-art="portfolio"]) {
@@ -71,3 +71,10 @@ html[data-theme] body[data-section] :is(.lab-card,.fo-quick-card,.stage-card,.pa
 @media(max-width:760px) {
  :root { --card-scene: url('/assets/illustrations/quant-market-observatory-v1.webp'); }
 }
+
+html[data-theme] body[data-section] .curriculum-levels>a:nth-child(1){--card-art:url("/assets/illustrations/quant-data-workshop-v1.webp")}
+html[data-theme] body[data-section] .curriculum-levels>a:nth-child(2){--card-art:url("/assets/illustrations/quant-market-observatory-v1.webp")}
+html[data-theme] body[data-section] .curriculum-levels>a:nth-child(3){--card-art:url("/assets/illustrations/quant-strategy-laboratory-v1.webp")}
+html[data-theme] body[data-section] .curriculum-levels>a.active{--card-paper:var(--mint);border-color:var(--accent)}
+html[data-theme] body[data-section] .curriculum-levels>a{--card-veil-start:97%;--card-veil-middle:91%;--card-veil-end:70%}
+html[data-theme] body[data-section] .resource-library .rh-group{--card-art-size:100% auto;--card-art-position:right top;--card-veil-end:84%;background-repeat:no-repeat,repeat-y}

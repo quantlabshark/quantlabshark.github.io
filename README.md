@@ -12,13 +12,17 @@
 
 ## 系统学习与笔面试
 
-`/courses/` 按 Roadmap Ultimate Edition 与 Xin Guo《量化交易：算法、分析、数据、模型和优化》组织为 11 个阶段、66 课，并以《深入浅出 Python 量化交易实战》补充程序和案例。课程含例题、练习解答、原书对应位置和示例代码包。原 20 篇课程保留直接阅读地址，作为旧版参考内容，不计入新版进度。
+`/courses/` 按 Roadmap Ultimate Edition 与 Xin Guo《量化交易：算法、分析、数据、模型和优化》组织为 11 个阶段、66 课，并以《深入浅出 Python 量化交易实战》补充程序和案例。目录分入门、基础、进阶，分页展示；课程含例题、折叠解答、图表和示例代码包。资料对应关系保留在内部审计记录中。原 20 篇课程保留直接阅读地址，作为旧版参考内容，不计入新版进度。
 
 `/interview/` 包含经典书籍题解与笔面试资料两册，共 100 个阅读单元。Zhou 教材全部 7 章整理为 33 节；QuantMaterial 整理为 67 节。`/interview/sources/` 逐项列出 93 个原文件及压缩包内 4 个独有文件，记录重复合并、配套附件和原始条件缺项。数据包包含计算结果和复现脚本，交易表已去除姓名列。笔面试内容不计入系统课程进度。
 
-笔面试正文中的 636 组解答使用原生 `details` 默认折叠，保留题干可见；每页可统一展开和收起。目录跳转和私人笔记定位会展开对应解答。
+笔面试解答使用原生 `details` 默认折叠，保留题干与考点可见；每页可统一展开和收起。目录跳转和私人笔记定位会展开对应解答。`/interview/experience/` 提供公司面试经验、官方岗位要求、岗位介绍与三种方向的八周准备安排。
 
-`/theory/` 是“基础理论与原理”的书籍入口，沿用 OpenFOAM 站的书籍卡片、章节目录与阅读导航。首册《因子投资：方法与实践》覆盖 7 章、43 个二级小节，另设阅读导引、后记、附录 A 与参考文献索引，共 47 个阅读单元。正文补充收益率、统计、回归和矩阵基础，说明原书历史实证与教学模拟的区别。`factor-book-coverage.json` 记录原书页码对应关系，配套示例在 `factor-investing-examples.zip`。
+`/theory/` 沿用 OpenFOAM 站的背景卡片、章节目录与阅读导航，按数学基础、资产定价与组合、交易建模与市场机制分类。四本书共 265 个单元：因子投资 47 节、交易与交易所 90 节、随机微积分 68 节、量化交易 60 节。正文补充背景、推导、数值例子和“鲨鱼说”，配套代码在每课末尾提供。
+
+`/topics/` 包含人工智能、Alpha101、截面因子和择时四个专题，共 136 课。Alpha101 包含 5 节导读及 101 个公式的独立解读。区分教学模拟、历史预测检验和可执行回测；实证口径、样本范围、成本和未测试条件在相应文章中说明。下载包不包含行情令牌或原始付费行情。
+
+`/resources/` 参考城堡阅读资料与 Roadmap，提供 12 类、249 条书籍、课程、代码、数据与研究入口，以及课程附件分组。支持搜索、类别、形式和阶段筛选。`tools/content/resource-library.json` 仅保存公开目录，内部来源页码与待核验链接不进入网页。
 
 导航的初始页面和动态目录共用 `navigation-tree.js`，避免跳转时入口缺失。`npm run sync:catalog` 从量化站读取最新公开目录信息，更新 `tools/content/navigation.json`、`course-catalog.json`、`interview-catalog.json`、`theory-catalog.json` 与搜索范围；后台调整目录或题目后，先同步，再构建发布。同步脚本不读取正文或私有数据。在线目录读取失败时，页面仍保留发布时的导航和索引。
 
@@ -38,4 +42,4 @@ D:\anaconda3\python.exe tools/tushare_fetch.py --code 000001.SZ --start 20260101
 
 迁移文件来自原站并适配新项目。原站文件名的历史顺序并非完整依赖顺序：`town_eggs` 应在 `town_egg_final_catalog_and_times` 前应用，`quant_scoped_search_dependency` 应在 `article_login_required` 前应用。新站不启用小镇 Realtime 策略。`quant_private_notes` 补齐私人笔记与新站所有者首次登录授权。
 
-原博客已保存在本机 `.quantlab-work/legacy-site/`，Git 标签 `pre-quant-learning-20261017` 保留原发布版本。
+2022 年旧博客及其静态资源已从项目移出，归档在本机 `E:\Hexo_2_Archive\legacy-site-20261018`。Git 标签 `pre-quant-learning-20261017` 保留原发布版本。

@@ -44,12 +44,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "1",
-        "chapter_title": "因子投资基础",
-        "section": "1.1",
-        "number": 2,
         "part": "第一部分 · 基础与方法",
+        "number": 2,
+        "chapter": "1",
+        "edition": "2026-10-revised",
         "minutes": 12,
+        "section": "1.1",
         "source_pages": [
           7,
           8,
@@ -62,14 +62,14 @@
           15,
           16
         ],
+        "chapter_title": "因子投资基础",
         "source_sections": [
           "1.1.1 一个公式",
           "1.1.2 因子、多因子模型和异象",
           "1.1.3 再论异象和因子",
           "1.1.4 因子投资包含的内容",
           "1.1.5 实证资产定价与因子投资"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -84,23 +84,23 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "1",
-        "chapter_title": "因子投资基础",
-        "section": "1.2",
-        "number": 3,
         "part": "第一部分 · 基础与方法",
+        "number": 3,
+        "chapter": "1",
+        "edition": "2026-10-revised",
         "minutes": 12,
+        "section": "1.2",
         "source_pages": [
           17,
           18,
           19,
           20
         ],
+        "chapter_title": "因子投资基础",
         "source_sections": [
           "1.2.1 实证资产定价",
           "1.2.2 研究现状"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -115,23 +115,23 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "1",
-        "chapter_title": "因子投资基础",
-        "section": "1.3",
-        "number": 4,
         "part": "第一部分 · 基础与方法",
+        "number": 4,
+        "chapter": "1",
+        "edition": "2026-10-revised",
         "minutes": 12,
+        "section": "1.3",
         "source_pages": [
           21,
           22,
           23,
           24
         ],
+        "chapter_title": "因子投资基础",
         "source_sections": [
           "1.3.1 因子投资和管理人",
           "1.3.2 因子投资和投资者"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -146,18 +146,18 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "1",
-        "chapter_title": "因子投资基础",
-        "section": "1.4",
-        "number": 5,
         "part": "第一部分 · 基础与方法",
+        "number": 5,
+        "chapter": "1",
+        "edition": "2026-10-revised",
         "minutes": 8,
+        "section": "1.4",
         "source_pages": [
           25,
           26
         ],
-        "source_sections": [],
-        "edition": "2026-10-revised"
+        "chapter_title": "因子投资基础",
+        "source_sections": []
       }
     }
   },
@@ -172,12 +172,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "2",
-        "chapter_title": "因子投资方法论",
-        "section": "2.1",
-        "number": 6,
         "part": "第一部分 · 基础与方法",
+        "number": 6,
+        "chapter": "2",
+        "edition": "2026-10-revised",
         "minutes": 14,
+        "section": "2.1",
         "source_pages": [
           27,
           28,
@@ -193,13 +193,13 @@
           38,
           39
         ],
+        "chapter_title": "因子投资方法论",
         "source_sections": [
           "2.1.1 因子模拟投资组合",
           "2.1.2 排序法及其检验",
           "2.1.3 多重排序法",
           "2.1.4 因子命名约定"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -214,12 +214,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "2",
-        "chapter_title": "因子投资方法论",
-        "section": "2.2",
-        "number": 7,
         "part": "第一部分 · 基础与方法",
+        "number": 7,
+        "chapter": "2",
+        "edition": "2026-10-revised",
         "minutes": 15,
+        "section": "2.2",
         "source_pages": [
           40,
           41,
@@ -237,14 +237,14 @@
           53,
           54
         ],
+        "chapter_title": "因子投资方法论",
         "source_sections": [
           "2.2.1 时间序列回归",
           "2.2.2 截面回归",
           "2.2.3 时序回归vs截面回归",
           "2.2.4 Fama–MacBeth回归",
           "2.2.5 不同回归方法比较"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -259,12 +259,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "2",
-        "chapter_title": "因子投资方法论",
-        "section": "2.3",
-        "number": 8,
         "part": "第一部分 · 基础与方法",
+        "number": 8,
+        "chapter": "2",
+        "edition": "2026-10-revised",
         "minutes": 11,
+        "section": "2.3",
         "source_pages": [
           55,
           56,
@@ -272,12 +272,12 @@
           58,
           59
         ],
+        "chapter_title": "因子投资方法论",
         "source_sections": [
           "2.3.1 引入工具变量",
           "2.3.2 使用公司特征",
           "2.3.3 两类模型"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -292,12 +292,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "2",
-        "chapter_title": "因子投资方法论",
-        "section": "2.4",
-        "number": 9,
         "part": "第一部分 · 基础与方法",
+        "number": 9,
+        "chapter": "2",
+        "edition": "2026-10-revised",
         "minutes": 10,
+        "section": "2.4",
         "source_pages": [
           60,
           61,
@@ -307,13 +307,13 @@
           65,
           66
         ],
+        "chapter_title": "因子投资方法论",
         "source_sections": [
           "2.4.1 时序回归检验异象",
           "2.4.2 计量经济学问题",
           "2.4.3 White估计量和Newey–West估计量",
           "2.4.4 截面回归检验异象"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -328,12 +328,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "2",
-        "chapter_title": "因子投资方法论",
-        "section": "2.5",
-        "number": 10,
         "part": "第一部分 · 基础与方法",
+        "number": 10,
+        "chapter": "2",
+        "edition": "2026-10-revised",
         "minutes": 14,
+        "section": "2.5",
         "source_pages": [
           67,
           68,
@@ -347,14 +347,14 @@
           76,
           77
         ],
+        "chapter_title": "因子投资方法论",
         "source_sections": [
           "2.5.1 GRS检验",
           "2.5.2 均值—方差张成检验",
           "2.5.3 从几何角度比较GRS 和均值—方差张成",
           "2.5.4 α检验",
           "2.5.5 贝叶斯方法"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -369,12 +369,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "2",
-        "chapter_title": "因子投资方法论",
-        "section": "2.6",
-        "number": 11,
         "part": "第一部分 · 基础与方法",
+        "number": 11,
+        "chapter": "2",
+        "edition": "2026-10-revised",
         "minutes": 8,
+        "section": "2.6",
         "source_pages": [
           78,
           79,
@@ -383,12 +383,12 @@
           82,
           83
         ],
+        "chapter_title": "因子投资方法论",
         "source_sections": [
           "2.6.1 简单一元回归",
           "2.6.2 回归的几何意义",
           "2.6.3 用正交化过程求解多元回归"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -403,12 +403,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "2",
-        "chapter_title": "因子投资方法论",
-        "section": "2.7",
-        "number": 12,
         "part": "第一部分 · 基础与方法",
+        "number": 12,
+        "chapter": "2",
+        "edition": "2026-10-revised",
         "minutes": 13,
+        "section": "2.7",
         "source_pages": [
           84,
           85,
@@ -422,14 +422,14 @@
           93,
           94
         ],
+        "chapter_title": "因子投资方法论",
         "source_sections": [
           "2.7.1 样本均值的方差",
           "2.7.2 分析框架",
           "2.7.3 数学基础",
           "2.7.4 有效性",
           "2.7.5 不应成为黑箱"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -444,18 +444,18 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "2",
-        "chapter_title": "因子投资方法论",
-        "section": "2.8",
-        "number": 13,
         "part": "第一部分 · 基础与方法",
+        "number": 13,
+        "chapter": "2",
+        "edition": "2026-10-revised",
         "minutes": 9,
+        "section": "2.8",
         "source_pages": [
           95,
           96
         ],
-        "source_sections": [],
-        "edition": "2026-10-revised"
+        "chapter_title": "因子投资方法论",
+        "source_sections": []
       }
     }
   },
@@ -470,12 +470,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "3",
-        "chapter_title": "主流因子解读",
-        "section": "3.1",
-        "number": 14,
         "part": "第二部分 · 因子与模型",
+        "number": 14,
+        "chapter": "3",
+        "edition": "2026-10-revised",
         "minutes": 16,
+        "section": "3.1",
         "source_pages": [
           97,
           98,
@@ -493,14 +493,14 @@
           110,
           111
         ],
+        "chapter_title": "主流因子解读",
         "source_sections": [
           "3.1.1 数据来源",
           "3.1.2 量价数据处理",
           "3.1.3 财务数据处理",
           "3.1.4 因子构造流程",
           "3.1.5 实证设定"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -515,12 +515,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "3",
-        "chapter_title": "主流因子解读",
-        "section": "3.2",
-        "number": 15,
         "part": "第二部分 · 因子与模型",
+        "number": 15,
+        "chapter": "3",
+        "edition": "2026-10-revised",
         "minutes": 9,
+        "section": "3.2",
         "source_pages": [
           112,
           113,
@@ -528,12 +528,12 @@
           115,
           116
         ],
+        "chapter_title": "主流因子解读",
         "source_sections": [
           "3.2.1 市场因子起源",
           "3.2.2 对CAPM的质疑",
           "3.2.3 市场因子实证"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -548,12 +548,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "3",
-        "chapter_title": "主流因子解读",
-        "section": "3.3",
-        "number": 16,
         "part": "第二部分 · 因子与模型",
+        "number": 16,
+        "chapter": "3",
+        "edition": "2026-10-revised",
         "minutes": 9,
+        "section": "3.3",
         "source_pages": [
           117,
           118,
@@ -561,12 +561,12 @@
           120,
           121
         ],
+        "chapter_title": "主流因子解读",
         "source_sections": [
           "3.3.1 规模因子起源",
           "3.3.2 规模因子成因",
           "3.3.3 规模因子实证"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -581,12 +581,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "3",
-        "chapter_title": "主流因子解读",
-        "section": "3.4",
-        "number": 17,
         "part": "第二部分 · 因子与模型",
+        "number": 17,
+        "chapter": "3",
+        "edition": "2026-10-revised",
         "minutes": 10,
+        "section": "3.4",
         "source_pages": [
           122,
           123,
@@ -596,12 +596,12 @@
           127,
           128
         ],
+        "chapter_title": "主流因子解读",
         "source_sections": [
           "3.4.1 价值因子起源",
           "3.4.2 价值因子成因",
           "3.4.3 价值因子实证"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -616,12 +616,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "3",
-        "chapter_title": "主流因子解读",
-        "section": "3.5",
-        "number": 18,
         "part": "第二部分 · 因子与模型",
+        "number": 18,
+        "chapter": "3",
+        "edition": "2026-10-revised",
         "minutes": 11,
+        "section": "3.5",
         "source_pages": [
           129,
           130,
@@ -632,12 +632,12 @@
           135,
           136
         ],
+        "chapter_title": "主流因子解读",
         "source_sections": [
           "3.5.1 动量因子起源",
           "3.5.2 动量因子成因",
           "3.5.3 动量因子实证"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -652,12 +652,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "3",
-        "chapter_title": "主流因子解读",
-        "section": "3.6",
-        "number": 19,
         "part": "第二部分 · 因子与模型",
+        "number": 19,
+        "chapter": "3",
+        "edition": "2026-10-revised",
         "minutes": 15,
+        "section": "3.6",
         "source_pages": [
           137,
           138,
@@ -667,12 +667,12 @@
           142,
           143
         ],
+        "chapter_title": "主流因子解读",
         "source_sections": [
           "3.6.1 盈利因子起源",
           "3.6.2 盈利因子成因",
           "3.6.3 盈利因子实证"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -687,12 +687,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "3",
-        "chapter_title": "主流因子解读",
-        "section": "3.7",
-        "number": 20,
         "part": "第二部分 · 因子与模型",
+        "number": 20,
+        "chapter": "3",
+        "edition": "2026-10-revised",
         "minutes": 10,
+        "section": "3.7",
         "source_pages": [
           144,
           145,
@@ -703,12 +703,12 @@
           150,
           151
         ],
+        "chapter_title": "主流因子解读",
         "source_sections": [
           "3.7.1 投资因子起源",
           "3.7.2 投资因子成因",
           "3.7.3 投资因子实证"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -723,12 +723,12 @@
     "metadata": {
       "theory_book": {
         "book": "factor-investing",
-        "chapter": "3",
-        "chapter_title": "主流因子解读",
-        "section": "3.8",
-        "number": 21,
         "part": "第二部分 · 因子与模型",
+        "number": 21,
+        "chapter": "3",
+        "edition": "2026-10-revised",
         "minutes": 10,
+        "section": "3.8",
         "source_pages": [
           152,
           153,
@@ -737,12 +737,12 @@
           156,
           157
         ],
+        "chapter_title": "主流因子解读",
         "source_sections": [
           "3.8.1 换手率因子起源",
           "3.8.2 换手率因子成因",
           "3.8.3 换手率因子实证"
-        ],
-        "edition": "2026-10-revised"
+        ]
       }
     }
   },
@@ -1766,12 +1766,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "G",
-        "chapter_title": "阅读准备",
-        "section": "G.1",
-        "number": 1,
         "part": "阅读准备",
+        "number": 1,
+        "chapter": "G",
+        "edition": "2026-10",
         "minutes": 22,
+        "section": "G.1",
+        "source_year": 2003,
         "source_pages": [
           4,
           5,
@@ -1786,12 +1787,11 @@
           22,
           23
         ],
+        "chapter_title": "阅读准备",
         "source_sections": [
           "1.1–1.8 Introduction",
           "初学者补充：报价、基点与订单簿算例"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -1806,12 +1806,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "1",
-        "chapter_title": "交易与市场微观结构",
-        "section": "1.1",
-        "number": 2,
         "part": "交易入门",
+        "number": 2,
+        "chapter": "1",
+        "edition": "2026-10",
         "minutes": 8,
+        "section": "1.1",
+        "source_year": 2003,
         "source_pages": [
           16,
           17,
@@ -1822,6 +1823,7 @@
           22,
           23
         ],
+        "chapter_title": "交易与市场微观结构",
         "source_sections": [
           "1.1 SCOPE OF THE BOOK",
           "1.2 OBJECTIVES",
@@ -1831,9 +1833,7 @@
           "1.6 OUTLINE OF THE BOOK",
           "1.7 AN IMPORTANT DISCLAIMER",
           "1.8 SUMMARY"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -1848,12 +1848,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "2",
-        "chapter_title": "交易过程中的实际问题",
-        "section": "2.1",
-        "number": 3,
         "part": "交易入门",
+        "number": 3,
+        "chapter": "2",
+        "edition": "2026-10",
         "minutes": 6,
+        "section": "2.1",
+        "source_year": 2003,
         "source_pages": [
           24,
           25,
@@ -1861,12 +1862,11 @@
           27,
           28
         ],
+        "chapter_title": "交易过程中的实际问题",
         "source_sections": [
           "2.1 A RETAIL TRADE IN AN NYSE-LISTED STOCK",
           "2.2 A RETAIL TRADE IN A NASDAQ STOCK"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -1881,12 +1881,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "2",
-        "chapter_title": "交易过程中的实际问题",
-        "section": "2.2",
-        "number": 4,
         "part": "交易入门",
+        "number": 4,
+        "chapter": "2",
+        "edition": "2026-10",
         "minutes": 6,
+        "section": "2.2",
+        "source_year": 2003,
         "source_pages": [
           28,
           29,
@@ -1897,13 +1898,12 @@
           34,
           35
         ],
+        "chapter_title": "交易过程中的实际问题",
         "source_sections": [
           "2.3 AN INSTITUTIONAL TRADE IN A NYSE STOCK",
           "2.4 AN INSTITUTIONAL TRADE IN A NASDAQ STOCK",
           "2.5 A VERY LARGE BLOCK STOCK TRADE"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -1918,12 +1918,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "2",
-        "chapter_title": "交易过程中的实际问题",
-        "section": "2.3",
-        "number": 5,
         "part": "交易入门",
+        "number": 5,
+        "chapter": "2",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "2.3",
+        "source_year": 2003,
         "source_pages": [
           35,
           36,
@@ -1935,14 +1936,13 @@
           42,
           43
         ],
+        "chapter_title": "交易过程中的实际问题",
         "source_sections": [
           "2.6 SOME CASH COMMODITY AND ASSOCIATED FUTURES MARKET TRADES",
           "2.7 AN OPTIONS MARKET TRADE",
           "2.8 A BOND MARKET TRADE",
           "2.9 A FOREIGN EXCHANGE TRADE"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -1957,12 +1957,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "3",
-        "chapter_title": "交易行业与市场组织",
-        "section": "3.1",
-        "number": 6,
         "part": "第一部分 · 交易结构",
+        "number": 6,
+        "chapter": "3",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "3.1",
+        "source_year": 2003,
         "source_pages": [
           45,
           46,
@@ -1972,12 +1973,11 @@
           50,
           51
         ],
+        "chapter_title": "交易行业与市场组织",
         "source_sections": [
           "3.1 WHO ARE THE PLAYERS?",
           "3.2 TRADE FACILITATORS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -1992,12 +1992,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "3",
-        "chapter_title": "交易行业与市场组织",
-        "section": "3.2",
-        "number": 7,
         "part": "第一部分 · 交易结构",
+        "number": 7,
+        "chapter": "3",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "3.2",
+        "source_year": 2003,
         "source_pages": [
           51,
           52,
@@ -2007,11 +2008,10 @@
           56,
           57
         ],
+        "chapter_title": "交易行业与市场组织",
         "source_sections": [
           "3.3 TRADING INSTRUMENTS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -2026,12 +2026,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "3",
-        "chapter_title": "交易行业与市场组织",
-        "section": "3.3",
-        "number": 8,
         "part": "第一部分 · 交易结构",
+        "number": 8,
+        "chapter": "3",
+        "edition": "2026-10",
         "minutes": 8,
+        "section": "3.3",
+        "source_year": 2003,
         "source_pages": [
           57,
           58,
@@ -2050,11 +2051,10 @@
           71,
           72
         ],
+        "chapter_title": "交易行业与市场组织",
         "source_sections": [
           "3.4 WHERE ARE THE TRADING MARKETS?"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -2069,12 +2069,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "3",
-        "chapter_title": "交易行业与市场组织",
-        "section": "3.4",
-        "number": 9,
         "part": "第一部分 · 交易结构",
+        "number": 9,
+        "chapter": "3",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "3.4",
+        "source_year": 2003,
         "source_pages": [
           72,
           73,
@@ -2086,14 +2087,13 @@
           79,
           80
         ],
+        "chapter_title": "交易行业与市场组织",
         "source_sections": [
           "3.5 MARKET REGULATION",
           "3.6 SUMMARY",
           "3.7 SOME POINTS TO REMEMBER",
           "3.8 QUESTIONS FOR THOUGHT"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -2108,12 +2108,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "4",
-        "chapter_title": "订单及其执行条件",
-        "section": "4.1",
-        "number": 10,
         "part": "第一部分 · 交易结构",
+        "number": 10,
+        "chapter": "4",
+        "edition": "2026-10",
         "minutes": 6,
+        "section": "4.1",
+        "source_year": 2003,
         "source_pages": [
           81,
           82,
@@ -2127,14 +2128,13 @@
           90,
           91
         ],
+        "chapter_title": "订单及其执行条件",
         "source_sections": [
           "4.1 WHAT ARE ORDERS, AND WHY DO PEOPLE USE THEM?",
           "4.2 SOME IMPORTANT TERMS",
           "4.3 MARKET ORDERS",
           "4.4 LIMIT ORDERS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -2149,12 +2149,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "4",
-        "chapter_title": "订单及其执行条件",
-        "section": "4.2",
-        "number": 11,
         "part": "第一部分 · 交易结构",
+        "number": 11,
+        "chapter": "4",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "4.2",
+        "source_year": 2003,
         "source_pages": [
           91,
           92,
@@ -2164,15 +2165,14 @@
           96,
           97
         ],
+        "chapter_title": "订单及其执行条件",
         "source_sections": [
           "4.5 STOP ORDERS",
           "4.6 MARKET-IF-TOUCHED ORDERS",
           "4.7 TICK-SENSITIVE ORDERS",
           "4.8 MARKET-NOT-HELD ORDERS",
           "4.9 VALIDITY AND EXPIRATION INSTRUCTIONS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -2187,12 +2187,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "4",
-        "chapter_title": "订单及其执行条件",
-        "section": "4.3",
-        "number": 12,
         "part": "第一部分 · 交易结构",
+        "number": 12,
+        "chapter": "4",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "4.3",
+        "source_year": 2003,
         "source_pages": [
           96,
           97,
@@ -2201,15 +2202,14 @@
           100,
           101
         ],
+        "chapter_title": "订单及其执行条件",
         "source_sections": [
           "4.10 QUANTITY INSTRUCTIONS",
           "4.11 OTHER ORDER INSTRUCTIONS",
           "4.12 SUMMARY",
           "4.13 SOME POINTS TO REMEMBER",
           "4.14 QUESTIONS FOR THOUGHT"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -2224,12 +2224,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "5",
-        "chapter_title": "市场结构与信息系统",
-        "section": "5.1",
-        "number": 13,
         "part": "第一部分 · 交易结构",
+        "number": 13,
+        "chapter": "5",
+        "edition": "2026-10",
         "minutes": 6,
+        "section": "5.1",
+        "source_year": 2003,
         "source_pages": [
           102,
           103,
@@ -2241,13 +2242,12 @@
           109,
           110
         ],
+        "chapter_title": "市场结构与信息系统",
         "source_sections": [
           "5.1 OVERVIEW",
           "5.2 TRADING SESSIONS",
           "5.3 EXECUTION SYSTEMS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -2262,12 +2262,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "5",
-        "chapter_title": "市场结构与信息系统",
-        "section": "5.2",
-        "number": 14,
         "part": "第一部分 · 交易结构",
+        "number": 14,
+        "chapter": "5",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "5.2",
+        "source_year": 2003,
         "source_pages": [
           110,
           111,
@@ -2285,14 +2286,13 @@
           123,
           124
         ],
+        "chapter_title": "市场结构与信息系统",
         "source_sections": [
           "5.4 MARKET INFORMATION SYSTEMS",
           "5.5 SUMMARY",
           "5.6 SOME POINTS TO REMEMBER",
           "5.7 QUESTIONS FOR THOUGHT"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -2307,12 +2307,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "6",
-        "chapter_title": "订单驱动市场与撮合规则",
-        "section": "6.1",
-        "number": 15,
         "part": "第一部分 · 交易结构",
+        "number": 15,
+        "chapter": "6",
+        "edition": "2026-10",
         "minutes": 6,
+        "section": "6.1",
+        "source_year": 2003,
         "source_pages": [
           125,
           126,
@@ -2324,12 +2325,11 @@
           132,
           133
         ],
+        "chapter_title": "订单驱动市场与撮合规则",
         "source_sections": [
           "6.1 ORAL AUCTIONS",
           "6.2 RULE-BASED ORDER-MATCHING SYSTEMS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -2344,12 +2344,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "6",
-        "chapter_title": "订单驱动市场与撮合规则",
-        "section": "6.2",
-        "number": 16,
         "part": "第一部分 · 交易结构",
+        "number": 16,
+        "chapter": "6",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "6.2",
+        "source_year": 2003,
         "source_pages": [
           133,
           134,
@@ -2365,12 +2366,11 @@
           144,
           145
         ],
+        "chapter_title": "订单驱动市场与撮合规则",
         "source_sections": [
           "6.3 THE UNIFORM PRICING RULE AND SINGLE PRICE AUCTIONS",
           "6.4 THE DISCRIMINATORY PRICING RULE AND CONTINUOUS TWO-SIDED AUCTIONS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -2385,12 +2385,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "6",
-        "chapter_title": "订单驱动市场与撮合规则",
-        "section": "6.3",
-        "number": 17,
         "part": "第一部分 · 交易结构",
+        "number": 17,
+        "chapter": "6",
+        "edition": "2026-10",
         "minutes": 6,
+        "section": "6.3",
+        "source_year": 2003,
         "source_pages": [
           145,
           146,
@@ -2400,14 +2401,13 @@
           150,
           151
         ],
+        "chapter_title": "订单驱动市场与撮合规则",
         "source_sections": [
           "6.5 THE DERIVATIVE PRICING RULE AND CROSSING NETWORKS",
           "6.6 SUMMARY",
           "6.7 SOME POINTS TO REMEMBER",
           "6.8 QUESTIONS FOR THOUGHT"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -2422,12 +2422,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "7",
-        "chapter_title": "经纪业务与委托关系",
-        "section": "7.1",
-        "number": 18,
         "part": "第一部分 · 交易结构",
+        "number": 18,
+        "chapter": "7",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "7.1",
+        "source_year": 2003,
         "source_pages": [
           152,
           153,
@@ -2439,11 +2440,10 @@
           159,
           160
         ],
+        "chapter_title": "经纪业务与委托关系",
         "source_sections": [
           "7.1 WHAT BROKERS DO"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -2458,12 +2458,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "7",
-        "chapter_title": "经纪业务与委托关系",
-        "section": "7.2",
-        "number": 19,
         "part": "第一部分 · 交易结构",
+        "number": 19,
+        "chapter": "7",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "7.2",
+        "source_year": 2003,
         "source_pages": [
           160,
           161,
@@ -2479,12 +2480,11 @@
           171,
           172
         ],
+        "chapter_title": "经纪业务与委托关系",
         "source_sections": [
           "7.2 THE STRUCTURE OF A BROKERAGE FIRM",
           "7.3 BROKER PROFITABILITY"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -2499,12 +2499,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "7",
-        "chapter_title": "经纪业务与委托关系",
-        "section": "7.3",
-        "number": 20,
         "part": "第一部分 · 交易结构",
+        "number": 20,
+        "chapter": "7",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "7.3",
+        "source_year": 2003,
         "source_pages": [
           172,
           173,
@@ -2512,11 +2513,10 @@
           175,
           176
         ],
+        "chapter_title": "经纪业务与委托关系",
         "source_sections": [
           "7.4 THE PRINCIPAL—AGENT PROBLEM"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -2531,12 +2531,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "7",
-        "chapter_title": "经纪业务与委托关系",
-        "section": "7.4",
-        "number": 21,
         "part": "第一部分 · 交易结构",
+        "number": 21,
+        "chapter": "7",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "7.4",
+        "source_year": 2003,
         "source_pages": [
           176,
           177,
@@ -2551,14 +2552,13 @@
           186,
           187
         ],
+        "chapter_title": "经纪业务与委托关系",
         "source_sections": [
           "7.5 DISHONEST BROKERS",
           "7.6 SUMMARY",
           "7.7 SOME POINTS TO REMEMBER",
           "7.8 QUESTIONS FOR THOUGHT"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -2573,12 +2573,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "8",
-        "chapter_title": "交易动机",
-        "section": "8.1",
-        "number": 22,
         "part": "第二部分 · 交易的作用",
+        "number": 22,
+        "chapter": "8",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "8.1",
+        "source_year": 2003,
         "source_pages": [
           189,
           190,
@@ -2588,11 +2589,10 @@
           194,
           195
         ],
+        "chapter_title": "交易动机",
         "source_sections": [
           "8.1 UTILITARIAN TRADERS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -2607,12 +2607,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "8",
-        "chapter_title": "交易动机",
-        "section": "8.2",
-        "number": 23,
         "part": "第二部分 · 交易的作用",
+        "number": 23,
+        "chapter": "8",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "8.2",
+        "source_year": 2003,
         "source_pages": [
           195,
           196,
@@ -2623,11 +2624,10 @@
           201,
           202
         ],
+        "chapter_title": "交易动机",
         "source_sections": [
           "8.1 UTILITARIAN TRADERS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -2642,12 +2642,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "8",
-        "chapter_title": "交易动机",
-        "section": "8.3",
-        "number": 24,
         "part": "第二部分 · 交易的作用",
+        "number": 24,
+        "chapter": "8",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "8.3",
+        "source_year": 2003,
         "source_pages": [
           202,
           203,
@@ -2663,6 +2664,7 @@
           213,
           214
         ],
+        "chapter_title": "交易动机",
         "source_sections": [
           "8.1 UTILITARIAN TRADERS",
           "8.2 PROFIT-MOTIVATED TRADERS",
@@ -2670,9 +2672,7 @@
           "8.4 SUMMARY",
           "8.5 SOME POINTS TO REMEMBER",
           "8.6 QUESTIONS FOR THOUGHT"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -2687,12 +2687,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "9",
-        "chapter_title": "市场的社会功能",
-        "section": "9.1",
-        "number": 25,
         "part": "第二部分 · 交易的作用",
+        "number": 25,
+        "chapter": "9",
+        "edition": "2026-10",
         "minutes": 6,
+        "section": "9.1",
+        "source_year": 2003,
         "source_pages": [
           215,
           216,
@@ -2708,14 +2709,13 @@
           226,
           227
         ],
+        "chapter_title": "市场的社会功能",
         "source_sections": [
           "9.1 WELFARE ECONOMICS",
           "9.2 PRIVATE BENEFITS OF TRADING",
           "9.3 PUBLIC BENEFITS OF TRADING",
           "9.4 PUBLIC BENEFITS FROM INFORMATIVE PRICES"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -2730,12 +2730,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "9",
-        "chapter_title": "市场的社会功能",
-        "section": "9.2",
-        "number": 26,
         "part": "第二部分 · 交易的作用",
+        "number": 26,
+        "chapter": "9",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "9.2",
+        "source_year": 2003,
         "source_pages": [
           226,
           227,
@@ -2745,6 +2746,7 @@
           231,
           232
         ],
+        "chapter_title": "市场的社会功能",
         "source_sections": [
           "9.4 PUBLIC BENEFITS FROM INFORMATIVE PRICES",
           "9.5 PUBLIC BENEFITS OF LIQUID MARKETS",
@@ -2752,9 +2754,7 @@
           "9.7 SUMMARY",
           "9.8 SOME POINTS TO REMEMBER",
           "9.9 QUESTIONS FOR THOUGHT"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -2769,12 +2769,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "10",
-        "chapter_title": "知情交易与价格发现",
-        "section": "10.1",
-        "number": 27,
         "part": "第三部分 · 信息与交易",
+        "number": 27,
+        "chapter": "10",
+        "edition": "2026-10",
         "minutes": 6,
+        "section": "10.1",
+        "source_year": 2003,
         "source_pages": [
           235,
           236,
@@ -2782,14 +2783,13 @@
           238,
           239
         ],
+        "chapter_title": "知情交易与价格发现",
         "source_sections": [
           "10.1 FUNDAMENTAL VALUES",
           "10.2 INFORMED TRADERS",
           "10.3 INFORMED TRADERS MAKE PRICES INFORMATIVE",
           "10.4 INFORMED TRADING STRATEGIES"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -2804,12 +2804,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "10",
-        "chapter_title": "知情交易与价格发现",
-        "section": "10.2",
-        "number": 28,
         "part": "第三部分 · 信息与交易",
+        "number": 28,
+        "chapter": "10",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "10.2",
+        "source_year": 2003,
         "source_pages": [
           239,
           240,
@@ -2817,11 +2818,10 @@
           242,
           243
         ],
+        "chapter_title": "知情交易与价格发现",
         "source_sections": [
           "10.5 STYLES OF INFORMED TRADING"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -2836,12 +2836,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "10",
-        "chapter_title": "知情交易与价格发现",
-        "section": "10.3",
-        "number": 29,
         "part": "第三部分 · 信息与交易",
+        "number": 29,
+        "chapter": "10",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "10.3",
+        "source_year": 2003,
         "source_pages": [
           243,
           244,
@@ -2850,11 +2851,10 @@
           247,
           248
         ],
+        "chapter_title": "知情交易与价格发现",
         "source_sections": [
           "10.5 STYLES OF INFORMED TRADING"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -2869,12 +2869,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "10",
-        "chapter_title": "知情交易与价格发现",
-        "section": "10.4",
-        "number": 30,
         "part": "第三部分 · 信息与交易",
+        "number": 30,
+        "chapter": "10",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "10.4",
+        "source_year": 2003,
         "source_pages": [
           248,
           249,
@@ -2887,14 +2888,13 @@
           256,
           257
         ],
+        "chapter_title": "知情交易与价格发现",
         "source_sections": [
           "10.6 COMPETITION, TRADING PROFITS, AND INFORMATIVE PRICES",
           "10.7 SUMMARY",
           "10.8 SOME POINTS TO REMEMBER",
           "10.9 QUESTIONS FOR THOUGHT"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -2909,12 +2909,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "11",
-        "chapter_title": "订单预期交易",
-        "section": "11.1",
-        "number": 31,
         "part": "第三部分 · 信息与交易",
+        "number": 31,
+        "chapter": "11",
+        "edition": "2026-10",
         "minutes": 8,
+        "section": "11.1",
+        "source_year": 2003,
         "source_pages": [
           258,
           259,
@@ -2924,11 +2925,10 @@
           263,
           264
         ],
+        "chapter_title": "订单预期交易",
         "source_sections": [
           "11.1 FRONT RUNNERS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -2943,23 +2943,23 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "11",
-        "chapter_title": "订单预期交易",
-        "section": "11.2",
-        "number": 32,
         "part": "第三部分 · 信息与交易",
+        "number": 32,
+        "chapter": "11",
+        "edition": "2026-10",
         "minutes": 8,
+        "section": "11.2",
+        "source_year": 2003,
         "source_pages": [
           261,
           262,
           263,
           264
         ],
+        "chapter_title": "订单预期交易",
         "source_sections": [
           "11.1 FRONT RUNNERS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -2974,12 +2974,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "11",
-        "chapter_title": "订单预期交易",
-        "section": "11.3",
-        "number": 33,
         "part": "第三部分 · 信息与交易",
+        "number": 33,
+        "chapter": "11",
+        "edition": "2026-10",
         "minutes": 8,
+        "section": "11.3",
+        "source_year": 2003,
         "source_pages": [
           264,
           265,
@@ -2990,13 +2991,12 @@
           270,
           271
         ],
+        "chapter_title": "订单预期交易",
         "source_sections": [
           "11.2 SENTIMENT-ORIENTED TECHNICAL TRADERS",
           "11.3 SQUEEZERS",
           "11.4 MANIPULATION OF STOP ORDERS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -3011,12 +3011,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "12",
-        "chapter_title": "交易欺骗与价格操纵",
-        "section": "12.1",
-        "number": 34,
         "part": "第三部分 · 信息与交易",
+        "number": 34,
+        "chapter": "12",
+        "edition": "2026-10",
         "minutes": 8,
+        "section": "12.1",
+        "source_year": 2003,
         "source_pages": [
           272,
           273,
@@ -3031,12 +3032,11 @@
           282,
           283
         ],
+        "chapter_title": "交易欺骗与价格操纵",
         "source_sections": [
           "12.1 A LONG-SIDE BLUFF",
           "12.2 THE FUNDAMENTALS OF BLUFFING"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -3051,12 +3051,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "12",
-        "chapter_title": "交易欺骗与价格操纵",
-        "section": "12.2",
-        "number": 35,
         "part": "第三部分 · 信息与交易",
+        "number": 35,
+        "chapter": "12",
+        "edition": "2026-10",
         "minutes": 8,
+        "section": "12.2",
+        "source_year": 2003,
         "source_pages": [
           283,
           284,
@@ -3065,11 +3066,10 @@
           287,
           288
         ],
+        "chapter_title": "交易欺骗与价格操纵",
         "source_sections": [
           "12.3 BLUFFERS DISCIPLINE LIQUIDITY PROVIDERS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -3084,12 +3084,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "13",
-        "chapter_title": "做市商",
-        "section": "13.1",
-        "number": 36,
         "part": "第四部分 · 流动性供给",
+        "number": 36,
+        "chapter": "13",
+        "edition": "2026-10",
         "minutes": 8,
+        "section": "13.1",
+        "source_year": 2003,
         "source_pages": [
           291,
           292,
@@ -3098,15 +3099,14 @@
           295,
           296
         ],
+        "chapter_title": "做市商",
         "source_sections": [
           "13.1 WHO ARE DEALERS?",
           "13.2 DEALER QUOTATIONS",
           "13.3 TRADING WITH DEALERS",
           "13.4 ATTRACTING ORDER FLOW",
           "13.5 DEALER QUOTATION DECISIONS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -3121,12 +3121,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "13",
-        "chapter_title": "做市商",
-        "section": "13.2",
-        "number": 37,
         "part": "第四部分 · 流动性供给",
+        "number": 37,
+        "chapter": "13",
+        "edition": "2026-10",
         "minutes": 8,
+        "section": "13.2",
+        "source_year": 2003,
         "source_pages": [
           296,
           297,
@@ -3134,12 +3135,11 @@
           299,
           300
         ],
+        "chapter_title": "做市商",
         "source_sections": [
           "13.6 DEALER INVENTORIES",
           "13.7 INVENTORY RISK"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -3154,12 +3154,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "13",
-        "chapter_title": "做市商",
-        "section": "13.3",
-        "number": 38,
         "part": "第四部分 · 流动性供给",
+        "number": 38,
+        "chapter": "13",
+        "edition": "2026-10",
         "minutes": 8,
+        "section": "13.3",
+        "source_year": 2003,
         "source_pages": [
           300,
           301,
@@ -3172,15 +3173,14 @@
           308,
           309
         ],
+        "chapter_title": "做市商",
         "source_sections": [
           "13.8 DEALER RESPONSES TO ADVERSE SELECTION",
           "13.9 PRICING MISTAKES DEALERS MAKE, AND HOW THEY AVOID THEM",
           "13.10 WELL-INFORMED AND POORLY INFORMED DEALERS",
           "13.11 DEALERS AND VALUE TRADERS",
           "13.12 DEALERS AND BLUFFERS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -3195,12 +3195,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "14",
-        "chapter_title": "买卖价差",
-        "section": "14.1",
-        "number": 39,
         "part": "第四部分 · 流动性供给",
+        "number": 39,
+        "chapter": "14",
+        "edition": "2026-10",
         "minutes": 8,
+        "section": "14.1",
+        "source_year": 2003,
         "source_pages": [
           310,
           311,
@@ -3210,13 +3211,12 @@
           315,
           316
         ],
+        "chapter_title": "买卖价差",
         "source_sections": [
           "14.1 DEALER BID/ASK SPREADS",
           "14.2 SPREAD COMPONENTS",
           "14.3 ADVERSE SELECTION AND UNINFORMED TRADERS: THE MOST IMPORTANT LESSON IN THIS BOOK FOR MOST READERS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -3231,12 +3231,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "14",
-        "chapter_title": "买卖价差",
-        "section": "14.2",
-        "number": 40,
         "part": "第四部分 · 流动性供给",
+        "number": 40,
+        "chapter": "14",
+        "edition": "2026-10",
         "minutes": 8,
+        "section": "14.2",
+        "source_year": 2003,
         "source_pages": [
           316,
           317,
@@ -3248,12 +3249,11 @@
           323,
           324
         ],
+        "chapter_title": "买卖价差",
         "source_sections": [
           "14.4 EQUILIBRIUM SPREADS IN CONTINUOUS ORDER-DRIVEN AUCTION MARKETS",
           "14.5 SPREADS WHEN PUBLIC TRADERS COMPETE WITH DEALERS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -3268,12 +3268,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "14",
-        "chapter_title": "买卖价差",
-        "section": "14.3",
-        "number": 41,
         "part": "第四部分 · 流动性供给",
+        "number": 41,
+        "chapter": "14",
+        "edition": "2026-10",
         "minutes": 8,
+        "section": "14.3",
+        "source_year": 2003,
         "source_pages": [
           324,
           325,
@@ -3286,11 +3287,10 @@
           332,
           333
         ],
+        "chapter_title": "买卖价差",
         "source_sections": [
           "14.6 CROSS-SECTIONAL SPREAD PREDICTIONS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -3305,21 +3305,21 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "14",
-        "chapter_title": "买卖价差",
-        "section": "14.4",
-        "number": 42,
         "part": "第四部分 · 流动性供给",
+        "number": 42,
+        "chapter": "14",
+        "edition": "2026-10",
         "minutes": 8,
+        "section": "14.4",
+        "source_year": 2003,
         "source_pages": [
           333,
           334
         ],
+        "chapter_title": "买卖价差",
         "source_sections": [
           "14.10 APPENDIX: A SIMPLE GLOSTEN- MILGROM MODEL OF THE ADVERSE SELECTION SPREAD COMPONENT"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -3334,12 +3334,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "15",
-        "chapter_title": "大宗交易",
-        "section": "15.1",
-        "number": 43,
         "part": "第四部分 · 流动性供给",
+        "number": 43,
+        "chapter": "15",
+        "edition": "2026-10",
         "minutes": 8,
+        "section": "15.1",
+        "source_year": 2003,
         "source_pages": [
           335,
           336,
@@ -3348,12 +3349,11 @@
           339,
           340
         ],
+        "chapter_title": "大宗交易",
         "source_sections": [
           "15.1 STATISTICAL DEFINITIONS OF BLOCK TRADES",
           "15.2 BLOCK TRADING PROBLEMS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -3368,12 +3368,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "15",
-        "chapter_title": "大宗交易",
-        "section": "15.2",
-        "number": 44,
         "part": "第四部分 · 流动性供给",
+        "number": 44,
+        "chapter": "15",
+        "edition": "2026-10",
         "minutes": 8,
+        "section": "15.2",
+        "source_year": 2003,
         "source_pages": [
           340,
           341,
@@ -3382,12 +3383,11 @@
           344,
           345
         ],
+        "chapter_title": "大宗交易",
         "source_sections": [
           "15.3 SUNSHINE TRADING",
           "15.4 THE UPSTAIRS MARKET"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -3402,12 +3402,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "15",
-        "chapter_title": "大宗交易",
-        "section": "15.3",
-        "number": 45,
         "part": "第四部分 · 流动性供给",
+        "number": 45,
+        "chapter": "15",
+        "edition": "2026-10",
         "minutes": 8,
+        "section": "15.3",
+        "source_year": 2003,
         "source_pages": [
           345,
           346,
@@ -3416,12 +3417,11 @@
           349,
           350
         ],
+        "chapter_title": "大宗交易",
         "source_sections": [
           "15.5 A TELLING STATISTIC",
           "15.6 THE RELATION BETWEEN BLOCK MARKETS AND REGULAR MARKETS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -3436,12 +3436,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "16",
-        "chapter_title": "价值交易者",
-        "section": "16.1",
-        "number": 46,
         "part": "第四部分 · 流动性供给",
+        "number": 46,
+        "chapter": "16",
+        "edition": "2026-10",
         "minutes": 8,
+        "section": "16.1",
+        "source_year": 2003,
         "source_pages": [
           351,
           352,
@@ -3450,13 +3451,12 @@
           358,
           359
         ],
+        "chapter_title": "价值交易者",
         "source_sections": [
           "16.1 VALUE TRADERS SUPPLY LIQUIDITY",
           "16.3 OUTSIDE VERSUS DEALER SPREADS",
           "16.4 VALUE TRADERS AND NEWS TRADERS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -3471,12 +3471,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "16",
-        "chapter_title": "价值交易者",
-        "section": "16.2",
-        "number": 47,
         "part": "第四部分 · 流动性供给",
+        "number": 47,
+        "chapter": "16",
+        "edition": "2026-10",
         "minutes": 8,
+        "section": "16.2",
+        "source_year": 2003,
         "source_pages": [
           353,
           354,
@@ -3484,11 +3485,10 @@
           356,
           357
         ],
+        "chapter_title": "价值交易者",
         "source_sections": [
           "16.2 THE OUTSIDE SPREAD AND ITS DETERMINANTS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -3503,12 +3503,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "17",
-        "chapter_title": "套利交易",
-        "section": "17.1",
-        "number": 48,
         "part": "第四部分 · 流动性供给",
+        "number": 48,
+        "chapter": "17",
+        "edition": "2026-10",
         "minutes": 8,
+        "section": "17.1",
+        "source_year": 2003,
         "source_pages": [
           360,
           361,
@@ -3521,13 +3522,12 @@
           368,
           369
         ],
+        "chapter_title": "套利交易",
         "source_sections": [
           "17.1 DEFINITIONS",
           "17.2 A SIMPLE CHARACTERIZATION OF ARBITRAGE",
           "17.3 TYPES OF ARBITRAGE"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -3542,12 +3542,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "17",
-        "chapter_title": "套利交易",
-        "section": "17.2",
-        "number": 49,
         "part": "第四部分 · 流动性供给",
+        "number": 49,
+        "chapter": "17",
+        "edition": "2026-10",
         "minutes": 8,
+        "section": "17.2",
+        "source_year": 2003,
         "source_pages": [
           369,
           370,
@@ -3560,11 +3561,10 @@
           377,
           378
         ],
+        "chapter_title": "套利交易",
         "source_sections": [
           "17.3 TYPES OF ARBITRAGE"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -3579,12 +3579,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "17",
-        "chapter_title": "套利交易",
-        "section": "17.3",
-        "number": 50,
         "part": "第四部分 · 流动性供给",
+        "number": 50,
+        "chapter": "17",
+        "edition": "2026-10",
         "minutes": 8,
+        "section": "17.3",
+        "source_year": 2003,
         "source_pages": [
           376,
           377,
@@ -3600,12 +3601,11 @@
           387,
           390
         ],
+        "chapter_title": "套利交易",
         "source_sections": [
           "17.4 ARBITRAGE RISKS",
           "17.7 ARBITRAGEURS, DEALERS, AND BROKERS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -3620,12 +3620,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "17",
-        "chapter_title": "套利交易",
-        "section": "17.4",
-        "number": 51,
         "part": "第四部分 · 流动性供给",
+        "number": 51,
+        "chapter": "17",
+        "edition": "2026-10",
         "minutes": 8,
+        "section": "17.4",
+        "source_year": 2003,
         "source_pages": [
           369,
           370,
@@ -3637,15 +3638,14 @@
           391,
           392
         ],
+        "chapter_title": "套利交易",
         "source_sections": [
           "17.3 TYPES OF ARBITRAGE",
           "17.5 THE CAUSES OF ARBITRAGE OPPORTUNITIES",
           "17.6 QUANTITY CHARACTERIZATIONS OF ARBITRAGE",
           "17.7 ARBITRAGEURS, DEALERS, AND BROKERS",
           "17.8 COMPETITION AMONG ARBITRAGEURS AND EQUILIBRIUM ARBITRAGE SPREADS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -3660,22 +3660,22 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "18",
-        "chapter_title": "买方交易决策",
-        "section": "18.1",
-        "number": 52,
         "part": "第四部分 · 流动性供给",
+        "number": 52,
+        "chapter": "18",
+        "edition": "2026-10",
         "minutes": 8,
+        "section": "18.1",
+        "source_year": 2003,
         "source_pages": [
           393,
           394,
           395
         ],
+        "chapter_title": "买方交易决策",
         "source_sections": [
           "18.1 MARKET VERSUS LIMIT ORDERS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -3690,12 +3690,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "18",
-        "chapter_title": "买方交易决策",
-        "section": "18.2",
-        "number": 53,
         "part": "第四部分 · 流动性供给",
+        "number": 53,
+        "chapter": "18",
+        "edition": "2026-10",
         "minutes": 8,
+        "section": "18.2",
+        "source_year": 2003,
         "source_pages": [
           395,
           396,
@@ -3703,13 +3704,12 @@
           398,
           399
         ],
+        "chapter_title": "买方交易决策",
         "source_sections": [
           "18.2 THE ORDER EXPOSURE DECISION",
           "18.3 THE BENEFITS OF EXPOSURE",
           "18.4 THE COSTS OF EXPOSURE"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -3724,12 +3724,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "18",
-        "chapter_title": "买方交易决策",
-        "section": "18.3",
-        "number": 54,
         "part": "第四部分 · 流动性供给",
+        "number": 54,
+        "chapter": "18",
+        "edition": "2026-10",
         "minutes": 8,
+        "section": "18.3",
+        "source_year": 2003,
         "source_pages": [
           399,
           400,
@@ -3739,12 +3740,11 @@
           404,
           405
         ],
+        "chapter_title": "买方交易决策",
         "source_sections": [
           "18.5 DEFENSIVE STRATEGIES",
           "18.6 HOW MARKETS HELP TRADERS CONTROL EXPOSURE COSTS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -3759,12 +3759,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "19",
-        "chapter_title": "流动性",
-        "section": "19.1",
-        "number": 55,
         "part": "第五部分 · 流动性与波动",
+        "number": 55,
+        "chapter": "19",
+        "edition": "2026-10",
         "minutes": 8,
+        "section": "19.1",
+        "source_year": 2003,
         "source_pages": [
           407,
           408,
@@ -3772,11 +3773,10 @@
           410,
           411
         ],
+        "chapter_title": "流动性",
         "source_sections": [
           "19.1 THE SEARCH FOR LIQUIDITY"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -3791,22 +3791,22 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "19",
-        "chapter_title": "流动性",
-        "section": "19.2",
-        "number": 56,
         "part": "第五部分 · 流动性与波动",
+        "number": 56,
+        "chapter": "19",
+        "edition": "2026-10",
         "minutes": 8,
+        "section": "19.2",
+        "source_year": 2003,
         "source_pages": [
           411,
           412,
           413
         ],
+        "chapter_title": "流动性",
         "source_sections": [
           "19.2 LIQUIDITY DIMENSIONS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -3821,12 +3821,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "19",
-        "chapter_title": "流动性",
-        "section": "19.3",
-        "number": 57,
         "part": "第五部分 · 流动性与波动",
+        "number": 57,
+        "chapter": "19",
+        "edition": "2026-10",
         "minutes": 8,
+        "section": "19.3",
+        "source_year": 2003,
         "source_pages": [
           413,
           414,
@@ -3839,12 +3840,11 @@
           421,
           422
         ],
+        "chapter_title": "流动性",
         "source_sections": [
           "19.3 THE WHO, HOW, AND WHY OF LIQUIDITY",
           "19.4 AN ILLUSTRATIVE EXAMPLE"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -3859,12 +3859,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "20",
-        "chapter_title": "价格波动",
-        "section": "20.1",
-        "number": 58,
         "part": "第五部分 · 流动性与波动",
+        "number": 58,
+        "chapter": "20",
+        "edition": "2026-10",
         "minutes": 8,
+        "section": "20.1",
+        "source_year": 2003,
         "source_pages": [
           423,
           424,
@@ -3872,12 +3873,11 @@
           426,
           427
         ],
+        "chapter_title": "价格波动",
         "source_sections": [
           "20.1 FUNDAMENTAL VOLATILITY",
           "20.2 TRANSITORY VOLATILITY"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -3892,23 +3892,23 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "20",
-        "chapter_title": "价格波动",
-        "section": "20.2",
-        "number": 59,
         "part": "第五部分 · 流动性与波动",
+        "number": 59,
+        "chapter": "20",
+        "edition": "2026-10",
         "minutes": 8,
+        "section": "20.2",
+        "source_year": 2003,
         "source_pages": [
           427,
           428,
           429,
           430
         ],
+        "chapter_title": "价格波动",
         "source_sections": [
           "20.3 MEASURING VOLATILITY AND ITS COMPONENTS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -3923,12 +3923,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "21",
-        "chapter_title": "流动性与交易成本的测量",
-        "section": "21.1",
-        "number": 60,
         "part": "第六部分 · 衡量与评价",
+        "number": 60,
+        "chapter": "21",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "21.1",
+        "source_year": 2003,
         "source_pages": [
           434,
           435,
@@ -3937,13 +3938,12 @@
           438,
           439
         ],
+        "chapter_title": "流动性与交易成本的测量",
         "source_sections": [
           "21.1 TRANSACTION COST COMPONENTS",
           "21.2 IMPLICIT TRANSACTION COST ESTIMATION METHODS",
           "21.3 MEASURING TRANSACTION COSTS WITH SPECIFIED PRICE BENCHMARKS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -3958,12 +3958,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "21",
-        "chapter_title": "流动性与交易成本的测量",
-        "section": "21.2",
-        "number": 61,
         "part": "第六部分 · 衡量与评价",
+        "number": 61,
+        "chapter": "21",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "21.2",
+        "source_year": 2003,
         "source_pages": [
           439,
           440,
@@ -3976,13 +3977,12 @@
           449,
           450
         ],
+        "chapter_title": "流动性与交易成本的测量",
         "source_sections": [
           "21.3 MEASURING TRANSACTION COSTS WITH SPECIFIED PRICE BENCHMARKS",
           "21.4 PROPERTIES OF TRANSACTION COST PRICE BENCHMARK ESTIMATORS",
           "21.6 MISSED TRADE OPPORTUNITY COSTS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -3997,12 +3997,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "21",
-        "chapter_title": "流动性与交易成本的测量",
-        "section": "21.3",
-        "number": 62,
         "part": "第六部分 · 衡量与评价",
+        "number": 62,
+        "chapter": "21",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "21.3",
+        "source_year": 2003,
         "source_pages": [
           440,
           441,
@@ -4014,12 +4015,11 @@
           447,
           448
         ],
+        "chapter_title": "流动性与交易成本的测量",
         "source_sections": [
           "21.4 PROPERTIES OF TRANSACTION COST PRICE BENCHMARK ESTIMATORS",
           "21.5 MEASURING IMPLICIT TRANSACTION COSTS WITH ECONOMETRIC METHODS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -4034,12 +4034,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "21",
-        "chapter_title": "流动性与交易成本的测量",
-        "section": "21.4",
-        "number": 63,
         "part": "第六部分 · 衡量与评价",
+        "number": 63,
+        "chapter": "21",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "21.4",
+        "source_year": 2003,
         "source_pages": [
           447,
           448,
@@ -4050,6 +4051,7 @@
           453,
           454
         ],
+        "chapter_title": "流动性与交易成本的测量",
         "source_sections": [
           "21.6 MISSED TRADE OPPORTUNITY COSTS",
           "21.7 TRANSACTION COST PREDICTION",
@@ -4057,9 +4059,7 @@
           "21.9 SUMMARY",
           "21.10 SOME POINTS TO REMEMBER",
           "21.11 QUESTIONS FOR THOUGHT"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -4074,12 +4074,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "22",
-        "chapter_title": "业绩评价与预测",
-        "section": "22.1",
-        "number": 64,
         "part": "第六部分 · 衡量与评价",
+        "number": 64,
+        "chapter": "22",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "22.1",
+        "source_year": 2003,
         "source_pages": [
           455,
           456,
@@ -4091,12 +4092,11 @@
           462,
           463
         ],
+        "chapter_title": "业绩评价与预测",
         "source_sections": [
           "22.1 THE PERFORMANCE EVALUATION PROBLEM",
           "22.2 PERFORMANCE EVALUATION METHODS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -4111,12 +4111,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "22",
-        "chapter_title": "业绩评价与预测",
-        "section": "22.2",
-        "number": 65,
         "part": "第六部分 · 衡量与评价",
+        "number": 65,
+        "chapter": "22",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "22.2",
+        "source_year": 2003,
         "source_pages": [
           463,
           464,
@@ -4134,12 +4135,11 @@
           478,
           479
         ],
+        "chapter_title": "业绩评价与预测",
         "source_sections": [
           "22.3 THE PERFORMANCE PREDICTION PROBLEM",
           "22.4 STATISTICAL PERFORMANCE EVALUATION"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -4154,12 +4154,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "22",
-        "chapter_title": "业绩评价与预测",
-        "section": "22.3",
-        "number": 66,
         "part": "第六部分 · 衡量与评价",
+        "number": 66,
+        "chapter": "22",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "22.3",
+        "source_year": 2003,
         "source_pages": [
           473,
           474,
@@ -4173,12 +4174,11 @@
           487,
           488
         ],
+        "chapter_title": "业绩评价与预测",
         "source_sections": [
           "22.4 STATISTICAL PERFORMANCE EVALUATION",
           "22.6 THE SAMPLE SELECTION BIAS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -4193,12 +4193,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "22",
-        "chapter_title": "业绩评价与预测",
-        "section": "22.4",
-        "number": 67,
         "part": "第六部分 · 衡量与评价",
+        "number": 67,
+        "chapter": "22",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "22.4",
+        "source_year": 2003,
         "source_pages": [
           479,
           480,
@@ -4207,11 +4208,10 @@
           483,
           484
         ],
+        "chapter_title": "业绩评价与预测",
         "source_sections": [
           "22.5 MORE IMPORTANT PROBLEMS WITH STATISTICAL PERFORMANCE EVALUATION"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -4226,12 +4226,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "22",
-        "chapter_title": "业绩评价与预测",
-        "section": "22.5",
-        "number": 68,
         "part": "第六部分 · 衡量与评价",
+        "number": 68,
+        "chapter": "22",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "22.5",
+        "source_year": 2003,
         "source_pages": [
           488,
           489,
@@ -4241,14 +4242,13 @@
           493,
           494
         ],
+        "chapter_title": "业绩评价与预测",
         "source_sections": [
           "22.7 ECONOMIC APPROACHES TO PERFORMANCE PREDICTION",
           "22.8 SUMMARY",
           "22.9 SOME POINTS TO REMEMBER",
           "22.10 QUESTIONS FOR THOUGHT"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -4263,24 +4263,24 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "23",
-        "chapter_title": "指数与组合交易",
-        "section": "23.1",
-        "number": 69,
         "part": "第七部分 · 市场组织与制度",
+        "number": 69,
+        "chapter": "23",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "23.1",
+        "source_year": 2003,
         "source_pages": [
           497,
           498,
           499,
           500
         ],
+        "chapter_title": "指数与组合交易",
         "source_sections": [
           "23.1 PRICE INDEXES",
           "23.2 INDEX FUNDS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -4295,25 +4295,25 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "23",
-        "chapter_title": "指数与组合交易",
-        "section": "23.2",
-        "number": 70,
         "part": "第七部分 · 市场组织与制度",
+        "number": 70,
+        "chapter": "23",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "23.2",
+        "source_year": 2003,
         "source_pages": [
           500,
           501,
           502,
           503
         ],
+        "chapter_title": "指数与组合交易",
         "source_sections": [
           "23.2 INDEX FUNDS",
           "23.3 THE ARGUMENT FOR INDEXATION",
           "23.4 LIQUIDITY AND PRICE FORMATION IN INDEX MARKETS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -4328,12 +4328,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "23",
-        "chapter_title": "指数与组合交易",
-        "section": "23.3",
-        "number": 71,
         "part": "第七部分 · 市场组织与制度",
+        "number": 71,
+        "chapter": "23",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "23.3",
+        "source_year": 2003,
         "source_pages": [
           502,
           503,
@@ -4341,15 +4342,14 @@
           505,
           506
         ],
+        "chapter_title": "指数与组合交易",
         "source_sections": [
           "23.4 LIQUIDITY AND PRICE FORMATION IN INDEX MARKETS",
           "23.5 INDEX PRODUCTS",
           "23.6 SUMMARY",
           "23.7 SOME POINTS TO REMEMBER",
           "23.8 QUESTIONS FOR THOUGHT"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -4364,12 +4364,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "24",
-        "chapter_title": "专营商制度",
-        "section": "24.1",
-        "number": 72,
         "part": "第七部分 · 市场组织与制度",
+        "number": 72,
+        "chapter": "24",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "24.1",
+        "source_year": 2003,
         "source_pages": [
           507,
           508,
@@ -4380,14 +4381,13 @@
           513,
           514
         ],
+        "chapter_title": "专营商制度",
         "source_sections": [
           "24.1 OVERVIEW",
           "24.2 SPECIALISTS AS DEALERS",
           "24.3 SPECIALISTS AS BROKERS",
           "24.4 SPECIALISTS AS AUCTIONEERS AND EXCHANGE OFFICIALS"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -4402,12 +4402,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "24",
-        "chapter_title": "专营商制度",
-        "section": "24.2",
-        "number": 73,
         "part": "第七部分 · 市场组织与制度",
+        "number": 73,
+        "chapter": "24",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "24.2",
+        "source_year": 2003,
         "source_pages": [
           514,
           515,
@@ -4419,11 +4420,10 @@
           521,
           522
         ],
+        "chapter_title": "专营商制度",
         "source_sections": [
           "24.5 SPECIALIST PRIVILEGES"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -4438,12 +4438,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "24",
-        "chapter_title": "专营商制度",
-        "section": "24.3",
-        "number": 74,
         "part": "第七部分 · 市场组织与制度",
+        "number": 74,
+        "chapter": "24",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "24.3",
+        "source_year": 2003,
         "source_pages": [
           522,
           523,
@@ -4451,15 +4452,14 @@
           525,
           526
         ],
+        "chapter_title": "专营商制度",
         "source_sections": [
           "24.6 WHO ASSIGNS SPECIALISTS?",
           "24.7 REGULATORY ISSUES AND PERSPECTIVES",
           "24.8 SUMMARY",
           "24.9 SOME POINTS TO REMEMBER",
           "24.10 QUESTIONS FOR THOUGHT"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -4474,12 +4474,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "25",
-        "chapter_title": "内部化、定向路由与内部交叉成交",
-        "section": "25.1",
-        "number": 75,
         "part": "第七部分 · 市场组织与制度",
+        "number": 75,
+        "chapter": "25",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "25.1",
+        "source_year": 2003,
         "source_pages": [
           527,
           528,
@@ -4488,12 +4489,11 @@
           531,
           532
         ],
+        "chapter_title": "内部化、定向路由与内部交叉成交",
         "source_sections": [
           "25.1 BEST EXECUTION PRACTICES",
           "25.2 THE ECONOMICS OF BEST EXECUTION"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -4508,12 +4508,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "25",
-        "chapter_title": "内部化、定向路由与内部交叉成交",
-        "section": "25.2",
-        "number": 76,
         "part": "第七部分 · 市场组织与制度",
+        "number": 76,
+        "chapter": "25",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "25.2",
+        "source_year": 2003,
         "source_pages": [
           532,
           533,
@@ -4521,6 +4522,7 @@
           535,
           536
         ],
+        "chapter_title": "内部化、定向路由与内部交叉成交",
         "source_sections": [
           "25.2 THE ECONOMICS OF BEST EXECUTION",
           "25.3 ANTICOMPETITIVE ASPECTS OF INTERNALIZATION AND PREFERENCING",
@@ -4528,9 +4530,7 @@
           "25.5 SUMMARY",
           "25.6 SOME POINTS TO REMEMBER",
           "25.7 QUESTIONS FOR THOUGHT"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -4545,12 +4545,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "26",
-        "chapter_title": "市场内部与市场之间的竞争",
-        "section": "26.1",
-        "number": 77,
         "part": "第七部分 · 市场组织与制度",
+        "number": 77,
+        "chapter": "26",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "26.1",
+        "source_year": 2003,
         "source_pages": [
           537,
           538,
@@ -4563,13 +4564,12 @@
           545,
           546
         ],
+        "chapter_title": "市场内部与市场之间的竞争",
         "source_sections": [
           "26.1 TRADING SYSTEMS AND TECHNOLOGY",
           "26.2 MARKET CONSOLIDATION",
           "26.3 MARKET FRAGMENTATION"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -4584,22 +4584,22 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "26",
-        "chapter_title": "市场内部与市场之间的竞争",
-        "section": "26.2",
-        "number": 78,
         "part": "第七部分 · 市场组织与制度",
+        "number": 78,
+        "chapter": "26",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "26.2",
+        "source_year": 2003,
         "source_pages": [
           546,
           547,
           548
         ],
+        "chapter_title": "市场内部与市场之间的竞争",
         "source_sections": [
           "26.4 MARKET SEGMENTATION: HOW FRAGMENTED MARKETS CONSOLIDATE"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -4614,12 +4614,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "26",
-        "chapter_title": "市场内部与市场之间的竞争",
-        "section": "26.3",
-        "number": 79,
         "part": "第七部分 · 市场组织与制度",
+        "number": 79,
+        "chapter": "26",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "26.3",
+        "source_year": 2003,
         "source_pages": [
           548,
           549,
@@ -4630,15 +4631,14 @@
           554,
           555
         ],
+        "chapter_title": "市场内部与市场之间的竞争",
         "source_sections": [
           "26.5 EXTERNALITIES IN THE COMPETITION AMONG MARKET CENTERS",
           "26.6 CONSOLIDATION OF MARKETPLACES",
           "26.7 SUMMARY",
           "26.8 SOME POINTS TO REMEMBER",
           "26.9 QUESTIONS FOR THOUGHT"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -4653,12 +4653,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "27",
-        "chapter_title": "场内交易与自动化交易系统",
-        "section": "27.1",
-        "number": 80,
         "part": "第七部分 · 市场组织与制度",
+        "number": 80,
+        "chapter": "27",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "27.1",
+        "source_year": 2003,
         "source_pages": [
           556,
           557,
@@ -4668,6 +4669,7 @@
           561,
           562
         ],
+        "chapter_title": "场内交易与自动化交易系统",
         "source_sections": [
           "27.1 FAIRNESS",
           "27.2 THE CONVENIENCE OF DISTRIBUTED ACCESS",
@@ -4675,9 +4677,7 @@
           "27.4 NEGOTIATION SPEED",
           "27.5 EXCHANGE OF INFORMATION ON TRADING FLOORS",
           "27.6 MARKET DATA REPORTING"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -4692,12 +4692,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "27",
-        "chapter_title": "场内交易与自动化交易系统",
-        "section": "27.2",
-        "number": 81,
         "part": "第七部分 · 市场组织与制度",
+        "number": 81,
+        "chapter": "27",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "27.2",
+        "source_year": 2003,
         "source_pages": [
           562,
           563,
@@ -4706,14 +4707,13 @@
           566,
           567
         ],
+        "chapter_title": "场内交易与自动化交易系统",
         "source_sections": [
           "27.7 COST",
           "27.8 SUMMARY",
           "27.9 SOME POINTS TO REMEMBER",
           "27.10 QUESTIONS FOR THOUGHT"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -4728,23 +4728,23 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "28",
-        "chapter_title": "泡沫、崩盘与熔断机制",
-        "section": "28.1",
-        "number": 82,
         "part": "第七部分 · 市场组织与制度",
+        "number": 82,
+        "chapter": "28",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "28.1",
+        "source_year": 2003,
         "source_pages": [
           568,
           569,
           570,
           571
         ],
+        "chapter_title": "泡沫、崩盘与熔断机制",
         "source_sections": [
           "28.1 BUBBLES AND CRASHES"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -4759,12 +4759,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "28",
-        "chapter_title": "泡沫、崩盘与熔断机制",
-        "section": "28.2",
-        "number": 83,
         "part": "第七部分 · 市场组织与制度",
+        "number": 83,
+        "chapter": "28",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "28.2",
+        "source_year": 2003,
         "source_pages": [
           571,
           572,
@@ -4781,11 +4782,10 @@
           583,
           584
         ],
+        "chapter_title": "泡沫、崩盘与熔断机制",
         "source_sections": [
           "28.2 SOME BUBBLE AND CRASH EXAMPLES"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -4800,12 +4800,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "28",
-        "chapter_title": "泡沫、崩盘与熔断机制",
-        "section": "28.3",
-        "number": 84,
         "part": "第七部分 · 市场组织与制度",
+        "number": 84,
+        "chapter": "28",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "28.3",
+        "source_year": 2003,
         "source_pages": [
           585,
           586,
@@ -4815,11 +4816,10 @@
           590,
           591
         ],
+        "chapter_title": "泡沫、崩盘与熔断机制",
         "source_sections": [
           "28.3 REGULATORY RESPONSES TO EXTREME VOLATILITY"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -4834,12 +4834,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "28",
-        "chapter_title": "泡沫、崩盘与熔断机制",
-        "section": "28.4",
-        "number": 85,
         "part": "第七部分 · 市场组织与制度",
+        "number": 85,
+        "chapter": "28",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "28.4",
+        "source_year": 2003,
         "source_pages": [
           590,
           591,
@@ -4849,15 +4850,14 @@
           595,
           596
         ],
+        "chapter_title": "泡沫、崩盘与熔断机制",
         "source_sections": [
           "28.3 REGULATORY RESPONSES TO EXTREME VOLATILITY",
           "28.4 THE POLITICS OF REGULATORY INTERVENTION",
           "28.5 SUMMARY",
           "28.6 SOME POINTS TO REMEMBER",
           "28.7 QUESTIONS FOR THOUGHT"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -4872,12 +4872,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "29",
-        "chapter_title": "内幕交易的经济分析",
-        "section": "29.1",
-        "number": 86,
         "part": "第七部分 · 市场组织与制度",
+        "number": 86,
+        "chapter": "29",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "29.1",
+        "source_year": 2003,
         "source_pages": [
           597,
           598,
@@ -4888,12 +4889,11 @@
           603,
           604
         ],
+        "chapter_title": "内幕交易的经济分析",
         "source_sections": [
           "29.1 INSIDE INFORMATION AND INSIDER TRADING",
           "29.2 PRACTICAL JUDICIAL ISSUES"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -4908,23 +4908,23 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "29",
-        "chapter_title": "内幕交易的经济分析",
-        "section": "29.2",
-        "number": 87,
         "part": "第七部分 · 市场组织与制度",
+        "number": 87,
+        "chapter": "29",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "29.2",
+        "source_year": 2003,
         "source_pages": [
           604,
           605,
           606,
           607
         ],
+        "chapter_title": "内幕交易的经济分析",
         "source_sections": [
           "29.3 THE DEBATE OVER INSIDER TRADING"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -4939,12 +4939,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "29",
-        "chapter_title": "内幕交易的经济分析",
-        "section": "29.3",
-        "number": 88,
         "part": "第七部分 · 市场组织与制度",
+        "number": 88,
+        "chapter": "29",
+        "edition": "2026-10",
         "minutes": 7,
+        "section": "29.3",
+        "source_year": 2003,
         "source_pages": [
           607,
           608,
@@ -4953,14 +4954,13 @@
           611,
           612
         ],
+        "chapter_title": "内幕交易的经济分析",
         "source_sections": [
           "29.3 THE DEBATE OVER INSIDER TRADING",
           "29.4 SUMMARY",
           "29.5 SOME POINTS TO REMEMBER",
           "29.6 QUESTIONS FOR THOUGHT"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -4975,12 +4975,13 @@
     "metadata": {
       "theory_book": {
         "book": "trading-and-exchanges",
-        "chapter": "A",
-        "chapter_title": "术语与参考",
-        "section": "A.1",
-        "number": 89,
         "part": "术语与参考",
+        "number": 89,
+        "chapter": "A",
+        "edition": "2026-10",
         "minutes": 25,
+        "section": "A.1",
+        "source_year": 2003,
         "source_pages": [
           632,
           633,
@@ -5008,11 +5009,10 @@
           655,
           656
         ],
+        "chapter_title": "术语与参考",
         "source_sections": [
           "Index（常用术语选释）"
-        ],
-        "source_year": 2003,
-        "edition": "2026-10"
+        ]
       }
     }
   },
@@ -5070,22 +5070,22 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "1",
-        "chapter_title": "随机模型的起点",
-        "section": "1",
-        "number": 1,
         "part": "第一部分 · 概率与随机过程",
-        "minutes": 23,
+        "number": 1,
+        "chapter": "1",
+        "edition": "2026-10",
+        "minutes": 40,
+        "section": "1",
         "source_pages": [
           16,
           17,
           18
         ],
+        "chapter_title": "随机模型的起点",
         "source_sections": [
           "1.1",
           "1.2"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -5100,26 +5100,26 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "1",
-        "chapter_title": "随机模型的起点",
-        "section": "2",
-        "number": 2,
         "part": "第一部分 · 概率与随机过程",
-        "minutes": 24,
+        "number": 2,
+        "chapter": "1",
+        "edition": "2026-10",
+        "minutes": 42,
+        "section": "2",
         "source_pages": [
           18,
           19,
           20,
           21
         ],
+        "chapter_title": "随机模型的起点",
         "source_sections": [
           "1.3",
           "1.4",
           "1.5",
           "1.6",
           "1.7"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -5134,22 +5134,22 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "1",
-        "chapter_title": "随机模型的起点",
-        "section": "3",
-        "number": 3,
         "part": "第一部分 · 概率与随机过程",
-        "minutes": 23,
+        "number": 3,
+        "chapter": "1",
+        "edition": "2026-10",
+        "minutes": 34,
+        "section": "3",
         "source_pages": [
           21,
           22,
           23,
           24
         ],
+        "chapter_title": "随机模型的起点",
         "source_sections": [
           "1.8"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -5164,25 +5164,25 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "2",
-        "chapter_title": "概率与条件期望",
-        "section": "1",
-        "number": 4,
         "part": "第一部分 · 概率与随机过程",
-        "minutes": 21,
+        "number": 4,
+        "chapter": "2",
+        "edition": "2026-10",
+        "minutes": 35,
+        "section": "1",
         "source_pages": [
           26,
           27,
           28,
           29
         ],
+        "chapter_title": "概率与条件期望",
         "source_sections": [
           "2.1",
           "2.2",
           "2.3",
           "2.4"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -5197,22 +5197,22 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "2",
-        "chapter_title": "概率与条件期望",
-        "section": "2",
-        "number": 5,
         "part": "第一部分 · 概率与随机过程",
-        "minutes": 23,
+        "number": 5,
+        "chapter": "2",
+        "edition": "2026-10",
+        "minutes": 38,
+        "section": "2",
         "source_pages": [
           29,
           30,
           31
         ],
+        "chapter_title": "概率与条件期望",
         "source_sections": [
           "2.5",
           "2.6"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -5227,22 +5227,22 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "2",
-        "chapter_title": "概率与条件期望",
-        "section": "3",
-        "number": 6,
         "part": "第一部分 · 概率与随机过程",
-        "minutes": 19,
+        "number": 6,
+        "chapter": "2",
+        "edition": "2026-10",
+        "minutes": 32,
+        "section": "3",
         "source_pages": [
           31,
           32,
           33
         ],
+        "chapter_title": "概率与条件期望",
         "source_sections": [
           "2.7",
           "2.8"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -5257,24 +5257,24 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "2",
-        "chapter_title": "概率与条件期望",
-        "section": "4",
-        "number": 7,
         "part": "第一部分 · 概率与随机过程",
-        "minutes": 21,
+        "number": 7,
+        "chapter": "2",
+        "edition": "2026-10",
+        "minutes": 35,
+        "section": "4",
         "source_pages": [
           33,
           34,
           35,
           36
         ],
+        "chapter_title": "概率与条件期望",
         "source_sections": [
           "2.9",
           "2.9.1",
           "2.9.2"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -5289,12 +5289,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "2",
-        "chapter_title": "概率与条件期望",
-        "section": "5",
-        "number": 8,
         "part": "第一部分 · 概率与随机过程",
-        "minutes": 25,
+        "number": 8,
+        "chapter": "2",
+        "edition": "2026-10",
+        "minutes": 42,
+        "section": "5",
         "source_pages": [
           36,
           37,
@@ -5302,11 +5302,11 @@
           40,
           41
         ],
+        "chapter_title": "概率与条件期望",
         "source_sections": [
           "2.10",
           "2.11"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -5321,21 +5321,21 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "2",
-        "chapter_title": "概率与条件期望",
-        "section": "6",
-        "number": 9,
         "part": "第一部分 · 概率与随机过程",
-        "minutes": 26,
+        "number": 9,
+        "chapter": "2",
+        "edition": "2026-10",
+        "minutes": 44,
+        "section": "6",
         "source_pages": [
           38,
           39,
           40
         ],
+        "chapter_title": "概率与条件期望",
         "source_sections": [
           "2.10"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -5350,12 +5350,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "2",
-        "chapter_title": "概率与条件期望",
-        "section": "7",
-        "number": 10,
         "part": "第一部分 · 概率与随机过程",
-        "minutes": 20,
+        "number": 10,
+        "chapter": "2",
+        "edition": "2026-10",
+        "minutes": 32,
+        "section": "7",
         "source_pages": [
           42,
           43,
@@ -5363,10 +5363,10 @@
           45,
           46
         ],
+        "chapter_title": "概率与条件期望",
         "source_sections": [
           "2.12"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -5381,12 +5381,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "2",
-        "chapter_title": "概率与条件期望",
-        "section": "8",
-        "number": 11,
         "part": "第一部分 · 概率与随机过程",
-        "minutes": 24,
+        "number": 11,
+        "chapter": "2",
+        "edition": "2026-10",
+        "minutes": 39,
+        "section": "8",
         "source_pages": [
           42,
           43,
@@ -5394,10 +5394,10 @@
           45,
           46
         ],
+        "chapter_title": "概率与条件期望",
         "source_sections": [
           "2.12"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -5412,12 +5412,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "2",
-        "chapter_title": "概率与条件期望",
-        "section": "9",
-        "number": 12,
         "part": "第一部分 · 概率与随机过程",
-        "minutes": 24,
+        "number": 12,
+        "chapter": "2",
+        "edition": "2026-10",
+        "minutes": 35,
+        "section": "9",
         "source_pages": [
           47,
           48,
@@ -5426,10 +5426,10 @@
           51,
           52
         ],
+        "chapter_title": "概率与条件期望",
         "source_sections": [
           "2.13"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -5444,12 +5444,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "2",
-        "chapter_title": "概率与条件期望",
-        "section": "10",
-        "number": 13,
         "part": "第一部分 · 概率与随机过程",
-        "minutes": 23,
+        "number": 13,
+        "chapter": "2",
+        "edition": "2026-10",
+        "minutes": 35,
+        "section": "10",
         "source_pages": [
           52,
           53,
@@ -5457,11 +5457,11 @@
           55,
           56
         ],
+        "chapter_title": "概率与条件期望",
         "source_sections": [
           "2.14",
           "2.15"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -5476,22 +5476,22 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "2",
-        "chapter_title": "概率与条件期望",
-        "section": "11",
-        "number": 14,
         "part": "第一部分 · 概率与随机过程",
-        "minutes": 23,
+        "number": 14,
+        "chapter": "2",
+        "edition": "2026-10",
+        "minutes": 33,
+        "section": "11",
         "source_pages": [
           56,
           57,
           58,
           59
         ],
+        "chapter_title": "概率与条件期望",
         "source_sections": [
           "2.16"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -5506,12 +5506,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "3",
-        "chapter_title": "常用随机过程",
-        "section": "1",
-        "number": 15,
         "part": "第一部分 · 概率与随机过程",
-        "minutes": 20,
+        "number": 15,
+        "chapter": "3",
+        "edition": "2026-10",
+        "minutes": 34,
+        "section": "1",
         "source_pages": [
           60,
           61,
@@ -5522,11 +5522,11 @@
           66,
           73
         ],
+        "chapter_title": "常用随机过程",
         "source_sections": [
           "3.1",
           "3.6"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -5541,21 +5541,21 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "3",
-        "chapter_title": "常用随机过程",
-        "section": "2",
-        "number": 16,
         "part": "第一部分 · 概率与随机过程",
-        "minutes": 22,
+        "number": 16,
+        "chapter": "3",
+        "edition": "2026-10",
+        "minutes": 34,
+        "section": "2",
         "source_pages": [
           66,
           67,
           68
         ],
+        "chapter_title": "常用随机过程",
         "source_sections": [
           "3.2"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -5570,12 +5570,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "3",
-        "chapter_title": "常用随机过程",
-        "section": "3",
-        "number": 17,
         "part": "第一部分 · 概率与随机过程",
-        "minutes": 21,
+        "number": 17,
+        "chapter": "3",
+        "edition": "2026-10",
+        "minutes": 35,
+        "section": "3",
         "source_pages": [
           68,
           69,
@@ -5583,11 +5583,11 @@
           71,
           72
         ],
+        "chapter_title": "常用随机过程",
         "source_sections": [
           "3.3",
           "3.4"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -5602,23 +5602,23 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "3",
-        "chapter_title": "常用随机过程",
-        "section": "4",
-        "number": 18,
         "part": "第一部分 · 概率与随机过程",
-        "minutes": 21,
+        "number": 18,
+        "chapter": "3",
+        "edition": "2026-10",
+        "minutes": 34,
+        "section": "4",
         "source_pages": [
           72,
           73,
           74,
           75
         ],
+        "chapter_title": "常用随机过程",
         "source_sections": [
           "3.5",
           "3.7"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -5633,12 +5633,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "3",
-        "chapter_title": "常用随机过程",
-        "section": "5",
-        "number": 19,
         "part": "第一部分 · 概率与随机过程",
-        "minutes": 21,
+        "number": 19,
+        "chapter": "3",
+        "edition": "2026-10",
+        "minutes": 36,
+        "section": "5",
         "source_pages": [
           76,
           77,
@@ -5646,11 +5646,11 @@
           79,
           80
         ],
+        "chapter_title": "常用随机过程",
         "source_sections": [
           "3.8",
           "3.9"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -5665,23 +5665,23 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "3",
-        "chapter_title": "常用随机过程",
-        "section": "6",
-        "number": 20,
         "part": "第一部分 · 概率与随机过程",
-        "minutes": 22,
+        "number": 20,
+        "chapter": "3",
+        "edition": "2026-10",
+        "minutes": 38,
+        "section": "6",
         "source_pages": [
           81,
           82,
           83,
           84
         ],
+        "chapter_title": "常用随机过程",
         "source_sections": [
           "3.10",
           "3.11"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -5696,22 +5696,22 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "3",
-        "chapter_title": "常用随机过程",
-        "section": "7",
-        "number": 21,
         "part": "第一部分 · 概率与随机过程",
-        "minutes": 19,
+        "number": 21,
+        "chapter": "3",
+        "edition": "2026-10",
+        "minutes": 33,
+        "section": "7",
         "source_pages": [
           84,
           85,
           86,
           87
         ],
+        "chapter_title": "常用随机过程",
         "source_sections": [
           "3.12"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -5726,12 +5726,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "4",
-        "chapter_title": "停止时间与路径性质",
-        "section": "1",
-        "number": 22,
         "part": "第二部分 · 路径性质与随机微积分",
-        "minutes": 22,
+        "number": 22,
+        "chapter": "4",
+        "edition": "2026-10",
+        "minutes": 34,
+        "section": "1",
         "source_pages": [
           88,
           89,
@@ -5739,10 +5739,10 @@
           91,
           92
         ],
+        "chapter_title": "停止时间与路径性质",
         "source_sections": [
           "4.1"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -5757,21 +5757,21 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "4",
-        "chapter_title": "停止时间与路径性质",
-        "section": "2",
-        "number": 23,
         "part": "第二部分 · 路径性质与随机微积分",
-        "minutes": 19,
+        "number": 23,
+        "chapter": "4",
+        "edition": "2026-10",
+        "minutes": 32,
+        "section": "2",
         "source_pages": [
           92,
           93,
           94
         ],
+        "chapter_title": "停止时间与路径性质",
         "source_sections": [
           "4.2"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -5786,12 +5786,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "4",
-        "chapter_title": "停止时间与路径性质",
-        "section": "3",
-        "number": 24,
         "part": "第二部分 · 路径性质与随机微积分",
-        "minutes": 20,
+        "number": 24,
+        "chapter": "4",
+        "edition": "2026-10",
+        "minutes": 32,
+        "section": "3",
         "source_pages": [
           94,
           95,
@@ -5800,10 +5800,10 @@
           98,
           99
         ],
+        "chapter_title": "停止时间与路径性质",
         "source_sections": [
           "4.3"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -5818,22 +5818,22 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "4",
-        "chapter_title": "停止时间与路径性质",
-        "section": "4",
-        "number": 25,
         "part": "第二部分 · 路径性质与随机微积分",
-        "minutes": 18,
+        "number": 25,
+        "chapter": "4",
+        "edition": "2026-10",
+        "minutes": 29,
+        "section": "4",
         "source_pages": [
           99,
           100,
           101,
           102
         ],
+        "chapter_title": "停止时间与路径性质",
         "source_sections": [
           "4.4"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -5848,12 +5848,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "4",
-        "chapter_title": "停止时间与路径性质",
-        "section": "5",
-        "number": 26,
         "part": "第二部分 · 路径性质与随机微积分",
-        "minutes": 25,
+        "number": 26,
+        "chapter": "4",
+        "edition": "2026-10",
+        "minutes": 40,
+        "section": "5",
         "source_pages": [
           103,
           104,
@@ -5867,11 +5867,11 @@
           112,
           113
         ],
+        "chapter_title": "停止时间与路径性质",
         "source_sections": [
           "4.5",
           "4.6"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -5886,12 +5886,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "4",
-        "chapter_title": "停止时间与路径性质",
-        "section": "6",
-        "number": 27,
         "part": "第二部分 · 路径性质与随机微积分",
-        "minutes": 19,
+        "number": 27,
+        "chapter": "4",
+        "edition": "2026-10",
+        "minutes": 31,
+        "section": "6",
         "source_pages": [
           113,
           114,
@@ -5900,10 +5900,10 @@
           117,
           118
         ],
+        "chapter_title": "停止时间与路径性质",
         "source_sections": [
           "4.7"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -5918,24 +5918,24 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "4",
-        "chapter_title": "停止时间与路径性质",
-        "section": "7",
-        "number": 28,
         "part": "第二部分 · 路径性质与随机微积分",
-        "minutes": 21,
+        "number": 28,
+        "chapter": "4",
+        "edition": "2026-10",
+        "minutes": 33,
+        "section": "7",
         "source_pages": [
           119,
           120,
           121,
           122
         ],
+        "chapter_title": "停止时间与路径性质",
         "source_sections": [
           "4.8",
           "4.9",
           "4.10"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -5950,12 +5950,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "4",
-        "chapter_title": "停止时间与路径性质",
-        "section": "8",
-        "number": 29,
         "part": "第二部分 · 路径性质与随机微积分",
-        "minutes": 20,
+        "number": 29,
+        "chapter": "4",
+        "edition": "2026-10",
+        "minutes": 31,
+        "section": "8",
         "source_pages": [
           123,
           124,
@@ -5967,13 +5967,13 @@
           130,
           131
         ],
+        "chapter_title": "停止时间与路径性质",
         "source_sections": [
           "4.11",
           "4.11.1",
           "4.12",
           "4.12.1"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -5988,21 +5988,21 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "5",
-        "chapter_title": "随机积分",
-        "section": "1",
-        "number": 30,
         "part": "第二部分 · 路径性质与随机微积分",
-        "minutes": 20,
+        "number": 30,
+        "chapter": "5",
+        "edition": "2026-10",
+        "minutes": 31,
+        "section": "1",
         "source_pages": [
           132,
           133
         ],
+        "chapter_title": "随机积分",
         "source_sections": [
           "5.1",
           "5.2"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6017,25 +6017,25 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "5",
-        "chapter_title": "随机积分",
-        "section": "2",
-        "number": 31,
         "part": "第二部分 · 路径性质与随机微积分",
-        "minutes": 20,
+        "number": 31,
+        "chapter": "5",
+        "edition": "2026-10",
+        "minutes": 31,
+        "section": "2",
         "source_pages": [
           134,
           135,
           136,
           137
         ],
+        "chapter_title": "随机积分",
         "source_sections": [
           "5.3",
           "5.4",
           "5.4.1",
           "5.4.2"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6050,12 +6050,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "5",
-        "chapter_title": "随机积分",
-        "section": "3",
-        "number": 32,
         "part": "第二部分 · 路径性质与随机微积分",
-        "minutes": 21,
+        "number": 32,
+        "chapter": "5",
+        "edition": "2026-10",
+        "minutes": 33,
+        "section": "3",
         "source_pages": [
           137,
           138,
@@ -6064,10 +6064,10 @@
           141,
           142
         ],
+        "chapter_title": "随机积分",
         "source_sections": [
           "5.5"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6082,21 +6082,21 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "5",
-        "chapter_title": "随机积分",
-        "section": "4",
-        "number": 33,
         "part": "第二部分 · 路径性质与随机微积分",
-        "minutes": 20,
+        "number": 33,
+        "chapter": "5",
+        "edition": "2026-10",
+        "minutes": 33,
+        "section": "4",
         "source_pages": [
           142,
           143,
           144
         ],
+        "chapter_title": "随机积分",
         "source_sections": [
           "5.6"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6111,12 +6111,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "5",
-        "chapter_title": "随机积分",
-        "section": "5",
-        "number": 34,
         "part": "第二部分 · 路径性质与随机微积分",
-        "minutes": 22,
+        "number": 34,
+        "chapter": "5",
+        "edition": "2026-10",
+        "minutes": 36,
+        "section": "5",
         "source_pages": [
           144,
           145,
@@ -6126,11 +6126,11 @@
           149,
           150
         ],
+        "chapter_title": "随机积分",
         "source_sections": [
           "5.7",
           "5.8"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6145,21 +6145,21 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "5",
-        "chapter_title": "随机积分",
-        "section": "6",
-        "number": 35,
         "part": "第二部分 · 路径性质与随机微积分",
-        "minutes": 27,
+        "number": 35,
+        "chapter": "5",
+        "edition": "2026-10",
+        "minutes": 43,
+        "section": "6",
         "source_pages": [
           151,
           152,
           153
         ],
+        "chapter_title": "随机积分",
         "source_sections": [
           "5.9"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6174,22 +6174,22 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "6",
-        "chapter_title": "随机微分",
-        "section": "1",
-        "number": 36,
         "part": "第二部分 · 路径性质与随机微积分",
-        "minutes": 23,
+        "number": 36,
+        "chapter": "6",
+        "edition": "2026-10",
+        "minutes": 37,
+        "section": "1",
         "source_pages": [
           154,
           155,
           156,
           157
         ],
+        "chapter_title": "随机微分",
         "source_sections": [
           "6.1"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6204,23 +6204,23 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "6",
-        "chapter_title": "随机微分",
-        "section": "2",
-        "number": 37,
         "part": "第二部分 · 路径性质与随机微积分",
-        "minutes": 17,
+        "number": 37,
+        "chapter": "6",
+        "edition": "2026-10",
+        "minutes": 30,
+        "section": "2",
         "source_pages": [
           157,
           158,
           159,
           160
         ],
+        "chapter_title": "随机微分",
         "source_sections": [
           "6.2",
           "6.2.1"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6235,21 +6235,21 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "6",
-        "chapter_title": "随机微分",
-        "section": "3",
-        "number": 38,
         "part": "第二部分 · 路径性质与随机微积分",
-        "minutes": 17,
+        "number": 38,
+        "chapter": "6",
+        "edition": "2026-10",
+        "minutes": 28,
+        "section": "3",
         "source_pages": [
           162,
           163,
           314
         ],
+        "chapter_title": "随机微分",
         "source_sections": [
           "6.2.3"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6264,21 +6264,21 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "6",
-        "chapter_title": "随机微分",
-        "section": "4",
-        "number": 39,
         "part": "第二部分 · 路径性质与随机微积分",
-        "minutes": 18,
+        "number": 39,
+        "chapter": "6",
+        "edition": "2026-10",
+        "minutes": 30,
+        "section": "4",
         "source_pages": [
           161,
           162,
           313
         ],
+        "chapter_title": "随机微分",
         "source_sections": [
           "6.2.2"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6293,12 +6293,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "7",
-        "chapter_title": "随机积分的计算",
-        "section": "1",
-        "number": 40,
         "part": "第二部分 · 路径性质与随机微积分",
-        "minutes": 22,
+        "number": 40,
+        "chapter": "7",
+        "edition": "2026-10",
+        "minutes": 35,
+        "section": "1",
         "source_pages": [
           164,
           165,
@@ -6310,11 +6310,11 @@
           171,
           172
         ],
+        "chapter_title": "随机积分的计算",
         "source_sections": [
           "7.1",
           "7.2"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6329,12 +6329,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "7",
-        "chapter_title": "随机积分的计算",
-        "section": "2",
-        "number": 41,
         "part": "第二部分 · 路径性质与随机微积分",
-        "minutes": 24,
+        "number": 41,
+        "chapter": "7",
+        "edition": "2026-10",
+        "minutes": 38,
+        "section": "2",
         "source_pages": [
           172,
           173,
@@ -6343,10 +6343,10 @@
           176,
           177
         ],
+        "chapter_title": "随机积分的计算",
         "source_sections": [
           "7.3"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6361,22 +6361,22 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "7",
-        "chapter_title": "随机积分的计算",
-        "section": "3",
-        "number": 42,
         "part": "第二部分 · 路径性质与随机微积分",
-        "minutes": 18,
+        "number": 42,
+        "chapter": "7",
+        "edition": "2026-10",
+        "minutes": 34,
+        "section": "3",
         "source_pages": [
           178,
           179,
           314,
           315
         ],
+        "chapter_title": "随机积分的计算",
         "source_sections": [
           "7.4"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6391,21 +6391,21 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "8",
-        "chapter_title": "随机微分方程",
-        "section": "1",
-        "number": 43,
         "part": "第三部分 · 随机方程与测度变换",
-        "minutes": 16,
+        "number": 43,
+        "chapter": "8",
+        "edition": "2026-10",
+        "minutes": 28,
+        "section": "1",
         "source_pages": [
           180,
           181,
           182
         ],
+        "chapter_title": "随机微分方程",
         "source_sections": [
           "8.1"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6420,12 +6420,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "8",
-        "chapter_title": "随机微分方程",
-        "section": "2",
-        "number": 44,
         "part": "第三部分 · 随机方程与测度变换",
-        "minutes": 17,
+        "number": 44,
+        "chapter": "8",
+        "edition": "2026-10",
+        "minutes": 33,
+        "section": "2",
         "source_pages": [
           182,
           183,
@@ -6434,10 +6434,10 @@
           186,
           187
         ],
+        "chapter_title": "随机微分方程",
         "source_sections": [
           "8.2"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6452,12 +6452,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "8",
-        "chapter_title": "随机微分方程",
-        "section": "3",
-        "number": 45,
         "part": "第三部分 · 随机方程与测度变换",
-        "minutes": 16,
+        "number": 45,
+        "chapter": "8",
+        "edition": "2026-10",
+        "minutes": 26,
+        "section": "3",
         "source_pages": [
           187,
           188,
@@ -6466,11 +6466,11 @@
           191,
           192
         ],
+        "chapter_title": "随机微分方程",
         "source_sections": [
           "8.3",
           "8.4"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6485,12 +6485,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "8",
-        "chapter_title": "随机微分方程",
-        "section": "4",
-        "number": 46,
         "part": "第三部分 · 随机方程与测度变换",
-        "minutes": 22,
+        "number": 46,
+        "chapter": "8",
+        "edition": "2026-10",
+        "minutes": 35,
+        "section": "4",
         "source_pages": [
           193,
           194,
@@ -6499,10 +6499,10 @@
           197,
           198
         ],
+        "chapter_title": "随机微分方程",
         "source_sections": [
           "8.5"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6517,20 +6517,20 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "8",
-        "chapter_title": "随机微分方程",
-        "section": "5",
-        "number": 47,
         "part": "第三部分 · 随机方程与测度变换",
-        "minutes": 22,
+        "number": 47,
+        "chapter": "8",
+        "edition": "2026-10",
+        "minutes": 31,
+        "section": "5",
         "source_pages": [
           198,
           199
         ],
+        "chapter_title": "随机微分方程",
         "source_sections": [
           "8.6"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6545,12 +6545,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "8",
-        "chapter_title": "随机微分方程",
-        "section": "6",
-        "number": 48,
         "part": "第三部分 · 随机方程与测度变换",
-        "minutes": 21,
+        "number": 48,
+        "chapter": "8",
+        "edition": "2026-10",
+        "minutes": 29,
+        "section": "6",
         "source_pages": [
           199,
           200,
@@ -6558,11 +6558,11 @@
           202,
           203
         ],
+        "chapter_title": "随机微分方程",
         "source_sections": [
           "8.7",
           "8.8"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6577,20 +6577,20 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "8",
-        "chapter_title": "随机微分方程",
-        "section": "7",
-        "number": 49,
         "part": "第三部分 · 随机方程与测度变换",
-        "minutes": 16,
+        "number": 49,
+        "chapter": "8",
+        "edition": "2026-10",
+        "minutes": 27,
+        "section": "7",
         "source_pages": [
           204,
           205
         ],
+        "chapter_title": "随机微分方程",
         "source_sections": [
           "8.9"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6605,12 +6605,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "8",
-        "chapter_title": "随机微分方程",
-        "section": "8",
-        "number": 50,
         "part": "第三部分 · 随机方程与测度变换",
-        "minutes": 23,
+        "number": 50,
+        "chapter": "8",
+        "edition": "2026-10",
+        "minutes": 35,
+        "section": "8",
         "source_pages": [
           206,
           207,
@@ -6620,10 +6620,10 @@
           211,
           212
         ],
+        "chapter_title": "随机微分方程",
         "source_sections": [
           "8.10"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6638,23 +6638,23 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "9",
-        "chapter_title": "扩散过程与偏微分方程",
-        "section": "1",
-        "number": 51,
         "part": "第三部分 · 随机方程与测度变换",
-        "minutes": 19,
+        "number": 51,
+        "chapter": "9",
+        "edition": "2026-10",
+        "minutes": 32,
+        "section": "1",
         "source_pages": [
           214,
           215,
           216,
           217
         ],
+        "chapter_title": "扩散过程与偏微分方程",
         "source_sections": [
           "9.1",
           "9.2"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6669,22 +6669,22 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "9",
-        "chapter_title": "扩散过程与偏微分方程",
-        "section": "2",
-        "number": 52,
         "part": "第三部分 · 随机方程与测度变换",
-        "minutes": 16,
+        "number": 52,
+        "chapter": "9",
+        "edition": "2026-10",
+        "minutes": 28,
+        "section": "2",
         "source_pages": [
           218,
           219,
           220
         ],
+        "chapter_title": "扩散过程与偏微分方程",
         "source_sections": [
           "9.3",
           "9.4"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6699,21 +6699,21 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "9",
-        "chapter_title": "扩散过程与偏微分方程",
-        "section": "3",
-        "number": 53,
         "part": "第三部分 · 随机方程与测度变换",
-        "minutes": 21,
+        "number": 53,
+        "chapter": "9",
+        "edition": "2026-10",
+        "minutes": 30,
+        "section": "3",
         "source_pages": [
           220,
           221,
           319
         ],
+        "chapter_title": "扩散过程与偏微分方程",
         "source_sections": [
           "9.5"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6728,12 +6728,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "9",
-        "chapter_title": "扩散过程与偏微分方程",
-        "section": "4",
-        "number": 54,
         "part": "第三部分 · 随机方程与测度变换",
-        "minutes": 20,
+        "number": 54,
+        "chapter": "9",
+        "edition": "2026-10",
+        "minutes": 29,
+        "section": "4",
         "source_pages": [
           221,
           222,
@@ -6742,10 +6742,10 @@
           225,
           226
         ],
+        "chapter_title": "扩散过程与偏微分方程",
         "source_sections": [
           "9.6"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6760,24 +6760,24 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "9",
-        "chapter_title": "扩散过程与偏微分方程",
-        "section": "5",
-        "number": 55,
         "part": "第三部分 · 随机方程与测度变换",
-        "minutes": 22,
+        "number": 55,
+        "chapter": "9",
+        "edition": "2026-10",
+        "minutes": 33,
+        "section": "5",
         "source_pages": [
           226,
           227,
           228,
           319
         ],
+        "chapter_title": "扩散过程与偏微分方程",
         "source_sections": [
           "9.7",
           "9.7.1",
           "9.7.2"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6792,12 +6792,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "10",
-        "chapter_title": "鞅、时间变换与测度变换",
-        "section": "1",
-        "number": 56,
         "part": "第三部分 · 随机方程与测度变换",
-        "minutes": 22,
+        "number": 56,
+        "chapter": "10",
+        "edition": "2026-10",
+        "minutes": 40,
+        "section": "1",
         "source_pages": [
           230,
           231,
@@ -6807,10 +6807,10 @@
           235,
           236
         ],
+        "chapter_title": "鞅、时间变换与测度变换",
         "source_sections": [
           "10.1"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6825,12 +6825,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "10",
-        "chapter_title": "鞅、时间变换与测度变换",
-        "section": "2",
-        "number": 57,
         "part": "第三部分 · 随机方程与测度变换",
-        "minutes": 16,
+        "number": 57,
+        "chapter": "10",
+        "edition": "2026-10",
+        "minutes": 34,
+        "section": "2",
         "source_pages": [
           236,
           237,
@@ -6838,10 +6838,10 @@
           239,
           240
         ],
+        "chapter_title": "鞅、时间变换与测度变换",
         "source_sections": [
           "10.2"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6856,12 +6856,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "10",
-        "chapter_title": "鞅、时间变换与测度变换",
-        "section": "3",
-        "number": 58,
         "part": "第三部分 · 随机方程与测度变换",
-        "minutes": 22,
+        "number": 58,
+        "chapter": "10",
+        "edition": "2026-10",
+        "minutes": 36,
+        "section": "3",
         "source_pages": [
           240,
           241,
@@ -6871,10 +6871,10 @@
           245,
           246
         ],
+        "chapter_title": "鞅、时间变换与测度变换",
         "source_sections": [
           "10.3"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6889,12 +6889,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "10",
-        "chapter_title": "鞅、时间变换与测度变换",
-        "section": "4",
-        "number": 59,
         "part": "第三部分 · 随机方程与测度变换",
-        "minutes": 24,
+        "number": 59,
+        "chapter": "10",
+        "edition": "2026-10",
+        "minutes": 38,
+        "section": "4",
         "source_pages": [
           247,
           248,
@@ -6905,10 +6905,10 @@
           253,
           254
         ],
+        "chapter_title": "鞅、时间变换与测度变换",
         "source_sections": [
           "10.4"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6923,12 +6923,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "11",
-        "chapter_title": "随机模型的应用",
-        "section": "1",
-        "number": 60,
         "part": "第四部分 · 应用与练习",
-        "minutes": 23,
+        "number": 60,
+        "chapter": "11",
+        "edition": "2026-10",
+        "minutes": 43,
+        "section": "1",
         "source_pages": [
           256,
           257,
@@ -6938,11 +6938,11 @@
           261,
           262
         ],
+        "chapter_title": "随机模型的应用",
         "source_sections": [
           "11.1",
           "11.2"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6957,12 +6957,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "11",
-        "chapter_title": "随机模型的应用",
-        "section": "2",
-        "number": 61,
         "part": "第四部分 · 应用与练习",
-        "minutes": 22,
+        "number": 61,
+        "chapter": "11",
+        "edition": "2026-10",
+        "minutes": 38,
+        "section": "2",
         "source_pages": [
           262,
           263,
@@ -6970,10 +6970,10 @@
           265,
           322
         ],
+        "chapter_title": "随机模型的应用",
         "source_sections": [
           "11.3"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -6988,12 +6988,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "11",
-        "chapter_title": "随机模型的应用",
-        "section": "3",
-        "number": 62,
         "part": "第四部分 · 应用与练习",
-        "minutes": 23,
+        "number": 62,
+        "chapter": "11",
+        "edition": "2026-10",
+        "minutes": 41,
+        "section": "3",
         "source_pages": [
           265,
           266,
@@ -7001,10 +7001,10 @@
           268,
           269
         ],
+        "chapter_title": "随机模型的应用",
         "source_sections": [
           "11.4"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -7019,12 +7019,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "11",
-        "chapter_title": "随机模型的应用",
-        "section": "4",
-        "number": 63,
         "part": "第四部分 · 应用与练习",
-        "minutes": 24,
+        "number": 63,
+        "chapter": "11",
+        "edition": "2026-10",
+        "minutes": 39,
+        "section": "4",
         "source_pages": [
           270,
           271,
@@ -7034,10 +7034,10 @@
           275,
           276
         ],
+        "chapter_title": "随机模型的应用",
         "source_sections": [
           "11.5"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -7052,20 +7052,20 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "11",
-        "chapter_title": "随机模型的应用",
-        "section": "5",
-        "number": 64,
         "part": "第四部分 · 应用与练习",
-        "minutes": 23,
+        "number": 64,
+        "chapter": "11",
+        "edition": "2026-10",
+        "minutes": 34,
+        "section": "5",
         "source_pages": [
           276,
           277
         ],
+        "chapter_title": "随机模型的应用",
         "source_sections": [
           "11.6"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -7080,21 +7080,21 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "11",
-        "chapter_title": "随机模型的应用",
-        "section": "6",
-        "number": 65,
         "part": "第四部分 · 应用与练习",
-        "minutes": 23,
+        "number": 65,
+        "chapter": "11",
+        "edition": "2026-10",
+        "minutes": 36,
+        "section": "6",
         "source_pages": [
           277,
           278,
           322
         ],
+        "chapter_title": "随机模型的应用",
         "source_sections": [
           "11.7"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -7109,21 +7109,21 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "11",
-        "chapter_title": "随机模型的应用",
-        "section": "7",
-        "number": 66,
         "part": "第四部分 · 应用与练习",
-        "minutes": 23,
+        "number": 66,
+        "chapter": "11",
+        "edition": "2026-10",
+        "minutes": 38,
+        "section": "7",
         "source_pages": [
           278,
           279,
           280
         ],
+        "chapter_title": "随机模型的应用",
         "source_sections": [
           "11.8"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -7138,12 +7138,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "11",
-        "chapter_title": "随机模型的应用",
-        "section": "8",
-        "number": 67,
         "part": "第四部分 · 应用与练习",
-        "minutes": 25,
+        "number": 67,
+        "chapter": "11",
+        "edition": "2026-10",
+        "minutes": 44,
+        "section": "8",
         "source_pages": [
           280,
           281,
@@ -7157,10 +7157,10 @@
           289,
           290
         ],
+        "chapter_title": "随机模型的应用",
         "source_sections": [
           "11.9"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -7175,12 +7175,12 @@
     "metadata": {
       "theory_book": {
         "book": "stochastic-calculus",
-        "chapter": "12",
-        "chapter_title": "综合方法练习",
-        "section": "1",
-        "number": 68,
         "part": "第四部分 · 应用与练习",
-        "minutes": 33,
+        "number": 68,
+        "chapter": "12",
+        "edition": "2026-10",
+        "minutes": 66,
+        "section": "1",
         "source_pages": [
           292,
           293,
@@ -7215,6 +7215,7 @@
           322,
           323
         ],
+        "chapter_title": "综合方法练习",
         "source_sections": [
           "12",
           "12: Chapter 2",
@@ -7227,8 +7228,7 @@
           "12: Chapter 9",
           "12: Chapter 10",
           "12: Chapter 11"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -7243,12 +7243,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "1",
-        "chapter_title": "交易与研究基础",
-        "section": 1,
-        "number": 1,
         "part": "第一部分 · 统计与投资组合",
-        "minutes": 14,
+        "number": 1,
+        "chapter": "1",
+        "edition": "2026-10",
+        "minutes": 23,
+        "section": 1,
         "source_pages": [
           19,
           20,
@@ -7259,11 +7259,11 @@
           32,
           33
         ],
+        "chapter_title": "交易与研究基础",
         "source_sections": [
           "1.1",
           "1.7"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -7278,12 +7278,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "1",
-        "chapter_title": "交易与研究基础",
-        "section": 2,
-        "number": 2,
         "part": "第一部分 · 统计与投资组合",
-        "minutes": 12,
+        "number": 2,
+        "chapter": "1",
+        "edition": "2026-10",
+        "minutes": 21,
+        "section": 2,
         "source_pages": [
           23,
           24,
@@ -7293,14 +7293,14 @@
           33,
           64
         ],
+        "chapter_title": "交易与研究基础",
         "source_sections": [
           "1.2",
           "1.3",
           "1.4",
           "1.7",
           "2.9"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -7315,24 +7315,24 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "1",
-        "chapter_title": "交易与研究基础",
-        "section": 3,
-        "number": 3,
         "part": "第一部分 · 统计与投资组合",
-        "minutes": 13,
+        "number": 3,
+        "chapter": "1",
+        "edition": "2026-10",
+        "minutes": 19,
+        "section": 3,
         "source_pages": [
           27,
           28,
           29,
           67
         ],
+        "chapter_title": "交易与研究基础",
         "source_sections": [
           "1.5",
           "1.6",
           "2.9"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -7347,25 +7347,25 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "2",
-        "chapter_title": "统计模型与投资组合",
-        "section": 1,
-        "number": 4,
         "part": "第一部分 · 统计与投资组合",
-        "minutes": 10,
+        "number": 4,
+        "chapter": "2",
+        "edition": "2026-10",
+        "minutes": 19,
+        "section": 1,
         "source_pages": [
           35,
           36,
           37,
           38
         ],
+        "chapter_title": "统计模型与投资组合",
         "source_sections": [
           "2.1",
           "2.1.1",
           "2.1.2",
           "2.2"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -7380,12 +7380,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "2",
-        "chapter_title": "统计模型与投资组合",
-        "section": 2,
-        "number": 5,
         "part": "第一部分 · 统计与投资组合",
-        "minutes": 12,
+        "number": 5,
+        "chapter": "2",
+        "edition": "2026-10",
+        "minutes": 22,
+        "section": 2,
         "source_pages": [
           39,
           40,
@@ -7395,12 +7395,12 @@
           68,
           69
         ],
+        "chapter_title": "统计模型与投资组合",
         "source_sections": [
           "2.3",
           "2.4.1",
           "2.9"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -7415,12 +7415,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "2",
-        "chapter_title": "统计模型与投资组合",
-        "section": 3,
-        "number": 6,
         "part": "第一部分 · 统计与投资组合",
-        "minutes": 10,
+        "number": 6,
+        "chapter": "2",
+        "edition": "2026-10",
+        "minutes": 20,
+        "section": 3,
         "source_pages": [
           41,
           42,
@@ -7428,11 +7428,11 @@
           64,
           65
         ],
+        "chapter_title": "统计模型与投资组合",
         "source_sections": [
           "2.4.2",
           "2.9"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -7447,12 +7447,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "2",
-        "chapter_title": "统计模型与投资组合",
-        "section": 4,
-        "number": 7,
         "part": "第一部分 · 统计与投资组合",
-        "minutes": 10,
+        "number": 7,
+        "chapter": "2",
+        "edition": "2026-10",
+        "minutes": 21,
+        "section": 4,
         "source_pages": [
           43,
           44,
@@ -7462,6 +7462,7 @@
           65,
           66
         ],
+        "chapter_title": "统计模型与投资组合",
         "source_sections": [
           "2.4.3",
           "2.5",
@@ -7469,8 +7470,7 @@
           "2.5.2",
           "2.5.3",
           "2.9"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -7485,12 +7485,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "2",
-        "chapter_title": "统计模型与投资组合",
-        "section": 5,
-        "number": 8,
         "part": "第一部分 · 统计与投资组合",
-        "minutes": 10,
+        "number": 8,
+        "chapter": "2",
+        "edition": "2026-10",
+        "minutes": 20,
+        "section": 5,
         "source_pages": [
           47,
           48,
@@ -7501,12 +7501,12 @@
           63,
           64
         ],
+        "chapter_title": "统计模型与投资组合",
         "source_sections": [
           "2.6.1",
           "2.6.2",
           "2.9"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -7521,12 +7521,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "2",
-        "chapter_title": "统计模型与投资组合",
-        "section": 6,
-        "number": 9,
         "part": "第一部分 · 统计与投资组合",
-        "minutes": 10,
+        "number": 9,
+        "chapter": "2",
+        "edition": "2026-10",
+        "minutes": 20,
+        "section": 6,
         "source_pages": [
           33,
           52,
@@ -7537,12 +7537,12 @@
           70,
           71
         ],
+        "chapter_title": "统计模型与投资组合",
         "source_sections": [
           "1.7",
           "2.6.3",
           "2.9"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -7557,12 +7557,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "2",
-        "chapter_title": "统计模型与投资组合",
-        "section": 7,
-        "number": 10,
         "part": "第一部分 · 统计与投资组合",
-        "minutes": 10,
+        "number": 10,
+        "chapter": "2",
+        "edition": "2026-10",
+        "minutes": 18,
+        "section": 7,
         "source_pages": [
           55,
           56,
@@ -7574,14 +7574,14 @@
           71,
           72
         ],
+        "chapter_title": "统计模型与投资组合",
         "source_sections": [
           "2.7",
           "2.7.1",
           "2.7.2",
           "2.7.3",
           "2.9"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -7596,12 +7596,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "2",
-        "chapter_title": "统计模型与投资组合",
-        "section": 8,
-        "number": 11,
         "part": "第一部分 · 统计与投资组合",
-        "minutes": 10,
+        "number": 11,
+        "chapter": "2",
+        "edition": "2026-10",
+        "minutes": 17,
+        "section": 8,
         "source_pages": [
           58,
           59,
@@ -7610,12 +7610,12 @@
           72,
           73
         ],
+        "chapter_title": "统计模型与投资组合",
         "source_sections": [
           "2.8.1",
           "2.8.2",
           "2.9"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -7630,24 +7630,24 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "2",
-        "chapter_title": "统计模型与投资组合",
-        "section": 9,
-        "number": 12,
         "part": "第一部分 · 统计与投资组合",
-        "minutes": 10,
+        "number": 12,
+        "chapter": "2",
+        "edition": "2026-10",
+        "minutes": 18,
+        "section": 9,
         "source_pages": [
           61,
           62,
           73,
           74
         ],
+        "chapter_title": "统计模型与投资组合",
         "source_sections": [
           "2.8.3",
           "2.8.4",
           "2.9"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -7662,12 +7662,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "2",
-        "chapter_title": "统计模型与投资组合",
-        "section": 10,
-        "number": 13,
         "part": "第一部分 · 统计与投资组合",
-        "minutes": 10,
+        "number": 13,
+        "chapter": "2",
+        "edition": "2026-10",
+        "minutes": 17,
+        "section": 10,
         "source_pages": [
           62,
           63,
@@ -7683,11 +7683,11 @@
           73,
           74
         ],
+        "chapter_title": "统计模型与投资组合",
         "source_sections": [
           "2.8.5",
           "2.9"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -7702,12 +7702,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "3",
-        "chapter_title": "主动组合与动态决策",
-        "section": 1,
-        "number": 14,
         "part": "第一部分 · 统计与投资组合",
-        "minutes": 10,
+        "number": 14,
+        "chapter": "3",
+        "edition": "2026-10",
+        "minutes": 17,
+        "section": 1,
         "source_pages": [
           76,
           77,
@@ -7717,14 +7717,14 @@
           92,
           93
         ],
+        "chapter_title": "主动组合与动态决策",
         "source_sections": [
           "3.1",
           "3.1.1",
           "3.1.2",
           "3.1.3",
           "3.4"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -7739,12 +7739,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "3",
-        "chapter_title": "主动组合与动态决策",
-        "section": 2,
-        "number": 15,
         "part": "第一部分 · 统计与投资组合",
-        "minutes": 10,
+        "number": 15,
+        "chapter": "3",
+        "edition": "2026-10",
+        "minutes": 17,
+        "section": 2,
         "source_pages": [
           80,
           81,
@@ -7754,13 +7754,13 @@
           96,
           97
         ],
+        "chapter_title": "主动组合与动态决策",
         "source_sections": [
           "3.2",
           "3.2.1",
           "3.2.2",
           "3.4"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -7775,12 +7775,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "3",
-        "chapter_title": "主动组合与动态决策",
-        "section": 3,
-        "number": 16,
         "part": "第一部分 · 统计与投资组合",
-        "minutes": 10,
+        "number": 16,
+        "chapter": "3",
+        "edition": "2026-10",
+        "minutes": 17,
+        "section": 3,
         "source_pages": [
           83,
           84,
@@ -7790,13 +7790,13 @@
           104,
           114
         ],
+        "chapter_title": "主动组合与动态决策",
         "source_sections": [
           "3.3.1",
           "3.3.2",
           "3.4",
           "3.5"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -7811,12 +7811,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "3",
-        "chapter_title": "主动组合与动态决策",
-        "section": 4,
-        "number": 17,
         "part": "第一部分 · 统计与投资组合",
-        "minutes": 10,
+        "number": 17,
+        "chapter": "3",
+        "edition": "2026-10",
+        "minutes": 17,
+        "section": 4,
         "source_pages": [
           86,
           87,
@@ -7824,11 +7824,11 @@
           110,
           111
         ],
+        "chapter_title": "主动组合与动态决策",
         "source_sections": [
           "3.3.3",
           "3.4"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -7843,12 +7843,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "3",
-        "chapter_title": "主动组合与动态决策",
-        "section": 5,
-        "number": 18,
         "part": "第一部分 · 统计与投资组合",
-        "minutes": 10,
+        "number": 18,
+        "chapter": "3",
+        "edition": "2026-10",
+        "minutes": 18,
+        "section": 5,
         "source_pages": [
           87,
           88,
@@ -7859,14 +7859,14 @@
           113,
           114
         ],
+        "chapter_title": "主动组合与动态决策",
         "source_sections": [
           "3.3.4",
           "3.3.5",
           "3.3.6",
           "3.4",
           "3.5"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -7881,12 +7881,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "3",
-        "chapter_title": "主动组合与动态决策",
-        "section": 6,
-        "number": 19,
         "part": "第一部分 · 统计与投资组合",
-        "minutes": 10,
+        "number": 19,
+        "chapter": "3",
+        "edition": "2026-10",
+        "minutes": 17,
+        "section": 6,
         "source_pages": [
           97,
           98,
@@ -7896,10 +7896,10 @@
           102,
           103
         ],
+        "chapter_title": "主动组合与动态决策",
         "source_sections": [
           "3.4"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -7914,12 +7914,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "3",
-        "chapter_title": "主动组合与动态决策",
-        "section": 7,
-        "number": 20,
         "part": "第一部分 · 统计与投资组合",
-        "minutes": 10,
+        "number": 20,
+        "chapter": "3",
+        "edition": "2026-10",
+        "minutes": 18,
+        "section": 7,
         "source_pages": [
           104,
           105,
@@ -7930,11 +7930,11 @@
           113,
           114
         ],
+        "chapter_title": "主动组合与动态决策",
         "source_sections": [
           "3.4",
           "3.5"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -7949,23 +7949,23 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "3",
-        "chapter_title": "主动组合与动态决策",
-        "section": 8,
-        "number": 21,
         "part": "第一部分 · 统计与投资组合",
-        "minutes": 10,
+        "number": 21,
+        "chapter": "3",
+        "edition": "2026-10",
+        "minutes": 19,
+        "section": 8,
         "source_pages": [
           111,
           112,
           113,
           114
         ],
+        "chapter_title": "主动组合与动态决策",
         "source_sections": [
           "3.4",
           "3.5"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -7980,12 +7980,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "4",
-        "chapter_title": "电子交易计量",
-        "section": 1,
-        "number": 22,
         "part": "第二部分 · 高频数据与订单簿",
-        "minutes": 10,
+        "number": 22,
+        "chapter": "4",
+        "edition": "2026-10",
+        "minutes": 17,
+        "section": 1,
         "source_pages": [
           116,
           117,
@@ -7996,6 +7996,7 @@
           151,
           185
         ],
+        "chapter_title": "电子交易计量",
         "source_sections": [
           "4.1",
           "4.2",
@@ -8004,8 +8005,7 @@
           "4.7",
           "4.8",
           "5.6"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -8020,12 +8020,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "4",
-        "chapter_title": "电子交易计量",
-        "section": 2,
-        "number": 23,
         "part": "第二部分 · 高频数据与订单簿",
-        "minutes": 10,
+        "number": 23,
+        "chapter": "4",
+        "edition": "2026-10",
+        "minutes": 16,
+        "section": 2,
         "source_pages": [
           119,
           120,
@@ -8035,14 +8035,14 @@
           144,
           152
         ],
+        "chapter_title": "电子交易计量",
         "source_sections": [
           "4.3.1",
           "4.3.2",
           "4.3.3",
           "4.7",
           "4.8"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -8057,12 +8057,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "4",
-        "chapter_title": "电子交易计量",
-        "section": 3,
-        "number": 24,
         "part": "第二部分 · 高频数据与订单簿",
-        "minutes": 10,
+        "number": 24,
+        "chapter": "4",
+        "edition": "2026-10",
+        "minutes": 18,
+        "section": 3,
         "source_pages": [
           122,
           123,
@@ -8071,13 +8071,13 @@
           151,
           152
         ],
+        "chapter_title": "电子交易计量",
         "source_sections": [
           "4.3.4",
           "4.3.5",
           "4.7",
           "4.8"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -8092,12 +8092,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "4",
-        "chapter_title": "电子交易计量",
-        "section": 4,
-        "number": 25,
         "part": "第二部分 · 高频数据与订单簿",
-        "minutes": 10,
+        "number": 25,
+        "chapter": "4",
+        "edition": "2026-10",
+        "minutes": 20,
+        "section": 4,
         "source_pages": [
           124,
           125,
@@ -8108,12 +8108,12 @@
           151,
           152
         ],
+        "chapter_title": "电子交易计量",
         "source_sections": [
           "4.3.6",
           "4.7",
           "4.8"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -8128,12 +8128,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "4",
-        "chapter_title": "电子交易计量",
-        "section": 5,
-        "number": 26,
         "part": "第二部分 · 高频数据与订单簿",
-        "minutes": 10,
+        "number": 26,
+        "chapter": "4",
+        "edition": "2026-10",
+        "minutes": 16,
+        "section": 5,
         "source_pages": [
           125,
           126,
@@ -8142,13 +8142,13 @@
           149,
           152
         ],
+        "chapter_title": "电子交易计量",
         "source_sections": [
           "4.4.1",
           "4.4.2",
           "4.7",
           "4.8"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -8163,12 +8163,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "4",
-        "chapter_title": "电子交易计量",
-        "section": 6,
-        "number": 27,
         "part": "第二部分 · 高频数据与订单簿",
-        "minutes": 10,
+        "number": 27,
+        "chapter": "4",
+        "edition": "2026-10",
+        "minutes": 16,
+        "section": 6,
         "source_pages": [
           127,
           128,
@@ -8178,13 +8178,13 @@
           151,
           152
         ],
+        "chapter_title": "电子交易计量",
         "source_sections": [
           "4.4.3",
           "4.4.4",
           "4.7",
           "4.8"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -8199,12 +8199,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "4",
-        "chapter_title": "电子交易计量",
-        "section": 7,
-        "number": 28,
         "part": "第二部分 · 高频数据与订单簿",
-        "minutes": 10,
+        "number": 28,
+        "chapter": "4",
+        "edition": "2026-10",
+        "minutes": 18,
+        "section": 7,
         "source_pages": [
           129,
           130,
@@ -8217,6 +8217,7 @@
           151,
           152
         ],
+        "chapter_title": "电子交易计量",
         "source_sections": [
           "4.5",
           "4.5.1",
@@ -8224,8 +8225,7 @@
           "4.5.3",
           "4.7",
           "4.8"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -8240,12 +8240,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "4",
-        "chapter_title": "电子交易计量",
-        "section": 8,
-        "number": 29,
         "part": "第二部分 · 高频数据与订单簿",
-        "minutes": 10,
+        "number": 29,
+        "chapter": "4",
+        "edition": "2026-10",
+        "minutes": 17,
+        "section": 8,
         "source_pages": [
           134,
           135,
@@ -8253,12 +8253,12 @@
           137,
           153
         ],
+        "chapter_title": "电子交易计量",
         "source_sections": [
           "4.6.1",
           "4.6.2",
           "4.8"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -8273,12 +8273,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "4",
-        "chapter_title": "电子交易计量",
-        "section": 9,
-        "number": 30,
         "part": "第二部分 · 高频数据与订单簿",
-        "minutes": 10,
+        "number": 30,
+        "chapter": "4",
+        "edition": "2026-10",
+        "minutes": 17,
+        "section": 9,
         "source_pages": [
           137,
           138,
@@ -8286,13 +8286,13 @@
           140,
           153
         ],
+        "chapter_title": "电子交易计量",
         "source_sections": [
           "4.6.3",
           "4.6.4",
           "4.6.5",
           "4.8"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -8307,12 +8307,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "4",
-        "chapter_title": "电子交易计量",
-        "section": 10,
-        "number": 31,
         "part": "第二部分 · 高频数据与订单簿",
-        "minutes": 10,
+        "number": 31,
+        "chapter": "4",
+        "edition": "2026-10",
+        "minutes": 18,
+        "section": 10,
         "source_pages": [
           140,
           141,
@@ -8323,13 +8323,13 @@
           152,
           153
         ],
+        "chapter_title": "电子交易计量",
         "source_sections": [
           "4.6.6",
           "4.6.7",
           "4.7",
           "4.8"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -8344,12 +8344,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "5",
-        "chapter_title": "订单簿数据与动态",
-        "section": 1,
-        "number": 32,
         "part": "第二部分 · 高频数据与订单簿",
-        "minutes": 10,
+        "number": 32,
+        "chapter": "5",
+        "edition": "2026-10",
+        "minutes": 16,
+        "section": 1,
         "source_pages": [
           155,
           156,
@@ -8362,14 +8362,14 @@
           184,
           185
         ],
+        "chapter_title": "订单簿数据与动态",
         "source_sections": [
           "5.1",
           "5.2",
           "5.2.1",
           "5.2.2",
           "5.6"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -8384,12 +8384,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "5",
-        "chapter_title": "订单簿数据与动态",
-        "section": 2,
-        "number": 33,
         "part": "第二部分 · 高频数据与订单簿",
-        "minutes": 10,
+        "number": 33,
+        "chapter": "5",
+        "edition": "2026-10",
+        "minutes": 17,
+        "section": 2,
         "source_pages": [
           160,
           161,
@@ -8403,13 +8403,13 @@
           180,
           181
         ],
+        "chapter_title": "订单簿数据与动态",
         "source_sections": [
           "5.3",
           "5.3.1",
           "5.3.2",
           "5.6"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -8424,12 +8424,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "5",
-        "chapter_title": "订单簿数据与动态",
-        "section": 3,
-        "number": 34,
         "part": "第二部分 · 高频数据与订单簿",
-        "minutes": 10,
+        "number": 34,
+        "chapter": "5",
+        "edition": "2026-10",
+        "minutes": 17,
+        "section": 3,
         "source_pages": [
           167,
           168,
@@ -8440,11 +8440,11 @@
           185,
           186
         ],
+        "chapter_title": "订单簿数据与动态",
         "source_sections": [
           "5.4",
           "5.6"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -8459,12 +8459,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "5",
-        "chapter_title": "订单簿数据与动态",
-        "section": 4,
-        "number": 35,
         "part": "第二部分 · 高频数据与订单簿",
-        "minutes": 10,
+        "number": 35,
+        "chapter": "5",
+        "edition": "2026-10",
+        "minutes": 17,
+        "section": 4,
         "source_pages": [
           169,
           170,
@@ -8476,11 +8476,11 @@
           185,
           186
         ],
+        "chapter_title": "订单簿数据与动态",
         "source_sections": [
           "5.5.1",
           "5.6"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -8495,12 +8495,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "5",
-        "chapter_title": "订单簿数据与动态",
-        "section": 5,
-        "number": 36,
         "part": "第二部分 · 高频数据与订单簿",
-        "minutes": 10,
+        "number": 36,
+        "chapter": "5",
+        "edition": "2026-10",
+        "minutes": 17,
+        "section": 5,
         "source_pages": [
           172,
           173,
@@ -8513,12 +8513,12 @@
           181,
           182
         ],
+        "chapter_title": "订单簿数据与动态",
         "source_sections": [
           "5.5.2",
           "5.5.3",
           "5.6"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -8533,12 +8533,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "5",
-        "chapter_title": "订单簿数据与动态",
-        "section": 6,
-        "number": 37,
         "part": "第二部分 · 高频数据与订单簿",
-        "minutes": 10,
+        "number": 37,
+        "chapter": "5",
+        "edition": "2026-10",
+        "minutes": 18,
+        "section": 6,
         "source_pages": [
           185,
           186,
@@ -8546,10 +8546,10 @@
           188,
           189
         ],
+        "chapter_title": "订单簿数据与动态",
         "source_sections": [
           "5.6"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -8564,12 +8564,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "6",
-        "chapter_title": "最优执行与订单配置",
-        "section": 1,
-        "number": 38,
         "part": "第三部分 · 执行、做市与路由",
-        "minutes": 10,
+        "number": 38,
+        "chapter": "6",
+        "edition": "2026-10",
+        "minutes": 17,
+        "section": 1,
         "source_pages": [
           191,
           192,
@@ -8579,11 +8579,11 @@
           222,
           223
         ],
+        "chapter_title": "最优执行与订单配置",
         "source_sections": [
           "6.1.1",
           "6.6"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -8598,12 +8598,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "6",
-        "chapter_title": "最优执行与订单配置",
-        "section": 2,
-        "number": 39,
         "part": "第三部分 · 执行、做市与路由",
-        "minutes": 10,
+        "number": 39,
+        "chapter": "6",
+        "edition": "2026-10",
+        "minutes": 20,
+        "section": 2,
         "source_pages": [
           194,
           195,
@@ -8612,12 +8612,12 @@
           222,
           223
         ],
+        "chapter_title": "最优执行与订单配置",
         "source_sections": [
           "6.1.2",
           "6.1.3",
           "6.6"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -8632,12 +8632,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "6",
-        "chapter_title": "最优执行与订单配置",
-        "section": 3,
-        "number": 40,
         "part": "第三部分 · 执行、做市与路由",
-        "minutes": 10,
+        "number": 40,
+        "chapter": "6",
+        "edition": "2026-10",
+        "minutes": 18,
+        "section": 3,
         "source_pages": [
           197,
           198,
@@ -8648,13 +8648,13 @@
           223,
           224
         ],
+        "chapter_title": "最优执行与订单配置",
         "source_sections": [
           "6.2.1",
           "6.2.2",
           "6.2.3",
           "6.6"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -8669,12 +8669,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "6",
-        "chapter_title": "最优执行与订单配置",
-        "section": 4,
-        "number": 41,
         "part": "第三部分 · 执行、做市与路由",
-        "minutes": 10,
+        "number": 41,
+        "chapter": "6",
+        "edition": "2026-10",
+        "minutes": 16,
+        "section": 4,
         "source_pages": [
           202,
           203,
@@ -8686,12 +8686,12 @@
           224,
           225
         ],
+        "chapter_title": "最优执行与订单配置",
         "source_sections": [
           "6.2.4",
           "6.3.1",
           "6.6"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -8706,23 +8706,23 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "6",
-        "chapter_title": "最优执行与订单配置",
-        "section": 5,
-        "number": 42,
         "part": "第三部分 · 执行、做市与路由",
-        "minutes": 10,
+        "number": 42,
+        "chapter": "6",
+        "edition": "2026-10",
+        "minutes": 19,
+        "section": 5,
         "source_pages": [
           208,
           209,
           210
         ],
+        "chapter_title": "最优执行与订单配置",
         "source_sections": [
           "6.3.2",
           "6.3.3",
           "6.3.4"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -8737,12 +8737,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "6",
-        "chapter_title": "最优执行与订单配置",
-        "section": 6,
-        "number": 43,
         "part": "第三部分 · 执行、做市与路由",
-        "minutes": 10,
+        "number": 43,
+        "chapter": "6",
+        "edition": "2026-10",
+        "minutes": 18,
+        "section": 6,
         "source_pages": [
           210,
           211,
@@ -8751,11 +8751,11 @@
           225,
           226
         ],
+        "chapter_title": "最优执行与订单配置",
         "source_sections": [
           "6.4",
           "6.6"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -8770,12 +8770,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "6",
-        "chapter_title": "最优执行与订单配置",
-        "section": 7,
-        "number": 44,
         "part": "第三部分 · 执行、做市与路由",
-        "minutes": 10,
+        "number": 44,
+        "chapter": "6",
+        "edition": "2026-10",
+        "minutes": 19,
+        "section": 7,
         "source_pages": [
           213,
           214,
@@ -8790,13 +8790,13 @@
           225,
           226
         ],
+        "chapter_title": "最优执行与订单配置",
         "source_sections": [
           "6.5",
           "6.5.1",
           "6.5.2",
           "6.6"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -8811,12 +8811,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "7",
-        "chapter_title": "做市与智能路由",
-        "section": 1,
-        "number": 45,
         "part": "第三部分 · 执行、做市与路由",
-        "minutes": 10,
+        "number": 45,
+        "chapter": "7",
+        "edition": "2026-10",
+        "minutes": 22,
+        "section": 1,
         "source_pages": [
           228,
           229,
@@ -8828,13 +8828,13 @@
           249,
           253
         ],
+        "chapter_title": "做市与智能路由",
         "source_sections": [
           "7.1",
           "7.2",
           "7.8",
           "7.9"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -8849,12 +8849,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "7",
-        "chapter_title": "做市与智能路由",
-        "section": 2,
-        "number": 46,
         "part": "第三部分 · 执行、做市与路由",
-        "minutes": 10,
+        "number": 46,
+        "chapter": "7",
+        "edition": "2026-10",
+        "minutes": 21,
+        "section": 2,
         "source_pages": [
           231,
           232,
@@ -8865,14 +8865,14 @@
           248,
           253
         ],
+        "chapter_title": "做市与智能路由",
         "source_sections": [
           "7.3",
           "7.3.1",
           "7.3.2",
           "7.8",
           "7.9"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -8887,12 +8887,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "7",
-        "chapter_title": "做市与智能路由",
-        "section": 3,
-        "number": 47,
         "part": "第三部分 · 执行、做市与路由",
-        "minutes": 10,
+        "number": 47,
+        "chapter": "7",
+        "edition": "2026-10",
+        "minutes": 19,
+        "section": 3,
         "source_pages": [
           234,
           235,
@@ -8900,11 +8900,11 @@
           237,
           238
         ],
+        "chapter_title": "做市与智能路由",
         "source_sections": [
           "7.4",
           "7.5.1"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -8919,12 +8919,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "7",
-        "chapter_title": "做市与智能路由",
-        "section": 4,
-        "number": 48,
         "part": "第三部分 · 执行、做市与路由",
-        "minutes": 10,
+        "number": 48,
+        "chapter": "7",
+        "edition": "2026-10",
+        "minutes": 21,
+        "section": 4,
         "source_pages": [
           238,
           239,
@@ -8932,12 +8932,12 @@
           251,
           252
         ],
+        "chapter_title": "做市与智能路由",
         "source_sections": [
           "7.5.2",
           "7.5.3",
           "7.8"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -8952,12 +8952,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "7",
-        "chapter_title": "做市与智能路由",
-        "section": 5,
-        "number": 49,
         "part": "第三部分 · 执行、做市与路由",
-        "minutes": 10,
+        "number": 49,
+        "chapter": "7",
+        "edition": "2026-10",
+        "minutes": 20,
+        "section": 5,
         "source_pages": [
           240,
           241,
@@ -8965,11 +8965,11 @@
           249,
           250
         ],
+        "chapter_title": "做市与智能路由",
         "source_sections": [
           "7.6.2",
           "7.8"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -8984,12 +8984,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "7",
-        "chapter_title": "做市与智能路由",
-        "section": 6,
-        "number": 50,
         "part": "第三部分 · 执行、做市与路由",
-        "minutes": 10,
+        "number": 50,
+        "chapter": "7",
+        "edition": "2026-10",
+        "minutes": 19,
+        "section": 6,
         "source_pages": [
           239,
           240,
@@ -8998,12 +8998,12 @@
           243,
           253
         ],
+        "chapter_title": "做市与智能路由",
         "source_sections": [
           "7.6.1",
           "7.6.3",
           "7.9"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -9018,12 +9018,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "7",
-        "chapter_title": "做市与智能路由",
-        "section": 7,
-        "number": 51,
         "part": "第三部分 · 执行、做市与路由",
-        "minutes": 10,
+        "number": 51,
+        "chapter": "7",
+        "edition": "2026-10",
+        "minutes": 21,
+        "section": 7,
         "source_pages": [
           243,
           244,
@@ -9035,14 +9035,14 @@
           253,
           254
         ],
+        "chapter_title": "做市与智能路由",
         "source_sections": [
           "7.7",
           "7.7.1",
           "7.7.2",
           "7.8",
           "7.9"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -9057,12 +9057,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "8",
-        "chapter_title": "交易系统与风险",
-        "section": 1,
-        "number": 52,
         "part": "第四部分 · 系统与风险",
+        "number": 52,
+        "chapter": "8",
+        "edition": "2026-10-depth",
         "minutes": 22,
+        "section": 1,
         "source_pages": [
           255,
           256,
@@ -9078,6 +9078,7 @@
           278,
           279
         ],
+        "chapter_title": "交易系统与风险",
         "source_sections": [
           "8.1",
           "8.2.1",
@@ -9087,8 +9088,7 @@
           "8.2.6",
           "8.6",
           "8.2"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -9103,12 +9103,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "8",
-        "chapter_title": "交易系统与风险",
-        "section": 2,
-        "number": 53,
         "part": "第四部分 · 系统与风险",
+        "number": 53,
+        "chapter": "8",
+        "edition": "2026-10-depth",
         "minutes": 22,
+        "section": 2,
         "source_pages": [
           262,
           263,
@@ -9121,14 +9121,14 @@
           289,
           291
         ],
+        "chapter_title": "交易系统与风险",
         "source_sections": [
           "8.2.3",
           "8.3.1",
           "8.6",
           "8.3",
           "8.7"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -9143,12 +9143,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "8",
-        "chapter_title": "交易系统与风险",
-        "section": 3,
-        "number": 54,
         "part": "第四部分 · 系统与风险",
+        "number": 54,
+        "chapter": "8",
+        "edition": "2026-10-depth",
         "minutes": 22,
+        "section": 3,
         "source_pages": [
           267,
           268,
@@ -9163,14 +9163,14 @@
           290,
           291
         ],
+        "chapter_title": "交易系统与风险",
         "source_sections": [
           "8.3.2",
           "8.3.3",
           "8.3.4",
           "8.6",
           "8.7"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -9185,12 +9185,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "8",
-        "chapter_title": "交易系统与风险",
-        "section": 4,
-        "number": 55,
         "part": "第四部分 · 系统与风险",
+        "number": 55,
+        "chapter": "8",
+        "edition": "2026-10-depth",
         "minutes": 22,
+        "section": 4,
         "source_pages": [
           270,
           271,
@@ -9201,6 +9201,7 @@
           285,
           286
         ],
+        "chapter_title": "交易系统与风险",
         "source_sections": [
           "8.4",
           "8.4.1",
@@ -9209,8 +9210,7 @@
           "8.4.4",
           "8.4.5",
           "8.6"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -9225,12 +9225,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "8",
-        "chapter_title": "交易系统与风险",
-        "section": 5,
-        "number": 56,
         "part": "第四部分 · 系统与风险",
+        "number": 56,
+        "chapter": "8",
+        "edition": "2026-10-depth",
         "minutes": 22,
+        "section": 5,
         "source_pages": [
           275,
           276,
@@ -9243,14 +9243,14 @@
           290,
           291
         ],
+        "chapter_title": "交易系统与风险",
         "source_sections": [
           "8.5",
           "8.5.1",
           "8.5.2",
           "8.6",
           "8.7"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -9265,12 +9265,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "A",
-        "chapter_title": "数学工具：鞅",
-        "section": 1,
-        "number": 57,
         "part": "附录 · 数学工具",
+        "number": 57,
+        "chapter": "A",
+        "edition": "2026-10-depth",
         "minutes": 45,
+        "section": 1,
         "source_pages": [
           292,
           293,
@@ -9281,11 +9281,11 @@
           298,
           299
         ],
+        "chapter_title": "数学工具：鞅",
         "source_sections": [
           "A.1",
           "A.2"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -9300,23 +9300,23 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "B",
-        "chapter_title": "数学工具：马尔可夫决策",
-        "section": 1,
-        "number": 58,
         "part": "附录 · 数学工具",
+        "number": 58,
+        "chapter": "B",
+        "edition": "2026-10-depth",
         "minutes": 30,
+        "section": 1,
         "source_pages": [
           300,
           301,
           302
         ],
+        "chapter_title": "数学工具：马尔可夫决策",
         "source_sections": [
           "B.1",
           "B.2",
           "B.3"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -9331,12 +9331,12 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "C",
-        "chapter_title": "数学工具：点过程",
-        "section": 1,
-        "number": 59,
         "part": "附录 · 数学工具",
+        "number": 59,
+        "chapter": "C",
+        "edition": "2026-10-depth",
         "minutes": 45,
+        "section": 1,
         "source_pages": [
           303,
           304,
@@ -9346,13 +9346,13 @@
           308,
           309
         ],
+        "chapter_title": "数学工具：点过程",
         "source_sections": [
           "C.1",
           "C.2",
           "C.3",
           "C.4"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"
@@ -9367,23 +9367,23 @@
     "metadata": {
       "theory_book": {
         "book": "quantitative-trading",
-        "chapter": "D",
-        "chapter_title": "数学工具：极限近似",
-        "section": 1,
-        "number": 60,
         "part": "附录 · 数学工具",
+        "number": 60,
+        "chapter": "D",
+        "edition": "2026-10-depth",
         "minutes": 35,
+        "section": 1,
         "source_pages": [
           310,
           311,
           312,
           313
         ],
+        "chapter_title": "数学工具：极限近似",
         "source_sections": [
           "D.1",
           "D.2"
-        ],
-        "edition": "2026-10"
+        ]
       }
     },
     "status": "published"

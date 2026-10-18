@@ -1,0 +1,3130 @@
+[
+  {
+    "id": "3c4a98e0-2468-55ec-bc84-428e740930ab",
+    "slug": "topic-ai-01",
+    "title": "预测任务、数据时点与收益标签",
+    "summary": "从交易时间确定预测目标，构造特征与标签，并建立固定样本的历史检验。",
+    "track": "专题学习",
+    "series": "人工智能在量化领域的应用",
+    "sort_order": 7001,
+    "cover_url": "/assets/illustrations/quant-strategy-laboratory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "ai",
+        "number": 1,
+        "chapter": "1",
+        "chapter_title": "预测任务、数据时点与收益标签",
+        "minutes": 35,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "e3c5a0d9-13af-5cfa-b8ea-a9301bdcfd6c"
+    ]
+  },
+  {
+    "id": "ab979cff-09af-5ddf-b3da-6823b97300d6",
+    "slug": "topic-ai-02",
+    "title": "线性模型、正则化与预测基线",
+    "summary": "推导最小二乘与岭回归，解释标准化、收缩和样本外误差，并复现历史基线。",
+    "track": "专题学习",
+    "series": "人工智能在量化领域的应用",
+    "sort_order": 7002,
+    "cover_url": "/assets/illustrations/quant-strategy-laboratory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "ai",
+        "number": 2,
+        "chapter": "2",
+        "chapter_title": "线性模型、正则化与预测基线",
+        "minutes": 40,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "e3c5a0d9-13af-5cfa-b8ea-a9301bdcfd6c"
+    ]
+  },
+  {
+    "id": "b11b9927-0c3b-58d9-8d7d-56e83b622fa7",
+    "slug": "topic-ai-03",
+    "title": "决策树与梯度提升",
+    "summary": "从一次切分计算叶节点预测，推导提升树的残差更新与分裂增益，并比较历史结果。",
+    "track": "专题学习",
+    "series": "人工智能在量化领域的应用",
+    "sort_order": 7003,
+    "cover_url": "/assets/illustrations/quant-strategy-laboratory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "ai",
+        "number": 3,
+        "chapter": "3",
+        "chapter_title": "决策树与梯度提升",
+        "minutes": 40,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "e3c5a0d9-13af-5cfa-b8ea-a9301bdcfd6c"
+    ]
+  },
+  {
+    "id": "9cc96716-ae7b-5334-986c-8b573e4d56de",
+    "slug": "topic-ai-04",
+    "title": "时间序列神经网络与注意力",
+    "summary": "理解时间窗口、循环状态、门控与因果注意力，并用数值检查梯度和信息边界。",
+    "track": "专题学习",
+    "series": "人工智能在量化领域的应用",
+    "sort_order": 7004,
+    "cover_url": "/assets/illustrations/quant-strategy-laboratory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "ai",
+        "number": 4,
+        "chapter": "4",
+        "chapter_title": "时间序列神经网络与注意力",
+        "minutes": 45,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "e3c5a0d9-13af-5cfa-b8ea-a9301bdcfd6c"
+    ]
+  },
+  {
+    "id": "275a9fc1-8742-5998-91bb-48c5bb918799",
+    "slug": "topic-ai-05",
+    "title": "截面排序与组合信号",
+    "summary": "计算 Rank IC、成对排序损失和组合权重，区分排序能力、预测幅度与交易收益。",
+    "track": "专题学习",
+    "series": "人工智能在量化领域的应用",
+    "sort_order": 7005,
+    "cover_url": "/assets/illustrations/quant-strategy-laboratory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "ai",
+        "number": 5,
+        "chapter": "5",
+        "chapter_title": "截面排序与组合信号",
+        "minutes": 40,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "e3c5a0d9-13af-5cfa-b8ea-a9301bdcfd6c"
+    ]
+  },
+  {
+    "id": "16a52c0d-dc38-554f-8063-29d5361be6d3",
+    "slug": "topic-ai-06",
+    "title": "财务文本、语言模型与事件信息",
+    "summary": "把公告转成有时间戳的事件字段，解释情绪、预期差、文本训练与大模型的信息边界。",
+    "track": "专题学习",
+    "series": "人工智能在量化领域的应用",
+    "sort_order": 7006,
+    "cover_url": "/assets/illustrations/quant-strategy-laboratory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "ai",
+        "number": 6,
+        "chapter": "6",
+        "chapter_title": "财务文本、语言模型与事件信息",
+        "minutes": 40,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "e3c5a0d9-13af-5cfa-b8ea-a9301bdcfd6c"
+    ]
+  },
+  {
+    "id": "aa224cbd-dd55-5622-8a81-75419fd01be8",
+    "slug": "topic-ai-07",
+    "title": "自动因子生成与组合增量",
+    "summary": "把因子表示为有约束的表达式，计算新因子的组合贡献，并检验搜索造成的过拟合。",
+    "track": "专题学习",
+    "series": "人工智能在量化领域的应用",
+    "sort_order": 7007,
+    "cover_url": "/assets/illustrations/quant-strategy-laboratory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "ai",
+        "number": 7,
+        "chapter": "7",
+        "chapter_title": "自动因子生成与组合增量",
+        "minutes": 45,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "e3c5a0d9-13af-5cfa-b8ea-a9301bdcfd6c"
+    ]
+  },
+  {
+    "id": "8ca455ba-39ee-51a9-8df5-dcf0ac07a68f",
+    "slug": "topic-ai-08",
+    "title": "强化学习与交易执行",
+    "summary": "以剩余时间和库存建立执行问题，推导动态规划与 Q 学习，并计算冲击和等待的取舍。",
+    "track": "专题学习",
+    "series": "人工智能在量化领域的应用",
+    "sort_order": 7008,
+    "cover_url": "/assets/illustrations/quant-strategy-laboratory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "ai",
+        "number": 8,
+        "chapter": "8",
+        "chapter_title": "强化学习与交易执行",
+        "minutes": 45,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "e3c5a0d9-13af-5cfa-b8ea-a9301bdcfd6c"
+    ]
+  },
+  {
+    "id": "73d370a3-ec8b-567f-b01d-665d5dc0907e",
+    "slug": "topic-ai-09",
+    "title": "时间序列验证、标签重叠与信息泄漏",
+    "summary": "按可用时间切分数据，清除跨界标签，区分调参与最终测试，并计算相关样本下的不确定性。",
+    "track": "专题学习",
+    "series": "人工智能在量化领域的应用",
+    "sort_order": 7009,
+    "cover_url": "/assets/illustrations/quant-strategy-laboratory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "ai",
+        "number": 9,
+        "chapter": "9",
+        "chapter_title": "时间序列验证、标签重叠与信息泄漏",
+        "minutes": 40,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "e3c5a0d9-13af-5cfa-b8ea-a9301bdcfd6c"
+    ]
+  },
+  {
+    "id": "96dd2585-ec15-5fe5-9363-332796851034",
+    "slug": "topic-ai-10",
+    "title": "模型漂移、监测与部署",
+    "summary": "区分输入变化与预测关系变化，计算漂移指标，建立带标签延迟的监测和模型更新流程。",
+    "track": "专题学习",
+    "series": "人工智能在量化领域的应用",
+    "sort_order": 7010,
+    "cover_url": "/assets/illustrations/quant-strategy-laboratory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "ai",
+        "number": 10,
+        "chapter": "10",
+        "chapter_title": "模型漂移、监测与部署",
+        "minutes": 40,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "e3c5a0d9-13af-5cfa-b8ea-a9301bdcfd6c"
+    ]
+  },
+  {
+    "id": "8ce43c99-35fc-5fa1-a94f-8d3ef3746833",
+    "slug": "topic-alpha101-start",
+    "title": "Alpha101 的输入、输出与研究问题",
+    "summary": "从一张日期与股票组成的数据表出发，区分信号分数、预测能力和交易收益。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8001,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 1,
+        "chapter": "0",
+        "chapter_title": "计算与检验基础",
+        "minutes": 16,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "900550f8-c7da-5f0a-9d21-60c0d2ee7202",
+    "slug": "topic-alpha101-operators",
+    "title": "排名、相关、衰减与行业中性化",
+    "summary": "手算常用算子，并明确小数窗口、并列值、常量窗口和缺失数据的处理。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8002,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 2,
+        "chapter": "0",
+        "chapter_title": "计算与检验基础",
+        "minutes": 16,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "3b12d510-837c-5acb-9278-54b797530eeb",
+    "slug": "topic-alpha101-data",
+    "title": "数据与历史检验方法",
+    "summary": "明确股票范围、复权、字段单位和预测时点，推导 Rank IC 与分组评价。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8003,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 3,
+        "chapter": "0",
+        "chapter_title": "计算与检验基础",
+        "minutes": 19,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "1048b0a5-a3ad-5049-ab19-df2f40660191",
+    "slug": "topic-alpha101-portfolio",
+    "title": "从公式分数到投资组合",
+    "summary": "说明分数标准化、风险约束、持有期和订单执行之间的关系。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8004,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 4,
+        "chapter": "0",
+        "chapter_title": "计算与检验基础",
+        "minutes": 15,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "51b7626d-9e74-58e4-ac8c-807f490be11d",
+    "slug": "topic-alpha101-results",
+    "title": "实测结果、覆盖率与复现步骤",
+    "summary": "比较不同公式的真实样本结果，识别短窗退化、费用敏感性和筛选偏差。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8005,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 5,
+        "chapter": "0",
+        "chapter_title": "计算与检验基础",
+        "minutes": 16,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "c2d2dda0-70e7-5198-aaa1-0cab85022b73",
+    "slug": "topic-alpha101-001",
+    "title": "Alpha 001：条件波动与极值位置",
+    "summary": "下跌日使用20日收益波动率，其他日使用收盘价，再追踪混合序列平方值的近期最大位置。最终排名比较的是极值发生位置，不是直接比较今日波动率。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8006,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 6,
+        "chapter": "1",
+        "chapter_title": "Alpha 001—010",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "4a0988a7-5312-58d0-95a3-8da016445f4e",
+    "slug": "topic-alpha101-002",
+    "title": "Alpha 002：成交量变化与日内收益",
+    "summary": "成交量先取对数并作两日差分，表示相对放量程度；日内收益表示开盘至收盘的方向。分别在每日股票池排序后，对一只股票的六日排名轨迹求负相关。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8007,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 7,
+        "chapter": "1",
+        "chapter_title": "Alpha 001—010",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "8c5031b5-4059-5c71-9805-7f59948ee23d",
+    "slug": "topic-alpha101-003",
+    "title": "Alpha 003：开盘价与成交量排名",
+    "summary": "先在每一天横向比较股票开盘价和成交量，再看同一只股票过去十天两种名次是否同步变化。负号使不同步或反向变化的股票获得较高分。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8008,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 8,
+        "chapter": "1",
+        "chapter_title": "Alpha 001—010",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "7c264815-efc9-504e-befd-00465673c542",
+    "slug": "topic-alpha101-004",
+    "title": "Alpha 004：最低价排名的历史位置",
+    "summary": "每天先计算最低价在股票池中的名次，再比较该名次在自身九日历史中的位置。负号偏向近期相对名次较低的股票。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8009,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 9,
+        "chapter": "1",
+        "chapter_title": "Alpha 001—010",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "9e80646f-afd2-5286-a329-e9eb11a3ff3e",
+    "slug": "topic-alpha101-005",
+    "title": "Alpha 005：开盘偏离与收盘偏离",
+    "summary": "把开盘价相对十日VWAP均值的偏离，与收盘相对当日VWAP的偏离分别排序后相乘取负。它同时度量开盘位置与当日收盘位置。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8010,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 10,
+        "chapter": "1",
+        "chapter_title": "Alpha 001—010",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "3ad98215-7aac-5878-84cb-2114d93ef861",
+    "slug": "topic-alpha101-006",
+    "title": "Alpha 006：原始量价相关",
+    "summary": "在每只股票内部计算十日开盘价与成交量的相关，再取相反数。与Alpha3相比，这里保留实际数值变化幅度，不先进行截面排名。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8011,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 11,
+        "chapter": "1",
+        "chapter_title": "Alpha 001—010",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "1b1bf506-fd91-5bf6-8cb5-1355869e318b",
+    "slug": "topic-alpha101-007",
+    "title": "Alpha 007：放量条件下的七日反转",
+    "summary": "条件成立时，七日价差的符号给出方向，其绝对值在六十日历史中的名次给出强度，随后整体反向。条件不成立时统一返回负一。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8012,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 12,
+        "chapter": "1",
+        "chapter_title": "Alpha 001—010",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "814641ce-9793-5911-8999-92894684006b",
+    "slug": "topic-alpha101-008",
+    "title": "Alpha 008：短窗价格收益乘积的变化",
+    "summary": "五日开盘价之和乘以五日收益之和，再与十日前的同一乘积比较。截面排名后取负，偏向该乘积下降较多的股票。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8013,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 13,
+        "chapter": "1",
+        "chapter_title": "Alpha 001—010",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "e93a22f8-562b-5425-accf-27a657debafb",
+    "slug": "topic-alpha101-009",
+    "title": "Alpha 009：连续趋势与短期反转",
+    "summary": "最近五个单日价差全部同号时保留今天价差，否则将今天价差反向。连续上涨和连续下跌都进入趋势分支。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8014,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 14,
+        "chapter": "1",
+        "chapter_title": "Alpha 001—010",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "b9d12c0e-6bdc-5d56-b4c5-232ace5d6c95",
+    "slug": "topic-alpha101-010",
+    "title": "Alpha 010：带截面排名的条件反转",
+    "summary": "沿用连续同号时顺势、其他时反转的结构，但判断窗口缩为四天，并把最终价差变成截面名次。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8015,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 15,
+        "chapter": "1",
+        "chapter_title": "Alpha 001—010",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "61741828-343b-5f64-8419-a931aa6fafd2",
+    "slug": "topic-alpha101-011",
+    "title": "Alpha 011：VWAP偏离区间与量差",
+    "summary": "在三日内分别找VWAP减收盘价的最大和最小值，排序后相加，再乘以三日成交量变化的排名。它将价差区间和量差强度结合。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8016,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 16,
+        "chapter": "2",
+        "chapter_title": "Alpha 011—020",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "ef17fbf9-b23c-5c30-8d80-041b0544a816",
+    "slug": "topic-alpha101-012",
+    "title": "Alpha 012：量变方向与价变方向",
+    "summary": "只保留成交量增减的符号，再乘上反向的一日价差。放量时反转价格变化，缩量时保留价格变化方向，量不变时信号为零。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8017,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 17,
+        "chapter": "2",
+        "chapter_title": "Alpha 011—020",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "30b0f85e-aa5c-59e7-b126-e7bc2d6b9d6d",
+    "slug": "topic-alpha101-013",
+    "title": "Alpha 013：收盘与成交量排名的协方差",
+    "summary": "把收盘价和成交量先做每日截面排名，再计算五日协方差，最后把协方差跨股票排序取负。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8018,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 18,
+        "chapter": "2",
+        "chapter_title": "Alpha 011—020",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "7bc16d2b-6c0f-5694-9b41-11e942f3c5e7",
+    "slug": "topic-alpha101-014",
+    "title": "Alpha 014：收益变化与量价相关",
+    "summary": "三日收益率差分代表近期涨跌速度的变化，负排名作为反转项，再由十日开盘价和成交量相关调整符号与幅度。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8019,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 19,
+        "chapter": "2",
+        "chapter_title": "Alpha 011—020",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "e4d2178b-e1e4-55d6-8d0a-62e8625bb015",
+    "slug": "topic-alpha101-015",
+    "title": "Alpha 015：短窗量价相关的累积",
+    "summary": "最高价和成交量各自排名后求三日相关，把每日相关结果再次横向排名，累计三天后取负。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8020,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 20,
+        "chapter": "2",
+        "chapter_title": "Alpha 011—020",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "37537cad-8f92-5ac7-8636-06fa951c7293",
+    "slug": "topic-alpha101-016",
+    "title": "Alpha 016：最高价与量排名协方差",
+    "summary": "与Alpha13结构接近，输入价格换成最高价。五日协方差衡量两种排名在短窗口中的共同变化幅度。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8021,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 21,
+        "chapter": "2",
+        "chapter_title": "Alpha 011—020",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "53d1a5d4-ad79-5873-bde0-64df99a47d96",
+    "slug": "topic-alpha101-017",
+    "title": "Alpha 017：价格位置、加速度与量能",
+    "summary": "十日收盘价历史排名、价差的二阶差分、相对量能的五日历史排名分别横向排序，三项相乘后取负。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8022,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 22,
+        "chapter": "2",
+        "chapter_title": "Alpha 011—020",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "d21520f0-29ae-58b5-a06c-b4514b75d027",
+    "slug": "topic-alpha101-018",
+    "title": "Alpha 018：日内实体幅度与开收盘关系",
+    "summary": "日内绝对价差的五日标准差、当日日内价差和十日开收盘相关相加，排名后反向。它把实体波动与价格联动混合。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8023,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 23,
+        "chapter": "2",
+        "chapter_title": "Alpha 011—020",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "8b4fbda7-0107-5983-9654-bfa5570e6326",
+    "slug": "topic-alpha101-019",
+    "title": "Alpha 019：七日方向与长期收益",
+    "summary": "两个相同的七日价差相加只影响幅度，不改变非零时的符号。取反向符号后，再由250日简单收益和的截面位置加权。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8024,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 24,
+        "chapter": "2",
+        "chapter_title": "Alpha 011—020",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "ad9a4cfb-f328-5d2a-85fd-492815a77a8a",
+    "slug": "topic-alpha101-020",
+    "title": "Alpha 020：开盘相对昨日价格区间",
+    "summary": "分别衡量今日开盘相对昨日最高、收盘和最低的差值，横向排序后相乘取负。较高的综合开盘位置对应较低分。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8025,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 25,
+        "chapter": "2",
+        "chapter_title": "Alpha 011—020",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "178d5f21-3773-51cb-bf44-ce52993c1fd0",
+    "slug": "topic-alpha101-021",
+    "title": "Alpha 021：均线带与量能的条件信号",
+    "summary": "比较两日价格均值与八日均值上下一个标准差：上穿取负一，下穿取正一，中间区域再看量能条件。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8026,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 26,
+        "chapter": "3",
+        "chapter_title": "Alpha 021—030",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "38d5ed5e-6de5-5784-920d-58f6c1e9d615",
+    "slug": "topic-alpha101-022",
+    "title": "Alpha 022：量价相关的变化与波动",
+    "summary": "五日最高价量相关再作五日差分，乘以二十日收盘价标准差的截面排名并取负。关注的是相关关系的变化。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8027,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 27,
+        "chapter": "3",
+        "chapter_title": "Alpha 021—030",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "b85a3628-63b3-53cb-9cd2-d2c168e7a838",
+    "slug": "topic-alpha101-023",
+    "title": "Alpha 023：高于均值后的最高价变化",
+    "summary": "当今日最高价高于过去二十日最高价均值时，输出最高价两日变化的相反数；否则为零。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8028,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 28,
+        "chapter": "3",
+        "chapter_title": "Alpha 021—030",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "2bce8628-b3a2-51d5-a04b-e508cdf635fd",
+    "slug": "topic-alpha101-024",
+    "title": "Alpha 024：长期均线斜率下的反转",
+    "summary": "百日均线相对百日前的变化较小时，用当前价距离百日最低价的反向值；否则用三日价差反转。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8029,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 29,
+        "chapter": "3",
+        "chapter_title": "Alpha 021—030",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "6e950ddc-3883-594d-b48f-b987ac3f2308",
+    "slug": "topic-alpha101-025",
+    "title": "Alpha 025：收益、流动性与收盘回落",
+    "summary": "负日收益乘以平均成交额、VWAP和最高价至收盘价的距离，再进行排名。下跌且有较大上方回落区间的股票可能得到较高原始值。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8030,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 30,
+        "chapter": "3",
+        "chapter_title": "Alpha 021—030",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "a644c3fe-f4b4-5676-bd5a-c111b101f3d7",
+    "slug": "topic-alpha101-026",
+    "title": "Alpha 026：量与最高价历史排名的相关",
+    "summary": "先把量与最高价都变成五日历史排名，再求五日相关，取最近三次相关中的最大值后反向。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8031,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 31,
+        "chapter": "3",
+        "chapter_title": "Alpha 021—030",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "dcf7b492-8b8b-565e-b14d-3040a2d80714",
+    "slug": "topic-alpha101-027",
+    "title": "Alpha 027：量价相关的二元分组",
+    "summary": "六日量价排名相关先做两日均值，再按当天横向名次分为正一或负一。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8032,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 32,
+        "chapter": "3",
+        "chapter_title": "Alpha 021—030",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "cfdc3782-4d9e-5e44-a660-852ca59d1653",
+    "slug": "topic-alpha101-028",
+    "title": "Alpha 028：收盘位置与量价相关的缩放",
+    "summary": "平均成交额和最低价的相关，加上日内中点减收盘价，再按绝对值总和缩放。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8033,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 33,
+        "chapter": "3",
+        "chapter_title": "Alpha 021—030",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "8b29ff1c-5a8e-55c8-9628-bb180c5d39a9",
+    "slug": "topic-alpha101-029",
+    "title": "Alpha 029：多层排名与滞后收益位置",
+    "summary": "前半段由五日价差反向排名，经短窗极小值、对数、缩放和再排名构成；后半段衡量六日前负收益的五日历史位置。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8034,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 34,
+        "chapter": "3",
+        "chapter_title": "Alpha 021—030",
+        "minutes": 13,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "63ed39e7-a1ed-5d34-b222-64ee165c5593",
+    "slug": "topic-alpha101-030",
+    "title": "Alpha 030：连续涨跌符号与近期成交占比",
+    "summary": "把最近三次价差的符号相加，排名后用一减去排名，再乘五日成交量占二十日成交量的比例。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8035,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 35,
+        "chapter": "3",
+        "chapter_title": "Alpha 021—030",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "267e63c8-26e0-5905-9a99-912d68ebc90f",
+    "slug": "topic-alpha101-031",
+    "title": "Alpha 031：平滑反转与量价方向",
+    "summary": "十日价差的反向排名经过线性平滑和再排名，与三日反转排名以及量价相关的符号相加。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8036,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 36,
+        "chapter": "4",
+        "chapter_title": "Alpha 031—040",
+        "minutes": 13,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "fa6eed93-0443-56b0-95aa-832eb2469313",
+    "slug": "topic-alpha101-032",
+    "title": "Alpha 032：短期均值偏离与长窗相关",
+    "summary": "七日均值减收盘价经缩放后，与230日VWAP对滞后收盘价相关的缩放值相加，后者乘20。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8037,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 37,
+        "chapter": "4",
+        "chapter_title": "Alpha 031—040",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "563e2113-f318-548a-b374-c1cca1f6842b",
+    "slug": "topic-alpha101-033",
+    "title": "Alpha 033：开收盘比率的截面排序",
+    "summary": "表达式可简化为rank(open/close-1)。当收盘低于开盘时原始值为正，因而偏向日内下跌的股票。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8038,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 38,
+        "chapter": "4",
+        "chapter_title": "Alpha 031—040",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "9ec10c80-d1a8-54a6-9746-c3191aaea0e7",
+    "slug": "topic-alpha101-034",
+    "title": "Alpha 034：短期波动比与一日反转",
+    "summary": "以二日收益标准差相对五日标准差衡量短波动状态，再与一日价差反向名次相加并排名。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8039,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 39,
+        "chapter": "4",
+        "chapter_title": "Alpha 031—040",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "b0eee3b5-6bb0-55f1-bf48-772dbada3d5b",
+    "slug": "topic-alpha101-035",
+    "title": "Alpha 035：量的位置与价格收益位置",
+    "summary": "三十二日量排名，与价格结构量和日收益各自历史排名的一减值相乘。高量位、低价格结构位和低收益位相互加强。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8040,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 40,
+        "chapter": "4",
+        "chapter_title": "Alpha 031—040",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "47e37115-ce35-56a9-bc00-fda005615baf",
+    "slug": "topic-alpha101-036",
+    "title": "Alpha 036：五项信号的加权组合",
+    "summary": "把日内价差与滞后量相关、日内反转、滞后收益位置、VWAP量相关绝对值和长均值偏离组合起来。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8041,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 41,
+        "chapter": "4",
+        "chapter_title": "Alpha 031—040",
+        "minutes": 15,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "4163ec15-31eb-5b03-a3b5-48fc7e5fe9c2",
+    "slug": "topic-alpha101-037",
+    "title": "Alpha 037：滞后日内价差与长窗收盘相关",
+    "summary": "二百日相关项描述昨日日内价差与今日收盘水平的共同变化，另加当日日内反转名次。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8042,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 42,
+        "chapter": "4",
+        "chapter_title": "Alpha 031—040",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "25f3d76f-bcdf-5af3-9175-b33388107cf3",
+    "slug": "topic-alpha101-038",
+    "title": "Alpha 038：近期收盘位置与日内涨幅",
+    "summary": "收盘的十日历史排名先横向排序取负，再乘收盘与开盘比率的排名。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8043,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 43,
+        "chapter": "4",
+        "chapter_title": "Alpha 031—040",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "4398dad8-4335-5967-a670-5c86fefa68a2",
+    "slug": "topic-alpha101-039",
+    "title": "Alpha 039：量能衰减加权的七日反转",
+    "summary": "相对量能线性平滑后的反向排名抑制部分七日价差，再由长期收益排名放大反转项。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8044,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 44,
+        "chapter": "4",
+        "chapter_title": "Alpha 031—040",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "ff93c9e3-cf8b-5678-b1a2-f4f320fc743d",
+    "slug": "topic-alpha101-040",
+    "title": "Alpha 040：最高价波动与量价相关",
+    "summary": "十日最高价标准差的负排名乘上同窗口最高价量相关。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8045,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 45,
+        "chapter": "4",
+        "chapter_title": "Alpha 031—040",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "3bdb9cdf-deda-5011-8faf-2786a94c1e7a",
+    "slug": "topic-alpha101-041",
+    "title": "Alpha 041：几何价格中点与VWAP",
+    "summary": "最高最低价的几何平均减去成交量加权均价，用于比较价格区间中心与成交重心。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8046,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 46,
+        "chapter": "5",
+        "chapter_title": "Alpha 041—050",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "7e952801-fd96-5c0e-978f-8cb55beffc5d",
+    "slug": "topic-alpha101-042",
+    "title": "Alpha 042：VWAP收盘偏离的相对强度",
+    "summary": "VWAP减收盘价的排名除以二者和的排名。分子侧重收盘低于成交重心的程度，分母调整与价格水平相关的位置。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8047,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 47,
+        "chapter": "5",
+        "chapter_title": "Alpha 041—050",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "5aa4dd77-90c8-55b6-b0ba-a5bb03781344",
+    "slug": "topic-alpha101-043",
+    "title": "Alpha 043：相对量能与七日反转位置",
+    "summary": "相对量能的二十日历史排名乘七日负价差的八日历史排名，两种近期位置同时较高时分值较大。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8048,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 48,
+        "chapter": "5",
+        "chapter_title": "Alpha 041—050",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "5c9ecede-9d06-537f-bcfa-8d5eb577ec25",
+    "slug": "topic-alpha101-044",
+    "title": "Alpha 044：最高价与成交量名次",
+    "summary": "最高价保留原值，成交量先作每日截面排名，再计算五日相关并反向。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8049,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 49,
+        "chapter": "5",
+        "chapter_title": "Alpha 041—050",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "f9c48823-eaa8-5452-872c-a2eabeec91e6",
+    "slug": "topic-alpha101-045",
+    "title": "Alpha 045：滞后均价与两类短相关",
+    "summary": "五日前收盘的二十日均值排名，乘两日量价相关及短长价格和的两日相关排名，整体取负。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8050,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 50,
+        "chapter": "5",
+        "chapter_title": "Alpha 041—050",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "e3a5267a-b3fa-5bca-8639-b8089f2fe3ec",
+    "slug": "topic-alpha101-046",
+    "title": "Alpha 046：价格斜率变化的条件切换",
+    "summary": "将前十日与后十日价格斜率作差的等价形式，按0.25与0两个阈值选择固定方向或一日反转。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8051,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 51,
+        "chapter": "5",
+        "chapter_title": "Alpha 041—050",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "3303bb28-db00-5dc2-9c5f-629211e9fa1f",
+    "slug": "topic-alpha101-047",
+    "title": "Alpha 047：低价、量能与高位回落",
+    "summary": "第一项结合价格倒数名次、相对量能及高收盘距离；再减去五日VWAP变化排名。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8052,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 52,
+        "chapter": "5",
+        "chapter_title": "Alpha 041—050",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "27151770-7011-53e5-9fee-7439f4049ae6",
+    "slug": "topic-alpha101-048",
+    "title": "Alpha 048：价差自相关与行业残差",
+    "summary": "用相邻单日价差的长窗相关加权今日收益近似，经细行业去均值后除以长期平方收益和。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8053,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 53,
+        "chapter": "5",
+        "chapter_title": "Alpha 041—050",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "86b15217-6c22-50d7-ae7a-02fb33a7af01",
+    "slug": "topic-alpha101-049",
+    "title": "Alpha 049：负斜率变化阈值与反转",
+    "summary": "价格斜率差低于负0.1时给正一，其他时输出一日价差相反数。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8054,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 54,
+        "chapter": "5",
+        "chapter_title": "Alpha 041—050",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "369dc734-e68a-56d7-87eb-cdae07d347ce",
+    "slug": "topic-alpha101-050",
+    "title": "Alpha 050：近期量价同步关系的峰值",
+    "summary": "对量与VWAP排名的五日相关做截面排名，再取五日最大值反向。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8055,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 55,
+        "chapter": "5",
+        "chapter_title": "Alpha 041—050",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "70b1e621-5bed-554f-8cee-d497e9fa3acd",
+    "slug": "topic-alpha101-051",
+    "title": "Alpha 051：更窄阈值的条件反转",
+    "summary": "与Alpha49相比，仅把斜率差阈值改为负0.05，其他分支相同。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8056,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 56,
+        "chapter": "6",
+        "chapter_title": "Alpha 051—060",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "7c474c47-9dd4-56e4-a225-04fb10349a1e",
+    "slug": "topic-alpha101-052",
+    "title": "Alpha 052：短期低点变化与中期收益",
+    "summary": "五日最低价相对五日前的变化取反，与排除最近二十日的较长期收益均值排名、五日量排名相乘。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8057,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 57,
+        "chapter": "6",
+        "chapter_title": "Alpha 051—060",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "34abab93-1c0d-5b35-95d4-d18145f70f10",
+    "slug": "topic-alpha101-053",
+    "title": "Alpha 053：收盘区间比率的变化",
+    "summary": "构造收盘相对高低价的非对称比率，再求九日差分取负。分母是close-low。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8058,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 58,
+        "chapter": "6",
+        "chapter_title": "Alpha 051—060",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "da92fd49-42c7-5bfe-a3a3-eaf85174d289",
+    "slug": "topic-alpha101-054",
+    "title": "Alpha 054：价格区间位置与五次幂比",
+    "summary": "可把表达式重写为负的区间位置比例乘(open/close)的五次幂，前提是分母非零。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8059,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 59,
+        "chapter": "6",
+        "chapter_title": "Alpha 051—060",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "29298006-3414-5d6f-b87b-fb1297c1e4a0",
+    "slug": "topic-alpha101-055",
+    "title": "Alpha 055：区间位置与成交量排名",
+    "summary": "先计算收盘在十二日高低区间中的位置，横向排名后与量排名求六日负相关。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8060,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 60,
+        "chapter": "6",
+        "chapter_title": "Alpha 051—060",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "d648e792-a1eb-5970-b16b-169208c3189a",
+    "slug": "topic-alpha101-056",
+    "title": "Alpha 056：收益比与市值加权收益",
+    "summary": "十日收益和除以三期二日滚动收益和，再与当日收益乘市值的排名结合并取负。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8061,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 61,
+        "chapter": "6",
+        "chapter_title": "Alpha 051—060",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "32ba32ff-8c0f-5f9c-9665-d4f78a324d43",
+    "slug": "topic-alpha101-057",
+    "title": "Alpha 057：收盘偏离与极值时间权重",
+    "summary": "收盘减VWAP除以近期最高收盘出现位置排名的线性衰减值，最后取反。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8062,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 62,
+        "chapter": "6",
+        "chapter_title": "Alpha 051—060",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "5fb3f28a-27c2-59f7-9904-10b51616d406",
+    "slug": "topic-alpha101-058",
+    "title": "Alpha 058：板块残差VWAP与量相关",
+    "summary": "VWAP先在板块内去均值，再与成交量求短相关、线性平滑、历史排名并取负。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8063,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 63,
+        "chapter": "6",
+        "chapter_title": "Alpha 051—060",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "2da60cd4-a3b8-5f80-937e-b74bd1bd0b8a",
+    "slug": "topic-alpha101-059",
+    "title": "Alpha 059：行业残差量价关系的平滑",
+    "summary": "两个VWAP加权项相加恰好还原VWAP，之后按行业去均值，与量相关并进行较长平滑。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8064,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 64,
+        "chapter": "6",
+        "chapter_title": "Alpha 051—060",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "c1616884-a729-5fd0-b4b2-1381f3b7f08e",
+    "slug": "topic-alpha101-060",
+    "title": "Alpha 060：量加权收盘位置与极值日期",
+    "summary": "量加权的单日收盘区间位置经过排名缩放，与最高收盘出现位置的排名缩放作差。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8065,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 65,
+        "chapter": "6",
+        "chapter_title": "Alpha 051—060",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "aef7e2ff-6a38-5398-bc30-9a31ed51b8bf",
+    "slug": "topic-alpha101-061",
+    "title": "Alpha 061：VWAP离低点与量价相关的比较",
+    "summary": "比较VWAP距十六日最低值的横向名次，与其和长平均成交额相关的名次，输出真假。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8066,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 66,
+        "chapter": "7",
+        "chapter_title": "Alpha 061—070",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "6838eb34-bde7-57d6-b495-ef43d2ce7797",
+    "slug": "topic-alpha101-062",
+    "title": "Alpha 062：量价相关与日内相对价格的比较",
+    "summary": "左侧用VWAP和累计平均成交额的相关排名，右侧先比较开盘名次与高低价名次，再排名，最后对比较结果取负。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8067,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 67,
+        "chapter": "7",
+        "chapter_title": "Alpha 061—070",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "e0eaa317-eada-5bde-a455-6c18e3cfcf52",
+    "slug": "topic-alpha101-063",
+    "title": "Alpha 063：行业反转与平滑量价关系",
+    "summary": "行业残差收盘的短差分平滑排名，与混合开盘VWAP和长期流动性相关的平滑排名作差，再取负。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8068,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 68,
+        "chapter": "7",
+        "chapter_title": "Alpha 061—070",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "2a3f651e-baba-5f57-a356-be156995c31c",
+    "slug": "topic-alpha101-064",
+    "title": "Alpha 064：平滑量价相关与混合价格变化",
+    "summary": "比较开盘最低价混合序列的累计量价相关，与中点VWAP混合序列的短期变化排名。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8069,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 69,
+        "chapter": "7",
+        "chapter_title": "Alpha 061—070",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "e19891e8-7f05-5f2b-a0bd-714f5a2bcb04",
+    "slug": "topic-alpha101-065",
+    "title": "Alpha 065：VWAP附近价格与开盘离低点",
+    "summary": "量价相关使用几乎以VWAP为主的混合价，另一侧使用开盘距近期最低开盘的名次，结果取负布尔值。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8070,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 70,
+        "chapter": "7",
+        "chapter_title": "Alpha 061—070",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "0b9a76b7-e2eb-5e3b-8bfa-4e40792cfd55",
+    "slug": "topic-alpha101-066",
+    "title": "Alpha 066：VWAP变化与日内价差比例",
+    "summary": "一个分支平滑VWAP短差分，另一个分支衡量low-vwap相对open-日内中点的比例，两项排名相加取负。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8071,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 71,
+        "chapter": "7",
+        "chapter_title": "Alpha 061—070",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "c5b137be-fc8a-513f-ae3f-6ceed501b79c",
+    "slug": "topic-alpha101-067",
+    "title": "Alpha 067：价格离低点的可变幂",
+    "summary": "最高价距离短期最低最高价的排名作为底数，两个不同层级中性化序列的相关排名作为指数，再取负。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8072,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 72,
+        "chapter": "7",
+        "chapter_title": "Alpha 061—070",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "bcea69fc-f61c-5300-88d9-3cafb9433258",
+    "slug": "topic-alpha101-068",
+    "title": "Alpha 068：相关历史位置与混合价格变化",
+    "summary": "一侧是最高价和平均成交额排名相关的历史名次，另一侧是收盘最低价混合值短差分的截面名次。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8073,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 73,
+        "chapter": "7",
+        "chapter_title": "Alpha 061—070",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "0793e717-dfc1-5fa2-b044-3f0ad3d9dafc",
+    "slug": "topic-alpha101-069",
+    "title": "Alpha 069：行业残差VWAP变化的可变幂",
+    "summary": "底数来自行业残差VWAP短差分近期最大值的排名，指数来自混合价量相关的历史位置，整体取负。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8074,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 74,
+        "chapter": "7",
+        "chapter_title": "Alpha 061—070",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "1a24b9c0-422c-5442-a069-3a873d627b45",
+    "slug": "topic-alpha101-070",
+    "title": "Alpha 070：VWAP短差分与行业量价状态",
+    "summary": "VWAP短差分排名作为底数，行业残差收盘和平均成交额相关的历史名次作为指数，取负。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8075,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 75,
+        "chapter": "7",
+        "chapter_title": "Alpha 061—070",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "39c6ba6b-f0b7-54a7-b65a-8824d0b33f76",
+    "slug": "topic-alpha101-071",
+    "title": "Alpha 071：两条历史排名分支取较大值",
+    "summary": "价格量能历史名次的相关分支，与低开盘组合相对VWAP的平方排名分支，分别平滑后取最大。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8076,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 76,
+        "chapter": "8",
+        "chapter_title": "Alpha 071—080",
+        "minutes": 13,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "59258a14-73f1-51cd-a850-5befcdaf6315",
+    "slug": "topic-alpha101-072",
+    "title": "Alpha 072：两类平滑量价相关的比率",
+    "summary": "分子是中点价与平均成交额相关的平滑排名，分母是VWAP和成交量历史名次相关的平滑排名。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8077,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 77,
+        "chapter": "8",
+        "chapter_title": "Alpha 071—080",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "99b8c37c-fef9-56c1-bfec-708037ad4e99",
+    "slug": "topic-alpha101-073",
+    "title": "Alpha 073：VWAP变化与混合价格反转",
+    "summary": "分别平滑VWAP差分和开盘最低价混合序列的相对反转，取二者排名中较大者后反向。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8078,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 78,
+        "chapter": "8",
+        "chapter_title": "Alpha 071—080",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "70daad4f-5616-5f54-a363-a225ce06d912",
+    "slug": "topic-alpha101-074",
+    "title": "Alpha 074：价格与流动性关系的双重比较",
+    "summary": "比较收盘对累计平均成交额的相关排名，与混合最高VWAP价名次对成交量名次的相关排名。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8079,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 79,
+        "chapter": "8",
+        "chapter_title": "Alpha 071—080",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "ee9653ae-83dc-57b8-b11c-057847affc8d",
+    "slug": "topic-alpha101-075",
+    "title": "Alpha 075：原始量价相关与排名量价相关",
+    "summary": "比较短窗VWAP量相关与较长窗最低价平均成交额排名相关，输出布尔值。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8080,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 80,
+        "chapter": "8",
+        "chapter_title": "Alpha 071—080",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "70ce3813-d8c4-52a0-a887-d4170519b3d0",
+    "slug": "topic-alpha101-076",
+    "title": "Alpha 076：短期VWAP变化与板块量价状态",
+    "summary": "短期VWAP差分平滑排名，与板块残差最低价量能相关的多层历史排名比较，取大值后反向。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8081,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 81,
+        "chapter": "8",
+        "chapter_title": "Alpha 071—080",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "7f6a5a5e-b18f-5b17-83a7-81a517ad45bf",
+    "slug": "topic-alpha101-077",
+    "title": "Alpha 077：中点偏离VWAP与量价关系取小",
+    "summary": "第一分支中的加high减high互相抵消，剩余日内中点减VWAP；再与中点平均成交额相关分支取最小排名。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8082,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 82,
+        "chapter": "8",
+        "chapter_title": "Alpha 071—080",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "6646ad92-b3c4-59bd-820c-41d933e6d661",
+    "slug": "topic-alpha101-078",
+    "title": "Alpha 078：累计量价相关的可变幂",
+    "summary": "混合最低VWAP价与平均成交额分别累计后求相关排名，以VWAP和量排名相关的排名为指数。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8083,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 83,
+        "chapter": "8",
+        "chapter_title": "Alpha 071—080",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "9a967e22-9a80-5fa1-a679-83a364403cea",
+    "slug": "topic-alpha101-079",
+    "title": "Alpha 079：板块残差价格变化与量价排名",
+    "summary": "板块内混合开收盘价的短差分排名，与VWAP和长平均成交额历史名次的相关排名相比较。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8084,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 84,
+        "chapter": "8",
+        "chapter_title": "Alpha 071—080",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "0bf9d436-b438-5b6c-815b-2db673ed05fd",
+    "slug": "topic-alpha101-080",
+    "title": "Alpha 080：行业残差变化方向的可变幂",
+    "summary": "混合开盘最高价行业残差的差分先取符号，再做截面排名；量价相关的历史位置作为幂指数，取负。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8085,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 85,
+        "chapter": "8",
+        "chapter_title": "Alpha 071—080",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "531eab5f-226b-5941-8d20-a3cc61bfd268",
+    "slug": "topic-alpha101-081",
+    "title": "Alpha 081：长期量价名次的连乘比较",
+    "summary": "把量价相关排名四次幂后再排名，连续多日相乘并取对数，再与另一量价相关排名比较。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8086,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 86,
+        "chapter": "9",
+        "chapter_title": "Alpha 081—090",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "ac959740-7fda-5c4a-aba8-27b93f88f401",
+    "slug": "topic-alpha101-082",
+    "title": "Alpha 082：开盘变化与板块量能关系",
+    "summary": "一侧是开盘短差分的平滑排名，另一侧是板块残差成交量和开盘的相关历史位置，取小值后反向。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8087,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 87,
+        "chapter": "9",
+        "chapter_title": "Alpha 081—090",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "3ce67df7-b6a9-5f2f-adb6-69eea2257a7a",
+    "slug": "topic-alpha101-083",
+    "title": "Alpha 083：滞后振幅与收盘偏离",
+    "summary": "比较两日前相对振幅排名、当日量排名与当日相对振幅，再由VWAP收盘偏离调节。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8088,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 88,
+        "chapter": "9",
+        "chapter_title": "Alpha 081—090",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "6bcbde1d-c4c1-5be2-be2e-fc9fbabf294c",
+    "slug": "topic-alpha101-084",
+    "title": "Alpha 084：VWAP离高点的历史排名幂",
+    "summary": "VWAP距近期最高值的差，经过历史排名后作为底数，四日收盘价差作为可正可负的指数。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8089,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 89,
+        "chapter": "9",
+        "chapter_title": "Alpha 081—090",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "0f27539e-8a07-5faf-867c-77df40f30721",
+    "slug": "topic-alpha101-085",
+    "title": "Alpha 085：两种量价相关的幂交互",
+    "summary": "混合最高收盘价与平均成交额相关的排名为底数，中点价和成交量历史名次相关的排名为指数。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8090,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 90,
+        "chapter": "9",
+        "chapter_title": "Alpha 081—090",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "e7984961-a925-5d8b-b050-338f92f73dfe",
+    "slug": "topic-alpha101-086",
+    "title": "Alpha 086：量价相关历史位置与收盘偏离",
+    "summary": "左侧计算收盘与累计平均成交额相关的历史名次，右侧可简化为close-vwap的截面名次。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8091,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 91,
+        "chapter": "9",
+        "chapter_title": "Alpha 081—090",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "00a85409-9e35-5c7f-bd50-c08c03fbd0f2",
+    "slug": "topic-alpha101-087",
+    "title": "Alpha 087：混合价格变化与行业量能关系",
+    "summary": "把混合收盘VWAP价的短差分平滑排名，与行业残差平均成交额对收盘相关绝对值的历史位置取大再反向。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8092,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 92,
+        "chapter": "9",
+        "chapter_title": "Alpha 081—090",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "eff45220-f473-55ca-b398-17d4f74bd51d",
+    "slug": "topic-alpha101-088",
+    "title": "Alpha 088：日内价格名次结构与量价分支",
+    "summary": "开盘最低价名次之和减最高收盘价名次之和，与价格量能历史名次相关分支分别平滑排名，再取小值。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8093,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 93,
+        "chapter": "9",
+        "chapter_title": "Alpha 081—090",
+        "minutes": 13,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "cb0fedf9-0ffc-5245-8017-5e0c7b481c9b",
+    "slug": "topic-alpha101-089",
+    "title": "Alpha 089：最低价量相关与行业VWAP变化",
+    "summary": "第一个混合价格实际上就是low；其量能相关历史位置减去行业残差VWAP变化的历史位置。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8094,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 94,
+        "chapter": "9",
+        "chapter_title": "Alpha 081—090",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "e6520b9d-49b9-5a94-9062-4480bed0c830",
+    "slug": "topic-alpha101-090",
+    "title": "Alpha 090：收盘离高点与行业量能的幂",
+    "summary": "收盘距四日最高收盘的负偏离排名作为底数，细行业残差平均成交额与最低价相关的历史位置作指数。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8095,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 95,
+        "chapter": "9",
+        "chapter_title": "Alpha 081—090",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "bd3ebefc-aabc-50fc-988b-71e90465afb3",
+    "slug": "topic-alpha101-091",
+    "title": "Alpha 091：双重平滑行业相关与短窗相关",
+    "summary": "行业残差收盘量相关经过两次线性平滑和历史排名，再减另一条VWAP量能相关的截面排名，整体反向。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8096,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 96,
+        "chapter": "10",
+        "chapter_title": "Alpha 091—100",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "ab0d651c-f9fa-5ebc-aee0-56012b688940",
+    "slug": "topic-alpha101-092",
+    "title": "Alpha 092：日内状态占比与量价状态",
+    "summary": "日内不等式先转成0或1，线性衰减给出近期该状态的加权出现频率；与另一量价分支取较低历史排名。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8097,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 97,
+        "chapter": "10",
+        "chapter_title": "Alpha 091—100",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "81b522b9-bba2-5094-a0cc-414b638463fc",
+    "slug": "topic-alpha101-093",
+    "title": "Alpha 093：行业量价状态除以价格变化",
+    "summary": "行业残差VWAP量能相关经平滑和历史排名作为分子，混合价格差分平滑后的截面排名为分母。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8098,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 98,
+        "chapter": "10",
+        "chapter_title": "Alpha 091—100",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "a04e859a-ba10-54b1-a727-a0d72cdda4fb",
+    "slug": "topic-alpha101-094",
+    "title": "Alpha 094：VWAP离低点与量价状态幂",
+    "summary": "底数为VWAP离近期低点的截面排名，指数为VWAP与量能各自历史排名相关的历史位置，再取负。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8099,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 99,
+        "chapter": "10",
+        "chapter_title": "Alpha 091—100",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "416b707c-7339-536f-8f6b-651af7ad4e9a",
+    "slug": "topic-alpha101-095",
+    "title": "Alpha 095：开盘离低点与累计量价关系",
+    "summary": "开盘离近期最低值的截面名次，与累计中点价和平均成交额相关排名五次幂的历史名次比较。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8100,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 100,
+        "chapter": "10",
+        "chapter_title": "Alpha 091—100",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "2034dbdd-13db-5366-a74a-0ff493eee53f",
+    "slug": "topic-alpha101-096",
+    "title": "Alpha 096：短相关与相关极值时点的组合",
+    "summary": "一个分支直接平滑VWAP量排名相关；另一个追踪价格量能历史名次相关的最大值出现日期，最终取大反向。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8101,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 101,
+        "chapter": "10",
+        "chapter_title": "Alpha 091—100",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "c5a1e049-fcaa-5882-843e-78b7355b67d5",
+    "slug": "topic-alpha101-097",
+    "title": "Alpha 097：行业价格反转与多层量价状态",
+    "summary": "行业残差混合最低VWAP价的短差分平滑排名，减去多层量价历史排名分支，再整体取负。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8102,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 102,
+        "chapter": "10",
+        "chapter_title": "Alpha 091—100",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "5e5a3f72-302e-58f7-adad-987110845079",
+    "slug": "topic-alpha101-098",
+    "title": "Alpha 098：量价关系与相关最低点时序",
+    "summary": "第一分支平滑VWAP与累计短均量能相关，第二分支追踪开盘量能排名相关的最低点出现位置并再排名平滑。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8103,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 103,
+        "chapter": "10",
+        "chapter_title": "Alpha 091—100",
+        "minutes": 13,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "908648f7-3e36-516f-9388-7117f13035e0",
+    "slug": "topic-alpha101-099",
+    "title": "Alpha 099：累计量价相关与短期低价量相关",
+    "summary": "把累计中点价与累计平均成交额的相关排名，和最低价成交量短窗相关排名比较，输出负布尔信号。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8104,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 104,
+        "chapter": "10",
+        "chapter_title": "Alpha 091—100",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "14688541-d207-5f98-86fb-b521f51509a4",
+    "slug": "topic-alpha101-100",
+    "title": "Alpha 100：细行业残差与量能权重",
+    "summary": "第一部分由量加权收盘区间位置排名中性化缩放得到，第二部分结合量价相关与低点日期排名，再中性化缩放；差值乘相对量能并取反。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8105,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 105,
+        "chapter": "10",
+        "chapter_title": "Alpha 091—100",
+        "minutes": 13,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "9d29d61d-473e-55e9-8db0-da759adcb81a",
+    "slug": "topic-alpha101-101",
+    "title": "Alpha 101：日内实体相对振幅",
+    "summary": "收盘减开盘度量实体方向，高低价差给出当天总振幅。两者之比接近正一表示实体向上且接近覆盖整个区间。",
+    "track": "专题学习",
+    "series": "Alpha101 全解读",
+    "sort_order": 8106,
+    "cover_url": "/assets/illustrations/quant-market-observatory-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "alpha101",
+        "number": 106,
+        "chapter": "11",
+        "chapter_title": "Alpha 101—101",
+        "minutes": 12,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "afe3747e-9ef6-5c65-aed0-acd6a7560aac"
+    ]
+  },
+  {
+    "id": "4b0f6c95-55af-513a-82d7-029fbfcf855c",
+    "slug": "topic-factors-01",
+    "title": "截面因子：比较同一时点的不同股票",
+    "summary": "区分股票特征、因子收益与时间序列信号，建立从收盘信息到未来收益的时间关系。",
+    "track": "专题学习",
+    "series": "股票截面因子挖掘",
+    "sort_order": 9001,
+    "cover_url": "/assets/illustrations/quant-data-workshop-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "factors",
+        "number": 1,
+        "chapter": "1",
+        "chapter_title": "因子与数据",
+        "minutes": 32,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "0c1a2b30-f667-5143-a559-35e10c155085"
+    ]
+  },
+  {
+    "id": "9f91bb02-9821-580e-b1be-d0cee660489a",
+    "slug": "topic-factors-02",
+    "title": "数据时点与股票池：重建当时可知的信息",
+    "summary": "区分报告期、公告时间和修订版本，建立财务、行业、股票池与交易日历的一致时间规则。",
+    "track": "专题学习",
+    "series": "股票截面因子挖掘",
+    "sort_order": 9002,
+    "cover_url": "/assets/illustrations/quant-data-workshop-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "factors",
+        "number": 2,
+        "chapter": "1",
+        "chapter_title": "因子与数据",
+        "minutes": 38,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "0c1a2b30-f667-5143-a559-35e10c155085"
+    ]
+  },
+  {
+    "id": "296f7235-6a52-5819-a213-8effd6ea944f",
+    "slug": "topic-factors-03",
+    "title": "因子定义：从价量变化到财务特征",
+    "summary": "逐项推导动量、反转、波动率、流动性、估值和盈利能力指标，明确方向、窗口与单位。",
+    "track": "专题学习",
+    "series": "股票截面因子挖掘",
+    "sort_order": 9003,
+    "cover_url": "/assets/illustrations/quant-data-workshop-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "factors",
+        "number": 3,
+        "chapter": "1",
+        "chapter_title": "因子与数据",
+        "minutes": 40,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "0c1a2b30-f667-5143-a559-35e10c155085"
+    ]
+  },
+  {
+    "id": "27e9261a-793f-5e51-8d4b-be8415c3a7cb",
+    "slug": "topic-factors-04",
+    "title": "因子预处理：缺失、极端值与可比尺度",
+    "summary": "通过可手算的截面例子理解缺失处理、MAD 去极值、标准化和排序变换，区分数据错误与经济差异。",
+    "track": "专题学习",
+    "series": "股票截面因子挖掘",
+    "sort_order": 9004,
+    "cover_url": "/assets/illustrations/quant-data-workshop-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "factors",
+        "number": 4,
+        "chapter": "2",
+        "chapter_title": "因子处理与检验",
+        "minutes": 36,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "0c1a2b30-f667-5143-a559-35e10c155085"
+    ]
+  },
+  {
+    "id": "d67b73bb-2f9f-51fc-9d03-35c2d6fa989c",
+    "slug": "topic-factors-05",
+    "title": "行业与市值中性化：分离共同暴露",
+    "summary": "从行业内减均值到多元回归残差，解释中性化的含义、数值实现及分数与持仓暴露的区别。",
+    "track": "专题学习",
+    "series": "股票截面因子挖掘",
+    "sort_order": 9005,
+    "cover_url": "/assets/illustrations/quant-data-workshop-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "factors",
+        "number": 5,
+        "chapter": "2",
+        "chapter_title": "因子处理与检验",
+        "minutes": 42,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "0c1a2b30-f667-5143-a559-35e10c155085"
+    ]
+  },
+  {
+    "id": "35a04624-66ba-5844-9039-be50e38f12d5",
+    "slug": "topic-factors-06",
+    "title": "RankIC 与统计不确定性：处理重叠收益",
+    "summary": "手算排名相关系数，推导均值的 HAC 标准误，并用固定股票样本检验四个预先定义的价量分数。",
+    "track": "专题学习",
+    "series": "股票截面因子挖掘",
+    "sort_order": 9006,
+    "cover_url": "/assets/illustrations/quant-data-workshop-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "factors",
+        "number": 6,
+        "chapter": "2",
+        "chapter_title": "因子处理与检验",
+        "minutes": 48,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "0c1a2b30-f667-5143-a559-35e10c155085"
+    ]
+  },
+  {
+    "id": "9d0327eb-c0ca-50d7-964b-225bb9785d1a",
+    "slug": "topic-factors-07",
+    "title": "分组与持仓：把因子排序转成交易记录",
+    "summary": "明确分组收益、权重漂移、换手口径、成本与成交容量，区分统计标签和可执行的资金路径。",
+    "track": "专题学习",
+    "series": "股票截面因子挖掘",
+    "sort_order": 9007,
+    "cover_url": "/assets/illustrations/quant-data-workshop-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "factors",
+        "number": 7,
+        "chapter": "3",
+        "chapter_title": "组合与研究验证",
+        "minutes": 46,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "0c1a2b30-f667-5143-a559-35e10c155085"
+    ]
+  },
+  {
+    "id": "ea23d7f8-8173-59fa-9f73-236b0f1f15fc",
+    "slug": "topic-factors-08",
+    "title": "因子增量检验：新分数提供了什么信息",
+    "summary": "从相关性到残差回归，推导条件增量系数，并用训练与留出样本比较新增因子的预测贡献。",
+    "track": "专题学习",
+    "series": "股票截面因子挖掘",
+    "sort_order": 9008,
+    "cover_url": "/assets/illustrations/quant-data-workshop-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "factors",
+        "number": 8,
+        "chapter": "3",
+        "chapter_title": "组合与研究验证",
+        "minutes": 43,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "0c1a2b30-f667-5143-a559-35e10c155085"
+    ]
+  },
+  {
+    "id": "07d43d6b-2cf6-5992-9086-180d11aae196",
+    "slug": "topic-factors-09",
+    "title": "多重检验：控制大量尝试中的偶然发现",
+    "summary": "区分单次显著性、至少一次误报与错误发现率，手算 BH、BY，并理解时间区块重采样和候选记录。",
+    "track": "专题学习",
+    "series": "股票截面因子挖掘",
+    "sort_order": 9009,
+    "cover_url": "/assets/illustrations/quant-data-workshop-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "factors",
+        "number": 9,
+        "chapter": "3",
+        "chapter_title": "组合与研究验证",
+        "minutes": 45,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "0c1a2b30-f667-5143-a559-35e10c155085"
+    ]
+  },
+  {
+    "id": "d05352ec-548d-56b3-8096-f89cb7920dd4",
+    "slug": "topic-factors-10",
+    "title": "因子组合与研究复现：连接预测、风险和持仓",
+    "summary": "按时间划分数据，校准分数与收益，结合协方差和交易约束生成持仓，并保存可复查的研究结果。",
+    "track": "专题学习",
+    "series": "股票截面因子挖掘",
+    "sort_order": 9010,
+    "cover_url": "/assets/illustrations/quant-data-workshop-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "factors",
+        "number": 10,
+        "chapter": "3",
+        "chapter_title": "组合与研究验证",
+        "minutes": 48,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "0c1a2b30-f667-5143-a559-35e10c155085"
+    ]
+  },
+  {
+    "id": "e4e452a2-c181-55dd-869b-82ada0f0ed76",
+    "slug": "topic-timing-01",
+    "title": "时序动量与截面动量",
+    "summary": "区分同一资产的方向判断与不同资产的相对排名，计算持仓、现金和下一期收益。",
+    "track": "专题学习",
+    "series": "择时研究",
+    "sort_order": 10001,
+    "cover_url": "/assets/illustrations/quant-portfolio-library-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "timing",
+        "number": 1,
+        "chapter": "1",
+        "chapter_title": "时序动量与截面动量",
+        "minutes": 15,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "f6b5feeb-2b5e-552e-9f24-32acf9c49495"
+    ]
+  },
+  {
+    "id": "f9e91b6a-4404-5a0c-99c3-a89aceabf182",
+    "slug": "topic-timing-02",
+    "title": "均线与突破规则",
+    "summary": "把趋势条件写成逐日可执行的状态变化，理解观察窗口、退出规则和缓冲区。",
+    "track": "专题学习",
+    "series": "择时研究",
+    "sort_order": 10002,
+    "cover_url": "/assets/illustrations/quant-portfolio-library-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "timing",
+        "number": 2,
+        "chapter": "2",
+        "chapter_title": "均线与突破规则",
+        "minutes": 15,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "f6b5feeb-2b5e-552e-9f24-32acf9c49495"
+    ]
+  },
+  {
+    "id": "33f36ee7-ddb9-589e-a7ff-2886f259f8fe",
+    "slug": "topic-timing-03",
+    "title": "趋势强度与路径稳定性",
+    "summary": "分别衡量涨跌幅、波动尺度和路径往复程度，避免把平滑走势误当成高确定性预测。",
+    "track": "专题学习",
+    "series": "择时研究",
+    "sort_order": 10003,
+    "cover_url": "/assets/illustrations/quant-portfolio-library-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "timing",
+        "number": 3,
+        "chapter": "3",
+        "chapter_title": "趋势强度与路径稳定性",
+        "minutes": 15,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "f6b5feeb-2b5e-552e-9f24-32acf9c49495"
+    ]
+  },
+  {
+    "id": "ea75c983-63fc-5cbf-9111-e16c6bdc9fb3",
+    "slug": "topic-timing-04",
+    "title": "波动率目标与仓位调整",
+    "summary": "从风险预算推导仓位，区分波动目标与逆方差配置，并检查估计滞后、上限和换手成本。",
+    "track": "专题学习",
+    "series": "择时研究",
+    "sort_order": 10004,
+    "cover_url": "/assets/illustrations/quant-portfolio-library-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "timing",
+        "number": 4,
+        "chapter": "4",
+        "chapter_title": "波动率目标与仓位调整",
+        "minutes": 15,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "f6b5feeb-2b5e-552e-9f24-32acf9c49495"
+    ]
+  },
+  {
+    "id": "45c14be8-7d7a-57f2-951b-2c0ed23b7273",
+    "slug": "topic-timing-05",
+    "title": "市场状态的逐步过滤",
+    "summary": "用两状态模型更新概率，分清过滤与平滑，并把参数估计限制在当时可获得的数据内。",
+    "track": "专题学习",
+    "series": "择时研究",
+    "sort_order": 10005,
+    "cover_url": "/assets/illustrations/quant-portfolio-library-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "timing",
+        "number": 5,
+        "chapter": "5",
+        "chapter_title": "市场状态的逐步过滤",
+        "minutes": 15,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "f6b5feeb-2b5e-552e-9f24-32acf9c49495"
+    ]
+  },
+  {
+    "id": "51b5bef9-8532-5974-8d5a-3babe471953a",
+    "slug": "topic-timing-06",
+    "title": "宏观信息的发布时间与修订",
+    "summary": "建立统计期、发布时间和决策时间三条时间线，使宏观信号只使用当时已经公开的数值。",
+    "track": "专题学习",
+    "series": "择时研究",
+    "sort_order": 10006,
+    "cover_url": "/assets/illustrations/quant-portfolio-library-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "timing",
+        "number": 6,
+        "chapter": "6",
+        "chapter_title": "宏观信息的发布时间与修订",
+        "minutes": 15,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "f6b5feeb-2b5e-552e-9f24-32acf9c49495"
+    ]
+  },
+  {
+    "id": "27f8a46d-095f-51eb-9c0a-b8747fed7d29",
+    "slug": "topic-timing-07",
+    "title": "多资产择时与组合风险",
+    "summary": "把资产预算、方向信号和相关性放在同一个资金约束下，计算组合波动和现金比例。",
+    "track": "专题学习",
+    "series": "择时研究",
+    "sort_order": 10007,
+    "cover_url": "/assets/illustrations/quant-portfolio-library-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "timing",
+        "number": 7,
+        "chapter": "7",
+        "chapter_title": "多资产择时与组合风险",
+        "minutes": 15,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "f6b5feeb-2b5e-552e-9f24-32acf9c49495"
+    ]
+  },
+  {
+    "id": "2b39fae5-e434-575d-8269-fdfb0623eadd",
+    "slug": "topic-timing-08",
+    "title": "成交时点、成本与假突破",
+    "summary": "按持仓时间核算隔夜和日内收益，建立扣费后的自融资账户，并分析反复进出的代价。",
+    "track": "专题学习",
+    "series": "择时研究",
+    "sort_order": 10008,
+    "cover_url": "/assets/illustrations/quant-portfolio-library-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "timing",
+        "number": 8,
+        "chapter": "8",
+        "chapter_title": "成交时点、成本与假突破",
+        "minutes": 15,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "f6b5feeb-2b5e-552e-9f24-32acf9c49495"
+    ]
+  },
+  {
+    "id": "7d5b4044-a910-579b-bc20-2fe28c1e7f0f",
+    "slug": "topic-timing-09",
+    "title": "滚动检验与不确定性",
+    "summary": "按时间划分训练和评价，检查标签重叠、参数尝试与收益相关性，报告分段结果和误差。",
+    "track": "专题学习",
+    "series": "择时研究",
+    "sort_order": 10009,
+    "cover_url": "/assets/illustrations/quant-portfolio-library-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "timing",
+        "number": 9,
+        "chapter": "9",
+        "chapter_title": "滚动检验与不确定性",
+        "minutes": 15,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "f6b5feeb-2b5e-552e-9f24-32acf9c49495"
+    ]
+  },
+  {
+    "id": "81d831d6-58ff-5bc6-99e8-4f17d2aba40f",
+    "slug": "topic-timing-10",
+    "title": "三只 ETF 的趋势规则复现",
+    "summary": "按下一开盘执行固定规则，比较单资产与组合结果，并复核年度收益、成本和时间边界。",
+    "track": "专题学习",
+    "series": "择时研究",
+    "sort_order": 10010,
+    "cover_url": "/assets/illustrations/quant-portfolio-library-v1.webp",
+    "metadata": {
+      "topic": {
+        "key": "timing",
+        "number": 10,
+        "chapter": "10",
+        "chapter_title": "三只 ETF 的趋势规则复现",
+        "minutes": 25,
+        "edition": "2026-10"
+      }
+    },
+    "section_ids": [
+      "f6b5feeb-2b5e-552e-9f24-32acf9c49495"
+    ]
+  }
+]

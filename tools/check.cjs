@@ -33,4 +33,18 @@ for(const book of expansion.books){assert.equal(theory.filter(r=>r.metadata.theo
 const practice=questions.filter(r=>r.metadata.interview.book==='practice'),groups=new Map();
 for(const row of practice){const m=row.metadata.interview;assert.equal(m.topic,m.company||'其他');assert(!/[0-9]|回忆|扫描|图像|有限合伙/.test(m.topic));if(!groups.has(m.topic))groups.set(m.topic,m.chapter);assert.equal(groups.get(m.topic),m.chapter);}
 for(const route of ['index.html','start/index.html','interview/practice/index.html','theory/trading-and-exchanges/index.html']){const html=fs.readFileSync(path.join(root,route),'utf8');assert(html.indexOf('data-nav-section="topics"')<html.indexOf('data-nav-section="theory"'));assert(html.includes('data-nav-section="trading-and-exchanges"'));}
-console.log('Checked '+pages+' pages: internal links, service config, navigation, 66 system lessons, 100 interview units, company groups and '+theory.length+' theory units passed.');
+const topics=JSON.parse(fs.readFileSync(path.join(__dirname,'content/topic-catalog.json'),'utf8'));
+assert.equal(topics.length,136);
+for(const [key,count] of [['ai',10],['alpha101',106],['factors',10],['timing',10]]){
+ const html=fs.readFileSync(path.join(root,'topics',key,'index.html'),'utf8');assert.equal((html.match(/data-topic-unit /g)||[]).length,count,key);
+ assert.equal(topics.filter(r=>r.metadata.topic.key===key).length,count,key);
+}
+const library=JSON.parse(fs.readFileSync(path.join(__dirname,'content/resource-library.json'),'utf8')),resourceHTML=fs.readFileSync(path.join(root,'resources/index.html'),'utf8');
+assert.equal(library.entries.length,249);assert.equal(new Set(library.entries.map(r=>r.category)).size,12);
+assert.equal((resourceHTML.match(/data-level=/g)||[]).length,library.entries.length);
+assert(!resourceHTML.includes('source_document')&&!resourceHTML.includes('source_pages'));
+for(const entry of library.entries)assert(/^https?:\/\//.test(entry.url),entry.title);
+const experience=JSON.parse(fs.readFileSync(path.join(__dirname,'content/interview-experience.json'),'utf8'));
+assert.equal(experience.entries.length,23);assert.equal(experience.platform_links.length,3);
+assert(!fs.existsSync(path.join(root,'2022')),'Legacy blog in deployment');
+console.log('Checked '+pages+' pages: internal links, service config, navigation, 66 system lessons, 100 interview units, '+theory.length+' theory units, 136 topic lessons, 249 resources and 23 experience records passed.');

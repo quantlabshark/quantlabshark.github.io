@@ -1,7 +1,7 @@
 ---
 title: 资料中心
-layout: catalog
+layout: resources
 section: resources
-description: 合成数据、配套代码与官方参考文档。
+description: 课程代码、书籍与课程、数据文档和研究资料。
 ---
 

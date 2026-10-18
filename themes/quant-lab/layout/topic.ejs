@@ -1,0 +1,13 @@
+<% const module=topic_module(page.topic_key),rows=topic_rows(page.topic_key); %>
+<div class="page-wrap" data-topic="<%= module.key %>" data-topic-section="<%= module.section %>">
+ <div class="eyebrow">QUANTLAB · 专题学习</div>
+ <div class="page-heading"><h1><%= module.title %></h1><p><%= module.description %></p></div>
+ <script type="application/json" id="topic-module-data"><%- JSON.stringify(module).replace(/</g,'\u003c') %></script>
+ <div class="topic-toolbar"><label class="search-field"><%- icon('search') %><input id="topic-query" type="search" maxlength="100" aria-label="搜索专题课程" placeholder="<%= module.keywords %>"></label><label class="topic-filter-label">内容分类<select id="topic-filter"><option value="">全部</option></select></label></div>
+ <p id="topic-count" class="muted" role="status" aria-live="polite"><%= rows.length %> 课</p>
+ <div id="topic-catalog" class="lab-card-grid topic-lesson-grid" tabindex="-1" data-lab-catalog="<%= module.section %>" data-catalog-custom><%- topic_catalog(module.key) %></div>
+ <p id="topic-empty" class="lab-empty" hidden>没有匹配的课程，请调整关键词或分类。</p>
+ <nav id="topic-pagination" class="curriculum-pagination" aria-label="专题课程分页"></nav>
+ <p id="topic-sync" class="muted" role="status"></p>
+ <noscript><p>可直接打开课程；分类筛选与分页需要启用 JavaScript。</p></noscript>
+</div>

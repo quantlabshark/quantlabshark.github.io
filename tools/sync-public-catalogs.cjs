@@ -14,11 +14,15 @@ async function main(){
  const theory=(await pages('foamlab_content','id,slug,title,summary,kind,status,sort_order,metadata',q=>q.eq('status','published').not('metadata->theory_book','is',null))).map(r=>({...r,metadata:{theory_book:r.metadata.theory_book}}));
  const books=JSON.parse(fs.readFileSync(path.join(root,'tools/content/theory-books.json'),'utf8'));
  for(const book of books){const count=theory.filter(r=>r.metadata.theory_book.book===book.key).length;if(!book.units||count!==book.units)throw Error(`Expected ${book.units} units for ${book.key}, received ${count}`);}
+ const topics=(await pages('foamlab_content','id,slug,title,summary,track,series,sort_order,cover_url,metadata,section_ids',q=>q.eq('status','published').not('metadata->topic','is',null))).map(r=>({...r,metadata:{topic:r.metadata.topic}}));
+ const modules=JSON.parse(fs.readFileSync(path.join(root,'tools/content/topics.json'),'utf8'));
+ for(const module of modules)if(!topics.some(r=>r.metadata.topic.key===module.key))throw Error('Missing topic content: '+module.key);
  const write=(file,data)=>fs.writeFileSync(path.join(root,file),JSON.stringify(data,null,2)+'\n');
  write('tools/content/navigation.json',nodes);write('tools/content/interview-catalog.json',rows);
  write('tools/content/course-catalog.json',courses);
  write('tools/content/theory-catalog.json',theory);
+ write('tools/content/topic-catalog.json',topics);
  write('source-quant/assets/search-scopes.json',nodes.map(({id,key,name,parent_id,href,visible,sort_order})=>({id,key,name,parent_id,href,visible,sort_order})));
- console.log(`Refreshed ${nodes.length} navigation entries, ${courses.length} system lessons, ${rows.length} interview units and ${theory.length} theory units; no article bodies downloaded.`);
+ console.log(`Refreshed ${nodes.length} navigation entries, ${courses.length} system lessons, ${rows.length} interview units, ${theory.length} theory units and ${topics.length} topic lessons; no article bodies downloaded.`);
 }
 main().catch(e=>{console.error(e.message);process.exitCode=1;});

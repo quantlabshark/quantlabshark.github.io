@@ -1,0 +1,2425 @@
+{
+  "checked": "2026-10-18",
+  "entries": [
+    {
+      "title": "Algorithms for Optimization",
+      "category": "数学统计与优化",
+      "type": "图书",
+      "level": "基础",
+      "description": "从搜索、梯度到约束优化，结合算法实现理解优化问题。",
+      "url": "https://mitpress.mit.edu/9780262039420/algorithms-for-optimization/",
+      "access": "付费图书；公开书目"
+    },
+    {
+      "title": "An Introduction to Statistical Learning",
+      "category": "数学统计与优化",
+      "type": "图书",
+      "level": "基础",
+      "description": "统计学习入门教材，提供 R 与 Python 版本、配套数据和练习。",
+      "url": "https://www.statlearning.com/",
+      "access": "作者公开电子版与课程"
+    },
+    {
+      "title": "Hands-On Genetic Algorithms with Python",
+      "category": "数学统计与优化",
+      "type": "图书",
+      "level": "基础",
+      "description": "Eyal Wirsansky 用 Python 演示遗传算法、约束与参数搜索。",
+      "url": "https://www.packtpub.com/en-us/product/hands-on-genetic-algorithms-with-python-9781838557744",
+      "access": "付费图书；部分示例公开"
+    },
+    {
+      "title": "Linear Algebra and Optimization for Machine Learning",
+      "category": "数学统计与优化",
+      "type": "图书",
+      "level": "基础",
+      "description": "Charu Aggarwal 以机器学习为背景讲解矩阵计算和优化。",
+      "url": "https://link.springer.com/book/10.1007/978-3-030-40344-7",
+      "access": "付费或机构订阅"
+    },
+    {
+      "title": "The Misbehavior of Markets",
+      "category": "数学统计与优化",
+      "type": "图书",
+      "level": "基础",
+      "description": "Benoît Mandelbrot 与 Richard Hudson 讨论金融收益的厚尾与尺度特征。",
+      "url": "https://www.hachettebookgroup.com/titles/benoit-mandelbrot/the-misbehavior-of-markets/9780465043576/?lens=basic-books",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Mike X Cohen：信号处理与数学",
+      "category": "数学统计与优化",
+      "type": "视频",
+      "level": "基础",
+      "description": "从信号、频率、线性代数和数据分析学习计算方法，配合作者课程与代码练习。",
+      "url": "https://sincxpress.com/index.html",
+      "access": "部分公开；部分课程收费"
+    },
+    {
+      "title": "MIT 计算机科学数学",
+      "category": "数学统计与优化",
+      "type": "课程",
+      "level": "基础",
+      "description": "学习证明、离散结构、计数与概率，补充算法和概率推理基础。",
+      "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/",
+      "access": "开放课程"
+    },
+    {
+      "title": "机器学习数学：Imperial College London",
+      "category": "数学统计与优化",
+      "type": "课程",
+      "level": "基础",
+      "description": "学习线性代数、微积分和主成分分析，补充模型推导所需基础。",
+      "url": "https://www.coursera.org/specializations/mathematics-machine-learning",
+      "access": "需注册；学习、测验和证书权限以课程页为准"
+    },
+    {
+      "title": "Accelerated Optimization for Machine Learning",
+      "category": "数学统计与优化",
+      "type": "图书",
+      "level": "进阶",
+      "description": "林宙辰等系统讨论一阶加速优化方法及其收敛性质。",
+      "url": "https://link.springer.com/book/10.1007/978-981-15-2910-8",
+      "access": "付费或机构订阅"
+    },
+    {
+      "title": "Analysis of Financial Time Series",
+      "category": "数学统计与优化",
+      "type": "图书",
+      "level": "进阶",
+      "description": "Ruey Tsay 介绍金融序列的相关性、波动率、非线性与多变量模型。",
+      "url": "https://www.wiley-vch.de/en?option=com_eshop&view=product&isbn=9780470414354",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Bayesian Data Analysis",
+      "category": "数学统计与优化",
+      "type": "图书",
+      "level": "进阶",
+      "description": "作者提供书稿和补充材料，学习贝叶斯模型、计算与诊断。",
+      "url": "https://sites.stat.columbia.edu/gelman/book/",
+      "access": "作者公开书稿和补充资料"
+    },
+    {
+      "title": "Convex Optimization Algorithms",
+      "category": "数学统计与优化",
+      "type": "图书",
+      "level": "进阶",
+      "description": "Dimitri Bertsekas 的优化著作入口，提供目录、补充材料和相关讲义。",
+      "url": "https://faculty.engineering.asu.edu/bertsekas/books",
+      "access": "部分公开；图书购买"
+    },
+    {
+      "title": "First-order and Stochastic Optimization Methods for Machine Learning",
+      "category": "数学统计与优化",
+      "type": "图书",
+      "level": "进阶",
+      "description": "Guanghui Lan 介绍一阶与随机优化算法，适合研究训练算法和收敛分析。",
+      "url": "https://link.springer.com/book/10.1007/978-3-030-39568-1",
+      "access": "付费或机构订阅"
+    },
+    {
+      "title": "Numerical Optimization",
+      "category": "数学统计与优化",
+      "type": "图书",
+      "level": "进阶",
+      "description": "Jorge Nocedal 与 Stephen Wright 介绍无约束和约束优化算法。",
+      "url": "https://link.springer.com/book/10.1007/978-0-387-40065-5",
+      "access": "付费或机构订阅"
+    },
+    {
+      "title": "Probability Theory: The Logic of Science",
+      "category": "数学统计与优化",
+      "type": "图书",
+      "level": "进阶",
+      "description": "E. T. Jaynes 从推断逻辑讲解概率方法；入口为作者机构保存的材料。",
+      "url": "https://bayes.wustl.edu/etj/prob/book.pdf",
+      "access": "机构公开 PDF"
+    },
+    {
+      "title": "Stochastic Calculus and Financial Applications",
+      "category": "数学统计与优化",
+      "type": "图书",
+      "level": "进阶",
+      "description": "J. Michael Steele 介绍随机过程、随机积分与金融应用。",
+      "url": "https://link.springer.com/book/10.1007/978-1-4684-9305-4",
+      "access": "付费或机构订阅"
+    },
+    {
+      "title": "The Elements of Statistical Learning",
+      "category": "数学统计与优化",
+      "type": "图书",
+      "level": "进阶",
+      "description": "作者公开书稿及配套数据，系统学习回归、分类、树模型和模型选择。",
+      "url": "https://hastie.su.domains/ElemStatLearn/",
+      "access": "作者公开电子版"
+    },
+    {
+      "title": "Variable Ordering Structures in Vector Optimization",
+      "category": "数学统计与优化",
+      "type": "图书",
+      "level": "进阶",
+      "description": "Gabriele Eichfelder 讨论向量优化中的可变序结构与最优性概念。",
+      "url": "https://link.springer.com/book/10.1007/978-3-642-54283-1",
+      "access": "付费或机构订阅"
+    },
+    {
+      "title": "Automating Alpha Pt.1 - The Overview",
+      "category": "数学统计与优化",
+      "type": "研究文章",
+      "level": "进阶",
+      "description": "讨论优化、参数搜索与计算实现。",
+      "url": "https://www.algos.org/p/automating-alpha-pt1-the-overview",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Automating Alpha Pt.2 - Best Practices",
+      "category": "数学统计与优化",
+      "type": "研究文章",
+      "level": "进阶",
+      "description": "讨论优化、参数搜索与计算实现。",
+      "url": "https://www.algos.org/p/automating-alpha-pt2-best-practices",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Calculating Implied Volatility... Fast",
+      "category": "数学统计与优化",
+      "type": "研究文章",
+      "level": "进阶",
+      "description": "讨论优化、参数搜索与计算实现。",
+      "url": "https://www.algos.org/p/calculating-implied-volatility-fast",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Continuous Trading",
+      "category": "数学统计与优化",
+      "type": "研究文章",
+      "level": "进阶",
+      "description": "讨论优化、参数搜索与计算实现。",
+      "url": "https://www.algos.org/p/continuous-trading",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Where will crypto go?",
+      "category": "数学统计与优化",
+      "type": "研究文章",
+      "level": "进阶",
+      "description": "讨论优化、参数搜索与计算实现。",
+      "url": "https://www.algos.org/p/where-will-crypto-go",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Measures, Integrals and Martingales 配套解答",
+      "category": "数学统计与优化",
+      "type": "课程",
+      "level": "进阶",
+      "description": "作者提供测度、积分和鞅教材的配套解答，适合检验概率论推导。",
+      "url": "http://www.motapa.de/measures_integrals_and_martingales/solutions-mims-2e.pdf",
+      "access": "作者公开 PDF"
+    },
+    {
+      "title": "MIT 金融应用数学",
+      "category": "数学统计与优化",
+      "type": "课程",
+      "level": "进阶",
+      "description": "通过金融问题学习概率、随机过程、优化和数值计算。",
+      "url": "https://ocw.mit.edu/courses/18-642-topics-in-mathematics-with-applications-in-finance-fall-2024/",
+      "access": "开放课程；采用当前公开版本"
+    },
+    {
+      "title": "Jupyter",
+      "category": "编程与研究工程",
+      "type": "官方文档",
+      "level": "入门",
+      "description": "使用交互笔记本组织数据、代码与结果。",
+      "url": "https://jupyter.org/",
+      "access": "开源软件；文档免费"
+    },
+    {
+      "title": "Python 文档",
+      "category": "编程与研究工程",
+      "type": "官方文档",
+      "level": "入门",
+      "description": "查询语言语法、标准库、环境和错误处理。",
+      "url": "https://docs.python.org/3/",
+      "access": "免费阅读"
+    },
+    {
+      "title": "Spyder",
+      "category": "编程与研究工程",
+      "type": "官方文档",
+      "level": "入门",
+      "description": "科学计算开发环境，适合脚本调试和变量查看。",
+      "url": "https://www.spyder-ide.org/",
+      "access": "开源软件；文档免费"
+    },
+    {
+      "title": "Anaconda",
+      "category": "编程与研究工程",
+      "type": "研究工具",
+      "level": "入门",
+      "description": "Python 环境与软件包管理工具；组织使用需核对发行版和服务条款。",
+      "url": "https://www.anaconda.com/",
+      "access": "个人与机构许可条件不同"
+    },
+    {
+      "title": "Barter：Rust 交易框架",
+      "category": "编程与研究工程",
+      "type": "代码",
+      "level": "基础",
+      "description": "研究事件驱动交易框架、市场数据和策略模块。",
+      "url": "https://github.com/barter-rs/barter-rs",
+      "access": "公开代码；使用前核对仓库许可证和依赖"
+    },
+    {
+      "title": "Beatz 研究项目目录",
+      "category": "编程与研究工程",
+      "type": "代码",
+      "level": "基础",
+      "description": "浏览作者公开研究项目；每个仓库的许可和维护状态分别确认。",
+      "url": "https://github.com/beatzxbt",
+      "access": "公开代码；使用前核对仓库许可证和依赖"
+    },
+    {
+      "title": "dlib C++ Library",
+      "category": "编程与研究工程",
+      "type": "代码",
+      "level": "基础",
+      "description": "C++ 机器学习与数值计算库，可查询算法、接口和示例。",
+      "url": "https://dlib.net/",
+      "access": "开源代码与免费文档"
+    },
+    {
+      "title": "Gamma Ray 交易机器人示例",
+      "category": "编程与研究工程",
+      "type": "代码",
+      "level": "基础",
+      "description": "阅读高频交易机器人项目结构，关注旧接口与维护状态。",
+      "url": "https://github.com/hello2all/gamma-ray",
+      "access": "公开代码；使用前核对仓库许可证和依赖"
+    },
+    {
+      "title": "GDAX 历史交易示例",
+      "category": "编程与研究工程",
+      "type": "代码",
+      "level": "基础",
+      "description": "作为早期交易机器人实现阅读；交易所和接口已经变化，不直接实盘运行。",
+      "url": "https://github.com/clfrenchgit/gdax-bot",
+      "access": "公开代码；使用前核对仓库许可证和依赖"
+    },
+    {
+      "title": "Mastering Python for Finance 配套代码",
+      "category": "编程与研究工程",
+      "type": "代码",
+      "level": "基础",
+      "description": "按金融计算主题练习 Python 示例，运行前核对依赖版本。",
+      "url": "https://github.com/jamesmawm/Mastering-Python-for-Finance-source-codes",
+      "access": "公开代码；使用前核对仓库许可证和依赖"
+    },
+    {
+      "title": "PySpark 股票特征工程",
+      "category": "编程与研究工程",
+      "type": "代码",
+      "level": "基础",
+      "description": "用分布式数据处理练习股票特征构造与数据变换。",
+      "url": "https://github.com/MiaDor12/Advanced_Feature_Engineering_of_Raw_Data_of_Stocks-with_PySpark/blob/master/Advanced%20feature%20engineering%20with%20pyspark%20on%20raw%20data%20of%20stocks.ipynb",
+      "access": "公开代码；使用前核对仓库许可证和依赖"
+    },
+    {
+      "title": "Python 信号处理示例",
+      "category": "编程与研究工程",
+      "type": "代码",
+      "level": "基础",
+      "description": "通过数值例子学习滤波、频域分析和信号表示。",
+      "url": "https://github.com/SparkAbhi/SignalProcessingWithPython",
+      "access": "公开代码；使用前核对仓库许可证和依赖"
+    },
+    {
+      "title": "QuantResearch 研究代码",
+      "category": "编程与研究工程",
+      "type": "代码",
+      "level": "基础",
+      "description": "包含金融数据分析和策略研究示例，可结合文章追踪方法实现。",
+      "url": "https://github.com/letianzj/QuantResearch",
+      "access": "公开代码；使用前核对仓库许可证和依赖"
+    },
+    {
+      "title": "VPIN 指标实现",
+      "category": "编程与研究工程",
+      "type": "代码",
+      "level": "基础",
+      "description": "阅读成交量同步订单流指标的计算步骤。",
+      "url": "https://github.com/jheusser/vpin",
+      "access": "公开代码；使用前核对仓库许可证和依赖"
+    },
+    {
+      "title": "价格方向预测示例",
+      "category": "编程与研究工程",
+      "type": "代码",
+      "level": "基础",
+      "description": "研究特征、预测标签和分类模型实现；须自行检查时间划分。",
+      "url": "https://github.com/alexbotsula/Price_direction_forecast",
+      "access": "公开代码；使用前核对仓库许可证和依赖"
+    },
+    {
+      "title": "市场微观结构模型课程代码",
+      "category": "编程与研究工程",
+      "type": "代码",
+      "level": "基础",
+      "description": "练习订单流、价格形成和交易模型的数值实现。",
+      "url": "https://github.com/gjimzhou/MTH9879-Market-Microstructure-Models",
+      "access": "公开代码；使用前核对仓库许可证和依赖"
+    },
+    {
+      "title": "机器学习交易教材配套代码",
+      "category": "编程与研究工程",
+      "type": "代码",
+      "level": "基础",
+      "description": "包含特征工程、模型训练和金融数据案例，适合逐章复现实验。",
+      "url": "https://github.com/stefan-jansen/machine-learning-for-trading",
+      "access": "公开代码；使用前核对仓库许可证和依赖"
+    },
+    {
+      "title": "股票特征生成示例",
+      "category": "编程与研究工程",
+      "type": "代码",
+      "level": "基础",
+      "description": "通过笔记本学习金融时间序列特征的计算。",
+      "url": "https://github.com/hjeffreywang/Stock_feature_engineering/blob/master/Feature_generation.ipynb",
+      "access": "公开代码；使用前核对仓库许可证和依赖"
+    },
+    {
+      "title": "配对交易研究示例",
+      "category": "编程与研究工程",
+      "type": "代码",
+      "level": "基础",
+      "description": "比较配对构造、价差和均值回归策略的代码。",
+      "url": "https://github.com/financialnoob/pairs_trading",
+      "access": "公开代码；使用前核对仓库许可证和依赖"
+    },
+    {
+      "title": "The Rust Programming Language",
+      "category": "编程与研究工程",
+      "type": "图书",
+      "level": "基础",
+      "description": "Rust 官方教材，学习所有权、模式匹配、错误处理和并发基础。",
+      "url": "https://doc.rust-lang.org/book/",
+      "access": "免费在线阅读"
+    },
+    {
+      "title": "QuantConnect 文档",
+      "category": "编程与研究工程",
+      "type": "官方文档",
+      "level": "基础",
+      "description": "学习数据订阅、研究、回测和订单接口，配合平台示例搭建策略。",
+      "url": "https://www.quantconnect.com/docs/v2/",
+      "access": "文档免费；云服务分档收费"
+    },
+    {
+      "title": "R Project",
+      "category": "编程与研究工程",
+      "type": "官方文档",
+      "level": "基础",
+      "description": "统计计算语言与官方手册入口，适合时间序列和计量分析。",
+      "url": "https://www.r-project.org/",
+      "access": "开源软件；文档免费"
+    },
+    {
+      "title": "Lobster：Rust 限价订单簿",
+      "category": "编程与研究工程",
+      "type": "代码",
+      "level": "进阶",
+      "description": "在内存中维护限价订单簿，适合研究价格层级、订单增删和性能。",
+      "url": "https://github.com/rubik/lobster",
+      "access": "公开代码；使用前核对仓库许可证和依赖"
+    },
+    {
+      "title": "Python 限价订单簿示例",
+      "category": "编程与研究工程",
+      "type": "代码",
+      "level": "进阶",
+      "description": "学习订单簿状态维护、事件处理和基础数据结构。",
+      "url": "https://github.com/Crypto-toolbox/HFT-Orderbook",
+      "access": "公开代码；使用前核对仓库许可证和依赖"
+    },
+    {
+      "title": "VPIN 与订单流研究示例",
+      "category": "编程与研究工程",
+      "type": "代码",
+      "level": "进阶",
+      "description": "练习订单流统计与 VPIN 指标；结果依赖数据口径和分类方法。",
+      "url": "https://github.com/theopenstreet/VPIN_HFT",
+      "access": "公开代码；使用前核对仓库许可证和依赖"
+    },
+    {
+      "title": "共形预测资源目录",
+      "category": "编程与研究工程",
+      "type": "代码",
+      "level": "进阶",
+      "description": "汇集共形预测论文、教程和软件，适合研究预测区间与覆盖率。",
+      "url": "https://github.com/valeman/awesome-conformal-prediction",
+      "access": "公开代码；使用前核对仓库许可证和依赖"
+    },
+    {
+      "title": "Professional Automated Trading",
+      "category": "编程与研究工程",
+      "type": "图书",
+      "level": "进阶",
+      "description": "Eugene Durenard 讨论自动化交易系统的模块、运行机制和实施问题。",
+      "url": "https://www.wiley-vch.de/en?option=com_eshop&view=product&isbn=9781118129852",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Cython",
+      "category": "编程与研究工程",
+      "type": "官方文档",
+      "level": "进阶",
+      "description": "将部分 Python 计算编译为扩展模块，适合性能优化练习。",
+      "url": "https://cython.org/",
+      "access": "开源软件；文档免费"
+    },
+    {
+      "title": "NautilusTrader 文档",
+      "category": "编程与研究工程",
+      "type": "官方文档",
+      "level": "进阶",
+      "description": "事件驱动回测和交易系统文档，关注数据、账户和订单状态建模。",
+      "url": "https://nautilustrader.io/docs/latest/",
+      "access": "文档与开源项目免费"
+    },
+    {
+      "title": "Orange Data Mining",
+      "category": "机器学习与信号",
+      "type": "研究工具",
+      "level": "入门",
+      "description": "通过可视化工作流练习数据分析、分类和聚类。",
+      "url": "https://orangedatamining.com/",
+      "access": "开源软件；文档免费"
+    },
+    {
+      "title": "StatQuest",
+      "category": "机器学习与信号",
+      "type": "视频",
+      "level": "入门",
+      "description": "Josh Starmer 用示例解释统计、机器学习和神经网络，适合先建立概念再阅读公式。",
+      "url": "https://statquest.org/",
+      "access": "公开视频；部分教材另购"
+    },
+    {
+      "title": "金融市场：Yale",
+      "category": "机器学习与信号",
+      "type": "课程",
+      "level": "入门",
+      "description": "介绍金融市场、风险、机构与行为金融，适合作为金融入门课程。",
+      "url": "https://www.coursera.org/learn/financial-markets-global",
+      "access": "需注册；学习、测验和证书权限以课程页为准"
+    },
+    {
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow",
+      "category": "机器学习与信号",
+      "type": "图书",
+      "level": "基础",
+      "description": "Aurélien Géron 通过代码练习机器学习与神经网络的训练、评价和实现。",
+      "url": "https://www.oreilly.com/library/view/hands-on-machine-learning/9781098125967/",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Numerai",
+      "category": "机器学习与信号",
+      "type": "数据",
+      "level": "基础",
+      "description": "使用平台提供的数据研究预测与集成模型，按比赛规则评价模型。",
+      "url": "https://numer.ai/",
+      "access": "注册；数据与竞赛规则需单独确认"
+    },
+    {
+      "title": "NYU 深度学习课程",
+      "category": "机器学习与信号",
+      "type": "课程",
+      "level": "基础",
+      "description": "Alfredo Canziani 与 Yann LeCun 的课程资料，学习神经网络、表示和训练方法。",
+      "url": "https://github.com/Atcold/NYU-DLSP20",
+      "access": "公开课程材料与代码"
+    },
+    {
+      "title": "TensorFlow 开发课程",
+      "category": "机器学习与信号",
+      "type": "课程",
+      "level": "基础",
+      "description": "通过图像、文本与时间序列案例练习神经网络实现。",
+      "url": "https://www.coursera.org/professional-certificates/tensorflow-in-practice",
+      "access": "需注册；学习、测验和证书权限以课程页为准"
+    },
+    {
+      "title": "投资管理、Python 与机器学习：EDHEC",
+      "category": "机器学习与信号",
+      "type": "课程",
+      "level": "基础",
+      "description": "用 Python 练习投资组合、风险分析与机器学习应用。",
+      "url": "https://www.coursera.org/specializations/investment-management-python-machine-learning",
+      "access": "需注册；学习、测验和证书权限以课程页为准"
+    },
+    {
+      "title": "神经网络与深度学习",
+      "category": "机器学习与信号",
+      "type": "课程",
+      "level": "基础",
+      "description": "从网络结构、反向传播和训练步骤理解深度学习。",
+      "url": "https://www.coursera.org/learn/neural-networks-deep-learning",
+      "access": "需注册；学习、测验和证书权限以课程页为准"
+    },
+    {
+      "title": "自然语言处理",
+      "category": "机器学习与信号",
+      "type": "课程",
+      "level": "基础",
+      "description": "学习文本分类、词向量、序列和注意力模型。",
+      "url": "https://www.coursera.org/specializations/natural-language-processing",
+      "access": "需注册；学习、测验和证书权限以课程页为准"
+    },
+    {
+      "title": "Advances in Financial Machine Learning",
+      "category": "机器学习与信号",
+      "type": "图书",
+      "level": "进阶",
+      "description": "Marcos López de Prado 讨论金融标签、样本依赖、验证方法与策略研究中的过拟合。",
+      "url": "https://www.wiley-vch.de/en?option=com_eshop&view=product&isbn=9781119482086",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Pattern Recognition and Machine Learning",
+      "category": "机器学习与信号",
+      "type": "图书",
+      "level": "进阶",
+      "description": "Christopher Bishop 的概率机器学习教材，包含模型推断与训练方法。",
+      "url": "https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/",
+      "access": "作者机构公开电子版"
+    },
+    {
+      "title": "Probabilistic Machine Learning",
+      "category": "机器学习与信号",
+      "type": "图书",
+      "level": "进阶",
+      "description": "Kevin Murphy 的教材、代码和勘误入口，适合系统学习概率建模。",
+      "url": "https://github.com/probml/pml-book",
+      "access": "公开书稿与代码"
+    },
+    {
+      "title": "保形预测与做市商净头寸区间",
+      "category": "机器学习与信号",
+      "type": "论文",
+      "level": "进阶",
+      "description": "使用共形预测估计金融时间序列区间，关注覆盖率和数据依赖条件。",
+      "url": "http://proceedings.mlr.press/v128/wisniewski20a.html",
+      "access": "开放阅读"
+    },
+    {
+      "title": "TensorFlow 进阶方法",
+      "category": "机器学习与信号",
+      "type": "课程",
+      "level": "进阶",
+      "description": "进一步学习自定义训练、模型和应用技术。",
+      "url": "https://www.coursera.org/specializations/tensorflow-advanced-techniques",
+      "access": "需注册；学习、测验和证书权限以课程页为准"
+    },
+    {
+      "title": "生成对抗网络",
+      "category": "机器学习与信号",
+      "type": "课程",
+      "level": "进阶",
+      "description": "学习生成器、判别器和训练稳定性，适合已有深度学习基础的读者。",
+      "url": "https://www.coursera.org/specializations/generative-adversarial-networks-gans",
+      "access": "需注册；学习、测验和证书权限以课程页为准"
+    },
+    {
+      "title": "金融机器学习与强化学习",
+      "category": "机器学习与信号",
+      "type": "课程",
+      "level": "进阶",
+      "description": "将机器学习、动态决策与金融模型联系起来。",
+      "url": "https://www.coursera.org/specializations/machine-learning-reinforcement-finance",
+      "access": "需注册；学习、测验和证书权限以课程页为准"
+    },
+    {
+      "title": "Algorithmic Trading",
+      "category": "策略与投资组合",
+      "type": "图书",
+      "level": "基础",
+      "description": "Ernest Chan 分析均值回归、动量和交易实现，适合从策略假设进入回测练习。",
+      "url": "https://www.wiley-vch.de/en?option=com_eshop&view=product&isbn=9781118460146",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Way of the Turtle",
+      "category": "策略与投资组合",
+      "type": "图书",
+      "level": "基础",
+      "description": "Curtis Faith 解释趋势交易规则、头寸规模与交易纪律，适合与回测练习结合。",
+      "url": "https://www.mheducation.com/highered/mhp/product/way-turtle-secret-methods-turned-ordinary-people-into-legendary-traders.html",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Tick Talk - Ep1 S1",
+      "category": "策略与投资组合",
+      "type": "播客",
+      "level": "基础",
+      "description": "量化研究与交易实践访谈。",
+      "url": "https://www.algos.org/p/tick-talk-ep1-s1",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Breaking Down Momentum Strategies",
+      "category": "策略与投资组合",
+      "type": "研究文章",
+      "level": "基础",
+      "description": "拆解动量信号和策略研究步骤。",
+      "url": "https://www.algos.org/p/breaking-down-momentum-strategies",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Eigen-vesting：用线性代数构造组合",
+      "category": "策略与投资组合",
+      "type": "研究文章",
+      "level": "基础",
+      "description": "通过作者的模型或实现案例研究订单簿、市场机制和策略；运行时核对数据与假设。",
+      "url": "https://srome.github.io/Eigenvesting-I-Linear-Algebra-Can-Help-You-Choose-Your-Stock-Portfolio/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Event-Based Alpha: A Quick Guide",
+      "category": "策略与投资组合",
+      "type": "研究文章",
+      "level": "基础",
+      "description": "讨论套利结构、资金费用、执行和数据处理。",
+      "url": "https://www.algos.org/p/event-based-alpha-a-quick-guide",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Execution - Without The Fluff",
+      "category": "策略与投资组合",
+      "type": "研究文章",
+      "level": "基础",
+      "description": "讨论套利结构、资金费用、执行和数据处理。",
+      "url": "https://www.algos.org/p/execution-without-the-fluff",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Eyeballing A Spread - by Liquidity Goblin",
+      "category": "策略与投资组合",
+      "type": "研究文章",
+      "level": "基础",
+      "description": "通过作者的模型或实现案例研究订单簿、市场机制和策略；运行时核对数据与假设。",
+      "url": "https://www.liquiditygoblin.com/p/eyeballing-a-spread",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "How to level up your arb game",
+      "category": "策略与投资组合",
+      "type": "研究文章",
+      "level": "基础",
+      "description": "讨论套利结构、资金费用、执行和数据处理。",
+      "url": "https://www.algos.org/p/how-to-level-up-your-arb-game",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "相关性与协整的日内配对交易示例",
+      "category": "策略与投资组合",
+      "type": "研究文章",
+      "level": "基础",
+      "description": "QuantConnect 的配对交易研究示例，结合模型、代码和评价设置阅读。",
+      "url": "https://www.quantconnect.com/research/15347/intraday-dynamic-pairs-trading-using-correlation-and-cointegration-approach/p1",
+      "access": "文章公开；运行环境可能需注册"
+    },
+    {
+      "title": "Low Latency Dup. Data Aggregation",
+      "category": "策略与投资组合",
+      "type": "研究文章",
+      "level": "基础",
+      "description": "讨论套利结构、资金费用、执行和数据处理。",
+      "url": "https://www.algos.org/p/low-latency-dup-data-aggregation",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Mean Reversion Statistical Arbitrage Strategy In Stocks",
+      "category": "策略与投资组合",
+      "type": "研究文章",
+      "level": "基础",
+      "description": "QuantConnect 的配对交易研究示例，结合模型、代码和评价设置阅读。",
+      "url": "https://www.quantconnect.com/research/15355/mean-reversion-statistical-arbitrage-strategy-in-stocks/p1",
+      "access": "文章公开；运行环境可能需注册"
+    },
+    {
+      "title": "Pairs Trading Copula Vs Cointegration",
+      "category": "策略与投资组合",
+      "type": "研究文章",
+      "level": "基础",
+      "description": "QuantConnect 的配对交易研究示例，结合模型、代码和评价设置阅读。",
+      "url": "https://www.quantconnect.com/research/15298/pairs-trading-copula-vs-cointegration/p1",
+      "access": "文章公开；运行环境可能需注册"
+    },
+    {
+      "title": "Pairs Trading With Country ETFs",
+      "category": "策略与投资组合",
+      "type": "研究文章",
+      "level": "基础",
+      "description": "QuantConnect 的配对交易研究示例，结合模型、代码和评价设置阅读。",
+      "url": "https://www.quantconnect.com/research/15299/pairs-trading-with-country-etfs/p1",
+      "access": "文章公开；运行环境可能需注册"
+    },
+    {
+      "title": "Pairs Trading With Stocks",
+      "category": "策略与投资组合",
+      "type": "研究文章",
+      "level": "基础",
+      "description": "QuantConnect 的配对交易研究示例，结合模型、代码和评价设置阅读。",
+      "url": "https://www.quantconnect.com/research/15300/pairs-trading-with-stocks/p1",
+      "access": "文章公开；运行环境可能需注册"
+    },
+    {
+      "title": "Research - Hudson & Thames",
+      "category": "策略与投资组合",
+      "type": "研究文章",
+      "level": "基础",
+      "description": "学习配对交易、随机过程校准和策略研究方法。",
+      "url": "https://hudsonthames.org/research/",
+      "access": "文章公开；部分产品收费"
+    },
+    {
+      "title": "Seasonality - A Comprehensive Overview",
+      "category": "策略与投资组合",
+      "type": "研究文章",
+      "level": "基础",
+      "description": "研究日历规律与商品季节性。",
+      "url": "https://www.algos.org/p/seasonality-a-comprehensive-overview",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Seasonality in Commodities Markets",
+      "category": "策略与投资组合",
+      "type": "研究文章",
+      "level": "基础",
+      "description": "研究日历规律与商品季节性。",
+      "url": "https://www.algos.org/p/seasonality-in-commodities-markets",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Small Trader Alpha #2 - Advanced Approaches",
+      "category": "策略与投资组合",
+      "type": "研究文章",
+      "level": "基础",
+      "description": "讨论套利结构、资金费用、执行和数据处理。",
+      "url": "https://www.algos.org/p/small-trader-alpha-2-advanced-arbitrage",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Small Trader Alpha #3 - Triangles",
+      "category": "策略与投资组合",
+      "type": "研究文章",
+      "level": "基础",
+      "description": "讨论套利结构、资金费用、执行和数据处理。",
+      "url": "https://www.algos.org/p/small-trader-alpha-3-triangles",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Small Trader Alpha #4 - Funding Arbitrage",
+      "category": "策略与投资组合",
+      "type": "研究文章",
+      "level": "基础",
+      "description": "讨论套利结构、资金费用、执行和数据处理。",
+      "url": "https://www.algos.org/p/small-trader-alpha-4-funding-arbitrage",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Small Trader Alpha #6: Perpetual Arbitrage",
+      "category": "策略与投资组合",
+      "type": "研究文章",
+      "level": "基础",
+      "description": "讨论套利结构、资金费用、执行和数据处理。",
+      "url": "https://www.algos.org/p/small-trader-alpha-6-perpetual-arbitrage",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Small Trader Alpha - Another Real Strategy",
+      "category": "策略与投资组合",
+      "type": "研究文章",
+      "level": "基础",
+      "description": "讨论套利结构、资金费用、执行和数据处理。",
+      "url": "https://www.algos.org/p/small-trader-alpha-another-real-strategy",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "The Comprehensive Introduction to Pairs Trading - Hudson & Thames",
+      "category": "策略与投资组合",
+      "type": "研究文章",
+      "level": "基础",
+      "description": "学习配对交易、随机过程校准和策略研究方法。",
+      "url": "https://hudsonthames.org/definitive-guide-to-pairs-trading/",
+      "access": "文章公开；部分产品收费"
+    },
+    {
+      "title": "资金费率套利机制",
+      "category": "策略与投资组合",
+      "type": "研究文章",
+      "level": "基础",
+      "description": "项目官方文档解释永续合约资金费率与对冲结构。",
+      "url": "https://docs.trade.polynomial.fi/strategies-and-tools/funding-rate-arbitrage-101",
+      "access": "免费阅读"
+    },
+    {
+      "title": "Advanced Algorithmic Trading",
+      "category": "策略与投资组合",
+      "type": "图书",
+      "level": "进阶",
+      "description": "QuantStart 的算法交易教材，讨论统计方法、策略研究与实现。",
+      "url": "https://www.quantstart.com/advanced-algorithmic-trading-ebook/",
+      "access": "付费教材；公开目录"
+    },
+    {
+      "title": "Advanced Portfolio Management",
+      "category": "策略与投资组合",
+      "type": "图书",
+      "level": "进阶",
+      "description": "Giuseppe Paleologo 将研究观点转化为组合权重，讨论风险、预测能力与约束。",
+      "url": "https://www.wiley-vch.de/en?option=com_eshop&view=product&isbn=9781119789796",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Expected Returns",
+      "category": "策略与投资组合",
+      "type": "图书",
+      "level": "进阶",
+      "description": "Antti Ilmanen 系统讨论不同资产和策略的风险溢价、估计方法及组合配置。",
+      "url": "https://onlinelibrary.wiley.com/doi/book/10.1002/9781118467190",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Finding Alphas",
+      "category": "策略与投资组合",
+      "type": "图书",
+      "level": "进阶",
+      "description": "围绕因子构造、检验和组合，介绍将市场假设转化为可计算信号的方法。",
+      "url": "https://www.wiley-vch.de/en?option=com_eshop&view=product&isbn=9781119571216",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Machine Trading",
+      "category": "策略与投资组合",
+      "type": "图书",
+      "level": "进阶",
+      "description": "Ernest Chan 讨论模型构建、机器学习信号和自动化交易中的研究问题。",
+      "url": "https://www.wiley-vch.de/en?option=com_eshop&view=product&isbn=9781119219606",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Quantitative Portfolio Management",
+      "category": "策略与投资组合",
+      "type": "图书",
+      "level": "进阶",
+      "description": "Michael Isichenko 讨论统计套利、风险模型、组合优化和研究系统。",
+      "url": "https://www.wiley-vch.de/en?option=com_eshop&view=product&isbn=9781119821328",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "The Elements of Quantitative Investing",
+      "category": "策略与投资组合",
+      "type": "图书",
+      "level": "进阶",
+      "description": "Giuseppe Paleologo 讨论量化投资中的预测、风险与组合管理。",
+      "url": "https://www.wiley.com/en-be/the-elements-of-quantitative-investing-p-9781394265466",
+      "access": "付费图书；公开书目"
+    },
+    {
+      "title": "Option Trading",
+      "category": "衍生品与波动率",
+      "type": "图书",
+      "level": "基础",
+      "description": "Euan Sinclair 从定价和波动率出发分析期权策略与风险。",
+      "url": "https://www.wiley-vch.de/en?option=com_eshop&view=product&isbn=9780470497104",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Trading Options Greeks",
+      "category": "衍生品与波动率",
+      "type": "图书",
+      "level": "基础",
+      "description": "Dan Passarelli 用期权敏感度解释价格、时间和波动率变化对头寸的影响。",
+      "url": "https://www.wiley-vch.de/en?option=com_eshop&view=product&isbn=9781118133163",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Currency Derivatives",
+      "category": "衍生品与波动率",
+      "type": "图书",
+      "level": "进阶",
+      "description": "David DeRosa 介绍外汇期权、定价模型与汇率风险对冲。",
+      "url": "https://www.wiley-vch.de/en?option=com_eshop&view=product&isbn=9780471252672",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Dynamic Hedging",
+      "category": "衍生品与波动率",
+      "type": "图书",
+      "level": "进阶",
+      "description": "Nassim Taleb 从头寸管理角度分析非线性风险、对冲和市场变化。",
+      "url": "https://www.wiley-vch.de/en?option=com_eshop&view=product&isbn=9780471152804",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Exotic Options and Hybrids",
+      "category": "衍生品与波动率",
+      "type": "图书",
+      "level": "进阶",
+      "description": "Mohamed Bouzoubaa 与 Adel Osseiran 讨论奇异期权、混合产品及其定价和对冲。",
+      "url": "https://www.wiley-vch.de/en?option=com_eshop&view=product&isbn=9780470688038",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Positional Option Trading",
+      "category": "衍生品与波动率",
+      "type": "图书",
+      "level": "进阶",
+      "description": "Euan Sinclair 将波动率观点与期权结构、仓位和退出安排结合。",
+      "url": "https://www.wiley-vch.de/en?option=com_eshop&view=product&isbn=9781119583516",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "The Volatility Smile",
+      "category": "衍生品与波动率",
+      "type": "图书",
+      "level": "进阶",
+      "description": "Emanuel Derman 与 Michael Miller 解释波动率微笑及其定价含义。",
+      "url": "https://www.wiley-vch.de/en?option=com_eshop&view=product&isbn=9781118959169",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "The Volatility Surface",
+      "category": "衍生品与波动率",
+      "type": "图书",
+      "level": "进阶",
+      "description": "Jim Gatheral 分析隐含波动率曲面、模型和市场数据之间的联系。",
+      "url": "https://www.wiley-vch.de/en?option=com_eshop&view=product&isbn=9780471792512",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Trading Volatility",
+      "category": "衍生品与波动率",
+      "type": "图书",
+      "level": "进阶",
+      "description": "Colin Bennett 讨论波动率交易、期权结构与风险，提供作者公开版本。",
+      "url": "https://www.trading-volatility.com/Trading-Volatility.pdf",
+      "access": "作者公开 PDF"
+    },
+    {
+      "title": "Volatility Trading",
+      "category": "衍生品与波动率",
+      "type": "图书",
+      "level": "进阶",
+      "description": "Euan Sinclair 讨论波动率估计、期权头寸与交易成本之间的关系。",
+      "url": "https://www.wiley-vch.de/en?option=com_eshop&view=product&isbn=9781118347133",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Deribit API 文档",
+      "category": "衍生品与波动率",
+      "type": "官方文档",
+      "level": "进阶",
+      "description": "查询期权、期货合约和行情接口，适合期权数据格式练习。",
+      "url": "https://docs.deribit.com/",
+      "access": "文档公开；账户和地区条件各异"
+    },
+    {
+      "title": "Dark Pools and High Frequency Trading For Dummies",
+      "category": "市场微观结构与执行",
+      "type": "图书",
+      "level": "入门",
+      "description": "介绍暗池和高频交易的参与者、订单机制及市场结构。",
+      "url": "https://www.wiley-vch.de/en?option=com_eshop&view=product&isbn=9781118879191",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "The Derivative",
+      "category": "市场微观结构与执行",
+      "type": "播客",
+      "level": "基础",
+      "description": "RCM Alternatives 的衍生品、量化和交易研究访谈。",
+      "url": "https://www.rcmalternatives.com/education/podcast-the-derivative/",
+      "access": "公开节目"
+    },
+    {
+      "title": "Option Market Making",
+      "category": "市场微观结构与执行",
+      "type": "图书",
+      "level": "进阶",
+      "description": "Allen Jan Baird 讨论期权报价、库存和风险管理。",
+      "url": "https://www.wiley-vch.de/en?option=com_eshop&view=product&isbn=9780471578321",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Hummingbot Avellaneda 做市文档",
+      "category": "市场微观结构与执行",
+      "type": "官方文档",
+      "level": "进阶",
+      "description": "阅读库存控制、报价参数与策略配置，结合模型假设理解做市行为。",
+      "url": "https://hummingbot.org/strategies/v1-strategies/avellaneda-market-making/",
+      "access": "开源项目文档"
+    },
+    {
+      "title": "Backtesting Microstructure Strategies",
+      "category": "市场微观结构与执行",
+      "type": "研究文章",
+      "level": "进阶",
+      "description": "通过作者的模型或实现案例研究订单簿、市场机制和策略；运行时核对数据与假设。",
+      "url": "https://rickyhan.com/jekyll/update/2019/12/22/how-to-simulate-market-microstructure.html",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Caveats in Calibrating the OU Process - Hudson & Thames",
+      "category": "市场微观结构与执行",
+      "type": "研究文章",
+      "level": "进阶",
+      "description": "学习配对交易、随机过程校准和策略研究方法。",
+      "url": "https://hudsonthames.org/caveats-in-calibrating-the-ou-process/",
+      "access": "文章公开；部分产品收费"
+    },
+    {
+      "title": "Cointegration and Pairs Trading",
+      "category": "市场微观结构与执行",
+      "type": "研究文章",
+      "level": "进阶",
+      "description": "通过作者的模型或实现案例研究订单簿、市场机制和策略；运行时核对数据与假设。",
+      "url": "https://letianzj.github.io/cointegration-pairs-trading.html",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "HFT in My Backyard：高频交易基础设施",
+      "category": "市场微观结构与执行",
+      "type": "研究文章",
+      "level": "进阶",
+      "description": "通过作者的模型或实现案例研究订单簿、市场机制和策略；运行时核对数据与假设。",
+      "url": "https://sniperinmahwah.wordpress.com/2014/09/22/hft-in-my-backyard-part-i/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "高速限价订单簿的实现",
+      "category": "市场微观结构与执行",
+      "type": "研究文章",
+      "level": "进阶",
+      "description": "通过作者的模型或实现案例研究订单簿、市场机制和策略；运行时核对数据与假设。",
+      "url": "https://web.archive.org/web/20110219163448/http://howtohft.wordpress.com/2011/02/15/how-to-build-a-fast-limit-order-book/",
+      "access": "历史网页存档"
+    },
+    {
+      "title": "Limit Order Book Implementation for Low Latency Trading (in C++)",
+      "category": "市场微观结构与执行",
+      "type": "研究文章",
+      "level": "进阶",
+      "description": "通过作者的模型或实现案例研究订单簿、市场机制和策略；运行时核对数据与假设。",
+      "url": "https://alexabosi.wordpress.com/2014/08/28/limit-order-book-implementation-for-low-latency-trading-in-c/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Machine Learning Based Statistical Arbitrage",
+      "category": "市场微观结构与执行",
+      "type": "研究文章",
+      "level": "进阶",
+      "description": "通过作者的模型或实现案例研究订单簿、市场机制和策略；运行时核对数据与假设。",
+      "url": "https://jonathankinlay.com/2021/05/machine-learning-based-statistical-arbitrage/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Momentum Strategy from “Stocks on the Move” in Python",
+      "category": "市场微观结构与执行",
+      "type": "研究文章",
+      "level": "进阶",
+      "description": "通过作者的模型或实现案例研究订单簿、市场机制和策略；运行时核对数据与假设。",
+      "url": "https://teddykoker.com/2019/05/momentum-strategy-from-stocks-on-the-move-in-python/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Nanex - Ongoing Research - Market Events and Phenomena",
+      "category": "市场微观结构与执行",
+      "type": "研究文章",
+      "level": "进阶",
+      "description": "通过作者的模型或实现案例研究订单簿、市场机制和策略；运行时核对数据与假设。",
+      "url": "http://www.nanex.net/FlashCrash/OngoingResearch.html",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "The Intelligent Investor",
+      "category": "基本面与估值",
+      "type": "图书",
+      "level": "入门",
+      "description": "Benjamin Graham 讨论证券估值、安全边际与投资决策，适合建立价格和价值的区分。",
+      "url": "https://www.harpercollins.com/products/the-intelligent-investor-benjamin-graham",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "SEC 财务报表入门",
+      "category": "基本面与估值",
+      "type": "官方文档",
+      "level": "入门",
+      "description": "从资产负债表、利润表和现金流量表理解企业财务，以及常见财务比率的作用。",
+      "url": "https://www.sec.gov/reportspubs/investor-publications/investorpubsbegfinstmtguidehtm.html",
+      "access": "免费阅读"
+    },
+    {
+      "title": "Best Practices for Equity Research Analysts",
+      "category": "基本面与估值",
+      "type": "图书",
+      "level": "基础",
+      "description": "James Valentine 介绍股票研究中的信息收集、财务预测、估值与观点表达。",
+      "url": "https://www.mheducation.co.in/best-practices-for-equity-research-analysts-essentials-for-buy-side-and-sell-side-analysts-9781259003950-india",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Common Stocks and Uncommon Profits",
+      "category": "基本面与估值",
+      "type": "图书",
+      "level": "基础",
+      "description": "Philip Fisher 从产品、管理和竞争地位分析企业，适合练习定性研究和访谈问题设计。",
+      "url": "https://www.wiley.com/en-us/shop/general-finance-investments/common-stocks-and-uncommon-profits-and-other-writings-2nd-edition-p-9780471445500",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Financial Shenanigans",
+      "category": "基本面与估值",
+      "type": "图书",
+      "level": "基础",
+      "description": "Howard Schilit 等介绍收入、利润与现金流中的会计异常，适合结合公司年报练习。",
+      "url": "https://www.mheducation.com/highered/mhp/product/financial-shenanigans-fourth-edition.html",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Quality Investing",
+      "category": "基本面与估值",
+      "type": "图书",
+      "level": "基础",
+      "description": "Lawrence Cunningham、Torkell Eide 与 Patrick Hargreaves 分析盈利质量、资本回报和竞争优势。",
+      "url": "https://harriman.house/books/quality-investing/",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Behind the Balance Sheet",
+      "category": "基本面与估值",
+      "type": "播客",
+      "level": "基础",
+      "description": "Steve Clapham 围绕投资分析、财务和企业研究开展访谈。",
+      "url": "https://behindthebalancesheet.com/podcasts/",
+      "access": "公开节目；培训另收费"
+    },
+    {
+      "title": "伯克希尔股东信",
+      "category": "基本面与估值",
+      "type": "研究文章",
+      "level": "基础",
+      "description": "结合历年经营结果阅读资本配置、会计和业务分析。",
+      "url": "https://www.berkshirehathaway.com/letters/letters.html",
+      "access": "免费阅读"
+    },
+    {
+      "title": "Damodaran 估值资料",
+      "category": "基本面与估值",
+      "type": "课程",
+      "level": "基础",
+      "description": "NYU 教师提供公司金融、估值课程及行业参数，可用于练习现金流折现和估值假设。",
+      "url": "https://pages.stern.nyu.edu/~adamodar/",
+      "access": "公开讲义与数据"
+    },
+    {
+      "title": "Fundamental Edge",
+      "category": "基本面与估值",
+      "type": "课程",
+      "level": "基础",
+      "description": "提供买方股票研究和基本面分析训练的课程说明。",
+      "url": "https://www.fundamentedge.com/",
+      "access": "课程收费；公开内容可浏览"
+    },
+    {
+      "title": "Fooling Some of the People All of the Time",
+      "category": "基本面与估值",
+      "type": "图书",
+      "level": "进阶",
+      "description": "David Einhorn 以企业研究过程展示财务分析、做空逻辑与证据更新。",
+      "url": "https://www.wiley-vch.de/en?isbn=9780470481547&option=com_eshop&view=product",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Merger Masters",
+      "category": "基本面与估值",
+      "type": "图书",
+      "level": "进阶",
+      "description": "Kate Welling 与 Mario Gabelli 讨论并购交易结构、事件风险与套利研究。",
+      "url": "https://cup.columbia.edu/book/merger-masters/9780231190428/",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Risk Arbitrage",
+      "category": "基本面与估值",
+      "type": "图书",
+      "level": "进阶",
+      "description": "Guy Wyser-Pratte 解释并购套利的收益来源、交易条件与失败风险。",
+      "url": "https://onlinelibrary.wiley.com/doi/book/10.1002/9781119209720",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "AI Superpowers",
+      "category": "行业与企业研究",
+      "type": "图书",
+      "level": "入门",
+      "description": "李开复讨论人工智能产业、商业应用和区域发展，适合作为产业背景阅读。",
+      "url": "https://www.aisuperpowers.com/",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Money Men",
+      "category": "行业与企业研究",
+      "type": "图书",
+      "level": "入门",
+      "description": "Dan McCrum 记录 Wirecard 调查过程，可用于理解现金流核查、披露与公司治理。",
+      "url": "https://www.penguin.co.uk/books/444756/money-men-by-mccrum-dan/9780552178464",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Out of the Gobi",
+      "category": "行业与企业研究",
+      "type": "图书",
+      "level": "入门",
+      "description": "单伟建的经历连接中国与美国的商业环境，可补充跨市场投资研究背景。",
+      "url": "https://www.wiley.com/en-us/out-of-the-gobi-my-story-of-china-and-america-revised-edition-p-9781394199020",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "That Will Never Work",
+      "category": "行业与企业研究",
+      "type": "图书",
+      "level": "入门",
+      "description": "Marc Randolph 介绍 Netflix 创业过程，可用于讨论产品验证与商业模式调整。",
+      "url": "https://marcrandolph.com/the-book/",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "The Worlds I See",
+      "category": "行业与企业研究",
+      "type": "图书",
+      "level": "入门",
+      "description": "李飞飞介绍人工智能研究与个人经历，适合了解计算机视觉发展的背景。",
+      "url": "https://us.macmillan.com/books/9781250898104/theworldsisee/",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Working Backwards",
+      "category": "行业与企业研究",
+      "type": "图书",
+      "level": "入门",
+      "description": "Colin Bryar 与 Bill Carr 介绍亚马逊的产品决策、组织和经营机制。",
+      "url": "https://us.macmillan.com/books/9781250267597/workingbackwards/",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "In Good Company",
+      "category": "行业与企业研究",
+      "type": "播客",
+      "level": "入门",
+      "description": "挪威央行投资管理机构的企业高管访谈，关注经营、组织和长期决策。",
+      "url": "https://www.nbim.no/en/news-and-insights/podcast/",
+      "access": "免费收听"
+    },
+    {
+      "title": "Lex Fridman Podcast",
+      "category": "行业与企业研究",
+      "type": "播客",
+      "level": "入门",
+      "description": "科学、技术和人工智能领域的长访谈，可补充技术行业背景。",
+      "url": "https://lexfridman.com/podcast/",
+      "access": "免费收听"
+    },
+    {
+      "title": "7 Powers",
+      "category": "行业与企业研究",
+      "type": "图书",
+      "level": "基础",
+      "description": "Hamilton Helmer 讨论企业持续竞争优势的形成条件与经营选择。",
+      "url": "https://7powers.com/",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Chip War",
+      "category": "行业与企业研究",
+      "type": "图书",
+      "level": "基础",
+      "description": "Chris Miller 讨论半导体产业链、技术竞争和地缘政治之间的联系。",
+      "url": "https://www.simonandschuster.com/books/Chip-War/Chris-Miller/9781982172008",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Competitive Strategy",
+      "category": "行业与企业研究",
+      "type": "图书",
+      "level": "基础",
+      "description": "Michael Porter 分析行业竞争结构、进入壁垒和企业竞争定位。",
+      "url": "https://www.simonandschuster.com/books/Competitive-Strategy/Michael-E-Porter/9780684841489",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "How Asia Works",
+      "category": "行业与企业研究",
+      "type": "图书",
+      "level": "基础",
+      "description": "Joe Studwell 从农业、制造业和金融制度讨论亚洲经济发展。",
+      "url": "https://groveatlantic.com/book/how-asia-works/",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "How Brands Grow",
+      "category": "行业与企业研究",
+      "type": "图书",
+      "level": "基础",
+      "description": "Byron Sharp 用市场数据讨论品牌增长、消费者覆盖和营销规律。",
+      "url": "https://www.oup.com.au/books/higher-education/business-marketing/9780190337889",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "How to Make a Few Billion Dollars",
+      "category": "行业与企业研究",
+      "type": "图书",
+      "level": "基础",
+      "description": "Brad Jacobs 讨论企业扩张、并购和经营管理，可用于分析商业模式的扩张条件。",
+      "url": "https://greenleafbookgroup.com/titles/how-to-make-a-few-billion-dollars",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Money Machine",
+      "category": "行业与企业研究",
+      "type": "图书",
+      "level": "基础",
+      "description": "单伟建以银行投资案例介绍交易谈判、企业转型和投资退出。",
+      "url": "https://www.wiley-vch.de/en/areas-interest/finance-economics-law/finance-investments-13fi/institutional-corporate-finance-13fi1/money-machine-978-1-394-16120-1",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Retail Disruptors",
+      "category": "行业与企业研究",
+      "type": "图书",
+      "level": "基础",
+      "description": "Jan-Benedict Steenkamp 与 Laurens Sloot 分析折扣零售商、成本结构和消费者选择。",
+      "url": "https://www.koganpage.com/marketing-communications/retail-disruptors-9780749483470",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "The Beer Monopoly",
+      "category": "行业与企业研究",
+      "type": "图书",
+      "level": "基础",
+      "description": "Ina Verstl 与 Ernst Faltermeier 研究全球啤酒业的并购、规模经济和行业集中。",
+      "url": "https://beermonopoly.net/book/",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "NEXT 年报与投资者资料",
+      "category": "行业与企业研究",
+      "type": "数据与报告",
+      "level": "基础",
+      "description": "用零售企业的年报和演示资料练习收入、利润率、现金流与经营假设分析。",
+      "url": "https://www.nextplc.co.uk/investors",
+      "access": "免费阅读"
+    },
+    {
+      "title": "Net Interest",
+      "category": "行业与企业研究",
+      "type": "研究文章",
+      "level": "基础",
+      "description": "Marc Rubinstein 分析金融机构、行业结构与企业经营。",
+      "url": "https://www.netinterest.co/",
+      "access": "部分免费，部分订阅"
+    },
+    {
+      "title": "Princes of the Yen",
+      "category": "行业与企业研究",
+      "type": "图书",
+      "level": "进阶",
+      "description": "Richard Werner 讨论日本信贷和中央银行政策，提供宏观与制度研究视角。",
+      "url": "https://quantumpublishers.com/product/princes-of-the-yen-2/",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Fooled by Randomness",
+      "category": "投资决策与金融史",
+      "type": "图书",
+      "level": "入门",
+      "description": "Nassim Taleb 讨论随机性、幸存者偏差及事后解释，帮助区分结果与决策质量。",
+      "url": "https://www.penguinrandomhouse.com/books/176225/fooled-by-randomness-by-nassim-nicholas-taleb/9781400067930/",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "The Chimp Paradox",
+      "category": "投资决策与金融史",
+      "type": "图书",
+      "level": "入门",
+      "description": "Steve Peters 介绍压力与情绪管理，作为研究和交易工作习惯的补充阅读。",
+      "url": "https://www.penguinrandomhouse.com/books/313353/the-chimp-paradox-by-steve-peters/",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "The Psychology of Money",
+      "category": "投资决策与金融史",
+      "type": "图书",
+      "level": "入门",
+      "description": "Morgan Housel 以个人与市场故事讨论行为、时间和财富决策。",
+      "url": "https://academic.macmillan.com/academictrade/9780857197689/thepsychologyofmoney/",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "The Signal and the Noise",
+      "category": "投资决策与金融史",
+      "type": "图书",
+      "level": "入门",
+      "description": "Nate Silver 用不同领域的预测案例讨论信号、噪声和概率判断。",
+      "url": "https://www.penguinrandomhouse.com/books/305826/the-signal-and-the-noise-by-nate-silver/",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Thinking in Bets",
+      "category": "投资决策与金融史",
+      "type": "图书",
+      "level": "入门",
+      "description": "Annie Duke 从不确定条件下的选择出发，说明如何区分信息、信念和结果。",
+      "url": "https://www.penguinrandomhouse.com/books/552885/thinking-in-bets-by-annie-duke/",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Thinking, Fast and Slow",
+      "category": "投资决策与金融史",
+      "type": "图书",
+      "level": "入门",
+      "description": "Daniel Kahneman 介绍判断中的认知偏差、直觉与统计思维，适合反思研究结论的形成过程。",
+      "url": "https://academic.macmillan.com/academictrade/9780374533557/thinkingfastandslow/",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Planet Money",
+      "category": "投资决策与金融史",
+      "type": "播客",
+      "level": "入门",
+      "description": "用经济和商业案例解释价格、市场与制度问题。",
+      "url": "https://www.npr.org/sections/money/",
+      "access": "免费收听"
+    },
+    {
+      "title": "The Knowledge Project",
+      "category": "投资决策与金融史",
+      "type": "播客",
+      "level": "入门",
+      "description": "讨论思维方式、学习和决策，可作为研究工作方法的补充。",
+      "url": "https://fs.blog/knowledge-project-podcast/",
+      "access": "部分免费，部分订阅"
+    },
+    {
+      "title": "Adaptive Markets",
+      "category": "投资决策与金融史",
+      "type": "图书",
+      "level": "基础",
+      "description": "Andrew Lo 用适应与演化视角讨论市场效率、行为和竞争环境。",
+      "url": "https://alo.mit.edu/book/adaptive-markets/",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Hedge Hunters",
+      "category": "投资决策与金融史",
+      "type": "图书",
+      "level": "基础",
+      "description": "Katherine Burton 通过基金经理访谈比较研究风格、组织方式与风险管理。",
+      "url": "https://www.wiley-vch.de/de/fachgebiete/finanzen-wirtschaft-recht/hedge-hunters-978-1-57660-363-5",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Noise",
+      "category": "投资决策与金融史",
+      "type": "图书",
+      "level": "基础",
+      "description": "Daniel Kahneman、Olivier Sibony 与 Cass Sunstein 分析判断差异，以及如何改进重复决策的一致性。",
+      "url": "https://www.hachettebookgroup.com/titles/daniel-kahneman/noise/9780316451390/",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Superforecasting",
+      "category": "投资决策与金融史",
+      "type": "图书",
+      "level": "基础",
+      "description": "Philip Tetlock 与 Dan Gardner 介绍概率预测、持续更新和预测评分的方法。",
+      "url": "https://www.penguinrandomhouse.com/books/227815/superforecasting-by-philip-e-tetlock-and-dan-gardner/",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "The Black Swan",
+      "category": "投资决策与金融史",
+      "type": "图书",
+      "level": "基础",
+      "description": "Nassim Taleb 讨论罕见事件、尾部风险与预测边界，适合配合概率和风险管理学习。",
+      "url": "https://www.penguinrandomhouse.com/books/176226/the-black-swan-second-edition-by-nassim-nicholas-taleb/hardcover/",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "The Most Important Thing",
+      "category": "投资决策与金融史",
+      "type": "图书",
+      "level": "基础",
+      "description": "Howard Marks 讨论风险、周期和逆向判断，可用于梳理投资论证中的关键假设。",
+      "url": "https://cup.columbia.edu/book/the-most-important-thing/9780231527095/",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "The Success Equation",
+      "category": "投资决策与金融史",
+      "type": "图书",
+      "level": "基础",
+      "description": "Michael Mauboussin 讨论技能和运气的作用，可用于理解样本表现与长期能力的区别。",
+      "url": "https://store.hbr.org/product/the-success-equation-untangling-skill-and-luck-in-business-sports-and-investing/10957",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Unknown Market Wizards",
+      "category": "投资决策与金融史",
+      "type": "图书",
+      "level": "基础",
+      "description": "Jack Schwager 记录不同类型交易者的实践，适合比较策略选择和风险约束。",
+      "url": "https://harriman.house/books/unknown-market-wizards/",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "Capital Allocators",
+      "category": "投资决策与金融史",
+      "type": "播客",
+      "level": "基础",
+      "description": "Ted Seides 访谈资产配置者，讨论组合管理、机构组织和投资过程。",
+      "url": "https://www.capitalallocators.com/podcast/",
+      "access": "公开节目；部分内容订阅"
+    },
+    {
+      "title": "Invest Like the Best",
+      "category": "投资决策与金融史",
+      "type": "播客",
+      "level": "基础",
+      "description": "访谈投资者和企业经营者，关注研究方法、竞争优势和资本配置。",
+      "url": "https://colossus.com/series/invest-like-the-best/",
+      "access": "公开节目；部分服务订阅"
+    },
+    {
+      "title": "Macro Voices",
+      "category": "投资决策与金融史",
+      "type": "播客",
+      "level": "基础",
+      "description": "讨论宏观市场、跨资产研究及交易环境。",
+      "url": "https://www.macrovoices.com/",
+      "access": "免费收听"
+    },
+    {
+      "title": "Mutiny Investing",
+      "category": "投资决策与金融史",
+      "type": "播客",
+      "level": "基础",
+      "description": "围绕组合、尾部风险和投资过程开展讨论。",
+      "url": "https://mutinyfund.com/podcasts/",
+      "access": "公开节目"
+    },
+    {
+      "title": "Oaktree：Howard Marks 备忘录",
+      "category": "投资决策与金融史",
+      "type": "研究文章",
+      "level": "基础",
+      "description": "围绕市场周期、风险和投资判断阅读连续的研究观点。",
+      "url": "https://www.oaktreecapital.com/insights/memos",
+      "access": "免费阅读"
+    },
+    {
+      "title": "A Demon of Our Own Design",
+      "category": "投资决策与金融史",
+      "type": "图书",
+      "level": "进阶",
+      "description": "Richard Bookstaber 从市场事件讨论杠杆、流动性和金融系统的相互依赖。",
+      "url": "https://www.wiley-vch.de/en?isbn=9780470393758&option=com_eshop&title=A+Demon+of+Our+Own+Design&view=product",
+      "access": "付费图书；可购买或借阅"
+    },
+    {
+      "title": "CoinGlass：资金费率",
+      "category": "数据与研究工具",
+      "type": "数据",
+      "level": "基础",
+      "description": "查看衍生品资金费率和市场差异；实际可交易收益还受费用、保证金与结算规则影响。",
+      "url": "https://www.coinglass.com/FundingRate",
+      "access": "部分免费；进阶功能或接口收费"
+    },
+    {
+      "title": "Crypto n' Carry",
+      "category": "数据与研究工具",
+      "type": "数据",
+      "level": "基础",
+      "description": "查看衍生品资金费率和市场差异；实际可交易收益还受费用、保证金与结算规则影响。",
+      "url": "https://www.cryptoncarry.com/",
+      "access": "部分免费；进阶功能或接口收费"
+    },
+    {
+      "title": "Cryptocurrency Funding Rates",
+      "category": "数据与研究工具",
+      "type": "数据",
+      "level": "基础",
+      "description": "查看衍生品资金费率和市场差异；实际可交易收益还受费用、保证金与结算规则影响。",
+      "url": "https://coinalyze.net/funding-rates/",
+      "access": "部分免费；进阶功能或接口收费"
+    },
+    {
+      "title": "Funding Rates Arbitrage",
+      "category": "数据与研究工具",
+      "type": "数据",
+      "level": "基础",
+      "description": "查看衍生品资金费率和市场差异；实际可交易收益还受费用、保证金与结算规则影响。",
+      "url": "https://www.coinglass.com/ArbitrageList",
+      "access": "部分免费；进阶功能或接口收费"
+    },
+    {
+      "title": "G-Research 数字资产预测数据",
+      "category": "数据与研究工具",
+      "type": "数据",
+      "level": "基础",
+      "description": "以时间序列行情练习预测与验证，按比赛定义处理标签和评价。",
+      "url": "https://www.kaggle.com/c/g-research-crypto-forecasting/data",
+      "access": "需注册；下载须同意比赛或数据集条款"
+    },
+    {
+      "title": "Manage your crypto futures\n     · Crypto Funding Tracker",
+      "category": "数据与研究工具",
+      "type": "数据",
+      "level": "基础",
+      "description": "查看衍生品资金费率和市场差异；实际可交易收益还受费用、保证金与结算规则影响。",
+      "url": "https://cryptofundingtracker.com/rates",
+      "access": "部分免费；进阶功能或接口收费"
+    },
+    {
+      "title": "Massive 市场数据",
+      "category": "数据与研究工具",
+      "type": "数据",
+      "level": "基础",
+      "description": "原 Polygon.io 的市场数据服务，查询股票、期权等数据接口与订阅范围。",
+      "url": "https://massive.com/",
+      "access": "部分免费；注册和数据订阅"
+    },
+    {
+      "title": "Optiver 已实现波动率预测数据",
+      "category": "数据与研究工具",
+      "type": "数据",
+      "level": "基础",
+      "description": "利用订单簿和成交数据预测已实现波动率，学习聚合与波动率特征。",
+      "url": "https://www.kaggle.com/c/optiver-realized-volatility-prediction/data",
+      "access": "需注册；下载须同意比赛或数据集条款"
+    },
+    {
+      "title": "SEC 财务数据社区整理集",
+      "category": "数据与研究工具",
+      "type": "数据",
+      "level": "基础",
+      "description": "社区从公开申报中整理的财务数据；重要数值应回到公司申报核对。",
+      "url": "https://www.kaggle.com/datasets/miguelaenlle/parsed-sec-10q-filings-since-2006",
+      "access": "需注册；下载须同意比赛或数据集条款"
+    },
+    {
+      "title": "Tiingo",
+      "category": "数据与研究工具",
+      "type": "数据",
+      "level": "基础",
+      "description": "提供价格与新闻接口，研究时核对复权、频率和使用权限。",
+      "url": "https://www.tiingo.com/",
+      "access": "部分免费；注册和额度限制"
+    },
+    {
+      "title": "Ubiquant 市场预测数据",
+      "category": "数据与研究工具",
+      "type": "数据",
+      "level": "基础",
+      "description": "使用匿名金融特征研究预测模型，关注时间索引和验证协议。",
+      "url": "https://www.kaggle.com/c/ubiquant-market-prediction/data",
+      "access": "需注册；下载须同意比赛或数据集条款"
+    },
+    {
+      "title": "数字资产分钟行情社区数据",
+      "category": "数据与研究工具",
+      "type": "数据",
+      "level": "基础",
+      "description": "练习分钟数据清洗与重采样，使用前核对币对、时区和覆盖。",
+      "url": "https://www.kaggle.com/datasets/tencars/392-crypto-currency-pairs-at-minute-resolution",
+      "access": "需注册；下载须同意比赛或数据集条款"
+    },
+    {
+      "title": "股票相关搜索趋势社区数据",
+      "category": "数据与研究工具",
+      "type": "数据",
+      "level": "基础",
+      "description": "用搜索趋势研究关注度特征，注意采样与数据可获得时间。",
+      "url": "https://www.kaggle.com/datasets/miguelaenlle/google-trends-history-for-4000-stocks",
+      "access": "需注册；下载须同意比赛或数据集条款"
+    },
+    {
+      "title": "金融新闻社区数据",
+      "category": "数据与研究工具",
+      "type": "数据",
+      "level": "基础",
+      "description": "用于文本分类和金融新闻特征练习，注意新闻时间与股票映射。",
+      "url": "https://www.kaggle.com/datasets/miguelaenlle/massive-stock-news-analysis-db-for-nlpbacktests",
+      "access": "需注册；下载须同意比赛或数据集条款"
+    },
+    {
+      "title": "Data Pre-Processing",
+      "category": "数据与研究工具",
+      "type": "研究文章",
+      "level": "基础",
+      "description": "讨论数据来源、清洗和字段处理。",
+      "url": "https://www.algos.org/p/data-pre-processing-guide",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Data Sourcing - The Guide",
+      "category": "数据与研究工具",
+      "type": "研究文章",
+      "level": "基础",
+      "description": "讨论数据来源、清洗和字段处理。",
+      "url": "https://www.algos.org/p/data-sourcing-the-guide",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Bybit API 文档",
+      "category": "数据与研究工具",
+      "type": "官方文档",
+      "level": "进阶",
+      "description": "核对市场数据、产品和订单接口的字段与限制。",
+      "url": "https://bybit-exchange.github.io/docs/v5/intro",
+      "access": "文档公开；账户和地区条件各异"
+    },
+    {
+      "title": "IBKR API 文档",
+      "category": "数据与研究工具",
+      "type": "官方文档",
+      "level": "进阶",
+      "description": "查询行情、合约和订单接口；实际数据与交易权限由账户订阅决定。",
+      "url": "https://www.interactivebrokers.com/campus/ibkr-api-page/",
+      "access": "文档免费；账户与行情权限另计"
+    },
+    {
+      "title": "OKX API 文档",
+      "category": "数据与研究工具",
+      "type": "官方文档",
+      "level": "进阶",
+      "description": "学习 REST、WebSocket 行情和交易接口的消息定义。",
+      "url": "https://www.okx.com/docs-v5/en/",
+      "access": "文档公开；账户和地区条件各异"
+    },
+    {
+      "title": "Alexandria Technology",
+      "category": "数据与研究工具",
+      "type": "数据",
+      "level": "进阶",
+      "description": "提供金融文本分析与情绪数据服务。",
+      "url": "https://www.alexandriatechnology.com/",
+      "access": "商业服务；需洽询"
+    },
+    {
+      "title": "Glassnode",
+      "category": "数据与研究工具",
+      "type": "数据",
+      "level": "进阶",
+      "description": "提供链上指标与市场数据，使用时核对指标定义和历史覆盖。",
+      "url": "https://glassnode.com/",
+      "access": "部分免费；进阶数据订阅"
+    },
+    {
+      "title": "Kaiko",
+      "category": "数据与研究工具",
+      "type": "数据",
+      "level": "进阶",
+      "description": "提供数字资产市场数据、指标和机构数据服务。",
+      "url": "https://www.kaiko.com/",
+      "access": "公开研究；数据订阅"
+    },
+    {
+      "title": "Kibot 历史行情样例",
+      "category": "数据与研究工具",
+      "type": "数据",
+      "level": "进阶",
+      "description": "提供分钟和逐笔样例，可用于检查格式、时间戳和数据处理。",
+      "url": "https://www.kibot.com/free-historical-intraday-data.html",
+      "access": "样例免费；更广数据收费"
+    },
+    {
+      "title": "RavenPack",
+      "category": "数据与研究工具",
+      "type": "数据",
+      "level": "进阶",
+      "description": "提供新闻事件、文本分析和另类数据，适合研究信息到价格的传导。",
+      "url": "https://www.ravenpack.com/",
+      "access": "商业服务；需申请或订阅"
+    },
+    {
+      "title": "Santiment",
+      "category": "数据与研究工具",
+      "type": "数据",
+      "level": "进阶",
+      "description": "提供数字资产链上、社交与市场指标。",
+      "url": "https://santiment.net/",
+      "access": "部分免费；数据订阅"
+    },
+    {
+      "title": "Tardis.dev",
+      "category": "数据与研究工具",
+      "type": "数据",
+      "level": "进阶",
+      "description": "提供数字资产逐笔与订单簿历史数据及访问文档。",
+      "url": "https://tardis.dev/",
+      "access": "样例公开；历史数据按产品收费"
+    },
+    {
+      "title": "The Tie",
+      "category": "数据与研究工具",
+      "type": "数据",
+      "level": "进阶",
+      "description": "提供数字资产新闻、情绪和市场信息服务。",
+      "url": "https://www.thetie.io/",
+      "access": "机构服务；需申请或订阅"
+    },
+    {
+      "title": "Algo Trading & AI",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "金融论文与策略实现讨论。适合按具体问题查阅文章。",
+      "url": "https://blog.paperswithbacktest.com/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Algo Trading & Quant Analysis Blog - Robot Wealth",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "量化研究、回测和组合实践。适合按具体问题查阅文章。",
+      "url": "https://robotwealth.com/blog/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Mark R. Best：量化交易研究",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "交易策略、系统实现与数据分析。适合按具体问题查阅文章。",
+      "url": "https://markrbest.github.io/archive/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Blog - Allocate Smartly",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "资产配置与战术策略研究。适合按具体问题查阅文章。",
+      "url": "https://allocatesmartly.com/blog/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Blog - Clarus Financial Technology",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "衍生品市场结构与数据分析。适合按具体问题查阅文章。",
+      "url": "https://www.clarusft.com/blog/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Blog - Quantifiable Edges",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "市场统计与交易策略研究。适合按具体问题查阅文章。",
+      "url": "https://quantifiableedges.com/blog/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Alvarez Quant Trading：策略研究",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "交易策略测试、参数和实现案例。适合按具体问题查阅文章。",
+      "url": "https://alvarezquanttrading.com/blog/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Chase the Devil",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "衍生品数值计算与模型实现。适合按具体问题查阅文章。",
+      "url": "https://chasethedevil.github.io/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Diary of a Quant",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "量化研究方法和项目经验。适合按具体问题查阅文章。",
+      "url": "https://ninjaquant.substack.com/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Free Articles for Traders",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "交易研究与策略文章。适合按具体问题查阅文章。",
+      "url": "https://www.wealthhubtrading.com/articles",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "HangukQuant Research",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "量化研究、系统实现和市场分析。适合按具体问题查阅文章。",
+      "url": "https://www.research.hangukquant.com/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Headlands：量化交易与工程",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "交易系统、市场数据和工程实践。适合按具体问题查阅文章。",
+      "url": "https://blog.headlandstech.com/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "HPC-QuantLib",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "QuantLib 数值方法与高性能计算。适合按具体问题查阅文章。",
+      "url": "https://hpcquantlib.wordpress.com/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Implementing QuantLib",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "QuantLib 库设计与定价实现。适合按具体问题查阅文章。",
+      "url": "https://www.implementingquantlib.com/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Limit Order Book Visualisation",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "订单簿与市场数据可视化。适合按具体问题查阅文章。",
+      "url": "https://parasec.net/blog/order-book-visualisation/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Liquidity Letters",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "交易执行、价差与市场观察。适合按具体问题查阅文章。",
+      "url": "https://www.liquiditygoblin.com/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Low Latency Trading Insights",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "低延迟交易系统与工程问题。适合按具体问题查阅文章。",
+      "url": "https://lucisqr.substack.com/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "R 与 Julia 的蒙特卡洛期权定价比较",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "统计、因子和金融数值计算案例。适合按具体问题查阅文章。",
+      "url": "https://m-dadej.github.io/blog-post-1/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "OSM",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "金融数据、期权与统计学习案例。适合按具体问题查阅文章。",
+      "url": "https://www.optionstocksmachines.com/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Peter Caspers：QuantLib 实践",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "QuantLib 模型与工程实现。适合按具体问题查阅文章。",
+      "url": "https://quantlib.wordpress.com/author/petercaspers/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Portfolio Optimizer 研究专栏",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "组合优化、协方差与数值方法。适合按具体问题查阅文章。",
+      "url": "https://portfoliooptimizer.io/blog/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Quant Mashup - Quantocracy",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "量化研究文章聚合目录。适合按具体问题查阅文章。",
+      "url": "https://quantocracy.com/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Quantitative Finance & Algo Trading Blog by QuantInsti",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "金融编程、统计与算法交易教程。适合按具体问题查阅文章。",
+      "url": "https://blog.quantinsti.com/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Quantitative Finance Stack Exchange",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "量化金融问题与社区讨论。适合按具体问题查阅文章。",
+      "url": "https://quant.stackexchange.com/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Quantitativo",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "系统交易策略与实现讨论。适合按具体问题查阅文章。",
+      "url": "https://substack.com/@quantitativo",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Quants R Us · Quants R Us",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "衍生品模型与数值金融。适合按具体问题查阅文章。",
+      "url": "https://quantsrus.github.io/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "R&D BLOG - Oxfordstrat",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "策略研发、回测和稳健性研究。适合按具体问题查阅文章。",
+      "url": "https://oxfordstrat.com/rd-blog/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Research Category List - Alpha Architect",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "因子投资、资产定价和组合研究。适合按具体问题查阅文章。",
+      "url": "https://alphaarchitect.com/research-category-list/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "华沙证券交易所的收益质量因子",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "统计、因子和金融数值计算案例。适合按具体问题查阅文章。",
+      "url": "https://m-dadej.github.io/blog-post-2/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "TaiwanQuant's Newsletter",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "量化研究、编程与市场实践。适合按具体问题查阅文章。",
+      "url": "https://www.taiwanquant.dev/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "The Quant Stack",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "系统交易、市场数据和研究方法。适合按具体问题查阅文章。",
+      "url": "https://www.algos.org/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "The Quant's Playbook",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "策略、市场数据和研究案例。适合按具体问题查阅文章。",
+      "url": "https://www.quant-galore.com/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "VertoxQuant",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "量化学习、策略与研究方法。适合按具体问题查阅文章。",
+      "url": "https://www.vertoxquant.com/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Zero Cost Abstractions",
+      "category": "研究专栏与音视频",
+      "type": "研究专栏",
+      "level": "基础",
+      "description": "编程语言、系统与性能研究。适合按具体问题查阅文章。",
+      "url": "https://zerocost.substack.com/",
+      "access": "公开页面；部分内容可能订阅"
+    },
+    {
+      "title": "Jefferies：职业与工作建议",
+      "category": "职业与面试",
+      "type": "研究文章",
+      "level": "入门",
+      "description": "Richard Handler 从工作、学习和团队经验讨论职业发展。",
+      "url": "https://www.jefferies.com/handler-rich/100-things-i-wish-someone-had-told-me-after-college-and-before-i-entered-the-real-world/",
+      "access": "免费阅读"
+    },
+    {
+      "title": "Forage",
+      "category": "职业与面试",
+      "type": "课程",
+      "level": "入门",
+      "description": "通过企业工作模拟了解岗位任务；属于学习项目，不等同于正式实习。",
+      "url": "https://www.theforage.com/",
+      "access": "公开浏览；注册学习"
+    },
+    {
+      "title": "Peak Frameworks",
+      "category": "职业与面试",
+      "type": "课程",
+      "level": "基础",
+      "description": "金融建模与面试训练资料，适合准备基本面研究相关岗位。",
+      "url": "https://www.peakframeworks.com/",
+      "access": "部分免费；培训收费"
+    },
+    {
+      "title": "Blogs and Online Writers - Party at the Moontower",
+      "category": "职业与面试",
+      "type": "资源目录",
+      "level": "基础",
+      "description": "按研究主题查找书籍、文章和学习资料。",
+      "url": "https://moontowermeta.com/curated-sources/blogs-and-online-writers/",
+      "access": "公开目录；外部资料访问条件各异"
+    },
+    {
+      "title": "QuantGuide - Interview Prep Platform for Quants",
+      "category": "职业与面试",
+      "type": "资源目录",
+      "level": "基础",
+      "description": "量化面试题与练习平台，适合概率、统计和算法训练。",
+      "url": "https://www.quantguide.io/",
+      "access": "部分试用；主要功能收费"
+    },
+    {
+      "title": "QuantyMacro 量化书目",
+      "category": "职业与面试",
+      "type": "资源目录",
+      "level": "基础",
+      "description": "按研究主题查找书籍、文章和学习资料。",
+      "url": "https://www.quantymacro.com/resources/",
+      "access": "公开目录；外部资料访问条件各异"
+    }
+  ],
+  "downloads": [
+    {
+      "title": "系统学习",
+      "description": "Python、统计、策略、回测与投资组合。",
+      "entries": [
+        {
+          "title": "系统学习示例代码合集",
+          "url": "/assets/downloads/quant-curriculum-examples.zip",
+          "description": "66 课配套示例，含运行说明、教学数据和结果图。",
+          "label": "157 KB",
+          "download": true
+        },
+        {
+          "title": "系统学习课程目录",
+          "url": "/courses/",
+          "description": "选择入门、基础或进阶；每课末尾可单独下载。",
+          "label": "课程",
+          "download": false
+        }
+      ]
+    },
+    {
+      "title": "基础理论与原理",
+      "description": "按书籍下载示例，结合对应章节运行。",
+      "entries": [
+        {
+          "title": "因子投资示例代码合集",
+          "url": "/assets/downloads/factor-investing-examples.zip",
+          "description": "包含66 个 Python 文件。解压后按包内说明运行。",
+          "label": "72 KB",
+          "download": true
+        },
+        {
+          "title": "交易与交易所示例代码合集",
+          "url": "/assets/downloads/trading-and-exchanges-examples.zip",
+          "description": "包含52 个 Python 文件。解压后按包内说明运行。",
+          "label": "57 KB",
+          "download": true
+        },
+        {
+          "title": "随机微积分示例代码合集",
+          "url": "/assets/downloads/stochastic-calculus-examples.zip",
+          "description": "包含47 个 Python 文件。解压后按包内说明运行。",
+          "label": "52 KB",
+          "download": true
+        },
+        {
+          "title": "量化交易示例代码合集",
+          "url": "/assets/downloads/quantitative-trading-examples.zip",
+          "description": "包含60 个 Python 文件。解压后按包内说明运行。",
+          "label": "63 KB",
+          "download": true
+        }
+      ]
+    },
+    {
+      "title": "专题学习",
+      "description": "公式计算、数据处理、模型比较与结果分析。",
+      "entries": [
+        {
+          "title": "Alpha101 公式与计算示例",
+          "url": "/assets/downloads/topics/alpha101-examples.zip",
+          "description": "包含3 个 Python 文件。解压后按包内说明运行。",
+          "label": "49 KB",
+          "download": true
+        },
+        {
+          "title": "人工智能：课程与代码",
+          "url": "/topics/ai/",
+          "description": "回归、树模型、文本、深度学习与模型验证。",
+          "label": "课程",
+          "download": false
+        },
+        {
+          "title": "截面因子：课程与代码",
+          "url": "/topics/factors/",
+          "description": "因子构造、IC、分组、中性化和组合检验。",
+          "label": "课程",
+          "download": false
+        },
+        {
+          "title": "择时研究：课程与代码",
+          "url": "/topics/timing/",
+          "description": "均线、突破、波动率与市场状态。",
+          "label": "课程",
+          "download": false
+        }
+      ]
+    },
+    {
+      "title": "笔试、面试与求职",
+      "description": "公司题目、解答、复现程序和准备安排。",
+      "entries": [
+        {
+          "title": "公司笔面试题库",
+          "url": "/interview/practice/",
+          "description": "按公司查找题目，解答默认折叠，附考点与分析。",
+          "label": "课程",
+          "download": false
+        },
+        {
+          "title": "经典书籍题解",
+          "url": "/interview/zhou/",
+          "description": "思维题、概率、统计、随机过程与金融应用。",
+          "label": "课程",
+          "download": false
+        },
+        {
+          "title": "投递记录表",
+          "url": "/assets/downloads/interview-application-tracker.csv",
+          "description": "记录岗位、截止日、面试时间和后续事项。",
+          "label": "CSV",
+          "download": true
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "name": "数学统计与优化",
+      "description": "概率、统计、时间序列、线性代数与优化。",
+      "count": 25
+    },
+    {
+      "name": "编程与研究工程",
+      "description": "Python、R、C++、Rust、研究代码与系统实现。",
+      "count": 29
+    },
+    {
+      "name": "机器学习与信号",
+      "description": "特征、预测、文本与神经网络。",
+      "count": 17
+    },
+    {
+      "name": "策略与投资组合",
+      "description": "因子、动量、均值回归、套利和组合构建。",
+      "count": 32
+    },
+    {
+      "name": "衍生品与波动率",
+      "description": "期货、期权、定价、波动率和对冲。",
+      "count": 11
+    },
+    {
+      "name": "市场微观结构与执行",
+      "description": "订单簿、成交、做市、市场冲击和交易成本。",
+      "count": 13
+    },
+    {
+      "name": "基本面与估值",
+      "description": "财务报表、企业分析、估值和事件研究。",
+      "count": 13
+    },
+    {
+      "name": "行业与企业研究",
+      "description": "商业模式、竞争优势、产业与企业案例。",
+      "count": 20
+    },
+    {
+      "name": "投资决策与金融史",
+      "description": "概率判断、行为、风险及金融事件。",
+      "count": 22
+    },
+    {
+      "name": "数据与研究工具",
+      "description": "数据来源、接口、样例和研究环境。",
+      "count": 27
+    },
+    {
+      "name": "研究专栏与音视频",
+      "description": "持续更新的研究专栏、访谈和资源索引。",
+      "count": 34
+    },
+    {
+      "name": "职业与面试",
+      "description": "岗位认识、面试训练和工作方法。",
+      "count": 6
+    }
+  ]
+}
