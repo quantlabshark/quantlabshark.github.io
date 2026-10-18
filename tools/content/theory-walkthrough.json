@@ -1,0 +1,300 @@
+{
+  "calin-book-02-01": {
+    "figures": [
+      "information-tree"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/calin-book-02-01.zip"
+  },
+  "calin-book-02-07": {
+    "figures": [
+      "information-tree"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/calin-book-02-07.zip"
+  },
+  "calin-book-02-08": {
+    "figures": [
+      "variance-decomposition"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/calin-book-02-08.zip"
+  },
+  "calin-book-02-10": {
+    "figures": [
+      "rare-errors"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/calin-book-02-10.zip"
+  },
+  "calin-book-03-01": {
+    "figures": [
+      "shared-increments"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/calin-book-03-01.zip"
+  },
+  "calin-book-03-06": {
+    "figures": [
+      "poisson-area"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/calin-book-03-06.zip"
+  },
+  "calin-book-04-02": {
+    "figures": [
+      "exit-boundaries"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/calin-book-04-02.zip"
+  },
+  "calin-book-04-08": {
+    "figures": [
+      "quadratic-variation"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/calin-book-04-08.zip"
+  },
+  "calin-book-05-01": {
+    "figures": [
+      "ito-left-right"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/calin-book-05-01.zip"
+  },
+  "calin-book-05-03": {
+    "figures": [
+      "adaptive-integrand"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/calin-book-05-03.zip"
+  },
+  "calin-book-05-04": {
+    "figures": [
+      "wiener-kernels"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/calin-book-05-04.zip"
+  },
+  "calin-book-05-05": {
+    "figures": [
+      "compensated-payments"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/calin-book-05-05.zip"
+  },
+  "calin-book-06-02": {
+    "figures": [
+      "ito-correction"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/calin-book-06-02.zip"
+  },
+  "calin-book-06-03": {
+    "figures": [
+      "covariance-matrix"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/calin-book-06-03.zip"
+  },
+  "calin-book-06-04": {
+    "figures": [],
+    "download": "/assets/downloads/theory-walkthrough/calin-book-06-04.zip"
+  },
+  "calin-book-07-02": {
+    "figures": [
+      "backward-heat"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/calin-book-07-02.zip"
+  },
+  "calin-book-08-01": {
+    "figures": [
+      "euler-steps"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/calin-book-08-01.zip"
+  },
+  "calin-book-08-03": {
+    "figures": [],
+    "download": "/assets/downloads/theory-walkthrough/calin-book-08-03.zip"
+  },
+  "calin-book-08-04": {
+    "figures": [
+      "ou-moments"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/calin-book-08-04.zip"
+  },
+  "calin-book-08-06": {
+    "figures": [],
+    "download": "/assets/downloads/theory-walkthrough/calin-book-08-06.zip"
+  },
+  "calin-book-08-07": {
+    "figures": [
+      "picard-means"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/calin-book-08-07.zip"
+  },
+  "calin-book-09-01": {
+    "figures": [
+      "ito-correction"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/calin-book-09-01.zip"
+  },
+  "calin-book-09-02": {
+    "figures": [],
+    "download": "/assets/downloads/theory-walkthrough/calin-book-09-02.zip"
+  },
+  "calin-book-09-03": {
+    "figures": [
+      "exit-boundaries"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/calin-book-09-03.zip"
+  },
+  "calin-book-09-05": {
+    "figures": [],
+    "download": "/assets/downloads/theory-walkthrough/calin-book-09-05.zip"
+  },
+  "calin-book-10-02": {
+    "figures": [],
+    "download": "/assets/downloads/theory-walkthrough/calin-book-10-02.zip"
+  },
+  "calin-book-10-04": {
+    "figures": [
+      "measure-change"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/calin-book-10-04.zip"
+  },
+  "calin-book-11-08": {
+    "figures": [
+      "kalman-update"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/calin-book-11-08.zip"
+  },
+  "guo-book-02-02": {
+    "figures": [
+      "portfolio-variance"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/guo-book-02-02.zip"
+  },
+  "guo-book-02-03": {
+    "figures": [],
+    "download": "/assets/downloads/theory-walkthrough/guo-book-02-03.zip"
+  },
+  "guo-book-02-04": {
+    "figures": [],
+    "download": "/assets/downloads/theory-walkthrough/guo-book-02-04.zip"
+  },
+  "guo-book-02-06": {
+    "figures": [
+      "garch-forecast"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/guo-book-02-06.zip"
+  },
+  "guo-book-03-03": {
+    "figures": [],
+    "download": "/assets/downloads/theory-walkthrough/guo-book-03-03.zip"
+  },
+  "guo-book-03-06": {
+    "figures": [
+      "hjb-feedback"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/guo-book-03-06.zip"
+  },
+  "guo-book-03-08": {
+    "figures": [
+      "kalman-update"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/guo-book-03-08.zip"
+  },
+  "guo-book-04-03": {
+    "figures": [
+      "kernel-contributions"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/guo-book-04-03.zip"
+  },
+  "guo-book-04-04": {
+    "figures": [],
+    "download": "/assets/downloads/theory-walkthrough/guo-book-04-04.zip"
+  },
+  "guo-book-04-05": {
+    "figures": [
+      "asynchronous-intervals"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/guo-book-04-05.zip"
+  },
+  "guo-book-04-07": {
+    "figures": [],
+    "download": "/assets/downloads/theory-walkthrough/guo-book-04-07.zip"
+  },
+  "guo-book-04-08": {
+    "figures": [
+      "hawkes-events"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/guo-book-04-08.zip"
+  },
+  "guo-book-05-02": {
+    "figures": [
+      "hawkes-network"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/guo-book-05-02.zip"
+  },
+  "guo-book-05-05": {
+    "figures": [
+      "queue-position"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/guo-book-05-05.zip"
+  },
+  "guo-book-06-02": {
+    "figures": [
+      "execution-inventory"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/guo-book-06-02.zip"
+  },
+  "guo-book-06-03": {
+    "figures": [],
+    "download": "/assets/downloads/theory-walkthrough/guo-book-06-03.zip"
+  },
+  "guo-book-06-05": {
+    "figures": [
+      "book-depth"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/guo-book-06-05.zip"
+  },
+  "guo-book-06-06": {
+    "figures": [
+      "execution-modes"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/guo-book-06-06.zip"
+  },
+  "guo-book-07-01": {
+    "figures": [
+      "inventory-quotes"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/guo-book-07-01.zip"
+  },
+  "guo-book-07-02": {
+    "figures": [
+      "impulse-cost"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/guo-book-07-02.zip"
+  },
+  "guo-book-07-04": {
+    "figures": [],
+    "download": "/assets/downloads/theory-walkthrough/guo-book-07-04.zip"
+  },
+  "guo-book-07-05": {
+    "figures": [
+      "censored-capacity"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/guo-book-07-05.zip"
+  },
+  "guo-book-08-01": {
+    "figures": [
+      "order-ledger"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/guo-book-08-01.zip"
+  },
+  "guo-book-08-02": {
+    "figures": [
+      "latency-timeline"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/guo-book-08-02.zip"
+  },
+  "guo-book-b-01": {
+    "figures": [
+      "markov-rate"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/guo-book-b-01.zip"
+  },
+  "guo-book-d-01": {
+    "figures": [
+      "reflected-queue"
+    ],
+    "download": "/assets/downloads/theory-walkthrough/guo-book-d-01.zip"
+  }
+}
