@@ -77,4 +77,3 @@ html[data-theme] body[data-section] .curriculum-levels>a:nth-child(2){--card-art
 html[data-theme] body[data-section] .curriculum-levels>a:nth-child(3){--card-art:url("/assets/illustrations/quant-strategy-laboratory-v1.webp")}
 html[data-theme] body[data-section] .curriculum-levels>a.active{--card-paper:var(--mint);border-color:var(--accent)}
 html[data-theme] body[data-section] .curriculum-levels>a{--card-veil-start:97%;--card-veil-middle:91%;--card-veil-end:70%}
-html[data-theme] body[data-section] .resource-library .rh-group{--card-art-size:100% auto;--card-art-position:right top;--card-veil-end:84%;background-repeat:no-repeat,repeat-y}

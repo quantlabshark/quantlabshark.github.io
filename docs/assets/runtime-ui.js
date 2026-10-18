@@ -102,7 +102,7 @@
   if(courseRoot)void D.content(courseRoot).then(rows=>{const courses=rows.filter(r=>r.kind==='lesson'&&r.metadata?.curriculum).sort((a,b)=>a.sort_order-b.sort_order);if(courses.length){window.QuantCourseNavigation=courses.map(r=>({slug:r.slug,title:r.title,number:r.metadata.curriculum.number}));D.nav();}}).catch(()=>{});
   // Home, quick start and functional pages can host newly placed content too.
   const current=D.current();
-  if(current&&!document.querySelector('[data-lab-catalog],#live-article,.article[data-cms-slug],#cms-root')&&!location.pathname.startsWith('/admin/')){
+  if(current&&!document.querySelector('[data-lab-catalog],#live-article,.article[data-cms-slug],#cms-root,.resource-library')&&!location.pathname.startsWith('/admin/')){
    try{
     const host=document.querySelector('main .page-wrap')||document.querySelector('main'),links=new Set([...host.querySelectorAll('a[href]')].map(a=>new URL(a.href).pathname+new URL(a.href).search));
     const children=D.children(current.id).filter(n=>D.isVisible(n)&&!links.has(n.href)&&!links.has(D.url(n)));
