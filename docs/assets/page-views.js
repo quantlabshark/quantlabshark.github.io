@@ -7,8 +7,9 @@
  if(!isReadingPage)return;
  const box=document.createElement('div');box.className='page-view-stat';box.dataset.pageViews='';box.dataset.state='loading';
  box.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg><span>浏览 <span data-page-view-count>—</span> 次</span>';
- const hint='同一次访问中，本页只计一次；刷新不增加浏览数。从功能上线起累计。';box.title=hint;
- const count=box.querySelector('[data-page-view-count]'),states=new Map(),ackKey='foamlab.page-views.counted';let current='',queued=false,ready=false,visit=null;
+ const hint='仅统计登录用户；同一次访问中，本页只计一次，刷新不增加浏览数。';box.title=hint;
+ const count=box.querySelector('[data-page-view-count]'),states=new Map(),ackKey='foamlab.page-views.authenticated.counted';let current='',queued=false,ready=false,visit=null;
+ const signedInUser=()=>{const user=window.foamAuth?.user;return user&&!user.is_anonymous&&!window.foamAuth.signingOut?user.id:null;};
  function acknowledgements(){try{const row=JSON.parse(localStorage.getItem(ackKey)||'null');return row?.visit===visit&&Array.isArray(row.pages)?row.pages:[];}catch{return [];}}
  function remember(key){try{localStorage.setItem(ackKey,JSON.stringify({visit,pages:[...new Set([...acknowledgements(),key])]}));}catch{}}
  function showCount(value){if(count.textContent!==value)count.textContent=value;}
@@ -36,15 +37,16 @@
   if(Number.isSafeInteger(state.views)&&box.dataset.state!=='unavailable')showCount(state.views.toLocaleString('zh-CN'));
   if(state.busy||document.hidden||(!force&&state.at&&Date.now()-state.at<30000))return;
   const client=window.foamAuth?.client;if(!client)return;
+  const owner=signedInUser(),record=!!owner&&!state.counted;
   state.busy=true;
   try{
-   const {data,error}=await client.rpc('foamlab_page_views',{p_page:key,p_view:state.counted?null:state.id});
+   const {data,error}=await client.rpc('foamlab_page_views',{p_page:key,p_view:record?state.id:null});
    if(error||!Number.isSafeInteger(data?.views)||data.views<0)throw error||Error('Unavailable count');
-   state.counted=true;remember(key);state.views=data.views;state.at=Date.now();
+   if(record){state.counted=true;remember(key);}state.views=data.views;state.at=Date.now();
    if(current===key){showCount(data.views.toLocaleString('zh-CN'));box.dataset.state='ready';box.title=hint;}
   }catch{
    state.at=Date.now();if(current===key){showCount('—');box.dataset.state='unavailable';box.title='浏览数暂时无法读取，稍后自动重试';}
-  }finally{state.busy=false;}
+  }finally{state.busy=false;if(owner!==signedInUser()){state.at=0;schedule();}}
  }
  function schedule(){if(queued)return;queued=true;requestAnimationFrame(()=>{queued=false;void update();});}
  new MutationObserver(()=>{mount();schedule();}).observe(main,{childList:true,subtree:true});
