@@ -7,7 +7,7 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "preview": "node tools/serve.cjs",
-    "check": "node tools/check.cjs",
+    "check": "node tools/check.cjs && node tools/check-theory-presentation.cjs",
     "sync:catalog": "node tools/sync-public-catalogs.cjs"
   },
   "engines": {

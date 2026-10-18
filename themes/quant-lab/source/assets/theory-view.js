@@ -6,6 +6,14 @@
  function unitTitle(row){const number=unitNumber(row),prefix=number.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),title=String(row.title).trim().replace(new RegExp('^(?:'+prefix+'(?:\\s*[·、:：]\\s*|\\s+|$))+'),'');return number+' '+title;}
  function render(rows){let part='';return chapters(rows).map((c,i)=>{const start=c.part!==part;part=c.part;return (start?(i?'</section>':'')+`<section class="fvm-part"><h2>${esc(c.part)}</h2>`:'')+`<details class="fvm-chapter" id="chapter-${esc(c.id)}"${i===0?' open':''}><summary>${/^\d+$/.test(String(c.id))?'第 '+esc(c.id)+' 章 · ':''}${esc(c.title)}<small>${c.rows.length} 节</small></summary><ol>${c.rows.map(r=>`<li data-theory-unit><a class="theory-unit-link" href="/read/?slug=${encodeURIComponent(r.slug)}">${esc(unitTitle(r))}</a><p>${esc(r.summary)}</p></li>`).join('')}</ol></details>`;}).join('')+(rows.length?'</section>':'');}
  const categories=[{key:'mathematics',title:'数学基础',description:'概率、数理统计、随机过程与随机微积分。'},{key:'programming',title:'编程基础',description:'Python、数据结构与算法分析。'},{key:'asset-pricing',title:'资产定价与组合',description:'因子收益、风险模型与投资组合。'},{key:'trading',title:'交易建模与市场机制',description:'统计策略、订单簿、交易执行与市场结构。'},{key:'other',title:'其他',description:''}];
+ // Both the generated page and live refresh use the directory's labels and order.
+ function booksFromDirectory(registry,nodes){
+  const root=nodes.find(n=>n.key==='theory');if(!root)return registry;
+  const byKey=new Map(registry.map(book=>[book.key,book]));
+  return nodes.filter(n=>n.parent_id===root.id&&n.visible)
+   .sort((a,b)=>(a.sort_order||0)-(b.sort_order||0)||(a.key<b.key?-1:a.key>b.key?1:0))
+   .map(n=>{const original=byKey.get(n.key)||{};return {...original,key:n.key,title:n.name,card_description:n.description||original.card_description};});
+ }
  function hub(books){return categories.map(category=>{const group=books.filter(b=>(b.category||'other')===category.key);if(!group.length)return '';return `<section class="theory-category" id="theory-category-${category.key}"><header><div><h2>${esc(category.title)}</h2><p>${esc(category.description)}</p></div><span>${group.length} 本</span></header><div class="lab-card-grid">${group.map(book=>`<article class="lab-card theory-book-card"><div class="lab-card-body"><h3><a href="/theory/${encodeURIComponent(book.key)}/">${esc(book.title)}</a></h3><p>${esc(book.card_description||book.description)}</p><a class="button secondary" href="/theory/${encodeURIComponent(book.key)}/">查看课程目录 →</a></div></article>`).join('')}</div></section>`;}).join('');}
- return {chapters,render,hub};
+ return {chapters,render,hub,booksFromDirectory};
 });

@@ -1,11 +1,11 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),view=require('../themes/quant-lab/source/assets/theory-view.js');
-let rows=[];
+let rows=[],navigation=[];
 const books=JSON.parse(fs.readFileSync(path.join(__dirname,'../tools/content/theory-books.json'),'utf8'));
-hexo.extend.filter.register('before_generate',()=>{rows=JSON.parse(fs.readFileSync(path.join(hexo.base_dir,'tools/content/theory-catalog.json'),'utf8'));});
+hexo.extend.filter.register('before_generate',()=>{rows=JSON.parse(fs.readFileSync(path.join(hexo.base_dir,'tools/content/theory-catalog.json'),'utf8'));navigation=JSON.parse(fs.readFileSync(path.join(hexo.base_dir,'tools/content/navigation.json'),'utf8'));});
 hexo.extend.helper.register('theory_books',()=>books);
-hexo.extend.helper.register('theory_hub',()=>view.hub(books));
-hexo.extend.helper.register('theory_books_data',()=>JSON.stringify(books).replace(/</g,'\\u003c'));
+hexo.extend.helper.register('theory_hub',()=>view.hub(view.booksFromDirectory(books,navigation)));
+hexo.extend.helper.register('theory_books_data',()=>JSON.stringify({registry:books,initialBooks:view.booksFromDirectory(books,navigation).map(({key,title,category,card_description,description})=>({key,title,category,card_description,description}))}).replace(/</g,'\\u003c'));
 hexo.extend.helper.register('theory_book',key=>{const book=books.find(b=>b.key===key);if(!book)throw Error('Unknown theory book: '+key);return book;});
 hexo.extend.helper.register('theory_rows',book=>rows.filter(r=>r.metadata.theory_book.book===book));
 hexo.extend.helper.register('theory_catalog',book=>view.render(rows.filter(r=>r.metadata.theory_book.book===book)));
