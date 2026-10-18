@@ -2048,11 +2048,7 @@
     },
     {
       "url": "/assets/figures/foundations/cdf.svg",
-      "alt": "离散分布函数在取值 0、1、2 处跳跃。"
-    },
-    {
-      "url": "/assets/figures/foundations/calculus.svg",
-      "alt": "密度 2x 下的面积，0 到 0.5 的面积为四分之一。"
+      "alt": "概率 0.2、0.5、0.3 在 0、1、2 处形成右连续阶梯；空心点表示左极限。"
     },
     {
       "url": "/assets/figures/foundations/covariance.svg",
@@ -2096,7 +2092,7 @@
     },
     {
       "url": "/assets/figures/foundations/bootstrap.svg",
-      "alt": "从五个观测中有放回抽样得到样本均值的自助分布。"
+      "alt": "从 2、4、6、8 中有放回抽取四个数，枚举 256 种样本得到均值分布，标准误为平方根 1.25。"
     },
     {
       "url": "/assets/figures/foundations/beta-update.svg",
@@ -2124,7 +2120,7 @@
     },
     {
       "url": "/assets/figures/foundations/goodness-fit.svg",
-      "alt": "观测频数与期望频数之差用于拟合优度检验。"
+      "alt": "四类观测频数为 20、30、25、25，均匀模型的期望均为 25，Pearson 统计量为 2。"
     },
     {
       "url": "/assets/figures/foundations/regression.svg",
@@ -2132,11 +2128,11 @@
     },
     {
       "url": "/assets/figures/foundations/bivariate.svg",
-      "alt": "二维正态密度等高线与条件均值直线。"
+      "alt": "均值为 100、50，标准差为 10、8，相关为 0.6 的二维正态等高线；X=120 时条件均值为 59.6。"
     },
     {
       "url": "/assets/figures/foundations/anova.svg",
-      "alt": "各组观测围绕组均值变化，组均值又围绕总体均值变化。"
+      "alt": "三组均值为 2、3、5，总均值为 10/3，组间平方和 14、组内平方和 6。"
     },
     {
       "url": "/assets/figures/foundations/blocks.svg",
@@ -2148,7 +2144,7 @@
     },
     {
       "url": "/assets/figures/foundations/runs.svg",
-      "alt": "连续相同符号构成一个游程，排序会破坏原有游程信息。"
+      "alt": "序列正正负负负正正负由四个游程组成，虚线标记符号改变位置。"
     },
     {
       "url": "/assets/figures/foundations/interaction.svg",
@@ -2269,6 +2265,1568 @@
     {
       "url": "/assets/figures/foundations/kmp.svg",
       "alt": "模式 ABABACA 的前缀函数记录失配时可以保留的前后缀长度。"
+    },
+    {
+      "url": "/assets/figures/foundations/simpson-review.svg",
+      "alt": "两组任务内方案 A 成功率都较高，样本构成不同使合并成功率顺序反转。"
+    },
+    {
+      "url": "/assets/figures/foundations/testing-review.svg",
+      "alt": "公平零一试验的二项概率，观察八次成功，5% 水平的单侧非随机化拒绝域为九或十次。"
+    },
+    {
+      "url": "/assets/figures/foundations/power-z-review.svg",
+      "alt": "标准差为一的单侧正态均值检验，功效随均值差和样本量增加。"
+    },
+    {
+      "url": "/assets/figures/foundations/power-t-review.svg",
+      "alt": "双侧 t 检验的非中心分布功效曲线，在标准化均值差 0.5 处比较三个样本量。"
+    },
+    {
+      "url": "/assets/figures/foundations/empirical-review.svg",
+      "alt": "同一组八个观测的直方图和经验分布函数，展示大值 20 对分布形状的影响。"
+    },
+    {
+      "url": "/assets/figures/foundations/regression-intervals-review.svg",
+      "alt": "四点回归的逐点均值区间和新观测预测区间，后者含额外观测误差而更宽。"
+    },
+    {
+      "url": "/assets/figures/foundations/power-anova-review.svg",
+      "alt": "三组固定均值下的非中心 F 功效，增加样本和降低噪声都会提高检出概率。"
+    },
+    {
+      "url": "/assets/figures/foundations/sign-test-review.svg",
+      "alt": "符号检验在十个差值九正一负时累加两端 0、1、9、10 的二项概率。"
     }
-  ]
+  ],
+  "review": {
+    "date": "2026-10-18",
+    "teaching_units_rewritten": 108,
+    "exercise_units_checked": 21,
+    "code_examples_executed": 103,
+    "code_failures": 0,
+    "formulas_rendered": 1428,
+    "units": [
+      {
+        "slug": "larsen-book-guide",
+        "reviewed_topics": [
+          "下标与双重求和",
+          "平方和分解",
+          "指数对数",
+          "导数与链式法则",
+          "边界极值",
+          "定积分换元分部积分",
+          "偏导数"
+        ],
+        "body_md5": "7263bb7b20fa03fd80c6c7306aa5292d"
+      },
+      {
+        "slug": "larsen-book-01-01",
+        "reviewed_topics": [
+          "总体样本参数统计量",
+          "描述与推断",
+          "随机误差与偏差",
+          "辛普森悖论",
+          "抽样机制",
+          "Bernoulli模型"
+        ],
+        "body_md5": "f85f0ec0519555529636773676fb4904"
+      },
+      {
+        "slug": "larsen-book-01-02",
+        "reviewed_topics": [
+          "概率发展",
+          "测量误差",
+          "均值方差推导",
+          "系统偏差",
+          "随机化重复区组",
+          "实验流程"
+        ],
+        "body_md5": "9e679cffd7a2943c49e9959ef4433125"
+      },
+      {
+        "slug": "larsen-book-02-01",
+        "reviewed_topics": [
+          "样本空间",
+          "集合代数",
+          "两条德摩根律",
+          "概率公理",
+          "单调性容斥",
+          "概率上下界",
+          "连续样本空间"
+        ],
+        "body_md5": "7c58c7136d34f34557cee041ade4b289"
+      },
+      {
+        "slug": "larsen-book-02-02",
+        "reviewed_topics": [
+          "条件概率",
+          "链式乘法",
+          "划分全概率",
+          "贝叶斯先验后验",
+          "信息机制换门"
+        ],
+        "body_md5": "da6a15206e01eb4338e9c2a83be26d17"
+      },
+      {
+        "slug": "larsen-book-02-03",
+        "reviewed_topics": [
+          "独立与互斥",
+          "补事件独立",
+          "两两与相互独立",
+          "重复试验补概率",
+          "对数不等式",
+          "串并联"
+        ],
+        "body_md5": "ffb5e8d3b67d56f1395259cd9c22e344"
+      },
+      {
+        "slug": "larsen-book-02-04",
+        "reviewed_topics": [
+          "加法乘法计数",
+          "排列组合",
+          "多重集",
+          "有名无名分组",
+          "圆排列",
+          "二项式Pascal"
+        ],
+        "body_md5": "0c4f5742bfd6e102dac5fff46a617098"
+      },
+      {
+        "slug": "larsen-book-02-05",
+        "reviewed_topics": [
+          "等可能计数",
+          "有序无序一致",
+          "超几何抽样",
+          "生日补事件",
+          "占用与分配",
+          "对称性"
+        ],
+        "body_md5": "296700a6813e28894f58469dad659cfe"
+      },
+      {
+        "slug": "larsen-book-02-06",
+        "reviewed_topics": [
+          "指标变量",
+          "标准误推导",
+          "面积法pi",
+          "误差样本量",
+          "罕见事件",
+          "种子与模型误差"
+        ],
+        "body_md5": "8838f22371753256726ac42ce83d2d41"
+      },
+      {
+        "slug": "larsen-book-02-07",
+        "reviewed_topics": [
+          "题号及题面图像完整性",
+          "保留题目不附解答"
+        ],
+        "body_md5": "98abfb4f79a65a5ef020256f833ea81b"
+      },
+      {
+        "slug": "larsen-book-03-01",
+        "reviewed_topics": [
+          "随机变量",
+          "二项推导",
+          "指标变量均值方差",
+          "超几何支持",
+          "负协方差推导",
+          "有限总体修正"
+        ],
+        "body_md5": "f961282a724c70235948b780c3dfd1be"
+      },
+      {
+        "slug": "larsen-book-03-02",
+        "reviewed_topics": [
+          "pmf归一化",
+          "CDF右连续",
+          "离散端点",
+          "跳跃概率",
+          "广义分位数"
+        ],
+        "body_md5": "b85d8f8d42750c0fb872e7285f09ed9e"
+      },
+      {
+        "slug": "larsen-book-03-03",
+        "reviewed_topics": [
+          "密度归一化",
+          "CDF积分导数",
+          "单位",
+          "三角密度",
+          "中位数",
+          "变量缩放",
+          "局部近似"
+        ],
+        "body_md5": "d704050a3c70e180ed268d42d4423366"
+      },
+      {
+        "slug": "larsen-book-03-04",
+        "reviewed_topics": [
+          "期望与大数定律",
+          "LOTUS",
+          "连续期望",
+          "中位数",
+          "线性期望",
+          "乘积独立",
+          "绝对可积"
+        ],
+        "body_md5": "a52425102b35e64cbd86f394a495ccfd"
+      },
+      {
+        "slug": "larsen-book-03-05",
+        "reviewed_topics": [
+          "方差展开",
+          "尺度单位",
+          "协方差相关",
+          "零相关反例",
+          "线性组合",
+          "等相关均值",
+          "Markov与Chebyshev推导",
+          "偏度峰度与矩存在条件"
+        ],
+        "body_md5": "9f85dcab39ab5fabc69d16f1f958b57c"
+      },
+      {
+        "slug": "larsen-book-03-06",
+        "reviewed_topics": [
+          "离散联合表",
+          "边际分布",
+          "三角区域积分",
+          "事件区域",
+          "独立性支持",
+          "乘积期望协方差",
+          "联合CDF多维独立及随机样本"
+        ],
+        "body_md5": "ce91e16b3cfece0664ea33dd235db8a3"
+      },
+      {
+        "slug": "larsen-book-03-07",
+        "reviewed_topics": [
+          "CDF变换",
+          "反函数导数",
+          "多分支",
+          "卷积支持",
+          "二维雅可比",
+          "指数总量比例独立",
+          "乘积与商的密度推导"
+        ],
+        "body_md5": "2e113b29d6f4ecaad83f1a6747590dfb"
+      },
+      {
+        "slug": "larsen-book-03-08",
+        "reviewed_topics": [
+          "次序记号",
+          "极值CDF密度",
+          "k次序CDF密度",
+          "均匀Beta均值",
+          "中位数概率",
+          "极值联合密度",
+          "极差分布"
+        ],
+        "body_md5": "809d8c9b95ec6a0f17e1b853168a78a2"
+      },
+      {
+        "slug": "larsen-book-03-09",
+        "reviewed_topics": [
+          "条件密度",
+          "零概率条件解释",
+          "条件均值方差积分",
+          "全期望",
+          "全方差交叉项",
+          "混合算例"
+        ],
+        "body_md5": "5d60cb011deb4d0708d9a60aabc88a4f"
+      },
+      {
+        "slug": "larsen-book-03-10",
+        "reviewed_topics": [
+          "矩母存在唯一性",
+          "导数矩",
+          "Bernoulli二项求导",
+          "独立求和",
+          "正态配方",
+          "仿射变换",
+          "累积量"
+        ],
+        "body_md5": "c1541418caad8d8dcd28c2caf4a57ab0"
+      },
+      {
+        "slug": "larsen-book-03-11",
+        "reviewed_topics": [
+          "题号及题面图像完整性",
+          "保留题目不附解答"
+        ],
+        "body_md5": "e153b2ac451815bb4e8d914dce8a2cf6"
+      },
+      {
+        "slug": "larsen-book-04-01",
+        "reviewed_topics": [
+          "泊松强度单位",
+          "二项极限",
+          "归一化矩",
+          "独立可加",
+          "尾概率",
+          "离散程度"
+        ],
+        "body_md5": "436bc3ec0c996dd35df25cb856927a12"
+      },
+      {
+        "slug": "larsen-book-04-02",
+        "reviewed_topics": [
+          "正态参数",
+          "标准化",
+          "样本均值精确分布",
+          "CLT条件",
+          "MGF证明",
+          "连续性修正"
+        ],
+        "body_md5": "eb75c325cb16713a47962f38c2ee0134"
+      },
+      {
+        "slug": "larsen-book-04-03",
+        "reviewed_topics": [
+          "几何概率",
+          "几何级数矩推导",
+          "无记忆性",
+          "负二项总次数",
+          "失败数参数",
+          "过度离散"
+        ],
+        "body_md5": "e6afee8c07b570a450f8ce4fe6bb8063"
+      },
+      {
+        "slug": "larsen-book-04-04",
+        "reviewed_topics": [
+          "Poisson等待对应",
+          "指数无记忆",
+          "Gamma归一化",
+          "阶乘Gamma",
+          "到达密度",
+          "矩推导",
+          "尺度速率",
+          "卡方",
+          "同速率Gamma可加性"
+        ],
+        "body_md5": "bf2904f0453c4b31cf49fb0440b1f004"
+      },
+      {
+        "slug": "larsen-book-04-05",
+        "reviewed_topics": [
+          "分布属性表",
+          "超几何补充",
+          "逆分布证明",
+          "离散广义逆",
+          "BoxMuller雅可比",
+          "误差核验",
+          "有限期限维修费用模拟"
+        ],
+        "body_md5": "6431e21282e4a33b05194fbba6b683d7"
+      },
+      {
+        "slug": "larsen-book-04-06",
+        "reviewed_topics": [
+          "题号及题面图像完整性",
+          "保留题目不附解答"
+        ],
+        "body_md5": "c862b9e72fe2ef8874f9d459db7154a4"
+      },
+      {
+        "slug": "larsen-book-05-01",
+        "reviewed_topics": [
+          "矩估计Gamma",
+          "似然对数",
+          "Bernoulli边界",
+          "正态双参数推导",
+          "均匀支持",
+          "估计准则"
+        ],
+        "body_md5": "9043b31c398a4cac5ad61ea61c411fe2"
+      },
+      {
+        "slug": "larsen-book-05-02",
+        "reviewed_topics": [
+          "枢轴量",
+          "不等式反演",
+          "覆盖率",
+          "Wald比例",
+          "Wilson完整推导",
+          "精确二项",
+          "样本量取整"
+        ],
+        "body_md5": "8d2346a8ae928e745e95c220af6ed91a"
+      },
+      {
+        "slug": "larsen-book-05-03",
+        "reviewed_topics": [
+          "偏差方差MSE",
+          "自由度平方和证明",
+          "均匀最大值矩",
+          "无偏效率比较",
+          "有限样本"
+        ],
+        "body_md5": "317b07c7c3f71b4ab9bd4c5e79b1daab"
+      },
+      {
+        "slug": "larsen-book-05-04",
+        "reviewed_topics": [
+          "得分期望证明",
+          "信息可加",
+          "CRLB推导",
+          "等号",
+          "目标变换",
+          "Bernoulli效率",
+          "参数支持"
+        ],
+        "body_md5": "99ea67125887b3024859fa5a569cb043"
+      },
+      {
+        "slug": "larsen-book-05-05",
+        "reviewed_topics": [
+          "充分条件分布",
+          "Bernoulli次序",
+          "因子分解",
+          "指数正态均匀",
+          "一一变换",
+          "RaoBlackwell"
+        ],
+        "body_md5": "bd0bd667b6d428c9fed769ebcb5acf2c"
+      },
+      {
+        "slug": "larsen-book-05-06",
+        "reviewed_topics": [
+          "一致性定义证明",
+          "无偏反例",
+          "均匀极值",
+          "渐近正态",
+          "Delta推导",
+          "bootstrap条件方差",
+          "相关极值限制"
+        ],
+        "body_md5": "30c6edec79a08d146d044976f51549de"
+      },
+      {
+        "slug": "larsen-book-05-07",
+        "reviewed_topics": [
+          "Bayes归一化",
+          "Beta共轭",
+          "先验权重",
+          "后验方差区间",
+          "平方绝对损失",
+          "后验预测"
+        ],
+        "body_md5": "c96f68c7592f7bfb0f007035e45cd8b8"
+      },
+      {
+        "slug": "larsen-book-05-08",
+        "reviewed_topics": [
+          "题号及题面图像完整性",
+          "保留题目不附解答"
+        ],
+        "body_md5": "afdc449d72ca3b477d1c3556dcaf3ed7"
+      },
+      {
+        "slug": "larsen-book-06-01",
+        "reviewed_topics": [
+          "原备择",
+          "离散实际水平",
+          "p值",
+          "双侧对称",
+          "Z检验",
+          "差值区间",
+          "单比例大样本检验"
+        ],
+        "body_md5": "067ec4131adbf3649db1f95360714cc1"
+      },
+      {
+        "slug": "larsen-book-06-02",
+        "reviewed_topics": [
+          "两类错误",
+          "功效曲线",
+          "正态备择概率",
+          "样本量反演",
+          "NeymanPearson交换解释",
+          "离散边界"
+        ],
+        "body_md5": "785025fe21ea8569b4486bb4886fe2f3"
+      },
+      {
+        "slug": "larsen-book-06-03",
+        "reviewed_topics": [
+          "GLRT定义",
+          "正态平方和",
+          "二项对数比",
+          "干扰参数优化",
+          "维数差",
+          "边界条件"
+        ],
+        "body_md5": "ebea389d3014a4bd2a06fabcd9f50a79"
+      },
+      {
+        "slug": "larsen-book-06-04",
+        "reviewed_topics": [
+          "效应与SE",
+          "样本量",
+          "TOST水平与区间",
+          "独立多检验",
+          "Bonferroni证明",
+          "FDR含义"
+        ],
+        "body_md5": "3d9532eb4ca7d996f628a46b1e0e2ac5"
+      },
+      {
+        "slug": "larsen-book-06-05",
+        "reviewed_topics": [
+          "题号及题面图像完整性",
+          "保留题目不附解答"
+        ],
+        "body_md5": "01a37eed91f6ec391a6f995f83f5fdf3"
+      },
+      {
+        "slug": "larsen-book-07-01",
+        "reviewed_topics": [
+          "正交独立",
+          "均值方差分布",
+          "自由度",
+          "t构造",
+          "密度Gamma积分",
+          "矩条件",
+          "正态极限",
+          "t平方与F关系"
+        ],
+        "body_md5": "4fbca875a62a7685445f3c0297d7ffc9"
+      },
+      {
+        "slug": "larsen-book-07-02",
+        "reviewed_topics": [
+          "t手算",
+          "区间反演",
+          "单双侧",
+          "GLRT完整推导",
+          "SE与SD",
+          "独立正态条件"
+        ],
+        "body_md5": "9b0a235753a4333cfa41d110c7eaf63c"
+      },
+      {
+        "slug": "larsen-book-07-03",
+        "reviewed_topics": [
+          "卡方枢轴",
+          "倒数反演",
+          "方差标准差数值",
+          "单侧等尾",
+          "GLRT推导形状",
+          "正态条件"
+        ],
+        "body_md5": "33377135a62d1ebc8be48eb1d8d30acd"
+      },
+      {
+        "slug": "larsen-book-07-04",
+        "reviewed_topics": [
+          "非中心t推导",
+          "阈值与备择",
+          "单双侧功效",
+          "样本量数值",
+          "效应量",
+          "噪声规划"
+        ],
+        "body_md5": "8e84ba9ea264a1840222388c72533a52"
+      },
+      {
+        "slug": "larsen-book-07-05",
+        "reviewed_topics": [
+          "题号及题面图像完整性",
+          "保留题目不附解答"
+        ],
+        "body_md5": "83f867c2d5a16b157b3154436b6ca0b5"
+      },
+      {
+        "slug": "larsen-book-08-01",
+        "reviewed_topics": [
+          "名义顺序等距比例",
+          "离散连续",
+          "观测单位",
+          "配对区组",
+          "方法映射",
+          "随机抽样分配",
+          "选择偏差"
+        ],
+        "body_md5": "d34280f42f988f5e87fb1bb378c70047"
+      },
+      {
+        "slug": "larsen-book-08-02",
+        "reviewed_topics": [
+          "密度尺度直方图",
+          "ECDF",
+          "分位插值",
+          "IQR",
+          "线性标准化",
+          "异常处理",
+          "分组时间"
+        ],
+        "body_md5": "ff102a9a787f5ced27f5f8335168e6b3"
+      },
+      {
+        "slug": "larsen-book-08-03",
+        "reviewed_topics": [
+          "题号及题面图像完整性",
+          "保留题目不附解答"
+        ],
+        "body_md5": "ff1ef5ba7480c65c12d016c4ef51b408"
+      },
+      {
+        "slug": "larsen-book-09-01",
+        "reviewed_topics": [
+          "均值差方差",
+          "合并方差卡方证明",
+          "数值区间",
+          "Welch矩匹配",
+          "设计条件"
+        ],
+        "body_md5": "9b80cce9de09b8470b7d521fb3894f68"
+      },
+      {
+        "slug": "larsen-book-09-02",
+        "reviewed_topics": [
+          "F构造",
+          "正态方差比",
+          "倒数分位数",
+          "等尾检验",
+          "区间反演",
+          "异常敏感"
+        ],
+        "body_md5": "9ec4231cab579aed6865b625c27e5aab"
+      },
+      {
+        "slug": "larsen-book-09-03",
+        "reviewed_topics": [
+          "独立比例差",
+          "合并检验",
+          "未合并区间",
+          "百分点",
+          "稀疏计数",
+          "最优样本分配推导"
+        ],
+        "body_md5": "346fe747ce72a4566211609baa0fda00"
+      },
+      {
+        "slug": "larsen-book-09-04",
+        "reviewed_topics": [
+          "题号及题面图像完整性",
+          "保留题目不附解答"
+        ],
+        "body_md5": "fee70654d2262f8f9c8eaafae9eb00e5"
+      },
+      {
+        "slug": "larsen-book-10-01",
+        "reviewed_topics": [
+          "多项系数",
+          "指标协方差",
+          "Pearson",
+          "自由度约束",
+          "算例p值",
+          "稀疏校准",
+          "异常小拟合差异的含义"
+        ],
+        "body_md5": "9e0ca31d182255af1a914de49a2041c8"
+      },
+      {
+        "slug": "larsen-book-10-02",
+        "reviewed_topics": [
+          "未知参数拟合",
+          "分组MLE自由度",
+          "分组泊松导数",
+          "尾组信息",
+          "重复拟合bootstrap",
+          "正态模型",
+          "分组泊松拟合数值结果"
+        ],
+        "body_md5": "3f4f19840eaa5ec749c1f966bb3517a9"
+      },
+      {
+        "slug": "larsen-book-10-03",
+        "reviewed_topics": [
+          "独立期望表",
+          "自由度参数差",
+          "2x2手算",
+          "Z平方等价",
+          "残差相关",
+          "稀疏重复观测",
+          "异常影响",
+          "连续量分类与Dixon离群统计量"
+        ],
+        "body_md5": "c156735ce50b4ea6790e49f55a212cab"
+      },
+      {
+        "slug": "larsen-book-10-04",
+        "reviewed_topics": [
+          "题号及题面图像完整性",
+          "保留题目不附解答"
+        ],
+        "body_md5": "4994136296e9cf577b369f4225f5adc6"
+      },
+      {
+        "slug": "larsen-book-11-01",
+        "reviewed_topics": [
+          "正规方程",
+          "四点手算",
+          "残差正交",
+          "平方和R2",
+          "多项式指数幂律",
+          "对数还原"
+        ],
+        "body_md5": "e2f8aecad882b1d89c8fcc13dc59b4a9"
+      },
+      {
+        "slug": "larsen-book-11-02",
+        "reviewed_topics": [
+          "GaussMarkov与正态",
+          "斜率方差",
+          "残差自由度",
+          "数值区间",
+          "均值响应推导",
+          "新观测",
+          "残差诊断",
+          "截距方差区间与两斜率比较"
+        ],
+        "body_md5": "1ec648f18115556fce507d717d442a68"
+      },
+      {
+        "slug": "larsen-book-11-03",
+        "reviewed_topics": [
+          "相关界",
+          "回归R2关系",
+          "单位",
+          "非线性反例",
+          "二维正态配方",
+          "零相关t",
+          "混合范围",
+          "二维正态参数估计"
+        ],
+        "body_md5": "e17b5f242f201b01b4bc1aaa2200e227"
+      },
+      {
+        "slug": "larsen-book-11-04",
+        "reviewed_topics": [
+          "题号及题面图像完整性",
+          "保留题目不附解答"
+        ],
+        "body_md5": "f658c3159880ce2a0aa7a40017dab122"
+      },
+      {
+        "slug": "larsen-book-12-01",
+        "reviewed_topics": [
+          "ANOVA模型",
+          "平方和交叉项",
+          "完整表",
+          "正交自由度",
+          "F证明",
+          "摘要重建",
+          "已知方差及两组等价性"
+        ],
+        "body_md5": "70e87eea418d93029666ead9fec1f8a4"
+      },
+      {
+        "slug": "larsen-book-12-02",
+        "reviewed_topics": [
+          "TukeyKramer",
+          "学生化极差",
+          "对比系数",
+          "方差推导",
+          "数值",
+          "正交分解",
+          "多重选择"
+        ],
+        "body_md5": "1e2f0fd80a1ba208c2c7f60c9fa3d738"
+      },
+      {
+        "slug": "larsen-book-12-03",
+        "reviewed_topics": [
+          "Delta方差稳定",
+          "sqrtarcsinlog",
+          "非中心卡方F",
+          "均方信号",
+          "功效",
+          "Fisher设计原则"
+        ],
+        "body_md5": "96cfbf693e91515daf4fc6d8e3dfc72f"
+      },
+      {
+        "slug": "larsen-book-12-04",
+        "reviewed_topics": [
+          "题号及题面图像完整性",
+          "保留题目不附解答"
+        ],
+        "body_md5": "0c910034a5c52a0eeaad4e62ae1004d2"
+      },
+      {
+        "slug": "larsen-book-13-01",
+        "reviewed_topics": [
+          "随机区组设计",
+          "加性与无重复",
+          "平方和自由度",
+          "残差手算",
+          "F与误差尺度",
+          "区组对比和Tukey比较"
+        ],
+        "body_md5": "4a6a4e126089cc9ff3a995630ef032ad"
+      },
+      {
+        "slug": "larsen-book-13-02",
+        "reviewed_topics": [
+          "配对t",
+          "手算区间",
+          "协方差精度",
+          "顺序携带",
+          "F=t2推导"
+        ],
+        "body_md5": "eb026975e82dcc674936713517f8b6d1"
+      },
+      {
+        "slug": "larsen-book-13-03",
+        "reviewed_topics": [
+          "题号及题面图像完整性",
+          "保留题目不附解答"
+        ],
+        "body_md5": "4072bebb143f70643fce031553c07a13"
+      },
+      {
+        "slug": "larsen-book-14-01",
+        "reviewed_topics": [
+          "符号二项",
+          "零差处理",
+          "精确双侧",
+          "中位数区间反演",
+          "稳健效率"
+        ],
+        "body_md5": "6b1e23dbcd92a6a09db0058b20c15d71"
+      },
+      {
+        "slug": "larsen-book-14-02",
+        "reviewed_topics": [
+          "符号秩矩推导",
+          "枚举符号",
+          "平均秩方差",
+          "秩和抽样推导",
+          "MannWhitney",
+          "精确标签",
+          "位置条件"
+        ],
+        "body_md5": "aef73656e51496bb80c7a4789ac23614"
+      },
+      {
+        "slug": "larsen-book-14-03",
+        "reviewed_topics": [
+          "KW平均秩",
+          "精确置换",
+          "并列修正",
+          "Friedman算例",
+          "区组并列修正",
+          "事后比较"
+        ],
+        "body_md5": "7ac0772fe54585137740e19762c1eb91"
+      },
+      {
+        "slug": "larsen-book-14-04",
+        "reviewed_topics": [
+          "游程指标期望",
+          "方差依赖",
+          "精确偶奇计数",
+          "数值",
+          "ARE",
+          "顺序与检验范围"
+        ],
+        "body_md5": "c9f3144911b709e5057f5672939184f2"
+      },
+      {
+        "slug": "larsen-book-14-05",
+        "reviewed_topics": [
+          "题号及题面图像完整性",
+          "保留题目不附解答"
+        ],
+        "body_md5": "6556f71b9116beefa526dc0d2426b162"
+      },
+      {
+        "slug": "larsen-book-15-01",
+        "reviewed_topics": [
+          "析因模型约束",
+          "主效应",
+          "简单效应",
+          "差中差",
+          "交互残差",
+          "重复识别"
+        ],
+        "body_md5": "c2dcd8dd5c9ac0f6b6b5e7b34ace6e27"
+      },
+      {
+        "slug": "larsen-book-15-02",
+        "reviewed_topics": [
+          "双因素平方和",
+          "自由度",
+          "完整数值表",
+          "固定EMS",
+          "随机EMS",
+          "混合分母原则"
+        ],
+        "body_md5": "7c6fac7b022fc4bf0eb89b182f9e6392"
+      },
+      {
+        "slug": "larsen-book-15-03",
+        "reviewed_topics": [
+          "三因素交互",
+          "自由度",
+          "2k正交",
+          "四格效应",
+          "系数比例",
+          "效应SS",
+          "无重复误差",
+          "三因素平方和与完整示例"
+        ],
+        "body_md5": "32cb305713448a417bab383a8b552421"
+      },
+      {
+        "slug": "larsen-book-15-04",
+        "reviewed_topics": [
+          "半分编码",
+          "定义关系",
+          "别名计算",
+          "不可识别",
+          "互补折叠",
+          "IIIIVV分辨率"
+        ],
+        "body_md5": "b5c5861b6e41d43e1ca82738e5bec87a"
+      },
+      {
+        "slug": "larsen-book-a-01",
+        "reviewed_topics": [
+          "上下尾约定",
+          "查表过程",
+          "分布参数",
+          "CDFSFPPF",
+          "离散端点",
+          "数值精度",
+          "统计表保留"
+        ],
+        "body_md5": "955ac122b4257ea8e10657aa57b8f19c"
+      },
+      {
+        "slug": "miller-book-01-01",
+        "reviewed_topics": [
+          "问题规格",
+          "算法程序区别",
+          "ADT五项接口",
+          "循环不变式三步",
+          "过程与数据抽象"
+        ],
+        "body_md5": "837b971f594af4df8c25c58e35e81836"
+      },
+      {
+        "slug": "miller-book-01-02",
+        "reviewed_topics": [
+          "数值布尔运算",
+          "五种容器API",
+          "哈希",
+          "索引切片",
+          "浅复制深复制",
+          "嵌套别名"
+        ],
+        "body_md5": "b626d5dcbcbf0cd2b1b9929226b73be7"
+      },
+      {
+        "slug": "miller-book-01-03",
+        "reviewed_topics": [
+          "输入输出格式化",
+          "分支循环推导式",
+          "作用域返回值",
+          "可变默认参数",
+          "异常分类",
+          "牛顿迭代推导"
+        ],
+        "body_md5": "df273988783f7a4f13d6142e5ef36c4b"
+      },
+      {
+        "slug": "miller-book-01-04",
+        "reviewed_topics": [
+          "类实例self",
+          "分数不变式",
+          "欧几里得证明",
+          "四则运算推导",
+          "特殊方法",
+          "对象身份封装"
+        ],
+        "body_md5": "8188278e056e76134e72910c71bce0d9"
+      },
+      {
+        "slug": "miller-book-01-05",
+        "reviewed_topics": [
+          "真值表",
+          "继承super",
+          "重写多态",
+          "组合连接器",
+          "递归求值",
+          "循环检测"
+        ],
+        "body_md5": "79a25c21adad6fc9d3eb54ea903277fa"
+      },
+      {
+        "slug": "miller-book-01-06",
+        "reviewed_topics": [
+          "题号及题面图像完整性",
+          "保留题目不附解答"
+        ],
+        "body_md5": "b7d5ca3f1dcb37a7234a84618dcbaad0"
+      },
+      {
+        "slug": "miller-book-02-01",
+        "reviewed_topics": [
+          "成本模型",
+          "OΩΘ",
+          "三角循环求和",
+          "折半对数",
+          "平均假设",
+          "摊还",
+          "递归空间"
+        ],
+        "body_md5": "fec14472db71f070ef4b391bfd64ea2d"
+      },
+      {
+        "slug": "miller-book-02-02",
+        "reviewed_topics": [
+          "输入规格",
+          "阶乘穷举补漏",
+          "逐项匹配",
+          "排序成本",
+          "固定字符集计数",
+          "字典计数证明"
+        ],
+        "body_md5": "2d13b40f8e073d8cecd8dee37b45c459"
+      },
+      {
+        "slug": "miller-book-02-03",
+        "reviewed_topics": [
+          "列表操作复杂度",
+          "累计复制",
+          "字典假设",
+          "deque",
+          "计时数据重置",
+          "多规模时间比"
+        ],
+        "body_md5": "966bcb92a5b64e873a29007f5627da7e"
+      },
+      {
+        "slug": "miller-book-02-04",
+        "reviewed_topics": [
+          "题号及题面图像完整性",
+          "保留题目不附解答"
+        ],
+        "body_md5": "10de41687e99b9c8dd247c909dd9de0a"
+      },
+      {
+        "slug": "miller-book-03-01",
+        "reviewed_topics": [
+          "栈ADT与实现",
+          "三类失败",
+          "逐字符表",
+          "不变式证明",
+          "复杂度",
+          "词法边界"
+        ],
+        "body_md5": "6d52a8c78fcd4a0fd3f8ac24f66acfac"
+      },
+      {
+        "slug": "miller-book-03-02",
+        "reviewed_topics": [
+          "进制除法推导",
+          "零负数",
+          "三种表达式",
+          "中序转换表",
+          "结合性",
+          "后序左右顺序",
+          "合法性"
+        ],
+        "body_md5": "f749bdfe3bde752e38654264286036ad"
+      },
+      {
+        "slug": "miller-book-03-03",
+        "reviewed_topics": [
+          "队列ADT",
+          "deque四端操作",
+          "传土豆计数示例",
+          "回文归纳",
+          "索引实现比较"
+        ],
+        "body_md5": "3cbe7c6a4fc0b956bfd5c2c6462899f3"
+      },
+      {
+        "slug": "miller-book-03-04",
+        "reviewed_topics": [
+          "离散时间单位",
+          "事件顺序",
+          "确定时序表",
+          "事件递推",
+          "随机到达页数",
+          "负载计算",
+          "截尾和重复"
+        ],
+        "body_md5": "4382bacfc77ae306801881ab3e036192"
+      },
+      {
+        "slug": "miller-book-03-05",
+        "reviewed_topics": [
+          "无序有序ADT全部操作",
+          "节点模型",
+          "头插顺序",
+          "中间插删",
+          "索引尾指针",
+          "边界",
+          "有序提前终止"
+        ],
+        "body_md5": "1bae2fc67fb4eacfcd7b371a09062284"
+      },
+      {
+        "slug": "miller-book-03-06",
+        "reviewed_topics": [
+          "题号及题面图像完整性",
+          "保留题目不附解答"
+        ],
+        "body_md5": "59c1ff719ea9a977639c4a454433d999"
+      },
+      {
+        "slug": "miller-book-04-01",
+        "reviewed_topics": [
+          "递归三条件",
+          "求和调用轨迹",
+          "归纳终止",
+          "进制转换",
+          "切片平方成本",
+          "栈空间"
+        ],
+        "body_md5": "1c67c0f60364cb8128d507971f107507"
+      },
+      {
+        "slug": "miller-book-04-02",
+        "reviewed_topics": [
+          "端点三角公式",
+          "树枝工作量",
+          "海龟状态恢复",
+          "三角中点具体坐标",
+          "面积推导",
+          "无窗口绘图"
+        ],
+        "body_md5": "3c1dc801d8ae41636b8b5636eff43c5e"
+      },
+      {
+        "slug": "miller-book-04-03",
+        "reviewed_topics": [
+          "三阶段参数角色",
+          "三盘轨迹",
+          "最优下界",
+          "递推展开",
+          "生成器输出成本",
+          "栈深度"
+        ],
+        "body_md5": "8d003d9702037d0120eefbaaeaf906c3"
+      },
+      {
+        "slug": "miller-book-04-04",
+        "reviewed_topics": [
+          "状态建模",
+          "边界顺序",
+          "路线算例",
+          "seen与path",
+          "回溯",
+          "枚举状态扩展",
+          "DFS复杂度"
+        ],
+        "body_md5": "8bb35d39bb6bd7b9e6cd2eeeb68cf857"
+      },
+      {
+        "slug": "miller-book-04-05",
+        "reviewed_topics": [
+          "贪心反例",
+          "最优子结构证明",
+          "完整0至6状态表",
+          "记忆化",
+          "不可达",
+          "方案还原",
+          "伪多项式"
+        ],
+        "body_md5": "2dd6a231e566304e17f260adf9d345bd"
+      },
+      {
+        "slug": "miller-book-04-06",
+        "reviewed_topics": [
+          "题号及题面图像完整性",
+          "保留题目不附解答"
+        ],
+        "body_md5": "33f98ed184e702488173cd47c9c5c9a8"
+      },
+      {
+        "slug": "miller-book-05-01",
+        "reviewed_topics": [
+          "顺序查找",
+          "排序成本",
+          "半开区间强不变式",
+          "逐轮表",
+          "upper_bound",
+          "重复计数",
+          "切片成本"
+        ],
+        "body_md5": "f156d47ba5ff48eaa69e0a94e1b3be71"
+      },
+      {
+        "slug": "miller-book-05-02",
+        "reviewed_topics": [
+          "Map接口",
+          "取余折叠平方中位",
+          "字符串位置散列",
+          "探测实例",
+          "删除标记",
+          "步长互素",
+          "二次双重链地址",
+          "重散列"
+        ],
+        "body_md5": "93d3cae19cfb3c9da92c55a11f5f20f4"
+      },
+      {
+        "slug": "miller-book-05-03",
+        "reviewed_topics": [
+          "三算法逐轮",
+          "不变式",
+          "比较交换计数",
+          "逆序对",
+          "标签稳定性",
+          "副本空间"
+        ],
+        "body_md5": "030264af0263e67650ce7208bd15916c"
+      },
+      {
+        "slug": "miller-book-05-04",
+        "reviewed_topics": [
+          "gap分组",
+          "三轮完整数组",
+          "最终1证明",
+          "中间不变式",
+          "间隔复杂度",
+          "不稳定",
+          "空间"
+        ],
+        "body_md5": "284401a52c258e227c5fd9f0c422d07d"
+      },
+      {
+        "slug": "miller-book-05-05",
+        "reviewed_topics": [
+          "合并状态表",
+          "正确性归纳",
+          "递推逐层",
+          "稳定性证明",
+          "峰值累计分配区别",
+          "迭代归并"
+        ],
+        "body_md5": "15c9ac6cfc7b794fef7cdcde588247e1"
+      },
+      {
+        "slug": "miller-book-05-06",
+        "reviewed_topics": [
+          "三路四段不变式",
+          "相等推进",
+          "平均最坏递推",
+          "枢轴",
+          "副本最坏平方空间纠正",
+          "栈控制",
+          "具体稳定性"
+        ],
+        "body_md5": "305ab873c7da980922f7be11753c569f"
+      },
+      {
+        "slug": "miller-book-05-07",
+        "reviewed_topics": [
+          "题号及题面图像完整性",
+          "保留题目不附解答"
+        ],
+        "body_md5": "c525b66d40157b5d942ea73a90a82abe"
+      },
+      {
+        "slug": "miller-book-06-01",
+        "reviewed_topics": [
+          "树术语",
+          "高度约定",
+          "结构术语消歧",
+          "列表节点表示",
+          "插入保存子树",
+          "节点高度界"
+        ],
+        "body_md5": "6ce120cdb68997dcca013120b517cc6d"
+      },
+      {
+        "slug": "miller-book-06-02",
+        "reviewed_topics": [
+          "解析树语义",
+          "完全括号化文法",
+          "父节点栈",
+          "后序构树",
+          "错误输入",
+          "递归求值",
+          "括号恢复"
+        ],
+        "body_md5": "5374ca040e4fb0b98289d25f2e6e3490"
+      },
+      {
+        "slug": "miller-book-06-03",
+        "reviewed_topics": [
+          "四遍历对照",
+          "依赖与应用",
+          "层序队列轨迹",
+          "迭代中序",
+          "拼接复杂度纠正",
+          "高度宽度空间"
+        ],
+        "body_md5": "62b7fb5604a690304e80793a8bb44667"
+      },
+      {
+        "slug": "miller-book-06-04",
+        "reviewed_topics": [
+          "优先队列ADT",
+          "数组索引",
+          "上浮算例",
+          "下沉算例",
+          "建堆级数证明",
+          "同优先级处理"
+        ],
+        "body_md5": "d72b107d0e7e073e0d1d2c61928cc3f6"
+      },
+      {
+        "slug": "miller-book-06-05",
+        "reviewed_topics": [
+          "全子树不变式",
+          "Map更新None值",
+          "三类删除",
+          "后继算例",
+          "向上后继",
+          "迭代范围",
+          "根附加状态",
+          "高度成本"
+        ],
+        "body_md5": "6b58fd153b795ab23966e0ce70deb3bd"
+      },
+      {
+        "slug": "miller-book-06-06",
+        "reviewed_topics": [
+          "最少节点递推高度证明",
+          "旋转有序区间",
+          "四型表",
+          "双旋轨迹",
+          "高度顺序",
+          "删除传播",
+          "三项验证"
+        ],
+        "body_md5": "9a3857bb4486cc4993dd4b438c30bf09"
+      },
+      {
+        "slug": "miller-book-06-07",
+        "reviewed_topics": [
+          "题号及题面图像完整性",
+          "保留题目不附解答"
+        ],
+        "body_md5": "8eee03738dcc6dfbafae9c92806f681d"
+      },
+      {
+        "slug": "miller-book-07-01",
+        "reviewed_topics": [
+          "图术语权重",
+          "度数计数",
+          "图ADT",
+          "孤立目标顶点",
+          "矩阵无边语义",
+          "邻接表示",
+          "成本推导"
+        ],
+        "body_md5": "513711e9f89130fa132399b5a24c59aa"
+      },
+      {
+        "slug": "miller-book-07-02",
+        "reviewed_topics": [
+          "入队标记",
+          "队列完整表",
+          "最短证明",
+          "前驱还原",
+          "词梯桶",
+          "字符串复制与建边成本"
+        ],
+        "body_md5": "28929e8572a589ac4fb8098a207236ec"
+      },
+      {
+        "slug": "miller-book-07-03",
+        "reviewed_topics": [
+          "骑士八邻域",
+          "Hamilton与闭合",
+          "回溯状态",
+          "独立路线验证",
+          "Warnsdorff动态度数",
+          "组合复杂度"
+        ],
+        "body_md5": "62e2c3b2054fd83327b45a72a1c0347f"
+      },
+      {
+        "slug": "miller-book-07-04",
+        "reviewed_topics": [
+          "DFS森林",
+          "完整时间戳例",
+          "括号性质",
+          "四类边",
+          "无环证明",
+          "反完成序",
+          "Kahn证明",
+          "重置"
+        ],
+        "body_md5": "06a72bb418bba86ba2570bf7f4df3161"
+      },
+      {
+        "slug": "miller-book-07-05",
+        "reviewed_topics": [
+          "等价关系",
+          "缩点DAG证明",
+          "六点完成序",
+          "Kosaraju顺序证明",
+          "转置组内可达",
+          "编号缩点"
+        ],
+        "body_md5": "35dd0c48951cf8077bcdb59555a38239"
+      },
+      {
+        "slug": "miller-book-07-06",
+        "reviewed_topics": [
+          "松弛上界",
+          "逐轮距离表",
+          "割路径正确证明",
+          "非负必要",
+          "过期堆项",
+          "平局序号",
+          "惰性复杂度"
+        ],
+        "body_md5": "6ff26648921784cd60aba0ed7bbebcfe"
+      },
+      {
+        "slug": "miller-book-07-07",
+        "reviewed_topics": [
+          "MST目标反例",
+          "Prim逐轮",
+          "割交换证明",
+          "与Dijkstra对照",
+          "负权",
+          "断开并列",
+          "边堆复杂度"
+        ],
+        "body_md5": "3f4715a982e964eb2774d9f98ccabbd7"
+      },
+      {
+        "slug": "miller-book-07-08",
+        "reviewed_topics": [
+          "题号及题面图像完整性",
+          "保留题目不附解答"
+        ],
+        "body_md5": "14a3c336169ac23a6ed647d7bb053f44"
+      },
+      {
+        "slug": "miller-book-08-01",
+        "reviewed_topics": [
+          "长度容量",
+          "十次追加表",
+          "几何级数摊还",
+          "固定增量对照",
+          "插入搬移顺序",
+          "引用清除",
+          "缩容迟滞"
+        ],
+        "body_md5": "daddb5de527c81529fa96357181a315f"
+      },
+      {
+        "slug": "miller-book-08-02",
+        "reviewed_topics": [
+          "同余加乘",
+          "除法逆元限制",
+          "快速幂全表",
+          "不变式",
+          "扩展系数推导",
+          "逆元回代",
+          "位复杂度"
+        ],
+        "body_md5": "38302d9499b0ebea2f02f8aec50d011b"
+      },
+      {
+        "slug": "miller-book-08-03",
+        "reviewed_topics": [
+          "欧拉函数",
+          "密钥逆元",
+          "加解密平方表",
+          "欧拉证明",
+          "非互素CRT",
+          "编码分组",
+          "确定性限制"
+        ],
+        "body_md5": "dcb495fdfe631e55f720b671c9abb4c1"
+      },
+      {
+        "slug": "miller-book-08-04",
+        "reviewed_topics": [
+          "查找轨迹",
+          "提升概率",
+          "层数空间期望推导",
+          "前驱插入",
+          "删除降层",
+          "Map范围查询",
+          "结构检查"
+        ],
+        "body_md5": "7d6ffb3621251b5bf7ff12100d9b1c8b"
+      },
+      {
+        "slug": "miller-book-08-05",
+        "reviewed_topics": [
+          "RGB固定网格",
+          "八叉位路径算例",
+          "加权均值平方分解",
+          "reduce完整流程",
+          "单子节点",
+          "映射MSE",
+          "实际合并复杂度"
+        ],
+        "body_md5": "9628ee2fc9b90a793c7015a5f6344517"
+      },
+      {
+        "slug": "miller-book-08-06",
+        "reviewed_topics": [
+          "朴素最坏",
+          "DNA场景",
+          "DFA完整转移表补漏",
+          "接受后重叠",
+          "前缀表构造",
+          "回退轨迹",
+          "摊还线性",
+          "空模式"
+        ],
+        "body_md5": "495f88088bed9ba8aa5a81d9c51b4e4e"
+      },
+      {
+        "slug": "miller-book-08-07",
+        "reviewed_topics": [
+          "题号及题面图像完整性",
+          "保留题目不附解答"
+        ],
+        "body_md5": "bf5f0d92817999f084cf73df1e7431cf"
+      },
+      {
+        "slug": "miller-book-a-01",
+        "reviewed_topics": [
+          "附录A六工具全覆盖",
+          "绘图和图像补充",
+          "坐标换算",
+          "接口状态",
+          "事件循环",
+          "附录B学习资源",
+          "main依赖验证"
+        ],
+        "body_md5": "885f6124c3644884ab7d60217b97a8db"
+      }
+    ]
+  }
 }
