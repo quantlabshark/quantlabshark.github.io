@@ -1,0 +1,37 @@
+{
+  "slug": "larsen-book-06-03",
+  "title": "广义似然比检验",
+  "summary": "分别求受约束和无约束最大似然，推导正态均值及二项比例的似然比检验。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7038,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "原假设通常是完整模型中的一个限制，例如把成功率固定为 0.5。似然比检验比较加上这个限制后，数据的最佳拟合程度降低了多少。\n\n## 两次最大化\n\n完整参数范围记为 $\\Theta$，原假设范围为 $\\Theta_0$。广义似然比定义为\n\n$$\\Lambda(x)=\\frac{\\sup_{\\theta\\in\\Theta_0}L(\\theta;x)}{\\sup_{\\theta\\in\\Theta}L(\\theta;x)}.$$\n\n分子只能在原假设允许的范围选择参数，分母可在全范围选择，所以 $0\\le\\Lambda\\le1$。很小的比值表示限制明显降低拟合，故拒绝小 $\\Lambda$，等价于拒绝大 $-2\\log\\Lambda$。\n\n## 已知方差的正态均值\n\n检验 $\\mu=\\mu_0$ 时，无约束估计为 $\\bar x$。利用平方和分解\n\n$$\\sum_i(x_i-\\mu_0)^2=\\sum_i(x_i-\\bar x)^2+n(\\bar x-\\mu_0)^2,$$\n\n两种正态对数似然中的相同项相消，得到\n\n$$-2\\log\\Lambda=\\frac{n(\\bar x-\\mu_0)^2}{\\sigma^2}=Z^2.$$\n\n原假设下它精确服从自由度一的卡方分布，因此与双侧 Z 检验相同。n=16、$\\sigma=2$、均值差 1 时，Z=2，统计量为 4，超过 95% 卡方分位数约 3.841。\n\n## 二项比例的计算\n\nn 次试验成功 s 次，无约束估计为 $\\hat p=s/n$。检验 $p=p_0$，组合系数在分子分母抵消，得到\n\n$$-2\\log\\Lambda=2\\left[s\\log\\frac{\\hat p}{p_0}+(n-s)\\log\\frac{1-\\hat p}{1-p_0}\\right].$$\n\nn=20、s=14、$p_0=0.5$ 时，统计量约为 3.291；拒绝阈值可通过原假设下的二项分布精确计算，或在适当样本条件下用卡方近似。\n\n## 未知方差与大样本参考分布\n\n若正态方差未知，分子需在均值固定后重新估计方差，分母则同时估计均值与方差。两者不能共用无约束方差估计，下一章会推导其与 t 统计量的关系。\n\n可识别、真参数为内部点等正则条件下，$-2\\log\\Lambda$ 的大样本参考分布通常是卡方，自由度为两模型参数维数之差。参数落在边界时，参考分布可能改变，需按具体模型求出。\n\n> **鲨鱼说** 似然比的分子和分母各做一次最优化。遗漏原假设中的重新估计，会把另一个统计量误当作似然比。\n\n## 练习\n1. Bernoulli样本n=20、s=14，写出检验p=0.5的广义似然比及其对数统计量。\n2. 解释为什么似然比不可能大于1，以及Λ=1意味着什么。\n\n[本章习题](/read/?slug=larsen-book-06-05)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/larsen-book-06-03.zip",
+        "label": "广义似然比检验 · Python 示例",
+        "size_bytes": 900,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第二部分 · 估计与检验",
+      "number": 38,
+      "chapter": "6",
+      "edition": "2026-10",
+      "minutes": 12,
+      "section": "3",
+      "chapter_title": "假设检验",
+      "source_sections": [
+        "6.5"
+      ]
+    }
+  }
+}

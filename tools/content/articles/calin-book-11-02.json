@@ -1,0 +1,36 @@
+{
+  "slug": "calin-book-11-02",
+  "title": "衰变计数与连续测量模型",
+  "summary": "区分随机存活数量、纯死亡过程和叠加测量波动的连续状态。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "随机微积分及其应用",
+  "sort_order": 5061,
+  "cover_url": "",
+  "section_ids": [
+    "17859c88-b779-5654-b120-7a4cc7b39714"
+  ],
+  "body": "## 数量、浓度与仪器读数\n\n衰变问题至少有三个不同变量：还存活的粒子个数、按体积归一化的浓度、仪器报告的读数。个数是非负整数且只能下降。浓度在粒子很多时可近似为连续量。仪器读数还会受到测量误差影响。先明确变量，才能判断噪声应加在真实状态还是观测方程中。\n\n下文用 $N_t$ 表示真实存活数，$X_t$ 表示连续状态。参数 $\\lambda$ 是单个粒子每单位时间的衰变率。初始有一百个粒子，并不表示整个系统每单位时间只衰变 $\\lambda$ 个；系统的总速率还要乘当前存活数。\n\n## 从独立寿命得到衰变规律\n\n设初始有 $N_0$ 个彼此独立的粒子，每个寿命为参数 $\\lambda$ 的指数变量。一个粒子在时间 $t$ 后仍存活的概率为 $p=e^{-\\lambda t}$。因此存活总数\n\n$$N_t\\sim\\operatorname{Bin}(N_0,e^{-\\lambda t}),$$\n\n均值为 $N_0e^{-\\lambda t}$，方差为 $N_0e^{-\\lambda t}(1-e^{-\\lambda t})$。确定指数衰减曲线描述的是平均数量，不是要求每次观测都落在曲线上。粒子总数大时相对波动较小，小样本末期则更明显。\n\n在状态 $N_t=n$ 时，下一次死亡的总强度为 $\\lambda n$。发生一次后变成 $n-1$，强度随之降低。所以这个过程是纯死亡链，不能一直用固定强度泊松过程减去粒子数；后者甚至会产生负计数。\n\n## 从单粒子概率计算总体波动\n\n令 $I_i(t)$ 在第 $i$ 个粒子仍存活时取一，否则取零。指数寿命意味着 $P(I_i(t)=1)=e^{-\\lambda t}=p$。由于 $N_t=\\sum_{i=1}^{N_0}I_i(t)$，独立性给\n\n$$EN_t=\\sum_i p=N_0p,\\qquad\\operatorname{Var}(N_t)=\\sum_i p(1-p)=N_0p(1-p).$$\n\n若要求“所有粒子都未衰变”，概率是 $p^{N_0}=e^{-\\lambda N_0t}$；若要求“平均还有九成”，则解 $p=0.9$。这两种事件不是同一个问题。\n\n给定当前数量 $n$，在很短时间 $h$ 内，每个粒子死亡概率约为 $\\lambda h$。死亡数近似服从 $\\operatorname{Bin}(n,\\lambda h)$，因而 $E(\\Delta N\\mid N_t=n)\\approx-\\lambda nh$、$\\operatorname{Var}(\\Delta N\\mid N_t=n)\\approx\\lambda nh$。匹配这两个短时矩，才得到连续近似 $dX=-\\lambda Xdt+\\sqrt{\\lambda X}dW$。负号可以吸收到布朗运动中，但方差系数必须随状态变化。\n\n## 相邻死亡的等待时间\n\n当还剩 $n$ 个独立指数寿命时，最早死亡的等待时间服从参数 $\\lambda n$ 的指数分布。由无记忆性，下一阶段又从 $n-1$ 个粒子开始。要从 $N_0$ 降到 $k$，平均时间为\n\n$$E\\tau_k=\\sum_{n=k+1}^{N_0}\\frac1{\\lambda n}.$$\n\n这与“均值曲线降到 $k$ 的时刻” $\\log(N_0/k)/\\lambda$ 接近但不相同。一个是随机到达时间的均值，另一个是先取数量均值再求交点，两个运算不能交换。\n\n例如 $N_0=10,k=5,\\lambda=1$，平均到达时间为 $1/6+1/7+1/8+1/9+1/10\\approx0.645635$，而均值曲线的半衰期为 $\\log2\\approx0.693147$。\n\n## 连续量与测量噪声\n\n如果观测的是经平滑的强度或浓度，可以考虑连续模型 $dX=-\\lambda Xdt+\\sigma dW$。其解为\n\n$$X_t=x_0e^{-\\lambda t}+\\sigma\\int_0^te^{-\\lambda(t-s)}dW_s.$$\n\n均值仍指数下降，方差为 $\\sigma^2(1-e^{-2\\lambda t})/(2\\lambda)$。这个过程可能取负，适合表达带符号测量偏差或在适当范围内的连续近似，不能等同于非负整数的粒子数量。另一种模型是保持真实计数 $N_t$，再在观测方程中加入仪器误差，两种机制应分别标明。\n\n若需要非负连续扩散近似，可从纯死亡链的短时均值和方差推导 $dX=-\\lambda Xdt+\\sqrt{\\lambda X}\\,dW$，并在零处吸收。这里噪声随数量减小，和固定 $\\sigma$ 的测量模型有不同边界行为。\n\n## 连续模型的随机半衰时刻\n\n对加性模型 $dX=-\\lambda Xdt+\\sigma dW$，固定阈值 $a>0$，从 $x>a$ 出发。令 $\\tau_a=\\inf\\{t:X_t\\le a\\}$，$v(x)=E_x\\tau_a$。连续路径到达阈值时恰为 $a$。生成元方程是\n\n$$\\frac{\\sigma^2}{2}v''(x)-\\lambda xv'(x)=-1,\\qquad v(a)=0.$$\n\n设 $q=v'$。除以 $\\sigma^2/2$，再乘积分因子 $e^{-\\lambda x^2/\\sigma^2}$，得到\n\n$$\\frac{d}{dx}[q(x)e^{-\\lambda x^2/\\sigma^2}]=-\\frac2{\\sigma^2}e^{-\\lambda x^2/\\sigma^2}.$$\n\n取无穷远满足自然边界条件的解，从 $x$ 积分到无穷，便有\n\n$$q(x)=\\frac2{\\sigma^2}e^{\\lambda x^2/\\sigma^2}\\int_x^\\infty e^{-\\lambda z^2/\\sigma^2}dz.$$\n\n再从阈值 $a$ 积分到初值，得到可数值计算的平均命中时间：\n\n$$v(x)=\\frac2{\\sigma^2}\\int_a^x e^{\\lambda y^2/\\sigma^2}\\left(\\int_y^\\infty e^{-\\lambda z^2/\\sigma^2}dz\\right)dy.$$\n\n对于半衰时刻，取 $a=x_0/2,x=x_0$。计算时使用缩放余误差函数可避免大指数溢出：$q(x)=\\sqrt\\pi\\,\\operatorname{erfcx}(\\sqrt\\lambda x/\\sigma)/(\\sigma\\sqrt\\lambda)$。这里 $\\operatorname{erfcx}(z)=e^{z^2}\\operatorname{erfc}(z)$。\n\n确定指数曲线的半衰期为 $\\log2/\\lambda$，而随机阈值问题由上式给出。不能把依赖路径的随机时刻直接代入固定时刻均值公式；先计算“到达时间的均值”与先计算“数量均值的交点”，运算顺序不同。\n\n## 参数与离散模拟\n\n纯死亡链可逐事件模拟：剩余 $n$ 时生成均值 $1/(\\lambda n)$ 的等待时间，再把数量减一。若只需固定时刻的分布，直接生成二项变量更高效。连续加性模型则可使用 OU 的精确转移。选择哪一种模拟取决于要复现数量、事件时刻还是测量信号。\n\n## 大样本极限和末期行为\n\n存活比例的方差为 $p(1-p)/N_0$，所以初始数量很大时，比例曲线接近确定指数衰减；这来自独立粒子的平均作用。接近全部衰尽时，剩余数量很小，离散事件和最后几次等待就会变得突出。\n\n因此同一个系统在不同阶段可能适合不同精度的模型。前期只关心比例趋势时确定近似较好；若研究最后一次衰变的时间，则必须保留离散等待结构。模型选择由目标统计量决定，而不只由初始数量大小决定。\n\n![随机存活计数与指数平均衰减](/assets/illustrations/theory/calin/calin-book-11-02.svg)\n\n初始数量一百、单粒子衰变率 0.2。阶梯线是各次试验，深色线是理论均值，阴影为均值上下 1.96 倍标准差；计数分布的精确分位数需按二项分布计算。\n\n<aside class=\"shark-note\"><strong>鲨鱼说</strong><p>半衰期可能指平均曲线降到一半，也可能指某次实验首次降到一半。随机模型里必须先确定统计对象，才能选择指数曲线、等待时间求和或边界值方程。</p></aside>\n\n## 练习\n\n初始 100 个粒子，独立衰变率 $\\lambda=0.2$。在平均数量降到 90 的时刻，实际数量的方差是多少？\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n平均数量为 $100e^{-0.2t}$。令其等于90，先求每个粒子的存活概率 $p=0.9$，再求时间：\n\n$$t=-\\frac{\\log0.9}{0.2}\\approx0.526803.$$\n\n此时 $N_t=\\sum_{i=1}^{100}I_i(t)$，各 $I_i$ 独立服从成功概率0.9的 Bernoulli 分布。单粒子方差为 $0.9(1-0.9)=0.09$，所以\n\n$$N_t\\sim\\operatorname{Bin}(100,0.9),\\qquad\\operatorname{Var}(N_t)=100\\times0.09=9.$$\n\n标准差为3，均值为90。相同时间所有粒子都存活的概率却是 $0.9^{100}\\approx0.00002656$；这再次区分了“平均剩九成”和“所有粒子未失效”两个事件。\n\n</details>\n\n## 配套代码\n\n[下载本节 Python 代码](/assets/downloads/theory/calin-book-11-02.zip)\n\n解压后运行 `calin-book-11-02.py`。需安装 numpy、scipy 和 matplotlib；脚本会生成图像与数值核查结果，无需另行下载数据。\n",
+  "metadata": {
+    "theory_book": {
+      "book": "stochastic-calculus",
+      "part": "第四部分 · 应用与练习",
+      "number": 61,
+      "chapter": "11",
+      "edition": "2026-10",
+      "minutes": 38,
+      "section": "2",
+      "source_pages": [
+        262,
+        263,
+        264,
+        265,
+        322
+      ],
+      "chapter_title": "随机模型的应用",
+      "source_sections": [
+        "11.3"
+      ]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "slug": "research-biases",
+  "title": "10 · 识别回测中最常见的偏差",
+  "summary": "识别未来信息、样本筛选和参数搜索引入的偏差。",
+  "kind": "lesson",
+  "track": "统计与信号",
+  "series": "统计与信号",
+  "sort_order": 10,
+  "section_ids": [],
+  "body": "## 前视偏差与幸存者偏差\n\n前视偏差来自使用决策时尚未获得的信息，例如将后来发布的财务数据用于更早日期。幸存者偏差来自只保留最终存续的标的，例如用今天仍上市的公司代表过去的全部投资对象。两类偏差都会改变研究所依据的样本。\n\n下面用三个虚构标的说明幸存者偏差。研究开始时 A、B、C 均存在，后来 C 退出样本。分别计算全部标的和最终存续标的的平均收益，就能看到删除 C 的影响。\n\n~~~python\nassets = [\n    {\"name\": \"A\", \"return\": 0.10, \"survives\": True},\n    {\"name\": \"B\", \"return\": 0.05, \"survives\": True},\n    {\"name\": \"C\", \"return\": -0.60, \"survives\": False},\n]\nall_mean = sum(x[\"return\"] for x in assets) / len(assets)\nsurvivors = [x for x in assets if x[\"survives\"]]\nsurvivor_mean = sum(x[\"return\"] for x in survivors) / len(survivors)\nprint(\"All initially available:\", all_mean)\nprint(\"Survivors only:\", survivor_mean)\n~~~\n\n全部标的的平均收益为 −15%，只保留 A、B 后变为 7.5%。这个差异来自样本选择。例中计算的是收益均值；构造组合回测还需加入持仓、退市结算与交易费用。\n\n## 参数筛选与测试集使用\n\n在同一批数据上尝试许多参数后选择最高收益，可能把随机波动选为规律。训练集用于拟合模型，验证集用于选择方案，测试集用于评价确定后的方案。若依据测试结果继续调整参数，该测试集已经参与了选择。\n\n因此，需要记录尝试范围与结果，并按时间顺序保留未参与选择的后续区间。检查前视信息时，应同时查看股票池版本、财务披露日期、预处理拟合范围、标签结束时间和成交时点。\n\n## 练习\n\n代码没有读取未来日期，是否仍可能存在前视偏差？\n\n参考答案：可能。全样本标准化包含未来样本的均值和方差，当前指数成分包含后来调入调出的结果，修订财报也可能使用较晚发布的信息。需要沿输入数据的生成过程检查其历史可用性。\n",
+  "metadata": {
+    "legacy_course": true
+  }
+}

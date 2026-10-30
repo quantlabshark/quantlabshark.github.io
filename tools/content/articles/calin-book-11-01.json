@@ -1,0 +1,39 @@
+{
+  "slug": "calin-book-11-01",
+  "title": "白噪声、速度与随机位移",
+  "summary": "从时间平均定义白噪声，再求均值回复速度和位置的分布。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "随机微积分及其应用",
+  "sort_order": 5060,
+  "cover_url": "",
+  "section_ids": [
+    "17859c88-b779-5654-b120-7a4cc7b39714"
+  ],
+  "body": "## 随机力怎样进入运动方程\n\n确定运动中，$dx=vdt$ 表示一小段时间内位移约为速度乘时间。$dv=adt$ 表示速度变化来自加速度。若许多小冲击的总和用布朗增量近似，速度方程改写为 $dv=b(v)dt+\\sigma dW$。时间长度为 $h$ 时，确定部分为 $O(h)$，随机冲量的标准差为 $\\sigma\\sqrt h$。\n\n若时间以秒、速度以米每秒计，$\\kappa$ 的单位是每秒，$\\sigma$ 的单位是“米每秒除以秒的平方根”。参数的单位由它乘的微分决定。把 $\\sigma$ 误当作普通加速度，会在改变时间步长时得到不同的运动模型。\n\n## 白噪声不是每时刻的普通随机数\n\n形式记号 $\\eta_t=dW_t/dt$ 常被称为白噪声，但布朗路径不可普通求导。更合适的定义是：对平方可积测试函数 $f$，令 $\\eta(f)=\\int f(t)dW_t$，则它是高斯变量，均值为零，且 $E[\\eta(f)\\eta(g)]=\\int f(t)g(t)dt$。形式协方差 $E(\\eta_t\\eta_s)=\\delta(t-s)$ 要通过这种积分含义理解。\n\n若仪器只能测长度 $\\varepsilon$ 的时间平均，可定义 $\\eta_t^{\\varepsilon}=(W_{t+\\varepsilon}-W_t)/\\varepsilon$。其方差为 $1/\\varepsilon$，协方差为 $(\\varepsilon-|t-s|)_+/\\varepsilon^2$。窗口越短，平均噪声的方差越大，相关区间越窄；这族三角形协方差的总面积仍为一。\n\n在时间步长 $h$ 上模拟白噪声，平均值应取 $Z_k/\\sqrt h$，积分后的冲量才是 $\\sqrt hZ_k$。若每步都使用固定方差的噪声值再乘 $h$，细化时间步会把累计噪声错误地消掉。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>协方差，即两个变量偏离各自均值时，共同变化程度的度量。</p></aside>\n\n## 为什么协方差只取决于窗口重叠\n\n两个窗口平均噪声分别为 $\\varepsilon^{-1}\\int_t^{t+\\varepsilon}dW_u$ 和 $\\varepsilon^{-1}\\int_s^{s+\\varepsilon}dW_u$。独立布朗增量的协方差为零，因此只有共同覆盖的那一段产生贡献。重叠长度为 $(\\varepsilon-|t-s|)_+$，除以两个窗口长度即得协方差公式。\n\n这条三角形函数的底宽为 $2\\varepsilon$、高度为 $1/\\varepsilon$，面积为一。窗口趋短时，它在零附近越来越尖。对连续测试函数 $f$ 积分后，结果趋于 $f(0)$。这就是 Dirac 符号 $\\delta$ 的积分意义，而不是说存在一个零时刻取无穷值的普通随机变量。\n\n模拟时也可用总方差检查尺度。若固定期限为 $T$、步数为 $n=T/h$，正确冲量 $\\sqrt hZ_k$ 的总方差为 $nh=T$；错误冲量 $hZ_k$ 的总方差为 $nh^2=Th$，步长趋零后反而没有噪声。\n\n## 受阻尼的随机速度\n\n设有符号速度满足 $dv_t=\\kappa(m-v_t)dt+\\sigma dW_t$。它是 OU 过程，解为\n\n$$v_t=m+(v_0-m)e^{-\\kappa t}+\\sigma\\int_0^te^{-\\kappa(t-s)}dW_s.$$\n\n这里速度可以为负，代表反向运动；若研究对象是非负速率，需另设状态模型，不能把负值随意解释成测量错误。均值和方差分别为 $m+(v_0-m)e^{-\\kappa t}$ 与 $\\sigma^2(1-e^{-2\\kappa t})/(2\\kappa)$。\n\n给定当前 $v_s$，未来条件均值为 $m+(v_s-m)e^{-\\kappa(t-s)}$。同一模型既包含惯性记忆，也包含新的随机冲击，回复时间为 $1/\\kappa$。\n\n## 位置是速度的普通积分\n\n令 $x_t=x_0+\\int_0^tv_udu$。确定部分逐项积分，得 $x_0+mt+(v_0-m)(1-e^{-\\kappa t})/\\kappa$。随机部分中，一个时刻 $s$ 的冲击会影响此后 $u\\in[s,t]$ 的速度，所以\n\n$$\\int_s^t e^{-\\kappa(u-s)}du=\\frac{1-e^{-\\kappa(t-s)}}{\\kappa}.$$\n\n交换积分次序后，\n\n$$x_t=x_0+mt+\\frac{v_0-m}{\\kappa}(1-e^{-\\kappa t})+\\frac\\sigma\\kappa\\int_0^t[1-e^{-\\kappa(t-s)}]dW_s.$$\n\n位置是确定核的布朗积分加均值，故为正态变量。令 $u=t-s$，伊藤等距给\n\n$$\\operatorname{Var}(x_t)=\\frac{\\sigma^2}{\\kappa^2}\\int_0^t(1-2e^{-\\kappa u}+e^{-2\\kappa u})du=\\frac{\\sigma^2}{\\kappa^2}\\left[t-\\frac{2(1-e^{-\\kappa t})}{\\kappa}+\\frac{1-e^{-2\\kappa t}}{2\\kappa}\\right].$$\n\n位置与速度的协方差同样由两个核相乘得到：\n\n$$\\operatorname{Cov}(x_t,v_t)=\\frac{\\sigma^2}{\\kappa}\\int_0^t(1-e^{-\\kappa u})e^{-\\kappa u}du=\\frac{\\sigma^2}{2\\kappa^2}(1-e^{-\\kappa t})^2.$$\n\n短时间内 $1-e^{-\\kappa u}\\approx\\kappa u$，所以位移方差首项为 $\\sigma^2t^3/3$。长时间内括号中的指数项衰减，方差约按 $\\sigma^2t/\\kappa^2$ 增长。速度的稳态方差有限，而位置不断积累速度波动，因而位移方差不会稳定在常数。\n\n## 动能中的噪声输入\n\n质量为 $M$，动能为 $K=Mv^2/2$。其一阶导数为 $Mv$，二阶导数为 $M$；由于 $d[v]=\\sigma^2dt$，伊藤公式给\n\n$$dK=Mv\\kappa(m-v)dt+M\\sigma v,dW+\\frac{M\\sigma^2}{2}dt.$$\n\n最后一项来自速度冲量的平方。取期望后，零均值随机积分消失，得到 $dEK/dt=M\\kappa(mEv-Ev^2)+M\\sigma^2/2$。也可直接由正态速度算出\n\n$$EK_t=\\frac M2\\left([m+(v_0-m)e^{-\\kappa t}]^2+\\frac{\\sigma^2}{2\\kappa}(1-e^{-2\\kappa t})\\right).$$\n\n当 $m=0$ 且达到稳态时，平均能量为 $M\\sigma^2/(4\\kappa)$；阻尼耗散与随机输入相抵。\n\n若把功定义为 $M\\int v\\circ dv$，圆圈表示 Stratonovich 积分，它遵从通常的链式法则，所以功等于 $K_t-K_0$。若使用伊藤积分，则 $M\\int v,dv=K_t-K_0-M\\sigma^2t/2$。两者的差正是二次变差修正。选择哪种物理解释后，计算中的积分记法也应与其一致。\n\n## 乘性扰动的对照\n\n考虑 $dv=gdt+\\sigma v,dW$、$v_0=0$。令 $\\Phi_t=e^{\\sigma W_t-\\sigma^2t/2}$，变常数公式给\n\n$$v_t=g\\Phi_t\\int_0^t\\Phi_s^{-1}ds=g\\int_0^t e^{\\sigma(W_t-W_s)-\\sigma^2(t-s)/2}ds.$$\n\n每个指数增量的均值为一，故 $Ev_t=gt$，平均位移为 $gt^2/2$。形式平均加速度为 $g$，但单条速度路径仍不可普通求导。\n\n为计算方差，对 $v^2$ 应用伊藤公式：$d(v^2)=(2gv+\\sigma^2v^2)dt+2\\sigma v^2dW$。令 $q(t)=Ev_t^2$，有 $q'=2g^2t+\\sigma^2q$、$q(0)=0$，从而\n\n$$q(t)=\\frac{2g^2}{\\sigma^4}(e^{\\sigma^2t}-1-\\sigma^2t),\\qquad\\operatorname{Var}(v_t)=q(t)-g^2t^2.$$\n\n当 $\\sigma\\to0$ 时，指数展开给 $q(t)\\to g^2t^2$，方差趋零。这与加性噪声的正态速度有不同的分布和方差增长。\n\n## 观测位置时看到的平滑\n\n速度直接受到噪声冲击，位置则把速度再积分一次，所以同一条模拟路径上位置通常比速度更平滑。位置可微且导数为连续速度，并不意味着位置没有随机性；它的随机性由此前全部速度冲击积累而来。\n\n如果只用离散位置差估计速度，测量误差会被差分除以时间步长而放大。缩短采样间隔未必让速度估计更准，需同时考虑测量精度。这正是把运动方程和观测方程分开建模、再用滤波估计速度的动机。\n\n![随机速度与对应位移](/assets/illustrations/theory/calin/calin-book-11-01.svg)\n\n回复速度和噪声幅度均为一，初始速度、位置均为零。两幅图中相同颜色代表同一次试验：位置积累速度，曲线因积分而更平滑。\n\n<aside class=\"shark-note\"><strong>鲨鱼说</strong><p>白噪声要通过积分或时间平均来使用。仿真中加入状态的是噪声冲量，方差与时间步长成正比；把它当成普通、逐点有限方差的函数，会破坏尺度。</p></aside>\n\n## 练习\n\n零初值、零回复水平，取 $\\kappa=1,\\sigma=1$。求时刻一速度和位移的方差，解释为什么二者不同。\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n零初值时，$v_1=\\int_0^1e^{-(1-s)}dW_s$。由伊藤等距，\n\n$$\\operatorname{Var}(v_1)=\\int_0^1e^{-2(1-s)}ds=\\frac{1-e^{-2}}2\\approx0.432332.$$\n\n位置应先对速度积分。交换积分后，$x_1=\\int_0^1[1-e^{-(1-s)}]dW_s$，故\n\n$$\\operatorname{Var}(x_1)=\\int_0^1(1-e^{-u})^2du=1-2(1-e^{-1})+\\frac{1-e^{-2}}2\\approx0.168091.$$\n\n速度和位置分别用 $e^{-u}$ 与 $1-e^{-u}$ 对冲击加权。临近观测终点的冲击直接改变速度，却没有足够时间积累较大位移。因此不能用速度方差乘时间平方来计算位移方差。两者还相关，协方差为 $(1-e^{-1})^2/2\\approx0.199788$。\n\n</details>\n\n## 配套代码\n\n[下载本节 Python 代码](/assets/downloads/theory/calin-book-11-01.zip)\n\n解压后运行 `calin-book-11-01.py`。需安装 numpy、scipy 和 matplotlib；脚本会生成图像与数值核查结果，无需另行下载数据。\n",
+  "metadata": {
+    "theory_book": {
+      "book": "stochastic-calculus",
+      "part": "第四部分 · 应用与练习",
+      "number": 60,
+      "chapter": "11",
+      "edition": "2026-10",
+      "minutes": 43,
+      "section": "1",
+      "source_pages": [
+        256,
+        257,
+        258,
+        259,
+        260,
+        261,
+        262
+      ],
+      "chapter_title": "随机模型的应用",
+      "source_sections": [
+        "11.1",
+        "11.2"
+      ]
+    }
+  }
+}

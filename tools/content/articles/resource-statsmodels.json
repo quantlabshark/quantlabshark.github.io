@@ -1,0 +1,18 @@
+{
+  "slug": "resource-statsmodels",
+  "title": "statsmodels 官方文档",
+  "summary": "统计模型与时间序列分析。",
+  "kind": "recommendation",
+  "track": "",
+  "series": "",
+  "sort_order": 36,
+  "section_ids": [
+    "4560f087-a08d-4b02-8eb8-545d6594d86c",
+    "6cb0390d-4b0e-459e-a155-9dfb328810ec"
+  ],
+  "body": "## 统计模型与结果解释\n\nstatsmodels 文档提供回归、统计检验和时间序列模型的使用说明。阅读结果时，将系数、标准误和检验量对应到模型假设，并检查残差与样本时间结构。\n\n[打开 statsmodels 官方文档](https://www.statsmodels.org/stable/tsa.html)\n",
+  "metadata": {
+    "url": "https://www.statsmodels.org/stable/tsa.html",
+    "external_url": "https://www.statsmodels.org/stable/tsa.html"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "slug": "guo-book-04-08",
+  "title": "交易间隔、ACD 与 Hawkes 强度",
+  "summary": "从交易间隔走向事件强度，推导 ACD 的长期均值与 Hawkes 的分支比率。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "量化交易：算法、分析、数据、模型和优化",
+  "sort_order": 6029,
+  "cover_url": "",
+  "section_ids": [
+    "19808db5-aef6-5fc5-b233-d9732a29916b"
+  ],
+  "body": "## 交易时间本身就是数据\n\n相同价格变化，在一秒内连续出现和在半小时内缓慢出现，可能对应不同的市场状态。设第 $i$ 笔交易时间为 $t_i$，间隔为 $d_i=t_i-t_{i-1}>0$。开盘、午间和收盘的活跃度通常不同，应先区分日内季节性与短期聚集。\n\n一种处理是估计正的时间尺度函数 $s(t)$，用 $d_i/s(t_i)$ 去除规律性变化。对数间隔回归的指数变换对应几何尺度，若需要条件算术均值，还需考虑误差的指数矩。\n\n## ACD 预测下一次间隔\n\n自回归条件间隔模型为\n\n$$d_i=\\psi_i\\epsilon_i,\\qquad\\psi_i=\\omega+\\alpha d_{i-1}+\\beta\\psi_{i-1},\\qquad E(\\epsilon_i)=1.$$\n\n正参数保证间隔均值非负。若 $\\alpha+\\beta<1$，平稳均值为 $E(d_i)=\\omega/(1-\\alpha-\\beta)$。取 $\\omega=0.2$ 秒、$\\alpha=0.15$、$\\beta=0.75$，长期平均间隔为两秒。\n\n指数创新的条件密度为 $\\psi_i^{-1}\\exp(-d_i/\\psi_i)$。Weibull 创新允许不同危险率形状，但必须缩放到均值一，才能把 $\\psi_i$ 解释为条件均值。把 $d_i-\\psi_i$ 写成鞅差后，ACD 也可转化为 ARMA 型递推，类似于 GARCH 的平方误差结构。\n\n## Hawkes 直接预测事件到达率\n\n计数过程 $N(t)$ 的条件强度 $\\lambda(t)$ 满足：很短时间 $dt$ 内，给定过去发生事件的概率约为 $\\lambda(t)dt$。指数 Hawkes 模型为\n\n$$\\lambda(t)=\\mu+\\sum_{t_i<t}\\alpha e^{-\\beta(t-t_i)}.$$\n\n每次事件使强度增加 $\\alpha$，随后按速率 $\\beta$ 衰减到背景强度 $\\mu$。核积分 $n_b=\\alpha/\\beta$ 是分支比率，表示一个事件平均直接激发多少后续事件。\n\n当 $n_b<1$ 时，平稳平均强度为 $\\bar\\lambda=\\mu/(1-n_b)$。取 $\\mu=0.4$、$\\alpha=0.6$、$\\beta=1.2$，得分支比率 $0.5$，平均强度 $0.8$ 次每秒。平均簇大小为 $1/(1-n_b)=2$。\n\n## 从强度得到等待时间分布\n\n若上一事件后强度沿给定路径变化，直到下一事件尚未发生时的等待生存概率为 $P(D>d\\mid\\mathcal F)=\\exp[-\\int_0^d\\lambda(t_i+u)du]$。常数强度 $\\lambda$ 给出指数等待时间；时变或自激励强度则不再具有同一个固定平均间隔。\n\n在指数 Hawkes 中，假设事件前恰为背景强度 $\\mu=0.4$，新事件使强度增加 $\\alpha=0.6$，衰减率为 $\\beta=1.2$。随后一秒内没有新事件的概率为 $\\exp[-0.4-0.6(1-e^{-1.2})/1.2]\\approx0.4726$。积分第二项表示这次事件留下的额外到达风险。\n\n分支解释也能推导平均簇大小。一个背景事件平均产生 $n_b$ 个直接后代，再产生 $n_b^2$ 个第二代，如此相加为 $1+n_b+n_b^2+\\cdots=1/(1-n_b)$。因此平均强度等于背景强度乘以平均簇大小。这里“后代”是模型中的事件归因，不是已经识别出的经济因果。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>强度的单位是每秒事件数，它乘一个很短时间才近似为概率。不能直接把大于一的强度当作概率，也不能在长时间窗口内一直使用线性近似。</p></aside>\n\n### 两次事件怎样改变强度和似然\n\n取背景强度 $\\mu=0.2$、事件冲击幅度 $\\alpha=0.6$、衰减率 $\\beta=2$，观察到事件时刻 $t_1=1,t_2=2$，截止时刻 $T=3$。$\\mu,\\alpha$ 的单位为每单位时间，$\\beta$ 决定冲击衰减的速度。\n\n第一次事件发生前，$\\lambda(1-)=0.2$；事件发生后立即升到 0.8。第二次事件前，第一次冲击已衰减一个时间单位：\n\n$$\\lambda(2-)=0.2+0.6e^{-2}\\approx0.2812.$$\n\n第二次事件后再增加 0.6，变为约 0.8812。计算似然时，事件项使用发生前的强度，否则会把本次事件自身的冲击提前算进去。\n\n累计强度按每次冲击分别积分：\n\n$$\\int_0^3\\lambda(t)dt\n=0.2\\times3+\\frac{0.6}{2}(1-e^{-4})\n+\\frac{0.6}{2}(1-e^{-2})\\approx1.1539.$$\n\n因此对数似然为 $\\log0.2+\\log0.2812-1.1539$。前两项评价事件发生时的预测，负积分项同时计入没有事件发生的时间。图中标出跳前强度、跳后强度以及衰减曲线。\n\n![两次事件怎样改变强度和似然](/assets/figures/theory/walkthrough/hawkes-events.svg)\n\n## 似然与诊断\n\n观测区间 $[0,T]$ 的对数似然为\n\n$$\\ell=\\sum_i\\log\\lambda(t_i)-\\int_0^T\\lambda(s)ds.$$\n\n指数核的积分可解析计算为 $\\mu T+\\sum_i\\alpha[1-e^{-\\beta(T-t_i)}]/\\beta$，强度递推也无需每次扫描全部历史。似然评价时使用事件发生前的强度，不能把该事件自身的跳升计入。\n\n拟合后计算积分强度间隔 $z_i=\\int_{t_{i-1}}^{t_i}\\widehat\\lambda(s)ds$。模型合适时，它们应接近独立单位指数变量。分布吻合但仍有自相关，说明到达依赖尚未解释充分。\n\n![自激励事件与条件强度](/assets/illustrations/theory/guo/hawkes-intensity.svg)\n\n时变背景可以用正函数或样条描述开收盘活动，多指数核或幂律核描述不同衰减尺度。背景季节性与自激励应共同估计，否则规律性高峰可能被误记为事件互相激发。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>似然，即把观测数据固定后，将其出现概率或密度视为参数的函数。</p></aside>\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>ACD 从“下一笔要等多久”出发，Hawkes 从“此刻每秒可能来多少笔”出发。两者都描述交易时钟，但它们的状态和条件分布不同。</p></aside>\n\n## 练习\n\n在上述 Hawkes 参数下，一次事件发生后新增强度何时降为一半？若分支比率升至 $0.9$、背景不变，平均强度是多少？\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n半衰期为 $\\log2/1.2\\approx0.578$ 秒。平均强度变为 $0.4/(1-0.9)=4$ 次每秒。接近临界值时，同样的背景事件会通过更长的激发链形成更密集的事件簇。\n\n</details>\n\n## 配套代码\n\n[下载本节代码](/assets/downloads/theory/guo-book-04-08.zip)。压缩包包含 Python 脚本、运行说明和依赖清单。\n\n[补充算例与绘图代码](/assets/downloads/theory-walkthrough/guo-book-04-08.zip)\n",
+  "metadata": {
+    "theory_book": {
+      "book": "quantitative-trading",
+      "part": "第二部分 · 高频数据与订单簿",
+      "number": 29,
+      "chapter": "4",
+      "edition": "2026-10",
+      "minutes": 17,
+      "section": 8,
+      "source_pages": [
+        134,
+        135,
+        136,
+        137,
+        153
+      ],
+      "chapter_title": "电子交易计量",
+      "source_sections": [
+        "4.6.1",
+        "4.6.2",
+        "4.8"
+      ]
+    }
+  }
+}

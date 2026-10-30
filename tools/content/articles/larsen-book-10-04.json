@@ -1,0 +1,34 @@
+{
+  "slug": "larsen-book-10-04",
+  "title": "拟合优度与列联表：习题",
+  "summary": "46 道题，练习拟合优度与列联表中的概念、计算与方法选择。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7056,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "本章题组用于练习拟合优度与列联表。按题号选择下方题组；题面中的公式、数据和图形可点击放大。\n\n## 题组\n\n<details class=\"book-exercise-group\" id=\"questions-10-2-0\"><summary>多项分布与 Pearson 卡方统计量 · 10.2.1—10.2.10</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-069-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"多项分布与 Pearson 卡方统计量 · 10.2.1—10.2.10，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-069-01.webp\" alt=\"多项分布与 Pearson 卡方统计量 · 10.2.1—10.2.10，第 1 幅\" width=\"1330\" height=\"559\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-069-02.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"多项分布与 Pearson 卡方统计量 · 10.2.1—10.2.10，放大第 2 幅\"><img src=\"/assets/exercises/foundations/larsen-069-02.webp\" alt=\"多项分布与 Pearson 卡方统计量 · 10.2.1—10.2.10，第 2 幅\" width=\"1330\" height=\"1395\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-10-3-1\"><summary>多项分布与 Pearson 卡方统计量 · 10.3.1—10.3.12</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-070-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"多项分布与 Pearson 卡方统计量 · 10.3.1—10.3.12，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-070-01.webp\" alt=\"多项分布与 Pearson 卡方统计量 · 10.3.1—10.3.12，第 1 幅\" width=\"1330\" height=\"753\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-070-02.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"多项分布与 Pearson 卡方统计量 · 10.3.1—10.3.12，放大第 2 幅\"><img src=\"/assets/exercises/foundations/larsen-070-02.webp\" alt=\"多项分布与 Pearson 卡方统计量 · 10.3.1—10.3.12，第 2 幅\" width=\"1330\" height=\"1183\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-10-4-2\"><summary>估计参数后的拟合优度检验 · 10.4.1—10.4.14</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-071-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"估计参数后的拟合优度检验 · 10.4.1—10.4.14，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-071-01.webp\" alt=\"估计参数后的拟合优度检验 · 10.4.1—10.4.14，第 1 幅\" width=\"1330\" height=\"905\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-071-02.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"估计参数后的拟合优度检验 · 10.4.1—10.4.14，放大第 2 幅\"><img src=\"/assets/exercises/foundations/larsen-071-02.webp\" alt=\"估计参数后的拟合优度检验 · 10.4.1—10.4.14，第 2 幅\" width=\"1330\" height=\"1667\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-071-03.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"估计参数后的拟合优度检验 · 10.4.1—10.4.14，放大第 3 幅\"><img src=\"/assets/exercises/foundations/larsen-071-03.webp\" alt=\"估计参数后的拟合优度检验 · 10.4.1—10.4.14，第 3 幅\" width=\"1330\" height=\"545\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-10-5-3\"><summary>列联表、独立性与异常点 · 10.5.1—10.5.10</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-072-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"列联表、独立性与异常点 · 10.5.1—10.5.10，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-072-01.webp\" alt=\"列联表、独立性与异常点 · 10.5.1—10.5.10，第 1 幅\" width=\"1330\" height=\"999\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-072-02.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"列联表、独立性与异常点 · 10.5.1—10.5.10，放大第 2 幅\"><img src=\"/assets/exercises/foundations/larsen-072-02.webp\" alt=\"列联表、独立性与异常点 · 10.5.1—10.5.10，第 2 幅\" width=\"1330\" height=\"1333\" loading=\"lazy\"></a></div>\n\n</details>\n\n",
+  "metadata": {
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第三部分 · 比较、回归与实验设计",
+      "number": 56,
+      "chapter": "10",
+      "edition": "2026-10",
+      "minutes": 26,
+      "section": "4",
+      "questions": 46,
+      "unit_type": "exercise",
+      "chapter_title": "拟合优度与列联表",
+      "source_sections": [
+        "10.2",
+        "10.3",
+        "10.4",
+        "10.5"
+      ]
+    }
+  }
+}

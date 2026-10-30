@@ -1,0 +1,41 @@
+{
+  "slug": "harris-book-23-01",
+  "title": "23.1 指数怎样计算，基金怎样复制",
+  "summary": "理解价格加权、市值加权、等权和全收益指数，以及复制过程中产生的跟踪偏离。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "交易与交易所：市场微观结构",
+  "sort_order": 4068,
+  "cover_url": "",
+  "section_ids": [
+    "44e2f2e9-a852-5af5-8a72-788df5e2df9d"
+  ],
+  "body": "## 指数是一套计算规则\n\n指数用一个数字概括一组证券的价格或收益变化。成分证券决定它代表什么，权重决定每只证券对结果的影响。指数上涨不能解释为所有股票都上涨；少数权重较大的证券也可能决定整体方向。\n\n价格加权指数可写为$I=\\sum_i p_i/D$。$p_i$为各证券价格，$D$是除数。价格越高的证券，对指数每个百分点变化的贡献通常越大。市值加权指数则以证券总市值分配权重，简化写为$I=\\sum_i N_ip_i/D$，$N_i$为用于计算的股数。指数使用哪些股份口径由其规则决定。\n\n自拟两家公司：甲股价100元、股数100万，乙股价10元、股数1亿。价格加权中甲约占90.9%；市值加权中甲只有约9.1%。同样称为“两只股票的平均表现”，计算结果可能完全不同。\n\n## 拆股为什么需要调整除数\n\n一股拆成两股，价格在其他条件相同下减半，但持有人财富没有减半。价格加权指数的价格总和会下降，所以要改变除数，保证拆股时指数连续。市值加权中股数加倍与价格减半相互抵消，单纯拆股不改变总市值。更换成分、增减纳入股份等事项也需要按指数规则调整。\n\n等权指数给每只成分证券相同的资金权重。随着价格变化，权重会偏离相等状态，定期恢复等权需要交易。几何平均类指数使用收益的乘积或对数平均，更强调复合变化，与价格简单相加不同。比较指数时，应先检查成分、权重和再平衡机制。\n\n```python\n# 自拟两股价格加权指数，验证拆股时财富和指数连续\nprices = [100.0, 10.0]\nold_divisor = 2.0\nold_index = sum(prices) / old_divisor\nafter_split = [prices[0] / 2, prices[1]]\nnew_divisor = sum(after_split) / old_index\nnew_index = sum(after_split) / new_divisor\nprint('拆股前指数:', old_index)\nprint('新除数:', round(new_divisor, 6))\nprint('拆股后指数:', new_index)\nassert abs(new_index - old_index) < 1e-12\nshares_before = [1, 1]\nshares_after = [2, 1]\nassert sum(p*q for p,q in zip(prices,shares_before)) == sum(p*q for p,q in zip(after_split,shares_after))\n```\n\n![拆股前后的指数与持仓价值](/assets/figures/harris/split-adjustment.svg)\n\n左图绿色柱表示调整除数后的指数，虚线表示仍用旧除数计算的结果。右图中一股变两股后，持仓价值保持 110，拆股本身没有创造亏损。\n\n## 价格收益与全收益\n\n价格指数只描述证券价格变化，全收益指数还计入现金分配及其再投资。股票除息时，价格通常相应下降。若只看价格指数，就忽略了持有人收到的现金。评价基金应尽可能使用与分红、费用和币种口径一致的基准，否则差异可能只是计算口径造成的。\n\n复制市值加权指数，可按相同比例持有每家纳入公司用于指数计算的股份。若股数和成分不变，价格上涨自然提高相应持仓市值权重，不需要为了价格变化本身反复再平衡。复制价格加权指数则可在一个阶段持有各证券相同股数，并在拆股和成分调整时重新配置。\n\n真实基金仍需处理分红再投资、申购赎回、成分变化与交易费用。持有少量现金也会使收益偏离全投资基准。跟踪偏离是某期基金收益与基准收益之差。在量化统计中，常将这组差值的标准差称为跟踪误差，应区分持续少赚的平均偏离与偏离的波动程度。\n\n例如每个月都比基准少赚0.1个百分点，差值非常稳定，跟踪误差可以很小，但长期财富仍会被费用持续拖低。另一个基金平均偏离接近零，却时而高于、时而低于基准，其跟踪误差可能较大。两项指标回答不同问题，应一并观察。\n\n## 练习\n\n指数基金为节约交易成本，只持有流动性最好的部分成分股，可能产生什么变化？\n\n<details><summary>查看解答</summary>\n\n交易次数和冲击成本可能下降，但持仓与完整指数不同，跟踪误差可能上升。是否值得，需要比较节省的成本与增加的偏离，并检查行业、规模等风险暴露是否仍匹配目标指数。\n\n</details>\n\n[返回全书目录](/theory/trading-and-exchanges/)\n\n## 配套代码\n\n[下载本节代码（ZIP）](/assets/downloads/trading-and-exchanges/harris-book-23-01.zip)\n\n压缩包包含完整脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n",
+  "metadata": {
+    "theory_book": {
+      "book": "trading-and-exchanges",
+      "part": "第七部分 · 市场组织与制度",
+      "number": 69,
+      "chapter": "23",
+      "edition": "2026-10",
+      "minutes": 7,
+      "section": "23.1",
+      "source_year": 2003,
+      "source_pages": [
+        497,
+        498,
+        499,
+        500
+      ],
+      "chapter_title": "指数与组合交易",
+      "source_sections": [
+        "23.1 PRICE INDEXES",
+        "23.2 INDEX FUNDS"
+      ]
+    },
+    "code_download": {
+      "url": "/assets/downloads/trading-and-exchanges/harris-book-23-01.zip",
+      "examples": 1
+    }
+  }
+}

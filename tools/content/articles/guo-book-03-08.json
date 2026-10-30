@@ -1,0 +1,36 @@
+{
+  "slug": "guo-book-03-08",
+  "title": "Kalman 滤波、LQG 与分离原理",
+  "summary": "用预测与修正两步估计隐藏状态，推导 Kalman 增益和 LQG 控制中的分离关系。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "量化交易：算法、分析、数据、模型和优化",
+  "sort_order": 6021,
+  "cover_url": "",
+  "section_ids": [
+    "19808db5-aef6-5fc5-b233-d9732a29916b"
+  ],
+  "body": "## 信号看不见，观测有噪声\n\n设隐藏状态 $x_t$ 表示市场的缓慢变化趋势，观测 $y_t$ 是带噪声的价格或收益指标。线性状态空间模型为\n\n$$x_{t+1}=Ax_t+Bu_t+w_{t+1},\\qquad y_t=Hx_t+v_t.$$\n\n$u_t$ 是已知控制，过程噪声协方差为 $Q$，观测噪声协方差为 $R$。标准 Kalman 模型假设噪声零均值、高斯，并在所需时点之间独立。过程噪声表示真实状态的变化，观测噪声表示同一状态测量不准，两者作用不同。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>状态空间，即描述系统可能状态的集合；状态中保存下一步决策所需的信息。</p></aside>\n\n## 预测与修正\n\n给定上一期估计 $\\widehat x_{t-1}$ 和误差协方差 $P_{t-1}$，先预测\n\n$$\\widehat x_t^-=A\\widehat x_{t-1}+Bu_{t-1},\\qquad P_t^-=AP_{t-1}A^\\top+Q.$$\n\n新观测到来后，创新为 $e_t=y_t-H\\widehat x_t^-$。增益与更新为\n\n$$K_t=P_t^-H^\\top(HP_t^-H^\\top+R)^{-1},\\qquad\\widehat x_t=\\widehat x_t^-+K_te_t.$$\n\n协方差可用数值更稳定的 Joseph 形式计算：\n\n$$P_t=(I-K_tH)P_t^-(I-K_tH)^\\top+K_tRK_t^\\top.$$\n\n标量例子中，预测方差为 4、观测方差为 1、$H=1$，则 $K=4/5$。预测值 10、新观测 12，修正值为 11.6，后验方差为 0.8。观测更精确时，对新数据给予更大权重。\n\n![隐藏状态、噪声观测与滤波估计](/assets/illustrations/theory/guo/kalman-state.svg)\n\n## 标量 Kalman 增益可直接由最小方差得到\n\n设先验估计误差方差为 $P^-$，观测误差方差为 $R$，两种误差独立，且 $H=1$。采用更新 $\\widehat x=\\widehat x^-+K(y-\\widehat x^-)$ 后，误差方差为 $(1-K)^2P^-+K^2R$。求导得 $-2(1-K)P^-+2KR=0$，所以 $K=P^-/(P^-+R)$。\n\n这同时说明两个极限：观测很准、$R\\to0$ 时，$K\\to1$；观测噪声很大时，$K\\to0$。若过程方差 $Q$ 增大，下一步预测方差上升，也会提高对新观测的依赖。\n\n再看一次控制计算。单期目标为 $u^2+E[(x+u+w)^2]$，过程噪声均值为零、方差为 $q$，当前状态后验均值为 $\\widehat x$、方差为 $P$。展开后，与行动有关的部分为 $u^2+(\\widehat x+u)^2$，$P+q$ 是不随 $u$ 改变的常数，最优 $u=-\\widehat x/2$。当 $\\widehat x=4$ 时选择 $u=-2$，但最优期望成本仍包含 $P+q$，所以状态不确定性并未消失。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>分离原理允许用状态估计代替未知状态来计算某类最优行动，不代表估计误差没有代价。误差可能不改变这个简单例子的反馈系数，却仍增加总成本。</p></aside>\n\n### Kalman 增益由一个二次函数得到\n\n设预测均值为 10，预测误差方差 $P^-=4$；新观测为 11，独立测量误差方差 $R=4$，观测系数 $H=1$。用增益 $K$ 更新为 $\\widehat x^+=\\widehat x^-+K(y-\\widehat x^-)$。\n\n若先验误差与测量误差独立、均值为零，则更新误差方差为\n\n$$P^+(K)=(1-K)^2P^-+K^2R=4(1-K)^2+4K^2.$$\n\n求导得 $-8+16K=0$，所以 $K=1/2$。新均值为 $10+(11-10)/2=10.5$，新方差为 $4/4+4/4=2$。\n\n符号 $-$ 表示收到这次观测前的预测，$+$ 表示使用观测后的更新，不是数值的正负。若测量误差方差降为 1，则 $K=4/(4+1)=0.8$，新均值为 10.8、方差为 0.8；更精确的观测获得更大权重。\n\n![Kalman 增益由一个二次函数得到](/assets/figures/theory/walkthrough/kalman-update.svg)\n\n## LQG 中的控制问题\n\n若目标是最小化 $E[\\sum_t(x_t^\\top Cx_t+u_t^\\top Du_t)+x_T^\\top C_Tx_T]$，其中 $D$ 正定，线性二次控制给出 $u_t=-L_t\\widehat x_t$。反馈矩阵由反向 Riccati 递推得到：\n\n$$L_t=(D+B^\\top S_{t+1}B)^{-1}B^\\top S_{t+1}A,$$\n\n$$S_t=C+A^\\top S_{t+1}A-A^\\top S_{t+1}B(D+B^\\top S_{t+1}B)^{-1}B^\\top S_{t+1}A.$$\n\n滤波协方差 $P_t$ 向前计算，控制价值矩阵 $S_t$ 从终值向后计算。二者都使用 Riccati 结构，但代表的对象不同，不能混用。\n\n在线性高斯、二次成本、噪声结构不由控制改变等条件下，估计和控制可以分开设计：先按可观测状态求最优反馈，再把状态替换为滤波估计。这称为分离原理。它不意味着噪声不影响损失，只是反馈增益的计算与滤波问题分离。\n\n## 连续时间与未知参数\n\n若 $dx=Ax\\,dt+Q^{1/2}dB$、$dy=Hx\\,dt+R^{1/2}dW$，Kalman–Bucy 更新为\n\n$$d\\widehat x=A\\widehat x\\,dt+PH^\\top R^{-1}(dy-H\\widehat x\\,dt),$$\n\n且 $\\dot P=AP+PA^\\top+Q-PH^\\top R^{-1}HP$。观测增量中的可预测部分先被减去，剩余创新再用于修正状态。\n\n如果控制会改变信息质量，例如不同下单量让我们更清楚地观察市场冲击，决策还具有学习作用。此时简单的确定性等价可能失效。把未知参数加入状态，也不保证系统继续线性高斯，需要检查乘积项和噪声形式。\n\n非线性滤波可用一组带权粒子近似状态分布。每一步先按状态转移传播粒子，再用新观测的似然更新权重并归一化。有效样本量 $1/\\sum_jw_j^2$ 过低时进行重抽样。若波动率也是隐藏状态，这种方法可以同时跟踪水平与风险，但粒子数量、建议分布和重抽样频率会影响误差。把滤波分布接入近似动态规划或树搜索后，才进一步得到包含学习过程的持仓决策。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>滤波并非把曲线画得更平滑，而是在模型约束下比较预测与观测各有多可信。把观测噪声设得很大，会得到平滑曲线，也会延迟对真实变化的反应。</p></aside>\n\n## 练习\n\n预测均值为 10、预测方差为 1，观测为 12、观测方差为 4。与前面的例子相比，更新值怎样变化？\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n此时 $K=1/(1+4)=0.2$，更新均值为 $10+0.2\\times2=10.4$，后验方差仍为 $1\\times4/(1+4)=0.8$。虽然两个例子的后验方差相同，均值更偏向各自较可靠的信息来源，因此分别为 11.6 和 10.4。\n\n</details>\n\n## 配套代码\n\n[下载本节代码](/assets/downloads/theory/guo-book-03-08.zip)。压缩包包含 Python 脚本、运行说明和依赖清单。\n\n[补充算例与绘图代码](/assets/downloads/theory-walkthrough/guo-book-03-08.zip)\n",
+  "metadata": {
+    "theory_book": {
+      "book": "quantitative-trading",
+      "part": "第一部分 · 统计与投资组合",
+      "number": 21,
+      "chapter": "3",
+      "edition": "2026-10",
+      "minutes": 19,
+      "section": 8,
+      "source_pages": [
+        111,
+        112,
+        113,
+        114
+      ],
+      "chapter_title": "主动组合与动态决策",
+      "source_sections": [
+        "3.4",
+        "3.5"
+      ]
+    }
+  }
+}

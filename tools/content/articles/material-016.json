@@ -1,0 +1,42 @@
+{
+  "slug": "material-016",
+  "title": "字符统计与单次交易",
+  "summary": "缺失字母、一次买卖最大利润",
+  "kind": "reference",
+  "track": "盛冠达",
+  "series": "量化笔面试资料",
+  "sort_order": 2016,
+  "cover_url": "",
+  "section_ids": [
+    "6609a5e7-aa1a-5c66-9e8a-4566ec0c74ff"
+  ],
+  "body": "## 1. 缺失字母\n\n**题目**\n\n输入任意字符串，仅统计 ASCII 英文字母 A—Z、a—z，忽略大小写以及其他字符。按字母顺序返回未出现的字母组成的字符串，空输入也应处理。\n\n**考点**：字符集合；ASCII 范围；扫描不变量。\n\n<details class=\"interview-answer\">\n<summary>查看分析与解答</summary>\n\n### 必要知识\n\n题目只统计二十六个 ASCII 字母，因此数字、标点与其他语言字符都应忽略。大小写等价可在确认字符范围后统一转小写。集合天然去重，最多保存二十六项。\n\n### 分析思路\n\n先扫描输入建立已出现字母集合，再沿固定字母表依次输出未出现者。不要直接输出集合差，因为集合遍历顺序不等于要求的字母顺序。\n\n### 解答步骤\n\n输入 'Aa!c中' 时，A 与 a 都归为 a，c 保留，感叹号和中文忽略，seen={'a','c'}。再从 a 到 z 检查，输出以 b、d、e 开始，其余按字母顺序排列。\n\n建立26字母集合，输入仅将ASCII大写转小写并记录ASCII小写。扫描26个字母产生缺失项，时间 O(n)，空间 O(1)。\n~~~python\ndef getMissingLetters(sentence):\n    seen = {c.lower() for c in sentence\n            if \"a\" <= c <= \"z\" or \"A\" <= c <= \"Z\"}\n    return \"\".join(c for c in \"abcdefghijklmnopqrstuvwxyz\" if c not in seen)\nassert getMissingLetters(\"A quick brown fox jumps over the lazy dog\") == \"\"\nassert getMissingLetters(\"A slow yellow fox crawls under the proactive dog\") == \"bjkmqz\"\nassert getMissingLetters(\"\") == \"abcdefghijklmnopqrstuvwxyz\"\n~~~\n\n扫描过程中，`seen` 始终等于已经读取的有效字母集合。重复出现不会增加集合元素。扫描结束后，再按固定字母表筛选未出现者，因此结果天然有序。只对 ASCII 大写转小写，可以避免把其他语言字符混入英文统计。输入长度为 $n$，最多保存 26 个元素。\n\n循环不变量是读取前 k 个字符后，seen 恰好为这些字符中有效字母的小写集合。加入新字符不会删除已见字母，重复字符也不改变集合，因此结束时集合完整。空字符串产生空集合，最终输出全字母表；全部字母已出现则输出空字符串。\n\n### 同类问题\n\n固定小字母表的统计可用集合或位掩码，辅助空间相对输入长度为常数。字符范围应按题意明确，通用 isalpha 会接受更多 Unicode 字母，未必符合 ASCII 限制。\n\n</details>\n\n## 2. 一次买卖最大利润\n\n**题目**\n\n给定每天价格列表，最多完成一次先买后卖，每次交易一单位，不计费用，允许不交易。求可获得的最大利润；空列表和连续下跌都返回 0。\n\n**考点**：前缀最小值；单次交易；历史最优。\n\n<details class=\"interview-answer\">\n<summary>查看分析与解答</summary>\n\n### 必要知识\n\n固定卖出日后，最佳买入价格是此前所有日期的最低价，因此不必枚举全部买卖日。最多一次且允许不交易，使利润下界为零。题目是在完整历史路径上找最优配对，并非在线预测未来。\n\n### 分析思路\n\n扫描每个价格，先用此前最低价计算当天卖出的最佳利润，再更新最低价。维护全局最佳与此前最低两个量即可。\n\n### 解答步骤\n\n处理 [7,1,5,3,6,4] 时，7 之前没有买点；到 1 时更新最低价为 1；到 5 时利润候选为 4；到 3 时为 2 不更新；到 6 时为 5，成为最终最优。\n\n扫描时维护此前最低价和最大利润。当天卖出利润为当前价减此前最低价，与已有最大值比较，随后更新最低价。\n~~~python\ndef bestTrader(price):\n    low, best = float(\"inf\"), 0\n    for p in price:\n        best = max(best, p-low)\n        low = min(low, p)\n    return best\nassert bestTrader([7,1,5,3,6,4]) == 5\nassert bestTrader([7,6,4,3,1]) == 0\nassert bestTrader([]) == 0\n~~~\n时间 O(n)，空间 O(1)。这是给定整条路径的最优买卖问题，不是实时预测策略。\n\n以 `[7,1,5,3,6,4]` 为例：读到 5 时，此前最低价为 1，最佳利润更新为 4。读到 6 时更新为 5，最终结果是 1 买、6 卖。先用此前最低价计算利润，再更新最低价，保证买入不晚于卖出。允许不交易使初始最佳值取 0。每个价格只扫描一次，因此无需枚举所有买卖日的 $O(n^2)$ 组合。\n\n不变量是处理当前价格之前，low 为严格此前最低价格，best 为此前所有合法先买后卖的最大非负利润。代码先更新 best 再更新 low，保持时间顺序；初始 low=∞ 使第一天候选为负无穷而不会错误交易。连续下降与空列表最终均为零。\n\n### 同类问题\n\n一次买卖问题可将双重枚举压缩为“固定右端点所需的历史摘要”。若允许多次交易、冷却期或持仓费，状态需要扩展，不能继续直接套同一两变量算法。\n\n</details>\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/interview/material-016.zip",
+        "label": "字符统计与单次交易 · Python 示例",
+        "size_bytes": 1146,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "interview": {
+      "book": "practice",
+      "topic": "盛冠达",
+      "number": 16,
+      "chapter": 15,
+      "company": "盛冠达",
+      "edition": "2026-10",
+      "section": "字符统计与单次交易",
+      "difficulty": "综合",
+      "full_source": true,
+      "answer_count": 2,
+      "source_files": [
+        "xhs量化面经整理汇总/盛冠达.docx"
+      ],
+      "question_count": 2,
+      "company_section": 1,
+      "answers_collapsed": true
+    }
+  }
+}

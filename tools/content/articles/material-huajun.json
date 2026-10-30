@@ -1,0 +1,42 @@
+{
+  "slug": "material-huajun",
+  "title": "图计数、最大子数组与数据合并",
+  "summary": "华均广汇：图计数、最大子数组与数据合并：题目整理、数学推导与程序实现。",
+  "kind": "reference",
+  "track": "扫描试题与图像资料",
+  "series": "量化笔面试资料",
+  "sort_order": 2056,
+  "cover_url": "",
+  "section_ids": [
+    "6609a5e7-aa1a-5c66-9e8a-4566ec0c74ff"
+  ],
+  "body": "## 顶点有标号时的图计数\n\n**题目**\n\n有 $n\\ge0$ 个有标号顶点，任意两点之间最多一条无向边，不允许自环，允许不连通。求不同图的数量，对 $10^9+7$ 取模，并计算 $n=4$ 的例子。\n\n**考点**：有标号图；子集计数；模幂。\n\n<details class=\"interview-answer\">\n<summary>查看分析与解答</summary>\n\n### 必要知识\n\n每条无向边对应一个不同的顶点对。题目允许不连通且不要求固定边数，所以任意候选边子集都合法，顶点标号则使边的端点身份不能被重命名忽略。\n\n### 分析思路\n\n先数候选边，再给每条边一个存在与否的二元选择。只要求模结果时，在反复平方过程中始终取模，不构造巨大整数。\n\n### 解答步骤\n\n四个顶点候选边为12、13、14、23、24、34，共六条。一串六位0/1与一个图一一对应，例如100000只含边12，010000只含边13，虽然形状相同但有标号图不同。\n\n无向边由无序顶点对确定，共有 $M=\\binom n2=n(n-1)/2$ 个候选。每条候选边独立选择存在或不存在，一组选择唯一决定一个图，因此图数为 $2^M$。\n\n$n=4$ 时共有 6 个候选边，答案为 $2^6=64$。顶点有标号，所以旋转或重命名后看起来相似的图仍可能是不同图；本题不需要按图同构去重。$n=0$ 时只有一个空图，答案为 1。\n\n模快速幂反复平方，每次根据指数当前二进制位决定是否乘入，需 $O(\\log(M+2))=O(\\log(n+2))$ 次模乘，避免先构造巨大的整数 $2^M$。下面直接使用 Python 三参数 `pow`。\n\n```python\ndef graph_count(n):\n    if n < 0:\n        raise ValueError(\"顶点数不能为负\")\n    return pow(2, n * (n - 1) // 2, 10**9 + 7)\n\nassert graph_count(4) == 64\nassert graph_count(0) == 1\n```\n\n快速幂把M写成二进制，底数依次平方为2、2²、2⁴等，指数位为一时乘入结果。乘法后取模保持最终余数不变。n=0或1都无候选边，指数零，只有一个空边集。\n\n### 同类问题\n\n图计数先明确有无标号、自环、重边、方向及连通约束。独立边子集公式只在没有额外依赖限制时直接成立。\n\n</details>\n\n## 最大连续子数组和\n\n**题目**\n\n给定非空整数数组，长度至多 $10^6$，单项绝对值至多 $10^7$。求非空连续子数组的最大和，并计算 `[-1,3,4,-2,5,-7]`。数组可能全为负数。\n\n**考点**：末端最优；非空区间；整数容量。\n\n<details class=\"interview-answer\">\n<summary>查看分析与解答</summary>\n\n### 必要知识\n\n必须以当前项结束的区间与目前全局最佳区间是两个不同状态。前者用于延长，后者用于回答问题；即使此前全局最佳很大，也可能不与当前项相邻。\n\n### 分析思路\n\n当前末端区间要么只选当前项，要么接在前一末端最优后。初始化第一项，逐次更新末端值与全局值，并核对全负边界。\n\n### 解答步骤\n\n若前一末端和为负，把它接到当前项只会使和更小，应重新开始；若为正，保留它有利。样例末端值−1、3、7、5、10、3说明局部下降不必立即结束，全局最好仍为10。\n\n令 $e_i$ 为必须以第 $i$ 项结束的最大区间和。这样的区间只有两种来源：从当前项重新开始，或接在以前一项结束的最优区间之后，因此\n$$e_i=\\max(a_i,e_{i-1}+a_i).$$\n再用 $M_i=\\max(M_{i-1},e_i)$ 记录截至当前位置的全局最优值。示例的末尾最优值依次为 -1、3、7、5、10、3，最大值为 10，对应 `[3,4,-2,5]`。\n\n初值应为第一项，不能取零，否则全负数组会错误地选择空区间。每个元素只处理一次，时间 $O(n)$，额外空间 $O(1)$。最大绝对和可能达到 $10^{13}$，固定宽度整数实现需至少 64 位。若还要区间位置，在重新开始时记录新起点，在更新全局值时保存终点。\n\n```python\ndef maximum_sum(arr):\n    if not arr:\n        raise ValueError(\"数组不能为空\")\n    ending = best = arr[0]\n    for i in range(1, len(arr)):\n        value = arr[i]\n        ending = max(value, ending + value)\n        best = max(best, ending)\n    return best\n\nassert maximum_sum([-1, 3, 4, -2, 5, -7]) == 10\nassert maximum_sum([-5, -2, -7]) == -2\n```\n\n全负数组[−5,−2,−7]应选单项−2，不能返回不存在的空区间零。最大累计量级10⁶×10⁷=10¹³，32位整数不足。实现若写arr[1:]会额外复制切片，为严格O(1)辅助空间可改为按下标遍历。\n\n### 同类问题\n\n连续区间问题常用“必须在这里结束”的状态。明确是否允许空区间，并检查语言实现是否偷偷创建了线性大小的临时切片。\n\n</details>\n\n## 按来源优先级合并参数\n\n**题目**\n\n输入若干组键值对，各组按优先级从低到高排列。遇到同名键时，高优先级的值覆盖低优先级；输出值按该键第一次出现的顺序排列。实现合并算法，组内重复键也按后出现值覆盖处理。\n\n**考点**：覆盖优先级；首次顺序；有序映射。\n\n<details class=\"interview-answer\">\n<summary>查看分析与解答</summary>\n\n### 必要知识\n\n键的最终值由最后一次出现决定，键的位置则由第一次出现决定。这两个规则看似不同，但保留插入顺序且更新不移位的字典正好同时满足。\n\n### 分析思路\n\n从低到高优先级遍历，各组内部也按给定顺序写入。首次写入建立位置，重复写入仅替换值，最终按插入顺序取值。\n\n### 解答步骤\n\n依次写rating=buy、risk=low后顺序为rating,risk；再写rating=sell只改变第一项值，写size=small才新增第三个位置；最后rating=hold仍留在首位。\n\n合并时分别维护键的位置与当前值。按输入顺序写入保留插入顺序的字典，首次出现的键确定位置，后续同名键更新值。第一次出现时建立键的位置；以后直接给同一个键赋新值，更新值而不改变位置。\n\n例如先出现 `rating=buy,risk=low`，再出现 `rating=sell,size=small`，最终键序为 `rating,risk,size`，值为 `sell,low,small`。若之后再把 rating 改成 hold，输出值的第一项改为 hold，顺序仍不变。\n\n不能先删除旧键再重插，这会把键移到末尾；也不能将键排序，因为要求的是第一次出现顺序。若共有 $M$ 对输入、$K$ 个不同键，哈希映射平均时间 $O(M)$、空间 $O(K)$，生成最终列表再需 $O(K)$。\n\n```python\ndef compute_parameter_value(sources):\n    merged = {}\n    for source in sources:\n        for key, value in source:\n            merged[key] = value\n    return list(merged.values())\n\nsources = [[(\"rating\", \"buy\"), (\"risk\", \"low\")],\n           [(\"rating\", \"sell\"), (\"size\", \"small\")],\n           [(\"rating\", \"hold\")]]\nassert compute_parameter_value(sources) == [\"hold\", \"low\", \"small\"]\n```\n\n空来源不影响结果，同组重复键也遵循后值覆盖。若实际输入只给无序集合，首次出现顺序便没有定义，所以接口应接受有序的键值对序列。若语言映射不保证插入顺序，可另存首次出现的键列表。\n\n### 同类问题\n\n合并题先分别说明值冲突规则和输出顺序规则。覆盖不应通过删除重插实现，否则会改变键的首次位置。\n\n</details>\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/interview/material-huajun.zip",
+        "label": "图计数、最大子数组与数据合并 · Python 示例",
+        "size_bytes": 1262,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "interview": {
+      "book": "practice",
+      "topic": "华均广汇",
+      "number": 56,
+      "chapter": 49,
+      "company": "华均广汇",
+      "edition": "2026-10",
+      "section": "图计数、最大子数组与数据合并",
+      "difficulty": "综合",
+      "full_source": true,
+      "answer_count": 3,
+      "source_files": [
+        "xhs量化面经整理汇总/华均广汇.docx"
+      ],
+      "question_count": 3,
+      "company_section": 1,
+      "answers_collapsed": true
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "slug": "guo-book-06-03",
+  "title": "乘数冲击、HJB 与清算边界",
+  "summary": "从逐单位成交积分推导乘数冲击，建立等待与清算的梯度约束和价格边界。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "量化交易：算法、分析、数据、模型和优化",
+  "sort_order": 6040,
+  "cover_url": "",
+  "section_ids": [
+    "19808db5-aef6-5fc5-b233-d9732a29916b"
+  ],
+  "body": "## 乘数价格冲击与库存变化\n\n设未受影响价格按几何布朗运动变化，累计卖出量为 $\\xi^s$、买入量为 $\\xi^b$。实际价格为 $X_t=X_t^0\\exp[-\\lambda\\xi_t^s+\\lambda\\xi_t^b]$。卖出会按比例压低价格，买入则抬高价格。\n\n库存为 $y_t=y_0-\\xi_t^s+\\xi_t^b$。累计交易量可以连续增加，也可以在某个时刻突然增加一笔。后一种情况表示块状交易，需要用允许跳跃的控制描述，不能仅由固定交易速度累积得到。\n\n## 一笔大单应沿边际价格积分\n\n当前价格 $x$，卖出 $q$ 股过程中价格从 $x$ 下降到 $xe^{-\\lambda q}$。所得金额为\n\n$$R(x,q)=\\int_0^qxe^{-\\lambda u}du=\\frac x\\lambda(1-e^{-\\lambda q}).$$\n\n若每股额外费用为 $c_s$，净收入再减 $c_sq$。不能把整笔数量都乘交易前价格，也不能全部乘交易后价格，两者分别高估和低估沿途成交收入。\n\n取 $x=100,\\lambda=0.01,q=10$，毛收入约为 $951.626$，平均价约为 $95.163$，最终边际价格约为 $90.484$。\n\n## 等待、卖出和买入的 HJB\n\n用剩余时间 $\\tau$ 表示价值 $V(\\tau,x,y)$，目标是最大化折现净收入。等待期间的算子为 $\\mathcal LV=\\mu xV_x+\\sigma^2x^2V_{xx}/2-\\delta V$。卖出一小单位使价格下降 $\\lambda x$、库存下降一，同时收到 $x-c_s$。\n\n因此方程为\n\n$$\\max\\{-V_\\tau+\\mathcal LV,\\ x-c_s-\\lambda xV_x-V_y,\\ -x-c_b+\\lambda xV_x+V_y\\}=0.$$\n\n三项分别对应等待、卖出和买入。每项都不能为正，否则当前价值低估了某个立即可行的改善；最优行动对应等号。若模型只允许清算，则删除买入项。\n\n到期必须清算的边界为 $V(0,x,y)=x(1-e^{-\\lambda y})/\\lambda-c_sy$。无库存时，清算问题的价值为零。边界、可行持仓和费用必须一起确定。\n\n### 卖出方向的梯度约束怎样展开\n\n设当前价格为 $x$，库存为 $y$，卖出微小数量 $\\varepsilon>0$。扣除每股费用 $c_s$ 后，立即收入约为 $(x-c_s)\\varepsilon$；新状态为 $(xe^{-\\lambda\\varepsilon},y-\\varepsilon)$。对继续价值作一阶展开：\n\n$$V(\\tau,xe^{-\\lambda\\varepsilon},y-\\varepsilon)\n=V(\\tau,x,y)-\\lambda xV_x\\varepsilon-V_y\\varepsilon+o(\\varepsilon).$$\n\n加上立即收入，再减去未交易的价值，得到\n\n$$\\varepsilon[x-c_s-\\lambda xV_x-V_y]+o(\\varepsilon).$$\n\n其中 $V_x$ 是价格变化一单位对继续价值的影响，$V_y$ 是多持有一股的继续价值；$\\lambda x$ 是卖出一小单位造成的价格下降率。最优价值不应被一次立即交易提高，所以括号内不能为正；允许连续卖出的边界处取等号。\n\n例如 $x=100,c_s=1,\\lambda xV_x=19,V_y=80$ 时，边际收入与继续价值减少恰好相抵。若只考虑收到 99 元而漏掉价格对剩余库存的影响，就会把这个边界误判为应继续卖出。\n\n## 无限期清算边界\n\n在 $0\\le\\mu<\\delta$、$c_s>0$ 的清算模型中，等待区域的方程允许 $x^n$ 型解，其中正根 $n>1$ 满足\n\n$$\\tfrac12\\sigma^2n(n-1)+\\mu n-\\delta=0.$$\n\n平滑拼接得到价格阈值 $F_0=nc_s/(n-1)$。当 $x<F_0$ 时等待；当 $F_0<x<F_0e^{\\lambda y}$ 时，卖出 $q=\\lambda^{-1}\\log(x/F_0)$，把边际价格压回阈值；当 $x\\ge F_0e^{\\lambda y}$ 时，可清算全部库存。\n\n![价格与库存决定的即时卖出量](/assets/illustrations/theory/guo/multiplicative-boundary.svg)\n\n无限期模型允许持续等待，有限截止模型的边界会随剩余时间变化。若允许额外买入、杠杆或不受限库存，参数条件还会影响问题是否有有限价值，应在定义可行集时处理。\n\n## 清算阈值怎样由两个边界条件确定\n\n等待区域设 $V(x,y)=A(y)x^n$。在卖出边界 $x=F$，边际卖出条件为 $F-c_s-\\lambda nA(y)F^n-A'(y)F^n=0$。记 $B=\\lambda nA+A'$，这就是 $F-c_s=BF^n$。\n\n平滑拼接还要求上述卖出边际对价格的导数为零，因此 $1=nBF^{n-1}$。将它乘以 $F/n$ 并与前式比较，得 $F-c_s=F/n$，于是 $F=nc_s/(n-1)$。这一推导也说明为什么需要 $n>1$ 和正的每股费用。\n\n假设 $\\mu=0,\\sigma=20\\%,\\delta=4\\%,c_s=50$ 元，根方程为 $0.02n(n-1)-0.04=0$，正根 $n=2$，所以阈值为 100 元。若当前价格为 120 元、$\\lambda=0.02$ 每股、库存为 20 股，立即卖出 $\\log(1.2)/0.02\\approx9.1161$ 股，将边际价格压回 100 元。这里忽略整数股限制，用于说明连续清算边界。\n\n卖出后的继续价值必须在新状态 $(xe^{-\\lambda q},y-q)$ 计算，不能仍使用原价格 $x$。交易收入、状态变化和继续价值三项对应同一笔行动，少改一项就会改变最优边界。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>清算阈值比较立即卖出一单位的收入与继续持有的价值。卖出还会降低后续边际价格，所以价格高于阈值时，可能只需卖出部分库存，使边际价格回到阈值。</p></aside>\n\n## 需要验证候选解\n\n解出微分方程并不足够。应检查边界值、等待区方程、交易区梯度条件、适当增长条件，并证明沿候选策略达到价值。数值代码先核查代数根和区域规则，再绘制动作图。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>部分清算的原因是自己的卖单会降低后续成交价格。先卖到边界后等待，让“继续卖”与“保留以后卖”的边际价值重新平衡。</p></aside>\n\n## 练习\n\n设阈值 $F_0=80$、当前价格 100、$\\lambda=0.02$、库存 20。按无限期边界规则应立即卖出多少？\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n计算 $q=\\log(100/80)/0.02\\approx11.157$，小于库存 20，因此部分卖出。交易后价格为 $100e^{-0.02q}=80$，剩余库存约 $8.843$。如果初始库存只有十股，则应卖完十股。\n\n</details>\n\n## 配套代码\n\n[下载本节代码](/assets/downloads/theory/guo-book-06-03.zip)。压缩包包含 Python 脚本、运行说明和依赖清单。\n\n[补充算例与绘图代码](/assets/downloads/theory-walkthrough/guo-book-06-03.zip)\n",
+  "metadata": {
+    "theory_book": {
+      "book": "quantitative-trading",
+      "part": "第三部分 · 执行、做市与路由",
+      "number": 40,
+      "chapter": "6",
+      "edition": "2026-10",
+      "minutes": 18,
+      "section": 3,
+      "source_pages": [
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        223,
+        224
+      ],
+      "chapter_title": "最优执行与订单配置",
+      "source_sections": [
+        "6.2.1",
+        "6.2.2",
+        "6.2.3",
+        "6.6"
+      ]
+    }
+  }
+}

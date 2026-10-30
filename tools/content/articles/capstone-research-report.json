@@ -1,0 +1,14 @@
+{
+  "slug": "capstone-research-report",
+  "title": "20 · 策略研究报告的编写与复现",
+  "summary": "组织研究假设、数据、方法与结果，附上代码和运行说明。",
+  "kind": "lesson",
+  "track": "组合与研究",
+  "series": "组合与研究",
+  "sort_order": 20,
+  "section_ids": [],
+  "body": "## 研究报告的结构\n\n研究报告围绕一个明确问题组织：提出假设，说明数据与方法，展示验证结果，再解释结果支持什么结论。假设需要对应可计算的指标；方法需要交代信号、成交时点、成本和参数选择过程。\n\n下面用字典登记报告的必要信息。示例使用模拟数据，并明确下一日收盘成交、每次买卖五基点费用及按时间划分样本。程序检查字段是否填写，内容之间是否一致则需要结合数据和代码核对。\n\n~~~python\nreport = {\n    \"hypothesis\": \"test a fixed moving-average rule\",\n    \"data\": \"synthetic demonstration only\",\n    \"execution\": \"signal t; trade close t+1; earn from t+2\",\n    \"cost\": \"5 bps on each buy and sell\",\n    \"validation\": \"chronological train/validation/test\",\n    \"limitations\": \"synthetic data; no real execution evidence\",\n}\nrequired = [\"hypothesis\", \"data\", \"execution\",\n            \"cost\", \"validation\", \"limitations\"]\nmissing = [key for key in required if not report.get(key)]\nprint(\"Missing:\", missing)\nassert not missing\n~~~\n\n## 结果表与计算附件\n\n结果部分可包括策略与基准的净值、回撤、各时间区间的表现，以及成本敏感性表。累计收益、夏普等指标应附样本区间、观察数量和年化口径。参数选择记录有助于区分开发过程中选出的结果与最终测试结果。\n\n附件保存生成图表的代码、依赖说明及允许共享的数据。正文说明数据是模拟生成还是历史观测；历史成分或披露版本缺失时，应分析这种缺失会怎样影响样本。\n\n## 结论与后续研究\n\n结论直接回应研究假设。若未观察到稳定差异，说明哪些样本和成本条件下差异消失，并据此提出下一步分析。后续设想与已经完成的检验分开列出，便于继续研究。\n\n## 练习\n\n策略未明显超过基准，报告应如何结束？\n\n参考答案：报告实际收益差、风险差异及其样本变化，说明现有结果对假设的支持程度。若问题、数据处理和验证流程清楚，负面结果同样完成了检验。后续可从换手、参数敏感性或市场状态分析原因，并在新增检验后更新结论。\n",
+  "metadata": {
+    "legacy_course": true
+  }
+}

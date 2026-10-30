@@ -1,0 +1,36 @@
+{
+  "slug": "calin-book-09-01",
+  "title": "方向导数与扩散生成元",
+  "summary": "从短时平均变化率理解生成元，并计算相关和退化扩散。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "随机微积分及其应用",
+  "sort_order": 5051,
+  "cover_url": "",
+  "section_ids": [
+    "17859c88-b779-5654-b120-7a4cc7b39714"
+  ],
+  "body": "## 算子作用在观测函数上\n\n同一个随机位置可以用不同函数观察：$f(x)=x$ 记录位置，$f(x)=x^2$ 记录平方距离，$f(x)=e^x$ 记录指数变换。生成元 $L$ 接受这样的函数，输出它在当前状态附近的平均变化率，因此 $Lf$ 是另一个函数。\n\n多维记号中，梯度 $\\nabla f$ 是一阶偏导组成的向量，Hessian $\\nabla^2f$ 是二阶偏导矩阵，$\\operatorname{tr}(A)$ 是矩阵对角元素之和。公式 $\\operatorname{tr}(\\sigma\\sigma^T\\nabla^2f)$ 展开为 $\\sum_{i,j}(\\sigma\\sigma^T)_{ij}f_{ij}$，不必依赖矩阵记忆也能逐项计算。\n\n## 沿确定方向观察函数变化\n\n设位置 $x$ 以固定速度向量 $v$ 移动，短时后到达 $x+hv$。函数变化率为 $\\lim_{h\\to0}[f(x+hv)-f(x)]/h=v\\cdot\\nabla f(x)$，这就是方向导数。如果运动满足 $dx/dt=b(x)$，函数沿轨迹的变化率为 $b\\cdot\\nabla f$。\n\n随机运动不能只看一条光滑方向。对 $dX=b(X)dt+\\sigma(X)dW$，定义生成元\n\n$$Lf(x)=\\lim_{h\\downarrow0}\\frac{E_x[f(X_h)]-f(x)}h,$$\n\n下标 $x$ 表示从状态 $x$ 出发。它描述函数值短时间内的平均变化，不是单条路径的普通导数。伊藤公式取期望后给出\n\n$$Lf=b\\cdot\\nabla f+\\frac12\\operatorname{tr}(\\sigma\\sigma^\\mathsf T\\nabla^2f).$$\n\n其中第一项来自定向漂移，第二项来自随机位移与函数曲率。生成元把随机过程与微分算子联系起来，后续的均值演化和退出问题都可用它表述。\n\n## 从平均积分到短时极限\n\n将伊藤公式从零积分到 $h$，随机积分在可积条件下均值为零，所以\n\n$$E_x[f(X_h)]-f(x)=E_x\\int_0^h\\left[b\\cdot\\nabla f+\\frac12\\sum_{i,j}A_{ij}f_{ij}\\right](X_s)ds,\\quad A=\\sigma\\sigma^T.$$\n\n若先把过程停在系数和导数有界的邻域，路径连续性使被积函数在 $s\\downarrow0$ 时趋于它在 $x$ 的值。除以 $h$ 后，是一小段时间内的平均。有界控制允许交换极限和期望，因此得到生成元表达式。使用紧支撑光滑函数或局部停止，是使这一步成立的常用做法。\n\n在 $Lf=b_if_i+A_{ij}f_{ij}/2$ 中，一阶项读取平均位移，二阶项读取位移协方差。短时漂移平方只有 $h^2$ 阶，所以除以 $h$ 后不进入扩散矩阵。\n\n### 从一步平均变化算出生成元\n\n取 $dX=2dt+3dW$，当前状态为 $x$，观察函数为 $f(x)=x^2$。经过短时 $h$，精确增量为 $\\Delta X=2h+3\\sqrt h Z$。记 $E_x$ 为“从 $X_0=x$ 出发求平均”。展开得到\n\n$$E_x[f(X_h)]-f(x)\n=E[2x\\Delta X+(\\Delta X)^2]\n=4xh+9h+4h^2.$$\n\n除以 $h$，再令 $h\\downarrow0$：\n\n$$Lf(x)=\\lim_{h\\downarrow0}(4x+9+4h)=4x+9.$$\n\n通用写法 $Lf=bf'+\\sigma^2f''/2$ 中，$b=2$ 是漂移，$\\sigma=3$ 是噪声强度，$f'=2x,f''=2$。代入也得到 $2(2x)+(9/2)\\times2=4x+9$。\n\n在 $x=1$ 处，这一平均变化率为 13。生成元的输入是函数 $f$，输出是另一个函数 $Lf$；只有再指定状态 $x$，才得到一个数。它不是随机路径在该点的普通速度。\n\n![从一步平均变化算出生成元](/assets/figures/theory/walkthrough/ito-correction.svg)\n\n## 一维例子\n\n对 $dX=\\mu dt+\\sigma dW$，$L=\\mu\\partial_x+\\sigma^2\\partial_{xx}/2$。取 $f(x)=x$，有 $Lf=\\mu$；取 $f(x)=x^2$，则 $Lf=2\\mu x+\\sigma^2$。这分别对应均值和二阶矩的瞬时变化率。\n\n对均值回复过程，$L=\\kappa(m-x)\\partial_x+\\sigma^2\\partial_{xx}/2$。在 $x=m$ 时状态没有平均位移，但平方偏差的平均变化仍含 $\\sigma^2$，因为噪声不断产生新的离散程度。\n\n## 多维协方差决定二阶项\n\n若 $dX=dW^1$、$dY=\\rho dW^1+\\sqrt{1-\\rho^2}dW^2$，生成元为\n\n$$L=\\frac12\\partial_{xx}+\\rho\\partial_{xy}+\\frac12\\partial_{yy}.$$\n\n交叉项的系数是 $\\rho$，因为 Hessian 的两项 $f_{xy},f_{yx}$ 各乘一半后相加。若把相关噪声误当成独立，生成元会丢掉协方差信息，联合分布和相关函数的演化都会算错。\n\n对 $n$ 维标准布朗运动，统一记 $\\Delta=\\sum_i\\partial_{ii}$，因此 $L=\\Delta/2$。在物理扩散模型中常写 $L=D\\Delta$，对应每个坐标噪声强度为 $\\sqrt{2D}$；这两套记号只是参数选择不同。\n\n## 退化扩散仍有确定的生成元\n\n考虑 $dX=dW^1$、$dY=XdW^2$。扩散矩阵为 $\\operatorname{diag}(1,x)$，生成元为 $L=\\tfrac12(\\partial_{xx}+x^2\\partial_{yy})$。在 $x=0$ 时，Y 方向瞬时噪声为零，矩阵不可逆，但公式仍成立。\n\n从 $(x_0,y_0)$ 出发，$X_t=x_0+W_t^1$、$Y_t=y_0+x_0W_t^2+\\int_0^tW_s^1dW_s^2$。即使 $x_0=0$，X 很快离开零附近，Y 仍会逐渐积累随机性。直接计算 $E(Y_t-y_0)^2=\\int_0^tE X_s^2ds=x_0^2t+t^2/2$，显示瞬时退化不等于整段时间始终没有波动。\n\n## 反推状态方程与独立坐标\n\n若给出 $Lf=f'+f''$，比较标准形式 $bf'+\\sigma^2f''/2$，得到 $b=1,\\sigma=\\sqrt2$，对应 $dX=dt+\\sqrt2dW$。容易漏掉的一半由伊藤二阶项产生，不能直接把二阶导数前的一当成噪声标准差。\n\n若两个坐标由独立噪声驱动，而且各自系数只依赖自身状态，它们没有交叉变差，联合生成元是两个坐标算子的和。例如 $dX=\\mu_Xdt+\\sigma_XdW^1$、$dY=\\mu_Ydt+\\sigma_YdW^2$，有 $L=\\mu_X\\partial_x+\\mu_Y\\partial_y+\\sigma_X^2\\partial_{xx}/2+\\sigma_Y^2\\partial_{yy}/2$。若共享噪声，则必须补混合二阶项。\n\n## 时间也可以作为状态\n\n若系数显式依赖时间，可以把 $(t,X_t)$ 看作扩充状态。其算子为 $\\partial_t+L_t$。伊藤公式中的漂移正是 $(\\partial_t+L_t)f$，所以寻找鞅、求条件期望与求解后向方程具有统一形式。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>条件期望，即给定已有信息后，对可能结果按条件概率求平均。</p></aside>\n\n## 用测试函数读取局部信息\n\n取坐标函数 $f=x_i$，生成元直接返回第 $i$ 个漂移分量。取乘积 $f=x_ix_j$，再减去两个均值变化带来的贡献，就能读出瞬时协方差。这样，漂移向量和协方差矩阵都可以从生成元对简单函数的作用恢复。\n\n这也说明生成元不必写出复杂密度就能描述过程的局部规律。在估计和仿真中，检查一小步的条件均值和协方差是否与生成元一致，是检验离散方案的基本方式；长期分布的准确性则还需要进一步验证。\n\n<aside class=\"shark-note\"><strong>鲨鱼说</strong><p>生成元像一张短时变化表：把坐标函数代进去读漂移，把平方和坐标乘积代进去读方差与协方差。它不要求随机路径存在普通速度。</p></aside>\n\n## 练习\n\n对 $dX=-Xdt+dW^1$、$dY=Xdt+2dW^1+dW^2$，求生成元，并计算它作用于 $f(x,y)=xy$ 的结果。\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n先按两个独立噪声列出系数行：$X$ 的一行是 $(1,0)$，$Y$ 的一行是 $(2,1)$。因此方差系数分别为一和五，协方差系数为二，矩阵为 $A=\\begin{pmatrix}1&2\\\\2&5\\end{pmatrix}$。\n\n漂移向量为 $(-x,x)$，故\n\n$$L=-x\\partial_x+x\\partial_y+\\frac12\\partial_{xx}+2\\partial_{xy}+\\frac52\\partial_{yy}.$$\n\n对 $f=xy$，一阶导数为 $y,x$，两个纯二阶导数为零，混合二阶导数为一。依次代入得 $Lf=-xy+x^2+2$。\n\n独立核验用乘积法则：$d(XY)=XdY+YdX+d[X,Y]$，前两项漂移为 $X^2-XY$，共同噪声给 $d[X,Y]=2dt$。因此得到相同结果。这个常数二无法从只看各坐标均值的计算中恢复。\n\n</details>\n\n[补充算例与绘图代码](/assets/downloads/theory-walkthrough/calin-book-09-01.zip)\n",
+  "metadata": {
+    "theory_book": {
+      "book": "stochastic-calculus",
+      "part": "第三部分 · 随机方程与测度变换",
+      "number": 51,
+      "chapter": "9",
+      "edition": "2026-10",
+      "minutes": 32,
+      "section": "1",
+      "source_pages": [
+        214,
+        215,
+        216,
+        217
+      ],
+      "chapter_title": "扩散过程与偏微分方程",
+      "source_sections": [
+        "9.1",
+        "9.2"
+      ]
+    }
+  }
+}

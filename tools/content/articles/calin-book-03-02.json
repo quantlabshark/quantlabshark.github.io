@@ -1,0 +1,34 @@
+{
+  "slug": "calin-book-03-02",
+  "title": "几何布朗运动：乘性波动与均值修正",
+  "summary": "推导对数正态矩、条件预测和指数鞅，比较平均路径与中位数路径。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "随机微积分及其应用",
+  "sort_order": 5016,
+  "cover_url": "",
+  "section_ids": [
+    "17859c88-b779-5654-b120-7a4cc7b39714"
+  ],
+  "body": "## 相对变化形成乘性模型\n\n若数量的波动强度与当前规模成正比，可以用 $dS_t=\\mu S_tdt+\\sigma S_tdW_t$ 描述。其显式形式为\n\n$$S_t=S_0\\exp\\left[\\left(\\mu-\\frac{\\sigma^2}{2}\\right)t+\\sigma W_t\\right],\\qquad S_0>0.$$\n\n因为指数为正，路径始终保持正值。对数变化为 $\\log(S_t/S_0)=(\\mu-\\sigma^2/2)t+\\sigma W_t$，所以任意固定时刻的 $S_t$ 服从对数正态分布。\n\n这里 $\\mu$ 表示相对变化的瞬时条件均值，$\\mu-\\sigma^2/2$ 表示对数变化的平均速率。二者不同，来自指数函数的非线性和布朗运动的二次变差。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>二次变差，即将各小区间增量的平方相加，再考察网格加密后的极限。</p></aside>\n\n### 对数变化中的二阶项\n\n对正值状态 $S$，$\\log(S+\\Delta S)$ 在 $S$ 处展开：\n\n$$\\Delta\\log S\\approx\\frac{\\Delta S}{S}-\\frac12\\left(\\frac{\\Delta S}{S}\\right)^2.$$\n\n代入 $\\Delta S/S\\approx\\mu h+\\sigma\\Delta W$。平方中 $\\mu^2h^2$ 和 $2\\mu\\sigma h\\Delta W$ 的累计极限消失，$\\sigma^2(\\Delta W)^2$ 的累计极限为 $\\sigma^2dt$，所以\n\n$$d\\log S_t=(\\mu-\\sigma^2/2)dt+\\sigma dW_t.$$\n\n对时间积分并使用初值 $\\log S_0$，就得到显式解。严格表述采用伊藤公式，上面的展开展示了每个项的来源。噪声强度越大，相同算术平均增长率对应的平均对数增长率越低。\n\n例如 $\\mu=0.06,\\sigma=0.3$，一年对数收益均值为 $0.06-0.045=0.015$，标准差为 0.3。它不是“预期简单收益为 1.5%”：简单收益的均值是 $e^{0.06}-1\\approx6.184\\%$。\n\n## 均值和方差逐步计算\n\n使用正态指数矩 $\\mathbb E[e^{aW_t}]=e^{a^2t/2}$，得\n\n$$\\mathbb E[S_t]=S_0e^{(\\mu-\\sigma^2/2)t}e^{\\sigma^2t/2}=S_0e^{\\mu t}.$$\n\n类似地，$\\mathbb E[S_t^2]=S_0^2e^{2\\mu t+\\sigma^2t}$，因此\n\n$$\\operatorname{Var}(S_t)=S_0^2e^{2\\mu t}(e^{\\sigma^2t}-1).$$\n\n更一般的实数次幂矩为\n\n$$\\mathbb E[S_t^q]=S_0^q\\exp\\left[q\\mu t+\\frac{q(q-1)}2\\sigma^2t\\right].$$\n\n在有限时间内这些矩均有限。对数正态变量的正幂矩存在，并不表示它的正指数矩 $\\mathbb E[e^{uS_t}]$ 也存在；后者在非退化情形下对 $u>0$ 发散。\n\n## 条件预测只需要当前状态\n\n对 $s<t$，\n\n$$S_t=S_s\\exp\\left[\\left(\\mu-\\frac{\\sigma^2}{2}\\right)(t-s)+\\sigma(W_t-W_s)\\right].$$\n\n第二个因子与 $\\mathcal F_s$ 独立，因此\n\n$$\\mathbb E[S_t\\mid\\mathcal F_s]=S_se^{\\mu(t-s)}.$$\n\n条件方差为 $S_s^2e^{2\\mu(t-s)}(e^{\\sigma^2(t-s)}-1)$。未来水平与过去有关，但未来的相对倍数在这个模型中独立于过去。这种结构比“未来价格独立于当前价格”更准确。\n\n于是 $e^{-\\mu t}S_t$ 是鞅。特别地，$\\mathcal E_t(\\theta)=\\exp(\\theta W_t-\\theta^2t/2)$ 是均值为 1 的指数鞅。指数修正项不可省略；$e^{\\theta W_t}$ 的均值本来会按 $e^{\\theta^2t/2}$ 增长。\n\n### 两个时刻的水平如何共同变化\n\n设 $s\\le t$，用条件均值先处理未来时刻：\n\n$$\\mathbb E[S_sS_t]=\\mathbb E[S_s\\mathbb E[S_t\\mid\\mathcal F_s]]\n=e^{\\mu(t-s)}\\mathbb E[S_s^2].$$\n\n代入二阶矩，得到 $\\mathbb E[S_sS_t]=S_0^2e^{\\mu(s+t)+\\sigma^2s}$。减去两个均值的乘积，得\n\n$$\\operatorname{Cov}(S_s,S_t)=S_0^2e^{\\mu(s+t)}(e^{\\sigma^2s}-1).$$\n\n共享的早期噪声使两个价格水平相关；相邻不重叠区间的对数收益则由独立布朗增量组成，因而独立。研究水平和研究收益会得到不同的相关结构。\n\n### 用显式解进行精确网格更新\n\n长度 $h$ 的精确更新为 $S_{t+h}=S_t\\exp[(\\mu-\\sigma^2/2)h+\\sigma\\sqrt hZ]$。它始终为正，并且网格点分布精确。Euler 更新 $S_t(1+\\mu h+\\sigma\\sqrt hZ)$ 则是近似，正态尾部可能使括号为负。已有显式转移时，使用指数更新可以避免这种由离散方案引入的符号问题。\n\n“精确网格更新”仍不表示网格之间的最高值或首达时间被精确记录。路径可能在两次观测之间越过阈值，再返回网格点以下；涉及路径障碍时还需要处理区间内部行为。\n\n## 为什么平均值高于典型水平\n\n$S_t$ 的中位数为 $S_0e^{(\\mu-\\sigma^2/2)t}$，均值为 $S_0e^{\\mu t}$。取 $S_0=100,\\mu=0.06,\\sigma=0.3,t=1$，均值约为 106.18，中位数约为 101.51。少数较高结果抬升了平均值，不能把均值曲线当作“多数路径会经过的位置”。\n\n![乘性路径的均值与中位数](/assets/illustrations/theory/calin/geometric-brownian.svg)\n\n若 $\\mu<\\sigma^2/2$，对数增长率为负，即使 $\\mu>0$，典型长期路径也可能下降。由 $W_t/t\\to0$ 几乎必然，$t^{-1}\\log(S_t/S_0)\\to\\mu-\\sigma^2/2$。平均值的上升与大多数路径的长期下降并不矛盾，因为不同时间上的均值可能由越来越少的高值路径支撑。\n\n> **鲨鱼说** 做模拟时先写清正在比较哪一种统计量：样本均值、样本中位数、对数均值还是一条路径。它们对应不同问题。右尾较长时，有限次模拟的样本均值也可能波动明显。\n\n## 练习：算一个超阈值概率\n\n仍取 $S_0=100,\\mu=0.06,\\sigma=0.3$。求一年后 $S_1>120$ 的概率，并求 $\\mathbb E[S_2\\mid S_1=120]$。\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n先取对数：$S_1>120$ 等价于 $0.015+0.3W_1>\\log1.2$，所以概率为\n\n$$1-\\Phi\\left(\\frac{\\log1.2-0.015}{0.3}\\right)\\approx0.2885.$$\n\n条件均值利用独立增量计算：$\\mathbb E[S_2\\mid S_1=120]=120e^{0.06}\\approx127.42$。第一个问题依赖整个分布，第二个问题只需要条件均值公式。\n\n上述标准化中的 $\\log1.2\\approx0.182322$，减去对数均值 0.015 后再除以标准差 0.3，得到约 0.557739。查标准正态右尾得到 0.288511。这里使用的是 20% 简单涨幅对应的对数阈值 $\\log1.2$，不能直接把 0.2 代进对数正态的阈值公式。\n\n</details>\n\n## 代码下载\n\n[下载计算与绘图代码](/assets/downloads/theory/calin-book-03-02.zip)\n",
+  "metadata": {
+    "theory_book": {
+      "book": "stochastic-calculus",
+      "part": "第一部分 · 概率与随机过程",
+      "number": 16,
+      "chapter": "3",
+      "edition": "2026-10",
+      "minutes": 34,
+      "section": "2",
+      "source_pages": [
+        66,
+        67,
+        68
+      ],
+      "chapter_title": "常用随机过程",
+      "source_sections": [
+        "3.2"
+      ]
+    }
+  }
+}

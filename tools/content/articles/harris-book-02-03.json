@@ -1,0 +1,48 @@
+{
+  "slug": "harris-book-02-03",
+  "title": "2.3 现货、期货、期权与场外协商",
+  "summary": "通过库存套保、保护性期权、债券询价和外汇兑换理解不同交易流程。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "交易与交易所：市场微观结构",
+  "sort_order": 4004,
+  "cover_url": "",
+  "section_ids": [
+    "44e2f2e9-a852-5af5-8a72-788df5e2df9d"
+  ],
+  "body": "## 现货风险与期货现金流\n\n加工企业持有原材料，价格下跌会使库存贬值。若同时持有相应期货空头，期货价格下跌带来的盈利可以补偿部分库存损失。要先看企业什么时候取得固定价格的库存：如果采购合同只约定交货时的市场价加一个地区差价，在交货定价之前，企业未必已经承担同样的绝对价格风险。\n\n自拟例子中，企业取得 12 万单位原材料，每份期货对应 1000 单位。忽略质量和到期差异，数量匹配需要卖出 120 份合约。现货价格与期货价格之差称为**基差**。两者不完全同步，意味着套保之后仍有基差风险。\n\n期货账户按结算价计算阶段损益。价格上涨时，现货库存可能升值，空头期货却需要支付现金。库存升值未出售之前不一定带来现金流。因此经济风险降低，并不等于途中没有融资需求。期转现把实物交易与期货头寸转移结合起来，使实物与对冲头寸相互衔接。\n\n下面将现货和期货价格变化设为每单位分别下跌 0.18 元和 0.20 元，计算结果均以元计。\n\n```python\ninventory = 120_000\ncontract_size = 1_000\ncontracts = inventory // contract_size\nspot_change = -0.18\nfutures_change = -0.20\nspot_pnl = inventory * spot_change\nfutures_pnl = -contracts * contract_size * futures_change\nprint(\"现货损益：\", spot_pnl)\nprint(\"期货损益：\", futures_pnl)\nprint(\"合并损益：\", round(spot_pnl + futures_pnl, 2))\nassert contracts == 120\nassert round(spot_pnl + futures_pnl, 2) == 2400\n```\n\n这组模拟数据中的合并盈利来自基差变化；基差向相反方向变化时，组合也可能亏损。若现货跌得更多，合并结果也可能亏损。\n\n## 期权报价会随标的变化\n\n持有股票再买入看跌期权，可以取得在约定条件下按执行价卖出股票的权利。设持有 100 股，每股执行价 50 元，期权费用每股 2 元。到期股价为 40 元时，股票价值 4000 元，期权价值 1000 元，合计 5000 元。还要扣除先前支付的 200 元费用。上涨时可以不行权，但费用仍已支出。\n\n期权订单等待成交期间，股票价格也在变化。买看跌期权的限价低于旧卖价，看似便宜；但若股票已经上涨，看跌期权的价值可能下降得更多。评价成交价格时，应对齐标的与期权报价的时间，分离等待期间的市场变化。\n\n## 债券交易从合同条款开始\n\n同一发行人可以有许多期限、票息和偿付顺序不同的债券。机构询价时，要先明确是哪一只债券，再比较其价格或相对基准利率的收益率差。**基点**是百分之一个百分点，70 个基点等于 0.70 个百分点。债券价格常以面值百分比表示，报价 101.5 意味着每 100 元面值对应 101.5 元报价金额。应计利息及交收约定还需另行明确。\n\n经销商报价、双方协商、提交成交记录、托管机构划转资产，是这一过程中的不同步骤。券款对付把交券与付款联系起来，降低一方先履约而另一方未履约的风险。\n\n## 外汇要读清报价方向\n\n若报价单位为“每英镑多少美元”，客户用美元买英镑，应看银行卖出英镑的价格。自拟例子：银行以每英镑 1.2500 美元买入，再以 1.2502 美元卖给客户。兑换 200 万英镑的价差收入是 $2000000\\times0.0002=400$ 美元，不能把小数点位置忽略。银行还可能通过其他交易商平衡头寸，客户成交与银行的对冲并非同一笔交易。\n\n### 练习\n\n为什么期货套保能够降低库存价格风险，却仍可能产生追加现金的压力？\n\n<details><summary>查看解答</summary>\n\n现货与期货的经济损益可能相互抵消，但实现时间不同。库存升值通常要销售后才形成现金，空头期货的当期损失却需要按结算安排支付。企业需要同时管理合并风险和途中现金流。\n\n</details>\n\n[返回全书目录](/theory/trading-and-exchanges/)\n\n## 配套代码\n\n[下载本节代码（ZIP）](/assets/downloads/trading-and-exchanges/harris-book-02-03.zip)\n\n压缩包包含完整脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n",
+  "metadata": {
+    "theory_book": {
+      "book": "trading-and-exchanges",
+      "part": "交易入门",
+      "number": 5,
+      "chapter": "2",
+      "edition": "2026-10",
+      "minutes": 7,
+      "section": "2.3",
+      "source_year": 2003,
+      "source_pages": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "chapter_title": "交易过程中的实际问题",
+      "source_sections": [
+        "2.6 SOME CASH COMMODITY AND ASSOCIATED FUTURES MARKET TRADES",
+        "2.7 AN OPTIONS MARKET TRADE",
+        "2.8 A BOND MARKET TRADE",
+        "2.9 A FOREIGN EXCHANGE TRADE"
+      ]
+    },
+    "code_download": {
+      "url": "/assets/downloads/trading-and-exchanges/harris-book-02-03.zip",
+      "examples": 1
+    }
+  }
+}

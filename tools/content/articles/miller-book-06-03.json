@@ -1,0 +1,37 @@
+{
+  "slug": "miller-book-06-03",
+  "title": "前序、中序、后序与层序遍历",
+  "summary": "用同一棵树对照四种遍历，说明访问位置、迭代栈和结果拼接对复杂度的影响。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8032,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "遍历要访问每个节点，差别在于何时处理当前根。需要先取得孩子结果的计算，应把当前节点放在孩子之后；需要先显示父级标题的任务，则先处理根。\n\n## 三种深度优先顺序\n\n设根 A，左孩子 B，B 的左右孩子为 D、E，A 的右孩子为 C。\n\n| 遍历 | 递归顺序 | 输出 |\n| --- | --- | --- |\n| 前序 | 根、左、右 | A B D E C |\n| 中序 | 左、根、右 | D B E A C |\n| 后序 | 左、右、根 | D E B C A |\n| 层序 | 深度从小到大 | A B C D E |\n\n空子树直接返回。三种深度优先遍历可使用相同递归框架，只将访问语句放在两次子调用之前、之间或之后。\n\n## 顺序对应依赖\n\n求子树节点数时，先算左右数量，再加当前节点，属于后序：$size(v)=1+size(left)+size(right)$。解析树求值同样先算孩子。\n\n二叉搜索树中，所有左键小于根、所有右键大于根，因此中序输出升序键。普通二叉树没有这个顺序条件，中序遍历只是某一种访问次序，不会自动把数值排序。\n\n## 层序维护队列\n\n先把 A 入队；弹出 A 后加入 B、C；弹出 B 后加入 D、E，此时队列为 C、D、E。先进先出使较浅层总在较深层之前被处理。每个孩子仅入队一次，树不需要额外的访问集合。\n\n图可能通过不同路径到达同一节点，届时需要 visited 防止重复入队，这将在下一章扩展。\n\n## 迭代中序使用显式栈\n\n从根开始不断压入当前节点并向左走；到空节点后弹出一个节点访问，再转到其右子树，重复这一过程。栈保存尚待访问的祖先，作用与递归调用帧相同。\n\n上例先压 A、B、D，弹 D；再弹 B，转到 E；E 完成后弹 A，再处理 C。因此得到 D、B、E、A、C。\n\n## 将输出成本算进去\n\n每个节点常数次入栈、出栈或访问，核心时间 O(n)。若每层返回列表并用 `left + [value] + right` 拼接，复制量在链状树上可累计至 O(n²)。使用共享结果列表 append，或生成器逐项 yield，才能保持线性输出成本。\n\n深度优先额外状态为 O(h)，层序队列为 O(w)，w 是最大层宽；若保存全部结果，还需额外 O(n) 输出空间。显式栈避免语言递归深度限制，但不消除必须保留的祖先信息。\n\n> **鲨鱼说** 先确定当前节点需要哪些子结果，再决定前序或后序。访问次序是计算依赖的结果，理解依赖比记三组名称更有用。\n\n## Python 实现\n\n~~~python\nfrom collections import deque\ntree=('A',('B',('D',None,None),('E',None,None)),('C',None,None))\ndef traverse(node,order):\n    if order not in ('pre','in','post'):raise ValueError('unknown traversal')\n    out=[]\n    def visit(current):\n        if current is None:return\n        value,left,right=current\n        if order=='pre':out.append(value)\n        visit(left)\n        if order=='in':out.append(value)\n        visit(right)\n        if order=='post':out.append(value)\n    visit(node)\n    return out\ndef breadth(root):\n    if root is None:return []\n    q=deque([root]);out=[]\n    while q:\n        value,left,right=q.popleft();out.append(value)\n        if left:q.append(left)\n        if right:q.append(right)\n    return out\nassert traverse(tree,'in')==list('DBEAC')\nassert breadth(tree)==list('ABCDE')\nprint(traverse(tree,'pre'),traverse(tree,'post'),breadth(tree))\n~~~\n\n## 练习\n1. 对同一棵树写出四种遍历顺序，并说明哪一种最适合按层展示。\n2. 用后序计算每个节点的子树节点数。\n\n[本章习题](/read/?slug=miller-book-06-07)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-06-03.zip",
+        "label": "前序、中序、后序与层序遍历 · Python 示例",
+        "size_bytes": 1114,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第二部分 · 数据组织与基本算法",
+      "number": 32,
+      "chapter": "6",
+      "edition": "2026-10",
+      "minutes": 12,
+      "section": "3",
+      "chapter_title": "树",
+      "source_sections": [
+        "6.5.2"
+      ]
+    }
+  }
+}

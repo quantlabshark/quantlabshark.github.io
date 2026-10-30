@@ -1,0 +1,37 @@
+{
+  "slug": "larsen-book-07-04",
+  "title": "未知方差下的检验功效",
+  "summary": "将备择均值代入 t 统计量，推导非中心参数并计算样本量对功效的影响。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7044,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "检验阈值由原假设确定，功效则在一个指定的真实差异下计算。总体方差未知时，需要用非中心 t 分布表示备择下的统计量。\n\n## 备择下的标准化\n\n检验统计量为 $T=(\\bar X-\\mu_0)/(S/\\sqrt n)$。若真实均值为 $\\mu_1$，把分子写成 $\\bar X-\\mu_1+\\mu_1-\\mu_0$，再分别除以 $\\sigma/\\sqrt n$：\n\n$$T=\\frac{Z+\\delta}{\\sqrt{U/\\nu}},\\qquad\n\\delta=\\frac{\\sqrt n(\\mu_1-\\mu_0)}\\sigma,\\quad\\nu=n-1.$$\n\n这里 Z 标准正态，$U=\\nu S^2/\\sigma^2$ 卡方，二者独立。$\\delta$ 称为非中心参数。差异为零时退回中心 t；差异不为零时，统计量分布偏向相应方向。\n\n## 阈值与功效分别计算\n\n双侧水平 $\\alpha$ 使用中心 t 分位数 $c=t_{1-\\alpha/2,\\nu}$。记非中心 t 的分布函数为 $F_{\\nu,\\delta}$，则\n\n$$\\text{功效}=F_{\\nu,\\delta}(-c)+1-F_{\\nu,\\delta}(c).$$\n\n单侧上尾改用 $c=t_{1-\\alpha,\\nu}$，功效为 $1-F_{\\nu,\\delta}(c)$。阈值始终按原假设选择，概率面积才按备择分布计算。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/power-t-review.svg\" alt=\"双侧 t 检验的非中心分布功效曲线，在标准化均值差 0.5 处比较三个样本量。\" loading=\"lazy\"></figure>\n\n## 同一效应下增加样本\n\n若目标均值差为 1、总体标准差为 2，标准化效应为 $d=(\\mu_1-\\mu_0)/\\sigma=0.5$。n=16 时 $\\delta=2$、自由度 15，双侧 5% 临界值约 2.131，功效约 0.465。\n\n| 样本量 n | 非中心参数 $\\sqrt n d$ | 双侧 5% 功效 |\n|---:|---:|---:|\n| 16 | 2.0 | 0.465 |\n| 25 | 2.5 | 0.670 |\n| 36 | 3.0 | 0.831 |\n\n样本增多既提高非中心参数，也使参考分布更接近正态。若规划要求功效至少 0.8，可以逐个整数 n 计算并选择首个达到目标的值。\n\n## 预期波动的作用\n\nd 衡量差异相对于个体波动的大小，$\\delta$ 衡量相对于均值误差的大小。目标差异不变而 $\\sigma$ 增大，功效就下降。用先导样本估计 $\\sigma$ 时，可对几个合理值分别规划样本量，了解资源需求的变化。\n\n> **鲨鱼说** 规划功效时使用希望识别的差异，而不是研究结束后再把观测差异代回。前者回答需要多少样本，后者通常只是换一种方式重复已有检验信息。\n\n## 练习\n1. 固定标准化效应d=0.5，计算n=10、20、40时5%双侧t检验的功效。\n2. 对单侧备择μ>μ₀写出相应非中心t功效公式，并与双侧情形比较。\n\n[本章习题](/read/?slug=larsen-book-07-05)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/larsen-book-07-04.zip",
+        "label": "未知方差下的检验功效 · Python 示例",
+        "size_bytes": 955,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第二部分 · 估计与检验",
+      "number": 44,
+      "chapter": "7",
+      "edition": "2026-10",
+      "minutes": 12,
+      "section": "4",
+      "chapter_title": "正态总体的统计推断",
+      "source_sections": [
+        "7.6"
+      ]
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "slug": "harris-book-12-02",
+  "title": "12.2 交易冲击模型的往返一致性",
+  "summary": "用买卖方向、累计数量和费用检查报价模型，理解为什么价格冲击不能任意设置。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "交易与交易所：市场微观结构",
+  "sort_order": 4034,
+  "cover_url": "",
+  "section_ids": [
+    "44e2f2e9-a852-5af5-8a72-788df5e2df9d"
+  ],
+  "body": "## 为什么做市模型需要检查交易路径\n\n做市商会根据订单流调整报价。如果连续出现买入需求，报价通常上移。连续出现卖出需求，报价通常下移。这样做既可能是在更新价值判断，也可能是在控制库存。模型若只机械地追随价格或成交量，就可能把别人制造的交易活动误认为独立的价值信息。\n\n第 12.3 节提出一个检验：在没有外部消息、初始和最终持仓相同的条件下，仅仅改变订单的分拆方式，是否就能从报价规则中系统性取得利润？若可以，模型需要重新审查。这个检验针对报价与成本模型本身，适合用来审计回测，不应被理解为真实市场中的获利指令。\n\n## 库存调整与信息更新\n\n设 $x$ 表示某个简化市场累积吸收的净买入数量。一个线性价格规则是\n\n$$P(x)=P_0+\\lambda x,$$\n\n其中 $P_0$ 是初始价格，$\\lambda>0$ 表示每多买一单位所增加的价格。若交易者买入 $Q$ 后再卖出同样数量，最终净交易量回到零，模型价格也应回到 $P_0$。如果模型对同样的买卖数量使用不一致的永久冲击系数，净数量归零后却仍留下固定的价格漂移，就要查清这种漂移是否真的由信息、供需或状态变化解释。\n\n这个条件不是说真实价格必须在任何往返交易后回到原位。实际交易过程中可能出现新闻、其他订单、库存约束变化和时间衰减。只有把这些因素冻结以后，才能把路径差异归因于模型设定。模型检查的第一步是明确哪些变量保持不变。\n\n## 同一价格规则下的成本\n\n若每个小段都按对应的边际价格成交，买入 $Q$ 的总支出是价格曲线下的面积：\n\n$$C_{\\mathrm{buy}}=\\int_0^Q(P_0+\\lambda x)\\,dx=P_0Q+\\frac{\\lambda Q^2}{2}.$$\n\n若完全沿原曲线卖回，卖出收入与买入支出相同，价格冲击本身没有制造往返利润。加入每单位单边费用 $c$，总费用是 $2cQ$，往返净损益为负。若采用“整笔订单都按交易后的价格成交”的离散规则，往返还会产生额外冲击成本。\n\n因此代码采用哪一种成交约定，必须与公式一致。\n\n下面以分段中点价格近似积分，检查相同的累计数量关系。数值为自拟，程序没有连接交易接口。\n\n```python\np0, impact, total, fee = 100.0, 0.002, 100, 0.01\ndef round_trip(parts):\n    quantity = total / parts\n    inventory = 0.0\n    cash = 0.0\n    for direction in (1, -1):\n        for _ in range(parts):\n            change = direction * quantity\n            price = p0 + impact * (inventory + change / 2)\n            cash -= change * price\n            cash -= abs(change) * fee\n            inventory += change\n    return cash, inventory\nfor parts in (1, 5, 20):\n    pnl, inventory = round_trip(parts)\n    print(parts, round(pnl, 6), round(inventory, 6))\n    assert abs(pnl + 2 * fee * total) < 1e-8\n    assert abs(inventory) < 1e-8\n```\n\n三种分拆方式的结果都是损失 2 元，最终库存为零。原因不是市场不波动，而是例子特意固定了外部状态，同一累计数量只能对应同一边际价格。程序检验的是内部一致性。\n\n![线性冲击模型中的往返交易路径](/assets/figures/harris/round-trip.svg)\n\n图中边际价格由累计净买入量决定。买入后按相同路径卖回，积分意义下的买卖金额相抵；每股 0.01 的费用使 100 股往返交易净亏 2。\n\n## 从理论约束到真实研究\n\n真实订单簿的冲击随数量、等待时间和市场状态变化，不能直接套用上述常数 $\\lambda$。但更复杂的模型仍应接受基本检查：买卖方向符号是否正确，数量单位是否一致，交易后价格是否误用为交易前可得价格，手续费是否两边都计入，以及撤单能否在成交发生后被“追溯执行”。\n\n这些错误都可能制造不存在的回测收益。\n\n同时，价值交易者、做市商和跟随价格变化的交易者会相互影响。某个订单序列后的涨幅，可能既包含信息推断，也包含其他人的响应，不能把估计出的整段涨幅都当成该订单永久造成的价值变化。\n\n## 练习\n\n模型在买入 100 单位后把价格调高 1 元，卖回 100 单位却只调低 0.4 元。在无新闻、无其他交易的设定下，应先检查什么？\n\n<details><summary>查看解答</summary>\n\n先检查买卖冲击的定义是否一致，以及是否混合了永久冲击、暂时冲击和成交费用。最终净数量为零而价格固定高出 0.6 元，需要额外状态变量解释。若没有解释，这种设定很可能把任意交易路径误写成价格信息，导致不可靠的模拟利润。\n\n</details>\n\n[返回全书目录](/theory/trading-and-exchanges/)\n\n## 配套代码\n\n[下载本节代码（ZIP）](/assets/downloads/trading-and-exchanges/harris-book-12-02.zip)\n\n压缩包包含完整脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n",
+  "metadata": {
+    "theory_book": {
+      "book": "trading-and-exchanges",
+      "part": "第三部分 · 信息与交易",
+      "number": 35,
+      "chapter": "12",
+      "edition": "2026-10",
+      "minutes": 8,
+      "section": "12.2",
+      "source_year": 2003,
+      "source_pages": [
+        283,
+        284,
+        285,
+        286,
+        287,
+        288
+      ],
+      "chapter_title": "交易欺骗与价格操纵",
+      "source_sections": [
+        "12.3 BLUFFERS DISCIPLINE LIQUIDITY PROVIDERS"
+      ]
+    },
+    "code_download": {
+      "url": "/assets/downloads/trading-and-exchanges/harris-book-12-02.zip",
+      "examples": 1
+    }
+  }
+}

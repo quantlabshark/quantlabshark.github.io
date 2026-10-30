@@ -1,0 +1,34 @@
+{
+  "slug": "calin-book-05-06",
+  "title": "Poisson 积分的分布与随机支付模型",
+  "summary": "用条件计数和均匀事件时刻推导复合 Poisson 分布，计算累计支付并处理零点概率与超调。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "随机微积分及其应用",
+  "sort_order": 5035,
+  "cover_url": "",
+  "section_ids": [
+    "17859c88-b779-5654-b120-7a4cc7b39714"
+  ],
+  "body": "## 给定事件数时的累计贡献\n\n设 $X_T=\\int_0^Tg(t)dN_t$，$g$ 为确定性函数。条件于 $N_T=k$，事件时刻是 $k$ 个独立均匀变量排序后的结果。由于求和与顺序无关，\n\n$$X_T\\mid N_T=k\\ \\overset d=\\ \\sum_{j=1}^kg(U_j),\\qquad U_j\\overset{\\mathrm{iid}}\\sim U(0,T).$$\n\n所以固定终点下，Poisson 积分可以视为随机次数的独立标记和，即复合 Poisson 变量。空和取零，分布函数为\n\n$$F_X(x)=e^{-\\lambda T}\\sum_{k=0}^{\\infty}\\frac{(\\lambda T)^k}{k!}\n\\mathbb P\\left(\\sum_{j=1}^kg(U_j)\\le x\\right).$$\n\n若 $g>0$ 几乎处处，零点概率为 $e^{-\\lambda T}$，来自没有事件发生。一般有符号函数还可能产生其他零值机制，不能统一套用同一原子说明。\n\n## 用区域体积表示条件概率\n\n记 $D_k(x)=\\{(u_1,\\ldots,u_k)\\in[0,T]^k:\\sum_jg(u_j)\\le x\\}$。独立均匀向量的密度为 $T^{-k}$，所以\n\n$$F_X(x)=e^{-\\lambda T}\\sum_{k=0}^{\\infty}\\frac{\\lambda^k}{k!}\\operatorname{Vol}(D_k(x)).$$\n\n$k=0$ 项约定为 $\\mathbf1_{\\{x\\ge0\\}}$。这种表示把分布计算化为几何体积，适合某些简单权重，也明确保留了没有事件的情况。\n\n## 线性权重对应单纯形\n\n当 $g(t)=t$ 且 $0\\le x\\le T$ 时，约束是 $u_1+\\cdots+u_k\\le x$，每个坐标自动不超过 $T$。区域体积为 $x^k/k!$，因此\n\n$$F_X(x)=e^{-\\lambda T}\\sum_{k=0}^{\\infty}\\frac{(\\lambda x)^k}{(k!)^2},\\qquad0\\le x\\le T.$$\n\n当 $x>T$，区域会被立方体边界截断，不能继续使用这一简式。此时可用均匀变量和的 Irwin–Hall 分布，或数值积分。截断 Poisson 求和时，遗漏误差不超过相应的 Poisson 尾概率。\n\n### 超过一个观察时长后的线性权重\n\n对 $k\\ge1$ 个独立 $U(0,T)$ 变量，令 $z=x/T$，其和的分布函数可写成\n\n$$F_k(x)=\\frac1{k!}\\sum_{j=0}^k(-1)^j\\binom kj(z-j)_+^k,$$\n\n其中 $(a)_+=\\max(a,0)$；在 $x\\le0$ 时取零，在 $x\\ge kT$ 时取 1。这个包含排除式从无上界的单纯形体积开始，逐项扣除某些坐标超过 $T$ 的区域。\n\n例如 $k=2,T=1,x=1.5$，$F_2=\\frac12[1.5^2-2(0.5)^2]=0.875$。若仍使用 $x^2/2$，会算出 1.125，超过概率上限，说明遗漏了立方体边界。将各 $F_k$ 按 Poisson 权重求和，才能得到无条件积分分布。\n\n数值求和只计算 $0\\le k\\le K$ 时，遗漏部分不超过 $\\mathbb P(N_T>K)$，因为每个条件CDF都在 0 与 1 之间。可先用 Poisson 尾概率选择 $K$，例如令它小于 $10^{-8}$，再进行各项计算；这样截断误差有明确上限。\n\n## 平方权重对应球的一部分\n\n若 $g(t)=t^2$，在 $0\\le x<T^2$ 时，区域为半径 $\\sqrt x$ 的 $k$ 维球在第一卦限的部分，体积为\n\n$$\\operatorname{Vol}(D_k)=\\frac{\\pi^{k/2}x^{k/2}}{2^k\\Gamma(k/2+1)}.$$\n\n每个坐标只取非负值，所以必须除以 $2^k$。代入得\n\n$$F_X(x)=e^{-\\lambda T}\\sum_{k=0}^{\\infty}\n\\frac{(\\lambda\\sqrt{\\pi x}/2)^k}{k!\\Gamma(k/2+1)},\\qquad0\\le x<T^2.$$\n\n检查 $k=1$ 项：单个均匀时刻满足 $U^2\\le x$ 的概率为 $\\sqrt x/T$。这个最简单的情形可以及时发现球体积系数错误。\n\n![Poisson 积分的连续部分与零点概率](/assets/illustrations/theory/calin/poisson-integral-distribution.svg)\n\n### 平方权重的几何公式也有适用区间\n\n取 $T=1$、条件次数为 2，区域为 $0\\le u_1,u_2\\le1$ 且 $u_1^2+u_2^2\\le x$。当 $0\\le x\\le1$，面积是四分之一圆的面积 $\\pi x/4$；当 $1<x<2$，圆被单位正方形截断，面积为\n\n$$\\sqrt{x-1}+x\\left[\\arcsin\\left(\\frac1{\\sqrt x}\\right)-\\frac\\pi4\\right].$$\n\n可先把 $u_1\\in[0,\\sqrt{x-1}]$ 的整高区域积分，再把余下部分的高度 $\\sqrt{x-u_1^2}$ 从 $\\sqrt{x-1}$ 积到 1。公式在 $x=1$ 时为 $\\pi/4$，在 $x=2$ 时为 1。这两个端点检查防止把球体积公式错误延伸到被裁切的区域。条件于两次事件时，这个面积本身就是CDF，因为单位正方形的总面积为 1。\n\n## 折旧与随机支付\n\n考虑连续折旧、每次事件再支付固定金额的模型\n\n$$dV_t=-kV_tdt-\\rho dN_t,\\qquad k,\\rho>0.$$\n\n乘以积分因子 $e^{kt}$，得到\n\n$$V_t=V_0e^{-kt}-\\rho e^{-kt}\\int_0^te^{ks}dN_s.$$\n\n每笔支付在发生后继续按同样速率折算到当前时刻。均值与方差为\n\n$$\\mathbb E[V_t]=V_0e^{-kt}-\\frac{\\lambda\\rho}{k}(1-e^{-kt}),$$\n\n$$\\operatorname{Var}(V_t)=\\frac{\\lambda\\rho^2}{2k}(1-e^{-2kt}).$$\n\n这个线性模型的状态可能为负，可理解为扣除支付后的净值；若要求实物价值非负，须另设零下界或停止规则。\n\n支付模型的积分因子可以直接展开。确定性 $e^{kt}$ 连续且有限变差，因此乘积公式没有跳跃交叉项：\n\n$$d(e^{kt}V_t)=ke^{kt}V_tdt+e^{kt}dV_t=-\\rho e^{kt}dN_t.$$\n\n积分后减去每次支付的加权值，再乘回 $e^{-kt}$。求均值时使用 $\\mathbb E[\\int e^{ks}dN_s]=\\lambda\\int e^{ks}ds$。方差用确定性权重的 Poisson 积分公式 $\\lambda\\int e^{2ks}ds$。所以期望与方差不是对路径方程简单“把 $dN$ 换成 $\\lambda dt$”就同时得到的：这种替换只能给均值，方差还需二阶计算。\n\n当 $k\\downarrow0$，显式解趋于 $V_t=V_0-\\rho N_t$，均值趋于 $V_0-\\lambda\\rho t$，方差趋于 $\\lambda\\rho^2t$。这是无折旧极限下的自然核对。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>有限变差，即在给定有限区间内，路径总变差有限的性质。</p></aside>\n\n## 越过下界时不能假装恰好落在下界\n\n设 $\\tau$ 为 $V_t$ 首次降到阈值 $K$ 以下的时刻。连续折旧触发时可能恰好等于 $K$，事件支付触发时通常小于 $K$。因此停止计算中必须保留 $V_\\tau$。由补偿过程得到鞅 $e^{kt}(V_t+\\lambda\\rho/k)$。在满足停止可积条件时，正确关系是\n\n$$\\mathbb E[e^{k\\tau}(V_\\tau+\\lambda\\rho/k)]=V_0+\\lambda\\rho/k.$$\n\n不能无条件把随机的 $V_\\tau$ 替换为阈值 $K$。\n\n> **鲨鱼说** 先给定计数，能把 Poisson 积分变成有限个独立标记之和；遇到首达问题，还要额外检查跳跃是否跨过阈值。分布求和与停止规则是两个步骤。\n\n设 $V_0=100,k=0.2,\\rho=10$，阈值为 80，事件在 0.1 和 0.2 发生。第一次事件前价值为 $100e^{-0.02}\\approx98.0199$，支付后为 88.0199。到第二次事件前约为 $88.0199e^{-0.02}\\approx86.2770$，支付后约为 76.2770。第一次低于 80 的时刻是第二次事件，实际停止值约为 76.2770，而非 80。\n\n若把它强行替换成 80，便把约 3.7230 的超调删除，进而改变停止恒等式。连续折旧触发和离散支付触发，是同一个模型中的两种不同越界机制，应按实际路径分别处理。\n\n## 练习：平方权重的数值检查\n\n取 $T=1,\\lambda=2$，$X=\\int_0^1t^2dN_t$。求均值、方差、零点概率，并用上式计算 $\\mathbb P(X\\le1/4)$。\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n均值为 $2\\int_0^1t^2dt=2/3$，方差为 $2\\int_0^1t^4dt=2/5$，零点概率为 $e^{-2}$。由于 $1/4<1$，可以使用球体积展开：\n\n$$\\mathbb P(X\\le1/4)=e^{-2}\\sum_{k=0}^{\\infty}\n\\frac{(\\sqrt\\pi/2)^k}{k!\\Gamma(k/2+1)}\\approx0.337568.$$\n\n前两项分别是没有事件的概率 $e^{-2}$，以及恰有一次事件且时刻不超过 $1/2$ 的概率 $2e^{-2}\\times1/2=e^{-2}$。高阶项继续加入多次事件贡献。代码使用截断误差界与模拟结果交叉核对。\n\n</details>\n\n## 代码下载\n\n[下载计算与绘图代码](/assets/downloads/theory/calin-book-05-06.zip)\n",
+  "metadata": {
+    "theory_book": {
+      "book": "stochastic-calculus",
+      "part": "第二部分 · 路径性质与随机微积分",
+      "number": 35,
+      "chapter": "5",
+      "edition": "2026-10",
+      "minutes": 43,
+      "section": "6",
+      "source_pages": [
+        151,
+        152,
+        153
+      ],
+      "chapter_title": "随机积分",
+      "source_sections": [
+        "5.9"
+      ]
+    }
+  }
+}

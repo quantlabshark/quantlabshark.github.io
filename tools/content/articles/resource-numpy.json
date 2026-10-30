@@ -1,0 +1,18 @@
+{
+  "slug": "resource-numpy",
+  "title": "NumPy 官方文档",
+  "summary": "数组与数值计算的基础。",
+  "kind": "recommendation",
+  "track": "",
+  "series": "",
+  "sort_order": 33,
+  "section_ids": [
+    "4560f087-a08d-4b02-8eb8-545d6594d86c",
+    "6cb0390d-4b0e-459e-a155-9dfb328810ec"
+  ],
+  "body": "## 数组与数值计算\n\nNumPy 文档介绍数组创建、形状、切片、广播与统计运算。学习价格和收益计算时，可对应查看数组运算及聚合函数；计算结果异常时，重点检查维度、数据类型和缺失值。\n\n[打开 NumPy 官方文档](https://numpy.org/doc/stable/user/absolute_beginners)\n",
+  "metadata": {
+    "url": "https://numpy.org/doc/stable/user/absolute_beginners",
+    "external_url": "https://numpy.org/doc/stable/user/absolute_beginners"
+  }
+}

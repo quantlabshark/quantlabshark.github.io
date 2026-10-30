@@ -1,0 +1,14 @@
+{
+  "slug": "performance-risk",
+  "title": "13 · 阅读收益、回撤和夏普比率",
+  "summary": "给指标写清样本、频率和年化假设，同时展示净值与下行风险。",
+  "kind": "lesson",
+  "track": "回测与验证",
+  "series": "回测与验证",
+  "sort_order": 13,
+  "section_ids": [],
+  "body": "## 累计收益与最大回撤\n\n绩效指标以按时间排序的净收益为输入。累计收益描述观察期的资金增长；回撤描述当前净值相对此前最高净值的下降幅度，最大回撤是其中最大的跌幅。\n\n计算时应在收益序列前加入初始净值 1。这样，即使第一期亏损，也能以初始资金作为历史高点计算回撤。下面使用五个模拟日收益。\n\n## 夏普比率的组成\n\n夏普比率用同频超额收益的均值除以标准差。超额收益是策略收益减去同一期无风险收益。本例将无风险收益设为零，采用样本标准差，并按一年 252 个交易日进行年化演示。\n\n~~~python\nimport numpy as np\n\nnet = np.array([0.01, -0.02, 0.015, -0.005, 0.008])\nnav = np.r_[1.0, np.cumprod(1 + net)]\ndrawdown = nav / np.maximum.accumulate(nav) - 1\nexcess = net - 0.0\nstd = excess.std(ddof=1)\nsharpe = excess.mean() / std * np.sqrt(252) if std > 0 else np.nan\nprint(\"Total return:\", nav[-1] - 1)\nprint(\"Max drawdown:\", drawdown.min())\nprint(\"Illustrative annualized Sharpe:\", sharpe)\n~~~\n\n## 年化换算与指标解释\n\n将日夏普乘以 252 的平方根，需要收益的时间结构满足相应缩放条件。若收益具有显著自相关，按此换算可能高估或低估年化值。五个观测主要用于理解计算，评价长期表现需要更长样本及相应的不确定性分析。\n\n夏普集中描述平均超额收益与波动的比例。分析尾部损失、连续亏损或资金容量时，还要结合回撤、收益分布、持仓集中度和交易规模。报告指标时，应同时列明样本区间、观察数、成本及年化口径。\n\n## 练习\n\n日收益全部为零时，夏普应如何显示？\n\n参考答案：标准差为零，公式中的分母为零，因此应显示缺失或不可计算。若无风险收益非零，先将它换算到与策略相同的日频，再计算超额收益；分母为零的问题仍需单独处理。\n",
+  "metadata": {
+    "legacy_course": true
+  }
+}

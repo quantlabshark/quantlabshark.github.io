@@ -1,0 +1,18 @@
+{
+  "slug": "resource-python",
+  "title": "Python 官方文档",
+  "summary": "解释器、数据结构与标准库。",
+  "kind": "recommendation",
+  "track": "",
+  "series": "",
+  "sort_order": 37,
+  "section_ids": [
+    "4560f087-a08d-4b02-8eb8-545d6594d86c",
+    "6cb0390d-4b0e-459e-a155-9dfb328810ec"
+  ],
+  "body": "## Python 语法与标准库\n\nPython 教程从变量、控制流程和函数介绍语言基础，再展开模块、文件与异常处理。课程代码中遇到语法问题时，可按这些主题查阅，并用短程序检查运行结果。\n\n[打开 Python 官方文档](https://docs.python.org/3/tutorial/)\n",
+  "metadata": {
+    "url": "https://docs.python.org/3/tutorial/",
+    "external_url": "https://docs.python.org/3/tutorial/"
+  }
+}

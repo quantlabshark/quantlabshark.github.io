@@ -1,0 +1,18 @@
+{
+  "slug": "resource-pandas",
+  "title": "pandas 官方文档",
+  "summary": "时间索引、表格清洗与滚动计算。",
+  "kind": "recommendation",
+  "track": "",
+  "series": "",
+  "sort_order": 34,
+  "section_ids": [
+    "4560f087-a08d-4b02-8eb8-545d6594d86c",
+    "6cb0390d-4b0e-459e-a155-9dfb328810ec"
+  ],
+  "body": "## 表格与时间序列\n\npandas 文档涵盖数据读取、索引、合并、重采样和滚动窗口。处理行情时，可按日期解析、记录排序、缺失处理和收益计算的顺序查阅，并结合字段含义选择参数。\n\n[打开 pandas 官方文档](https://pandas.pydata.org/docs/user_guide/timeseries.html)\n",
+  "metadata": {
+    "url": "https://pandas.pydata.org/docs/user_guide/timeseries.html",
+    "external_url": "https://pandas.pydata.org/docs/user_guide/timeseries.html"
+  }
+}

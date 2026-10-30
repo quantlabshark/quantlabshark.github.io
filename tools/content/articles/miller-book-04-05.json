@@ -1,0 +1,37 @@
+{
+  "slug": "miller-book-04-05",
+  "title": "重复子问题、记忆化与动态规划",
+  "summary": "由找零的最后一枚硬币推导转移，填写状态表并还原方案，比较记忆化与动态规划。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8021,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "面额为 1、3、4，金额为 6。每次取不超过剩余金额的最大硬币，会得到 4+1+1；实际最少方案是 3+3。局部选择并不总能保证硬币总数最少。\n\n## 状态表示什么\n\n设 C 为正整数面额集合，D(a) 为恰好凑出金额 a 的最少硬币数。D(0)=0，不可达金额记为无穷大。\n\n若最后一枚硬币面额为 c，前面需要凑 a−c，因此\n\n$$D(a)=\\min_{c\\in C,\\ c\\le a}\\{D(a-c)+1\\}.$$\n\n最优方案去掉最后一枚后，剩余部分必须也是对应金额的最优方案，否则替换成更少硬币的方案即可改善整体。这一替换论证称为最优子结构。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/dynamic-programming.svg\" alt=\"凑零钱问题的状态依赖，较大金额由较小金额转移得到。\" loading=\"lazy\"></figure>\n\n## 逐项填写金额表\n\n| a | 可比较的数量 | D(a) |\n| --- | --- | --- |\n| 0 | 空方案 | 0 |\n| 1 | D(0)+1 | 1 |\n| 2 | D(1)+1 | 2 |\n| 3 | D(2)+1，D(0)+1 | 1 |\n| 4 | D(3)+1，D(1)+1，D(0)+1 | 1 |\n| 5 | D(4)+1，D(2)+1，D(1)+1 | 2 |\n| 6 | D(5)+1，D(3)+1，D(2)+1 | 2 |\n\n因为所有面额为正，a 只依赖更小金额，按 0、1、…、A 的顺序计算不会访问未完成状态。零或负面额必须排除，否则这一依赖关系不再成立。\n\n## 递归与记忆化\n\n直接按转移递归时，D(6) 会请求 D(5)、D(3)、D(2)，D(5) 又请求 D(4)、D(2)、D(1)，D(2) 被重复求解。记忆化将每个金额的结果保存，后续直接读取。自底向上则预先安排所有状态的依赖顺序，无需递归调用栈。\n\n两种方法至多处理 A+1 个金额，每个检查 m 种面额，时间 O(Am)，存储 O(A)。这一复杂度依赖金额数值 A；若以表示 A 所需的二进制位数衡量，它称为伪多项式复杂度。\n\n## 从数量还原具体方案\n\n更新 D(a) 时同时记录 choice[a]=c。金额 6 的最优选择为 3，减去后到达 3，再取 3 到达 0，得到 [3,3]。如果目标状态为无穷大，就返回不可达，不进入还原循环。\n\n多个面额产生相同最优值时，可固定保留最先遇到的一项；若要枚举全部最优方案，则保存所有并列选择，并另行处理顺序重复。\n\n> **鲨鱼说** 状态表中每一格只回答一个确定问题：“恰好凑出这个金额，最少几枚？”先固定这句话，再写初值、转移和返回值，比较容易发现不可达金额或循环顺序的问题。\n\n## Python 实现\n\n~~~python\ndef change(amount,coins):\n    if amount<0 or any(c<=0 for c in coins):raise ValueError('invalid amount or denomination')\n    dp=[float('inf')]*(amount+1);choice=[None]*(amount+1);dp[0]=0\n    for a in range(1,amount+1):\n        for c in coins:\n            if c<=a and dp[a-c]+1<dp[a]:\n                dp[a]=dp[a-c]+1;choice[a]=c\n    if choice[amount] is None and amount:return None\n    answer=[];a=amount\n    while a:\n        c=choice[a];answer.append(c);a-=c\n    return dp[amount],answer\nassert change(6,[1,3,4])==(2,[3,3])\nassert change(3,[2,5]) is None\nprint(change(6,[1,3,4]))\n~~~\n\n## 练习\n1. 面额[2,5]，列出金额0到12的最少硬币数，标出不可达金额。\n2. 修改状态，改为计算每个金额有多少种不计顺序的组合，并说明循环顺序。\n\n[本章习题](/read/?slug=miller-book-04-06)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-04-05.zip",
+        "label": "重复子问题、记忆化与动态规划 · Python 示例",
+        "size_bytes": 1032,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第二部分 · 数据组织与基本算法",
+      "number": 21,
+      "chapter": "4",
+      "edition": "2026-10",
+      "minutes": 12,
+      "section": "5",
+      "chapter_title": "递归与动态规划",
+      "source_sections": [
+        "4.7"
+      ]
+    }
+  }
+}

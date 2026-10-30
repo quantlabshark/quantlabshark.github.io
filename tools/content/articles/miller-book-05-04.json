@@ -1,0 +1,37 @@
+{
+  "slug": "miller-book-05-04",
+  "title": "希尔排序与间隔序列",
+  "summary": "逐轮展示间隔 4、2、1 的希尔排序，解释分组插入、最终有序性与间隔相关的复杂度。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8026,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "普通插入排序每次只移动相邻位置。希尔排序先对间隔较远的元素做插入排序，让错位元素较早跨越较长距离，再缩小间隔完成排序。\n\n## 间隔定义分组\n\ngap=3 时，索引 0、3、6 为一组，1、4、7 为一组，2、5、8 为一组。每组按原索引顺序执行插入排序。一轮后满足 $a_i\\le a_{i+gap}$，称为 gap 有序，整个数组此时可能仍未排序。\n\n将 key=a[i] 暂存，比较 i−gap、i−2gap 等位置，较大元素向右移动 gap 格，直到找到插入位置。这与普通插入的逻辑相同，只是步长改变。\n\n## 三轮具体计算\n\n输入 `[9,8,3,7,5,6,4,1]`，间隔依次为 4、2、1。\n\n| gap | 分组或结果 |\n| --- | --- |\n| 4 | 四组为 (9,5)、(8,6)、(3,4)、(7,1)，排序后数组为 5,6,3,1,9,8,4,7 |\n| 2 | 偶数位置 5,3,9,4 排为 3,4,5,9；奇数位置 6,1,8,7 排为 1,6,7,8；合并原位置得 3,1,4,6,5,7,9,8 |\n| 1 | 对整个数组插入排序，得 1,3,4,5,6,7,8,9 |\n\n注意“合并”只是把每组结果放回原索引，没有执行归并排序中的合并操作。\n\n## 最后一轮保证正确性\n\n每组的插入排序保证 gap 有序。最后 gap=1 时，相邻元素均有序，因而整个数组有序。只有偶数间隔、没有 1 的序列，无法保证奇偶位置之间的次序。\n\n程序可在每轮后检查所有 `a[i] <= a[i+gap]`。这种中间不变式检查能定位具体出错轮次，比只检查最终结果更直接。\n\n## 间隔序列决定性能\n\n本例使用 n//2 并反复折半，便于实现，但最坏仍可为 O(n²)。其他序列会改变移动次数和理论界，不能将希尔排序统一写为 O(n log n)。每个阶段进行远距离移动，也可能改变相同键的相对顺序，通常不稳定。\n\n在原数组操作的排序核心只用几个索引，空间 O(1)；教学函数若先复制输入，总额外空间仍包含该 O(n) 副本。比较间隔方案时，可记录比较和移动次数，分别使用随机、逆序和近乎有序输入。\n\n> **鲨鱼说** gap 有序是阶段性条件。先问本轮保证哪些位置之间有序，再看间隔缩小后增加了哪些比较关系，便能理解最后为什么必须包含 gap=1。\n\n## Python 实现\n\n~~~python\ndef shell_sort(values):\n    a=list(values);gap=len(a)//2\n    while gap:\n        for i in range(gap,len(a)):\n            key=a[i];j=i\n            while j>=gap and a[j-gap]>key:\n                a[j]=a[j-gap];j-=gap\n            a[j]=key\n        assert all(a[i]<=a[i+gap] for i in range(len(a)-gap))\n        gap//=2\n    return a\na=[9,8,3,7,5,6,4,1]\nassert shell_sort(a)==sorted(a)\nprint(shell_sort(a))\n~~~\n\n## 练习\n1. 对本节数组逐轮执行gap=4、2、1，记录每轮结果。\n2. 比较两种间隔序列在随机、逆序和近乎有序输入上的移动次数。\n\n[本章习题](/read/?slug=miller-book-05-07)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-05-04.zip",
+        "label": "希尔排序与间隔序列 · Python 示例",
+        "size_bytes": 950,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第二部分 · 数据组织与基本算法",
+      "number": 26,
+      "chapter": "5",
+      "edition": "2026-10",
+      "minutes": 9,
+      "section": "4",
+      "chapter_title": "搜索和排序",
+      "source_sections": [
+        "5.3.4"
+      ]
+    }
+  }
+}

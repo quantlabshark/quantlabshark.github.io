@@ -1,0 +1,39 @@
+{
+  "slug": "larsen-book-02-01",
+  "title": "样本空间、事件与概率运算",
+  "summary": "把事件写成集合，用互斥分解推导补事件、并集和容斥公式。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7004,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "投两枚骰子时，“点数和为 7”包含六种结果，“点数和为 2”只包含一种。计算概率之前，需要确定什么算一次基本结果，以及这些结果是否等可能。\n\n## 样本空间与集合运算\n\n将两枚骰子区分为第一枚和第二枚，一次结果写成 $(i,j)$。样本空间 $\\Omega=\\{1,\\ldots,6\\}^2$ 包含 36 个有序对。公平且独立的骰子使这些结果各有概率 $1/36$。\n\n事件是样本空间的子集。令 $A$ 表示点数和为 7，则 $A$ 包含 $(1,6),(2,5),\\ldots,(6,1)$，故 $P(A)=1/6$。若把结果直接记成点数和 $2,\\ldots,12$，它们便具有不同概率。\n\n| 记号 | 对应的事件 |\n|---|---|\n| $A\\cup B$ | A、B 至少一个发生 |\n| $A\\cap B$ | A、B 同时发生 |\n| $A^c$ | A 不发生 |\n| $A\\setminus B$ | A 发生且 B 不发生 |\n\n交集为空称为互斥。德摩根律给出 $(A\\cup B)^c=A^c\\cap B^c$：至少一个发生的反面，就是两个都不发生。另一条为 $(A\\cap B)^c=A^c\\cup B^c$。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/sets.svg\" alt=\"事件 A 和 B 的重叠区域对应交集，并集计算需要减去重复部分。\" loading=\"lazy\"></figure>\n\n## 从概率公理推导加法规则\n\n概率非负，全空间的概率为 1，可列个互斥事件的并集概率等于各自概率之和。$A$ 与 $A^c$ 互斥且覆盖全空间，故 $P(A^c)=1-P(A)$。\n\n普通的 $A$ 与 $B$ 可能重叠。把并集分成 $A\\setminus B$、$A\\cap B$、$B\\setminus A$ 三个互斥区域，分别相加可得\n\n$$P(A\\cup B)=P(A)+P(B)-P(A\\cap B).$$\n\n交集在前两项中被计算两次，减去一次后才得到并集。如果 $A\\subseteq B$，则 $B$ 比 $A$ 多出的部分概率非负，所以 $P(A)\\le P(B)$。\n\n三个事件的计算同理：先加单个事件，减去两两交集，再补回三者交集。\n\n$$\\begin{aligned}P(A\\cup B\\cup C)={}&P(A)+P(B)+P(C)\\\\\n&-P(A\\cap B)-P(A\\cap C)-P(B\\cap C)\\\\\n&+P(A\\cap B\\cap C).\\end{aligned}$$\n\n## 骰子算例与概率界\n\n继续令 $A$ 为点数和 7，$B$ 为第一枚点数 3。两者各含六种结果，交集仅有 $(3,4)$，所以 $P(A\\cup B)=(6+6-1)/36=11/36$。\n\n即使不知道交集，也有 $P(A\\cup B)\\le P(A)+P(B)$。另一方面，由并集不超过 1，可得 $P(A\\cap B)\\ge P(A)+P(B)-1$。这些界限能够快速判断计算结果是否可能。\n\n连续测量的样本空间可能是一整个区间。这时单个精确数值可具有零概率，但区间仍有正概率，后面将用积分计算。\n\n> **鲨鱼说** “互斥”只表示不能同时发生，“独立”则表示知道一个事件发生后，另一个事件的概率不变。它们是不同的条件，下一节开始会分别计算。\n\n## 练习\n1. 从 1 到 20 的整数中等可能抽一个。求能被 2 或 3 整除的概率。\n2. 已知 $P(A)=0.6,P(B)=0.5$，求 $P(A\\cap B)$ 的上下界，并给出能达到边界的集合安排。\n\n[本章习题](/read/?slug=larsen-book-02-07)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/larsen-book-02-01.zip",
+        "label": "样本空间、事件与概率运算 · Python 示例",
+        "size_bytes": 937,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第一部分 · 概率与随机变量",
+      "number": 4,
+      "chapter": "2",
+      "edition": "2026-10",
+      "minutes": 15,
+      "section": "1",
+      "chapter_title": "概率",
+      "source_sections": [
+        "2.1",
+        "2.2",
+        "2.3"
+      ]
+    }
+  }
+}

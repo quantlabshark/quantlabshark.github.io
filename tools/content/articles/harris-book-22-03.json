@@ -1,0 +1,48 @@
+{
+  "slug": "harris-book-22-03",
+  "title": "22.3 冠军筛选、幸存者偏差与均值回归",
+  "summary": "说明大量候选者和选择性展示如何制造优秀记录，建立完整样本与独立验证。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "交易与交易所：市场微观结构",
+  "sort_order": 4065,
+  "cover_url": "",
+  "section_ids": [
+    "44e2f2e9-a852-5af5-8a72-788df5e2df9d"
+  ],
+  "body": "## 管理人筛选与样本选择偏差\n\n随机抽取一位管理人，发现其收益很高，与从一万位管理人中挑出最高者，再发现其收益很高，是不同的问题。后者的筛选程序本身就保证会出现一个冠军。即使所有人都没有能力，只要运气不同，也会有人表现非常突出。\n\n假设100个相互独立、实际都无效的策略，每个都做一次5%显著性检验。平均会有5个误报。至少出现一个误报的概率为$1-0.95^{100}$，约99.4%。这不是某个策略已经被证明无效，而是说明不能拿筛选后的最好结果继续使用只适合单次检验的解释。\n\n真实策略通常相关，因此不能机械地把所有参数组合当作完全独立的试验。不过，相关也不等于只有一次试验。研究记录应保留尝试过的信号、参数、样本窗口和筛选标准，才有可能评价筛选带来的偏差。\n\n## 幸存者偏差怎样进入数据库\n\n基金公司展示明星产品，较差产品没有进入广告，这是选择性展示。亏损基金被关闭或并入其他基金，数据库只剩存续产品，这是幸存者偏差。若新策略先私下试运行，只有表现好时才公开，并补录此前净值，也会让可见的早期成绩过于乐观。\n\n即使每一条净值都计算正确，样本整体仍可能失真。问题不是净值公式，而是“哪些净值有资格被看到”。同样的机制会出现在新闻报道、成功交易者传记和个人交易回忆中：失败者与失败交易更少被记录和传播。\n\n一个完整研究样本应保留开始时的全部候选者、退出日期、退出前收益和退出原因。评价存续基金时，也要明确回答的是“当时可以选择的全体产品”还是“今天仍然存在的产品”，这两个总体不同。\n\n## 自拟模拟：冠军下一期会怎样\n\n下列程序让每位管理人都没有能力，年均超额收益的真值为零。先观察五年，从2000人中选出冠军，再独立生成其后五年表现。重复400次，以减少单次模拟的偶然性。\n\n```python\nimport random\nfrom statistics import mean\nrandom.seed(2203)\nselected_past, selected_future = [], []\nfor _ in range(400):\n    past = [mean(random.gauss(0, 0.07) for _ in range(5))\n            for _ in range(2000)]\n    winner = max(range(len(past)), key=past.__getitem__)\n    selected_past.append(past[winner])\n    selected_future.append(mean(random.gauss(0, 0.07) for _ in range(5)))\nprint('冠军过去平均年超额收益:', round(mean(selected_past), 4))\nprint('冠军后续平均年超额收益:', round(mean(selected_future), 4))\nassert mean(selected_past) > 0.08\nassert abs(mean(selected_future)) < 0.01\n```\n\n过去冠军的平均收益很高，后续均值却接近零。这叫向均值回归：筛选阶段同时选中了好能力和好运气，其中不可持续的好运不会自动延续。它不要求冠军下一年必然亏钱，也不要求其收益一定低于所有其他人。它描述的是有条件选择后的平均变化。\n\n## 如何构造更有说服力的验证\n\n在看到测试期数据前固定选择规则，然后只用测试期评价。这可以把“发现候选者”和“检验候选者”分开。若反复查看测试集并据此改规则，测试集也被用于选择，独立性便失去。\n\n把一位著名投资者之后的新记录作为样本，也比反复研究使其成名的同一段记录更合适。即便如此，仍要检查风险暴露、成本、管理规模与市场环境是否变化。均值回归是一个统计机制，不能把所有业绩下降都归咎于运气。容量下降和团队变化也可能起作用。\n\n## 练习\n\n某公司声称“旗下全部在售基金五年平均跑赢市场”，是否已经排除了样本选择问题？\n\n<details><summary>查看解答</summary>\n\n没有。在售集合排除了过去关闭或合并的基金。还需查看五年前全部可投资产品以及退出产品的完整记录；也应按明确权重汇总，检查是否更换了基准或只展示有利时间窗口。\n\n</details>\n\n[返回全书目录](/theory/trading-and-exchanges/)\n\n## 配套代码\n\n[下载本节代码（ZIP）](/assets/downloads/trading-and-exchanges/harris-book-22-03.zip)\n\n压缩包包含完整脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n",
+  "metadata": {
+    "theory_book": {
+      "book": "trading-and-exchanges",
+      "part": "第六部分 · 衡量与评价",
+      "number": 66,
+      "chapter": "22",
+      "edition": "2026-10",
+      "minutes": 7,
+      "section": "22.3",
+      "source_year": 2003,
+      "source_pages": [
+        473,
+        474,
+        475,
+        476,
+        477,
+        483,
+        484,
+        485,
+        486,
+        487,
+        488
+      ],
+      "chapter_title": "业绩评价与预测",
+      "source_sections": [
+        "22.4 STATISTICAL PERFORMANCE EVALUATION",
+        "22.6 THE SAMPLE SELECTION BIAS"
+      ]
+    },
+    "code_download": {
+      "url": "/assets/downloads/trading-and-exchanges/harris-book-22-03.zip",
+      "examples": 1
+    }
+  }
+}

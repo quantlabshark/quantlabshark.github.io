@@ -1,0 +1,51 @@
+{
+  "slug": "quant-course-27",
+  "title": "27 · 标准化、相关性与主成分分析",
+  "summary": "从二维数据推导PCA的投影方向，理解尺度、相关性和解释方差，并建立不使用未来信息的预处理流程。",
+  "kind": "lesson",
+  "track": "因子与预测",
+  "series": "量化研究系统课程",
+  "sort_order": 27,
+  "cover_url": "/assets/figures/curriculum/course-27.svg",
+  "section_ids": [
+    "606eb414-4b3f-55ba-bc41-f936b93c9b47"
+  ],
+  "body": "标准化统一变量的比较尺度，相关分析检查特征是否包含重复信息。主成分分析把相关变量转换为若干相互正交的方向，用较少维度描述主要变化。\n\n## 两列数据其实只表达一个变化\n\n三条记录为$(1,2)$、$(2,4)$、$(3,6)$。第二列始终是第一列两倍，因此知道一列就知道另一列。把两列同时交给模型，增加了输入数量，却没有增加独立信息。\n\n先减去均值$(2,4)$，得到$(-1,-2)$、$(0,0)$、$(1,2)$。样本协方差矩阵为\n\n$$S=\\frac1{3-1}X_c'X_c=\\begin{pmatrix}1&2\\\\2&4\\end{pmatrix}.$$\n\n对角元是各列样本方差，非对角元表示共同变化。因为第二列的单位尺度更大，它的方差也更大；不能据此断言它更重要。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>协方差，即两个变量偏离各自均值时，共同变化程度的度量。</p></aside>\n\n## 标准化在改变什么\n\n标准化写作$z=(x-\\mu)/\\sigma$。减均值移动坐标原点，除标准差使不同列使用相近尺度。市值以元计、利润率以小数计时，这一步尤其重要，否则距离和方差几乎完全由市值决定。\n\n缩放参数只能用允许的训练数据估计，再用于后续数据。截面标准化则是在某个日期对当时可见股票计算均值和标准差；它与把所有日期混在一起标准化不是一回事。常数列没有变化，标准差为零，需要删除或单独处理。\n\n## PCA寻找的是最大变化方向\n\n取单位方向$\\mathbf v$，中心化数据投影为$X_c\\mathbf v$，投影方差为$\\mathbf v'S\\mathbf v$。第一主成分选择使这个值最大的方向：\n\n$$\\max_{\\mathbf v'\\mathbf v=1}\\mathbf v'S\\mathbf v.$$\n\n解是最大特征值对应的特征向量。本例特征值为5和0，第一方向为$(1,2)/\\sqrt5$，第二方向与它垂直。投影分数为$-\\sqrt5,0,\\sqrt5$；只保留第一方向即可重建全部中心化数据。\n\n![二维数据及两个主成分方向](/assets/figures/curriculum/course-27.svg)\n\n图中三点落在第一主成分方向上，垂直方向没有离散。箭头是坐标方向，旁边的数值是相应方差，不是未来收益。稍有噪声时，第二特征值会变为小的正数，舍弃它就会产生重建误差。\n\n## 载荷、分数与解释方差\n\n载荷是方向向量中各原始特征的系数；分数是每条观测在该方向上的坐标。解释方差比例为某个特征值除以所有特征值之和。本例为100%和0%，表示输入变化全部落在一条直线上。\n\n“解释100%输入变化”不等于“预测100%未来收益”。PCA不读取目标标签。一个大方差方向可能来自规模，也可能来自数据错误。一个小方差方向反而可能包含对目标有用的信息。选择主成分数量应同时考虑压缩误差和后续预测验证。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>PCA方向整体乘以−1仍是同一个答案。因此软件给出的主成分分数越高，并不自动意味着股票越值得买入；交易方向需要另外定义和检验。</p></aside>\n\n## 标准化后的结果为何不同\n\n下面代码先标准化每列，再进行PCA。两列标准化后完全相同，所以方向系数的绝对值均为$1/\\sqrt2$，不同于原尺度的$(1,2)/\\sqrt5$。两种结果对应不同度量空间，并不矛盾。\n\n```python\nimport numpy as np\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.decomposition import PCA\nfrom sklearn.pipeline import make_pipeline\n\ntrain = np.array([[1., 2.], [2., 4.], [3., 6.]])\npipe = make_pipeline(StandardScaler(), PCA(n_components=1))\nscore = pipe.fit_transform(train)\nnew_score = pipe.transform([[4., 8.]])\npca = pipe.named_steps[\"pca\"]\nprint(\"loadings:\", pca.components_)\nprint(\"variance ratio:\", pca.explained_variance_ratio_)\nprint(\"scores:\", score.ravel(), \"new:\", new_score.ravel())\nassert np.isclose(pca.explained_variance_ratio_[0], 1.0)\nassert score.shape == (3, 1)\n```\n\n训练分数的绝对端点约为1.732，中心点为0，解释方差比例为1。新输入$(4,8)$使用原训练均值和尺度，投影绝对值约3.464。方向符号可能随实现约定改变，但重建信息不变。\n\n## 缺失、异常值与中性化\n\n处理缺失时，删除记录会改变覆盖股票，填充值则会改变分布。可用训练期中位数填充，并保留缺失标记。不要把“未披露”直接解释为财务值恰好为零。净利润率超过100%可能来自特殊会计项目或分母很小，先检查来源，再决定是否处理。\n\n缩尾把超出边界的数压回边界，截尾则删除相应记录。两种操作不同；边界应来自训练集或当时截面。中性化可用行业内去均值，或对规模等已知暴露回归取残差。它改变了信号含义：剩余值表示相对同行或同规模公司的偏离。\n\n## 相关特征多时怎样判断稳定性\n\n若样本数不多而特征很多，估计的主方向可能对少量数据变化敏感。两个特征值很接近时，单个方向可能旋转，联合子空间却较稳定。可以比较不同训练窗口的解释方差、载荷和下游模型，而不是只阅读一次漂亮的载荷表。\n\n处理顺序为：在训练段拟合缺失处理、缩放、PCA及预测模型；对后续记录只调用已拟合变换。任何一步用到未来分布，都可能改变历史坐标，从而污染测试。\n\n## 练习\n\n本例只保留第二主成分，会保留多少方差？如果把第一方向和全部分数同时乘以−1，重建数据是否变化？\n\n<details><summary>查看解答</summary>\n\n第二特征值为0，所以保留0%的输入方差。方向与分数同时反号，二者乘积不变，因此重建数据不变。改变符号只改变坐标命名，不改变几何信息。\n\n</details>\n\n---\n\n[课程目录](/courses/)\n\n## 配套代码\n\n[下载本节代码（ZIP）](/assets/downloads/courses/quant-course-27.zip)\n\n压缩包包含脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n",
+  "metadata": {
+    "curriculum": {
+      "cover": "/assets/figures/curriculum/course-27.svg",
+      "level": "进阶",
+      "stage": 5,
+      "number": 27,
+      "edition": "2026-10",
+      "minutes": 40,
+      "source_refs": [
+        {
+          "book": "深入浅出Python量化交易实战",
+          "chapters": "5.3",
+          "pdf_pages": [
+            120,
+            121,
+            122,
+            123,
+            124
+          ]
+        },
+        {
+          "book": "Quant Roadmap — Ultimate Edition",
+          "chapters": "1、8",
+          "pdf_pages": [
+            10,
+            11,
+            26
+          ]
+        }
+      ],
+      "stage_title": "因子与预测"
+    },
+    "code_download": {
+      "url": "/assets/downloads/courses/quant-course-27.zip",
+      "examples": 1
+    }
+  }
+}

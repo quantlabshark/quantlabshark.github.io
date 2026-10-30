@@ -1,0 +1,43 @@
+{
+  "slug": "calin-book-04-08",
+  "title": "二次变差、总变差与跳跃补偿",
+  "summary": "严格计算布朗与补偿 Poisson 的平方增量和，区分路径二次变差和可预测括号。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "随机微积分及其应用",
+  "sort_order": 5029,
+  "cover_url": "",
+  "section_ids": [
+    "17859c88-b779-5654-b120-7a4cc7b39714"
+  ],
+  "body": "## 布朗平方增量和的均方极限\n\n取确定性分割 $\\pi$，令 $Q_\\pi=\\sum_i(W_{t_{i+1}}-W_{t_i})^2$。独立正态增量给出\n\n$$\\mathbb E[Q_\\pi]=T,\\qquad\n\\mathbb E[(Q_\\pi-T)^2]=2\\sum_i(\\Delta t_i)^2\\le2T|\\pi|.$$\n\n网格趋于零时，右边趋于零，所以 $Q_\\pi\\to T$ 于 $L^2$，记为 $[W]_T=T$。若使用二进制等距分割，各层误差概率可求和，结合 Borel–Cantelli 引理还可得到该分割序列上的几乎必然收敛。\n\n单个增量平方的方差为 $2(\\Delta t)^2$，并非零。近似确定性的是累计平方和，而不是每个小区间中的平方增量。\n\n对于二进制网格 $n=2^k$，Chebyshev 不等式给出 $\\mathbb P(|Q_k-T|>\\varepsilon)\\le2T^2/(\\varepsilon^2 2^k)$。对 $k$ 求和有限，Borel–Cantelli 引理因此说明超差只发生有限次。再对 $\\varepsilon=1,1/2,1/3,\\ldots$ 同时处理，就得到这条嵌套网格序列上的几乎必然收敛。\n\n这个证明说明两种极限证据的差别：任意确定性细网格都有均方收敛，而沿选定二进制序列还能用概率界升级为路径结论。它没有声称对任意依赖路径、任意选择的分割，都可以不加条件沿用相同证明。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>几乎必然收敛，即除一个概率为零的事件外，每个结果对应的数值序列都收敛。</p></aside>\n\n### 为什么平方和会稳定在时间长度附近\n\n设总时长 $T=1$，分成 $n$ 段，每段长 $h=1/n$。写 $\\Delta W_i=\\sqrt h Z_i$，其中 $Z_i$ 独立且服从标准正态，$E[Z_i^2]=1,E[Z_i^4]=3$。于是\n\n$$E[(\\Delta W_i)^2]=h,\\qquad\n\\operatorname{Var}((\\Delta W_i)^2)=h^2(3-1)=2h^2.$$\n\n因为各段独立，$Q_n=\\sum_{i=1}^n(\\Delta W_i)^2$ 的均值为 $nh=1$，方差为 $n(2h^2)=2/n$，标准差为 $\\sqrt{2/n}$。\n\n| 分段数 $n$ | $E[Q_n]$ | $\\operatorname{sd}(Q_n)$ |\n|---:|---:|---:|\n| 8 | 1 | 0.5000 |\n| 32 | 1 | 0.2500 |\n| 128 | 1 | 0.1250 |\n| 512 | 1 | 0.0625 |\n\n单个平方增量仍然随机，稳定的是许多小段的累计值。图中的实线是理论均值，阴影表示均值上下各一个标准差，并非每条路径都必须落在阴影内。\n\n![为什么平方和会稳定在时间长度附近](/assets/figures/theory/walkthrough/quadratic-variation.svg)\n\n## 协变差记录同步波动\n\n两个过程的协变差由乘积增量和定义，可以用极化恒等式计算：\n\n$$[X,Y]_t=\\frac14\\big([X+Y]_t-[X-Y]_t\\big).$$\n\n若 $W,B$ 独立，则 $[W,B]_t=0$；若 $B_t=\\rho W_t+\\sqrt{1-\\rho^2}Z_t$，其中 $Z$ 独立，则 $[W,B]_t=\\rho t$。光滑时间项与布朗运动的协变差为零，因为 $\\sum\\Delta t\\Delta W$ 可由 Cauchy–Schwarz 控制为趋零。\n\n这产生常用记号 $dW\\,dW=dt$、$dt\\,dW=0$、$(dt)^2=0$。这些等号描述积分极限中的保留项，不是普通实数微分的代数。\n\n## 连续布朗路径的总变差无穷\n\n若连续路径具有有限总变差，则\n\n$$\\sum_i(\\Delta W_i)^2\\le\\max_i|\\Delta W_i|\\sum_i|\\Delta W_i|\\longrightarrow0.$$\n\n这与布朗运动在非零时间区间上的二次变差等于区间长度矛盾。因此布朗路径几乎必然具有无穷总变差。仅证明总变差近似量的期望发散还不够；上述路径论证才排除了有限总变差的可能。\n\n## 补偿 Poisson 的二次变差为何是计数\n\n令 $M_t=N_t-\\lambda t$。在有限区间内 Poisson 过程只有有限次跳跃，每次跳幅为 1，线性漂移的连续部分没有二次变差。所以\n\n$$[M]_t=\\sum_{s\\le t}(\\Delta M_s)^2=N_t.$$\n\n也可展开分割增量平方，证明 $\\sum_i(\\Delta M_i)^2\\to N_T$ 于 $L^2$；误差的二阶矩为 $2\\lambda^2\\sum_i(\\Delta t_i)^2$，随着网格缩小而消失。\n\n与布朗运动不同，$M$ 在有限区间具有有限总变差，因为它由有限次单位跳跃与线性下降组成。有限变差只保证连续部分的二次变差为零，不会消除跳跃平方。\n\n### 补偿 Poisson 平方和误差逐格计算\n\n在长度为 $h_i$ 的格子中令 $K_i=\\Delta N_i$、$q_i=\\lambda h_i$。平方增量与实际跳跃数之差为\n\n$$D_i=(K_i-q_i)^2-K_i=K_i(K_i-1)-2q_iK_i+q_i^2.$$\n\n由 $\\mathbb E[K_i]=q_i$、$\\mathbb E[K_i(K_i-1)]=q_i^2$ 可知 $\\mathbb E[D_i]=0$。展开平方并利用下降阶乘矩，得 $\\mathbb E[D_i^2]=2q_i^2$。不同格子的计数独立，因此\n\n$$\\mathbb E\\left[\\left(\\sum_i(\\Delta M_i)^2-N_T\\right)^2\\right]\n=2\\lambda^2\\sum_i h_i^2\\le2\\lambda^2T|\\pi|.$$\n\n这既给出极限，也给出网格误差的收敛速度。路径上更直接的解释是：有限时间内只有有限次跳跃，网格足够细后每次跳跃都被单独隔开；每次单位跳跃留下平方 1，连续的线性下降平方和趋于零。\n\n有限区间上的总变差则为 $N_T+\\lambda T$：单位向上跳跃的绝对变化合计 $N_T$，连续向下移动的绝对变化合计 $\\lambda T$。它与二次变差 $N_T$、可预测括号 $\\lambda T$ 是三个不同的量。\n\n## 两种括号不能混淆\n\n路径二次变差为 $[M]_t=N_t$，可预测括号为 $\\langle M\\rangle_t=\\lambda t$。前者记录实际发生的跳跃，后者记录它们的条件平均补偿。两者对应\n\n$$M_t^2-N_t\\quad\\text{和}\\quad M_t^2-\\lambda t$$\n\n都是鞅。第二个减数在事前可预测，第一项则随实际跳跃更新。布朗运动中两种括号都等于 $t$，容易让人误以为它们总是相同。\n\n若一个过程连续，另一个只有有限活动跳跃与有限变差部分，两者的协变差为零：连续过程在跳跃时刻没有跳幅，连续有限变差部分也不贡献协变差。独立布朗与 Poisson 过程是常见例子。\n\n> **鲨鱼说** 对连续噪声，二次变差来自无穷多小波动；对 Poisson 噪声，来自有限次可见跳跃的平方。两种机制都不能用普通求导忽略。\n\n对混合过程 $X=A+M$，连续有限变差部分 $A$ 不产生自身的连续二次变差。跳跃贡献由实际跳幅平方决定。若两个过程同时跳跃，协变差会包含 $\\sum\\Delta X_s\\Delta Y_s$，不能因为它们具有有限变差就删去。连续过程与有限活动跳跃过程没有共同跳幅，才得到相应交叉项为零。\n\n以 $M=N-\\lambda t$ 为例，$M^2-N$ 是鞅直接对应跳跃平方公式；而 $N-\\lambda t$ 本身也是鞅，两者相加又得到 $M^2-\\lambda t$ 为鞅。由此能看出两个括号关系的来源，而不必把它们视为互相矛盾的补偿。\n\n## 练习：混合连续与跳跃噪声\n\n令 $X_t=3t+2W_t+0.5(N_t-4t)$，其中 $W,N$ 独立，$N$ 的速率为 4。求 $[X]_t$、鞅部分的可预测括号，以及二者的期望。\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n漂移没有二次变差，连续与跳跃部分交叉项为零。因此 $[X]_t=4t+0.25N_t$。鞅部分为 $2W_t+0.5(N_t-4t)$，可预测括号为 $4t+0.25\\times4t=5t$。路径二次变差的期望也是 $4t+0.25\\mathbb E[N_t]=5t$，但它本身含随机计数，通常不等于确定的 $5t$。\n\n</details>\n\n## 代码下载\n\n[下载计算与绘图代码](/assets/downloads/theory/calin-book-04-08.zip)\n\n[补充算例与绘图代码](/assets/downloads/theory-walkthrough/calin-book-04-08.zip)\n",
+  "metadata": {
+    "theory_book": {
+      "book": "stochastic-calculus",
+      "part": "第二部分 · 路径性质与随机微积分",
+      "number": 29,
+      "chapter": "4",
+      "edition": "2026-10",
+      "minutes": 31,
+      "section": "8",
+      "source_pages": [
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131
+      ],
+      "chapter_title": "停止时间与路径性质",
+      "source_sections": [
+        "4.11",
+        "4.11.1",
+        "4.12",
+        "4.12.1"
+      ]
+    }
+  }
+}

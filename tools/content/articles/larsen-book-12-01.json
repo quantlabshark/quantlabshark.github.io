@@ -1,0 +1,39 @@
+{
+  "slug": "larsen-book-12-01",
+  "title": "单因素方差分析与平方和分解",
+  "summary": "由组内与组间偏差分解总平方和，计算单因素方差分析表并解释 F 分布来源。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7061,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "比较三种或更多处理的均值，可以先用一个总体检验判断所有均值是否相同。单因素方差分析将组均值差异与组内随机波动分开比较。\n\n## 平方和的代数分解\n\nk 组独立正态观测具有共同方差 $\\sigma^2$，第 j 组样本量 $n_j$，总数 $N=\\sum_jn_j$。记组均值 $\\bar Y_j$，总均值 $\\bar Y=\\sum_jn_j\\bar Y_j/N$。\n\n把每个偏差写成 $Y_{ij}-\\bar Y=(Y_{ij}-\\bar Y_j)+(\\bar Y_j-\\bar Y)$。组内残差和为零，平方求和的交叉项消失，所以\n\n$$\\underbrace{\\sum_{j,i}(Y_{ij}-\\bar Y)^2}_{SST}\n=\\underbrace{\\sum_jn_j(\\bar Y_j-\\bar Y)^2}_{SSTR}\n+\\underbrace{\\sum_{j,i}(Y_{ij}-\\bar Y_j)^2}_{SSE}.$$\n\nSSTR 表示组间平方和，SSE 表示组内平方和。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/anova.svg\" alt=\"三组均值为 2、3、5，总均值为 10/3，组间平方和 14、组内平方和 6。\" loading=\"lazy\"></figure>\n\n## 三组数据的计算\n\nA=(1,2,3)，B=(2,3,4)，C=(4,5,6)。组均值为 2、3、5，总均值为 10/3。每组组内平方和为 2，因此 SSE=6；组间平方和为 $3[(2-10/3)^2+(3-10/3)^2+(5-10/3)^2]=14$。\n\n| 来源 | 平方和 | 自由度 | 均方 |\n|---|---:|---:|---:|\n| 组间 | 14 | 2 | 7 |\n| 组内 | 6 | 6 | 1 |\n| 总计 | 20 | 8 | |\n\n均方等于平方和除以自由度，检验比值 F=7/1=7，参考 F(2,6)，p=0.027。它说明并非全部均值相同，具体哪些组不同还需对比分析。\n\n## 自由度和参考分布\n\n观测向量可分成共同均值、组均值差异、组内残差三个正交部分，维数为 1、k−1、N−k。在原假设下，后两部分除以方差后分别形成独立卡方量，因此\n\n$$F=\\frac{SSTR/(k-1)}{SSE/(N-k)}\\sim F_{k-1,N-k}.$$\n\n只有组样本量、均值和样本方差时，也可用 $SSE=\\sum_j(n_j-1)s_j^2$ 重建分析表。误差形态和异常值的检查仍需原始数据或更细分的记录。\n\n## 已知方差与两组情形\n\n若总体共同方差已知，无需用组内均方估计它。在均值相同的原假设下，直接使用 $SSTR/\\sigma^2\\sim\\chi^2_{k-1}$，按卡方右尾检验。方差未知时的 F 检验，额外考虑了估计噪声尺度的波动。\n\n当 k=2，令样本量为 $n_1,n_2$，两均值之差为 D。由加权总均值代数整理得 $SSTR=n_1n_2D^2/(n_1+n_2)$，组间自由度为 1。又有 $MSE=s_p^2$，所以\n\n$$F=\\frac{D^2}{s_p^2(1/n_1+1/n_2)}=T^2.$$\n\n其中 T 就是共同方差两样本 t 统计量。两组方差分析与双侧 t 检验由此给出相同 p 值。\n\n> **鲨鱼说** 方差分析通过两个波动尺度比较均值。组均值不同时，组间均方增加；组内均方估计个体随机误差，提供比较基准。\n\n## 练习\n1. 对三组[2,4,6]、[3,5,7]、[6,8,10]计算完整方差分析表。\n2. 只有每组n、均值和样本方差时，写出重建SST、SSTR、SSE的公式。\n\n[本章习题](/read/?slug=larsen-book-12-04)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/larsen-book-12-01.zip",
+        "label": "单因素方差分析与平方和分解 · Python 示例",
+        "size_bytes": 1061,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第三部分 · 比较、回归与实验设计",
+      "number": 61,
+      "chapter": "12",
+      "edition": "2026-10",
+      "minutes": 15,
+      "section": "1",
+      "chapter_title": "单因素方差分析",
+      "source_sections": [
+        "12.1",
+        "12.2",
+        "12.A.1"
+      ]
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "slug": "quant-course-65",
+  "title": "65 · 均线策略研究项目",
+  "summary": "按固定信号、执行时序和成本完成合成数据研究，计算指标并安排独立检验。",
+  "kind": "lesson",
+  "track": "研究系统与综合实践",
+  "series": "量化研究系统课程",
+  "sort_order": 65,
+  "cover_url": "/assets/figures/curriculum/course-65.svg",
+  "section_ids": [
+    "fbc0522d-3663-5bbb-be2d-6b8691cc16c7"
+  ],
+  "body": "均线项目将数据处理、信号生成、下一日成交和账户核算连接起来。固定规则与基准采用相同资金和费用口径，再比较收益、回撤和换手。\n\n## 定义均线策略与比较指标\n\n项目比较固定20日、60日均线形成的多头/空仓规则与持续持有基准。快线高于慢线记信号1，否则0。信号产生后等待一个完整交易周期，在下一收盘时执行，随后才承担持有收益。目标是比较收益、波动、回撤和成本，参数在实验前固定。\n\n数据用固定种子生成700个交易日的合成价格。合成数据使每个人能得到相同结果，也让我们明确知道收益生成过程。它没有提供真实资产的盈利证据。换用真实数据后，要重新处理复权、退市、可交易状态、费用及公开时间。\n\n## 信号、成交与持仓时间表\n\n记 $s_t$ 为第 $t$ 天收盘得到的信号，$r_t=P_t/P_{t-1}-1$ 为第 $t-1$ 到 $t$ 的收益。若 $s_{t-2}$ 在 $t-1$ 收盘执行，则承受 $r_t$ 的持仓是 $w_t=s_{t-2}$，因此代码使用 `shift(2)`。\n\n| 时点 | 此时已知/发生的事 | 可以影响的最早收益 |\n|---|---|---|\n| 第60天收盘 | 首次有60日均线，产生信号 | 尚未持仓 |\n| 第61天收盘 | 执行第60天信号 | 第61至62天 |\n| 第62天收盘 | 记录第一段可能的持有收益 | 当日结果用于后续更新 |\n\n这比笼统写“信号滞后一天”明确，因为不同软件的行标签可能代表区间起点或终点。代码最前61行持仓为0，是这一时序的直接结果。\n\n## 逐期净收益与成本\n\n单边成本率 $c=0.0005$，即5个基点。换手为 $|w_t-w_{t-1}|$，0到1收一次，1到0再收一次。简化的净值比例模型用\n\n$$1+R_t^{net}=(1-c|w_t-w_{t-1}|)(1+w_tr_t).$$\n\n从空仓变满仓，区间收益2%，则净收益 $(1-0.0005)\\times1.02-1=1.949\\%$；下期卖出变空仓且没有持有收益，成本使净值再乘0.9995。这一模型使用连续比例仓位，没有整股、税费、滑点和容量约束，后续可逐项替换为账户现金流模型。\n\n## 一次生成全部逐期记录\n\n程序保存价格、信号、持仓、换手、成本、策略与基准收益，以及双方净值。基准也收建仓和平仓成本。样本末尾按持仓增加一次平仓费用，采用同一净值比例近似。\n\n```python\nimport numpy as np\nimport pandas as pd\n\ndef experiment(seed=17,n=700,fee=.0005):\n    rng=np.random.default_rng(seed)\n    dates=pd.bdate_range('2020-01-01',periods=n)\n    price=pd.Series(100*np.exp(np.cumsum(rng.normal(.0002,.012,n))),index=dates)\n    ret=price.pct_change().fillna(0)\n    fast=price.rolling(20,min_periods=20).mean()\n    slow=price.rolling(60,min_periods=60).mean()\n    signal=(fast>slow).astype(float).where(slow.notna(),0)\n    # t-2收盘得到信号，t-1收盘执行，承担t-1至t的收益\n    position=signal.shift(2).fillna(0)\n    turnover=position.diff().abs().fillna(position.abs())\n    cost=fee*turnover\n    # 样本结束平仓，最后一期额外记一次卖出成本\n    cost.iloc[-1]+=fee*position.iloc[-1]\n    strategy=(1-cost)*(1+position*ret)-1\n    baseline_cost=pd.Series(0.,index=dates)\n    baseline_cost.iloc[1]=fee\n    baseline_cost.iloc[-1]+=fee\n    baseline=(1-baseline_cost)*(1+ret)-1\n    out=pd.DataFrame({'price':price,'signal':signal,'position':position,\n        'turnover':turnover,'cost':cost,'strategy_return':strategy,\n        'baseline_return':baseline})\n    out['equity']=(1+strategy).cumprod()\n    out['baseline_equity']=(1+baseline).cumprod()\n    return out\n\ndef describe(returns):\n    equity=(1+returns).cumprod()\n    # 起始净值1也纳入历史峰值\n    peak=equity.cummax().clip(lower=1)\n    return {'total_return':equity.iloc[-1]-1,\n        'annualized_volatility':returns.std(ddof=1)*np.sqrt(252),\n        'maximum_drawdown':(1-equity/peak).max()}\n\nresult=experiment()\nassert len(result)==700 and result.iloc[:61].position.eq(0).all()\nassert np.allclose(result.position.to_numpy()[2:],result.signal.to_numpy()[:-2])\nfor name in ['strategy_return','baseline_return']:\n    print(name,describe(result[name]))\n```\n\n固定种子下，策略累计约−1.1587%、年化波动12.4982%、最大回撤20.9365%。基准约−18.3124%、18.4831%、36.0328%。策略亏得较少，同时持有风险也更少，应结合持仓时间解释。一个合成样本中优于基准，不代表规则能在其他路径维持优势。\n\n![一次生成全部逐期记录示意图](/assets/figures/curriculum/course-65.svg)\n\n图从净值1出发，同时画策略与基准，回撤由各自此前最高净值计算。初始1也必须进入峰值，否则一开始亏损时，程序会把首个低净值当作历史最高，漏掉这段回撤。\n\n## 三个指标怎样从记录计算\n\n累计收益为 $\\prod_t(1+R_t)-1$。年化波动采用日收益样本标准差乘 $\\sqrt{252}$，它依赖日频与年交易日近似。最大回撤为 $\\max_t[1-V_t/\\max(1,V_1,\\ldots,V_t)]$，反映从历史峰值向下走得最深的一段。\n\n例如净值1、1.10、0.99、1.05，峰值依次1、1.10、1.10、1.10，回撤为0、0、10%、约4.545%，最大10%。累计最终仍赚5%，说明最终收益与期间损失是两种不同结果。回撤长度还描述恢复花了多久，可与深度共同报告。\n\n## 训练、验证与最终检验\n\n若将前60%即420天用于研究，后280天最终检验，应在使用数据前规定。若准备从多个窗口组合中选参数，需在前420天内部再划训练和验证。最终280天不参与窗口选择。指标形成可以读取测试前的历史价格作为回看窗口，但不能读取测试未来标签。\n\n当前代码展示固定规则的整段结果，没有暗中做参数搜索。若另作分段评价，要明确测试段起点是继承已有持仓还是重新建仓，并正确收取转换成本。不能直接截取收益后宣称经历了不存在的建仓过程。\n\n## 成本和延迟敏感性\n\n先固定价格与信号，仅把单边费率设为0、5、10个基点，检查成本影响；再保持费率不变，调整信号产生至执行之间的等待周期，检查信号衰减。每项变化都有单一解释，便于识别收益下降来自成本还是时序。\n\n进一步可限制每期成交量、不允许停牌成交、加入成交价偏移，并对未完成订单持续记账。应同时保存基线与压力结果，而不是仅保留表现最高的一列。多次试验本身就是研究过程的一部分，需要在最终报告列出尝试数量和选择依据。\n\n## 保存代码、数据与研究记录\n\n数据说明写清生成方式或来源、字段、时区与可用时点。参数文件固定窗口、成本、延迟和样本区间。逐期CSV保存所有中间量。报告给出策略/基准指标及敏感性。代码版本与依赖版本使别人能重算，失败结果则说明假设在哪里没有得到支持。\n\n结论可以直接写“在该合成样本和指定时序下，策略亏损1.16%，最大回撤20.94%。持有基准亏损18.31%，最大回撤36.03%”。随后解释暴露与交易差异，再列真实数据研究尚需补充的机制，避免把流程演示夸成策略发现。\n\n## 练习\n\n**1.** 单边费率从5变10基点，做成本敏感性时是否重新选最优均线？\n\n<details><summary>查看解答</summary>\n\n不重新选。保持信号和窗口固定，才能隔离费用变化。重新选参数属于另一个研究，需要重新规定训练验证并保留独立测试。\n\n</details>\n\n**2.** 把 `shift(2)` 改成 `shift(1)`，改变的是哪段假设？\n\n<details><summary>查看解答</summary>\n\n使第 $t-1$ 天收盘信号直接承担 $t-1$ 到 $t$ 的收益，相当于在产生信号的同一收盘完成执行。若信号只有收盘后才可计算，这就需要额外成交机制支持，不能仅视为代码优化。\n\n</details>\n\n[课程与资料索引](/read/?slug=quant-course-66) · [下载课程示例代码](/assets/downloads/quant-curriculum-examples.zip)\n\n## 配套代码\n\n[下载本节代码（ZIP）](/assets/downloads/courses/quant-course-65.zip)\n\n压缩包包含脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n",
+  "metadata": {
+    "curriculum": {
+      "cover": "/assets/figures/curriculum/course-65.svg",
+      "level": "进阶",
+      "stage": 11,
+      "number": 65,
+      "edition": "2026-10-revised",
+      "minutes": 50,
+      "source_refs": [
+        {
+          "book": "Roadmap Ultimate Edition",
+          "chapters": "13、14、25",
+          "pdf_pages": [
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72
+          ]
+        },
+        {
+          "book": "深入浅出Python量化交易实战",
+          "chapters": "2.1–2.3",
+          "pdf_pages": [
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62
+          ]
+        },
+        {
+          "book": "量化交易：算法、分析、数据、模型和优化",
+          "chapters": "2.8.5、8.5",
+          "pdf_pages": [
+            62,
+            275,
+            276,
+            277
+          ]
+        }
+      ],
+      "stage_title": "研究系统与综合实践"
+    },
+    "code_download": {
+      "url": "/assets/downloads/courses/quant-course-65.zip",
+      "examples": 1
+    }
+  }
+}

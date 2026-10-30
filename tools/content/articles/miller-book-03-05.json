@@ -1,0 +1,39 @@
+{
+  "slug": "miller-book-03-05",
+  "title": "链表、引用更新与有序插入",
+  "summary": "用引用图解释链表插入删除，补齐列表操作接口，比较无序与有序链表的定位成本。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8015,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "单链表用节点连接元素。每个节点保存 value 和 next；head 指向首节点，最后一个节点的 next 为 None。访问后续元素必须沿引用前进，不能像数组那样由索引直接定位。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/linked-list.svg\" alt=\"链表节点通过引用连接，最后一个节点指向空引用。\" loading=\"lazy\"></figure>\n\n## 先确定列表操作\n\n无序列表可支持头插 add、尾插 append、查找 search、删除 remove、按位置插入 insert、返回位置 index 和按位置弹出 pop。长度可遍历计算，也可保存在字段中，每次增删时同步更新。空表的 head 为 None。\n\n有序列表额外要求沿 next 读出的值单调不降。插入位置由数值决定，不再允许任意位置插入破坏顺序。以下例子允许重复值，新值插在第一个大于等于它的节点之前。\n\n## 头插的两次赋值\n\n原链为 `head → 4 → 7 → None`，要插入 1：先令 `new.next = head`，保存通向旧链的路径；再令 `head = new`。若先覆盖 head，旧链可能失去入口，或错误地形成自环。\n\n节点的引用保存的是“下一个对象在哪里”，不是复制后续整条链。因此修改一条 next 引用，就能改变遍历路线。\n\n## 中间插入和删除\n\n在 1→4→7 中插入 5，搜索到 previous 指向 4，current 指向 7。先设置 new.next=current，再设置 previous.next=new，得到 1→4→5→7。\n\n删除 5 时，让 previous.next=current.next，即 4 直接指向 7。删除头节点则更新 head；删除尾节点时，前节点的 next 变为 None。仅执行 `del current` 不会修改前节点中的引用，不能完成链表删除。\n\n## 按位置访问与边界\n\n索引从 0 开始。查找第 k 项需要前进 k 步；insert(k,x) 需要先定位第 k−1 项，再改引用。pop 默认删除末项时，单链表仍需寻找其前节点，即使有 tail 指针也不能直接获得前驱。\n\n查找不存在的值时，遍历到 None 即结束，随后按接口返回 False 或抛出异常。删除空表、删除唯一节点和插入空表应单独覆盖；若维护 tail 和 size，也要同步更新它们。\n\n## 有序性减少无效搜索\n\n升序表中搜索 x，遇到 current.value>x 可立即返回不存在。因为之后的值不小于当前值，不可能再等于 x。最坏仍需遍历 n 个节点，时间 O(n)；头插或已知前驱后的局部修改为 O(1)。\n\n链表多存一个引用且节点分散，数组则有较好的连续访问特性。只有当操作经常掌握待修改位置或集中于头部时，链表的常数时间修改才容易发挥作用。\n\n> **鲨鱼说** “删除已知节点之后的元素只需一步”不等于“按值删除只需一步”。查找位置与修改连接是两段工作，分析总成本时要一起计算。\n\n## Python 实现\n\n~~~python\nclass Node:\n    def __init__(self,value,next=None):self.value,self.next=value,next\ndef insert(head,value):\n    previous=None;current=head\n    while current is not None and current.value<value:\n        previous,current=current,current.next\n    node=Node(value,current)\n    if previous is None:return node\n    previous.next=node\n    return head\ndef values(head):\n    out=[]\n    while head is not None:\n        out.append(head.value);head=head.next\n    return out\nhead=None\nfor x in [4,1,7,5]:head=insert(head,x)\nassert values(head)==[1,4,5,7]\nprint(values(head))\n\ndef remove(head,value):\n    previous=None;current=head\n    while current is not None and current.value!=value:\n        previous,current=current,current.next\n    if current is None:raise KeyError(value)\n    if previous is None:return current.next\n    previous.next=current.next\n    return head\nfor key in (1,5,7,4):head=remove(head,key)\nassert head is None\nprint('head, middle, tail and final-node deletion checked')\n~~~\n\n## 练习\n1. 画出删除头、中间、尾节点时需要修改的引用。\n2. 为有序链表增加重复值处理规则，并检查空表和单节点情况。\n\n[本章习题](/read/?slug=miller-book-03-06)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-03-05.zip",
+        "label": "链表、引用更新与有序插入 · Python 示例",
+        "size_bytes": 1151,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第二部分 · 数据组织与基本算法",
+      "number": 15,
+      "chapter": "3",
+      "edition": "2026-10",
+      "minutes": 13,
+      "section": "5",
+      "chapter_title": "基本数据结构",
+      "source_sections": [
+        "3.6",
+        "3.7",
+        "3.8"
+      ]
+    }
+  }
+}

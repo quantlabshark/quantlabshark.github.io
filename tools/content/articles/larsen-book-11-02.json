@@ -1,0 +1,38 @@
+{
+  "slug": "larsen-book-11-02",
+  "title": "回归系数推断与预测区间",
+  "summary": "从线性模型推导系数标准误，区分均值响应区间和新观测预测区间。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7058,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "上一节只用代数确定拟合线。若要给系数或预测加上区间，还需为观测误差建立概率模型。\n\n## 误差模型与斜率方差\n\n设 $Y_i=\\alpha+\\beta x_i+\\varepsilon_i$，$x_i$ 视为固定，误差独立且服从 $N(0,\\sigma^2)$。斜率可写为 $\\hat\\beta=\\sum_i(x_i-\\bar x)Y_i/S_{xx}$，代入模型后，常数项因中心化求和为零而消失，得 $E(\\hat\\beta)=\\beta$。\n\n各误差独立，系数平方加权给出\n\n$$\\operatorname{Var}(\\hat\\beta)=\\sigma^2\\frac{\\sum_i(x_i-\\bar x)^2}{S_{xx}^2}=\\frac{\\sigma^2}{S_{xx}}.$$\n\n估计两个参数后，$s^2=SSE/(n-2)$ 无偏估计误差方差。正态模型的正交分解进一步给出 $(\\hat\\beta-\\beta_0)/(s/\\sqrt{S_{xx}})\\sim t_{n-2}$。仅要求零均值、同方差且不相关时，最小二乘仍具有线性无偏估计中的最小方差，但精确 t 分布需要正态性。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/regression-intervals-review.svg\" alt=\"四点回归的逐点均值区间和新观测预测区间，后者含额外观测误差而更宽。\" loading=\"lazy\"></figure>\n\n## 接续四点算例\n\nx=(0,1,2,3)，y=(1,2,2,4)，已有 $\\hat\\beta=0.9,S_{xx}=5,SSE=0.7$。误差方差估计为 $s^2=0.7/2=0.35$，斜率标准误为 $\\sqrt{0.35/5}\\approx0.2646$。\n\n95% 区间用 $t_{0.975,2}\\approx4.303$，得到 $0.9\\pm4.303\\times0.2646$，约 [−0.238,2.038]。虽然样本内拟合较好，四个点对斜率的推断仍较不精确。\n\n## 截距及误差方差的区间\n\n截距估计为 $\\hat\\alpha=\\bar Y-\\hat\\beta\\bar x$。由 $\\operatorname{Cov}(\\bar Y,\\hat\\beta)=0$，\n\n$$\\operatorname{Var}(\\hat\\alpha)=\\sigma^2\\left(\\frac1n+\\frac{\\bar x^2}{S_{xx}}\\right),\\qquad\n\\operatorname{Cov}(\\hat\\alpha,\\hat\\beta)=-\\frac{\\bar x\\sigma^2}{S_{xx}}.$$\n\n以 s 替代总体标准差，再用自由度 n−2 的 t 分位数构造截距区间。四点例子的截距标准误为 $\\sqrt{0.35(1/4+1.5^2/5)}\\approx0.4950$，95% 区间为 $0.9\\pm4.3027\\times0.4950$，约 [−1.230,3.030]。\n\n误差方差则由 $SSE/\\sigma^2\\sim\\chi^2_{n-2}$ 推断。把卡方量夹在两侧分位数之间，再取倒数并乘 SSE，得到\n\n$$\\left[\\frac{SSE}{\\chi^2_{1-\\alpha/2,n-2}},\\frac{SSE}{\\chi^2_{\\alpha/2,n-2}}\\right].$$\n\n本例的 95% 区间约 [0.0949,13.8243]。仅有两个残差自由度，误差尺度本身也难以精确估计。\n\n## 比较两条独立回归线的斜率\n\n两组独立正态回归具有相同误差方差时，可合并残差：$s_p^2=(SSE_1+SSE_2)/(n_1+n_2-4)$。两斜率独立，因此差的方差为 $\\sigma^2(1/S_{xx,1}+1/S_{xx,2})$，检验相同斜率使用\n\n$$T=\\frac{\\hat\\beta_1-\\hat\\beta_2}{s_p\\sqrt{1/S_{xx,1}+1/S_{xx,2}}}\\sim t_{n_1+n_2-4}.$$\n\n例如两组各 5 点，$S_{xx,1}=S_{xx,2}=10$、$SSE_1=SSE_2=3$，斜率为 1.2、0.4，则 $s_p^2=1$，斜率差标准误为 $\\sqrt{0.2}$，t≈1.789，自由度为 6。比较的是两条线的变化率；截距可以不同。\n\n## 平均响应的标准误\n\n在 $x_0$ 处，预测均值为 $\\hat m_0=\\hat\\alpha+\\hat\\beta x_0=\\bar Y+\\hat\\beta(x_0-\\bar x)$。由于 $\\operatorname{Cov}(\\bar Y,\\hat\\beta)=0$，方差为\n\n$$\\sigma^2\\left[\\frac1n+\\frac{(x_0-\\bar x)^2}{S_{xx}}\\right].$$\n\n以 s 替代 $\\sigma$，再乘 t 临界值即可构造均值区间。本例 $x_0=1.5$ 时中心为 2.25，标准误为 $\\sqrt{0.35/4}\\approx0.2958$。\n\n## 单个新观测的额外波动\n\n新观测还含有自身的独立误差，预测误差方差因此额外增加 $\\sigma^2$，标准误为\n\n$$s\\sqrt{1+\\frac1n+\\frac{(x_0-\\bar x)^2}{S_{xx}}}.$$\n\n同一位置得到约 0.6614，明显大于均值标准误。$x_0$ 越远离样本中心，二者都会增大。残差出现弯曲、散布扩大或时间相关时，则需要调整均值结构或误差模型，不能仅凭 R² 判断推断可靠性。\n\n> **鲨鱼说** 预测群体平均值，只承担拟合线的不确定性；预测下一次观测，还承担该观测本身的波动。预测区间中的额外一项就来自后者。\n\n## 练习\n1. 已知n=20、b̂=0.8、Sxx=50、SSE=36，计算斜率标准误及95%区间。\n2. 用同一模型比较x₀=$\\bar x$与x₀=$\\bar x$+5时的均值响应标准误。\n\n[本章习题](/read/?slug=larsen-book-11-04)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/larsen-book-11-02.zip",
+        "label": "回归系数推断与预测区间 · Python 示例",
+        "size_bytes": 1314,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第三部分 · 比较、回归与实验设计",
+      "number": 58,
+      "chapter": "11",
+      "edition": "2026-10",
+      "minutes": 24,
+      "section": "2",
+      "chapter_title": "回归与相关",
+      "source_sections": [
+        "11.3",
+        "11.A.1"
+      ]
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "slug": "larsen-book-03-08",
+  "title": "次序统计量与样本极值",
+  "summary": "推导极值及第 k 小观测的分布，用均匀样本计算中位数、极差及联合次序密度。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7018,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "三个观测排序后会得到最小值、中间值和最大值。它们来自同一次抽样，既具有各自的分布，也相互关联。\n\n## 原编号与大小次序\n\n将独立同分布样本 $X_1,\\ldots,X_n$ 排成 $X_{(1)}\\le\\cdots\\le X_{(n)}$。括号中的编号表示大小次序，$X_{(1)}$ 永远是最小值；没有括号的 $X_1$ 仅表示首次观测。\n\n设单次观测的分布函数为 F、密度为 f。最大值 M 不超过 t，当且仅当全部观测不超过 t，所以 $F_M(t)=F(t)^n$。最小值 L 大于 t，当且仅当全部观测大于 t，故 $F_L(t)=1-[1-F(t)]^n$。求导后有\n\n$$f_M(t)=nF(t)^{n-1}f(t),\\qquad f_L(t)=n[1-F(t)]^{n-1}f(t).$$\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/order.svg\" alt=\"三个均匀样本的最小值、中位数与最大值密度。\" loading=\"lazy\"></figure>\n\n## 第 k 小观测的推导\n\n$X_{(k)}\\le t$ 意味着至少 k 个观测不超过 t。这个个数服从 $\\operatorname{Bin}(n,F(t))$，从而\n\n$$P(X_{(k)}\\le t)=\\sum_{j=k}^n\\binom njF(t)^j[1-F(t)]^{n-j}.$$\n\n密度还可直接计数：k-1 个观测在 t 左边，一个在短区间 $[t,t+dt]$，其余 n-k 个在右边。三类位置的安排数为 $n!/[(k-1)!(n-k)!]$，所以\n\n$$f_{X_{(k)}}(t)=\\frac{n!}{(k-1)!(n-k)!}F(t)^{k-1}[1-F(t)]^{n-k}f(t).$$\n\n## 均匀样本的数值\n\nn=3、总体在 (0,1) 均匀时，最大值密度为 $3x^2$，均值为 $\\int_0^13x^3dx=3/4$；最小值均值为 1/4。中间值密度为 $6x(1-x)$，在 $(1/4,3/4)$ 的概率为\n\n$$[3x^2-2x^3]_{1/4}^{3/4}=\\frac{11}{16}.$$\n\n它比单个均匀观测更集中。一般均匀样本的 $E(X_{(k)})=k/(n+1)$，特别地，最大值均值为 n/(n+1)，极差 $R=M-L$ 的均值为 $(n-1)/(n+1)$。\n\n## 两个次序统计量的联合分布\n\n极差还需要极值的联合信息。对连续总体和 l<m，让一个点落在 l 附近，一个在 m 附近，其余 n-2 个位于两者之间，得到\n\n$$f_{L,M}(l,m)=n(n-1)[F(m)-F(l)]^{n-2}f(l)f(m).$$\n\n均匀总体中令 r=m-l，对 l 从 0 积到 1-r，便有 $f_R(r)=n(n-1)r^{n-2}(1-r)$，0<r<1。此推导也说明 L 与 M 不能视为独立；它们共同限定了同一批样本的区间。\n\n> **鲨鱼说** 观测次数越多，越容易遇到靠近边界的数值。比较不同样本中的最大值时，需要同时考虑各自样本量。\n\n## 练习\n1. 5个独立[0,1]均匀变量，求最大值超过0.9的概率。\n2. 推导同一样本最小值的期望，并计算最大值与最小值之差的期望。\n\n[本章习题](/read/?slug=larsen-book-03-11)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/larsen-book-03-08.zip",
+        "label": "次序统计量与样本极值 · Python 示例",
+        "size_bytes": 930,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第一部分 · 概率与随机变量",
+      "number": 18,
+      "chapter": "3",
+      "edition": "2026-10",
+      "minutes": 11,
+      "section": "8",
+      "chapter_title": "随机变量",
+      "source_sections": [
+        "3.10"
+      ]
+    }
+  }
+}

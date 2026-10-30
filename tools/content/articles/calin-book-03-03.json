@@ -1,0 +1,37 @@
+{
+  "slug": "calin-book-03-03",
+  "title": "积分布朗运动与累计随机影响",
+  "summary": "计算布朗路径的时间积分及其指数，理解协方差、条件预测和积累效应。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "随机微积分及其应用",
+  "sort_order": 5017,
+  "cover_url": "",
+  "section_ids": [
+    "17859c88-b779-5654-b120-7a4cc7b39714"
+  ],
+  "body": "## 时间积分与随机积分不同\n\n定义 $Z_t=\\int_0^tW_sds$。这是对时间 $ds$ 的普通积分：每条布朗路径连续，所以在有限区间内都可以逐条积分。若把 $W_s$ 看作随机速度，$Z_t$ 就是累计位移。它的路径比 $W_t$ 平滑，且 $Z'_t=W_t$，但导数本身仍然粗糙。\n\n通过 Riemann 和近似，$Z_t$ 是高斯变量的线性组合极限，因而仍为高斯。均值为零，方差由协方差积分得到：\n\n$$\\operatorname{Var}(Z_t)=\\int_0^t\\int_0^t\\min(u,v)dudv\n=2\\int_0^t\\int_0^v u\\,dudv=\\frac{t^3}{3}.$$\n\n时间扩大 2 倍，方差扩大 8 倍，标准差扩大 $2^{3/2}$ 倍。这种积累速度高于布朗运动本身的方差线性增长。\n\n### 二重积分中的两个三角形\n\n方差 $\\mathbb E[(\\int_0^tW_sds)^2]$ 展开后，要对每对时刻 $(u,v)$ 的乘积平均。正方形 $[0,t]^2$ 可以沿对角线分成两个三角形；在 $u\\le v$ 的三角形中，$\\min(u,v)=u$。两部分对称，所以\n\n$$2\\int_0^t\\left(\\int_0^v udu\\right)dv\n=2\\int_0^t\\frac{v^2}{2}dv=\\frac{t^3}{3}.$$\n\n对角线本身面积为零，不需另外计算。这里不能误用“不同时间的 $W_u,W_v$ 独立”；它们共享过去增量，协方差正是面积计算的核心。\n\nRiemann 和为何保持高斯分布，也可从特征函数看出。每个近似面积都是高斯线性组合，均值为零、方差趋于 $t^3/3$；它的特征函数因而趋于 $\\exp[-u^2t^3/6]$。这识别出面积的正态分布，而不只是算出两个矩。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>特征函数，即用复指数的期望描述随机变量分布的函数。</p></aside>\n\n## 两个累计量如何共同变化\n\n当 $s\\le t$，\n\n$$\\operatorname{Cov}(Z_s,Z_t)\n=\\int_0^s\\int_0^t\\min(u,v)dvdu\n=\\frac{s^2t}{2}-\\frac{s^3}{6}.$$\n\n与终点布朗值的协方差是 $\\operatorname{Cov}(Z_t,W_t)=\\int_0^t sds=t^2/2$。因此二者相关系数为 $\\sqrt3/2$，与时间无关。终点值与累计面积紧密相关，却不能互相确定：许多不同路径可以具有相同终点、不同面积。\n\n另一个有用表示是 $Z_t=\\int_0^t(t-u)dW_u$。靠近起点的随机冲击作用时间更长，所以权重 $t-u$ 更大。这个表示也立即给出方差 $\\int_0^t(t-u)^2du=t^3/3$。\n\n对 $s\\le t$，先固定 $u\\in[0,s]$，把内层积分在 $v=u$ 处分开：\n\n$$\\int_0^t\\min(u,v)dv=\\int_0^u vdv+\\int_u^t udv=ut-\\frac{u^2}{2}.$$\n\n再对 $u$ 从 0 到 $s$ 积分，得到 $ts^2/2-s^3/6$。若令 $s=t$，恢复方差 $t^3/3$，这是一个边界检查。\n\n核表示可以从普通分部积分得到：$d[(t-u)W_u]=(t-u)dW_u-W_udu$，两个端点的乘积项都为零，因此 $\\int_0^tW_udu=\\int_0^t(t-u)dW_u$。确定性有限变差因子与布朗运动没有二次协变差，所以这里没有额外修正项。\n\n## 已知当前路径后预测未来累计量\n\n对 $T>t$，令 $\\Delta=T-t$。分解为\n\n$$Z_T=Z_t+\\Delta W_t+\\int_t^T(W_s-W_t)ds.$$\n\n最后一项独立于当前信息，均值为零、方差为 $\\Delta^3/3$。所以\n\n$$Z_T\\mid\\mathcal F_t\\sim N\\left(Z_t+\\Delta W_t,\\frac{\\Delta^3}{3}\\right).$$\n\n$Z_t$ 一般不是鞅，因为当前速度 $W_t$ 还会继续贡献未来面积。只有把这部分可预测贡献单独处理，剩余增量才是零均值。\n\n令新的布朗运动 $B_v=W_{t+v}-W_t$，$0\\le v\\le\\Delta$。它独立于 $\\mathcal F_t$，剩余面积就是 $\\int_0^\\Delta B_vdv$，因此是独立于过去、方差为 $\\Delta^3/3$ 的正态变量。这一步同时给出了条件均值和全部条件分布。\n\n若已知 $Z_t=0.2,W_t=0.5$，再观察一单位时间，则 $Z_{t+1}\\mid\\mathcal F_t\\sim N(0.7,1/3)$。未来面积超过 1 的条件概率为 $1-\\Phi[(1-0.7)/\\sqrt{1/3}]\\approx0.3017$。\n\n只知道 $Z_t$ 一般不足以按当前历史预测未来，因为还需知道当前速度 $W_t$。把状态扩大为 $(W_t,Z_t)$ 后，未来变化由这一对当前值和独立新增量决定。选择什么变量作为“状态”，会影响过程是否具有 Markov 性。\n\n## 将累计影响放进指数\n\n令 $V_t=e^{Z_t}$。由于 $Z_t\\sim N(0,t^3/3)$，\n\n$$\\mathbb E[V_t]=e^{t^3/6},\\qquad\n\\operatorname{Var}(V_t)=e^{2t^3/3}-e^{t^3/3}.$$\n\n记 $c(s,t)=s^2t/2-s^3/6$，则联合高斯指数矩给出\n\n$$\\operatorname{Cov}(V_s,V_t)\n=e^{(s^3+t^3)/6}\\big(e^{c(s,t)}-1\\big),\\qquad s\\le t.$$\n\n条件均值也由条件正态分布得到：\n\n$$\\mathbb E[V_T\\mid\\mathcal F_t]\n=\\exp\\left[Z_t+\\Delta W_t+\\frac{\\Delta^3}{6}\\right].$$\n\n最后一项是条件方差的一半，而不是条件方差本身。给定 $Z_t=0.2,W_t=0.5,\\Delta=1$，条件均值约为 $e^{0.8667}=2.3790$，高于仅指数化条件均值所得的 $e^{0.7}$。\n\n![布朗路径与累计面积](/assets/illustrations/theory/calin/integrated-brownian.svg)\n\n> **鲨鱼说** $e^{\\int W_sds}$ 与 $\\int e^{W_s}ds$ 是两个不同随机变量。前者先积累再指数化，后者先对每一时刻指数化再累加。改变操作顺序会改变均值、方差和分布。\n\n对联合零均值高斯变量 $Z_s,Z_t$，和的方差为 $\\operatorname{Var}(Z_s)+\\operatorname{Var}(Z_t)+2c(s,t)$。因此\n\n$$\\mathbb E[e^{Z_s+Z_t}]=\\exp\\left[\\frac{s^3+t^3}{6}+c(s,t)\\right].$$\n\n而两个指数均值的乘积为 $\\exp[(s^3+t^3)/6]$，相减便得到前面的协方差。若 $s=0$，$e^{Z_0}=1$ 为常数，公式给出零协方差；若 $s=t$，公式恢复方差。这两个检查能发现指数中容易遗漏的因子。\n\n## 练习：另一种积分顺序\n\n令 $A_t=\\int_0^t e^{W_s}ds$。求其均值与二阶矩。\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n由非负性可交换期望与时间积分，$\\mathbb E[A_t]=\\int_0^te^{s/2}ds=2(e^{t/2}-1)$。当 $u\\le s$，$W_u+W_s$ 的方差为 $s+3u$，因此 $\\mathbb E[e^{W_u+W_s}]=e^{s/2+3u/2}$。于是\n\n$$\\mathbb E[A_t^2]=2\\int_0^t\\int_0^s e^{s/2+3u/2}duds\n=\\frac23e^{2t}-\\frac83e^{t/2}+2.$$\n\n方差再减去 $4(e^{t/2}-1)^2$。与 $V_t$ 的公式比较，可以看到两种操作顺序产生不同的时间尺度。\n\n</details>\n\n## 代码下载\n\n[下载计算与绘图代码](/assets/downloads/theory/calin-book-03-03.zip)\n",
+  "metadata": {
+    "theory_book": {
+      "book": "stochastic-calculus",
+      "part": "第一部分 · 概率与随机过程",
+      "number": 17,
+      "chapter": "3",
+      "edition": "2026-10",
+      "minutes": 35,
+      "section": "3",
+      "source_pages": [
+        68,
+        69,
+        70,
+        71,
+        72
+      ],
+      "chapter_title": "常用随机过程",
+      "source_sections": [
+        "3.3",
+        "3.4"
+      ]
+    }
+  }
+}

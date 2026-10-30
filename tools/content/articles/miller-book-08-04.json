@@ -1,0 +1,39 @@
+{
+  "slug": "miller-book-08-04",
+  "title": "跳表与随机层级索引",
+  "summary": "追踪跳表的逐层查找与前驱更新，推导期望层数、空间和有序映射操作。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8048,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "有序链表能顺序扫描区间，却仍需逐个比较才能找到起点。跳表在完整底层之上增加稀疏索引层，用较长的跳跃接近目标，再逐层缩小搜索范围。\n\n## 查找路径\n\n底层为 1→3→5→7→9，上层只保留 1→5→9。查找 7 时，从最高层向右到 5；下一项 9 已超过目标，下降到底层，再检查 7。\n\n一般规则是：下一节点键小于目标就右移，否则下降。下降后仍从当前节点继续，因为此前已经排除它左边的键。底层最终停在目标之前，检查下一节点是否相等。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/skip-list.svg\" alt=\"跳表高层跨过多个节点，逐层下降后定位底层元素。\" loading=\"lazy\"></figure>\n\n## 节点为什么有不同高度\n\n每个节点必在第 0 层，再以概率 p 独立提升一层，连续成功则继续。到第 k 层的概率为 pᵏ，n 个节点中该层期望数量为 npᵏ。\n\n取 p=1/2，各层期望数量为 n、n/2、n/4、…，总引用数量的期望为 $n/(1-p)=2n$，所以期望空间 O(n)。令 npᵏ约为 1，得到最高层数量级 $\\log_{1/p}n$。\n\n每层典型横向移动数受几何分布控制，期望为常数级，结合对数层数得到期望 O(log n) 查找。随机提升不提供每一次构造的确定性高度保证；固定最大层数也需随预期规模合理设置。\n\n## 插入保存各层前驱\n\n搜索时将每层最后一个小于目标的节点存入 update[k]。若底层下一键已相等，只更新 value。否则生成高度 h，在第 0 至 h−1 层依次执行：\n\n`new.next[k] = update[k].next[k]`，然后 `update[k].next[k] = new`。\n\n先保存原后继再接入新节点，与单链表插入相同。若新节点超过当前最高层，新层的前驱为头哨兵，同时提高当前层数。\n\n## 删除和范围访问\n\n删除也先取得 update。每层若前驱的下一节点就是目标，将它改为目标同层的下一节点。移除后，若最高层为空，逐层降低当前层数；底层仍完整保存剩余记录。\n\n范围 [a,b] 查询先找到第一个不小于 a 的节点，再沿第 0 层前进至键大于 b。若输出 k 条记录，期望时间 O(log n+k)。映射接口还可提供 get、put、delete、size 和按键顺序的 items。\n\n## 与平衡树的关系\n\nAVL 用旋转确定性地限制高度，跳表用随机层级获得期望性能。二者都保留有序关系。跳表的随机种子只控制本次演示结构，检查时应验证底层顺序、上层为下层子序列及键值操作，而非要求每次图形完全相同。\n\n> **鲨鱼说** 上层通过快捷链接连接底层的部分节点。修改一个键对应的值时，所有层仍指向同一记录，不需要分别更新多份值。\n\n## Python 实现\n\n~~~python\nimport random\nclass Node:\n    def __init__(self,key,value,height):\n        self.key,self.value=key,value;self.next=[None]*height\nclass SkipMap:\n    def __init__(self,max_level=16,seed=20261018):\n        self.max_level=max_level;self.head=Node(None,None,max_level)\n        self.level=1;self.rng=random.Random(seed)\n    def predecessors(self,key):\n        update=[self.head]*self.max_level;node=self.head\n        for level in range(self.level-1,-1,-1):\n            while node.next[level] and node.next[level].key<key:node=node.next[level]\n            update[level]=node\n        return update\n    def put(self,key,value):\n        update=self.predecessors(key);node=update[0].next[0]\n        if node and node.key==key:node.value=value;return\n        height=1\n        while height<self.max_level and self.rng.random()<.5:height+=1\n        if height>self.level:\n            for i in range(self.level,height):update[i]=self.head\n            self.level=height\n        node=Node(key,value,height)\n        for i in range(height):\n            node.next[i]=update[i].next[i];update[i].next[i]=node\n    def get(self,key):\n        node=self.predecessors(key)[0].next[0]\n        if node is None or node.key!=key:raise KeyError(key)\n        return node.value\n    def items(self):\n        node=self.head.next[0]\n        while node:\n            yield node.key,node.value;node=node.next[0]\nm=SkipMap()\nfor key in [7,2,9,1,5]:m.put(key,str(key))\nm.put(5,'five')\nassert m.get(5)=='five' and [k for k,v in m.items()]==[1,2,5,7,9]\nprint(list(m.items()))\n~~~\n\n## 练习\n1. 给定底层键1到10和一组指定高度，画出所有层并追踪查找8的路径。\n2. 为跳表加入删除操作，检查删除最高层唯一节点后的层数更新。\n\n[本章习题](/read/?slug=miller-book-08-07)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-08-04.zip",
+        "label": "跳表与随机层级索引 · Python 示例",
+        "size_bytes": 1313,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第三部分 · 图算法与进阶应用",
+      "number": 48,
+      "chapter": "8",
+      "edition": "2026-10",
+      "minutes": 12,
+      "section": "4",
+      "chapter_title": "进阶数据结构与算法应用",
+      "source_sections": [
+        "8.4",
+        "8.4.1",
+        "8.4.2"
+      ]
+    }
+  }
+}

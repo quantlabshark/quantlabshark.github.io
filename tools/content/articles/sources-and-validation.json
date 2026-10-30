@@ -1,0 +1,15 @@
+{
+  "slug": "sources-and-validation",
+  "title": "资料来源与研究约定",
+  "summary": "模拟数据的生成方式、历史数据要求与结果解释。",
+  "kind": "reference",
+  "track": "",
+  "series": "",
+  "sort_order": 47,
+  "cover_url": "",
+  "section_ids": [
+    "c41526dd-742a-469f-9389-9bfddcee30dc"
+  ],
+  "body": "## 资料来源\n\n课程参考 Python、NumPy、pandas、scikit-learn、statsmodels 和 QuantConnect 官方文档，各课附具体链接。正文与练习为本站整理。\n\n## 数据与验证\n\n交互实验使用固定种子生成的教学合成价格，不冒充真实行情。信号、成交与收益严格按时间顺序处理；费用为单边基点；年化 252 是演示假设。\n\n本站介绍数据处理、策略检验、组合管理与交易执行。请在[讨论中心](/community/)指出错误并附复现步骤。\n",
+  "metadata": {}
+}

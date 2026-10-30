@@ -1,0 +1,15 @@
+{
+  "slug": "ref-sort-index",
+  "title": "sort_index：按时间排序",
+  "summary": "时间顺序是滚动计算的前提。",
+  "kind": "reference",
+  "track": "",
+  "series": "",
+  "sort_order": 28,
+  "section_ids": [
+    "13c09645-17ba-4818-ac04-473fbd820fb0",
+    "c41526dd-742a-469f-9389-9bfddcee30dc"
+  ],
+  "body": "## sort_index：按时间排序\n\n将日期设为索引后，`sort_index()` 按日期排列记录，便于计算相邻时间区间的变化。以下代码承接已经读取的表格 `df`。\n\n```python\ndf = df.set_index(\"date\").sort_index()\nassert df.index.is_unique\n```\n\n断言检查日期是否唯一。若失败，应核对重复记录是数据修订、不同标的混在一起，还是重复采集，再决定保留规则。多标的数据通常需要日期与标的共同组成索引。\n",
+  "metadata": {}
+}

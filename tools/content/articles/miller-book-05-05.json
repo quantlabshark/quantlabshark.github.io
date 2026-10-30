@@ -1,0 +1,37 @@
+{
+  "slug": "miller-book-05-05",
+  "title": "归并排序与分治",
+  "summary": "逐项合并有序子列，展开归并排序递推，说明稳定性、缓冲区和自底向上实现。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8027,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "归并排序先将数据拆到容易排序的规模，再合并结果。长度为 0 或 1 的序列已经有序；主要工作是把两个有序序列合为一个。\n\n## 两个指针完成合并\n\n左列 L=[2,7]，右列 R=[1,5]，i、j 分别指向尚未输出的首项。\n\n| 比较 | 选择 | 已输出 |\n| --- | --- | --- |\n| 2 与 1 | 右侧 1 | 1 |\n| 2 与 5 | 左侧 2 | 1,2 |\n| 7 与 5 | 右侧 5 | 1,2,5 |\n| 右列为空 | 追加左侧剩余 7 | 1,2,5,7 |\n\n两个首项各自是所属列剩余元素中的最小值，选择较小者就是选择全部剩余元素的最小值。每次只推进对应指针，每个元素恰好输出一次，长度 m、n 的合并为 Θ(m+n)。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/merge.svg\" alt=\"归并排序将数组分成两部分，分别排序后合并。\" loading=\"lazy\"></figure>\n\n## 递归分割\n\n`[7,2,5,1]` 先分为 `[7,2]`、`[5,1]`，两者继续分为单元素，再合并成 `[2,7]`、`[1,5]`，最终应用上表。奇数长度可一边多一项，不影响每次规模约减半。\n\n归纳证明由两部分组成：子调用得到正确排序的左右列；合并输出不丢失、不重复元素，且每项不小于前一项。两者组合保证整个结果正确。\n\n## 每层工作量\n\n为便于计算，令 n 是 2 的幂。递推为\n\n$$T(n)=2T(n/2)+cn.$$\n\n第 k 层有 $2^k$ 个子问题，每个规模 n/2ᵏ，该层合并总量仍为 cn。约有 log₂n 层，所以时间 Θ(n log n)。输入是否已排序不改变基本版本的分割与合并规模。\n\n## 稳定性与空间\n\n相等时先取左列元素，可保留重复键在原序列中的相对顺序；子列内部也递归保持该顺序，故整体稳定。若改为相等时先取右列，跨越分割点的同键记录可能反转。\n\n数组归并通常需要 O(n) 辅助缓冲区，递归栈 O(log n)。直接切片版本在各层创建许多副本，累计分配量 O(n log n)，峰值存储仍可维持 O(n)；索引与复用缓冲区能减少分配常数。\n\n## 自底向上版本\n\n先合并相邻的长度 1 块，再合并长度 2、4、8 的块，直到块长覆盖 n。每阶段同样处理 O(n) 元素，阶段数 O(log n)。它用迭代安排相同的合并层次，不需要递归调用栈。\n\n> **鲨鱼说** 合并时无需重新搜索最小值，因为左右两列已经有序。分治的收益依赖子问题提供这种可利用的结构。\n\n## Python 实现\n\n~~~python\ndef merge_sort(values):\n    if len(values)<2:return list(values)\n    mid=len(values)//2\n    left=merge_sort(values[:mid]);right=merge_sort(values[mid:])\n    out=[];i=j=0\n    while i<len(left) and j<len(right):\n        if left[i]<=right[j]:out.append(left[i]);i+=1\n        else:out.append(right[j]);j+=1\n    return out+left[i:]+right[j:]\na=[7,2,5,1,2]\nassert merge_sort(a)==sorted(a)\nprint(merge_sort(a))\n~~~\n\n## 练习\n1. 追踪[6,3,8,2,7,1]的分割与合并过程。\n2. 用带标签的重复键验证“相等时取左侧”对稳定性的作用。\n\n[本章习题](/read/?slug=miller-book-05-07)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-05-05.zip",
+        "label": "归并排序与分治 · Python 示例",
+        "size_bytes": 929,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第二部分 · 数据组织与基本算法",
+      "number": 27,
+      "chapter": "5",
+      "edition": "2026-10",
+      "minutes": 11,
+      "section": "5",
+      "chapter_title": "搜索和排序",
+      "source_sections": [
+        "5.3.5"
+      ]
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "slug": "larsen-book-06-02",
+  "title": "两类错误、功效与样本量",
+  "summary": "分别计算两类错误与功效，推导已知方差时的样本量公式及似然比最优原则。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7037,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "检验既可能把随机波动误判为差异，也可能漏掉真实差异。第一类错误在原假设下计算，第二类错误需要指定一个真实的备择参数。\n\n## 拒绝概率随参数变化\n\n第一类错误是原假设为真却拒绝，概率记 $\\alpha$；真实参数为 $\\theta$、但未拒绝原假设的概率记 $\\beta(\\theta)$。功效为 $1-\\beta(\\theta)$，即该参数下检出差异的概率。备择包含许多参数值时，功效是一条曲线。\n\n检验 $\\mu=0$ 对 $\\mu>0$，已知 $\\sigma=1,n=25$。原假设下均值标准差为 0.2，5% 单侧临界均值为 $c=1.645\\times0.2=0.329$。\n\n如果真实均值是 0.5，均值分布以 0.5 为中心。拒绝阈值仍是 0.329，功效为\n\n$$P_{0.5}(\\bar X>0.329)\n=1-\\Phi\\left(\\frac{0.329-0.5}{0.2}\\right)\\approx0.804.$$\n\n因此约有 19.6% 的重复样本会漏掉这个差异。真实均值越接近零，越难进入同一拒绝域。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/power-z-review.svg\" alt=\"标准差为一的单侧正态均值检验，功效随均值差和样本量增加。\" loading=\"lazy\"></figure>\n\n## 推导样本量要求\n\n希望在真实均值 $\\mu_0+\\delta$ 下达到功效 $1-\\beta$。临界值为 $\\mu_0+z_{1-\\alpha}\\sigma/\\sqrt n$。代入备择标准化后，未拒绝概率为\n\n$$\\beta=\\Phi\\left(z_{1-\\alpha}-\\frac{\\delta\\sqrt n}{\\sigma}\\right).$$\n\n令括号等于 $z_\\beta=-z_{1-\\beta}$，整理得\n\n$$n\\ge\\left[\\frac{\\sigma(z_{1-\\alpha}+z_{1-\\beta})}{\\delta}\\right]^2.$$\n\n$\\sigma=1,\\delta=0.5,\\alpha=0.05$、功效 0.8 时，n 至少为 25。目标差异缩小一半，所需样本约增为四倍。\n\n## 固定误报率下的最优选择\n\n比较两个简单假设 $\\theta_0$ 与 $\\theta_1$，似然比 $f(x;\\theta_1)/f(x;\\theta_0)$ 越大，数据越偏向备择。Neyman–Pearson 原则选择比值最大的结果作为拒绝域，在相同原假设概率预算下获得最大备择概率。\n\n其理由可由交换看出：若拒绝域包含低比值区域却排除高比值区域，交换同样大小的原假设概率质量，会提高备择下的拒绝概率。连续情况下可形成临界比值规则；离散情况下边界有时需随机化才能恰好用尽概率预算。\n\n> **鲨鱼说** 未检出差异可能源于差异小，也可能源于样本少或波动大。规划时要指定希望发现多大的差异，再计算达到的功效。\n\n## 练习\n1. 将本节正态检验样本量从25增到100，计算真实μ=0.5时的功效。\n2. 在相同α和功效下，希望检测的差异缩小到原来一半，样本量应如何变化？\n\n[本章习题](/read/?slug=larsen-book-06-05)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/larsen-book-06-02.zip",
+        "label": "两类错误、功效与样本量 · Python 示例",
+        "size_bytes": 908,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第二部分 · 估计与检验",
+      "number": 37,
+      "chapter": "6",
+      "edition": "2026-10",
+      "minutes": 13,
+      "section": "2",
+      "chapter_title": "假设检验",
+      "source_sections": [
+        "6.4"
+      ]
+    }
+  }
+}

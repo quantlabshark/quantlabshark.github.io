@@ -2,44 +2,27 @@
 
 线上地址：https://quantlabshark.github.io/
 
-源文件在 `source-quant/`，主题在 `themes/quant-lab/`。运行 `npm ci`、`npm run build` 生成 `docs/`，提交并推送后由 GitHub Pages 发布 main 分支的 `/docs`。
+网站采用公开静态页面，阅读课程和题解无需注册或登录。正文、目录、全文搜索、插图与代码附件均由 GitHub Pages 提供，不连接后台数据库。
 
-## 内容与账号
+## 内容
 
-网站沿用原学习站的账号、课程进度、私人笔记、讨论回复、作者工作台、审核与管理功能。量化站使用独立 Supabase 项目 `skqoondpsqzvybnmcaas`。网页内只包含公开 publishable key，数据权限由数据库策略控制。首次使用已验证的 GitHub 所有者账号登录后自动获得管理员身份。
+`tools/content/articles/` 保存 744 篇文章：66 节系统课程、394 个基础理论单元、136 节专题课程、100 个笔面试单元和 48 篇参考与实践资料。正文和附件配置在各篇 JSON 中修改；目录与分组保存在 `tools/content/`。不保存用户资料、私人笔记或账号记录。
 
-课程与文章正文在数据库中管理；`tools/content/catalog-content.json` 只保留公开目录信息。通过网站管理平台更新内容。原 OpenFOAM 项目没有被写入。
+`source-quant/` 保存入口页与下载附件，`themes/quant-lab/` 保存布局和浏览器交互，`lib/static-content.cjs` 与 `scripts/static-content.js` 将文章生成独立页面。旧的 `/read/?slug=...` 链接会打开对应的 `/read/文章名/` 静态页面。
 
-## 系统学习与笔面试
+保留目录搜索、课程分页、主题配色、章节导航、折叠解答、鲨鱼提示、配图放大、代码复制和附件下载。登录、个人中心、后台编辑、数据库评论、私人笔记、成长记录与访问计数已移除。
 
-`/courses/` 按 Roadmap Ultimate Edition 与 Xin Guo《量化交易：算法、分析、数据、模型和优化》组织为 11 个阶段、66 课，并以《深入浅出 Python 量化交易实战》补充程序和案例。目录分入门、基础、进阶，分页展示；课程含例题、折叠解答、图表和示例代码包。资料对应关系保留在内部审计记录中。原 20 篇课程保留直接阅读地址，作为旧版参考内容，不计入新版进度。
-
-`/interview/` 包含经典书籍题解与笔面试资料两册，共 100 个阅读单元。Zhou 教材全部 7 章整理为 33 节；QuantMaterial 整理为 67 节。`/interview/sources/` 逐项列出 93 个原文件及压缩包内 4 个独有文件，记录重复合并、配套附件和原始条件缺项。数据包包含计算结果和复现脚本，交易表已去除姓名列。笔面试内容不计入系统课程进度。
-
-笔面试解答使用原生 `details` 默认折叠，保留题干与考点可见；每页可统一展开和收起。目录跳转和私人笔记定位会展开对应解答。`/interview/experience/` 提供公司面试经验、官方岗位要求、岗位介绍与三种方向的八周准备安排。
-
-`/theory/` 沿用 OpenFOAM 站的背景卡片、章节目录与阅读导航，按数学基础、资产定价与组合、交易建模与市场机制分类。四本书共 265 个单元：因子投资 47 节、交易与交易所 90 节、随机微积分 68 节、量化交易 60 节。正文补充背景、推导、数值例子和“鲨鱼说”，配套代码在每课末尾提供。
-
-`/topics/` 包含人工智能、Alpha101、截面因子和择时四个专题，共 136 课。Alpha101 包含 5 节导读及 101 个公式的独立解读。区分教学模拟、历史预测检验和可执行回测；实证口径、样本范围、成本和未测试条件在相应文章中说明。下载包不包含行情令牌或原始付费行情。
-
-`/resources/` 参考城堡阅读资料与 Roadmap，提供 12 类、249 条书籍、课程、代码、数据与研究入口，以及课程附件分组。支持搜索、类别、形式和阶段筛选。`tools/content/resource-library.json` 仅保存公开目录，内部来源页码与待核验链接不进入网页。
-
-导航的初始页面和动态目录共用 `navigation-tree.js`，避免跳转时入口缺失。`npm run sync:catalog` 从量化站读取最新公开目录信息，更新 `tools/content/navigation.json`、`course-catalog.json`、`interview-catalog.json`、`theory-catalog.json` 与搜索范围；后台调整目录或题目后，先同步，再构建发布。同步脚本不读取正文或私有数据。在线目录读取失败时，页面仍保留发布时的导航和索引。
-
-吉祥物小鲨是内联矢量图，形象与装扮在 `panda-art.js`、`panda-character.css` 中（文件名沿用旧站，便于兼容数据库里的装扮记录）。小镇前端代码和管理入口已移除；数据库中的小镇表与迁移暂时保留，未删除数据。
-
-## 本机行情获取
-
-`tools/tushare_fetch.py` 从环境变量 `TUSHARE_TOKEN` 或本机 `.env` 读取令牌，通过 HTTPS 请求日线数据。运行示例：
+## 构建与发布
 
 ```powershell
-D:\anaconda3\python.exe tools/tushare_fetch.py --code 000001.SZ --start 20260101 --end 20261016
+npm ci
+npm run build -- --force
+npm run check
+npm run preview
 ```
 
-结果写入 `.quantlab-work/market-data/`，不会提交到 GitHub。返回价格为未复权日线，不能直接当作含分红收益率。勿将 `.env`、令牌或原始账号数据放到网页中。公开实验使用可重复的合成数据。
+预览地址为 http://127.0.0.1:4175/。构建生成 `docs/`，提交并推送到组织仓库后，由 GitHub Pages 从 `main:/docs` 发布。构建不需要数据库账号、密钥或在线服务。全文搜索索引随正文一起生成。
 
-## 迁移说明
+## 本机行情数据
 
-迁移文件来自原站并适配新项目。原站文件名的历史顺序并非完整依赖顺序：`town_eggs` 应在 `town_egg_final_catalog_and_times` 前应用，`quant_scoped_search_dependency` 应在 `article_login_required` 前应用。新站不启用小镇 Realtime 策略。`quant_private_notes` 补齐私人笔记与新站所有者首次登录授权。
-
-2022 年旧博客及其静态资源已从项目移出，归档在本机 `E:\Hexo_2_Archive\legacy-site-20261018`。Git 标签 `pre-quant-learning-20261017` 保留原发布版本。
+`tools/tushare_fetch.py` 从本机环境变量 `TUSHARE_TOKEN` 或 `.env` 读取令牌，数据写入忽略目录 `.quantlab-work/market-data/`。公开网站只包含不带令牌的示例与教学数据。

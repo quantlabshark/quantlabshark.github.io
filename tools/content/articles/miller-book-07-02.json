@@ -1,0 +1,37 @@
+{
+  "slug": "miller-book-07-02",
+  "title": "宽度优先搜索与词梯",
+  "summary": "追踪队列中的距离层次，证明首次发现得到最少边数路径，并分开计算词梯构图成本。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8038,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "宽度优先搜索先访问离起点一步的顶点，再访问两步、三步的顶点。队列使较早发现的浅层顶点先展开，从而得到无权图的最少边数距离。\n\n## 距离、前驱和发现状态\n\n起点 s 的 distance=0、parent=None，入队。弹出 u 后，对每个尚未发现的邻居 v，设置 distance[v]=distance[u]+1、parent[v]=u，并立即标记和入队。\n\n标记要发生在入队时。若等到出队才标记，同一顶点可能被两个父节点重复加入，造成重复工作和前驱覆盖。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/bfs.svg\" alt=\"从 A 开始的宽度优先搜索按距离逐层访问节点。\" loading=\"lazy\"></figure>\n\n## 五个顶点的队列变化\n\n图为 A→B,C；B→D；C→D,E。从 A 开始：\n\n| 弹出的点 | 新发现 | 弹出并扩展后的队列 |\n| --- | --- | --- |\n| A | B、C，距离 1 | B,C |\n| B | D，距离 2 | C,D |\n| C | E，距离 2；D 已发现 | D,E |\n| D | 无 | E |\n| E | 无 | 空 |\n\n前驱 D←B←A 逆序得到 A→B→D。若先枚举 C，D 的前驱可能变为 C，但最少边数仍为 2。不存在路线的顶点保留未发现状态，不能当作距离零。\n\n## 为什么第一次发现已经最短\n\n队列中的距离按层非降排列：处理距离 d 的顶点时，新加入者距离 d+1，排在现有项之后。若首次发现 v 时距离为 d+1，却存在不超过 d 的路线，该路线的前一顶点应在更早一层被处理，并已发现 v，与首次发现矛盾。\n\n这个论证使用每条边相同成本。不同权重下，步数少未必总成本小，需要后面的 Dijkstra 等方法。\n\n## 将词梯建成图\n\n单词长度相同，每步只改一个字母，中间词必须在词表内。例如 cold→cord→card→ward→warm。词是顶点，相差一个位置则连无向边。\n\nW 个长度 L 的词两两比较，成本 O(W²L)。可生成通配模式：cold 对应 *old、c*ld、co*d、col*。共享模式的词放同桶，桶内连边即可。\n\n生成每个模式需要复制字符串，普通切片实现的总成本 O(WL²)；若桶大小为 k，还需 O(k²) 建边。也可在 BFS 时按桶展开邻居，并在整桶处理后清除该桶，减少重复扫描和显式存边。\n\n## 搜索与构图分开计数\n\n已建邻接表上的 BFS 为 O(V+E)，距离、前驱和队列占 O(V)。词表预处理和图存储可能更大，应单独记录。沿前驱还原长度为 ℓ 的路线需 O(ℓ)，与扫描整图不同。\n\n> **鲨鱼说** BFS 证明的是第一次发现时的层数最小。前驱可以因邻居顺序不同而改变，因此两条不同路线也可能同样最短。\n\n## Python 实现\n\n~~~python\nfrom collections import deque\ndef bfs(graph,start):\n    parent={start:None};distance={start:0};q=deque([start])\n    while q:\n        u=q.popleft()\n        for v in graph.get(u,[]):\n            if v not in distance:\n                parent[v]=u;distance[v]=distance[u]+1;q.append(v)\n    return distance,parent\ngraph={'A':['B','C'],'B':['D'],'C':['D','E'],'D':[],'E':[]}\ndistance,parent=bfs(graph,'A')\nassert distance=={'A':0,'B':1,'C':1,'D':2,'E':2}\npath=[];v='D'\nwhile v is not None:path.append(v);v=parent[v]\nprint(list(reversed(path)),distance)\n\ndef word_graph(words):\n    buckets={}\n    for word in words:\n        for i in range(len(word)):\n            buckets.setdefault(word[:i]+'_'+word[i+1:],[]).append(word)\n    graph={w:set() for w in words}\n    for group in buckets.values():\n        for word in group:graph[word].update(set(group)-{word})\n    return graph\ngraph=word_graph(['cold','cord','card','ward','warm','word'])\nprint('word graph',graph)\n~~~\n\n## 练习\n1. 对给定五顶点图列出队列每一步状态。\n2. 用少量四字母单词构造词梯图，比较两种构图方法产生的边集合。\n\n[本章习题](/read/?slug=miller-book-07-08)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-07-02.zip",
+        "label": "宽度优先搜索与词梯 · Python 示例",
+        "size_bytes": 1281,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第三部分 · 图算法与进阶应用",
+      "number": 38,
+      "chapter": "7",
+      "edition": "2026-10",
+      "minutes": 12,
+      "section": "2",
+      "chapter_title": "图及其算法",
+      "source_sections": [
+        "7.4"
+      ]
+    }
+  }
+}

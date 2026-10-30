@@ -1,0 +1,37 @@
+{
+  "slug": "miller-book-06-02",
+  "title": "解析树与递归求值",
+  "summary": "从完全括号化语法和后序词构造解析树，逐层求值并重建保留括号的表达式。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8031,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "表达式 `(3+(4*5))` 的根为 +，左孩子为数值 3，右子树根为 *、两片叶子为 4 和 5。树结构把运算依赖保存下来，后续计算无需再判断文本中的优先级。\n\n## 内部节点和叶子承担不同作用\n\n叶子保存数值；二元运算节点保存运算符及左右两个孩子。左、右位置不能互换：8−2 与 2−8 不同。求值时先计算两个孩子，再将结果作为当前运算的左右操作数。\n\n本例右子树先得到 4×5=20，根再算 3+20=23。每个节点只需计算一次；若有 n 个节点、高度 h，时间 O(n)、调用栈 O(h)。\n\n## 完全括号化表达式的语法\n\n可用两条规则描述合法输入：一个数值是一棵叶子树；`( 表达式 运算符 表达式 )` 是一棵内部节点树。递归解析器读到数值就返回叶子；读到 (，则依次解析左表达式、读取运算符、解析右表达式，并要求出现对应的 )。\n\n这说明“完全括号化”包含每个二元运算所需的括号，不能把普通文本 `3+4*5` 直接交给同一规则而忽略优先级。\n\n## 用父节点栈构造\n\n也可从空根开始逐词扫描：遇 ( 时创建左孩子，当前节点压栈后向左走；遇数值时填叶子并回到父节点；遇运算符时填当前节点，创建右孩子并向右走；遇 ) 时结束当前子表达式，回到上一层。\n\n栈中保存尚未完成的父节点。处理最外层时要设置明确的结束状态，不能在根以上继续弹栈。空输入、缺少操作数、括号未闭合和末尾多余词均应拒绝。\n\n## 后序构树与后序求值\n\n后序 `3 4 5 * +` 可复用上一章的栈思路。数值变成叶子入栈；* 弹出右叶 5、左叶 4，合成乘法树；+ 弹出乘法树和叶 3，合成最终树。结束时栈中必须恰有一个根。\n\n与直接求值相比，区别在于栈中保存子树而非数值。保存结构后，可多次求值、统计运算次数，或改变叶子变量的取值。\n\n## 从树恢复文本\n\n叶子输出自身；内部节点输出“左括号、左子树文本、运算符、右子树文本、右括号”。结果保留计算次序。例如根为 *、左子树为 3+4、右叶为 5 时，输出 `((3+4)*5)`，不能省成 `3+4*5`。\n\n> **鲨鱼说** 后序求值把子表达式立即压缩为一个数；解析树则保留它如何计算。需要重新显示、修改或分析表达式时，保存结构更合适。\n\n## Python 实现\n\n~~~python\nfrom dataclasses import dataclass\nimport operator\n@dataclass\nclass Node:\n    value:object\n    left:object=None\n    right:object=None\ndef parse_postfix(tokens):\n    stack=[];ops={'+','-','*','/'}\n    for token in tokens:\n        if token in ops:\n            if len(stack)<2:raise ValueError('missing operand')\n            right,left=stack.pop(),stack.pop()\n            stack.append(Node(token,left,right))\n        else:stack.append(Node(float(token)))\n    if len(stack)!=1:raise ValueError('invalid expression')\n    return stack[0]\ndef evaluate(node):\n    if node.left is None:return node.value\n    op={'+':operator.add,'-':operator.sub,'*':operator.mul,'/':operator.truediv}[node.value]\n    return op(evaluate(node.left),evaluate(node.right))\nroot=parse_postfix('3 4 5 * +'.split())\nassert evaluate(root)==23\nprint(evaluate(root))\n\ndef parse_infix(tokens):\n    position=0\n    def parse():\n        nonlocal position\n        if position>=len(tokens):raise ValueError('missing expression')\n        token=tokens[position];position+=1\n        if token!='(':return Node(float(token))\n        left=parse()\n        if position>=len(tokens) or tokens[position] not in '+-*/':raise ValueError('missing operator')\n        op=tokens[position];position+=1;right=parse()\n        if position>=len(tokens) or tokens[position]!=')':raise ValueError('missing closing parenthesis')\n        position+=1;return Node(op,left,right)\n    root=parse()\n    if position!=len(tokens):raise ValueError('extra tokens')\n    return root\ndef expression(node):\n    if node.left is None:return str(node.value)\n    return '('+expression(node.left)+node.value+expression(node.right)+')'\nroot=parse_infix('( 3 + ( 4 * 5 ) )'.split())\nassert evaluate(root)==23\nprint(expression(root))\n~~~\n\n## 练习\n1. 为((8-2)*(3+1))画解析树，分别写出前序、中序、后序序列。\n2. 在构树函数中加入非法操作符和操作数不足的检查。\n\n[本章习题](/read/?slug=miller-book-06-07)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-06-02.zip",
+        "label": "解析树与递归求值 · Python 示例",
+        "size_bytes": 1330,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第二部分 · 数据组织与基本算法",
+      "number": 31,
+      "chapter": "6",
+      "edition": "2026-10",
+      "minutes": 11,
+      "section": "2",
+      "chapter_title": "树",
+      "source_sections": [
+        "6.5.1"
+      ]
+    }
+  }
+}

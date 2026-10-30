@@ -1,0 +1,39 @@
+{
+  "slug": "miller-book-05-03",
+  "title": "冒泡、选择与插入排序",
+  "summary": "逐轮比较冒泡、选择和插入排序，用带标签重复键解释稳定性与逆序对成本。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8025,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "排序既要得到升序结果，也要保留全部原记录。为了理解算法，可在每轮结束后标出已经确定的位置，观察这部分怎样扩大。\n\n## 冒泡：确定右端最大值\n\n从左到右比较相邻元素，左边较大就交换。对 `[5,2,4,1]`，第一轮依次得到 `[2,5,4,1]`、`[2,4,5,1]`、`[2,4,1,5]`。最大值 5 到达末尾，下一轮无需再比较它。\n\n待处理范围逐轮缩小，最坏比较 $(n-1)+\\cdots+1=n(n-1)/2$ 次。若一轮没有交换，说明所有相邻对已按序，可以提前停止；已排序输入因此只需线性工作。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/sorting.svg\" alt=\"冒泡排序从原始数组经过一轮交换到最终有序状态。\" loading=\"lazy\"></figure>\n\n## 选择：确定左端最小值\n\n在未排序部分找最小值，与该部分首项交换。相同输入第一轮把 1 与 5 交换，得 `[1,2,4,5]`。虽然此时已经有序，普通选择排序仍要扫描剩余区间，比较总数不变，为 n(n−1)/2；交换最多 n−1 次。\n\n完成 i 轮后，前 i 个位置是全体最小的 i 个元素，且已升序。这一不变式说明最后整个数组有序。\n\n## 插入：扩展有序前缀\n\n第一个元素单独构成有序前缀。将下一个元素暂存为 key，把前缀中比它大的元素逐个右移，空出位置后放入 key。\n\n| 插入的值 | 一轮结束后的数组 |\n| --- | --- |\n| 2 | 2，5，4，1 |\n| 4 | 2，4，5，1 |\n| 1 | 1，2，4，5 |\n\n移动前先保存 key，否则右移可能覆盖原值。逆序输入产生最多移动，Θ(n²)；已排序输入每轮只需一次比较，Θ(n)。每次右移消除一个逆序对，因此移动总数等于初始逆序对数，这解释了它在近乎有序数据上的表现。\n\n## 稳定性观察的是同键记录\n\n记录 `(2,A),(2,B),(1,C)` 只按数值键排序，稳定结果应保留 A 在 B 前。选择排序首轮交换后得到 `(1,C),(2,B),(2,A)`，相同键顺序被反转。\n\n冒泡仅在严格大于时交换、插入仅移动严格大于 key 的元素，都能保持稳定。若把比较改成大于等于，相同元素也会越过，稳定性便可能丢失。\n\n## 成本比较\n\n三者在原数组上操作时只需 O(1) 额外空间。示例函数为保留调用者输入先创建副本，这项副本占 O(n)，应与排序核心的空间区分。小规模或近乎有序数据常适合插入排序；若写入代价高，选择排序较少交换的特点也可能有用。\n\n> **鲨鱼说** 仅检查数值序列相同，无法判断稳定性。给重复键附上 A、B 等身份标签，再只按键比较，才能观察原相对顺序是否保留。\n\n## Python 实现\n\n~~~python\ndef insertion_sort(values):\n    a=list(values)\n    for i in range(1,len(a)):\n        key=a[i];j=i-1\n        while j>=0 and a[j]>key:\n            a[j+1]=a[j];j-=1\n        a[j+1]=key\n    return a\nfor a in [[],[1],[5,2,4,1],[2,2,1],list(range(8))]:\n    assert insertion_sort(a)==sorted(a)\nprint(insertion_sort([5,2,4,1]))\n\ndef bubble_sort(values):\n    a=list(values)\n    for end in range(len(a)-1,0,-1):\n        changed=False\n        for i in range(end):\n            if a[i]>a[i+1]:a[i],a[i+1]=a[i+1],a[i];changed=True\n        if not changed:break\n    return a\ndef selection_sort(values):\n    a=list(values)\n    for i in range(len(a)-1):\n        smallest=min(range(i,len(a)),key=a.__getitem__)\n        a[i],a[smallest]=a[smallest],a[i]\n    return a\nfrom itertools import product\nfor length in range(6):\n    for values in product(range(3),repeat=length):\n        assert bubble_sort(values)==selection_sort(values)==insertion_sort(values)==sorted(values)\nprint('three basic sorts checked on all 364 short inputs')\n~~~\n\n## 练习\n1. 逐轮列出三种算法处理[4,1,3,2]的状态。\n2. 用带标签的重复键检查稳定性，说明为什么只看最终数值序列无法发现顺序变化。\n\n[本章习题](/read/?slug=miller-book-05-07)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-05-03.zip",
+        "label": "冒泡、选择与插入排序 · Python 示例",
+        "size_bytes": 1203,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第二部分 · 数据组织与基本算法",
+      "number": 25,
+      "chapter": "5",
+      "edition": "2026-10",
+      "minutes": 12,
+      "section": "3",
+      "chapter_title": "搜索和排序",
+      "source_sections": [
+        "5.3.1",
+        "5.3.2",
+        "5.3.3"
+      ]
+    }
+  }
+}

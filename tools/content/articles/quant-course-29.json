@@ -1,0 +1,54 @@
+{
+  "slug": "quant-course-29",
+  "title": "29 · KNN分类与回归",
+  "summary": "用邻居距离手算分类投票和回归平均，理解尺度、邻居数量与时间顺序如何影响预测。",
+  "kind": "lesson",
+  "track": "因子与预测",
+  "series": "量化研究系统课程",
+  "sort_order": 29,
+  "cover_url": "/assets/figures/curriculum/course-29.svg",
+  "section_ids": [
+    "606eb414-4b3f-55ba-bc41-f936b93c9b47"
+  ],
+  "body": "近邻方法根据与新样本接近的历史样本进行预测。分类使用邻居类别，回归使用邻居目标值；距离定义、特征尺度和邻居数量共同影响结果。\n\n## 查询点2.8应该参考哪些历史记录\n\n训练输入为0、1、3、4，对应类别0、0、1、1。新输入2.8与它们的距离分别为2.8、1.8、0.2、1.2。若选三个最近邻，邻居依次为3、4、1，类别为1、1、0，按多数票预测类别1。\n\nKNN是K最近邻方法：先按特征距离寻找相似记录，再汇总这些记录的目标。分类预测离散类别，例如未来收益正负；回归预测数值，例如未来收益的大小。两者都属于有监督学习，因为训练时已经知道历史目标。\n\n![查询点与三个最近邻的距离](/assets/figures/curriculum/course-29.svg)\n\n数轴上的位置就是输入值，颜色表示类别。连线显示2.8选中的三个邻居；距离0.2的记录很接近，距离1.8的第三个邻居则明显更远。K决定了“局部”究竟覆盖多大范围。\n\n## 分类票数与回归均值\n\n三个邻居中类别1有两票，模型给出的类别1比例为$2/3$。它是局部样本频率，不自动等于经过校准的真实上涨概率。K很小时，比例只能取少数离散值；邻居全部同类也可能只是样本覆盖不足。\n\n若相同四个输入对应数值目标0、0.1、0.3、0.4，2.8的三个邻居目标为0.3、0.4、0.1，回归预测为$0.8/3=0.2667$。K改成1时预测0.3，改成4时预测0.2。回归平均越广，越容易把不同局部状态混在一起。\n\n```python\nimport numpy as np\nfrom sklearn.neighbors import KNeighborsClassifier, KNeighborsRegressor\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.pipeline import make_pipeline\n\nX = np.array([[0.0], [1.0], [3.0], [4.0]])\nclasses = np.array([0, 0, 1, 1])\nvalues = np.array([0.0, 0.1, 0.3, 0.4])\nquery = np.array([[2.8]])\nclassifier = make_pipeline(StandardScaler(), KNeighborsClassifier(n_neighbors=3))\nregressor = make_pipeline(StandardScaler(), KNeighborsRegressor(n_neighbors=3))\nclassifier.fit(X, classes)\nregressor.fit(X, values)\nprint(\"class:\", classifier.predict(query))\nprint(\"probability:\", classifier.predict_proba(query))\nprint(\"regression:\", regressor.predict(query))\nassert np.isclose(classifier.predict_proba(query)[0, 1], 2/3)\nassert np.isclose(regressor.predict(query)[0], 0.8/3)\n```\n\n代码输出类别1、类别比例$[1/3,2/3]$、回归值0.2667。缩放器仅在训练数据拟合；一维线性缩放不会改变邻居先后，多维中却可能显著改变距离。\n\n## 距离必须有业务含义\n\n欧氏距离为$d(\\mathbf x,\\mathbf z)=\\sqrt{\\sum_j(x_j-z_j)^2}$。若一个特征是日收益率0.01，另一个是成交量100万，未经缩放的距离会几乎只看成交量。标准化将各列置于相近尺度，但不能决定它们是否与预测目标有关。\n\n例如收益率差0.01、成交量差10万，原始距离主要反映后者；将成交量换成“相对过去20日均量”后，经济含义也变为交易活跃程度。特征定义常比简单改变算法更有影响。\n\n行业不能随意编码成1、2、3再认为第三类距第一类两倍远。类别编码、缺失处理和距离选择，都要反映想比较的相似性。大量无用特征会使样本在高维空间变稀疏，远近差异变得不明显，这就是维数灾难的一种表现。\n\n## K小与K大的误差来自不同方向\n\nK小会跟随邻域细节，也更容易追随偶然噪声；K大会平滑估计，却可能把牛市和熊市等不同状态混合。训练样本数必须至少为K；选择K应只使用验证段，并检查邻近取值是否也表现合理。\n\n也可以按距离倒数加权。对2.8的三个邻居，距离为0.2、1.2、1.8，相应权重与5、0.8333、0.5556成比例，最近点影响更大。距离恰为0时要单独处理，不能直接除零。同距离恰好位于第K边界时，还需固定平局规则。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>KNN总会找出最近的样本，即使所有样本都很远。输出预测时同时检查邻居距离，能帮助发现新输入已经超出训练覆盖范围。</p></aside>\n\n## 预测明天时，哪些记录才算历史\n\n若用今日开收盘差、最高最低价差预测明日收益，这些特征至少要等今日交易结束才能确定。历史训练记录的标签也必须已经结束：在今天收盘预测时，不能把“未来五日收益尚未结束”的昨天记录放入训练。\n\n随机拆分时间序列会把后来的市场状态用于较早时点预测，应按时间保留训练、验证与测试。每次滚动训练重新拟合缩放器，不把未来分布用于过去。相邻多日标签重叠时，需要设置足够的隔离或清除跨界标签。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>标签重叠，即不同样本的预测目标使用了部分相同的未来时间区间。</p></aside>\n\n## 预测准确率与交易结果\n\n若上涨样本占60%，始终预测上涨已有60%准确率，模型达到58%并不优于这个基准。还应查看混淆矩阵、各类召回率、概率校准，回归则比较均方或绝对误差与简单预测。\n\n准确率较高也可能亏损：九次判断正确各赚0.1%，一次错误亏2%，毛结果仍为负。将预测转成仓位还要定义持有区间、买卖方向、风险上限和成本。算法只提供局部预测，交易规则决定如何使用它。\n\n## 练习\n\n输入0.2、K=1时分类和回归结果是什么？查询点100也能输出类别，这个结果为何需要额外检查？\n\n<details><summary>查看解答</summary>\n\n0.2最近的训练输入是0，因此类别0、回归值0。查询100距离所有训练记录都很远，得到的“最近”只是相对最近，训练数据并未覆盖该区域。应检查分布变化，不能把投票比例当作充分置信度。\n\n</details>\n\n---\n\n[课程目录](/courses/)\n\n## 配套代码\n\n[下载本节代码（ZIP）](/assets/downloads/courses/quant-course-29.zip)\n\n压缩包包含脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n",
+  "metadata": {
+    "curriculum": {
+      "cover": "/assets/figures/curriculum/course-29.svg",
+      "level": "进阶",
+      "stage": 5,
+      "number": 29,
+      "edition": "2026-10",
+      "minutes": 40,
+      "source_refs": [
+        {
+          "book": "深入浅出Python量化交易实战",
+          "chapters": "3.1–3.3",
+          "pdf_pages": [
+            63,
+            65,
+            66,
+            67,
+            73,
+            79,
+            81,
+            83,
+            87
+          ]
+        },
+        {
+          "book": "Quant Roadmap — Ultimate Edition",
+          "chapters": "7",
+          "pdf_pages": [
+            23,
+            24
+          ]
+        }
+      ],
+      "stage_title": "因子与预测"
+    },
+    "code_download": {
+      "url": "/assets/downloads/courses/quant-course-29.zip",
+      "examples": 1
+    }
+  }
+}

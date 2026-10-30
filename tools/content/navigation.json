@@ -9,8 +9,7 @@
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 0,
-    "revision": 2,
-    "read_access": "inherit"
+    "revision": 2
   },
   {
     "id": "e3c5a0d9-13af-5cfa-b8ea-a9301bdcfd6c",
@@ -22,8 +21,7 @@
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 1,
-    "revision": 2,
-    "read_access": "inherit"
+    "revision": 2
   },
   {
     "id": "afe3747e-9ef6-5c65-aed0-acd6a7560aac",
@@ -35,8 +33,7 @@
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 2,
-    "revision": 2,
-    "read_access": "inherit"
+    "revision": 2
   },
   {
     "id": "0c1a2b30-f667-5143-a559-35e10c155085",
@@ -48,8 +45,7 @@
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 3,
-    "revision": 2,
-    "read_access": "inherit"
+    "revision": 2
   },
   {
     "id": "f6b5feeb-2b5e-552e-9f24-32acf9c49495",
@@ -61,8 +57,7 @@
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 4,
-    "revision": 2,
-    "read_access": "inherit"
+    "revision": 2
   },
   {
     "id": "773a34b4-8d48-4fca-9258-927b946d2914",
@@ -74,8 +69,7 @@
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 10,
-    "revision": 2,
-    "read_access": "inherit"
+    "revision": 2
   },
   {
     "id": "c2c20043-d270-4aed-babd-39d07e85f26a",
@@ -87,8 +81,7 @@
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 20,
-    "revision": 2,
-    "read_access": "inherit"
+    "revision": 2
   },
   {
     "id": "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a",
@@ -100,8 +93,7 @@
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 24,
-    "revision": 2,
-    "read_access": "inherit"
+    "revision": 2
   },
   {
     "id": "17859c88-b779-5654-b120-7a4cc7b39714",
@@ -113,8 +105,7 @@
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 25,
-    "revision": 2,
-    "read_access": "inherit"
+    "revision": 2
   },
   {
     "id": "0d99264a-7913-52fc-8f8e-a4c784c92834",
@@ -126,8 +117,7 @@
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 26,
-    "revision": 3,
-    "read_access": "inherit"
+    "revision": 3
   },
   {
     "id": "a99b73bc-8dcb-4d7d-84f2-a0f30d259ede",
@@ -139,8 +129,7 @@
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 30,
-    "revision": 2,
-    "read_access": "inherit"
+    "revision": 2
   },
   {
     "id": "6c937a0e-545c-56f5-a699-90c4325073d4",
@@ -152,8 +141,7 @@
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 31,
-    "revision": 6,
-    "read_access": "inherit"
+    "revision": 6
   },
   {
     "id": "19808db5-aef6-5fc5-b233-d9732a29916b",
@@ -165,8 +153,7 @@
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 32,
-    "revision": 2,
-    "read_access": "inherit"
+    "revision": 2
   },
   {
     "id": "44e2f2e9-a852-5af5-8a72-788df5e2df9d",
@@ -178,8 +165,7 @@
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 33,
-    "revision": 3,
-    "read_access": "inherit"
+    "revision": 3
   },
   {
     "id": "3ba9f7c0-467b-529b-9ae6-4e5dd9022046",
@@ -191,8 +177,7 @@
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 34,
-    "revision": 2,
-    "read_access": "inherit"
+    "revision": 2
   },
   {
     "id": "e4929cee-404a-50b6-a5b7-e76678ca05dd",
@@ -204,8 +189,7 @@
     "nav_group": "笔试与面试",
     "visible": true,
     "sort_order": 35,
-    "revision": 1,
-    "read_access": "inherit"
+    "revision": 1
   },
   {
     "id": "061c5d65-3752-51b1-815a-0a831b5df727",
@@ -217,8 +201,7 @@
     "nav_group": "笔试与面试",
     "visible": true,
     "sort_order": 36,
-    "revision": 2,
-    "read_access": "inherit"
+    "revision": 2
   },
   {
     "id": "97fdde0a-c962-59ac-bdc6-f393c05faf5c",
@@ -230,8 +213,7 @@
     "nav_group": "笔试与面试",
     "visible": true,
     "sort_order": 36,
-    "revision": 3,
-    "read_access": "inherit"
+    "revision": 3
   },
   {
     "id": "6609a5e7-aa1a-5c66-9e8a-4566ec0c74ff",
@@ -243,8 +225,7 @@
     "nav_group": "笔试与面试",
     "visible": true,
     "sort_order": 37,
-    "revision": 1,
-    "read_access": "inherit"
+    "revision": 1
   },
   {
     "id": "e2a8bdb2-93e4-5150-ab6d-83fa6427edd5",
@@ -256,8 +237,7 @@
     "nav_group": "笔试与面试",
     "visible": true,
     "sort_order": 38,
-    "revision": 2,
-    "read_access": "public"
+    "revision": 2
   },
   {
     "id": "c41526dd-742a-469f-9389-9bfddcee30dc",
@@ -269,8 +249,7 @@
     "nav_group": "实验与工具",
     "visible": true,
     "sort_order": 40,
-    "revision": 2,
-    "read_access": "inherit"
+    "revision": 2
   },
   {
     "id": "13c09645-17ba-4818-ac04-473fbd820fb0",
@@ -282,8 +261,7 @@
     "nav_group": "实验与工具",
     "visible": true,
     "sort_order": 50,
-    "revision": 2,
-    "read_access": "inherit"
+    "revision": 2
   },
   {
     "id": "39a8c8e1-a0a8-4dcd-aeae-ea460cf1031f",
@@ -295,8 +273,7 @@
     "nav_group": "实验与工具",
     "visible": true,
     "sort_order": 60,
-    "revision": 2,
-    "read_access": "inherit"
+    "revision": 2
   },
   {
     "id": "5813c8a9-fb85-4ce0-b907-41b640afd107",
@@ -308,8 +285,7 @@
     "nav_group": "实验与工具",
     "visible": true,
     "sort_order": 70,
-    "revision": 2,
-    "read_access": "inherit"
+    "revision": 2
   },
   {
     "id": "2f203658-6876-400a-afaa-ec29caee921f",
@@ -321,8 +297,7 @@
     "nav_group": "实验与工具",
     "visible": true,
     "sort_order": 80,
-    "revision": 2,
-    "read_access": "inherit"
+    "revision": 2
   },
   {
     "id": "4560f087-a08d-4b02-8eb8-545d6594d86c",
@@ -334,8 +309,7 @@
     "nav_group": "实验与工具",
     "visible": true,
     "sort_order": 90,
-    "revision": 2,
-    "read_access": "inherit"
+    "revision": 2
   },
   {
     "id": "6cb0390d-4b0e-459e-a155-9dfb328810ec",
@@ -347,8 +321,7 @@
     "nav_group": "资源与社区",
     "visible": true,
     "sort_order": 100,
-    "revision": 1,
-    "read_access": "inherit"
+    "revision": 1
   },
   {
     "id": "552777e1-0105-4d2d-b417-a210de9b0297",
@@ -360,21 +333,7 @@
     "nav_group": "资源与社区",
     "visible": true,
     "sort_order": 110,
-    "revision": 1,
-    "read_access": "inherit"
-  },
-  {
-    "id": "595214f5-cc0a-4dcc-8a05-6a22406b0664",
-    "key": "community",
-    "name": "讨论中心",
-    "parent_id": null,
-    "href": "/community/",
-    "description": "",
-    "nav_group": "资源与社区",
-    "visible": true,
-    "sort_order": 120,
-    "revision": 1,
-    "read_access": "inherit"
+    "revision": 1
   },
   {
     "id": "eef736ef-be09-4f13-99d4-433464d67f07",
@@ -386,8 +345,7 @@
     "nav_group": "资源与社区",
     "visible": true,
     "sort_order": 130,
-    "revision": 1,
-    "read_access": "inherit"
+    "revision": 1
   },
   {
     "id": "bba8fbde-b0e3-444d-8adc-a61271523e45",
@@ -399,8 +357,7 @@
     "nav_group": "资源与社区",
     "visible": true,
     "sort_order": 140,
-    "revision": 1,
-    "read_access": "inherit"
+    "revision": 1
   },
   {
     "id": "7fbed1d6-c6c5-4c1b-8735-ade64f15be52",
@@ -412,8 +369,7 @@
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 151,
-    "revision": 3,
-    "read_access": "inherit"
+    "revision": 3
   },
   {
     "id": "0c97f1c3-dfca-48e2-9cfa-ae10fcb24de9",
@@ -425,8 +381,7 @@
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 152,
-    "revision": 3,
-    "read_access": "inherit"
+    "revision": 3
   },
   {
     "id": "bae66396-d1e6-4607-ac93-86e0f465d805",
@@ -438,8 +393,7 @@
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 153,
-    "revision": 3,
-    "read_access": "inherit"
+    "revision": 3
   },
   {
     "id": "5c3ef451-63c2-4e13-86cd-7320240126e5",
@@ -451,8 +405,7 @@
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 154,
-    "revision": 3,
-    "read_access": "inherit"
+    "revision": 3
   },
   {
     "id": "606eb414-4b3f-55ba-bc41-f936b93c9b47",
@@ -464,8 +417,7 @@
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 155,
-    "revision": 2,
-    "read_access": "inherit"
+    "revision": 2
   },
   {
     "id": "5c14064d-8915-5f7c-bcc6-f9bd10d4c40e",
@@ -477,8 +429,7 @@
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 156,
-    "revision": 2,
-    "read_access": "inherit"
+    "revision": 2
   },
   {
     "id": "4cb276d3-8233-5664-8700-2a8bbd7b23cc",
@@ -490,8 +441,7 @@
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 157,
-    "revision": 2,
-    "read_access": "inherit"
+    "revision": 2
   },
   {
     "id": "dcd8ff4d-86f5-5bb7-9657-9505a8ce9fce",
@@ -503,8 +453,7 @@
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 158,
-    "revision": 2,
-    "read_access": "inherit"
+    "revision": 2
   },
   {
     "id": "e2d6ce20-4289-5775-b6f9-55af14c8bfdf",
@@ -516,8 +465,7 @@
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 159,
-    "revision": 2,
-    "read_access": "inherit"
+    "revision": 2
   },
   {
     "id": "5ef91958-52de-5cd7-8782-1265893a5d9a",
@@ -529,8 +477,7 @@
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 160,
-    "revision": 2,
-    "read_access": "inherit"
+    "revision": 2
   },
   {
     "id": "fbc0522d-3663-5bbb-be2d-6b8691cc16c7",
@@ -542,7 +489,6 @@
     "nav_group": "学习与研究",
     "visible": true,
     "sort_order": 161,
-    "revision": 2,
-    "read_access": "inherit"
+    "revision": 2
   }
 ]

@@ -1,0 +1,34 @@
+{
+  "slug": "calin-book-04-02",
+  "title": "停止鞅：条件、退出概率与平均等待",
+  "summary": "理解有界停止和一致可积的作用，用停止布朗运动计算双边退出问题。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "随机微积分及其应用",
+  "sort_order": 5023,
+  "cover_url": "",
+  "section_ids": [
+    "17859c88-b779-5654-b120-7a4cc7b39714"
+  ],
+  "body": "## 选一个停止规则会改变平均值吗\n\n若 $M_t$ 是右连续鞅，$\\tau$ 是有界停止时间，则停止定理给出 $\\mathbb E[M_\\tau]=\\mathbb E[M_0]$。更一般地，适当有界的 $\\sigma\\le\\tau$ 满足 $\\mathbb E[M_\\tau\\mid\\mathcal F_\\sigma]=M_\\sigma$。\n\n离散时间下，可以把停止值写成初值加上若干项 $\\mathbf1_{\\{\\tau\\ge k\\}}\\Delta M_k$。是否进行第 $k$ 步由此前信息决定，而该步条件均值为零，因此每一项平均为零。有界性保证只需处理有限项；连续时间再用网格近似和可积性控制极限。\n\n### 有界离散停止的逐项证明\n\n若整数停止时间 $\\tau\\le n$，则\n\n$$M_\\tau=M_0+\\sum_{k=1}^n\\mathbf1_{\\{\\tau\\ge k\\}}(M_k-M_{k-1}).$$\n\n事件 $\\{\\tau\\ge k\\}$ 等价于“截至第 $k-1$ 步还没有停止”，所以属于 $\\mathcal F_{k-1}$。逐项取条件期望，\n\n$$\\mathbb E[\\mathbf1_{\\{\\tau\\ge k\\}}\\Delta M_k]\n=\\mathbb E[\\mathbf1_{\\{\\tau\\ge k\\}}\\mathbb E[\\Delta M_k\\mid\\mathcal F_{k-1}]]=0.$$\n\n有限求和得到均值不变。关键不是停止时间与过程独立，而是是否继续下一步由该步发生前的信息决定。对固定 $t$ 的停止过程 $M_{t\\wedge\\tau}$，同样的条件论证使它保留鞅结构。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>条件期望，即给定已有信息后，对可能结果按条件概率求平均。</p></aside>\n\n## 无界停止需要额外的尾部控制\n\n对无界 $\\tau$，通常先用 $\\tau\\wedge n$，得到 $\\mathbb E[M_{\\tau\\wedge n}]=\\mathbb E[M_0]$，再考虑 $n\\to\\infty$。即使停止值逐条路径收敛，也不能自动把极限放进期望。\n\n常见充分条件是停止变量族 $\\{M_{\\tau\\wedge n}\\}$ 一致可积；若它们被同一个可积变量控制，也足够。某些离散过程还可以用有限平均停止时间和有界增量等条件。使用停止定理时，应说明实际采用哪一个条件。\n\n一致可积的含义是：对变量族 $\\{Y_n\\}$，有\n\n$$\\lim_{K\\to\\infty}\\sup_n\\mathbb E[|Y_n|\\mathbf1_{\\{|Y_n|>K\\}}]=0.$$\n\n它要求用同一个阈值就能使所有变量的尾部均值很小。若 $|Y_n|\\le Z$ 且 $\\mathbb E[Z]<\\infty$，则尾部可由 $Z$ 控制；若二阶矩统一有界 $\\sup_n\\mathbb E[Y_n^2]\\le C$，则尾部均值不超过 $C/K$。这两种充分条件都可以实际检查。\n\n几乎必然收敛加一致可积允许把极限与一阶期望交换。停止定理从 $\\tau\\wedge n$ 走向 $\\tau$ 时，需要的正是这个步骤。\n\n## 单边碰到正水平的反例\n\n令 $\\tau_a=\\inf\\{t:W_t=a\\}$，其中 $a>0$。布朗运动几乎必然会碰到 $a$，故 $W_{\\tau_a}=a$。若仅凭“几乎必然有限”便套用停止定理，就会得到 $a=\\mathbb E[W_{\\tau_a}]=0$，出现矛盾。\n\n问题在于停止过程没有满足所需的尾部控制。对每个有限 $n$，$\\mathbb E[W_{\\tau_a\\wedge n}]=0$；尚未碰到上界的少数路径可能处于很低的位置，抵消已经停止在 $a$ 的路径。随着 $n$ 增大，这种负尾部贡献不按期望消失。事实上 $\\mathbb E[\\tau_a]=\\infty$。\n\n单边停止的负尾部可以定量写出。由于 $W_{\\tau_a\\wedge n}=a\\mathbf1_{\\{\\tau_a\\le n\\}}+W_n\\mathbf1_{\\{\\tau_a>n\\}}$，而它的均值为零，故\n\n$$\\mathbb E[W_n\\mathbf1_{\\{\\tau_a>n\\}}]=-a\\mathbb P(\\tau_a\\le n)\\longrightarrow-a.$$\n\n尚未命中的概率趋于零，但这些路径承担的负期望并没有趋于零。它们消失在逐条路径的极限中，却保留了不可忽略的平均贡献。这正是不能交换极限与期望的原因。\n\n## 双边退出使停止位置有界\n\n设 $\\tau=\\inf\\{t:W_t\\notin(-b,a)\\}$，$a,b>0$。连续性保证退出位置只能是 $a$ 或 $-b$，停止路径始终位于 $[-b,a]$。因此可以对 $W_{t\\wedge\\tau}$ 使用有界控制，令时间趋于无穷。\n\n记从上边退出的概率为 $p$，则\n\n$$0=\\mathbb E[W_\\tau]=ap-b(1-p),\\qquad p=\\frac b{a+b}.$$\n\n起点离下边越远，越容易先碰到上边。若从一般位置 $x\\in(-b,a)$ 出发，上边退出概率变为 $(x+b)/(a+b)$。\n\n### 从两条等式算出退出概率和时间\n\n设 $X_t=1+W_t$，到达 0 或 3 时停止，记此刻为 $\\tau$。$p=P(X_\\tau=3)$ 是从上边界退出的概率。退出前状态限制在 $[0,3]$，对截断停止时刻应用鞅关系并取极限，得到\n\n$$E[X_\\tau]=X_0,\\qquad 3p+0(1-p)=1,\\qquad p=\\frac13.$$\n\n再利用 $X_t^2-t$ 是鞅：\n\n$$E[X_\\tau^2]-E[\\tau]=X_0^2,\\qquad\n9\\times\\frac13-E[\\tau]=1,\\qquad E[\\tau]=2.$$\n\n两个结论使用不同的观测函数：$x$ 给出边界概率，$x^2$ 给出时间。若把噪声改成 $2dW_t$，平方补偿变成 $4t$，概率仍为 $1/3$，平均时间变为 $2/4=0.5$。图中的曲线给出不同起点下的两个结果，纵轴单位分别是概率和时间。\n\n![把边界条件与微分方程一起解开](/assets/figures/theory/walkthrough/exit-boundaries.svg)\n\n## 平均退出时间来自平方鞅\n\n$W_t^2-t$ 是鞅。在有界时刻 $t\\wedge\\tau$ 使用停止定理：\n\n$$\\mathbb E[t\\wedge\\tau]=\\mathbb E[W_{t\\wedge\\tau}^2]\\le\\max(a^2,b^2).$$\n\n左边单调收敛，说明 $\\mathbb E[\\tau]$ 有限。右边由有界控制收敛到 $\\mathbb E[W_\\tau^2]$，所以\n\n$$\\mathbb E[\\tau]=a^2\\frac b{a+b}+b^2\\frac a{a+b}=ab.$$\n\n这里先证明期望有限，再取极限，避免循环论证。若过程是 $\\sigma W_t$，同样推导得到平均退出时间 $ab/\\sigma^2$。\n\n> **鲨鱼说** “停止时间几乎必然有限”和“平均停止时间有限”不同；“平均停止时间有限”和“任意鞅都可停止”也不同。检查的是当前过程与当前停止规则的组合。\n\n上述双边问题可以按不循环的顺序求解。首先，对任意有限 $t$，停止值有界，所以平方鞅给出 $\\mathbb E[t\\wedge\\tau]\\le\\max(a^2,b^2)$。单调收敛使 $\\mathbb E[\\tau]$ 有限，因而 $\\tau<\\infty$ 几乎必然。此时才可以确定退出位置只取 $a$ 或 $-b$，并对有界停止值取极限求概率和时间矩。\n\n若从 $x\\in(-b,a)$ 出发，令 $X_t=x+\\sigma W_t$，同样得到上边退出概率 $(x+b)/(a+b)$、平均退出时间 $(a-x)(x+b)/\\sigma^2$。它在两边界为零，在区间内部为正；例如 $a=3,b=1,x=1,\\sigma=2$，上边退出概率为 $1/2$，平均时间为 1。\n\n## 练习：不对称边界\n\n过程 $X_t=2W_t$ 从零出发，达到 3 或 -1 时停止。求先到 3 的概率、平均停止时间，并说明能否把边界连续性用于跳跃过程。\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n由零均值停止关系，$3p-(1-p)=0$，所以 $p=1/4$。平方鞅为 $X_t^2-4t$，因此 $\\mathbb E[\\tau]=ab/\\sigma^2=3/4$。\n\n连续路径到边界时恰好等于边界；跳跃过程可能一步跨过边界，称为超调。此时不能直接把退出值写成 3 或 -1，必须保留实际退出位置或另行计算超调分布。\n\n</details>\n\n[补充算例与绘图代码](/assets/downloads/theory-walkthrough/calin-book-04-02.zip)\n",
+  "metadata": {
+    "theory_book": {
+      "book": "stochastic-calculus",
+      "part": "第二部分 · 路径性质与随机微积分",
+      "number": 23,
+      "chapter": "4",
+      "edition": "2026-10",
+      "minutes": 32,
+      "section": "2",
+      "source_pages": [
+        92,
+        93,
+        94
+      ],
+      "chapter_title": "停止时间与路径性质",
+      "source_sections": [
+        "4.2"
+      ]
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "slug": "material-050",
+  "title": "行业暴露估计与潜变量识别",
+  "summary": "行业收益已知的暴露、行业收益也未知",
+  "kind": "reference",
+  "track": "凯读2",
+  "series": "量化笔面试资料",
+  "sort_order": 2052,
+  "cover_url": "",
+  "section_ids": [
+    "6609a5e7-aa1a-5c66-9e8a-4566ec0c74ff"
+  ],
+  "body": "## 1. 行业收益已知的暴露\n\n**题目**\n\n设 $T$ 日收益矩阵满足 $Y=FB^T+E$：$F\\in\\mathbb R^{T\\times40}$ 为已知行业收益，$Y\\in\\mathbb R^{T\\times N}$ 为 $N>2000$ 只股票收益。每只股票所属的 1 至 3 个行业已知，其余暴露为零，所属行业的暴露和为一。假设误差条件均值为零且与行业收益外生，相关行业收益差满列秩。模拟数据并估计 $B$。\n\n**考点**：约束回归；参数消元；外生性与秩。\n\n<details class=\"interview-answer\">\n<summary>查看分析与解答</summary>\n\n### 必要知识\n\nY每列是一只股票的时间序列，F每列是一个行业的收益序列，B每行是该股票的行业暴露。已知归属把40个潜在系数缩到1至3个，系数和为一又减少一个自由参数。\n\n### 分析思路\n\n对每股选择一个所属行业作基准，用和约束消掉该行业系数，把原问题改写为无等式约束的小回归，再恢复基准系数。\n\n### 解答步骤\n\n两行业时 y=βf₁+(1−β)f₂+e，移项得到y−f₂=β(f₁−f₂)+e。其OLS解为Σ(f₁−f₂)(y−f₂)/Σ(f₁−f₂)²。若两行业收益完全相同，分母零，观测无法辨别两种暴露，这就是满秩条件的具体含义。\n\n这里 $B\\in\\mathbb R^{N\\times40}$ 的第 i 行是第 i 只股票的行业暴露，$E\\in\\mathbb R^{T\\times N}$ 是不能由行业收益解释的误差；t 表示交易日，$f_{t,j}$ 为该日第 j 个相关行业的收益。对某只股票，只取所属的 $k$ 个行业列。若 $k=1$，和为一的约束已经确定其唯一暴露为 1，无需估计。若 $k>1$，用最后一项消去约束：$\\beta_k=1-\\sum_{j<k}\\beta_j$。代回收益方程：\n$$y_t-f_{t,k}=\\sum_{j<k}\\beta_j(f_{t,j}-f_{t,k})+e_t.$$\n以 $y-f_k$ 为响应、各行业相对基准的收益差为解释变量做最小二乘，再补回最后一项。若要求暴露非负，还需加入 $\\beta_j\\ge0$ 与 $\\sum_{j<k}\\beta_j\\le1$ 的约束，普通最小二乘本身不会保证它们。\n\n例如股票属于两个行业，收益是 $0.3f_1+0.7f_2+e$，则回归 $y-f_2$ 对 $f_1-f_2$ 的斜率应接近 0.3。独立、零均值的误差保证总体回归对准该参数，样本长度与噪声水平影响估计的抽样误差。\n\n下面模拟 2001 只股票，使用每股两行业的简单布局。检查每行暴露之和为一、估计误差较小；最后的列交换构造用于下一问说明未知行业收益的标签识别问题。\n\n~~~python\nimport numpy as np\nrng = np.random.default_rng(17)\nT,N,K = 300,2001,40\nF = rng.normal(size=(T,K))\nB = np.zeros((N,K))\nsectors = []\nfor i in range(N):\n    pair = [2*(i%20),2*(i%20)+1]\n    w = rng.uniform(.1,.9)\n    B[i,pair] = [w,1-w]\n    sectors.append(pair)\nY = F@B.T+rng.normal(scale=.01,size=(T,N))\nBhat = np.zeros_like(B)\nfor i,idx in enumerate(sectors):\n    reference = F[:,idx[-1]]\n    design = F[:,idx[:-1]]-reference[:,None]\n    beta = np.linalg.lstsq(design,Y[:,i]-reference,rcond=None)[0]\n    Bhat[i,idx[:-1]] = beta\n    Bhat[i,idx[-1]] = 1-beta.sum()\nassert np.max(np.abs(Bhat.sum(axis=1)-1))<1e-12\nassert np.mean(np.abs(Bhat-B))<.002\n# 行业1与2互换：归属集合、暴露和以及观测拟合不变。\nperm = np.arange(K)\nperm[0],perm[1] = 1,0\nF2,B2 = F[:,perm],B[:,perm]\nassert np.allclose(F@B.T,F2@B2.T)\nassert not np.allclose(B,B2)\n~~~\n\n模拟时先生成行业F与满足归属、行和约束的B，再加独立零均值噪声构成Y，便可与已知真值比较。无噪声且设计满秩时应恢复真值；有噪声时看误差随T增加的变化。若要求所有暴露非负，应解带单纯形约束的问题，不能拟合后简单截负再归一化并称其为约束最优解。\n\n### 同类问题\n\n线性等式约束常可先通过参数化消元，减少维度。模型可拟合还不等于参数可识别，应检查解释变量在约束子空间中是否保留独立变化。\n\n</details>\n\n## 2. 行业收益也未知\n\n**题目**\n\n沿用上一问的行业归属集合、暴露和为一以及误差假设，但现在行业收益 $F$ 也未知，只观测 $Y$。这些条件能否保证唯一恢复 $F,B$？给出反例；若只求拟合分解，说明可采用的估计过程和额外识别条件。\n\n**考点**：潜变量；等价变换；交替优化与识别。\n\n<details class=\"interview-answer\">\n<summary>查看分析与解答</summary>\n\n### 必要知识\n\n只观测乘积时，不同两组因子与暴露可能产生完全相同的收益。识别问的是“不同参数能否区分”，优化问的是“怎样找到拟合较好的参数”，两者并非同一问题。\n\n### 分析思路\n\n先构造保留全部约束的列交换反例，否定唯一恢复。随后说明交替最小二乘能做什么，以及哪些外部信息可固定行业含义。\n\n### 解答步骤\n\n一般变换F′=FQ、B′=BQ⁻ᵀ使F′B′ᵀ=FQQ⁻¹Bᵀ=FBᵀ。但不是每个Q都保留归属零约束，因此不能仅展示一般旋转就结束；本题成对归属的列交换是明确满足约束的反例。\n\n观测只约束乘积 $FB^T$。一般因子模型中，对可逆矩阵 $Q$，令 $F'=FQ$、$B'=BQ^{-T}$，乘积不变；行业稀疏约束会排除部分变换，却不一定排除所有变换。\n\n上一问的模拟把行业分成若干对，每只股票只属于其中一对，没有只属于该对单一行业的锚点。交换某一对中的两列收益，并同时交换对应暴露列，所有股票的预测收益不变，归属集合和暴露和也不变。若行业收益同分布，这个交换也不违反分布假设。\n\n因此至少有两个不同参数解，唯一恢复不成立。\n\n若目标仅为最小化 $\\|Y-FB^T\\|_F^2$，可固定 $F$ 逐股做约束回归，再固定 $B$ 逐日估计行业收益，交替迭代至目标变化很小。每一步降低拟合误差，但联合问题并非凸问题，可能依赖初值。\n\n要赋予行业列确定含义，可加入单行业股票、已知暴露、外部行业指数等锚点，并检查剩余设计矩阵的秩。报告时区分“得到一组拟合较好的分解”和“参数在这些条件下可唯一识别”。\n\n交替估计时固定F，逐股估B的1至3个所属系数；固定B，逐日解y_t=Bf_t+e_t。每步目标不增，仍可能收敛到不同局部驻点或等价分解。单行业股票把某行业暴露固定为一，可提供因子方向信息；是否足够唯一还需检查全部行业的锚点与秩。\n\n### 同类问题\n\n处理矩阵分解先列出允许的等价变换，再说明采用何种归一化或外部锚点。算法输出一组数值，不自动证明这些数值有唯一经济含义。\n\n</details>\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/interview/material-050.zip",
+        "label": "行业暴露估计与潜变量识别 · Python 示例",
+        "size_bytes": 1353,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "interview": {
+      "book": "practice",
+      "topic": "凯读",
+      "number": 52,
+      "chapter": 45,
+      "company": "凯读",
+      "edition": "2026-10",
+      "section": "行业暴露估计与潜变量识别",
+      "difficulty": "综合",
+      "full_source": true,
+      "answer_count": 2,
+      "source_files": [
+        "xhs量化面经整理汇总/凯读2.pdf"
+      ],
+      "question_count": 2,
+      "company_section": 2,
+      "answers_collapsed": true
+    }
+  }
+}

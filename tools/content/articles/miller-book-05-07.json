@@ -1,0 +1,32 @@
+{
+  "slug": "miller-book-05-07",
+  "title": "搜索和排序：习题",
+  "summary": "25 道题，练习搜索和排序中的概念、计算与方法选择。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8029,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "本章题组用于练习搜索和排序。按题号选择下方题组；题面中的公式、数据和图形可点击放大。\n\n## 题组\n\n<details class=\"book-exercise-group\" id=\"questions-5-6-0\"><summary>讨论题 · 9 题</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/miller-05-1-175.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"讨论题 · 9 题，放大第 1 幅\"><img src=\"/assets/exercises/foundations/miller-05-1-175.webp\" alt=\"讨论题 · 9 题，第 1 幅\" width=\"1165\" height=\"686\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/miller-05-1-176.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"讨论题 · 9 题，放大第 2 幅\"><img src=\"/assets/exercises/foundations/miller-05-1-176.webp\" alt=\"讨论题 · 9 题，第 2 幅\" width=\"1165\" height=\"1319\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-5-7-1\"><summary>编程练习 · 16 题</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/miller-05-2-176.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"编程练习 · 16 题，放大第 1 幅\"><img src=\"/assets/exercises/foundations/miller-05-2-176.webp\" alt=\"编程练习 · 16 题，第 1 幅\" width=\"1165\" height=\"127\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/miller-05-2-177.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"编程练习 · 16 题，放大第 2 幅\"><img src=\"/assets/exercises/foundations/miller-05-2-177.webp\" alt=\"编程练习 · 16 题，第 2 幅\" width=\"1165\" height=\"1509\" loading=\"lazy\"></a></div>\n\n</details>\n\n",
+  "metadata": {
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第二部分 · 数据组织与基本算法",
+      "number": 29,
+      "chapter": "5",
+      "edition": "2026-10",
+      "minutes": 15,
+      "section": "7",
+      "questions": 25,
+      "unit_type": "exercise",
+      "chapter_title": "搜索和排序",
+      "source_sections": [
+        "5.6",
+        "5.7"
+      ]
+    }
+  }
+}

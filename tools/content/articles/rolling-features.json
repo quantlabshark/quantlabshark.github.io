@@ -1,0 +1,14 @@
+{
+  "slug": "rolling-features",
+  "title": "08 · 构造只使用历史数据的滚动特征",
+  "summary": "计算滚动特征，对齐数据可用、信号生成和持仓时间。",
+  "kind": "lesson",
+  "track": "统计与信号",
+  "series": "统计与信号",
+  "sort_order": 8,
+  "section_ids": [],
+  "body": "## 移动平均的计算区间\n\n三日移动平均，是当前交易日及此前两个交易日收盘价的平均值。第 t 日收盘后，所需三个价格都已确定；不足三个有效观测时，结果保留为空。窗口长度和最少观测数共同决定哪些日期能够生成信号。\n\n下面用模拟价格计算三日均线。收盘价高于均线时，信号设为 1，否则为 0；均线尚不可计算时也保持 0。\n\n## 信号、成交与收益的对应关系\n\n课程采用下一交易日收盘成交的约定：第 t 日收盘生成信号，在第 t+1 日收盘调仓，新仓位获得此后至第 t+2 日收盘的收益。`pct_change()` 将这段收益放在第 t+2 行，因此参与相乘的信号需要向后移动两行。\n\n~~~python\nimport pandas as pd\n\nclose = pd.Series([100., 101., 103., 102., 105., 104., 106.])\nma = close.rolling(3, min_periods=3).mean()\nsignal = (close > ma).where(ma.notna(), 0).astype(int)\nholding_for_return = signal.shift(2, fill_value=0)\nret = close.pct_change(fill_method=None).fillna(0)\nprint(pd.DataFrame({\n    \"close\": close, \"ma\": ma, \"signal\": signal,\n    \"holding\": holding_for_return,\n    \"gross_return\": holding_for_return * ret,\n}))\n~~~\n\n索引 2 的三日均线约为 101.33，收盘价为 103，生成买入信号。索引 3 收盘价为 102，此时才买入。索引 4 的收盘收益 `105/102-1` 才归属于该仓位。例中暂按收盘价成交计算毛收益，加入成本时需在成交日期扣费。\n\n## 预处理的时间范围\n\n信号表示目标动作，持仓表示成交后的状态。若改为下一日开盘成交，就需要开盘价格，并重新定义持仓的收益区间。\n\n滚动特征及其预处理也应只使用决策时已经可用的数据。居中窗口含有后续观测，全样本均值含有未来数据，都会改变历史特征。检查几行价格、特征、信号和持仓的对应关系，可以定位这类时间错位。\n\n## 练习\n\n索引 2 生成买入信号后，为什么不能计入索引 3 的收盘收益？\n\n参考答案：索引 3 的收益描述索引 2 收盘至索引 3 收盘的价格变化，而订单在该区间结束时才成交。新仓位应从下一段收益开始计算，即索引 4 对应的区间。\n",
+  "metadata": {
+    "legacy_course": true
+  }
+}

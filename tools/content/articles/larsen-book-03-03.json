@@ -1,0 +1,37 @@
+{
+  "slug": "larsen-book-03-03",
+  "title": "连续密度与积分概率",
+  "summary": "以曲线下面积计算连续概率，推导分布函数、中位数和短区间近似。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7013,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "连续变量在一段区间中的概率由密度曲线下的面积表示。密度描述概率在数轴上的分布程度，曲线高度还需乘上区间宽度，才能形成概率。\n\n## 密度与分布函数\n\n密度 $f(x)$ 满足非负性及 $\\int_{-\\infty}^{\\infty}f(x)dx=1$。区间概率和分布函数分别是\n\n$$P(a<X\\le b)=\\int_a^bf(x)dx,\\qquad F(x)=\\int_{-\\infty}^xf(t)dt.$$\n\n单个点没有区间宽度，所以连续密度模型中 $P(X=a)=0$。密度本身可超过 1：若在长度 0.2 的区间均匀分布，密度为 5，总面积仍为 1。X 以秒计时，密度单位为每秒，积分后的概率没有单位。\n\n## 先确定归一化常数\n\n设 $f(x)=cx$，$0<x<2$，其余位置为零。由总面积为 1，\n\n$$1=\\int_0^2cx\\,dx=c\\left[\\frac{x^2}2\\right]_0^2=2c,$$\n\n得到 $c=1/2$。于是 $P(1<X<1.5)=[x^2/4]_1^{1.5}=0.3125$。完整的分布函数为\n\n$$F(x)=\\begin{cases}0,&x\\le0,\\\\x^2/4,&0<x<2,\\\\1,&x\\ge2.\\end{cases}$$\n\n中位数 m 将左右概率各分一半，满足 $m^2/4=1/2$，故 $m=\\sqrt2$。在可微的位置，$F'(x)=f(x)$，因此积分与求导把密度和累计概率联系起来。\n\n## 更换尺度后的面积\n\n令 $U=X/2$，将区间压缩到 $(0,1)$。$P(U\\le u)=P(X\\le2u)=u^2$，故密度为 $2u$。图示采用这个尺度：从 0 到 0.5 的面积是 1/4，对应前一尺度中 $P(X\\le1)=1/4$。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/calculus.svg\" alt=\"密度 2x 下的面积，0 到 0.5 的面积为四分之一。\" loading=\"lazy\"></figure>\n\n在此尺度下，$P(0.2<U<0.6)=0.6^2-0.2^2=0.32$。文末计算示例同时使用这一等价分布，便于检查缩放前后概率不变。\n\n## 短区间的近似\n\n密度在短区间内变化较小时，$P(x<X<x+h)\\approx f(x)h$。对最初的密度 x/2，区间 $(1,1.1)$ 的精确概率为 $(1.1^2-1)/4=0.0525$，矩形近似为 $0.5\\times0.1=0.05$。差异来自区间内密度逐渐增加。\n\n> **鲨鱼说** 高度可以帮助比较等宽小区间的概率，但概率最终对应面积。更换单位会改变密度高度，表示同一事件的面积仍应保持不变。\n\n## 练习\n1. $f(x)=c(1-x)$，$0<x<1$。求 c、分布函数以及中位数。\n2. X 在 [2,5] 上均匀分布，求 $P(X<3)$、$P(X=3)$ 和 $P(3<X<4)$。\n\n[本章习题](/read/?slug=larsen-book-03-11)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/larsen-book-03-03.zip",
+        "label": "连续密度与积分概率 · Python 示例",
+        "size_bytes": 881,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第一部分 · 概率与随机变量",
+      "number": 13,
+      "chapter": "3",
+      "edition": "2026-10",
+      "minutes": 8,
+      "section": "3",
+      "chapter_title": "随机变量",
+      "source_sections": [
+        "3.4"
+      ]
+    }
+  }
+}

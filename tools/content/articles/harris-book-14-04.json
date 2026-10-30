@@ -1,0 +1,38 @@
+{
+  "slug": "harris-book-14-04",
+  "title": "14.4 Glosten–Milgrom 模型的价差推导",
+  "summary": "从条件期望和盈亏平衡两条路径，计算由信息不对称形成的买卖价差。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "交易与交易所：市场微观结构",
+  "sort_order": 4041,
+  "cover_url": "",
+  "section_ids": [
+    "44e2f2e9-a852-5af5-8a72-788df5e2df9d"
+  ],
+  "body": "## 用最少的假设描述信息差\n\n设资产的最终价值有高、低两种状态：$v+e$ 与 $v-e$，发生概率各为一半。$v$ 是目前的无条件平均价值，$e>0$ 是价值偏离的幅度。每次到来的客户有概率 $\\pi$ 完全知道真实状态，有概率 $1-\\pi$ 不知道。知情客户在高价值时买入、低价值时卖出。不知情客户随机买卖，两种方向概率相同。\n\n每笔交易数量相同，做市商风险中性、相互竞争，没有运营费和库存成本。模型要回答一个有限问题：仅仅因为不知道下一位客户是否知情，合理报价之间会出现多大的间隔？\n\n## 收到买单后怎样更新概率\n\n如果真实价值高，下一笔为买单的概率为\n\n$$P(B\\mid H)=\\pi+\\frac{1-\\pi}{2}=\\frac{1+\\pi}{2}.$$\n\n第一项来自一定买入的知情者，第二项来自随机买入的不知情者。如果真实价值低，只有随机客户可能买入，所以 $P(B\\mid L)=(1-\\pi)/2$。根据两种状态的对称性，买单总体概率仍为一半。\n\n贝叶斯公式于是给出\n\n$$P(H\\mid B)=\\frac{P(B\\mid H)P(H)}{P(B)}=\\frac{1+\\pi}{2}.$$\n\n这里竖线左边是要判断的事件，右边是已经看到的信息。买单使高价值状态的概率从二分之一提高到 $(1+\\pi)/2$。\n\n## 把概率变成报价\n\n竞争性做市商的卖价等于收到买单以后的条件价值：\n\n$$a=\\frac{1+\\pi}{2}(v+e)+\\frac{1-\\pi}{2}(v-e)=v+\\pi e.$$\n\n对卖单作对称计算，买价为 $b=v-\\pi e$。因此，完整逆向选择价差是\n\n$$s=a-b=2\\pi e.$$\n\n若 $v=100$、$e=4$、$\\pi=0.25$，卖价为 101 元，买价为 99 元，总价差 2 元。知情者更多，或其信息涉及更大的价值变化，价差都会扩大。若 $\\pi=0$，该模型价差为零，因为我们已经排除了其他所有成本。这不表示真实市场没有知情者时也应零价差。\n\n![知情交易者比例与零利润报价](/assets/figures/harris/adverse-selection.svg)\n\n图中基本价值为 100，价值上下偏差为 4。知情者比例上升后，买价下降、卖价上升，扩大后的价差用于补偿信息劣势。\n\n## 用盈亏再算一遍\n\n做市商面对不知情客户，平均可获得半价差 $s/2$。面对知情客户，同样先获得半价差，却由于客户方向正确而损失额外的 $e$。每笔平均利润为\n\n$$E[\\Pi]=(1-\\pi)\\frac{s}{2}+\\pi\\left(\\frac{s}{2}-e\\right)=\\frac{s}{2}-\\pi e.$$\n\n设利润为零，同样得到 $s=2\\pi e$。条件估值与盈亏平衡并非两个互不相关的故事：因为买卖方向包含信息，做市商必须调整报价；这些调整恰好使不知情交易带来的收入抵补信息交易的预期损失。\n\n```python\nvalue, error = 100.0, 4.0\nfor informed in (0.0, 0.25, 0.5):\n    bid = value - informed * error\n    ask = value + informed * error\n    half_spread = (ask - bid) / 2\n    profit = ((1 - informed) * half_spread\n              + informed * (half_spread - error))\n    print(informed, bid, ask, round(profit, 10))\n    assert abs(profit) < 1e-9\n```\n\n## 理解模型的适用范围\n\n上述公式使用对称状态、固定数量、随机非信息订单与完全知情者。真实交易可能有不同数量、部分信息、持续拆单和不均衡的买卖需求，条件概率需要重新计算。不能把观测到的总价差直接除以某个猜测的 $2e$，就宣称得到了真实知情交易比例。\n\n还需分清两种概率：一是客户属于知情类型的概率，二是资产处于高价值状态的概率。在这个对称例子中，看到买单以后，知情类型的条件概率仍为 $\\pi$，高价值状态的概率却上升了。原因是两种状态各占一半时，知情者总体也有一半买、一半卖。买入方向改变了状态判断，却没有单独证明客户类型。\n\n若连续观察多笔交易，就不能每次都机械重置成高低状态各一半。第一笔的后验概率会成为下一笔的先验概率，条件均值和价差都需要重新计算。这里推导的是给定初始对称状态下的一次报价，理解这一范围可以避免把静态公式误用成完整动态策略。\n\n用盈亏平衡推导时，知情买方的真实价值应为 $v+e$，做市商出售的利润为 $a-(v+e)$；这个符号决定了亏损方向。先核对经济含义，再进行代数运算，可以及时发现符号错误。\n\n## 练习\n\n若每笔还需要支付固定的单位运营成本 $c=0.10$，其余假设不变，完整价差应增加多少？\n\n<details><summary>查看解答</summary>\n\n利润改为 $s/2-\\pi e-c$，令其为零，得到 $s=2\\pi e+2c$。完整价差增加 0.20 元；在对称报价中，买价再下降 0.10 元、卖价再上升 0.10 元。\n\n</details>\n\n[返回全书目录](/theory/trading-and-exchanges/)\n\n## 配套代码\n\n[下载本节代码（ZIP）](/assets/downloads/trading-and-exchanges/harris-book-14-04.zip)\n\n压缩包包含完整脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n",
+  "metadata": {
+    "theory_book": {
+      "book": "trading-and-exchanges",
+      "part": "第四部分 · 流动性供给",
+      "number": 42,
+      "chapter": "14",
+      "edition": "2026-10",
+      "minutes": 8,
+      "section": "14.4",
+      "source_year": 2003,
+      "source_pages": [
+        333,
+        334
+      ],
+      "chapter_title": "买卖价差",
+      "source_sections": [
+        "14.10 APPENDIX: A SIMPLE GLOSTEN- MILGROM MODEL OF THE ADVERSE SELECTION SPREAD COMPONENT"
+      ]
+    },
+    "code_download": {
+      "url": "/assets/downloads/trading-and-exchanges/harris-book-14-04.zip",
+      "examples": 1
+    }
+  }
+}

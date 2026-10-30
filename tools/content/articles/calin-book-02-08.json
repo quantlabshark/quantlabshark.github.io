@@ -1,0 +1,36 @@
+{
+  "slug": "calin-book-02-08",
+  "title": "条件期望的计算规则与方差分解",
+  "summary": "用塔式法则、提取已知量和条件 Jensen 不等式组织多阶段计算。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "随机微积分及其应用",
+  "sort_order": 5011,
+  "cover_url": "",
+  "section_ids": [
+    "17859c88-b779-5654-b120-7a4cc7b39714"
+  ],
+  "body": "## 条件期望与全期望公式\n\n条件期望最基本的规则是全期望公式：\n\n$$\\mathbb E[\\mathbb E[X\\mid\\mathcal G]]=\\mathbb E[X].$$\n\n它表示分组不会改变总体加权平均。例如两类客户分别占 60% 与 40%，平均购买量分别为 2 和 5，总体平均购买量就是 $0.6\\times2+0.4\\times5=3.2$。\n\n若 $\\mathcal H\\subseteq\\mathcal G$，即 $\\mathcal G$ 包含更细的信息，塔式法则为\n\n$$\\mathbb E[\\mathbb E[X\\mid\\mathcal G]\\mid\\mathcal H]\n=\\mathbb E[X\\mid\\mathcal H].$$\n\n先根据详细信息求均值，再按较粗信息汇总，结果与直接按粗信息求均值相同。信息包含关系是关键；两个不相关的分组体系不能随意套用这条公式。\n\n### 塔式法则怎样使用信息包含关系\n\n记 $Z=\\mathbb E[X\\mid\\mathcal G]$。对任意 $A\\in\\mathcal H$，因为 $\\mathcal H\\subseteq\\mathcal G$，有 $\\mathbb E[Z\\mathbf1_A]=\\mathbb E[X\\mathbf1_A]$。再对 $Z$ 按 $\\mathcal H$ 条件化，所得变量对 $\\mathcal H$ 可测，并在每个 $A\\in\\mathcal H$ 上与 $X$ 具有同一积分，故它就是 $\\mathbb E[X\\mid\\mathcal H]$。\n\n例如先按“城市和门店”预测销售，再按“城市”汇总，是嵌套分组；先按客户年龄分组，再按商品类别分组，则没有自动的包含关系，不能任意消去中间条件。塔式法则不是“任何连续取两次条件期望都等于一次”。\n\n另一个方向同样有用：$\\mathbb E[X\\mid\\mathcal H]$ 已经由较少信息确定，因此也由更多信息 $\\mathcal G$ 确定，故 $\\mathbb E[\\mathbb E[X\\mid\\mathcal H]\\mid\\mathcal G]=\\mathbb E[X\\mid\\mathcal H]$。给一个已经算好的粗预测增加信息，不会自动把它升级成细预测。\n\n## 已知量可以移出条件期望\n\n若 $H$ 对 $\\mathcal G$ 可测，且有关乘积可积，则\n\n$$\\mathbb E[HX\\mid\\mathcal G]=H\\mathbb E[X\\mid\\mathcal G].$$\n\n在条件信息已经确定的情况下，$H$ 扮演常数的角色。初学时可先假定 $H$ 有界，以保证可积性。例如已知价格 $P$，随机销量 $Q$ 的条件平均为 $m(P)$，则收入的条件均值为 $P\\,m(P)$。但若折扣也要等未来销量出来后才能确定，折扣就不能提前移到条件期望外。\n\n条件期望还保留线性、单调和非负性。若 $X\\le Y$ 几乎必然，则 $\\mathbb E[X\\mid\\mathcal G]\\le\\mathbb E[Y\\mid\\mathcal G]$。\n\n## 非线性函数不能直接穿过期望\n\n对凸函数 $\\varphi$，在相应期望存在时，条件 Jensen 不等式给出\n\n$$\\varphi(\\mathbb E[X\\mid\\mathcal G])\\le\\mathbb E[\\varphi(X)\\mid\\mathcal G].$$\n\n取 $\\varphi(x)=x^2$，得到\n\n$$\\mathbb E[X\\mid\\mathcal G]^2\\le\\mathbb E[X^2\\mid\\mathcal G].$$\n\n再取全体期望，便有 $\\|\\mathbb E[X\\mid\\mathcal G]\\|_2\\le\\|X\\|_2$。条件平均不会放大平方平均意义下的大小。这也解释了为何条件期望在均方空间中是一个收缩算子。\n\n对 $X,Y$ 平方可积，还可得条件 Cauchy–Schwarz 不等式：\n\n$$|\\mathbb E[XY\\mid\\mathcal G]|^2\n\\le\\mathbb E[X^2\\mid\\mathcal G]\\mathbb E[Y^2\\mid\\mathcal G].$$\n\n条件 Jensen 可以在每个已知信息组内理解。若 $m=\\mathbb E[X\\mid\\mathcal G]$，凸函数在 $m$ 处的支撑线给出 $\\varphi(X)\\ge\\varphi(m)+a(m)(X-m)$。条件于 $\\mathcal G$ 后，$m$ 和相应斜率已知，而 $\\mathbb E[X-m\\mid\\mathcal G]=0$，于是线性项消失。\n\n例如 $X$ 在某组中等概率取 -1 和 3，条件均值为 1，条件二阶矩为 5。平方函数的比较是 $1^2\\le5$，两者差 4 就是组内方差。先求均值再平方，会删除这一组内部仍然存在的变化。\n\n## 把总方差拆成两部分\n\n条件方差定义为\n\n$$\\operatorname{Var}(X\\mid\\mathcal G)=\\mathbb E[X^2\\mid\\mathcal G]-\\mathbb E[X\\mid\\mathcal G]^2.$$\n\n由全期望公式和加减同一项，得到\n\n$$\\operatorname{Var}(X)=\\mathbb E[\\operatorname{Var}(X\\mid\\mathcal G)]\n+\\operatorname{Var}(\\mathbb E[X\\mid\\mathcal G]).$$\n\n第一项是组内仍然存在的波动，第二项是组间平均水平的差异。两项都非负，因此更多信息能够解释一部分波动，但不会使随机变量自身的总体方差消失。\n\n例如两个生产班组各占一半，产量的组内方差都为 4，组内均值分别为 10、14。总体均值为 12，组间均值的方差为 $[(10-12)^2+(14-12)^2]/2=4$，所以总体方差为 $4+4=8$。直接把组内方差平均，只能得到其中一半。\n\n> **鲨鱼说** “给定信息后均值为零”比“总体均值为零”更强。前者说明每个可识别组中的平均都为零，后者可能只是各组正负偏差互相抵消。鞅和随机积分依赖的是前一种条件。\n\n#### 四种结果中的方差分解\n\n继续使用两次硬币的正面次数 $X$，令 $Y$ 表示第一次结果。总体均值为 1，因此\n\n$$\\operatorname{Var}(X)=\\frac{(2-1)^2+(1-1)^2+(1-1)^2+(0-1)^2}{4}=\\frac12.$$\n\n知道第一次后，H 组取值为 2、1，均值为 1.5；T 组取值为 1、0，均值为 0.5。两个组内的方差都是\n\n$$\\frac{(0.5)^2+(-0.5)^2}{2}=\\frac14.$$\n\n所以 $E[\\operatorname{Var}(X\\mid Y)]=1/4$。两个组均值与总体均值的距离分别为 $0.5,-0.5$，故 $\\operatorname{Var}(E[X\\mid Y])=1/4$。相加得到 $1/2$。\n\n第一项是知道第一次结果后仍未消除的误差，第二项是第一次结果能够解释的差异。图中同组的短线表示剩余偏差，两个组均值之间的距离表示信息带来的解释能力。\n\n![四种结果中的方差分解](/assets/figures/theory/walkthrough/variance-decomposition.svg)\n\n## 全方差中的两项怎样分离\n\n写 $Z=\\mathbb E[X\\mid\\mathcal G]$、$\\mu=\\mathbb E[X]$，则 $X-\\mu=(X-Z)+(Z-\\mu)$。平方后交叉项的期望为\n\n$$\\mathbb E[(X-Z)(Z-\\mu)]\n=\\mathbb E[(Z-\\mu)\\mathbb E[X-Z\\mid\\mathcal G]]=0.$$\n\n第一项 $\\mathbb E[(X-Z)^2]$ 等于平均条件方差，第二项 $\\mathbb E[(Z-\\mu)^2]$ 等于条件均值的方差。分解因此是一条正交误差恒等式，不需要各组服从相同分布。\n\n对门店例子，若 A 类占 60%，均值为 2、方差为 1。B 类占 40%，均值为 5、方差为 4，则总体均值为 3.2。平均组内方差为 $0.6\\times1+0.4\\times4=2.2$，组间均值方差为 $0.6(2-3.2)^2+0.4(5-3.2)^2=2.16$，总方差为 4.36。均值差较大时，组间项不能忽略。\n\n## 练习：随机次数的总和\n\n非负整数变量 $N$ 与独立同分布的 $Y_1,Y_2,\\ldots$ 独立，且 $\\mathbb E[Y_i]=m$、$\\operatorname{Var}(Y_i)=v$。设 $S=\\sum_{i=1}^NY_i$，空和为零。求 $S$ 的均值与方差；再取 $N\\sim\\operatorname{Poisson}(3),m=2,v=1$。\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n先给定次数 $N=n$，此时 $\\mathbb E[S\\mid N=n]=nm$，$\\operatorname{Var}(S\\mid N=n)=nv$。全期望和全方差公式给出\n\n$$\\mathbb E[S]=m\\mathbb E[N],\\qquad\n\\operatorname{Var}(S)=v\\mathbb E[N]+m^2\\operatorname{Var}(N).$$\n\n第二项来自次数本身的随机性，不能遗漏。代入 $\\mathbb E[N]=\\operatorname{Var}(N)=3$，得均值 6、方差 $3+4\\times3=15$。若次数固定为 3，方差只有 3；其余 12 来自随机次数。\n\n还可检查二阶矩。给定 $N=n$，展开平方：对角项贡献 $n(v+m^2)$，不同下标的有序交叉项共有 $n(n-1)$ 个，每项期望为 $m^2$。于是 $\\mathbb E[S^2\\mid N=n]=nv+n^2m^2$。再取期望并减去 $(m\\mathbb E[N])^2$，恢复同一方差公式。这里需要 $\\mathbb E[N^2]<\\infty$ 以保证所用二阶矩有限。\n\n</details>\n\n## 代码下载\n\n[下载计算与绘图代码](/assets/downloads/theory/calin-book-02-08.zip)\n\n[补充算例与绘图代码](/assets/downloads/theory-walkthrough/calin-book-02-08.zip)\n",
+  "metadata": {
+    "theory_book": {
+      "book": "stochastic-calculus",
+      "part": "第一部分 · 概率与随机过程",
+      "number": 11,
+      "chapter": "2",
+      "edition": "2026-10",
+      "minutes": 39,
+      "section": "8",
+      "source_pages": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "chapter_title": "概率与条件期望",
+      "source_sections": [
+        "2.12"
+      ]
+    }
+  }
+}

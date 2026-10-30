@@ -1,0 +1,46 @@
+{
+  "slug": "quant-course-38",
+  "title": "38 · Alpha、Beta与主动组合",
+  "summary": "区分市场暴露、剩余收益与主动收益，用回归和因子协方差理解跟踪误差、对冲与组合约束。",
+  "kind": "lesson",
+  "track": "投资组合",
+  "series": "量化研究系统课程",
+  "sort_order": 38,
+  "cover_url": "/assets/figures/curriculum/course-38.svg",
+  "section_ids": [
+    "4cb276d3-8233-5664-8700-2a8bbd7b23cc"
+  ],
+  "body": "Beta 描述收益对市场或其他因子的敏感度，Alpha 描述相对于给定模型尚未解释的平均收益。主动组合还需要与基准权重比较，区分风险暴露和新增收益。\n\n## 比市场多赚1%，是否就有Alpha\n\n某月市场超额收益为2%，组合超额收益为3%。如果组合的市场Beta为1.5，那么模型预期的市场部分正好为$1.5\\times2\\%=3\\%$。比市场多出的1个百分点，来自较高市场暴露，没有留下Alpha。\n\n这里“超额收益”指扣除无风险收益；“主动收益”指组合减去基准。二者分母和比较对象不同。回归模型写为\n\n$$r_{p,t}-r_{f,t}=\\alpha+\\beta(r_{m,t}-r_{f,t})+\\varepsilon_t.$$\n\n$\\alpha$是截距，表示模型控制市场暴露后留下的平均收益；$\\beta$是斜率，表示市场超额收益变化一个单位时，组合收益平均变化多少；$\\varepsilon_t$是当期未被解释的部分。单月剩余收益不是稳定Alpha，需跨期估计并检查误差。\n\n## 回归系数怎样得到\n\n有截距的普通最小二乘回归给出\n\n$$\\hat\\beta=\\frac{\\sum_t(x_t-\\bar x)(y_t-\\bar y)}{\\sum_t(x_t-\\bar x)^2},\\qquad\n\\hat\\alpha=\\bar y-\\hat\\beta\\bar x.$$\n\n设五期市场超额收益为−2%、−1%、0、1%、2%，组合收益均为市场收益的1.5倍再加0.3%。于是每一点都落在同一直线上，回归得到$\\hat\\beta=1.5$、$\\hat\\alpha=0.3\\%$，残差为0。这是为理解公式构造的数据，实际回归通常有明显散点。\n\n![合成组合超额收益对市场超额收益的回归](/assets/figures/curriculum/course-38.svg)\n\n图中斜率表现市场敏感度，纵轴截距表现平均剩余收益。将收益改成月度或日度后，Alpha的周期也随之改变；Beta没有收益率的单位，但其估计仍依赖样本与频率。\n\n```python\nimport numpy as np\nmarket = np.array([-0.02, -0.01, 0.0, 0.01, 0.02])\nasset = 0.003 + 1.5 * market\nx = np.column_stack([np.ones(len(market)), market])\nalpha, beta = np.linalg.lstsq(x, asset, rcond=None)[0]\nresidual = asset - x @ np.array([alpha, beta])\nprint(round(alpha, 6), round(beta, 6))\nprint(np.max(np.abs(residual)))\nweights = np.array([0.6, 0.4])\nasset_beta = np.array([1.5, 0.5])\nprint('portfolio beta:', weights @ asset_beta)\n```\n\n代码依赖NumPy，使用最小二乘恢复上述系数。第二个例子将Beta为1.5与0.5的资产按60%和40%组合，组合Beta为1.1。权重固定时，组合因子暴露是各资产暴露的加权和。\n\n## 市场风险与特质风险\n\n若残差与市场收益不相关，方差分解为\n\n$$\\operatorname{Var}(r_p)=\\beta^2\\operatorname{Var}(r_m)+\\operatorname{Var}(\\varepsilon).$$\n\n第一项是共同市场波动，第二项是模型没有解释的波动。增加股票数量可能分散部分特质风险，但如果这些股票同时受行业、利率或流动性冲击，单因子残差仍可能彼此相关。\n\n多因子模型使用$r=Bf+\\varepsilon$，其中$B$的每一行记录一项资产对各因子的暴露，$f$是当期共同因子收益。若因子与残差不相关，协方差为\n\n$$\\Sigma=B\\Sigma_fB^\\top+\\Sigma_\\varepsilon.$$\n\n几十个因子可以比直接估计数千项资产两两协方差更稳定地描述共同风险。经济因子按机制定义，统计因子从共同运动提取。两种因子都需要判断是否足够稳定。APT强调无套利条件下系统性因子与期望收益的关系，它也不能把任意回归截距都解释成可交易收益。\n\n## 跟踪误差为什么与总波动不同\n\n设组合权重为$w_p$，基准权重为$w_b$，主动权重$a=w_p-w_b$，则$\\mathbf1^\\top a=0$。主动收益为$a^\\top r$，跟踪误差为\n\n$$\\mathrm{TE}=\\sqrt{a^\\top\\Sigma a},\\qquad\n\\mathrm{IR}=\\frac{E(a^\\top r)}{\\mathrm{TE}}.$$\n\n若基准是市场组合，主动Beta为$\\beta_p-1$。一个Beta接近0、总波动不高的组合，可能与市场基准差异很大，因而跟踪误差并不低。低市场风险和紧密跟踪是不同目标。\n\n例如资产规模100万元、Beta为1.2，若希望消除一阶市场暴露，可考虑名义规模120万元的指数空头。对冲后仍有特质风险、基差、估计误差和执行成本，且Beta变化后要重新估计对冲量。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>跟踪误差，即策略收益与基准收益之差的波动率。</p></aside>\n\n## 主动权重也有可行范围\n\n若组合不得卖空且单一资产权重不超过$c_i$，主动权重满足$-w_{b,i}\\le a_i\\le c_i-w_{b,i}$。可以最大化$E(a^\\top r)-\\lambda a^\\top\\Sigma a$，或在给定目标主动收益下最小化跟踪误差。目标过高时，约束可能使问题无解。\n\n一项历史实验使用50只股票、120个月滚动估计，并在1995—2009年的180个月评价。不同主动收益目标对应的可行窗口数并不相同。这个例子说明，研究应报告不可行比例及预先规定的处理方式。只保留成功求解的月份，会改变真实投资过程。\n\n## 收益来源为何必须随基准检查\n\n公开财报、业务信息及其处理方式可能产生预测差异。与此同时，长期承担某类共同风险也能带来平均收益，例如某些非传统因子暴露。加入这些因子后，原有Alpha可能缩小，因此“市场Beta低”并不等于“所有系统风险低”。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>Alpha始终相对于一个模型。更换基准、补充行业因子或计入成本后，截距可能改变。报告Alpha时同时给出因子、频率、样本区间与估计不确定性。</p></aside>\n\n## 练习\n\n组合Beta为0.8，市场超额收益为5%，组合超额收益为4.5%。该月市场模型剩余收益与相对市场主动收益各是多少？\n\n<details><summary>查看解答</summary>\n\n市场解释部分为$0.8\\times5\\%=4\\%$，当月剩余为0.5%；主动收益为$4.5\\%-5\\%=-0.5\\%$。一个为正、一个为负并不矛盾：模型剩余先调整了Beta，而主动收益直接减去市场收益。单月0.5%不能直接作为长期Alpha估计。\n\n</details>\n\n---\n\n[课程目录](/courses/)\n\n## 配套代码\n\n[下载本节代码（ZIP）](/assets/downloads/courses/quant-course-38.zip)\n\n压缩包包含脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n",
+  "metadata": {
+    "curriculum": {
+      "cover": "/assets/figures/curriculum/course-38.svg",
+      "level": "进阶",
+      "stage": 7,
+      "number": 38,
+      "edition": "2026-10",
+      "minutes": 35,
+      "source_refs": [
+        {
+          "book": "量化交易：算法、分析、数据、模型和优化 — Xin Guo 等",
+          "chapters": [
+            "2.4.1",
+            "3.1"
+          ],
+          "pdf_pages": [
+            41,
+            76,
+            77,
+            78,
+            79,
+            80
+          ]
+        }
+      ],
+      "stage_title": "投资组合"
+    },
+    "code_download": {
+      "url": "/assets/downloads/courses/quant-course-38.zip",
+      "examples": 1
+    }
+  }
+}

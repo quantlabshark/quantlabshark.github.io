@@ -1,0 +1,34 @@
+{
+  "slug": "zhou-full-3-2",
+  "title": "3.2 积分",
+  "summary": "用分部积分和截面积分，求解几何体积、扫雪与正态条件期望。",
+  "kind": "reference",
+  "track": "微积分与线性代数",
+  "series": "经典量化面试教材",
+  "sort_order": 1012,
+  "cover_url": "",
+  "section_ids": [
+    "061c5d65-3752-51b1-815a-0a831b5df727"
+  ],
+  "body": "积分可以表示局部贡献的累加，也与原函数相联系。处理概率、面积和累计收益等问题时，需要将积分区间、被积量与结果单位对应起来。\n\n## 积分基本公式\n\n若 $F'=f$，则 $\\int_a^bf(x)dx=F(b)-F(a)$；给定 $F(a)=y_0$ 时，$F(x)=y_0+\\int_a^xf(t)dt$。换元公式为 $\\int f(g(x))g'(x)dx=\\int f(u)du$，定积分需同时改变上下限。分部积分为 $\\int u\\,dv=uv-\\int v\\,du$。\n\n## 对数函数积分\n\n**题目。**计算 $\\int\\ln x\\,dx$。\n\n**考点**：不定积分；分部积分；求导验证。\n\n<details class=\"interview-answer\">\n<summary>查看分析与解答</summary>\n\n### 必要知识\n\n积分是求一个函数的原函数。从乘积求导 $d(uv)=u\\,dv+v\\,du$ 移项并积分，可得 $\\int u\\,dv=uv-\\int v\\,du$。常数 C 表示所有相差常数的原函数。\n\n### 分析思路\n\nln x 的导数比自身简单，而 1 容易积分。把被积函数看作 ln x 乘 1，令前者求导、后者积分，剩余积分便成为常数函数的积分。\n\n### 解答步骤\n\n在 x>0 上取 $u=\\ln x$、$dv=dx$，则 $du=dx/x$、v=x。代入得\n\n$$\\int\\ln x\\,dx=x\\ln x-\\int x\\frac1x\\,dx=x\\ln x-x+C.$$\n\n求导检查：$(x\\ln x-x)'=\\ln x+1-1=\\ln x$。例如 $\\int_1^e\\ln x\\,dx=[x\\ln x-x]_1^e=1$。\n\n### 同类问题\n\n分部积分的选择应使剩余积分更简单。对 x^m ln x，可令 u=ln x、dv=x^m dx；如果两次分部积分后重新出现原积分，应把它移到同一侧解代数方程。\n\n</details>\n\n## 正割函数积分\n\n**题目。**计算 $\\int_0^{\\pi/6}\\sec x\\,dx$。\n\n**考点**：三角函数；换元积分；定积分上下限。\n\n<details class=\"interview-answer\">\n<summary>查看分析与解答</summary>\n\n### 必要知识\n\n正割 sec x=1/cos x，正切 tan x=sin x/cos x。它们的导数分别是 sec x tan x 与 sec²x。若分子恰好是分母的导数，积分可写成分母绝对值的对数。\n\n### 分析思路\n\n观察 sec x+tan x 的导数，它恰好等于 sec x 乘自身。因此乘除同一个 sec x+tan x，能把原积分改成 u'/u 的形式。\n\n### 解答步骤\n\n令 $u=\\sec x+\\tan x$，则 $du=(\\sec x\\tan x+\\sec^2x)dx$。于是\n\n$$\\int\\sec x\\,dx=\\int\\frac{\\sec x\\tan x+\\sec^2x}{\\sec x+\\tan x}\\,dx\n=\\ln|\\sec x+\\tan x|+C.$$\n\n在 0≤x≤π/6 上，括号内为正。上端 sec(π/6)=2/√3、tan(π/6)=1/√3，两者相加为 √3；下端的和为 1。因此\n\n$$\\int_0^{\\pi/6}\\sec x\\,dx=\\ln\\sqrt3-\\ln1=\\tfrac12\\ln3.$$\n\n### 同类问题\n\n当被积函数缺少显眼的换元对象时，可反过来寻找一个函数，使它的对数导数等于被积函数。处理含三角函数的定积分，还应检查区间是否跨越分母为零的点。\n\n</details>\n\n## 两圆柱交集（Applications of integration A）\n\n**题目。**两个半径均为 1 的圆柱轴线互相垂直并交于中心，求公共部分体积。\n\n**考点**：截面法；三维区域；体积量纲。\n\n<details class=\"interview-answer\">\n<summary>查看分析与解答</summary>\n\n### 必要知识\n\n体积可以按平行薄片累加：高度 z 处的截面积为 A(z)，则总体积为 ∫A(z)dz。沿 x 轴的圆柱由 y²+z²≤r² 描述，沿 y 轴的圆柱由 x²+z²≤r² 描述；交集必须同时满足两个不等式。\n\n### 分析思路\n\n固定 z 后，两个圆柱分别限制 x 和 y。它们的共同截面是正方形，不是圆。先求正方形边长，再对高度积分，比直接使用三重积分更容易看清边界。\n\n### 解答步骤\n\n半径 r=1 时，高度范围为 −1≤z≤1。固定 z，有\n\n$$-\\sqrt{1-z^2}\\le x\\le\\sqrt{1-z^2},\\qquad\n-\\sqrt{1-z^2}\\le y\\le\\sqrt{1-z^2}.$$\n\n因此 $A(z)=[2\\sqrt{1-z^2}]^2=4(1-z^2)$。在 z=0 处截面积为 4，到 z=±1 时收缩为零。\n\n$$V=\\int_{-1}^1 4(1-z^2)dz\n=4[z-z^3/3]_{-1}^1=\\frac{16}3.$$\n\n一般半径 r 的截面积为 4(r²−z²)，积分区间为 [−r,r]，得到 $V=16r^3/3$。r³ 符合体积的量纲，也与所有长度放大 r 倍的几何规律一致。\n\n### 同类问题\n\n几何积分先画或描述截面，再定积分。若两圆柱半径不同，截面成为长方形，边长分别由两个平方根确定；不能继续套用正方形面积公式。\n\n</details>\n\n## 扫雪车（Applications of integration B）\n\n**题目。**雪在中午前某时开始以恒定速率降下。扫雪车中午出发，单位时间清除固定体积的雪；下午 1 点已行驶 2 英里，2 点已行驶 3 英里。雪何时开始？\n\n**考点**：速率建模；时间原点；对数积分。\n\n<details class=\"interview-answer\">\n<summary>查看分析与解答</summary>\n\n### 必要知识\n\n清雪车每小时清除的体积固定，清理道路宽度固定。单位路长需要清除的雪越厚，车速越慢。匀速降雪意味着雪厚与降雪持续时间成正比，因此车速与持续时间成反比。\n\n### 分析思路\n\n以中午为 t=0，设雪提前 T 小时开始下。先把体积清除速率换算为行驶速率，再把两个累计路程分别写成积分。两个方程共含 T 和一个比例常数，取比值消去后者。\n\n### 解答步骤\n\n雪厚可写成 a(T+t)，道路宽度为 w、清雪体积速率为 Q，则 $v(t)=Q/[wa(T+t)]=c/(T+t)$，c=Q/(wa)。已知中午后第一小时行驶 2 英里、两小时累计 3 英里：\n\n$$2=c\\ln\\frac{T+1}{T},\\qquad3=c\\ln\\frac{T+2}{T}.$$\n\n第二小时单独的路程是 1 英里。消去 c 得 $2\\ln[(T+2)/T]=3\\ln[(T+1)/T]$，两边取指数并整理：\n\n$$T(T+2)^2=(T+1)^3,$$\n$$T^3+4T^2+4T=T^3+3T^2+3T+1,$$\n$$T^2+T-1=0.$$\n\n取正根 $T=(\\sqrt5-1)/2\\approx0.618034$ 小时，即约 37 分 5 秒。降雪约从上午 11:22:55 开始。\n\n### 同类问题\n\n涉及厚度、面积或密度的运动题，应先找守恒的处理量，再换算成速度。累计路程与各时段路程必须分清；若降雪速率不恒定，需先积分得到雪厚，再建立车速方程。\n\n</details>\n\n## 正态变量的条件期望（Expected value using integration）\n\n**题目。**若 $X\\sim N(0,1)$，求 $E[X\\mid X>0]$。\n\n**考点**：条件密度；截断分布；正态密度导数。\n\n<details class=\"interview-answer\">\n<summary>查看分析与解答</summary>\n\n### 必要知识\n\n标准正态变量的密度为 $\\phi(x)=e^{-x^2/2}/\\sqrt{2\\pi}$。条件 X>0 将样本范围限制到正半轴，密度需要除以该事件的概率 1/2，才能使总面积重新等于 1。条件均值按这个新密度加权计算。\n\n### 分析思路\n\n先写出条件密度，而不是直接把负半轴积分删去。被积式含 xφ(x)，正好可以利用 φ'(x)=−xφ(x)，把积分化为密度在端点的差。\n\n### 解答步骤\n\n正半轴上的条件密度为 2φ(x)，所以\n\n$$E[X\\mid X>0]=2\\int_0^\\infty x\\phi(x)dx.$$\n\n由链式求导，$\\phi'(x)=-x\\phi(x)$，于是\n\n$$2\\int_0^\\infty x\\phi(x)dx=-2[\\phi(x)]_0^\\infty\n=2\\phi(0)=\\sqrt{2/\\pi}\\approx0.7979.$$\n\n原分布均值为零，但条件分布只保留正值，其均值当然为正。若遗漏除以 1/2，得到的是 $E[X\\mathbf1_{\\{X>0\\}}]$，它比条件均值小一半。\n\n### 同类问题\n\n一般阈值 a 对应 $E[X\\mid X>a]=\\phi(a)/[1-\\Phi(a)]$，其中 Φ(a)=P(X≤a)。处理筛选后的平均收益、超过阈值的损失等问题，都应同时调整积分范围与概率归一化。\n\n</details>\n",
+  "metadata": {
+    "interview": {
+      "book": "zhou",
+      "topic": "微积分与线性代数",
+      "number": 12,
+      "chapter": 3,
+      "edition": "2026-10",
+      "section": "3.2",
+      "difficulty": "综合",
+      "full_source": true,
+      "answer_count": 5,
+      "source_pages": [
+        19,
+        20,
+        21
+      ],
+      "question_count": 5,
+      "answers_collapsed": true
+    }
+  }
+}

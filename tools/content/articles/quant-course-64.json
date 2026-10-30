@@ -1,0 +1,60 @@
+{
+  "slug": "quant-course-64",
+  "title": "64 · 衍生品、波动率与后续学习",
+  "summary": "从支付函数和两状态复制得到期权价格，连接风险中性概率、Greeks与定价方程。",
+  "kind": "lesson",
+  "track": "研究系统与综合实践",
+  "series": "量化研究系统课程",
+  "sort_order": 64,
+  "cover_url": "/assets/figures/curriculum/course-64.svg",
+  "section_ids": [
+    "fbc0522d-3663-5bbb-be2d-6b8691cc16c7"
+  ],
+  "body": "衍生品的价值取决于约定支付及其发生条件。理解期权时，可从到期支付、当前价格和风险敏感度入手，再研究波动率与对冲误差。\n\n## 到期支付、价格与利润\n\n执行价100元的欧式看涨期权，到期标的110时支付10，标的90时支付0。欧式表示只在指定到期日行权。看涨支付为 $(S_T-K)^+$，看跌为 $(K-S_T)^+$。若看涨初始价格6元，不计资金成本，到期利润分别4与−6。支付图若不减初始权利金，就不是利润图。\n\n远期多头支付为 $S_T-K$，可以负；期权买方可放弃不利行权，因而到期支付非负，但初始买入仍要付费。合约乘数将每单位支付转换为整张合约金额，例如每单位10元、乘数100对应1000元。\n\n![到期支付、价格与利润示意图](/assets/figures/curriculum/course-64.svg)\n\n图同时展示看涨、看跌和远期支付。每个到期价格下，看涨减看跌都等于远期：$C_T-P_T=S_T-K$。在无分红、可按同一利率借贷的无摩擦模型中，今天相同支付的价格必须相同，得到看涨看跌平价 $C-P=S_0-Ke^{-rT}$。\n\n## 两状态复制推导一个价格\n\n自拟一期市场：股票今天100，到期只可能120或80，无风险毛收益1.02，看涨执行价100。要用 $\\Delta$ 股股票和今天存入银行的 $B$ 元复制期权，需满足\n\n$$120\\Delta+1.02B=20,\\qquad80\\Delta+1.02B=0.$$\n\n两式相减得到 $\\Delta=0.5$，再得 $B=-40/1.02\\approx-39.2157$，即借入39.2157元、买半股。初始组合价格 $50-39.2157=10.7843$ 元。到期上涨时股票60、偿债40，余20；下跌时股票40、偿债40，余0，逐状态完全复制。\n\n## 风险中性概率从复制式得到\n\n设上涨、下跌倍数 $u=1.2,d=0.8$，无风险毛收益 $G_f=1.02$。权重 $p^*=(G_f-d)/(u-d)=0.55$ 使股票期望毛收益等于无风险收益，因此期权价格也可写为\n\n$$C_0=\\frac{p^*20+(1-p^*)0}{1.02}=10.7843.$$\n\n这是由无套利复制得到的风险中性概率，不要求真实上涨概率是55%。模型需要 $d<G_f<u$ 才能得到0至1之间的权重；若不满足，股票与债券之间本身就存在套利。真实概率用于预测实际分布，风险中性权重用于这套复制市场的定价。\n\n```python\ndef payoffs(spot, strike):\n    call, put = max(spot-strike, 0), max(strike-spot, 0)\n    return call, put\nfor spot in [70, 100, 130]:\n    call, put = payoffs(spot, 100)\n    assert call-put == spot-100\nS0, up, down, gross = 100.0, 120.0, 80.0, 1.02\ndelta = (20.0-0.0)/(up-down)\nbank = -delta*down/gross\nrisk_neutral = (gross*S0-down)/(up-down)\nreplication = delta*S0+bank\ndiscounted = risk_neutral*20/gross\nprint(delta, round(bank,6), risk_neutral, round(replication,6))\nassert abs(replication-discounted)<1e-12\nassert abs(delta*up+gross*bank-20)<1e-12\nassert abs(delta*down+gross*bank)<1e-12\n```\n\n程序验证三个到期价的平价，再输出复制Delta0.5、借款约−39.2157、风险中性概率0.55与价格10.784314。两种方法一致，是对现金流与贴现的独立检查。\n\n## 波动怎样改变凸支付\n\n保持风险中性终值均值100、零利率。确定到期100时，执行价100看涨支付0。改成80或120各一半，平均支付10。下跌的损失被0截住，上涨的收益保留，因此凸支付从分布展开中获益。一般比较需要明确保持哪些均值、概率和定价条件相同，不能只看到“范围更宽”就给出价格结论。\n\n历史波动率由过去收益估计；隐含波动率是给定定价模型下，让理论价格匹配市场价格的参数。不同执行价和期限构成波动率曲面，反映市场价格中的不同风险定价与模型偏差，不等于一个确定的未来实际波动率。\n\n## Greeks的单位与局部近似\n\nDelta是价格对标的的一阶敏感度，Gamma是Delta对标的的变化率，Vega对应波动参数，Theta对应时间推进。局部展开为\n\n$$\\Delta V\\approx\\Delta\\,\\Delta S+\\tfrac12\\Gamma(\\Delta S)^2+\\mathrm{Vega}\\,\\Delta\\sigma+\\Theta\\,\\Delta t.$$\n\nDelta0.6、Gamma0.02，标的上涨2元时，前两项贡献1.24元。若Vega按波动率从0.20到1.20的一整单位报价，就不能把“上升1个百分点”的0.01误写成1。Theta也须区分每年和每天，以及时间推进还是剩余期限减少的符号约定。\n\n持有100份、每份对应1单位标的、Delta0.6的看涨，可卖60单位标的作局部Delta对冲。乘数100则需卖6000单位。价格移动后Delta因Gamma而变，对冲需要调整，离散调整还产生交易成本和跳跃风险。\n\n## 连续时间模型的连接\n\n若股票满足 $dS=\\mu Sdt+\\sigma SdW$，Itô引理使期权函数 $V(t,S)$ 的变化包含 $V_t+\\mu SV_S+\\frac12\\sigma^2S^2V_{SS}$ 的时间项，以及 $\\sigma SV_SdW$ 的随机项。持有 $V_S$ 股可局部抵消随机项，在基本无套利假设下得到Black–Scholes方程\n\n$$V_t+\\tfrac12\\sigma^2S^2V_{SS}+rSV_S-rV=0.$$\n\n到期条件是合约支付函数。二叉树、PDE与Monte Carlo分别用离散状态、微分方程和风险中性路径求同一个定价问题。先核对支付、贴现与边界，再学习更复杂随机波动和跳跃模型。固定收益方向还需要期限结构、久期与凸性，数值方向需要收敛和误差分析。\n\n## 练习\n\n**1.** 到期85，执行价100，买看涨卖看跌的支付是多少？\n\n<details><summary>查看解答</summary>\n\n看涨0，卖看跌−15，合计−15，等于远期多头支付85−100。净利润还要扣初始净权利金及资金成本。\n\n</details>\n\n**2.** 二叉树真实上涨概率改为0.7，其他可交易价格与支付不变，看涨无套利价格改变吗？\n\n<details><summary>查看解答</summary>\n\n在上述完备一期复制模型中不变。复制持仓仍逐状态匹配支付，风险中性权重仍由100、120、80及无风险收益确定。真实概率会改变预测收益，不改变复制成本。\n\n</details>\n\n[课程与资料索引](/read/?slug=quant-course-66) · [下载课程示例代码](/assets/downloads/quant-curriculum-examples.zip)\n\n## 配套代码\n\n[下载本节代码（ZIP）](/assets/downloads/courses/quant-course-64.zip)\n\n压缩包包含脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n",
+  "metadata": {
+    "curriculum": {
+      "cover": "/assets/figures/curriculum/course-64.svg",
+      "level": "进阶",
+      "stage": 11,
+      "number": 64,
+      "edition": "2026-10-revised",
+      "minutes": 50,
+      "source_refs": [
+        {
+          "book": "Roadmap Ultimate Edition",
+          "chapters": "2、11",
+          "pdf_pages": [
+            13,
+            14,
+            37,
+            38
+          ]
+        },
+        {
+          "book": "量化交易：算法、分析、数据、模型和优化",
+          "chapters": "2.2、3.3及附录A",
+          "pdf_pages": [
+            38,
+            39,
+            83,
+            84,
+            85,
+            292,
+            293,
+            294,
+            295,
+            296,
+            297,
+            298,
+            299
+          ]
+        }
+      ],
+      "stage_title": "研究系统与综合实践"
+    },
+    "code_download": {
+      "url": "/assets/downloads/courses/quant-course-64.zip",
+      "examples": 1
+    }
+  }
+}

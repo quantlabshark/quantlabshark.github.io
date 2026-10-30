@@ -1,0 +1,15 @@
+{
+  "slug": "ref-join",
+  "title": "merge_asof：按已知时间连接",
+  "summary": "将记录与当时已经公布的数据连接。",
+  "kind": "reference",
+  "track": "",
+  "series": "",
+  "sort_order": 32,
+  "section_ids": [
+    "13c09645-17ba-4818-ac04-473fbd820fb0",
+    "c41526dd-742a-469f-9389-9bfddcee30dc"
+  ],
+  "body": "## merge_asof：按可用时间合并\n\n`merge_asof` 用最接近的时间匹配两张表。设置 `direction=\"backward\"` 时，从不晚于查询时点的记录中选择最近一条，适合合并已经公布的信息。\n\n两张表应先按连接时间排序。财报使用披露时间作为匹配字段，报告期另行保留；需要限制信息有效期时，可设置 `tolerance`，超过范围的记录不再匹配。\n",
+  "metadata": {}
+}

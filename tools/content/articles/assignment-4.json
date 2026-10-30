@@ -1,0 +1,14 @@
+{
+  "slug": "assignment-4",
+  "title": "实践 4 · 成本敏感性",
+  "summary": "固定窗口，比较单边 0、5、10、20 基点成本。",
+  "kind": "assignment",
+  "track": "",
+  "series": "",
+  "sort_order": 43,
+  "section_ids": [
+    "eef736ef-be09-4f13-99d4-433464d67f07"
+  ],
+  "body": "## 任务\n\n固定策略窗口、价格数据和成交规则，分别采用单边 0、5、10、20 基点费率，比较净值与累计费用。\n\n## 提交材料\n\n提交参数表、净值对比图和结果说明。根据成交金额解释费用增加幅度，并分析净收益对费率的敏感程度。\n\n## 评价标准\n\n控制比较条件占 30%，费用口径占 40%，结果解释占 30%。\n\n## 提交方式\n\n在[GitHub 作业提交](https://github.com/quantlabshark/quantlabshark.github.io/issues/new?template=assignment.yml)中填写任务编号、方法、结果与代码链接。提交内容公开可见，需使用 GitHub 账号；账号令牌和个人隐私信息保留在本机。讨论题目时，也可在[讨论中心](/community/)发帖。\n",
+  "metadata": {}
+}

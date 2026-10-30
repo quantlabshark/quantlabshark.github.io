@@ -1,0 +1,15 @@
+{
+  "slug": "ref-missing",
+  "title": "isna：检查缺失数据",
+  "summary": "统计缺失数量，区分停牌、未上市与采集缺失。",
+  "kind": "reference",
+  "track": "",
+  "series": "",
+  "sort_order": 31,
+  "section_ids": [
+    "13c09645-17ba-4818-ac04-473fbd820fb0",
+    "c41526dd-742a-469f-9389-9bfddcee30dc"
+  ],
+  "body": "## isna：检查缺失数据\n\n`isna()` 标记表格中的空值，随后按列求和，得到每列缺失数量。\n\n```python\nprint(df.isna().sum())\n```\n\n缺失可能来自停牌、尚未上市或采集失败。前向填充用上一条有效值代替空值，适用于某些估值场景，但沿用的价格并不表示当天可以成交。应根据缺失原因与字段用途确定处理方式。\n",
+  "metadata": {}
+}

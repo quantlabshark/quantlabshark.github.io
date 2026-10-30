@@ -1,0 +1,37 @@
+{
+  "slug": "larsen-book-03-07",
+  "title": "随机变量变换与卷积",
+  "summary": "用概率守恒推导单变量与二维变换，逐步计算平方、独立和及总量占比的分布。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7017,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "随机变量经过平方、求和或取比例后，分布通常发生变化。变换规则需要同时处理数值、支持范围和概率在新坐标中的密度。\n\n## 从分布函数求平方后的密度\n\n令 X 在 (0,1) 上均匀，$Y=X^2$。对 $0<y<1$，\n\n$$F_Y(y)=P(X^2\\le y)=P(X\\le\\sqrt y)=\\sqrt y,$$\n\n求导得到 $f_Y(y)=1/(2\\sqrt y)$。平方将靠近零的区间压得更短，相同概率集中到较短区间，密度因而增高。\n\n若 $y=g(x)$ 单调可逆，反函数为 $x=h(y)$，小区间的概率守恒给出 $f_Y(y)|dy|=f_X(x)|dx|$，于是\n\n$$f_Y(y)=f_X(h(y))|h'(y)|.$$\n\n非单调变换要把所有反解分支相加。例如 X 在 (-1,1) 上均匀，平方后对应 $x=\\pm\\sqrt y$ 两支，各贡献 $1/(4\\sqrt y)$，合计仍为 $1/(2\\sqrt y)$。\n\n## 两个独立变量之和\n\n令 $Z=X+Y$。固定 $X=x$ 后，Y 必须在 z-x 附近，独立性使联合密度等于乘积，因此\n\n$$f_Z(z)=\\int_{-\\infty}^{\\infty}f_X(x)f_Y(z-x)dx.$$\n\n这称为卷积。X、Y 都在 (0,1) 均匀时，必须有 $\\max(0,z-1)<x<\\min(1,z)$。被积函数为 1，积分等于这段长度，得到\n\n$$f_Z(z)=\\begin{cases}z,&0<z<1,\\\\2-z,&1\\le z<2,\\\\0,&\\text{其他}.\n\\end{cases}$$\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/transform.svg\" alt=\"两个独立零到一均匀变量之和呈三角形密度。\" loading=\"lazy\"></figure>\n\n例如 $P(Z<1/2)=\\int_0^{1/2}z\\,dz=1/8$。独立求和改变了区间各处的重合方式，结果成为三角形密度。\n\n## 二维变换的面积比例\n\n二维变换使用反变换的雅可比行列式：\n\n$$f_{U,V}(u,v)=f_{X,Y}(x(u,v),y(u,v))\\left|x_u y_v-x_v y_u\\right|.$$\n\n$x_u$ 表示 x 对 u 的偏导，行列式给出小面积的缩放比例。若 $U=X+Y,V=X-Y$，反变换为 $X=(U+V)/2,Y=(U-V)/2$，行列式绝对值为 1/2；同时还要把原区域的不等式代入反变换，确定新的支持。\n\n## 总量与占比的算例\n\n设 X、Y 独立，密度都是 $e^{-x}$（x>0）。令 $U=X+Y,V=X/(X+Y)$，反变换是 $X=UV,Y=U(1-V)$，支持为 u>0、0<v<1。行列式为 $v(-u)-u(1-v)=-u$，故\n\n$$f_{U,V}(u,v)=e^{-uv}e^{-u(1-v)}u=ue^{-u}.$$\n\n对 v 从 0 积到 1 得 $f_U(u)=ue^{-u}$；对 u 从 0 积到无穷得 $f_V(v)=1$。在这个矩形支持上，联合密度等于边际乘积，所以总量与占比独立。\n\n## 乘积怎样分布\n\n令 $Z=XY$，同时保留 $V=X$。反变换为 $X=V,Y=Z/V$，面积比例为 $1/|v|$，于是\n\n$$f_Z(z)=\\int_{-\\infty}^{\\infty}f_{X,Y}(v,z/v)\\frac{dv}{|v|}.$$\n\n这里假定联合密度存在；积分只在反变换落入原支持的区域上进行。X、Y 独立且均为 U(0,1) 时，$0<z<1$ 要求 $z<v<1$，所以 $f_Z(z)=\\int_z^1dv/v=-\\log z$。积分得到 $F_Z(z)=z(1-\\log z)$，例如乘积不超过 1/4 的概率约为 0.5966。\n\n## 比值怎样分布\n\n令 $R=X/Y,V=Y$，反变换为 $X=RV,Y=V$，面积比例为 $|v|$。因此\n\n$$f_R(r)=\\int_{-\\infty}^{\\infty}|v|f_{X,Y}(rv,v)\\,dv.$$\n\n对两个独立 U(0,1) 变量，r 必须为正，且 $0<v<\\min(1,1/r)$。积分 $\\int v\\,dv$ 给出\n\n$$f_R(r)=\\begin{cases}1/2,&0<r\\le1,\\\\1/(2r^2),&r>1,\\\\0,&r\\le0.\\end{cases}$$\n\n两段的积分各为 1/2，总概率为 1。尽管 X、Y 都不超过 1，分母接近零仍会产生很大的比值。例如 $P(R>2)=\\int_2^\\infty dr/(2r^2)=1/4$。\n\n> **鲨鱼说** 变换密度可以依次做三步：求反变换，改写支持范围，乘上长度或面积比例。少掉任何一步，都可能使总概率不再等于一。\n\n## 练习\n1. X 在[0,2]均匀分布，求 Y=3X+1 的密度。\n2. 两个独立[0,1]均匀变量之和为 Z，求 $P(Z<1/2)$ 与 $P(Z>3/2)$。\n\n[本章习题](/read/?slug=larsen-book-03-11)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/larsen-book-03-07.zip",
+        "label": "随机变量变换与卷积 · Python 示例",
+        "size_bytes": 1078,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第一部分 · 概率与随机变量",
+      "number": 17,
+      "chapter": "3",
+      "edition": "2026-10",
+      "minutes": 8,
+      "section": "7",
+      "chapter_title": "随机变量",
+      "source_sections": [
+        "3.8"
+      ]
+    }
+  }
+}

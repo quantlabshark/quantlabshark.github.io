@@ -1,0 +1,48 @@
+{
+  "slug": "quant-course-34",
+  "title": "34 · 朴素贝叶斯与情绪分类",
+  "summary": "从词计数推导情绪后验，理解平滑、对数计算和类别不平衡，并把文本识别与收益预测分开检验。",
+  "kind": "lesson",
+  "track": "机器学习与文本",
+  "series": "量化研究系统课程",
+  "sort_order": 34,
+  "cover_url": "/assets/figures/curriculum/course-34.svg",
+  "section_ids": [
+    "5c14064d-8915-5f7c-bcc6-f9bd10d4c40e"
+  ],
+  "body": "朴素贝叶斯用类别先验和词语出现概率计算分类结果。平滑处理用于应对训练中未出现的词，模型评价还需结合类别比例和测试数据。\n\n## “利润增长”如何改变正面概率\n\n四句训练文本中，正面两句是“利润 增长”“订单 增长”，负面两句是“利润 下降”“订单 下降”。新句“利润 增长”出现后，模型怎样从初始正面概率50%更新判断？\n\n贝叶斯公式为$P(c\\mid d)\\propto P(c)P(d\\mid c)$。$P(c)$是类别先验，$P(d\\mid c)$是某类产生这篇文本的似然，归一化后得到后验。先验来自类别比例或另外指定的总体信息，不能把“正面中常出现增长”直接倒置成“出现增长就一定正面”。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>似然，即把观测数据固定后，将其出现概率或密度视为参数的函数。</p></aside>\n\n## 四词语料的手算过程\n\n词表为利润、订单、增长、下降。正类总词数4，词计数为1、1、2、0；负类为1、1、0、2。加一平滑给每词额外加1，因此分母由4变成$4+4=8$。\n\n|词|正类条件概率|负类条件概率|\n|---|---:|---:|\n|利润|2/8|2/8|\n|订单|2/8|2/8|\n|增长|3/8|1/8|\n|下降|1/8|3/8|\n\n新句“利润 增长”的正类未归一化分数为$(1/2)(2/8)(3/8)=3/64$，负类为$1/64$。归一化后正类概率$3/(3+1)=0.75$。如果没有平滑，正类中没出现“下降”，含这个词的任何句子都可能被赋零似然。\n\n![不同词语证据下的正面后验](/assets/figures/curriculum/course-34.svg)\n\n图中只有“利润”时两类证据相同，概率仍为0.5；加入一次“增长”后为0.75；重复两次“增长”时似然比变为9，正面概率0.9。重复会强化模型证据，但真实语言中的重复未必是独立信息。\n\n## “朴素”简化了哪些依赖\n\n多项式朴素贝叶斯把文档看作词计数，给定类别后用同一组词概率解释各次出现，忽略复杂词序与依赖。对计数$x_j$，类别对数分数为\n\n$$\\log P(c)+\\sum_jx_j\\log P(w_j\\mid c).$$\n\n对数把连乘变为相加，避免长文档中许多小概率相乘后数值下溢。它是易计算的基准假设，真实语言并不满足严格的词独立关系。\n\n```python\nimport numpy as np\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.feature_extraction.text import CountVectorizer\nfrom sklearn.naive_bayes import MultinomialNB\nfrom sklearn.metrics import confusion_matrix\n\ntexts = [\"利润 增长\", \"订单 增长\", \"利润 下降\", \"订单 下降\"]\nlabels = [1, 1, 0, 0]\nmodel = make_pipeline(\n    CountVectorizer(tokenizer=str.split, token_pattern=None, lowercase=False),\n    MultinomialNB(alpha=1.0)\n)\nmodel.fit(texts, labels)\nprob = model.predict_proba([\"利润 增长\"])[0]\nprint(\"probability for classes 0,1:\", prob)\nassert np.allclose(prob, [0.25, 0.75])\ncheck_texts = [\"订单 增长\", \"利润 下降\"]\ncheck_labels = [1, 0]\nprint(confusion_matrix(check_labels, model.predict(check_texts), labels=[0, 1]))\nprint(\"negation example:\", model.predict_proba([\"利润 不 增长\"])[0])\n```\n\n输出类别0、1概率为0.25、0.75。检查句复用了训练词汇，混淆矩阵仅用于验证程序关系，不作为独立测试成绩。末句“利润 不 增长”中的“不”未进入训练词表，因此仍被判成与“利润 增长”相同的输入，直接暴露了当前表示的缺陷。\n\n## 标签与类别比例先于模型\n\n建立语料时，每行保留文本、正负标签及标注依据。正面标签可能指看好股价、经营改善或积极语气，三者应选定一个一致定义。“亏损缩小”与“利润下降”需要标注指南，而不是只数正负词。\n\n若为了训练均衡而人为各取一半正负样本，真实新闻中正面比例却只有20%，直接使用训练先验可能使概率偏高。可以按实际目标分布估计先验或进行校准，并在符合应用分布的后段数据上评价。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>0.75是当前语料、平滑规则和模型假设下的正面概率。它不是股票上涨75%的概率，训练标签决定了数字究竟在描述什么。</p></aside>\n\n## 准确率为何可能掩盖失败\n\n100篇文章中仅10篇正面，全部猜负面也有90%准确率，但正面召回率为0。混淆矩阵记录真实与预测类别的交叉数量。精确率为$TP/(TP+FP)$，回答“预测正面的有多少正确”。召回率为$TP/(TP+FN)$，回答“实际正面的文章中识别出了多少”。\n\n例如预测正面12篇，其中8篇真阳性，精确率$8/12=66.7\\%$，若真实正面10篇，召回率$8/10=80\\%$。概率还可用Brier分数或对数损失评价校准，不能只看最终正负判断。\n\n## 否定、转载与市场应用\n\n保留否定词、加入相邻词组、扩充一致标注语料，有助于处理“下降幅度收窄”等表达。标题和引用正文还可能有不同主体。训练与测试应按时间和事件处理近重复，防止同一新闻的不同转载跨入两段。\n\n情绪模型可生成每资产每日已知新闻的平均概率、正负比例或情绪变化，再与未来收益构造单独研究。没有新闻并不等于情绪中性。同一事件十篇转载也不等于十条独立证据。聚合窗口必须在决策前结束，再加入成交延迟、成本和基准。\n\n## 练习\n\n只出现两次“下降”时，正面后验是多少？在100篇文本中只正确找出8篇正面、误报4篇，精确率与召回率是否相同？\n\n<details><summary>查看解答</summary>\n\n两类先验相同，负类似然是正类9倍，正面后验为0.1。精确率为$8/(8+4)=66.7\\%$；召回率还需要知道真实正面总数，若为10篇则为80%。二者分母不同，不能互换。\n\n</details>\n\n---\n\n[课程目录](/courses/)\n\n## 配套代码\n\n[下载本节代码（ZIP）](/assets/downloads/courses/quant-course-34.zip)\n\n压缩包包含脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n",
+  "metadata": {
+    "curriculum": {
+      "cover": "/assets/figures/curriculum/course-34.svg",
+      "level": "进阶",
+      "stage": 6,
+      "number": 34,
+      "edition": "2026-10",
+      "minutes": 40,
+      "source_refs": [
+        {
+          "book": "深入浅出Python量化交易实战",
+          "chapters": "12.1–12.3",
+          "pdf_pages": [
+            251,
+            252,
+            255,
+            257,
+            258,
+            260,
+            261,
+            262,
+            263,
+            264,
+            266
+          ]
+        }
+      ],
+      "stage_title": "机器学习与文本"
+    },
+    "code_download": {
+      "url": "/assets/downloads/courses/quant-course-34.zip",
+      "examples": 1
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "slug": "backtest-ledger",
+  "title": "11 · 写出能逐笔核对的回测账本",
+  "summary": "用标准库实现现金、持仓、成交费用和权益，明确新仓位从何时贡献收益。",
+  "kind": "lesson",
+  "track": "回测与验证",
+  "series": "回测与验证",
+  "sort_order": 11,
+  "section_ids": [],
+  "body": "## 现金、持仓与账户权益\n\n回测账本逐日记录现金、持仓数量、交易动作和账户权益。权益等于现金加上持仓的当前市值；交易费用则减少现金或可购买的份额。\n\n下面使用模拟价格，初始现金为 1000，允许零碎份额，只做多或持有现金，不计利息和税。当天收盘价高于前一天时生成买入信号，在下一天收盘执行；否则目标为空仓。\n\n## 买入费用与可用资金\n\n单边费用为五个基点，即成交金额的 0.05%。全仓买入时，现金需要同时支付资产和费用，所以购买份额等于现金除以 `价格×(1+费率)`。卖出时，到账金额等于 `份额×价格×(1−费率)`。\n\n~~~python\nprice = [100., 102., 101., 103., 105., 104., 106., 107.]\nfee = 5 / 10000\ncash, shares = 1000.0, 0.0\nsignals = []\nprint(\"day price signal action cash shares equity\")\nfor t, p in enumerate(price):\n    target = signals[t - 1] if t > 0 else 0\n    action = \"hold\"\n    if target == 1 and shares == 0:\n        shares = cash / (p * (1 + fee))\n        cash -= shares * p * (1 + fee)\n        action = \"buy\"\n    elif target == 0 and shares > 0:\n        cash += shares * p * (1 - fee)\n        shares = 0.0\n        action = \"sell\"\n    signal = int(t > 0 and p > price[t - 1])\n    signals.append(signal)\n    equity = cash + shares * p\n    assert cash >= -1e-9 and shares >= 0\n    print(t, p, signal, action,\n          round(cash, 4), round(shares, 6), round(equity, 4))\n~~~\n\n## 第一次交易的时间顺序\n\n索引 1 的价格为 102，高于上一日的 100，因此生成买入信号。索引 2 收盘时以 101 买入，份额约为 9.8960。当日权益约为 999.5002，差额来自买入费用。索引 2 收盘之前的价格下降发生在成交前，下一段价格变化才影响新持仓。\n\n程序最后一行按市值估值，没有卖出剩余持仓，因此尚未扣除期末卖出费用。若需要比较全部平仓后的资金，应增加平仓动作，并对所有规则采用相同处理。\n\n## 练习\n\n费用改为零时，首次买入的份额与当日权益分别是多少？\n\n参考答案：首次买入仍在索引 2，份额为 `1000/101`，约 9.90099；按同一价格估值，当日权益仍为 1000。比较有费和无费结果，可以核对费用是否在成交时正确扣除。\n",
+  "metadata": {
+    "legacy_course": true
+  }
+}

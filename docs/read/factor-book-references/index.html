@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>参考文献与主题检索 · QuantLab</title>
+  <meta name="description" content="按研究问题查找资产定价、因子构造、统计检验与投资实施的文献。">
+  <meta name="theme-color" content="#f6f5f0" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#111816" media="(prefers-color-scheme: dark)">
+
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <script>// Apply saved appearance before the first paint; controls load without blocking HTML.
+(() => {
+ const root=document.documentElement;
+ root.classList.add('has-js');
+ let theme='system',palette='green',width=null,collapsed=false;
+ try{theme=localStorage.getItem('foamlab.theme')||'system';palette=localStorage.getItem('foamlab.palette')||'green';width=Number(localStorage.getItem('foamlab.sidebarWidth'));collapsed=localStorage.getItem('foamlab.sidebarCollapsed')==='1';}catch{}
+ root.dataset.theme=['light','dark'].includes(theme)?theme:(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+ root.dataset.palette=['green','blue','pink','lavender','beige'].includes(palette)?palette:'green';
+ root.style.colorScheme=root.dataset.theme;
+ const backgrounds={green:{light:'#f6f5f0',dark:'#111816'},blue:{light:'#f3f5f8',dark:'#111821'},pink:{light:'#faf4f5',dark:'#20171c'},lavender:{light:'#f6f4fa',dark:'#1b1723'},beige:{light:'#faf6ed',dark:'#201c15'}};
+ document.querySelectorAll('meta[name="theme-color"]').forEach(meta=>meta.content=backgrounds[root.dataset.palette][root.dataset.theme]);
+ root.classList.toggle('sidebar-collapsed',collapsed);
+ if(innerWidth>=761&&Number.isFinite(width)&&width>=200)root.style.setProperty('--sidebar',Math.round(Math.max(200,Math.min(480,Math.floor(innerWidth*.38),width)))+'px');
+})();
+</script>
+  <link rel="stylesheet" href="/assets/site-core.css?v=b4e680cc0180">
+  <link rel="preload" href="/assets/site-extras.css?v=84d30dffa3aa" as="style">
+  <link rel="preload" href="/assets/card-backgrounds.css?v=ce5875e45a6a" as="style">
+  <script src="/assets/runtime-content.js?v=a94a050fad3b" defer></script>
+  <script src="/assets/appearance.js?v=67ddfcfe66ed" defer></script>
+  <script src="/assets/sidebar-resize.js?v=33c42fbee2a7" defer></script>
+  <script src="/assets/navigation-tree.js?v=7e2f0c65e4d7" defer></script>
+  <script type="application/json" id="course-navigation-data">[{"slug":"quant-course-01","title":"01 · 量化研究、交易规则与账户核算","number":1},{"slug":"quant-course-02","title":"02 · 股票、债券与衍生品怎样产生盈亏","number":2},{"slug":"quant-course-03","title":"03 · 订单簿中的价格、数量与成交成本","number":3},{"slug":"quant-course-04","title":"04 · 收益率、现金流与复利净值","number":4},{"slug":"quant-course-05","title":"05 · 波动、回撤与分散投资各衡量什么","number":5},{"slug":"quant-course-06","title":"06 · 设计样本、验证样本与研究假说","number":6},{"slug":"quant-course-07","title":"07 · 运行 Python 与保存结果","number":7},{"slug":"quant-course-08","title":"08 · 用变量、列表和函数表达交易账本","number":8},{"slug":"quant-course-09","title":"09 · NumPy 数组怎样计算多资产收益","number":9},{"slug":"quant-course-10","title":"10 · 用 pandas 整理日期、重复记录与缺失值","number":10},{"slug":"quant-course-11","title":"11 · 行情、财报与文本分别记录什么","number":11},{"slug":"quant-course-12","title":"12 · 按信息到达时间重建历史数据","number":12},{"slug":"quant-course-13","title":"13 · 条件概率怎样表达市场信息","number":13},{"slug":"quant-course-14","title":"14 · 期望、方差与协方差怎样连接组合风险","number":14},{"slug":"quant-course-15","title":"15 · 样本均值有多精确：标准误与重抽样","number":15},{"slug":"quant-course-16","title":"16 · 回归直线怎样解释收益与残差","number":16},{"slug":"quant-course-17","title":"17 · 价格趋势、收益平稳性与波动聚集","number":17},{"slug":"quant-course-18","title":"18 · 显著性、多重检验与策略筛选","number":18},{"slug":"quant-course-19","title":"19 · 从收盘信号到下一次成交的账户路径","number":19},{"slug":"quant-course-20","title":"20 · 移动平均怎样生成趋势持仓","number":20},{"slug":"quant-course-21","title":"21 · 突破通道、真实波幅与风险仓位","number":21},{"slug":"quant-course-22","title":"22 · 配对价差、均值回复与季节性效应","number":22},{"slug":"quant-course-23","title":"23 · 交易成本、成交约束与绩效指标","number":23},{"slug":"quant-course-24","title":"24 · 样本外回测与研究报告","number":24},{"slug":"quant-course-25","title":"25 · 因子定义与截面选股","number":25},{"slug":"quant-course-26","title":"26 · 分组收益、信息系数与换手","number":26},{"slug":"quant-course-27","title":"27 · 标准化、相关性与主成分分析","number":27},{"slug":"quant-course-28","title":"28 · 线性回归、Ridge与Lasso","number":28},{"slug":"quant-course-29","title":"29 · KNN分类与回归","number":29},{"slug":"quant-course-30","title":"30 · 决策树与随机森林","number":30},{"slug":"quant-course-31","title":"31 · 支持向量机与动态特征选择","number":31},{"slug":"quant-course-32","title":"32 · 新闻文本、分词与信息时点","number":32},{"slug":"quant-course-33","title":"33 · 文本向量化与主题模型","number":33},{"slug":"quant-course-34","title":"34 · 朴素贝叶斯与情绪分类","number":34},{"slug":"quant-course-35","title":"35 · 神经网络、卷积与LSTM","number":35},{"slug":"quant-course-36","title":"36 · 预测模型的训练、验证与回测","number":36},{"slug":"quant-course-37","title":"37 · 均值方差与有效前沿","number":37},{"slug":"quant-course-38","title":"38 · Alpha、Beta与主动组合","number":38},{"slug":"quant-course-39","title":"39 · 收缩估计与Black–Litterman配置","number":39},{"slug":"quant-course-40","title":"40 · 参数不确定性与重抽样组合","number":40},{"slug":"quant-course-41","title":"41 · 多期配置、再平衡与交易成本","number":41},{"slug":"quant-course-42","title":"42 · 资本增长与风险预算","number":42},{"slug":"quant-course-43","title":"43 · 随机游走、布朗运动与鞅","number":43},{"slug":"quant-course-44","title":"44 · 马尔可夫链、动态规划与HJB","number":44},{"slug":"quant-course-45","title":"45 · 泊松过程、自激过程与模拟","number":45},{"slug":"quant-course-46","title":"46 · 订单簿重建与成交机制","number":46},{"slug":"quant-course-47","title":"47 · 订单不平衡与价格预测","number":47},{"slug":"quant-course-48","title":"48 · 排队模型与扩散近似","number":48},{"slug":"quant-course-49","title":"49 · 买卖价反弹与已实现波动率","number":49},{"slug":"quant-course-50","title":"50 · 噪声修正、双尺度与已实现核","number":50},{"slug":"quant-course-51","title":"51 · 异步交易与多资产协方差","number":51},{"slug":"quant-course-52","title":"52 · 傅里叶估计、跳跃与幂变差","number":52},{"slug":"quant-course-53","title":"53 · 持续时间、ACD与标值点过程","number":53},{"slug":"quant-course-54","title":"54 · 波动率预测与状态变化","number":54},{"slug":"quant-course-55","title":"55 · TWAP、VWAP与最优执行","number":55},{"slug":"quant-course-56","title":"56 · 价格冲击与订单簿恢复","number":56},{"slug":"quant-course-57","title":"57 · 多资产执行与最优配置","number":57},{"slug":"quant-course-58","title":"58 · 做市报价、库存与脉冲控制","number":58},{"slug":"quant-course-59","title":"59 · 智能订单路由与随机逼近","number":59},{"slug":"quant-course-60","title":"60 · 暗池、删失数据与流动性分配","number":60},{"slug":"quant-course-61","title":"61 · 行情、信号与订单系统","number":61},{"slug":"quant-course-62","title":"62 · 操作风险、策略风险与监控","number":62},{"slug":"quant-course-63","title":"63 · 市场规则与交易约束的核查","number":63},{"slug":"quant-course-64","title":"64 · 衍生品、波动率与后续学习","number":64},{"slug":"quant-course-65","title":"65 · 均线策略研究项目","number":65},{"slug":"quant-course-66","title":"66 · 学习资料索引与职业准备","number":66}]</script>
+  <script src="/assets/navigation.js?v=db79dafa14a6" defer></script>
+
+  <script src="/assets/search-matches.js?v=10f98f89b4c9" defer></script>
+  <script src="/assets/search-scope.js?v=91e891d855f8" defer></script>
+  <script src="/assets/site.js?v=34b5462dad2f" defer></script>
+  <script src="/assets/downloads-manifest.js?v=7547b98b5a05" defer></script>
+  <script src="/assets/runtime-ui.js?v=941fcf0f4063" defer></script>
+  <script src="/assets/interview-view.js?v=06405929084b" defer></script><link rel="stylesheet" href="/assets/interview.css?v=5cfe38287657">
+
+
+
+
+
+
+
+  <script src="/assets/runtime-panda-art.js?v=f22136a916fc" defer fetchpriority="low"></script>
+  <script src="/assets/panda-notes.js?v=450d905a9ae7" defer></script>
+  <script src="/assets/static-reader.js?v=fbf4990f900e" defer></script>
+  <script src="/assets/static-catalog.js?v=59c858249491" defer></script>
+  <link rel="stylesheet" href="/assets/site-extras.css?v=84d30dffa3aa">
+  <link rel="stylesheet" href="/assets/card-backgrounds.css?v=ce5875e45a6a">
+<link rel="stylesheet" href="/assets/quant.css?v=107e4adbb86d"><meta name="generator" content="Hexo 8.1.2"></head>
+<body data-section="read" data-nav-section="" data-lesson="">
+<a class="skip" href="#main">跳到主要内容</a>
+<aside class="sidebar" id="sidebar">
+  <button class="icon-button sidebar-close" type="button" data-close-nav aria-label="关闭导航">×</button>
+  <a class="brand" href="/"><span class="brand-mark"><img src="/assets/favicon.svg" alt="" width="44" height="44"></span><span>QuantLab<small>小鲨陪你学量化</small></span></a>
+  <div class="version"><span class="status-dot"></span> Python · 数据 · 研究</div>
+  <nav aria-label="主要导航">
+    <div class="nav-label">学习与研究</div><div class="nav-group" data-directory-id="091fce16-2e52-4792-8cb6-acb9f615e856" data-nav-section="home"><div class="nav-parent"><a class="nav-item " href="/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10 12 3l9 7v11h-6v-7H9v7H3Z"/></svg><span>学习概览</span></a></div></div><div class="nav-group" data-directory-id="773a34b4-8d48-4fca-9258-927b946d2914" data-nav-section="start"><div class="nav-parent"><a class="nav-item " href="/start/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg><span>快速开始</span></a></div></div><div class="nav-group" data-directory-id="c2c20043-d270-4aed-babd-39d07e85f26a" data-nav-section="courses"><div class="nav-parent"><a class="nav-item " href="/courses/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v16M3 4c4-1 7 0 9 2 2-2 5-3 9-2v16c-4-1-7 0-9 2-2-2-5-3-9-2Z"/></svg><span>系统学习</span></a><button type="button" class="nav-expand" aria-controls="directory-c2c20043-d270-4aed-babd-39d07e85f26a" aria-expanded="false" aria-label="展开系统学习子目录"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 6 6-6 6"/></svg></button></div><div class="nav-subgroup" id="directory-c2c20043-d270-4aed-babd-39d07e85f26a" hidden><div class="nav-group" data-directory-id="curriculum-level-beginner" data-nav-section="curriculum-level-beginner"><div class="nav-parent"><a class="nav-item nav-subitem " href="/courses/?level=beginner"><span>入门</span></a><button type="button" class="nav-expand" aria-controls="directory-curriculum-level-beginner" aria-expanded="false" aria-label="展开入门子目录"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 6 6-6 6"/></svg></button></div><div class="nav-subgroup" id="directory-curriculum-level-beginner" hidden><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-01" data-nav-section="curriculum-lesson-quant-course-01"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-01/"><span>01 · 量化研究、交易规则与账户核算</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-02" data-nav-section="curriculum-lesson-quant-course-02"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-02/"><span>02 · 股票、债券与衍生品怎样产生盈亏</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-03" data-nav-section="curriculum-lesson-quant-course-03"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-03/"><span>03 · 订单簿中的价格、数量与成交成本</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-04" data-nav-section="curriculum-lesson-quant-course-04"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-04/"><span>04 · 收益率、现金流与复利净值</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-05" data-nav-section="curriculum-lesson-quant-course-05"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-05/"><span>05 · 波动、回撤与分散投资各衡量什么</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-06" data-nav-section="curriculum-lesson-quant-course-06"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-06/"><span>06 · 设计样本、验证样本与研究假说</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-07" data-nav-section="curriculum-lesson-quant-course-07"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-07/"><span>07 · 运行 Python 与保存结果</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-08" data-nav-section="curriculum-lesson-quant-course-08"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-08/"><span>08 · 用变量、列表和函数表达交易账本</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-09" data-nav-section="curriculum-lesson-quant-course-09"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-09/"><span>09 · NumPy 数组怎样计算多资产收益</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-10" data-nav-section="curriculum-lesson-quant-course-10"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-10/"><span>10 · 用 pandas 整理日期、重复记录与缺失值</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-11" data-nav-section="curriculum-lesson-quant-course-11"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-11/"><span>11 · 行情、财报与文本分别记录什么</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-12" data-nav-section="curriculum-lesson-quant-course-12"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-12/"><span>12 · 按信息到达时间重建历史数据</span></a></div></div></div></div><div class="nav-group" data-directory-id="curriculum-level-foundation" data-nav-section="curriculum-level-foundation"><div class="nav-parent"><a class="nav-item nav-subitem " href="/courses/?level=foundation"><span>基础</span></a><button type="button" class="nav-expand" aria-controls="directory-curriculum-level-foundation" aria-expanded="false" aria-label="展开基础子目录"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 6 6-6 6"/></svg></button></div><div class="nav-subgroup" id="directory-curriculum-level-foundation" hidden><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-13" data-nav-section="curriculum-lesson-quant-course-13"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-13/"><span>13 · 条件概率怎样表达市场信息</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-14" data-nav-section="curriculum-lesson-quant-course-14"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-14/"><span>14 · 期望、方差与协方差怎样连接组合风险</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-15" data-nav-section="curriculum-lesson-quant-course-15"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-15/"><span>15 · 样本均值有多精确：标准误与重抽样</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-16" data-nav-section="curriculum-lesson-quant-course-16"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-16/"><span>16 · 回归直线怎样解释收益与残差</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-17" data-nav-section="curriculum-lesson-quant-course-17"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-17/"><span>17 · 价格趋势、收益平稳性与波动聚集</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-18" data-nav-section="curriculum-lesson-quant-course-18"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-18/"><span>18 · 显著性、多重检验与策略筛选</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-19" data-nav-section="curriculum-lesson-quant-course-19"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-19/"><span>19 · 从收盘信号到下一次成交的账户路径</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-20" data-nav-section="curriculum-lesson-quant-course-20"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-20/"><span>20 · 移动平均怎样生成趋势持仓</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-21" data-nav-section="curriculum-lesson-quant-course-21"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-21/"><span>21 · 突破通道、真实波幅与风险仓位</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-22" data-nav-section="curriculum-lesson-quant-course-22"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-22/"><span>22 · 配对价差、均值回复与季节性效应</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-23" data-nav-section="curriculum-lesson-quant-course-23"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-23/"><span>23 · 交易成本、成交约束与绩效指标</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-24" data-nav-section="curriculum-lesson-quant-course-24"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-24/"><span>24 · 样本外回测与研究报告</span></a></div></div></div></div><div class="nav-group" data-directory-id="curriculum-level-advanced" data-nav-section="curriculum-level-advanced"><div class="nav-parent"><a class="nav-item nav-subitem " href="/courses/?level=advanced"><span>进阶</span></a><button type="button" class="nav-expand" aria-controls="directory-curriculum-level-advanced" aria-expanded="false" aria-label="展开进阶子目录"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 6 6-6 6"/></svg></button></div><div class="nav-subgroup" id="directory-curriculum-level-advanced" hidden><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-25" data-nav-section="curriculum-lesson-quant-course-25"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-25/"><span>25 · 因子定义与截面选股</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-26" data-nav-section="curriculum-lesson-quant-course-26"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-26/"><span>26 · 分组收益、信息系数与换手</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-27" data-nav-section="curriculum-lesson-quant-course-27"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-27/"><span>27 · 标准化、相关性与主成分分析</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-28" data-nav-section="curriculum-lesson-quant-course-28"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-28/"><span>28 · 线性回归、Ridge与Lasso</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-29" data-nav-section="curriculum-lesson-quant-course-29"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-29/"><span>29 · KNN分类与回归</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-30" data-nav-section="curriculum-lesson-quant-course-30"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-30/"><span>30 · 决策树与随机森林</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-31" data-nav-section="curriculum-lesson-quant-course-31"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-31/"><span>31 · 支持向量机与动态特征选择</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-32" data-nav-section="curriculum-lesson-quant-course-32"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-32/"><span>32 · 新闻文本、分词与信息时点</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-33" data-nav-section="curriculum-lesson-quant-course-33"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-33/"><span>33 · 文本向量化与主题模型</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-34" data-nav-section="curriculum-lesson-quant-course-34"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-34/"><span>34 · 朴素贝叶斯与情绪分类</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-35" data-nav-section="curriculum-lesson-quant-course-35"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-35/"><span>35 · 神经网络、卷积与LSTM</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-36" data-nav-section="curriculum-lesson-quant-course-36"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-36/"><span>36 · 预测模型的训练、验证与回测</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-37" data-nav-section="curriculum-lesson-quant-course-37"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-37/"><span>37 · 均值方差与有效前沿</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-38" data-nav-section="curriculum-lesson-quant-course-38"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-38/"><span>38 · Alpha、Beta与主动组合</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-39" data-nav-section="curriculum-lesson-quant-course-39"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-39/"><span>39 · 收缩估计与Black–Litterman配置</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-40" data-nav-section="curriculum-lesson-quant-course-40"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-40/"><span>40 · 参数不确定性与重抽样组合</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-41" data-nav-section="curriculum-lesson-quant-course-41"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-41/"><span>41 · 多期配置、再平衡与交易成本</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-42" data-nav-section="curriculum-lesson-quant-course-42"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-42/"><span>42 · 资本增长与风险预算</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-43" data-nav-section="curriculum-lesson-quant-course-43"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-43/"><span>43 · 随机游走、布朗运动与鞅</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-44" data-nav-section="curriculum-lesson-quant-course-44"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-44/"><span>44 · 马尔可夫链、动态规划与HJB</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-45" data-nav-section="curriculum-lesson-quant-course-45"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-45/"><span>45 · 泊松过程、自激过程与模拟</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-46" data-nav-section="curriculum-lesson-quant-course-46"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-46/"><span>46 · 订单簿重建与成交机制</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-47" data-nav-section="curriculum-lesson-quant-course-47"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-47/"><span>47 · 订单不平衡与价格预测</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-48" data-nav-section="curriculum-lesson-quant-course-48"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-48/"><span>48 · 排队模型与扩散近似</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-49" data-nav-section="curriculum-lesson-quant-course-49"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-49/"><span>49 · 买卖价反弹与已实现波动率</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-50" data-nav-section="curriculum-lesson-quant-course-50"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-50/"><span>50 · 噪声修正、双尺度与已实现核</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-51" data-nav-section="curriculum-lesson-quant-course-51"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-51/"><span>51 · 异步交易与多资产协方差</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-52" data-nav-section="curriculum-lesson-quant-course-52"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-52/"><span>52 · 傅里叶估计、跳跃与幂变差</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-53" data-nav-section="curriculum-lesson-quant-course-53"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-53/"><span>53 · 持续时间、ACD与标值点过程</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-54" data-nav-section="curriculum-lesson-quant-course-54"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-54/"><span>54 · 波动率预测与状态变化</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-55" data-nav-section="curriculum-lesson-quant-course-55"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-55/"><span>55 · TWAP、VWAP与最优执行</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-56" data-nav-section="curriculum-lesson-quant-course-56"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-56/"><span>56 · 价格冲击与订单簿恢复</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-57" data-nav-section="curriculum-lesson-quant-course-57"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-57/"><span>57 · 多资产执行与最优配置</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-58" data-nav-section="curriculum-lesson-quant-course-58"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-58/"><span>58 · 做市报价、库存与脉冲控制</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-59" data-nav-section="curriculum-lesson-quant-course-59"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-59/"><span>59 · 智能订单路由与随机逼近</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-60" data-nav-section="curriculum-lesson-quant-course-60"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-60/"><span>60 · 暗池、删失数据与流动性分配</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-61" data-nav-section="curriculum-lesson-quant-course-61"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-61/"><span>61 · 行情、信号与订单系统</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-62" data-nav-section="curriculum-lesson-quant-course-62"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-62/"><span>62 · 操作风险、策略风险与监控</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-63" data-nav-section="curriculum-lesson-quant-course-63"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-63/"><span>63 · 市场规则与交易约束的核查</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-64" data-nav-section="curriculum-lesson-quant-course-64"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-64/"><span>64 · 衍生品、波动率与后续学习</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-65" data-nav-section="curriculum-lesson-quant-course-65"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-65/"><span>65 · 均线策略研究项目</span></a></div></div><div class="nav-group" data-directory-id="curriculum-lesson-quant-course-66" data-nav-section="curriculum-lesson-quant-course-66"><div class="nav-parent"><a class="nav-item nav-subitem " href="/read/quant-course-66/"><span>66 · 学习资料索引与职业准备</span></a></div></div></div></div></div></div><div class="nav-group" data-directory-id="a99b73bc-8dcb-4d7d-84f2-a0f30d259ede" data-nav-section="topics"><div class="nav-parent"><a class="nav-item " href="/topics/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h7v7H3Zm11 0h7v7h-7ZM3 14h7v7H3Zm11 0h7v7h-7Z"/></svg><span>专题学习</span></a><button type="button" class="nav-expand" aria-controls="directory-a99b73bc-8dcb-4d7d-84f2-a0f30d259ede" aria-expanded="false" aria-label="展开专题学习子目录"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 6 6-6 6"/></svg></button></div><div class="nav-subgroup" id="directory-a99b73bc-8dcb-4d7d-84f2-a0f30d259ede" hidden><div class="nav-group" data-directory-id="e3c5a0d9-13af-5cfa-b8ea-a9301bdcfd6c" data-nav-section="topic-ai"><div class="nav-parent"><a class="nav-item nav-subitem " href="/topics/ai/"><span>人工智能在量化领域的应用</span></a></div></div><div class="nav-group" data-directory-id="afe3747e-9ef6-5c65-aed0-acd6a7560aac" data-nav-section="topic-alpha101"><div class="nav-parent"><a class="nav-item nav-subitem " href="/topics/alpha101/"><span>Alpha101 全解读</span></a></div></div><div class="nav-group" data-directory-id="0c1a2b30-f667-5143-a559-35e10c155085" data-nav-section="topic-factors"><div class="nav-parent"><a class="nav-item nav-subitem " href="/topics/factors/"><span>股票截面因子挖掘</span></a></div></div><div class="nav-group" data-directory-id="f6b5feeb-2b5e-552e-9f24-32acf9c49495" data-nav-section="topic-timing"><div class="nav-parent"><a class="nav-item nav-subitem " href="/topics/timing/"><span>择时研究</span></a></div></div></div></div><div class="nav-group" data-directory-id="6c937a0e-545c-56f5-a699-90c4325073d4" data-nav-section="theory"><div class="nav-parent"><a class="nav-item " href="/theory/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v16M3 4c4-1 7 0 9 2 2-2 5-3 9-2v16c-4-1-7 0-9 2-2-2-5-3-9-2Z"/></svg><span>基础理论与原理</span></a><button type="button" class="nav-expand" aria-controls="directory-6c937a0e-545c-56f5-a699-90c4325073d4" aria-expanded="false" aria-label="展开基础理论与原理子目录"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 6 6-6 6"/></svg></button></div><div class="nav-subgroup" id="directory-6c937a0e-545c-56f5-a699-90c4325073d4" hidden><div class="nav-group" data-directory-id="c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a" data-nav-section="mathematical-statistics"><div class="nav-parent"><a class="nav-item nav-subitem " href="/theory/mathematical-statistics/"><span>数理统计及其应用</span></a></div></div><div class="nav-group" data-directory-id="17859c88-b779-5654-b120-7a4cc7b39714" data-nav-section="stochastic-calculus"><div class="nav-parent"><a class="nav-item nav-subitem " href="/theory/stochastic-calculus/"><span>随机微积分及其应用</span></a></div></div><div class="nav-group" data-directory-id="0d99264a-7913-52fc-8f8e-a4c784c92834" data-nav-section="factor-investing"><div class="nav-parent"><a class="nav-item nav-subitem " href="/theory/factor-investing/"><span>因子投资：方法与实践</span></a></div></div><div class="nav-group" data-directory-id="19808db5-aef6-5fc5-b233-d9732a29916b" data-nav-section="quantitative-trading"><div class="nav-parent"><a class="nav-item nav-subitem " href="/theory/quantitative-trading/"><span>量化交易：算法、分析、数据、模型和优化</span></a></div></div><div class="nav-group" data-directory-id="44e2f2e9-a852-5af5-8a72-788df5e2df9d" data-nav-section="trading-and-exchanges"><div class="nav-parent"><a class="nav-item nav-subitem " href="/theory/trading-and-exchanges/"><span>交易与交易所：市场微观结构</span></a></div></div><div class="nav-group" data-directory-id="3ba9f7c0-467b-529b-9ae6-4e5dd9022046" data-nav-section="python-data-structures"><div class="nav-parent"><a class="nav-item nav-subitem " href="/theory/python-data-structures/"><span>Python 数据结构与算法分析</span></a></div></div></div></div><div class="nav-label">笔试与面试</div><div class="nav-group" data-directory-id="e4929cee-404a-50b6-a5b7-e76678ca05dd" data-nav-section="interview"><div class="nav-parent"><a class="nav-item " href="/interview/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3h8v4H8ZM7 5H4v17h16V5h-3M8 12h8M8 17h5"/></svg><span>量化笔面试</span></a><button type="button" class="nav-expand" aria-controls="directory-e4929cee-404a-50b6-a5b7-e76678ca05dd" aria-expanded="false" aria-label="展开量化笔面试子目录"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 6 6-6 6"/></svg></button></div><div class="nav-subgroup" id="directory-e4929cee-404a-50b6-a5b7-e76678ca05dd" hidden><div class="nav-group" data-directory-id="061c5d65-3752-51b1-815a-0a831b5df727" data-nav-section="interview-zhou"><div class="nav-parent"><a class="nav-item nav-subitem " href="/interview/zhou/"><span>经典书籍题解</span></a></div></div><div class="nav-group" data-directory-id="6609a5e7-aa1a-5c66-9e8a-4566ec0c74ff" data-nav-section="interview-practice"><div class="nav-parent"><a class="nav-item nav-subitem " href="/interview/practice/"><span>笔面试实战</span></a></div></div><div class="nav-group" data-directory-id="e2a8bdb2-93e4-5150-ab6d-83fa6427edd5" data-nav-section="interview-sources"><div class="nav-parent"><a class="nav-item nav-subitem " href="/interview/sources/"><span>资料来源</span></a></div></div></div></div><div class="nav-group" data-directory-id="97fdde0a-c962-59ac-bdc6-f393c05faf5c" data-nav-section="interview-experience"><div class="nav-parent"><a class="nav-item " href="/interview/experience/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v14H3ZM8 7V3h8v4M3 12h18M10 12v3h4v-3"/></svg><span>经验与求职</span></a></div></div><div class="nav-label">实验与工具</div><div class="nav-group" data-directory-id="c41526dd-742a-469f-9389-9bfddcee30dc" data-nav-section="quick-reference"><div class="nav-parent"><a class="nav-item " href="/quick-reference/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 16 22 22M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0"/></svg><span>速查手册</span></a><button type="button" class="nav-expand" aria-controls="directory-c41526dd-742a-469f-9389-9bfddcee30dc" aria-expanded="false" aria-label="展开速查手册子目录"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 6 6-6 6"/></svg></button></div><div class="nav-subgroup" id="directory-c41526dd-742a-469f-9389-9bfddcee30dc" hidden><div class="nav-group" data-directory-id="13c09645-17ba-4818-ac04-473fbd820fb0" data-nav-section="commands"><div class="nav-parent"><a class="nav-item nav-subitem " href="/commands/"><span>Python 速查</span></a></div></div><div class="nav-group" data-directory-id="39a8c8e1-a0a8-4dcd-aeae-ea460cf1031f" data-nav-section="dictionaries"><div class="nav-parent"><a class="nav-item nav-subitem " href="/dictionaries/"><span>研究方法速查</span></a></div></div></div></div><div class="nav-group" data-directory-id="5813c8a9-fb85-4ce0-b907-41b640afd107" data-nav-section="labs"><div class="nav-parent"><a class="nav-item " href="/labs/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 3v18h18M8 16v-5m5 5V7m5 9V5"/></svg><span>交互实验</span></a></div></div><div class="nav-group" data-directory-id="2f203658-6876-400a-afaa-ec29caee921f" data-nav-section="programming"><div class="nav-parent"><a class="nav-item " href="/programming/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 7 5 5-5 5m8 0h6M2 3h20v18H2Z"/></svg><span>Python 实践</span></a></div></div><div class="nav-group" data-directory-id="4560f087-a08d-4b02-8eb8-545d6594d86c" data-nav-section="tools"><div class="nav-parent"><a class="nav-item " href="/tools/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14 6 4 4m-9 4-6 6 2 2 6-6M13 3a6 6 0 0 0-4 10l2 2a6 6 0 0 0 10-4l-4 2-4-4Z"/></svg><span>工具生态</span></a></div></div><div class="nav-label">资源与社区</div><div class="nav-group" data-directory-id="6cb0390d-4b0e-459e-a155-9dfb328810ec" data-nav-section="resources"><div class="nav-parent"><a class="nav-item " href="/resources/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m-5-5 5 5 5-5M3 17v5h18v-5"/></svg><span>资料中心</span></a></div></div><div class="nav-group" data-directory-id="552777e1-0105-4d2d-b417-a210de9b0297" data-nav-section="sharing"><div class="nav-parent"><a class="nav-item " href="/sharing/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v16M3 4c4-1 7 0 9 2 2-2 5-3 9-2v16c-4-1-7 0-9 2-2-2-5-3-9-2Z"/></svg><span>实践与分享</span></a></div></div><div class="nav-group" data-directory-id="eef736ef-be09-4f13-99d4-433464d67f07" data-nav-section="assignments"><div class="nav-parent"><a class="nav-item " href="/assignments/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 3h16v19H4Zm4 7 2 2 5-6M8 17h8"/></svg><span>作业与实践</span></a></div></div><div class="nav-group" data-directory-id="bba8fbde-b0e3-444d-8adc-a61271523e45" data-nav-section="announcements"><div class="nav-parent"><a class="nav-item " href="/announcements/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17h16l-2-4V8a6 6 0 0 0-12 0v5Zm6 4h4"/></svg><span>网站公告</span></a></div></div>
+  </nav>
+  <div class="sidebar-bottom"><div class="tiny-label">QUANTITATIVE LEARNING</div><p>从数据到可验证的研究</p><a href="/read/sources-and-validation/">资料与研究约定 →</a></div>
+</aside>
+<div class="app-shell">
+  <header class="topbar"><button class="icon-button mobile-menu" aria-label="打开导航" aria-expanded="false" aria-controls="sidebar"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button><div class="breadcrumb"><a id="breadcrumb-parent" href="/theory/factor-investing/">因子投资：方法与实践</a> <span>/</span> <strong>参考文献与主题检索</strong></div><button class="search-trigger" data-open-search><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="m16 16 5 5"/></svg><span>搜索课程、方法、代码…</span><kbd>Ctrl K</kbd></button><a class="github-link" href="https://github.com/quantlabshark/quantlabshark.github.io" target="_blank" rel="noopener noreferrer" aria-label="GitHub 仓库"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 20c-5 1-5-3-7-3m14 5v-4c0-1-.3-2-1-2 4-.5 7-2 7-6 0-2-1-3-2-4 0-1 0-3-1-4-2 0-4 1-4 1-2-.5-4-.5-6 0 0 0-2-1-4-1-1 1-1 3-1 4-1 1-2 2-2 4 0 4 3 5.5 7 6-.7.5-1 1-1 2v4"/></svg></a></header>
+  <main id="main"><div class="page-return"><a class="button secondary" id="page-back-link" href="/theory/factor-investing/">← 返回因子投资：方法与实践</a></div>
+<div class="article-shell lab-reader has-chapters">
+ <aside class="article-toc reader-outline" aria-label="阅读导航"><details class="reader-chapters" id="reader-chapters"><summary>课程目录</summary><p class="chapter-series">因子投资：方法与实践</p><nav id="chapter-list" aria-label="课程章节"><a href="/read/factor-book-guide/">收益、风险与因子：阅读所需的基础知识</a><a href="/read/factor-book-01-01/">收益从哪里来：特征、暴露、溢价与定价误差</a><a href="/read/factor-book-01-02/">一个收益规律如何成为研究证据</a><a href="/read/factor-book-01-03/">因子怎样进入基金组合与业绩评价</a><a href="/read/factor-book-01-04/">盈利指标研究：数据、组合、检验与交易</a><a href="/read/factor-book-02-01/">怎样用股票分组计算因子收益</a><a href="/read/factor-book-02-02/">回归怎样区分因子暴露与风险溢价</a><a href="/read/factor-book-02-03/">公司特征与回归暴露为什么会给出不同结果</a><a href="/read/factor-book-02-04/">怎样检验模型解释不了的收益</a><a href="/read/factor-book-02-05/">新增因子是否改善了定价与组合机会</a><a href="/read/factor-book-02-06/">相关指标怎样分离出各自的增量信息</a><a href="/read/factor-book-02-07/">用平均关系估计价格模型：广义矩估计</a><a href="/read/factor-book-02-08/">排序、回归和模型比较分别检验什么</a><a href="/read/factor-book-03-01/">财务数据怎样按真实时间进入因子计算</a><a href="/read/factor-book-03-02/">市场贝塔能解释涨跌，也能解释平均收益吗</a><a href="/read/factor-book-03-03/">公司规模与股票收益：小市值差异怎样计算</a><a href="/read/factor-book-03-04/">账面市值比怎样形成价值因子</a><a href="/read/factor-book-03-05/">动量比较的是哪些过去收益</a><a href="/read/factor-book-03-06/">盈利能力怎样转化为可比较的选股指标</a><a href="/read/factor-book-03-07/">企业扩张为什么可能对应较低预期回报</a><a href="/read/factor-book-03-08/">异常换手率怎样衡量交易热度变化</a><a href="/read/factor-book-04-01/">4.1 多因子模型的经济含义与组合构造</a><a href="/read/factor-book-04-02/">4.2 用截面回归识别因子的独立作用</a><a href="/read/factor-book-04-03/">4.3 比较模型的定价误差与解释范围</a><a href="/read/factor-book-04-04/">4.4 因子模型的复杂度与样本外表现</a><a href="/read/factor-book-05-01/">5.1 估值与财务质量怎样共同影响收益</a><a href="/read/factor-book-05-02/">5.2 用基本面区分价格反转</a><a href="/read/factor-book-05-03/">5.3 特质性波动率与低波动异象</a><a href="/read/factor-book-06-01/">6.1 多重检验、发表偏差与先验证据</a><a href="/read/factor-book-06-02/">6.2 历史投资、预期投资与模型比较</a><a href="/read/factor-book-06-03/">6.3 行为偏差如何影响价格与交易</a><a href="/read/factor-book-06-04/">6.4 情绪指标的构造与收益预测</a><a href="/read/factor-book-06-05/">6.5 区分风险补偿、错误定价与偶然发现</a><a href="/read/factor-book-06-06/">6.6 因子衰减、拥挤与成本后的收益</a><a href="/read/factor-book-06-07/">6.7 财务比率背后的经营与会计含义</a><a href="/read/factor-book-06-08/">6.8 机器学习的预测、降维与样本外检验</a><a href="/read/factor-book-07-01/">7.1 从选股指标到预期收益</a><a href="/read/factor-book-07-02/">7.2 风险模型与纯因子组合</a><a href="/read/factor-book-07-03/">7.3 收益预测、风险与组合优化</a><a href="/read/factor-book-07-04/">7.4 因子指数的构建与评价</a><a href="/read/factor-book-07-05/">7.5 因子择时的信号与验证</a><a href="/read/factor-book-07-06/">7.6 基金风格与收益来源</a><a href="/read/factor-book-07-07/">7.7 组合风险的分解与归因</a><a href="/read/factor-book-07-08/">7.8 另类数据与跨资产风险配置</a><a href="/read/factor-book-afterword/">完成一项因子研究：数据、证据与文献</a><a href="/read/factor-book-appendix-a/">资产价格、消费风险与市场有效性</a><a href="/read/factor-book-references/" aria-current="page">参考文献与主题检索</a></nav></details><details class="reader-sections"><summary>本页目录</summary><nav id="toc"></nav></details></aside>
+ <article class="article" id="static-article"><div class="eyebrow">基础理论与原理</div><h1>参考文献与主题检索</h1><p class="lab-lead">按研究问题查找资产定价、因子构造、统计检验与投资实施的文献。</p><div class="prose"><h2 id="section-0">怎样从问题找到文献</h2>
+<p>文献检索围绕研究问题展开。价值因子研究需要联系指标定义、组合构造和基准模型；交易实施研究则需要联系换手、成本与持仓约束。记录这些环节，可以比较结论差异来自数据、方法还是市场条件。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="表格，可横向滚动"><table>
+<thead>
+<tr>
+<th>研究问题</th>
+<th>检索线索</th>
+<th>相关内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>风险如何进入预期收益</td>
+<td>Markowitz、Sharpe、Ross、Cochrane</td>
+<td>第 1 章、资产价格附录</td>
+</tr>
+<tr>
+<td>怎样比较股票组和回归系数</td>
+<td>Fama、MacBeth、Newey、West</td>
+<td>第 2 章</td>
+</tr>
+<tr>
+<td>规模、价值和动量怎样构造</td>
+<td>Fama、French、Jegadeesh、Titman</td>
+<td>第 3—4 章</td>
+</tr>
+<tr>
+<td>盈利与投资为何影响估值</td>
+<td>Hou、Xue、Zhang、Piotroski</td>
+<td>第 4—5 章</td>
+</tr>
+<tr>
+<td>情绪与套利限制如何作用</td>
+<td>Baker、Wurgler、Kahneman、Tversky</td>
+<td>第 6 章</td>
+</tr>
+<tr>
+<td>多次尝试怎样影响显著性</td>
+<td>Harvey、Liu、McLean、Pontiff</td>
+<td>第 6 章</td>
+</tr>
+<tr>
+<td>信号怎样转化为组合</td>
+<td>Grinold、Kahn、Clarke、Arnott</td>
+<td>第 7 章</td>
+</tr>
+</tbody></table></div>
+<p>阅读时记录研究问题、市场与时期、变量定义、组合权重、基准模型和核心结果。遇到新的统计方法，先读它在当前问题中的作用，再沿引用查其推导。复现论文时，优先选一张能够由数据和代码完整重建的主表。</p>
+<aside class="shark-note"><p class="shark-note-title">鲨鱼说</p><p>两篇论文都研究“价值因子”，仍可能使用不同的账面权益口径、股票池或形成日期。将账面权益、股票池与形成日期并列比较，可以定位结论差异的具体来源。</p></aside>
+
+<h2 id="section-1">文献目录</h2>
+<p>以下按作者列出文献题名与发表信息。</p>
+<p>Abarbanell, J.S. and B.J. Bushee（1998）. Abnormal returns to a fundamental analysis strategy. The Accounting Review 73（1）, 19–45.</p>
+<p>Akbas, F., E. Genc, C. Jiang, and P.D. Koch（2017）. Disagreement, aggregate trading volume, and excess market returns. University of Illinois at Chicago, University of</p>
+<p>South Carolina, Iowa State University. Available at: <a href="https://ssrn.com/abstract=3074131" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=3074131</a>.</p>
+<p>Akbas, F., C. Jiang, and P.D. Koch（2017）. The trend in firm profitability and the crosssection of stock returns. The Accounting Review 92（5）, 1–32.</p>
+<p>Ali, A., L. -S. Hwang, and M.A. Trombley（2003）. Arbitrage risk and the book-to- market anomaly. Journal of Financial Economics 69（2）, 355–373.</p>
+<p>Alwathainani, A.M. （2009）. Consistency of firms’past financial performance measures and future returns. The British Accounting Review 41（3）, 184–196.</p>
+<p>Amihud, Y. （2002）. Illiquidity and stock returns: Crosssection and time-series effects. Journal of Financial Markets 5（1）, 31–56.</p>
+<p>An, L., H. Wang, J. Wang, and J. Yu（2020）. Lottery-related anomalies: The role of reference-dependent preferences. Management Science 66（1）, 473–501.</p>
+<p>Anderson, C.W. and L. Garcia-Feijóo（2006）. Empirical evidence on capital investment, growth options, and security returns. Journal of Finance 61（1）, 171–194.</p>
+<p>Anderson, R. M., S.W. Bianchi, and L.R. Goldberg（2012）. A comment on“The crosssection of volatility and expected returns": the statistical significance of FVIX is driven by a single outlier. Coleman Fung Risk Management Research Center, University of California Berkeley.</p>
+<p>Anderson, R. M., S.W. Bianchi, and L.R. Goldberg（2015）. In search of statistically valid risk factors. Quantitative Finance 15（3）, 385–393.</p>
+<p>Ang, A. （2014）. Asset Management: A Systematic Approach to Factor Investing.</p>
+<p>New York, NY: Oxford University Press.</p>
+<p>Ang, A., R.J. Hodrick, Y. Xing, and X. Zhang（2006）. The crosssection of volatility and expected returns. Journal of Finance 61（1）, 259–299.</p>
+<p>Ang, A., R.J. Hodrick, Y. Xing, and X. Zhang（2009）. High idiosyncratic volatility and low returns: International and further U.S. evidence. Journal of Financial Economics 91（1）, 1–23.</p>
+<p>Antoniou, A., H.Y. T. Lam, and K. Paudyal（2007）. Profitability of momentum strategies in international markets: The role of business cycle variables and behavioural biases. Journal of Banking &amp; Finance 31（3）, 955–972.</p>
+<p>Antoniou, C., J.A. Doukas, and A. Subrahmanyam（2013）. Cognitive dissonance, sentiment, and momentum. Journal of Financial and Quantitative Analysis 48（1）, 245–275.</p>
+<p>Aras, G. and M.K. Yilmaz（2008）. Price-earnings ratio, dividend yield, and market-to-book ratio to predict return on stock market: Evidence from the emerging markets. Journal of Global Business and Technology 4（1）, 18–30.</p>
+<p>Arnott, R. D., M. Clements, V. Kalesnik, and J.T. Linnainmaa（2019）. Factor momentum. Research Affiliates, LLC., Dartmouth College. Available at: <a href="https://ssrn.com/abstract=3116974" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=3116974</a>.</p>
+<p>Arnott, R. D., C.R. Harvey, V. Kalesnik, and J. Linnainmaa（2019）. Alice’s adventures in factorland: Three blunders that plague factor investing. The Journal of Portfolio Management 45（4）, 18–36.</p>
+<p>Arnott, R.D. and J.M. West（2006）. Fundamental indexesTM. ETFs and Indexing 2006（1）, 111–121. Asness, C.S. （2015）. How can a strategy still work if everyone knows about it?AQR Capital Management, LLC.</p>
+<p>Asness, C.S. （2018）. Liquid alt ragnarök?AQR Capital Management, LLC.</p>
+<p>Asness, C. S., S. Chandra, A. Ilmanen, and R. Israel（2017）. Contrarian factor timing is deceptively difficult. The Journal of Portfolio Management 43（5）, 72–87.</p>
+<p>Asness, C.S. and A. Frazzini（2013）. The devil in HML’s details. The Journal of Portfolio Management 39（4）, 49–68.</p>
+<p>Asness, C. S., A. Frazzini, N.J. Gormsen, and L.H. Pedersen（2020）. Betting against correlation: Testing theories of the low-risk effect. Journal of Financial Economics 135（3）, 629–652.</p>
+<p>Asness, C. S., A. Frazzini, R. Israel, T.J. Moskowitz, and L.H. Pedersen（2018）.</p>
+<p>Size matters, if you control your junk. Journal of Financial Economics 129（3）, 479–</p>
+<ol start="509">
+<li></li>
+</ol>
+<p>Asness, C. S., A. Frazzini, and L.H. Pedersen（2013）. Quality minusjunk. AQR</p>
+<p>Capital Management, LLC.</p>
+<p>Asness, C. S., A. Frazzini, and L.H. Pedersen（2019）. Quality minus junk. Review of Accounting Studies 24（1）, 34–112.</p>
+<p>Asness, C. S., J.A. Friedman, R.J. Krail, and J.M. Liew（2000）. Style timing: Value versus growth. The Journal of Portfolio Management 26 （3）, 50–60.</p>
+<p>Asness, C. S., A. Ilmanen, R. Israel, and T.J. Moskowitz（2015）. Investing with style. Journal of Investment Management 13（1）, 27–63.</p>
+<p>Asness, C. S., A. Ilmanen, and T. Maloney（2017）. Market timing: Sin a little, resolving the valuation timing puzzle. Journal of Investment Management 15（3）, 23– 40.</p>
+<p>Asness, C. S., T.J. Moskowitz, and L.H. Pedersen（2013）. Value and momentum everywhere. Journal of Finance 68（3）, 929–985.</p>
+<p>Bai, J. （2003）. Inferential theory for factor models oflarge dimensions. Econometrica 71（1）, 135–171. Bailey, D.H. and M. Lopez de Prado（2012）. The sharpe ratio efficient frontier. Journal of Risk 15（2）, 3–44.</p>
+<p>Baker, M. and J.C. Stein（2004）. Market liquidity as a sentiment indicator. Journal of Financial Markets 7 （3）, 271–299.</p>
+<p>Baker, M., J.C. Stein, and J. Wurgler（2003）. When does the market matter?Stock prices and the investment of equity-dependentfirms. The Quarterly Journal of Economics 118（3）, 969–1005.</p>
+<p>Baker, M. and J. Wurgler（2000）. The equity share in new issues and aggregate stock returns. Journal of Finance 55（5）, 2219–2257.</p>
+<p>Baker, M. and J. Wurgler（2002）. Market timing and capital structure. Journal of Finance 57（1）, 1–32.</p>
+<p>Baker, M. and J. Wurgler（2004）. A catering theory of dividends. Journal of Finance 59（3）, 1125–1165.</p>
+<p>Baker, M. and J. Wurgler（2006）. Investor sentiment and the crosssection of stock returns. Journal of Finance 61（4）, 1645–1680.</p>
+<p>Baker, M. and J. Wurgler（2007）. Investor sentiment in the stock market. Journal of Economic Perspectives 21（2）, 129–152.</p>
+<p>Baker, M., J. Wurgler, and Y. Yuan（2012）. Global, local, and contagious investor sentiment. Journal of Financial Economics 104（2）, 272–287.</p>
+<p>Bali, T.G. and N. Cakici（2008）. Idiosyncratic volatility and the cross section of expected returns. Journal of Financial and Quantitative Analysis 43 （1）, 29–58.</p>
+<p>Bali, T. G., N. Cakici, and R.F. Whitelaw（2014）. Hybridtail risk and expected stock returns: When does the tail wag the dog?Review of Asset Pricing Studies 4（2）, 206–246.</p>
+<p>Bali, T. G., R.F. Engle, and S. Murray（2016）. Empirical Asset Pricing: The Cross Section of Stock Returns. Hoboken, New Jersey: John Wiley &amp; Sons, Inc.</p>
+<p>Ball, R. and P. Brown（1968）. An empirical evaluation of accounting income numbers. Journal of Accounting Research 6（2）, 159–178.</p>
+<p>Ball, R. and P. Brown（2019）. Ball and Brown（1968）afterfifty years. Pacific- Basin Finance Journal 53, 410–431.</p>
+<p>Ball, R., J. Gerakos, J.T. Linnainmaa, and V. Nikolaev（2015）. Deflating profitability. Journal of Financial Economics 117（2）, 225–248.</p>
+<p>Ball, R., J. Gerakos, J.T. Linnainmaa, and V. Nikolaev（2016）. Accruals, cash flows, and operating profitability in the cross section of stock returns. Journal of Financial Economics 121（1）, 28–45.</p>
+<p>Banz, R.W. （1981）. The relationship between return and market value of common stocks. Journal of Financial Economics 9（1）, 3–18.</p>
+<p>Barbee, W. C., J.S. Mukherji, and G.A. Raines（1996）. Do sales-price and debt- equity explain stock returns better than book-market andfirm size?Financial Analysts Journal 52（2）, 56–60.</p>
+<p>Barber, B.M. and J.D. Lyon（1997）. Firm size, book-to-market ratio, and security returns: A holdout sample offinancialfirms. Journal of Finance 52（2）, 875–883.</p>
+<p>Barber, B.M. and T. Odean（2008）. All that glitters: The effect of attention and news on the buying behavior of individual and institutional investors. Review of Financial Studies 21（2）, 785–818.</p>
+<p>Barberis, N. （2018）. Chapter 2 Psychology-based models of asset prices and trading volume. In B.D. Bernheim, S. DellaVigna, and D. Laibson（Eds. ）, Handbook of Behavioral Economics-Foundations and Applications 1, Volume 1 of Handbook of Behavioral Economics: Applications and Foundations 1, pp. 79–175. North-Holland.</p>
+<p>Barberis, N., R. Greenwood, L. Jin, and A. Shleifer（2015）. X-CAPM: An extrapolative capital asset pricing model. Journal of Financial Economics 115（1）, 1– 24.</p>
+<p>Barberis, N. and M. Huang（2008）. Stocks as lotteries: The implications of probability weighting for security prices. American Economic Review 98（5）, 2066–</p>
+<ol start="2100">
+<li></li>
+</ol>
+<p>Barberis, N., L.J. Jin, and B. Wang（2019）. Prospect theory and stock market anomalies. 10th Miami Behavioral Finance Conference. Available at: <a href="https://ssrn.com/abstract=3477463" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=3477463</a>.</p>
+<p>Barberis, N., A. Mukherjee, and B. Wang（2016）. Prospect theory and stock returns: An empirical test. Review of Financial Studies 29（11）, 3068–3107.</p>
+<p>Barberis, N. and A. Shleifer（2003）. Style investing. Journal of Financial Economics 68（2）, 161–199. Barberis, N., A. Shleifer, and R. Vishny（1998）. A model of investor sentiment. Journal of Financial Economics 49（3）, 307–343.</p>
+<p>Barberis, N., A. Shleifer, and J. Wurgler（2005）. Comovement. Journal of Financial Economics 75（2）, 283–317.</p>
+<p>Barberis, N. and R. Thaler（2003）. Chapter 18 A survey of behavioralfinance. In</p>
+<p>Financial Markets and Asset Pricing, Volume 1 of Handbook of the Economics of</p>
+<p>Finance, pp. 1053–1128. Elsevier.</p>
+<p>Barberis, N. and W. Xiong（2009）. What drives the disposition effect?An analysis of a long-standing preference-based explanation. Journal of Finance 64（2）, 751–784.</p>
+<p>Barillas, F. and J. Shanken（2017）. Which alpha?Review of Financial Studies 30（4）, 1316–1338.</p>
+<p>Barillas, F. and J. Shanken（2018）. Comparing asset pricing models. Journal of Finance 73（2）, 715–754.</p>
+<p>Barinov, A. （2014）. Turnover: Liquidity or uncertainty?Management Science 60（10）, 2478–2495.</p>
+<p>Barroso, P. and P. Santa-Clara（2015）. Momentum has its moments. Journal of Financial Economics 116（1）, 111–120.</p>
+<p>Barth, M. E., J.A. Elliott, and M.W. Finn（1999）. Market rewards associated with patterns of increasing earnings. Journal of Accounting Research 37（2）, 387–413.</p>
+<p>Bartov, E. and M. Kim（2004）. Risk, mispricing, and value investing. Review of Quantitative Finance and Accounting 23（4）, 353–376.</p>
+<p>Bartram, S.M. and M. Grinblatt（2018）. Agnostic fundamental analysis works. Journal of Financial Economics 128（1）, 125–147.</p>
+<p>Basu, S. （1977）. Investment performance of common stocks in relation to their price–earnings ratios: a test of the effiŋcient market hypothesis. Journal of Finance 32（3）, 663–682.</p>
+<p>Basu, S. （1983）. The relationship between earnings’yield, market value and return</p>
+<p>for NYSE common stocks: Further evidence. Journal of Financial Economics 12（1）, 129–156.</p>
+<p>Bayraktar, M. K., S. Doole, A. Kassam, and S. Radchenko（2015）. Lost in the crowd?Identifying and measuring crowded strategies and trades. MSCI Inc.</p>
+<p>Bender, J., P.B. Hammond, and W. Mok（2014）. Can alpha be capŋtured by risk premia?The Journal of Portfolio Management 40（2）, 18–29.</p>
+<p>Bender, J., J. -H. Lee, and D. Stefek（2009）. Refining portfolio construction when alphas and risk factors are misaligned. MSCI Inc.</p>
+<p>Bender, J., X. Sun, R. Thomas, and V. Zdorovtsov（2018）. The promises and pitfalls offactor timing. The Journal of Portfolio Management 44 （4）, 79–92.</p>
+<p>Bender, J. and T. Wang（2016）. Can the whole be more than the sum of the parts? Bottom-up versus top-down multifactor portfolio construction. The Journal of Portfolio Management 42（5）, 39–50.</p>
+<p>Beneish, M. D., C.M. C. Lee, and D.C. Nichols（2015）. In short supply: Short- sellers and stock returns. Journal of Accounting and Economics 60（2-3）, 33–57.</p>
+<p>Benjamini, Y. and Y. Hochberg（1995）. Controlling the false discovery rate: A practical and powerful approach to multiple testing. Journal of the Royal Statistical</p>
+<p>Society, Series B 57（1）, 289–300.</p>
+<p>Benjamini, Y. and D. Yekutieli（2001）. The control of the false discovery rate in multiple testing under dependency. The Annals of Statistics 29（4）, 1165–1188.</p>
+<p>Berk, J.B. （1995）. A critique of size-related anomalies. Review of Financial Studies 8（2）, 275–286. Berk, J. B., R.C. Green, and V. Naik（1999）. Optimal investment, growth options, and security returns. Journal of Finance 54（5）, 1553– 1607.</p>
+<p>Bernard, V.L. and J.K. Thomas（1989）. Post-earnings-announcement drift: Delayed price response or risk premium?Journal of Accounting Research 27, 1–36.</p>
+<p>Bernard, V.L. and J.K. Thomas（1990）. Evidence that stock prices do not fully reflect the implications of current earnings for future earnings. Journal of Accounting and Economics 13（4）, 305–340. Bhandari, L.C. （1988）. Debt/equity ratio and expected common stock returns: Empirical evidence. Journal of Finance 43 （2）, 507–528.</p>
+<p>Bhootra, A. and J. Hur（2012）. On the relationship between concentration of prospect theory/mental accounting investors, cointegration, and momentum. Journal of Banking &amp; Finance 36（5）, 1266–1275. Black, F. （1972）. Capital market equilibrium with restricted borrowing. Journal of Business 45（3）, 444–455.</p>
+<p>Black, F. （1986）. Noise. Journal of Finance 41（3）, 528–543.</p>
+<p>Black, F., M.C. Jensen, and M. Scholes（1972）. The capital asset pricing model: Some empirical tests. In M.C. Jensen（Ed. ）, Studies in the Theory of Capital Markets.</p>
+<p>New York, NY: Praeger.</p>
+<p>Black, F. and R. Litterman（1992）. Global portfolio optimization. Financial Analysts Journal48（5）, 28–43.</p>
+<p>Blitz, D., M.X. Hanauer, and M. Vidojevic（2017）. The idiosyncratic momentum anomaly. Robeco Asset Management. Available at: <a href="https://ssrn.com/abstract=2947044" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=2947044</a>.</p>
+<p>Blitz, D., J. Huij, and M. Martens（2011）. Residual momentum. Journal of Empirical Finance 18（3）, 506–521.</p>
+<p>Blume, M.E. （1970）. Portfolio theory: a step toward its practical application. Journal of Business 43（2）, 152–173.</p>
+<p>Blume, M.E. and I. Friend（1973）. A new look at the capital asset pricing model. Journal of Finance 28（1）, 19–34.</p>
+<p>Bodie, Z., A. Kane, and A.J. Marcus（2017）. Investments（11 ed. ）. New York, NY: McGraw-Hill Education.</p>
+<p>Bonferroni, C.E. （1936）. Teoria Statistica Delle Classi e Calcolo Delle Probabilità. Florence, Italy: Libreria Internazionale Seeber.</p>
+<p>Bonne, G., L. Roisenberg, R. Kouzmenko, and P. Zangari（2018）. MSCI integrated factor crowding model. MSCI Inc.</p>
+<p>Bordalo, P., N. Gennaioli, R. La Porta, and A. Shleifer（2019）. Diagnostic expectations and stock returns. Journal of Finance 74（6）, 2839–2874.</p>
+<p>Bowles, B., A.V. Reed, M. Ringgenberg, and J.R. Thornock（2019）. Anomaly time. Texas A &amp; M University, University of North Carolina, University of Utah, Brigham Young University. Available at: <a href="https://ssrn.com/abstract=3069026" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=3069026</a>.</p>
+<p>Boyer, B.H. （2011）. Style-related comovement: Fundamentals of labels?Journal of Finance 66（1）, 307–332.</p>
+<p>Boyer, B. H., T. Mitton, and K. Vorkink（2010）. Expectedidiosyncratic skewness. Review of Financial Studies 23（1）, 169–202.</p>
+<p>Bradshaw, M. T., S.A. Richardson, and R.G. Sloan（2006）. The relation between corporatefinancing activities, analysts’forecasts and stock returns. Journal of Accounting and Economics 42（1-2）, 53–85. Breeden, D.T. （1979）. An intertemporal asset pricing model with stochastic consumption and investment opportunities. Journal of Financial Economics 7（3）, 265–296.</p>
+<p>Brinson, G. P., B.D. Singer, and G.L. Beebower（1991）. Determinants of portfolio</p>
+<p>performance II: An update. Financial Analysts Journal 47（3）, 40–48.</p>
+<p>Buetow, G. W., R.R. Johnson, and D.E. Runkle（2000）. The inconsistency of return-based style analysis. The Journal of Portfolio Management 26（3）, 61–77.</p>
+<p>Cakici, N. （2015）. Thefive-factor Fama-French model: International evidence. Fordham University. Available at: <a href="https://ssrn.com/abstract=2601662" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=2601662</a>.</p>
+<p>Cakici, N., K. Chan, and K. Topyan（2017）. Crosssectional stock return predictability in China. European Journal of Finance 23 （7-9）, 581–605.</p>
+<p>Cakici, N., F.J. Fabozzi, and S. Tan（2013）. Size, value, and momentum in emerging market stock returns. Emerging Markets Review 16, 46–65.</p>
+<p>Campbell, J.Y. and J.H. Cochrane（1999）. By force of habit: A consumption-based explanation of aggregate stock market behavior. Journal of Political Economy 107（2）, 205–251.</p>
+<p>Campbell, J. Y., S.J. Grossman, and J. Wang（1993）. Trading volume and serial correlation in stock returns. The Quarterly Journal of Economics 108（4）, 905–939.</p>
+<p>Campbell, J. Y., J. Hilscher, and J. Szilagyi（2008）. In searchofdistress risk. Journal of Finance 63（6）, 2899–2939.</p>
+<p>Campbell, J.Y. and R.J. Shiller（1988）. The dividend-price ratio and expectations offuture dividends and discount factors. Review of Financial Studies 1（3）, 195–228.</p>
+<p>Campbell, J.Y. and S.B. Thompson（2008）. Predicting excess stock returns out of sample: Can anything beat the historical average?Review of Financial Studies 21（4）, 1509–1531.</p>
+<p>Carhart, M.M. （1997）. On persistence in mutual fund performance. Journal of Finance 52（1）, 57–82. Carlson, M., A. Fisher, and R. Giammarino（2004）. Corporate investment and asset price dynamics: Implications for the crosssection of returns. Journal of Finance 59（6）, 2577– 2603.</p>
+<p>Cerniglia, J. and F.J. Fabozzi（2018）. Academic, practitioner, and investor perspectives on factor investing. The Journal of Portfolio Management 44（4）, 10–16.</p>
+<p>Chan, K.C. and N. -F. Chen（1991）. Structural and return characteristics of small and largefirms. Journal of Finance 46 （4）, 1467–1484.</p>
+<p>Chan, L.K. C., Y. Hamao, and J. Lakonishok（1991）. Fundamentals and stock returns in Japan. Journal of Finance 46 （5）, 1739–1764.</p>
+<p>Chan, L.K. C., Y. Hamao, and J. Lakonishok（1993）. Can fundamentals predict Japanese stock returns?Financial Analysts Journal 49（4）, 63–69.</p>
+<p>Chan, L.K. C., J. Lakonishok, and T. Sougiannis（2001）. The stock market valuation of research and development expenditures. Journal of Finance 56（6）, 2431– 2456.</p>
+<p>Chang, R. P., K. -C. Ko, S. Nakano, and S.G. Rhee（2018）. Residual momentum in Japan. Journal of Empirical Finance 45, 283–299.</p>
+<p>Chang, Y. Y., R. Faff, and C. -Y. Hwang（2010）. Liquidity and stock returns in Japan: New evidence. Pacific-Basin Finance Journal 18 （1）, 90–115.</p>
+<p>Charitou, A. and E. Constantinidi（2003）. Size and book-to-market factors in earnings, cash flows and stock returns: empirical evidence for the uk. University of Cyprus. Available at: <a href="https://ssrn.com/abstract=498243" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=498243</a>.</p>
+<p>Chaves, D.B. （2012）. Eureka!A momentum strategy that also works in Japan. The</p>
+<p>Vanguard Group, Inc. Available at: <a href="https://ssrn.com/abstract=1982100" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=1982100</a>.</p>
+<p>Chen, A.Y. and M. Velikov（2019）. Accounting for the anomaly zoo: A trading cost perspective. Finance Down Under, 2019, Building on the Best from the Cellars of Finance. Available at: <a href="https://ssrn.com/abstract=3073681" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=3073681</a>.</p>
+<p>Chen, J., H. Hong, and J.C. Stein（2001）. Forecasting crashes: Trading volume, past returns, and conditional skewness in stock prices. Journal of Financial Economics 61（3）, 345–381.</p>
+<p>Chen, J., H. Hong, and J.C. Stein（2002）. Breadth of ownership and stock returns. Journal of Financial Economics 66（2-3）, 171–205.</p>
+<p>Chen, J., G. Tang, J. Yao, and G. Zhou（2019）. Investor attention and stock returns.</p>
+<p>Xiamen University, Hunan University, Jinan University, Washington University in St. Louis. Available at: <a href="https://ssrn.com/abstract=3194387" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=3194387</a>.</p>
+<p>Chen, L., R. Novy-Marx, and L. Zhang（2010）. An alternative three-factor model.</p>
+<p>Luohan Academy, University of Rochester, Ohio State University. Available at: <a href="https://ssrn.com/abstract=1418117" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=1418117</a>.</p>
+<p>Chen, L. H., G.J. Jiang, D.D. Xu, and T. Yao（2012）. Dissecting the idiosyncratic volatility anomaly. University of Idaho, Washington State University, Gonzaga University, and University of Iowa. Available at: <a href="https://ssrn.com/abstract=2023883" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=2023883</a>.</p>
+<p>Chen, P., E. Lezmi, T. Roncalli, and J. Xu（2019）. A note on portfolio optimization with quadratic transaction costs. Amundi Asset Management.</p>
+<p>Chen, Y. and H. Zhao（2012）. Informed trading, information uncertainty, and price momentum. Journal of Banking &amp; Finance 36 （7）, 2095–2109.</p>
+<p>Chib, S., X. Zeng, and L. Zhao（2020）. On comparing asset pricing models. Journal of Finance 75（1）, 551–577.</p>
+<p>Chincarini, L.B. and D. Kim（2006）. Quantitative Equity Portfolio Management: An Active Approach to Portfolio Construction and Management. New York, NY: McGraw-Hill Education.</p>
+<p>Choi, J. J., D. Laibson, and B.C. Madrian（2009）. Why does the law of one price fail?An experiment on index mutual funds. Review of Financial Studies 23（4）, 1405– 1432.</p>
+<p>Choi, J.J. and T.M. Mertens（2019）. Extrapolative expectations and the equity premium. Yale School of Management, Federal Reserve Bank of San Francisco. Available at: <a href="https://ssrn.com/abstract=3462056" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=3462056</a>.</p>
+<p>Choi, N.Y. and R.W. Sias（2012）. Why doesfinancial strength forecast stock returns?Evidence from subsequent demand by institutional investors. Review of Financial Studies 25（5）, 1550–1587. Chopra, N., J. Lakoniskok, and J.R. Ritter（1992）. Measuring abnormal performance: Do stocks overreact?Journal of Financial Economics 31（2）, 235–268.</p>
+<p>Chordia, T., A. Goyal, and A. Saretto（2020）. Anomalies and false rejections. Review of Financial Studies 33（5）, 2134–2179.</p>
+<p>Chordia, T. and L. Shivakumar（2002）. Momentum, business cycle, and time- varying expected returns. Journal of Finance 57（2）, 985–1019.</p>
+<p>Chordia, T., A. Subrahmanyam, and V.R. Anshuman（2001）. Trading activity and expected stock returns. Journal of Financial Economics 59（1）, 3–32.</p>
+<p>Chordia, T. and B. Swaminathan（2000）. Trading volume and cross- autocorrelations in stock returns. Journal of Finance 55 （2）, 913–935.</p>
+<p>Chou, P. -H., T. -Y. Huang, and H. -J. Yang（2013）. Arbitrage risk and the turnover anomaly. Journal of Banking &amp; Finance 37（11）, 4172–4182.</p>
+<p>Chow, T. -M., F. Li, and Y. Shim（2018）. Smart beta multifactor construction methodology: Mixing versus integrating. Journal of Index Investing 8（4）, 47–60.</p>
+<p>Chui, A.C. W., S. Titman, and K.C. J. Wei（2010）. Individualism and momentum around the world. Journal of Finance 65 （1）, 361–392.</p>
+<p>Claessens, S. and M.A. Kose（2018）. Frontiers of macrofinancial linkages. Bank for International Settlement.</p>
+<p>Clarke, R., H. de Silva, and S. Thorley（2013）. Risk parity, maximum diversification, and minimum variance: An analytic perspective. The Journal of Portfolio Management 39（3）, 39–53.</p>
+<p>Clubb, C. and M. Naffi（2007）. The usefulness of book-to-market and ROE expectations for explaining UK stock returns. Journal of Business Finance &amp; Accounting</p>
+<p>34（1-2）, 1–32.</p>
+<p>Cochrane, J.H. （1991）. Production-based asset pricing and the link between stock returns and economicfluctuations. Journal of Finance 46（1）, 209–237.</p>
+<p>Cochrane, J.H. （2005）. Asset Pricing（Revised Edition）. Princeton, NJ: Princeton University Press. Cochrane, J.H. （2011）. Presidential address: Discount rates. Journal of Finance 66（4）, 1047–1108.</p>
+<p>Cochrane, J.H. （2017）. MacroFinance. Review of Finance 21（3）, 945–985.</p>
+<p>Cochrane, J.H. and T.J. Moskowitz（Eds. ）（2017）. The Fama Portfolio, Selected Papers of Eugene F. Fama. Chicago, IL: The University of Chicago Press.</p>
+<p>Cohen, L. and A. Frazzini（2008）. Economic links and predictable returns. Journal of Finance 63（4）, 1977–2011.</p>
+<p>Cooper, I. and R. Priestley（2011）. Real investment and risk dynamics. Journal of Financial Economics 101（1）, 182–205.</p>
+<p>Cooper, M. J., H. Gulen, and M.J. Schill（2008）. Asset growth and the crosssection of stock returns. Journal of Finance 63 （4）, 1609–1651.</p>
+<p>Da, Z., Q. Liu, and E. Schaumburg（2014）. A closer look at the short-term return reversal. Management Science 60（3）, 658–674.</p>
+<p>Damodaran, A. （2007）. Return on capital（ROC）, return on invested capital（ROIC）and return on equity（ROE）: Measurement and implications. New York University. Available at: <a href="https://ssrn.com/abstract=1105499" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=1105499</a>.</p>
+<p>Daniel, K. D., M. Grinblatt, S. Titman, and R. Wermers（1997）. Measuring mutual fund performance with characteristic-based benchmarks. Journal of Finance 52（3）, 1035–1058.</p>
+<p>Daniel, K. D., D.A. Hirshleifer, and A. Subrahmanyam（1998）. Investor psychology and security market under-and overreactions. Journal of Finance 53（6）, 1839–1885.</p>
+<p>Daniel, K. D., D.A. Hirshleifer, and A. Subrahmanyam（2001）. Overconfidence, arbitrage, and equilibrium asset pricing. Journal of Finance 56（3）, 921–965.</p>
+<p>Daniel, K. D., D.A. Hirshleifer, and L. Sun（2018）. Short-and long-horizon behavioral factors. NBER Working Paper No. 24163.</p>
+<p>Daniel, K. D., D.A. Hirshleifer, and L. Sun（2020）. Short-and long-horizon behavioral factors. Review of Financial Studies 33 （4）, 1673–1736.</p>
+<p>Daniel, K.D. and T.J. Moskowitz（2016）. Momentum crashes. Journal of Financial Economics 122（2）, 221–247.</p>
+<p>Daniel, K.D. and S. Titman（1997）. Evidence on the characteristics of cross sectional variation in stock returns. Journal of Finance 52（1）, 1–33.</p>
+<p>Daniel, K.D. and S. Titman（2006）. Market reactions to tangible and intangible information. Journal of Finance 61（4）, 1605–1643.</p>
+<p>Daniel, K. D., S. Titman, and K.C. J. Wei（2001）. Explaining the crosssection of stock returns in Japan: Factors or characteristics?Journal of Finance 56（2）, 743–766.</p>
+<p>Datar, V. T., N.Y. Naik, and R. Radcliffe（1998）. Liquidity and stock returns: An alternative test. Journal of Financial Markets 1 （2）, 203–219.</p>
+<p>Davis, J. L., E.F. Fama, and K.R. French（2000）. Characteristics, covariances, and average returns: 1929 to 1997. Journal of Finance 55（1）, 389–406.</p>
+<p>De Bondt, W.F. M. and R.H. Thaler（1985）. Does the stock market overreact? Journal of Finance 40（3）, 793–805.</p>
+<p>De Groot, W., J. Pang, and L. Swinkels（2012）. The crosssection of stock returns in frontier emerging markets. Journal of Empirical Finance 19（5）, 796–818.</p>
+<p>De Long, J. B., A. Shleifer, L.H. Summers, and R.J. Waldmann（1990）. Noise trader riskinfinancial markets. Journal of Political Economy 98（4）, 703–738.</p>
+<p>Dechow, P. M., R.G. Sloan, and A.P. Sweeney（1995）. Detecting earnings management. The Accounting Review 70（2）, 193–225.</p>
+<p>DellaVigna, S. and J.M. Pollet（2007）. Demographics and industry returns. American Economic Review 70（2）, 193–225.</p>
+<p>DellaVigna, S. and J.M. Pollet（2009）. Investor inattention and Friday earnings announcements. Journal of Finance 64 （2）, 709–749.</p>
+<p>DeMiguel, V., L. Garlappi, and R. Uppal（2009）. Optimal versus naive diversification: How inefficient is the 1/N portfolio strategy?Review of Financial Studies 22（5）, 1915–1953.</p>
+<p>Dey, M.K. （2005）. Turnover and return in global stock markets. Emerging Markets Review 6（1）, 45–67.</p>
+<p>Dichev, I.D. （1998）. Is the riskofbankruptcy a systematic risk?Journal of Finance 53（3）, 1131–1147. Dichev, I.D. and V.W. Tang（2009）. Earnings volatility and earnings predictability. Journal of Accounting and Economics 47（1-2）, 160–181.</p>
+<p>Dichtl, H., W. Drobetz, and V. -S. Wendt（2020）. How to build a factor portfolio: Does the allocation strategy matter?European Financial Management forthcoming.</p>
+<p>Diebold, F.X. and R.S. Mariano（2002）. Comparing predictive accuracy. Journal of Business &amp; Economic Statistics 20（1）, 134–144.</p>
+<p>Dittmar, A.K. and R.F. Dittmar（2008）. The timing offinancing decisions: An examination of the correlation infinancing waves. Journal of Financial Economics 90（1）, 59–83.</p>
+<p>Dixon, M.F. and I. Halperin（2019）. The four horsemen of machine learning infinance. Illinois Institute of Technology, New York University.</p>
+<p>Dobrynskaya, V. （2017）. Upside and downside risks in momentum returns. National Research University. Available at: <a href="https://ssrn.com/abstract=2399359" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=2399359</a>.</p>
+<p>Drake, M. S., N.M. Guest, and B.J. Twedt（2014）. The media and mispricing: The role of the business press in the pricing of accounting information. The Accounting Review 89（5）, 1673–1701. Drygas, H. （2011）. On the relationship between the method of least squares and Gram-Schmidt orthogonalization. Acta et Commentationes Universitatis Tartuensis de Mathematica 15（1）, 3–13.</p>
+<p>Duanmu, J., A. Malakhov, and W.R. McCumber（2018）. Beta active hedge fund management. Journal of Financial and Quantitative Analysis 53 （6）, 2525–2558. Economic Sciences Prize Committee of the Royal Swedish Academy of Sciences（2013）. Understanding asset prices. <a href="https://www/" target="_blank" rel="noopener noreferrer">https://www</a>. nobelprize. org/uploads/2018/06/advanced-economicsciences2013. pdf. Accessed: 2020-04-17.</p>
+<p>Ehsani, S. and J.T. Linnainmaa（2019）. Factor momentum and the momentum factor. NBER Working Paper No. 25551.</p>
+<p>Ellsberg, D. （1961）. Risk, ambiguity, and the savage axioms. The Quarterly Journal of Economics 75（4）, 643–669.</p>
+<p>Engelberg, J., R.D. McLean, and J. Pontiff（2018）. Anomalies and news. Journal of Finance 73（5）, 1971–2001.</p>
+<p>Eyster, E., M. Rabin, and D. Vayanos（2019）. Financial markets where traders neglect the informational content of prices. Journal of Finance 74（1）, 371–399.</p>
+<p>Fama, E.F. （1968）. Risk, return and equilibrium: Some clarifying comments. Journal of Finance 23（1）, 29–40.</p>
+<p>Fama, E.F. （1970）. Efficient capital market: A review of theory and empirical work. Journal of Finance 25（2）, 383–417.</p>
+<p>Fama, E. F., L. Fisher, M.C. Jensen, and R. Roll（1969）. The adjustment of stock prices to new information. International Economic Review 10（1）, 1–21.</p>
+<p>Fama, E.F. and K.R. French（1988）. Dividend yields and expected stock returns. Journal of Financial Economics 22（1）, 3–25.</p>
+<p>Fama, E.F. and K.R. French（1992）. The crosssection of expected stock returns.</p>
+<p>Journal of Finance 47（2）, 427–465.</p>
+<p>Fama, E.F. and K.R. French（1993）. Common risk factors in the returns on stocks and bonds. Journal of Financial Economics 33 （1）, 3–56.</p>
+<p>Fama, E.F. and K.R. French（1995）. Size and book-to-market factors in earnings and returns. Journal of Finance 50 （1）, 131–155.</p>
+<p>Fama, E.F. and K.R. French（1996）. Multifactor explanations of asset pricing anomalies. Journal of Finance 51（1）, 55–84.</p>
+<p>Fama, E.F. and K.R. French（1998）. Value versus growth: The international evidence. Journal of Finance 53（6）, 1975–1999.</p>
+<p>Fama, E.F. and K.R. French（2004）. The capital asset pricing model: Theory and evidence. Journal of Economic Perspectives 18（3）, 25–46.</p>
+<p>Fama, E.F. and K.R. French（2006）. Profitability, investment and average returns. Journal of Financial Economics 82（3）, 491–518.</p>
+<p>Fama, E.F. and K.R. French（2008）. Dissecting anomalies. Journal of Finance 63（4）, 1653–1678.</p>
+<p>Fama, E.F. and K.R. French（2010）. Luck versus skill in the crosssection of mutual fund returns. Journal of Finance 65 （5）, 1915–1947.</p>
+<p>Fama, E.F. and K.R. French（2012）. Size, value, and momentum in international stock returns. Journal of Financial Economics 105 （3）, 457–472.</p>
+<p>Fama, E.F. and K.R. French（2015）. Afive-factor asset pricing model. Journal of Financial Economics 116（1）, 1–22.</p>
+<p>Fama, E.F. and K.R. French（2016）. Dissecting anomalies with afive-factor model. Review of Financial Studies 29（1）, 69–103.</p>
+<p>Fama, E.F. and K.R. French（2017）. International tests of afive-factor asset pricing model. Journal of Financial Economics 123（3）, 441–463.</p>
+<p>Fama, E.F. and K.R. French（2018）. Choosing factors. Journal of Financial Economics 128（2）, 234–252.</p>
+<p>Fama, E.F. and K.R. French（2020）. Comparing crosssection and time-series factor models. Review of Financial Studies 33（5）, 1891–1926.</p>
+<p>Fama, E.F. and J.D. MacBeth（1973）. Risk, return, and equilibrium: Empirical tests. Journal of Political Economy 81（3）, 607–636.</p>
+<p>Fang, L. and J. Peress（2009）. Media coverage and the crosssection of stock returns. Journal of Finance 64（5）, 2023–2052.</p>
+<p>Farcomeni, A. （2008）. A review of modern multiple hypothesis testing, with particular attention to the false discovery proportion. Statistical Methods in Medical Research 17（4）, 347–388.</p>
+<p>Fergis, K., K. Gallagher, P. Hodges, and K. Hogan（2019）. Defensive factor timing. The Journal of Portfolio Management 45（3）, 50–68.</p>
+<p>Fisher, R.A. （1925）. Statistical Methods for Research Workers. Edinburgh: Oliver and Boyd Ltd.</p>
+<p>Foster, F. D., T. Smith, and R.E. Whaley（1997）. Assessing goodness-of-fit of asset pricing models: The distribution of the maximal R2. Journal of Finance 52（2）, 591– 607.</p>
+<p>Foster, G. （1977）. Quarterly accounting data: Time-series properties and predictive-ability results. The Accounting Review 52 （1）, 1–21.</p>
+<p>Foster, G., C. Olsen, and T. Shevlin（1984）. Earnings releases, anomalies, andthe behavior of security returns. The Accounting Review 59（4）, 574–604.</p>
+<p>Frankel, R. and C.M. C. Lee（1998）. Accounting valuation, market expectation, and crosssectional stock returns. Journal of Accounting and Economics 25（3）, 283– 319.</p>
+<p>Frankel, R. and L. Litov（2009）. Earnings persistence. Journal of Accounting and Economics 47（1-2）, 182–190.</p>
+<p>Frazzini, A. （2006）. The disposition effect and underreaction to news. Journal of Finance 61（4）, 2017–2046.</p>
+<p>Frazzini, A., D.G. Kabiller, and L.H. Pedersen（2018）. Buffett’s alpha. Financial Analysts Journal 74（4）, 35–55.</p>
+<p>Frazzini, A. and L.H. Pedersen（2014）. Betting against beta. Journal of Financial Economics 111（1）, 1–25.</p>
+<p>Froot, K.A. and E.M. Dabora（1999）. How are stock prices affected by the location oftrade?Journal of Financial Economics 53（2）, 189–216.</p>
+<p>Fu, F. （2009）. Idiosyncratic risk and the crosssection of expected stock returns. Journal of Financial Economics 91（1）, 24–37.</p>
+<p>Gan, C., B. Hu, Y.G. Liu, and Z. Li（2013）. An empirical crosssection analysis of stock returns on the Chinese A-share stock market. Investment Management and Financial Innovations 10（1）, 127–136.</p>
+<p>Geczy, C.C. and M. Samonov（2016）. Two centuries of price-return momentum. Financial Analysts Journal 72（5）, 32–56.</p>
+<p>Gervais, S., R. Kaniel, and D.H. Mingelgrin（2001）. The high-volume return premium. Journal of Finance 56（3）, 877–919.</p>
+<p>Ghayur, K., R. Heaney, and S. Platt（2018）. Constructing long-only multifactor strategies: Portfolio blending vs. signal blending. Financial Analysts Journal 74（3）, 70–85.</p>
+<p>Gibbons, M. R., S. Ross, and J. Shanken（1989）. A test of the efficiency of a given portfolio. Econometrica 57（5）, 1121–1152.</p>
+<p>Giglio, S. and D. Xiu（2019）. Asset pricing with omitted factors. Chicago Booth</p>
+<p>Research Paper, 16-21.</p>
+<p>Glaser, M. and M. Weber（2007）. Overconfidence andtrading volume. The Geneva Risk and Insurance Review 32, 1–36.</p>
+<p>Gleason, C.A. and C.M. C. Lee（2003）. Analyst forecast revisions and market price discovery. The Accounting Review 78（1）, 193–225.</p>
+<p>Gompers, P.A. and A. Metrick（2001）. Institutional investors and equity prices. The Quarterly Journal of Economics 116（1）, 229–259.</p>
+<p>Gordon, M.J. （1962）. The Investment, Financing, and Valuation of the Corporation. Homewood, IL: Irwin Publishing.</p>
+<p>Graham, B. and D. Dodd（1934）. Security Analysis. New York, NY: McGraw- Hill.</p>
+<p>Gray, W.R. and J.R. Vogel（2016）. Quantitative Momentum. Hoboken, New Jersey: John Wiley &amp; Sons, Inc.</p>
+<p>Green, J., J.R. M. Hand, and F. Zhang（2017）. The characteristics that provide independent information about average U.S. monthly stock returns. Review of Financial Studies 30（12）, 4389–4436.</p>
+<p>Green, T. C., R. Huang, Q. Wen, and D. Zhou（2019）. Crowdsourced employer reviews and stock returns. Journal of Financial Economics 134（1）, 236–251.</p>
+<p>Green, T.C. and B. -H. Hwang（2012）. Initial public offerings as lotteries: Skewness preference andfirst-day returns. Management Science 58（2）, 432–444.</p>
+<p>Greenblatt, J. （2006）. The Little Book That Beats the Market. Hoboken, New Jersey: John Wiley &amp; Sons, Inc.</p>
+<p>Greenblatt, J. （2010）. The Little Book That Still Beats the Market. Hoboken, New Jersey: John Wiley &amp; Sons, Inc.</p>
+<p>Griffin, J. M., X. Ji, and J.S. Martin（2003）. Momentum investing and business cycle risk: Evidence from pole to pole. Journal of Finance 58（6）, 2515–2547.</p>
+<p>Griffin, J.M. and M.L. Lemmon（2002）. Book-to-market equity, distress risk, and stock returns. Journal of Finance 57 （5）, 2317–2336.</p>
+<p>Grinblatt, M. and B. Han（2005）. Prospect theory, mental accounting, and momentum. Journal of Financial Economics 78（2）, 311–339.</p>
+<p>Grinblatt, M. and M. Keloharju（2009）. Sensation seeking, overconfidence, and trading activity. Journal of Finance 64 （2）, 549–578.</p>
+<p>Grinold, R. and R.N. Kahn（1999）. Active Portfolio Management: A Quantitative Approach for Producing Superior Returns and Controlling Risk（2 ed. ）. New York, NY: McGraw-Hill Education. Grinold, R.C. （1994）. Alpha is volatility times IC times score. The Journal of Portfolio Management 20（4）, 9–16.</p>
+<p>Grossman, S.J. and M.H. Miller（1988）. Liquidity and market structure. Journal of Finance 43（3）, 617–633.</p>
+<p>Grossman, S.J. and R.J. Shiller（1981）. The determinants of the variability of stock market prices. American Economic Review 71 （2）, 222–227.</p>
+<p>Gu, S., B.T. Kelly, and D. Xiu（2020）. Empirical asset pricing via machine learning. Review of Financial Studies 33（5）, 2223–2273.</p>
+<p>Guo, B., W. Zhang, Y. Zhang, and H. Zhang（2017）. Thefive-factor asset pricing model tests for the Chinese stock market. Pacific-Basin Finance Journal 43, 84–106.</p>
+<p>Guo, H. and R. Savickas（2010）. Relation between time-series and crosssectional effects of idiosyncratic variance on stock returns. Journal of Banking &amp; Finance 34（7）, 1637–1649.</p>
+<p>Gupta, T. and B.T. Kelly（2019）. Factor momentum everywhere. The Journal of Portfolio Management 45（3）, 13–36.</p>
+<p>Hahn, J. and H. Lee（2006）. Yield spreads as alternative risk factors for size and book-to-market. Journal of Financial and Quantitative Analysis 41 （2）, 245–269.</p>
+<p>Han, Y., A. He, D.E. Rapach, and G. Zhou（2018）. Firm characteristics and expected stock returns. University of North Carolina, Saint Louis University, Washington University in St. Louis. Available at: <a href="https://ssrn.com/abstract=3185335" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=3185335</a>.</p>
+<p>Han, Y., G. Zhou, and Y. Zhu（2016）. A trend factor: Any economic gains from using information over investment horizons?Journal of Financial Economics 122（2）, 352–375.</p>
+<p>Hansen, L.P. （1982）. Large sample properties of generalized method of moments estimators. Econometrica 50（4）, 1029–1054.</p>
+<p>Hansen, L.P. （1985）. A method for calculating bounds on the asymptotic</p>
+<p>covariance matrices of generalized method of moments estimators. Journal of Econometrics 30（1-2）, 203–238.</p>
+<p>Hansen, L. P., J. Heaton, and A. Yaron（1996）. Finite-sample properties of some alternative GMM estimators. Journal of Business &amp; Economics Statistics 14（3）, 262– 280.</p>
+<p>Hansen, L.P. and R. Jagannathan（1991）. Implications of security market data for models ofdynamic economies. Journal of Political Economy 99（2）, 225–262.</p>
+<p>Hansen, L.P. and R. Jagannathan（1997）. Assessing specification errors in stochastic discount factor models. Journal of Finance 52（2）, 557–590.</p>
+<p>Hansen, L.P. and J.A. Scheinkman（1995）. Back to the future: Generating moment implications for continuous-time Markov processes. Econometrica 63（4）, 767–804.</p>
+<p>Hansen, L.P. and K.J. Singleton（1982）. Generalized instrumental variables estimation of nonlinear rational expectations models. Econometrica 50（5）, 1269– 1286.</p>
+<p>Harvey, C.R. （2017）. Presidential address: The scientific outlook infinancial economics. Journal of Finance 72（4）, 1399–1440.</p>
+<p>Harvey, C.R. and Y. Liu（2015）. Backtesting. The Journal of Portfolio Management 42（1）, 13–28. Harvey, C.R. and Y. Liu（2018）. Lucky factors. Duke</p>
+<p>University, Purdue University. Available at: <a href="https://ssrn.com/abstract=2528780" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=2528780</a>.</p>
+<p>Harvey, C. R., Y. Liu, and H. Zhu（2016）. . . . and the crosssection of expected returns. Review of Financial Studies 29（1）, 5–68.</p>
+<p>Harvey, C.R. and A. Siddique（2000）. Conditional skewness in asset pricing tests. Journal of Finance 55（3）, 1263–1295.</p>
+<p>Harvey, C.R. and G. Zhou（1990）. Bayesian inference in asset pricing. Journal of Financial Economics 26（2）, 221–254.</p>
+<p>Hastie, T., R. Tibshirani, and J. Friedman（2016）. The Elements of Statistical Learning: Data Mining, Inference, and Prediction（2 ed. ）. New York, NY: Springer.</p>
+<p>Haugen, R.A. and N.L. Baker（1996）. Commonality in the determinants of expected stock returns. Journal of Financial Economics 41 （3）, 401–439.</p>
+<p>He, S. and G.G. Narayanamoorthy（2020）. Earnings acceleration and stock returns. Journal of Accounting and Economics forthcoming.</p>
+<p>Head, A., G. Smith, and J. Wilson（2009）. Would a stock by any other ticker smell as sweet?The Quarterly Review of Economics and Finance 49（2）, 551–561.</p>
+<p>Hedayati, S., B.K. Hurst, and E. Stamelos（2018）. Transactions costs: Practical</p>
+<p>application. AQR Capital Management, LLC.</p>
+<p>Herskovic, B., B.T. Kelly, H. Lustig, and S.V. Nieuwerburgh（2016）. The common factor in idiosyncratic volatility: Quantitative asset pricing implications. Journal of Financial Economics 119（2）, 249–283.</p>
+<p>Hirshleifer, D. （2001）. Investor psychology and asset pricing. Journal of Finance 56（4）, 1533–1597. Hirshleifer, D. （2015）. Behavioralfinance. Annual Review of Financial Economics 7, 133–159.</p>
+<p>Hirshleifer, D., K. Hou, and S.H. Teoh（2012）. The accrual anomaly: Risk or mispricing?Management Science 58（2）, 320–335.</p>
+<p>Hirshleifer, D., K. Hou, S.H. Teoh, and Y. Zhang（2004）. Do investors overvalue firms with bloated balance sheets?Journal of Accounting and Economics 38, 297–331.</p>
+<p>Hirshleifer, D., P. -H. Hsu, and D. Li（2013）. Innovative efficiency and stock returns. Journal of Financial Economics 107（3）, 632–654.</p>
+<p>Hirshleifer, D. and D. Jiang（2010）. Afinancing-based misvaluation factor and the crosssection of expected returns. Review of Financial Studies 23（9）, 3401–3436.</p>
+<p>Hirshleifer, D., S.S. Lim, and S.H. Teoh（2009）. Driven to distraction: Extraneous events and underreaction to earnings news. Journal of Finance 64（5）, 2289–2325.</p>
+<p>Hirshleifer, D. and S.H. Teoh（2003）. Limited attention, information disclosure, and financial reporting. Journal of Accounting and Economics 36（1-3）, 337–386.</p>
+<p>Hirshleifer, D., S.H. Teoh, and J.J. Yu（2011）. Short arbitrage, return asymmetry, and the accrual anomaly. Review of Financial Studies 24（7）, 2429–2461.</p>
+<p>Holm, S. （1979）. A simple sequentially rejective multiple test procedure. Scandinavian Journal of Statistics 6（2）, 65–70.</p>
+<p>Hon, M.T. and I. Tonks（2003）. Momentum in the UK stock market. Journal of Multinational Financial Management 13（1）, 43–70.</p>
+<p>Hong, H., T. Lim, and J.C. Stein（2000）. Bad news travels slowly: Size, analyst coverage, and the profitability of momentum strategies. Journal of Finance 55（1）, 265–295.</p>
+<p>Hong, H. and J.C. Stein（1999）. A unified theory of underreaction, momentum trading, and overreaction in asset markets. Journal of Finance 54（6）, 2143–2184.</p>
+<p>Hong, H. and J.C. Stein（2007）. Disagreement and the stock market. Journal of Economic Perspectives 21（2）, 109–128.</p>
+<p>Hou, K. （2007）. Industry information diffusion and the lead-lag effect in stock returns. Review of Financial Studies 20（4）, 1113–1138.</p>
+<p>Hou, K., H. Mo, C. Xue, and L. Zhang（2019a）. Security analysis: An investment perspective. Fisher College of Business Working Paper No. 2019-03-016, Charles A. Dice Center Working Paper No. 2019-16. Available at: <a href="https://ssrn.com/abstract=3415546" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=3415546</a>.</p>
+<p>Hou, K., H. Mo, C. Xue, and L. Zhang（2019b）. Which factors?Review of Finance 21（1）, 1–35.</p>
+<p>Hou, K., H. Mo, C. Xue, and L. Zhang（2020）. An augumented q-factor model with expected growth. Review of Finance forthcoming.</p>
+<p>Hou, K., C. Xue, and L. Zhang（2015）. Digesting anomalies: An investment approach. Review of Financial Studies 28（3）, 650–705.</p>
+<p>Hou, K., C. Xue, and L. Zhang（2020）. Replicating anomalies. Review of Financial Studies 33（5）, 2019–2133.</p>
+<p>Houweling, P. and J. Van Zundert（2017）. Factor investing in the corporate bond market. Financial Analysts Journal 73（2）, 100–115.</p>
+<p>Hsu, J., V. Viswanathan, M. Wang, and P. Wool（2018）. Anomalies in Chinese A- shares. The Journal of Portfolio Management 44（7）, 108–123.</p>
+<p>Hu, G. X., C. Chen, Y. Shao, and J. Wang（2019）. Fama–French in China: Size and value factors in Chinese stock returns. International Review of Finance 19（1）, 3–44.</p>
+<p>Hu, S. -Y. （1997）. Trading turnover and expected stock returns: The trading frequency hypothesis and evidence from the Tokyo stock exchange. National Taiwan University.</p>
+<p>Huang, A.G. （2009）. The cross section of cashflow volatility and expected stock returns. Journal of Empirical Finance 16（3）, 409–429.</p>
+<p>Huang, D., F. Jiang, J. Tu, and G. Zhou（2015）. Investor sentiment aligned: A powerful predictor of stock returns. Review of Financial Studies 28（3）, 791–837.</p>
+<p>Huang, D., H. Lehkonen, K. Pukthuanthong, and G. Zhou（2018）. Sentiment across asset markets. Singapore Management University, University of Jyväskylä, University of</p>
+<p>Missouri, Washington University in St. Louis. Available at: <a href="https://ssrn.com/abstract=3185140" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=3185140</a>.</p>
+<p>Huberman, G. and S. Kandel（1987）. Mean-variance spanning. Journal of Finance 42（4）, 873–888. Huberman, G. and T. Regev（2001）. Contagious speculation and a cure for cancer: A nonevent that made stock prices soar. Journal of Finance 56（1）, 387–396.</p>
+<p>Huij, J. and S. Lansdorp（2017）. Residual momentum and reversal strategies revisited. Erasmus University, Robeco Asset Management. Available at:</p>
+<p><a href="https://ssrn.com/abstract=2929306" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=2929306</a>.</p>
+<p>Hur, J. and V. Singh（2016）. Reexamining momentum profits: Underreaction or overreaction tofirm-specific information?Review of Quantitative Finance and Accounting 46（2）, 261–289.</p>
+<p>Ibbotson, R. G., J.L. Sindelar, and J.R. Ritter（1994）. The market’s problems with the pricing of initial public offerings. Journal of Applied Corporate Finance 7（1）, 66– 74.</p>
+<p>Ilmanen, A., L.N. Nielsen, and S. Chandra（2015）. Are defensive stocks expensive?A closer look at value spreads. AQR Capital Management, LLC.</p>
+<p>Ingersoll, J.E. and L.J. Jin（2013）. Realization utility with reference-dependent preferneces. Review of Financial Studies 26（3）, 723–767.</p>
+<p>Israel, R., D. Palhares, and S. Richardson（2018）. Common factors in corporate bond returns. Journal of Investment Management 16（2）, 17–46.</p>
+<p>Jaffe, J., D.B. Keim, and R. Westerfield（1989）. Earnings yields, market values, and stock returns. Journal of Finance 44 （1）, 135–148.</p>
+<p>Jegadeesh, N. （1990）. Evidence of predictable behavior of security returns. Journal of Finance 45（3）, 881–898.</p>
+<p>Jegadeesh, N., J. Noh, K. Pukthuanthong, R. Roll, and J. Wang（2019）. Empiricaltests ofasset pricing models with individual assets: Resolving the errors-in- variables bias in risk premium estimation. Journal of Financial Economics 133 （2）, 273–298.</p>
+<p>Jegadeesh, N. and S. Titman（1993）. Returns to buying winners and selling losers: Implications for stock market efficiency. Journal of Finance 48（1）, 65–91.</p>
+<p>Jegadeesh, N. and S. Titman（1995）. Short-horizon return reversals and the bid-ask spread. Journal of Financial Intermediation 4（2）, 116–132.</p>
+<p>Jegadeesh, N. and S. Titman（2001）. Profitability of momentum strategies: An evaluation of alternative explanations. Journal of Finance 56（2）, 699–720.</p>
+<p>Jensen, M.C. （1968）. The performance of mutual funds in the period 1945–1964. Journal of Finance 23（2）, 389–416.</p>
+<p>Ji, X., J.S. Martin, and Y. Yao（2017）. Macroeconomic risk and seasonality in momentum profits. Journal of Financial Markets 36 , 76–90.</p>
+<p>Jiang, F., J. Lee, X. Martin, and G. Zhou（2019）. Manager sentiment and stock returns. Journal of Financial Economics 132（1）, 126–149.</p>
+<p>Jiang, G. J., D. Xu, and T. Yao（2009）. The information content of idiosyncratic</p>
+<p>volatility. Journal of Financial and Quantitative Analysis 44（1）, 1–28.</p>
+<p>Jiang, H. （2010）. Institutional investors, intangible information, and the book-to- market effect. Journal of Financial Economics 96（1）, 98–126.</p>
+<p>Jiang, H., S.Z. Li, and H. Wang（2020）. Pervasive underreaction: Evidence from high-frequency data. Michigan State University, The State University of New Jersey, Prime Quantitative Research. Available at: <a href="https://ssrn.com/abstract=2679614" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=2679614</a>, SSRN No. 2679614.</p>
+<p>Jiang, Y., Y. Qian, and T. Yao（2016）. R &amp; D spillover and predictable returns. Review of Finance 20（5）, 1769–1797.</p>
+<p>Jostova, G., S. Nikolova, A. Philipov, and C.W. Stahel（2013）. Momentum in corporate bond returns. Review of Financial Studies 26 （7）, 1649–1693.</p>
+<p>Kahneman, D. and A. Tversky（1979）. Prospect Theory: An analysis of decision under risk. Econometrica 47（2）, 263–292.</p>
+<p>Kan, R. and G. Zhou（2012）. Tests of mean-variance spanning. Annals of Economics and Finance 13（1）, 145–193.</p>
+<p>Kaniel, R., A. Ozoguz, and L. Starks（2012）. The high volume return premium: Cross-country evidence. Journal of Financial Economics 103（2）, 255–279.</p>
+<p>Karels, R. and M. Sun（2013）. Chapter 24 Active portfolio construction when risk and alpha factors are misaligned. In C.S. Wehn, C. Hoppe, and G.N. Gregoriou（Eds. ）,</p>
+<p>Rethinking Valuation and Pricing Models, pp. 399–410. Academic Press.</p>
+<p>Keim, D.B. （1983）. Size-related anomalies and stock return seasonality: Further empirical evidence. Journal of Financial Economics 12 （1）, 13–32.</p>
+<p>Kelly, B. T., S. Pruitt, and Y. Su（2017）. Instrumented principal component analysis. Yale University, Arizona State University, Johns Hopkins University. Available at: <a href="https://ssrn.com/abstract=2983919" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=2983919</a>.</p>
+<p>Kelly, B. T., S. Pruitt, and Y. Su（2019）. Characteristics are covariances: A unified model of risk and return. Journal of Financial Economics 134（3）, 501–524.</p>
+<p>Keynes, J.M. （1936）. The General Theory of Employment, Interest and Money.</p>
+<p>London, UK: Macmillan Publishers Ltd.</p>
+<p>Khandani, A.E. and A.W. Lo（2011）. What happened to the quants in August 2007? Evidence from factors and the transactions data. Journal of Financial Markets 14（1）, 1–46.</p>
+<p>Kok, U. -W., J. Ribando, and R.G. Sloan（2017）. Facts about formulaic value investing. Financial Analysts Journal 73（2）, 81–99.</p>
+<p>Kopman, L. and S. Liu（2011）. Treatment offixed transaction costs in Barra optimizer. MSCI Barra Research Paper No. 2011-10. Available at: <a href="https://ssrn.com/abstract=1915219" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=1915219</a>.</p>
+<p>Kozak, S., S. Nagel, and S. Santosh（2018）. Interpreting factor models. Journal of Finance 73（3）, 1183–1223.</p>
+<p>Kraus, A. and R.H. Litzenberger（1976）. Skewness preference andthe valuation of risk assets. Journal of Finance 31（4）, 1085–1100.</p>
+<p>Kubota, K. and H. Takehara（2018）. Does the Fama and Frenchfive-factor model work wellin Japan? International Review of Finance 18 （1）, 137–146.</p>
+<p>Kunz, B. and M. Mazzoleni（2018）. When value goes global. Research Affiliates, LLC.</p>
+<p>La Porta, R. （1996）. Expectations and the crosssection of stock returns. Journal of Finance 51（5）, 1715–1742.</p>
+<p>Lakonishok, J., A. Shleifer, and R.W. Vishny（1994）. Contrarian investment, extrapolation, and risk. Journal of Finance 49 （5）, 1541–1578.</p>
+<p>Lam, F.Y. E.C. and K.C. J. Wei（2011）. Limits-to-arbitrage, investment frictions, and the asset growth anomaly. Journal of Financial Economics 102（1）, 127–149.</p>
+<p>Lamoureux, C.G. and G.C. Sanger（1989）. Firm size and turn-of-the-year effects in the OTC/NASDAQ market. Journal of Finance 44（5）, 1219–1245.</p>
+<p>Ledoit, O. and M. Wolf（2003）. Improved estimation of the covariance matrix of stock returns with an application to portfolio selection. Journal of Empirical Finance 10（5）, 603–621.</p>
+<p>Lee, B., J. O’Brien, and K. Sivaramakrishnan（2008）. An analysis offinancial analysts’optimisim in long-term growth forecasts. Journal of Behavioral Finance 9（3）, 171–184.</p>
+<p>Lee, C.M. C., A. Shleifer, and R.H. Thaler（1991）. Investor sentiment and the closed-end fund puzzle. Journal of Finance 46（1）, 75–109.</p>
+<p>Lee, C.M. C. and E. So（2015）. Alphanomics: The Information Underpinnings of Market Efficiency. Now Publishers Inc.</p>
+<p>Lee, C.M. C., S.T. Sun, R. Wang, and R. Zhang（2019）. Technological links and predictable returns. Journal of Financial Economics 132 （3）, 76–96.</p>
+<p>Lee, C.M. C. and B. Swaminathan（2000）. Price momentum and trading volume. Journal of Finance 55（5）, 2017–2069.</p>
+<p>Lee, D. H., M.K. Kim, and T.S. Kim（2016）. Abnormal trading volume and the</p>
+<p>crosssection of stock returns. KAIST College of Business Working Paper Series No. 2016-008. Available at: <a href="https://ssrn.com/abstract=2812010" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=2812010</a>.</p>
+<p>Lee, J. -H. and D. Stefek（2008）. Do risk factors eat alphas?The Journal of Portfolio Management 34（4）, 12–25.</p>
+<p>Lefevre, E. and J.D. Markman（2012）. The Reminiscences of a Stock Operator Collection: The Classic Book, The Illustrated Edition. Hoboken, New Jersey: John Wiley &amp; Sons, Inc.</p>
+<p>Lehmann, B.N. （1990a）. Fads, martingales, and market efficiency. The Quarterly Journal of Economics 105（1）, 1–28.</p>
+<p>Lehmann, B.N. （1990b）. Residual risk revisited. Journal of Econometrics 45（1- 2）, 71–97.</p>
+<p>Leote de Carvalho, R., X. Lu, and P. Moulin（2012）. Demystifying equity risk- based strategies: A simple alpha plus beta description. The Journal of Portfolio Management 38（3）, 56–70.</p>
+<p>Lettau, M. and M. Pelger（2020）. Factors thatfit the time series and crosssection of stock returns. Review of Financial Studies 33 （5）, 2274–2325.</p>
+<p>Lewellen, J. （1999）. The time-series relations among expected return, risk, and book-to-market. Journal of Financial Economics 54 （1）, 5–43.</p>
+<p>Lewellen, J. （2002）. Momentum and autocorrelation in stock returns. Review of Financial Studies 15（2）, 533–564.</p>
+<p>Li, B., J. Qiu, and Y. Wu（2010）. Momentum and seasonality in Chinese stock markets. Journal of Money, Investment and Banking 17（5）, 24–36.</p>
+<p>Li, C. -A. and C. -C. Yeh（2011）. Investor psychological and behavioral bias: Do high sentiment and momentum exist in the China stock market?Review of Pacific Basin Financial Markets and Policies 14（03）, 429–448.</p>
+<p>Li, D. and L. Zhang（2010）. Does q-theory with investment frictions explain anomalies in the cross section of returns?Journal of Financial Economics 98（2）, 297– 314.</p>
+<p>Li, J. and J. Yu（2012）. Investor attention, psychological anchors, and stock return predictability. Journal of Financial Economics 104 （2）, 401–419.</p>
+<p>Li, X., Y. Becker, and D. Rosenfeld（2012）. Asset growth and future stock returns: International evidence. Financial Analysts Journal 68（3）, 51–62.</p>
+<p>Li, X., R.N. Sullivan, and L. Garcia-Feijóo（2014）. The limits to arbitrage and the low-volatility anomaly. Financial Analysts Journal 70（1）, 52–63.</p>
+<p>Liang, C.Y. C. and Z. Tang（2018）. Idiosyncratic return volatility, uncertainty, and asset pricing implications. University of Maine, Clark University. Available at: <a href="https://ssrn.com/abstract=3019379" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=3019379</a>. Liew, J. and T. Budavari（2017）. The“six"factor–A social media factor derived directly from tweet sentiments. The Journal of Portfolio Management 43（3）, 102–111.</p>
+<p>Lin, Q. （2019）. Residual momentum andthe crosssection of stock returns: Chinese evidence. Finance Research Letters 29, 206–215.</p>
+<p>Lin, Q. （2020）. Idiosyncratic momentum and the crosssection of stock returns: Further evidence. European Financial Management 26 （3）, 579–627.</p>
+<p>Linnainmaa, J.T. and M.R. Roberts（2018）. The history of the crosssection of stock returns. Review of Financial Studies 31（7）, 2606–2649.</p>
+<p>Lintner, J. （1965a）. The valuation of risk assets and the selection of risky investments in stock portfolios and capital budgets. Review of Economics and Statistics 47, 13–37.</p>
+<p>Lintner, J. （1965b）. Securities prices, risk, and maximal gains from diversification. Journal of Finance 20（4）, 587–615.</p>
+<p>Lipson, M. L., S. Mortal, and M.J. Schill（2011）. On the scope and drivers of the asset growth effect. Journal of Financial and Quantitative Analysis 46 （6）, 1651– 1682.</p>
+<p>Liu, C. and Y. Lee（2001）. Does the momentum strategy work universally? Evidence from the Japanese stock market. Asia-Pacific Financial Markets 8（4）, 321– 339.</p>
+<p>Liu, J., R.F. Stambaugh, and Y. Yuan（2019）. Size and value in China. Journal of Financial Economics 134（1）, 48–69.</p>
+<p>Liu, L. X., T.M. Whited, and L. Zhang（2009）. Investment-based expected stock returns. Journal of Political Economy 117（6）, 1105–1139.</p>
+<p>Liu, L.X. and L. Zhang（2008）. Momentum profits, factor pricing, and macroeconomic risk. Review of Financial Studies 21（6）, 2417–2448.</p>
+<p>Liu, R. （2019）. Asset pricing anomalies and the low-risk puzzle. University of Nebraska at Lincoln. Available at: <a href="https://ssrn.com/abstract=3258015" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=3258015</a>.</p>
+<p>Liu, W. （2006）. A liquidity-augmented capital asset pricing model. Journal of Financial Economics 82（3）, 631–671.</p>
+<p>Liu, W., N. Strong, and X. Xu（1999）. The profitability of momentum investing. Journal of Business Finance &amp; Accounting 26（9-10）, 1043–1091.</p>
+<p>Liu, Y., C. Shi, and X. Lian（2019）. Refined book-to-market ratio and the crosssection of stock returns in China. Southwestern University of Finance and</p>
+<p>Economics, Beijing Liangxin Investment Management Co. Ltd., Shenzhen China-Europe Rabbit Fund Management Co. Ltd. Available at: <a href="https://ssrn.com/abstract=3466909" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=3466909</a>.</p>
+<p>Lo, A.W. and A.C. MacKinlay（1990）. Data-snooping biases in tests offinancial asset pricing models. Review of Financial Studies 3 （3）, 431–467.</p>
+<p>Lobo, M. S., M. Fazel, and S. Boyd（2007）. Portfolio optimization with linear andfixed transaction costs. Annals of Operations Research 152（1）, 341–365.</p>
+<p>Lockwood, L. and W. Prombutr（2010）. Sustainable growth and stock returns. Journal of Financial Research 33 （4）, 519–538.</p>
+<p>Loh, R.K. and M. Warachka（2012）. Streaks in earnings surprises and the crosssection of stock returns. Management Science 58（7）, 1305–1321.</p>
+<p>Lopez de Prado, M. （2018）. Advances in Financial Machine Learning. Hoboken, New Jersey: John Wiley &amp; Sons, Inc.</p>
+<p>Loughran, T. and J.W. Wellman（2011）. New evidence on the relation between the enterprise multiple and average stock returns. Journal of Financial and Quantitative Analysis 46（6）, 1629–1650.</p>
+<p>Lucas, R.E. （1978）. Asset prices in an exchange economy. Econometrica 46（6）, 1429–1445.</p>
+<p>Lyandres, E., L. Sun, and L. Zhang（2008）. The new issues puzzle: Testing the investment-based explanation. Review of Financial Studies 21（6）, 2825–2855.</p>
+<p>Maillard, S., T. Roncalli, and J. Teïletche（2010）. The properties of equally weighted risk contribution portfolios. The Journal of Portfolio Management 36（4）, 60–70.</p>
+<p>Mandelbrot, B. （1966）. Forecasts offuture prices, unbiased markets, and“martingale"models. Journal of Business 39（1）, 242–255.</p>
+<p>Markowitz, H. （1952）. Portfolio selection. Journal of Finance 7（1）, 77–91.</p>
+<p>McCulloch, R. and P.E. Rossi（1991）. A Bayesian approach to testing the arbitrage pricing theory. Journal of Econometrics 49 （1-2）, 141–168.</p>
+<p>McLean, R.D. and J. Pontiff（2016）. Does academic research destroy stock return predictability? Journal of Finance 71 （1）, 5–32.</p>
+<p>Mei, J., J. Scheinkman, and W. Xiong（2005）. Speculative trading and stock prices: Evidence from Chinese A-B share premia. NBER Working Paper No. 11362.</p>
+<p>Menchero, J. and B. Davis（2011）. Risk contribution is exposure times volatility</p>
+<p>times correlation: Decomposing risk using the x-sigma-rho formula. The Journal of Portfolio Management 37（2）, 97–106.</p>
+<p>Menchero, J. and J. -H. Lee（2015）. Efficiently combining multiple sources of alpha. Journal of Investment Management 13（4）, 71–86.</p>
+<p>Menchero, J., D.J. Orr, and J. Wang（2011）. The Barra US equity model（USE4） methodology notes. MSCI Inc.</p>
+<p>Menchero, J., J. Wang, and D.J. Orr（2011）. Eigen-adjusted covariance matrices. MSCI Inc.</p>
+<p>Menkhoff, L., L. Sarno, M. Schmeling, and A. Schrimpf（2012）. Currency momentum strategies. Journal of Financial Economics 106 （3）, 660–684.</p>
+<p>Merton, R.C. （1972）. An analytic derivation of the efficient portfolio frontier. Journal of Financial and Quantitative Analysis 7（4）, 1851–1872.</p>
+<p>Merton, R.C. （1973）. An intertemporal capital asset pricing model. Econometrica 41（5）, 867–887. Miller, M.H. and F. Modigliani（1961）. Dividend policy, growth, and the valuation of shares. Journal of Business 34（4）, 411–433.</p>
+<p>Modigliani, F. and M.H. Miller（1958）. The cost of capital, corporationfinance and the theory of investment. American Economic Review 48（3）, 261–297.</p>
+<p>Mohanram, P.S. （2005）. Separating winners from losers among low-book-to- market stocks using financial statement analysis. Review of Accounting Studies 10（2- 3）, 133–170.</p>
+<p>Moskowitz, T.J. and M. Grinblatt（1999）. Do industries explain momentum? nance 54 （4）, 1249–1290. Journal of Finance 54 （4）, 1249-1290.</p>
+<p>Mossin, J. （1966）. Equilibrium in a capital asset market. Econometrica 34（4）, 768–783. MSCI（2014）. MSCI quality indexes methodology. MSCI Inc.</p>
+<p>Narayan, P. K., H.A. Ahmed, and S. Narayan（2015）. Do momentum-based trading strategies work in the commodity futures markets?Journal of Futures Markets 35（9）, 868–891.</p>
+<p>Newey, W.K. and K.D. West（1987）. A simple, positive semi-definite, heteroskedasticity and autocorrelation consistent covariance matrix. Econometrica 5（3）, 703–708.</p>
+<p>Newey, W.K. and K.D. West（1994）. Automatic lag selection in covariance matrix estimation. Review of Economic Studies 61 （4）, 631–653.</p>
+<p>Nissim, D. and S.H. Penman（2001）. Ratio analysis and equity valuation: From</p>
+<p>research to practice. Review of Accounting Studies 6 （1）, 109–154.</p>
+<p>Novy-Marx, R. （2013）. The other side of value: The gross profitability premium. Journal of Financial Economics 108（1）, 1–28.</p>
+<p>Novy-Marx, R. （2014）. Understanding defensive equity. NBER Working Paper No. 20591.</p>
+<p>Novy-Marx, R. （2015a）. Backtesting strategies based on multiple signals. NBER Working Paper No. 21329.</p>
+<p>Novy-Marx, R. （2015b）. Fundamentally, momentum is fundamental momentum. NBER Working Paper No. 20984.</p>
+<p>Novy-Marx, R. and M. Velikov（2016）. A taxonomy of anomalies and their trading costs. Review of Financial Studies 29（1）, 104–147.</p>
+<p>Obreja, I. （2013）. Book-to-market equity, financial leverage, and the crosssection of stock returns. Review of Financial Studies 26 （5）, 1146–1189.</p>
+<p>Odean, T. （1998）. Volume, volatility, price, and profit when all traders are above average. Journal of Finance 53（6）, 1887–1934.</p>
+<p>Ohlson, J.A. （1980）. Financial ratios and the probabilistic prediction of bankruptcy. Journal of Accounting Research 18（1）, 109–131.</p>
+<p>Orlov, V. （2016）. Currency momentum, carry trade, and market illiquidity. Journal of Banking &amp; Finance 67, 1–11.</p>
+<p>Pástor, L. and R.F. Stambaugh（2003）. Liquidity risk and expected stock returns. Journal of Political Economy 111（3）, 642–685.</p>
+<p>Patton, A.J. and B.M. Weller（2020）. What you see is not what you get: The costs of trading market anomalies. Journal of Financial Economics forthcoming.</p>
+<p>Peng, L. and W. Xiong（2006）. Investor attention, overconfidence and category learning. Journal of Financial Economics 80 （3）, 563–602.</p>
+<p>Penman, S.H. and F. Reggiani（2018）. Fundamentals of value versus growth investing and an explanation for the value trap. Financial Analysts Journal 74（4）, 103–119.</p>
+<p>Penman, S.H. and J. Zhu（2019）. An accounting-based asset pricing model and a fundamental factor. Columbia Business School, Fudan University. Available at: <a href="https://ssrn.com/abstract=3393068" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=3393068</a>.</p>
+<p>Penman, S.H. and J.L. Zhu（2014）. Accounting anomalies, risk, and return. The Accounting Review 89（5）, 1835–1866.</p>
+<p>Peterkort, R.F. and J.F. Nielsen（2005）. Is the book-to-market ratio a measure of risk?Journal of Financial Research 28（4）, 487–502.</p>
+<p>Petersen, M.A. （2009）. Estimating standard errors infinance panel data sets: Comparing approaches. Review of Financial Studies 22 （1）, 435–480.</p>
+<p>Piotroski, J.D. （2000）. Value investing: The use of historicalfinancial statement information to separate winners from losers. Journal of Accounting Research 38, 1–41.</p>
+<p>Piotroski, J.D. and E.C. So（2012）. Identifying expectation errors in value/glamour strategies: a fundamental analysis approach. Review of Financial Studies 25（9）, 2841– 2875.</p>
+<p>Polk, C. and P. Sapienza（2008）. The stock market and corporate investment: A test of catering theory. Review of Financial Studies 22（1）, 187–217.</p>
+<p>Pontiff, J. （2006）. Costly arbitrage and the myth of idiosyncratic risk. Journal of Accounting and Economics 42（1-2）, 35–52.</p>
+<p>Pontiff, J. and L.D. Schall（1998）. Book-to-market ratios as predictors of market returns. Journal of Financial Economics 49（2）, 141–160.</p>
+<p>Pontiff, J. and A. Woodgate（2008）. Share issuance and crosssectional returns. Journal of Finance 63（2）, 921–945.</p>
+<p>Pukthuanthong, K., R. Roll, and A. Subrahmanyam（2019）. A protocol for factor identification. Review of Financial Studies 32 （4）, 1573–1607.</p>
+<p>Qian, E. （2005）. Risk parity portfolios: Efficient portfolios through true diversification. Panagora Asset Management, Inc.</p>
+<p>Qiao, F. （2019）. Replicating anomalies in China. Tsinghua University. Available at: <a href="https://ssrn.com/abstract=3263990" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=3263990</a>.</p>
+<p>Rabener, N. （2018）. Factor allocation models: Improving factor portfolio efficiency. <a href="https://www/" target="_blank" rel="noopener noreferrer">https://www</a>. factorresearch.com/research-factor-allocation-models. Accessed: 2020-5-1.</p>
+<p>Rao, A. and A. Gupta（2019）. Value investing is down. But is it out? <a href="https://www/" target="_blank" rel="noopener noreferrer">https://www</a>. msci.com/www/blog-posts/value-investing-is-down-but-is/01619618276. Accessed: 2019-12-31.</p>
+<p>Rapach, D. E., J.K. Strauss, and G. Zhou（2010）. Out-of-sample equity premium prediction: Combination forecasts and links to the real economy. Review of Financial Studies 23（2）, 821–862.</p>
+<p>Rapach, D.E. and G. Zhou（2019）. Sparse macro factors. Saint Louis University, Washington University in St. Louis. Available at: <a href="https://ssrn.com/abstract=3259447" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=3259447</a>.</p>
+<p>Reinganum, M.R. （1981）. Misspecification of capital asset pricing: Empirical anomalies based on earnings’yields and market values. Journal of Financial Economics 9（1）, 19–46.</p>
+<p>Romano, J. P., A.M. Shaikh, and M. Wolf（2008）. Formalized data snooping based on generalized error rates. Econometric Theory 24（2）, 404–447.</p>
+<p>Romano, J.P. and M. Wolf（2005）. Stepwise multiple testing as formalized data snooping. Econometrica 73（4）, 1237–1282.</p>
+<p>Romano, J.P. and M. Wolf（2007）. Control of generalized error rates in multiple testing. The Annals of Statistics 35（4）, 1378–1408.</p>
+<p>Rosenberg, B., K. Reid, and R. Lanstein（1985）. Persuasive evidence of market inefficiency. The Journal of Portfolio Management 11（3）, 9–16.</p>
+<p>Ross, S.A. （1976）. The arbitrage theory of capital asset pricing. Journal of Economic Theory 13（3）, 341–360.</p>
+<p>Rouwenhorst, K.G. （1998）. International momentum strategies. Journal of Finance 53（1）, 267–284. Rouwenhorst, K.G. （1999）. Local return factors and turnover in emerging stock markets. Journal of Finance 54（4）, 1439–1464.</p>
+<p>Ruud, P.A. （2000）. An Introduction to Classical Econometric Theory. New York, NY: OxfordUniversity Press.</p>
+<p>Samuelson, P.A. （1965）. Proof that properly anticipated pricesfluctuate randomly. Industrial Management Review 6（2）, 41–49.</p>
+<p>Savor, P. and M. Wilson（2013）. How much do investors care about macroeconomics risk?Evidence from scheduled economic announcements. Journal of Financial and Quantitative Analysis 48（2）, 343–375.</p>
+<p>Savor, P. and M. Wilson（2014）. Asset pricing: A tale of two days. Journal of Financial Economics 113（2）, 171–201.</p>
+<p>Schneider, P., C. Wagner, and J. Zechner（2020）. Low riskanomalies?Journal of Financeforthcoming. Schwert, G.W. （1983）. Size and stock returns, and other empirical regularities. Journal of Financial Economics 12（1）, 3–12.</p>
+<p>Sewell, M. （2007）. Behaviouralfinance. University of Cambridge.</p>
+<p>Shanken, J. （1987）. A Bayesian approach to testing portfolio efficiency. Journal of Financial Economics 19（2）, 195–215.</p>
+<p>Shanken, J. （1992）. On the estimation of beta-pricing models. Review of Financial Studies 5（1）, 1–33.</p>
+<p>Sharpe, W.F. （1964）. Capital asset prices: A theory of market equilibrium under</p>
+<p>conditions of risk. Journal of Finance 19 （3）, 425–442.</p>
+<p>Sharpe, W.F. （1966a）. Mutual fund performance. Journal of Business 39（1）, 119–138.</p>
+<p>Sharpe, W.F. （1966b）. Security prices, risk, and maximal gains from diversification: Reply. Journal of Finance 21 （4）, 743–744.</p>
+<p>Sharpe, W.F. （1992）. Asset allocation: Management style and performance measurement. The Journal of Portfolio Management 18（2）, 7–19.</p>
+<p>Shefrin, H. and M. Statman（1985）. The disposition to sell winners too early and ride losers too long: Theory and evidence. Journal of Finance 40（3）, 777–790.</p>
+<p>Shen, Q., A.C. Szakmary, and S.C. Sharma（2007）. An examination of momentum strategies in commodity futures markets. Journal of Futures Markets 27（3）, 227–256.</p>
+<p>Shiller, R.J. （1979）. The volatility of long term interest rates and expectations models of the term structure. Journal of Political Economy 87（6）, 1190–1219.</p>
+<p>Shiller, R.J. （1981）. Do stock prices move too muchto bejustified by subsequent changes in dividends? American Economic Review 71 （3）, 421–436.</p>
+<p>Shiller, R.J. （1984）. Stock prices and social dynamics. Brookings papers on economic activity 1984（2）, 457–510.</p>
+<p>Shiller, R.J. （2009）. Irrational Exuberance（2 ed. ）. Princeton, NJ: Princeton University Press.</p>
+<p>Shleifer, A. and R.W. Vishny（1997）. The limits of arbitrage. Journal of Finance 52（1）, 35–55.</p>
+<p>Sloan, R.G. （1996）. Do stock prices fully reflect information in accruals and cash flows about future earnings?The Accounting Review 71（3）, 289–315.</p>
+<p>Sloan, R.G. （2019）. Fundamental analysis redux. The Accounting Review 94（2）, 363–377.</p>
+<p>Soliman, M.T. （2008）. The use of DuPont analysis by market participants. The Accounting Review 83（3）, 823–853.</p>
+<p>Spiess, D.K. and J. Affleck-Graves（1999）. The long-run performance of stock returns following debt offerings. Journal of Financial Economics 54（1）, 45–73.</p>
+<p>Stambaugh, R. F., J. Yu, and Y. Yuan（2012）. The short of it: Investor sentiment and anomalies. Journal of Financial Economics 104 （2）, 288–302.</p>
+<p>Stambaugh, R. F., J. Yu, and Y. Yuan（2014）. The long ofit: Odds that investor sentiment spuriously predicts anomaly returns. Journal of Financial Economics</p>
+<p>114（3）, 613–619.</p>
+<p>Stambaugh, R. F., J. Yu, and Y. Yuan（2015）. Arbitrage asymmetry and the idiosyncratic volatility puzzle. Journal of Finance 70（5）, 1903–1948.</p>
+<p>Stambaugh, R.F. and Y. Yuan（2017）. Mispricing factors. Review of Financial Studies 30（4）, 1270–1315.</p>
+<p>Statman, M. （2018）. Behavioral efficient markets. The Journal of Portfolio Management 44（3）, 76–87.</p>
+<p>Statman, M., S. Thorley, and K. Vorkink（2006）. Investor overconfidence and trading volume. Review of Financial Studies 19（4）, 1531–1565.</p>
+<p>Stattman, D. （1980）. Book values and stock returns. The Chicago MBA: A Journal of Selected Papers 4（1）, 25–45.</p>
+<p>Stein, J.C. （2009）. Presidential address: Sophisticated investors and market efficiency. Journal of Finance 64 （4）, 1517–1548.</p>
+<p>Subrahmanyam, A. （2005）. On the stability of the crosssection of expected stock returns in the crosssection: Understanding the curious role of share turnover. European Financial Management 11（5）, 661–678.</p>
+<p>Sullivan, R., A. Timmermann, and H. White（1999）. Data-snooping, technical trading rule performance, and the bootstrap. Journal of Finance 54（5）, 1647–1691.</p>
+<p>Thaler, R.H. （1985）. Mental accounting and consumer choice. Marketing Science 4（3）, 199–214.</p>
+<p>Thaler, R.H. （1999）. Mental accounting matters. Journal of Behavioral Decision Making 12（3）, 183–206.</p>
+<p>Thomas, J.K. and H. Zhang（2002）. Inventory changes and future returns. Review of Accounting Studies 7（2）, 163–187.</p>
+<p>Tinic, S.M. and R.R. West（1986）. Risk, return, and equilibrium: A revisit. Journal of Political Economy 94（1）, 126–147.</p>
+<p>Titman, S., K.C. J. Wei, and F. Xie（2004）. Capital investments and stock returns. Journal of Financial and Quantitative Analysis 39（4）, 677–700.</p>
+<p>Titman, S., K.C. J. Wei, and F. Xie（2009）. Capital investments and stock returns in Japan. International Review of Finance 9 （1-2）, 111–131.</p>
+<p>Titman, S., K.C. J. Wei, and F. Xie（2010）. Access to equity markets, corporate investments and stock returns: International evidence. AFA 2011 Denver Meetings Paper. Available at: <a href="https://ssrn.com/abstract=1571648" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=1571648</a>.</p>
+<p>Treynor, J.L. （1961）. Market value, time, and risk. Unpublished manuscript.</p>
+<p>Treynor, J.L. （1962）. Toward of theory of market value of risky assets. Unpublished manuscript.</p>
+<p>Treynor, J.L. and K.K. Mazuy（1966）. Can mutual funds outguess the market? Harvard Business Review 44（July-August）, 131–136.</p>
+<p>Tversky, A. and D. Kahneman（1971）. Beliefin the law ofsmall numbers. Psychological Bulletin 76（2）, 105–110.</p>
+<p>Tversky, A. and D. Kahneman（1973）. Availability: A heuristic for judging frequency and probability. Cognitive Psychology 5 （2）, 207–232.</p>
+<p>Tversky, A. and D. Kahneman（1974）. Judgment under uncertainty: Heuristics and biases. Science 185（4157）, 1124–1131.</p>
+<p>Tversky, A. and D. Kahneman（1992）. Advances in prospect theory: Cumulative representation of uncertainty. Journal of Risk and Uncertainty 5（4）, 297–323.</p>
+<p>Ung, D. and P. Luk（2016）. What is in your smart beta portfolio?A fundamental and macroeconomic analysis. The Journal of Index Investing 7（1）, 49–77.</p>
+<p>Wang, H., J. Yan, and J. Yu（2017）. Reference-dependent preferences and the risk- return trade-off. Journal of Financial Economics 123 （2）, 395–414.</p>
+<p>Wang, Y. and A. Di Iorio（2007）. The cross section of expected stock returns in the Chinese A-share market. Global Finance Journal 17（3）, 335–349.</p>
+<p>Wasserstein, R.L. and N.A. Lazar（2016）. The ASA statement on p-values:</p>
+<p>Context, process, and purpose. The American Statistician 70（2）, 129–133.</p>
+<p>Watanabe, A., Y. Xu, T. Yao, and T. Yu（2013）. The asset growth effect: Insights from international equity markets. Journal of Financial Economics 108（2）, 529–563.</p>
+<p>Welch, I. and A. Goyal（2008）. A comprehensive look at the empirical performance of equity premium prediction. Review of Financial Studies 21（4）, 1455– 1508.</p>
+<p>White, H. （1980）. A heteroskedasticity-consistent covariance matrix estimator and a direct test for heteroskedasticity. Econometrica 48（4）, 817–838.</p>
+<p>White, H. （2000）. A reality check for data snooping. Econometrica 68（5）, 1097–1126.</p>
+<p>Xing, Y. （2008）. Interpreting the value effect through the q-theory: An empirical investigation. Review of Financial Studies 21 （4）, 1767–1795.</p>
+<p>Xu, Y. and B.G. Malkiel（2004）. Idiosyncratic risk and security returns. AFA 2001</p>
+<p>New Orleans Meetings. Available at: <a href="https://ssrn.com/abstract=255303" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=255303</a>.</p>
+<p>Yin, L. and Y. Wei（2020）. Aggregate profit instability and time variations in momentum returns: Evidence from China. Pacific-Basin Finance Journal 60, 101276.</p>
+<p>Yu, J. and Y. Yuan（2011）. Investor sentiment and the mean-variance relation. Journal of Financial Economics 100（2）, 367–381.</p>
+<p>Zhang, H. （2004）. Dynamic beta, time-varying risk premium, and momentum. Yale ICF Working Paper No. 04-26. Available at: <a href="https://ssrn.com/abstract=571006" target="_blank" rel="noopener noreferrer">https://ssrn.com/abstract=571006</a>.</p>
+<p>Zhang, L. （2005）. The value premium. Journal of Finance 60（1）, 67–103.</p>
+<p>Zhang, L. （2016）. Factors war. Tsinghua Financial Review（in Chinese）37, 101–104.</p>
+<p>Zhang, L. （2017）. The investment CAPM. European Financial Management 23（4）, 545–603.</p>
+<p>Zhou, Z. -G. （2010）. The high-volume return premium: Evidence from the Chinese stock market. Review of Quantitative Finance and Accounting 35 （3）, 295–313.</p>
+<p>Zhu, Z., L. Sun, and M. Chen（2019）. Fundamental strength and short-term return reversal. Journal of Empirical Finance 52, 22–39.</p>
+<p><a href="/theory/factor-investing/">返回目录</a></p>
+</div>
+ <nav class="lesson-navigation" aria-label="课程章节翻页"><div class="chapter-heading"><div><span>因子投资：方法与实践</span><strong>第 47 / 47 节</strong></div><a href="/theory/factor-investing/">返回目录 →</a></div><div class="chapter-controls"><a class="chapter-control" href="/read/factor-book-appendix-a/">← 上一节</a></div><div class="chapter-neighbors"><p><span>上一节</span><strong>资产价格、消费风险与市场有效性</strong></p><p><span>下一节</span><strong>已是最后一节</strong></p></div></nav>
+ </article>
+</div>
+<script type="application/json" id="static-article-data">{"slug":"factor-book-references","metadata":{"theory_book":{"book":"factor-investing","part":"附录与参考","number":47,"chapter":"L","edition":"2026-10-revised","minutes":15,"section":"L","source_pages":[389,390,391,392,393,394,395,396,397,398,399,400,401,402,403,404,405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420,421,422],"chapter_title":"参考文献","source_sections":["参考文献"]}},"parent":{"url":"/theory/factor-investing/","label":"因子投资：方法与实践"}}</script>
+</main>
+  <footer class="footer"><span>QuantLab · 量化学习站</span><span><a href="/read/sources-and-validation/">资料来源</a> <a href="/support/">参与建设</a> <span class="footer-contact"><a href="/community/">交流与反馈</a></span></span></footer>
+</div>
+<dialog id="search-dialog" aria-labelledby="search-title"><div class="dialog-head"><h2 id="search-title">搜索学习资料</h2><button class="icon-button" data-close-dialog aria-label="关闭搜索">×</button></div><div class="search-scopes"><label>查找范围<select id="search-scope"><option value="">全站</option></select></label><label hidden>子模块<select id="search-subscope"><option value="">全部子模块</option></select></label></div><label class="search-field"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="m16 16 5 5"/></svg><input id="global-search" type="search" maxlength="120" placeholder="例如：收益率、pandas、样本外验证" autocomplete="off" aria-label="搜索关键词"></label><div id="search-results" aria-live="polite"><p class="muted">输入关键词搜索课程、正文和代码。</p></div><div class="dialog-foot">支持中文与命令名称 <kbd>Esc</kbd> 关闭</div></dialog>
+<div class="toast" role="status" hidden></div>
+</body></html>

@@ -1,0 +1,73 @@
+{
+  "slug": "calin-book-12-01",
+  "title": "随机分析综合练习：条件期望、停止与模型求解",
+  "summary": "通过五组相互衔接的练习，选择并核对随机分析的主要方法。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "随机微积分及其应用",
+  "sort_order": 5068,
+  "cover_url": "",
+  "section_ids": [
+    "17859c88-b779-5654-b120-7a4cc7b39714"
+  ],
+  "body": "## 过程、停止时间与待求统计量\n\n随机变量是一个时点上的不确定量，随机过程是一族随时间变化的随机变量，停止时间则由已发生的路径决定何时结束观察。三者会使用相似的记号，但不能交换其计算规则。例如 $EW_t^2=t$ 是固定时间关系。把 $t$ 换成路径相关的命中时刻后，需重新检查停止公式。\n\n下面的练习使用一个贯穿全节的步骤：先写已知信息与目标量，再把目标变为可计算形式，随后检查条件，最后用另一种表达式核验。线性布朗积分可以从积分核计算协方差。非线性函数需要伊藤二阶项。跳跃积分需要跳前状态与实际跳数。累计成本可由矩方程或生成元处理。\n\n还应区分三种等式。路径等式要求同一次试验中两边相同。分布等式只要求统计规律相同。期望等式只比较平均值。时间变换、测度变化和条件预测分别改变时间标记、概率权重与可用信息，计算时必须说明正在进行哪一种运算。\n\n## 练习一：从协方差得到最佳预测\n\n设 $W$ 为标准布朗运动，$I_T=\\int_0^TW_sds$，$T>0$。只观察终点 $W_T$，求 $E[I_T\\mid W_T]$ 与条件方差。再证明对任意平方可积 $X,Y$，$|\\operatorname{Cov}(X,Y)|\\le\\sqrt{\\operatorname{Var}(X)\\operatorname{Var}(Y)}$。\n\n**考点**：联合高斯、正交投影与非负二次型。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>停止时间，即是否已经停止，可以仅凭当时及此前信息判断的随机时刻。</p></aside>\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n**第一步：把普通积分写成确定核的布朗积分。** 因为 $W_s=\\int_0^sdW_u$，积分区域为 $0\\le u\\le s\\le T$，交换顺序得\n\n$$I_T=\\int_0^T\\left(\\int_u^Tds\\right)dW_u=\\int_0^T(T-u)dW_u.$$\n\n核为确定平方可积函数，故 $I_T$ 与 $W_T=\\int_0^T1dW_u$ 联合正态，均值均为零。\n\n**第二步：分别计算方差与协方差。** 伊藤等距与交叉等距给\n\n$$\\operatorname{Var}(I_T)=\\int_0^T(T-u)^2du=\\frac{T^3}{3},\\quad\\operatorname{Var}(W_T)=T,\\quad\\operatorname{Cov}(I_T,W_T)=\\int_0^T(T-u)du=\\frac{T^2}{2}.$$\n\n**第三步：消去可由终点预测的部分。** 设 $R=I_T-cW_T$。要求 $R$ 与终点不相关，解 $T^2/2-cT=0$ 得 $c=T/2$。因为联合正态，不相关进一步意味着独立。所以\n\n$$E(I_T\\mid W_T)=\\frac T2W_T,\\qquad\\operatorname{Var}(I_T\\mid W_T)=\\operatorname{Var}(R)=\\frac{T^3}{3}-\\frac{T^3}{4}=\\frac{T^3}{12}.$$\n\n例如 $T=2$ 时，观察到 $W_2=w$ 后，对整段路径积分的预测是 $w$，剩余条件方差仍为 $2/3$。知道终点没有确定中间路径。\n\n**第四步：证明一般协方差不等式。** 令 $U=X-EX,V=Y-EY$。若 $EV^2=0$，则 $V=0$ 几乎处处，协方差为零。否则对任意实数 $z$，\n\n$$E(U-zV)^2=EU^2-2zEUV+z^2EV^2\\ge0.$$\n\n最小值在 $z=EUV/EV^2$ 取得，因此 $EU^2-(EUV)^2/EV^2\\ge0$。整理并开平方，即得 $|\\operatorname{Cov}(X,Y)|\\le\\sqrt{\\operatorname{Var}(X)\\operatorname{Var}(Y)}$。等号成立时中心化变量在平方均值意义下成线性关系。该不等式不要求正态；本题把线性预测升级为条件期望，才用到了联合正态。\n\n</details>\n\n## 练习二：停止时间与平方增量\n\n从零出发，令 $\\tau=\\inf\\{t:|W_t|=a\\}$、$\\tau_+=\\inf\\{t:W_t=a\\}$，其中 $a>0$。分别求两者的平均值。再将 $[0,T]$ 等分为 $n$ 段，求 $Q_n=\\sum(\\Delta W)^2$ 的均值和方差。\n\n**考点**：可选停止的条件、反射原理与均方收敛。\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n**双侧退出。** 先停止在有界时刻 $\\tau\\wedge n$。对鞅 $W_t^2-t$ 使用停止公式，\n\n$$E(\\tau\\wedge n)=E W_{\\tau\\wedge n}^2\\le a^2.$$\n\n最后一个不等式来自路径连续且在停止前仍位于 $[-a,a]$。由单调收敛，$E\\tau\\le a^2<\\infty$，于是 $\\tau$ 几乎必然有限。继续令 $n\\to\\infty$，终点平方有界且趋于 $a^2$，有界收敛给 $E\\tau=a^2$。若从区间内 $x$ 出发，同理可得 $E_x\\tau=a^2-x^2$；它也满足 $v''/2=-1$、$v(\\pm a)=0$。\n\n**单侧命中。** 反射原理把“已经到达 $a$、最后又回到 $a$ 下方”的路径与“最后位于 $a$ 上方”的路径配对，因此\n\n$$P(\\tau_+\\le t)=P\\!\\left(\\max_{s\\le t}W_s\\ge a\\right)=2P(W_t\\ge a).$$\n\n故 $P(\\tau_+>t)=2\\Phi(a/\\sqrt t)-1$。当 $t\\to\\infty$，利用 $\\Phi(z)=1/2+z/\\sqrt{2\\pi}+o(z)$，得尾概率约为 $\\sqrt{2/\\pi}\\,a\\,t^{-1/2}$。对非负随机变量，$E\\tau_+=\\int_0^\\infty P(\\tau_+>t)dt$，而 $\\int_1^\\infty t^{-1/2}dt$ 发散，所以 $E\\tau_+=\\infty$。命中概率趋于一，却有足够长的等待尾部使均值无穷。\n\n**平方增量。** 每段长度 $h=T/n$，写 $\\Delta W_k=\\sqrt hZ_k$，其中 $Z_k$ 独立标准正态。由 $EZ_k^2=1,EZ_k^4=3$，\n\n$$E(\\Delta W_k)^2=h,\\qquad\\operatorname{Var}((\\Delta W_k)^2)=3h^2-h^2=2h^2.$$\n\n独立相加得到 $EQ_n=nh=T$、$\\operatorname{Var}(Q_n)=2nh^2=2T^2/n$。因此 $E(Q_n-T)^2\\to0$，即平方均值收敛到 $T$。进一步 $Q_n/h$ 服从自由度 $n$ 的卡方分布。若 $T=2,n=1000$，均值为2、方差为0.008、标准差约0.089443，可用于检查离散路径计算。\n\n</details>\n\n## 练习三：两种噪声的积分\n\n计算 $J_T=\\int_0^T(W_t^2-t)dW_t$ 的端点表达式和方差。再设 $N$ 为强度 $\\lambda$ 的泊松过程，$M=N-\\lambda t$，求 $K_T=\\int_0^TM_{t-}dM_t$ 的表达式。说明为何不能直接交换连续与跳跃公式。\n\n**考点**：分部积分、伊藤等距和跳跃二次变差。\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n**布朗积分的路径表达式。** 对 $W^3$ 使用伊藤公式，$dW^3=3W^2dW+3Wdt$；对普通时间与布朗运动的乘积，$d(tW)=tdW+Wdt$。第一式除以三，再减去第二式，时间项抵消：\n\n$$d\\left(\\frac{W_t^3}{3}-tW_t\\right)=(W_t^2-t)dW_t.$$\n\n初值为零，故 $J_T=W_T^3/3-TW_T$。被积过程在有限时间上平方可积，积分均值为零。\n\n**布朗积分的方差。** 正态矩给 $EW_t^2=t,EW_t^4=3t^2$，于是\n\n$$E(W_t^2-t)^2=3t^2-2t^2+t^2=2t^2.$$\n\n伊藤等距得 $\\operatorname{Var}(J_T)=\\int_0^T2t^2dt=2T^3/3$。再用端点表达式独立核验：$EW_T^6=15T^3$，因此 $E(W_T^3/3-TW_T)^2=(15/9-2+1)T^3=2T^3/3$。\n\n**补偿泊松积分。** 每次跳跃时 $\\Delta M=1$，平方变化为 $(M_-+1)^2-M_-^2=2M_-+1$。跳跃之间 $dM=-\\lambda dt$，普通平方法则仍给 $2M_-dM$。合并两种变化，\n\n$$d(M_t^2)=2M_{t-}dM_t+dN_t.$$\n\n积分得 $K_T=(M_T^2-N_T)/2$。它的均值为零，因为 $EM_T^2=EN_T=\\lambda T$。补偿泊松等距还给\n\n$$EK_T^2=\\lambda\\int_0^TE M_{t-}^2dt=\\lambda^2\\int_0^Tt\\,dt=\\frac{\\lambda^2T^2}{2}.$$\n\n连续模型使用 $[W]_T=T$，跳跃模型使用 $[M]_T=N_T$。$\\lambda T$ 是预期累计跳数，可用于期望及可预测补偿，却不能替代路径等式中的实际 $N_T$。若把被积状态改为跳后值，每次事件都会多加一，积分便增加 $N_T$。例如 $\\lambda=2,T=3$ 时，$\\operatorname{Var}(K_T)=18$。\n\n</details>\n\n## 练习四：方程、矩与累计成本\n\n设 $dX_t=-\\kappa X_tdt+\\sigma dW_t$、$X_0=x$，参数均为正。求 $EX_t^2$，再求 $u(T,x)=E_x\\int_0^TX_t^2dt$，并用生成元核验。\n\n**考点**：线性积分因子、矩方程与源项问题。\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n**先求状态和二阶矩。** 乘积分因子 $e^{\\kappa t}$，得到 $d(e^{\\kappa t}X_t)=\\sigma e^{\\kappa t}dW_t$，所以\n\n$$X_t=xe^{-\\kappa t}+\\sigma\\int_0^te^{-\\kappa(t-s)}dW_s.$$\n\n随机积分均值为零，方差为 $\\sigma^2(1-e^{-2\\kappa t})/(2\\kappa)$。二阶矩等于均值平方加方差，故\n\n$$EX_t^2=x^2e^{-2\\kappa t}+\\frac{\\sigma^2}{2\\kappa}(1-e^{-2\\kappa t}).$$\n\n也可直接用 $dX^2=(-2\\kappa X^2+\\sigma^2)dt+2\\sigma XdW$，得到矩方程 $q'=-2\\kappa q+\\sigma^2,q(0)=x^2$，解与上式一致。\n\n**再计算累计成本。** 被积量非负，可交换期望和积分。逐项积分得\n\n$$u(T,x)=\\frac{x^2(1-e^{-2\\kappa T})}{2\\kappa}+\\frac{\\sigma^2T}{2\\kappa}-\\frac{\\sigma^2(1-e^{-2\\kappa T})}{4\\kappa^2}.$$\n\n令 $A(T)=(1-e^{-2\\kappa T})/(2\\kappa)$，则 $u=x^2A+\\sigma^2T/(2\\kappa)-\\sigma^2A/(2\\kappa)$。这样求导更清楚：$A'=e^{-2\\kappa T}$，$u_x=2xA$，$u_{xx}=2A$。\n\n**用生成元核验。** $L=-\\kappa x\\partial_x+\\sigma^2\\partial_{xx}/2$，所以\n\n$$Lu+x^2=-2\\kappa x^2A+\\sigma^2A+x^2=x^2e^{-2\\kappa T}+\\sigma^2A.$$\n\n另一方面，$u_T=x^2e^{-2\\kappa T}+\\sigma^2(1-e^{-2\\kappa T})/(2\\kappa)$，两者相同，且 $u(0,x)=0$。因此满足 $u_T=Lu+x^2$ 的累计成本方程。\n\n例如 $\\kappa=\\sigma=x=T=1$，终点二阶矩为 $(1+e^{-2})/2\\approx0.567668$，累计成本为 $1/2+(1-e^{-2})/4\\approx0.716166$。前者是一个时点的水平，后者是此前整段时间的累积，数值和单位均不同。\n\n</details>\n\n## 练习五：重加权与观测更新\n\n令 $X_t=W_t+\\lambda t$，取 $Z_T=e^{-\\lambda W_T-\\lambda^2T/2}$。说明 $dQ=Z_TdP$ 下 $X$ 的分布。另有未知常数 $A\\sim N(0,1)$，观测 $Y_t=At+B_t$，$B$ 与 $A$ 独立；求 $A$ 的条件均值与方差。两种运算的目的是否相同？\n\n**考点**：指数鞅、Girsanov 变换与高斯条件分布。\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n**指数权重先归一化。** 由于 $W_T\\sim N(0,T)$，$E_Pe^{-\\lambda W_T}=e^{\\lambda^2T/2}$，所以 $E_PZ_T=1$，且 $Z_T>0$。它在固定有限期限上定义与 $P$ 等价的新概率。\n\n**验证新测度下的布朗运动。** 指数过程满足 $dZ=-\\lambda Z dW$。对 $X=W+\\lambda t$ 用乘积公式，\n\n$$d(ZX)=Z(dW+\\lambda dt)-\\lambda XZ dW-\\lambda Zdt=Z(1-\\lambda X)dW.$$\n\n有限时间上的高斯指数矩保证该积分为真鞅。条件 Bayes 公式和塔式法则于是给\n\n$$E_Q(X_t\\mid\\mathcal F_s)=\\frac{E_P(Z_TX_t\\mid\\mathcal F_s)}{Z_s}=\\frac{E_P(Z_tX_t\\mid\\mathcal F_s)}{Z_s}=X_s.$$\n\n同时 $X_0=0$、路径连续、$[X]_t=t$。由 Lévy 表征，$X$ 为 $Q$ 下标准布朗运动。具体地，$X_t\\sim N(0,t)$，而 $P$ 下同一个随机变量服从 $N(\\lambda t,t)$。\n\n**计算隐藏常数的条件分布。** 观测为 $Y_t=tA+B_t$，且 $A$ 与 $B$ 独立，因此\n\n$$EA=EY_t=0,\\quad\\operatorname{Var}(A)=1,\\quad\\operatorname{Cov}(A,Y_t)=t,\\quad\\operatorname{Var}(Y_t)=t^2+t.$$\n\n对 $t>0$ 使用联合高斯投影，\n\n$$E(A\\mid Y_t)=\\frac{t}{t^2+t}Y_t=\\frac{Y_t}{1+t},\\qquad\\operatorname{Var}(A\\mid Y_t)=1-\\frac{t^2}{t^2+t}=\\frac1{1+t}.$$\n\n在 $t=0$ 没有新信息，公式连续延拓为均值零、方差一。\n\n**为什么整段记录没有再提供额外信息？** 对 $0\\le s\\le t$，分解\n\n$$Y_s-\\frac stY_t=B_s-\\frac stB_t.$$\n\n右边的布朗桥与 $B_t$ 独立，也与 $A$ 独立，因此与 $(A,Y_t)$ 独立。观测路径可以拆成终点及一段不含未知漂移信息的桥，所以给定整段记录后的条件分布等于只给定 $Y_t$ 的分布。例如 $t=2,Y_t=3$，后验均值为1、方差为1/3。\n\n第一项计算通过正权重改变事件概率，使有漂移过程成为新概率下布朗运动；第二项在既定联合模型中增加观测信息，缩小未知量的条件不确定性。它们都使用条件期望，但统计对象和运算不同。\n\n</details>\n\n![积分布朗运动的条件预测](/assets/illustrations/theory/calin/calin-book-12-01.svg)\n\n时间为二。横轴只记录布朗终点，纵轴记录整段路径积分；直线为给定终点后的条件均值，直线之外的散布对应尚未观察到的路径信息。\n\n<aside class=\"shark-note\"><strong>鲨鱼说</strong><p>综合计算可依次确定信息集、待求统计量和适用等式。这样可以区分路径计算、条件期望与分布推导。尤其在随机时间、随机系数和测度变化出现时，每一步的条件都直接影响结论。</p></aside>\n\n## 配套代码\n\n[下载本节 Python 代码](/assets/downloads/theory/calin-book-12-01.zip)\n\n解压后运行 `calin-book-12-01.py`。需安装 numpy、scipy 和 matplotlib；脚本会生成图像与数值核查结果，无需另行下载数据。\n",
+  "metadata": {
+    "theory_book": {
+      "book": "stochastic-calculus",
+      "part": "第四部分 · 应用与练习",
+      "number": 68,
+      "chapter": "12",
+      "edition": "2026-10",
+      "minutes": 66,
+      "section": "1",
+      "source_pages": [
+        292,
+        293,
+        294,
+        295,
+        296,
+        297,
+        298,
+        299,
+        300,
+        301,
+        302,
+        303,
+        304,
+        305,
+        306,
+        307,
+        308,
+        309,
+        310,
+        311,
+        312,
+        313,
+        314,
+        315,
+        316,
+        317,
+        318,
+        319,
+        320,
+        321,
+        322,
+        323
+      ],
+      "chapter_title": "综合方法练习",
+      "source_sections": [
+        "12",
+        "12: Chapter 2",
+        "12: Chapter 3",
+        "12: Chapter 4",
+        "12: Chapter 5",
+        "12: Chapter 6",
+        "12: Chapter 7",
+        "12: Chapter 8",
+        "12: Chapter 9",
+        "12: Chapter 10",
+        "12: Chapter 11"
+      ]
+    }
+  }
+}

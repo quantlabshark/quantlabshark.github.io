@@ -1,0 +1,39 @@
+{
+  "slug": "miller-book-07-04",
+  "title": "深度优先、时间戳与拓扑排序",
+  "summary": "用颜色和时间戳说明 DFS 的嵌套关系，分类有向边，并推导两种拓扑排序。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8040,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "深度优先搜索沿一个分支展开，完成该分支后才返回。发现和完成时间记录这一嵌套过程，可用于判断祖先关系、检测环和排列任务依赖。\n\n## 三种颜色与两个时刻\n\n白色表示未发现，灰色表示已进入且仍在调用栈中，黑色表示所有邻居已处理。进入 u 时记录 d[u]，退出时记录 f[u]，每次记录让时钟加一。\n\n对 A→B,C、B→D、C→D，按 B 在前的顺序搜索，可得 A:[1,8]、B:[2,5]、D:[3,4]、C:[6,7]。B、D 的区间包含关系对应祖先与后代，B 与 C 区间分离。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/dag.svg\" alt=\"有向无环图的边给出先后依赖，拓扑排序必须尊重这些方向。\" loading=\"lazy\"></figure>\n\n## 有向边的分类\n\n指向白色点的边成为搜索树边；指向灰色点的回边指向当前祖先，证明存在有向环；指向黑色后代可为前向边，指向已完成的另一分支可为横叉边。上例 C→D 指向黑色点，但没有形成环。\n\n若图不连通，需从每个仍白的顶点启动 DFS，得到搜索森林。只从一个起点搜索，无法对不可达部分作出无环结论。\n\n## 完成时间反序产生拓扑序\n\n拓扑序要求每条边 u→v 中 u 排在 v 之前。对于无环图，搜索 u→v 时：若 v 未发现，将先完成 v 再完成 u；若 v 已黑，其完成时间也早于 u；若 v 灰则会构成环，已被排除。\n\n因此每条边都有 f[u]>f[v]，按完成时间递减排列即可。上例反序为 A、C、B、D，全部边都从前指向后。拓扑序不一定唯一。\n\n## 入度算法\n\nKahn 方法先将所有入度为 0 的点入队。弹出 u 并输出，删除它的出边，使邻居入度减 1，新出现的零入度点入队。输出一个点时，它的全部前置依赖已经移除。\n\n若最终输出数小于总顶点数，剩余子图每个顶点仍有前驱，沿前驱追踪必然遇到重复点，即存在有向环。A→C、B→C、C→D 可输出 A,B,C,D 或 B,A,C,D。\n\n## 成本与运行状态\n\n邻接表上，两种方法均为 O(V+E)。DFS 栈最坏 O(V)，Kahn 队列与入度表 O(V)。每次运行要重新创建颜色、时钟或入度副本，不能接着使用上次已修改的数据。\n\n> **鲨鱼说** 灰色表示当前仍在等待返回，黑色表示那次调用已结束。检测有向环时，关键是回到灰色祖先，不能把所有“已经见过”的顶点都视为环。\n\n## Python 实现\n\n~~~python\nfrom collections import deque\ndef topological(graph):\n    vertices=set(graph)\n    for neighbors in graph.values():vertices.update(neighbors)\n    degree={v:0 for v in vertices}\n    for neighbors in graph.values():\n        for v in neighbors:degree[v]+=1\n    q=deque(sorted(v for v in vertices if degree[v]==0));out=[]\n    while q:\n        u=q.popleft();out.append(u)\n        for v in graph.get(u,[]):\n            degree[v]-=1\n            if degree[v]==0:q.append(v)\n    if len(out)!=len(vertices):raise ValueError('directed cycle')\n    return out\ngraph={'A':['C'],'B':['C'],'C':['D'],'D':[]}\norder=topological(graph);position={v:i for i,v in enumerate(order)}\nassert all(position[u]<position[v] for u,vs in graph.items() for v in vs)\nprint(order)\n\ndef depth_first(graph):\n    color={};discovered={};finished={};clock=0;order=[]\n    def visit(u):\n        nonlocal clock\n        color[u]='gray';clock+=1;discovered[u]=clock\n        for v in graph.get(u,[]):\n            if color.get(v)=='gray':raise ValueError('directed cycle')\n            if v not in color:visit(v)\n        color[u]='black';clock+=1;finished[u]=clock;order.append(u)\n    vertices=set(graph)\n    for neighbors in graph.values():vertices.update(neighbors)\n    for u in sorted(vertices):\n        if u not in color:visit(u)\n    return discovered,finished,order[::-1]\ng={'A':['B','C'],'B':['D'],'C':['D'],'D':[]}\nd,f,order=depth_first(g)\nassert {v:(d[v],f[v]) for v in d}=={'A':(1,8),'B':(2,5),'D':(3,4),'C':(6,7)}\nprint('discovery',d,'finish',f,'topological',order)\n~~~\n\n## 练习\n1. 对A→B、A→C、B→D、C→D列出两个拓扑序。\n2. 加入D→A后，用颜色法或入度法指出何处发现环。\n\n[本章习题](/read/?slug=miller-book-07-08)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-07-04.zip",
+        "label": "深度优先、时间戳与拓扑排序 · Python 示例",
+        "size_bytes": 1426,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第三部分 · 图算法与进阶应用",
+      "number": 40,
+      "chapter": "7",
+      "edition": "2026-10",
+      "minutes": 10,
+      "section": "4",
+      "chapter_title": "图及其算法",
+      "source_sections": [
+        "7.5.5",
+        "7.5.6",
+        "7.6"
+      ]
+    }
+  }
+}

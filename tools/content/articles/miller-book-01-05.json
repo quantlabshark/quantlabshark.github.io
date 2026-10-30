@@ -1,0 +1,37 @@
+{
+  "slug": "miller-book-01-05",
+  "title": "继承、组合与逻辑门模型",
+  "summary": "从真值表构造逻辑门接口，说明继承、方法重写、连接器和递归求值。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8005,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "与门、或门和非门把布尔输入转换为布尔输出。若所有门都提供 output 方法，电路便可通过同一接口读取结果，各门内部执行不同的逻辑规则。\n\n## 从真值表确定行为\n\n| A | B | A 与 B | A 或 B | 非 A |\n| --- | --- | --- | --- | --- |\n| 0 | 0 | 0 | 0 | 1 |\n| 0 | 1 | 0 | 1 | 1 |\n| 1 | 0 | 0 | 1 | 0 |\n| 1 | 1 | 1 | 1 | 0 |\n\n布尔量只有真和假两种状态。Python 用 True、False 表示，`and`、`or`、`not` 实现对应运算。定义门时可要求输入就是布尔量，避免将任意非空对象误当成电路中的数值信号。\n\n## 继承表达共同类别\n\nLogicGate 保存名称并约定 output 接口。BinaryGate 扩展两个输入引脚，UnaryGate 扩展一个输入引脚；AndGate、OrGate、NotGate 再分别实现运算。\n\n子类通过 `super().__init__(...)` 初始化共同状态，通过重写方法改变具体行为。调用 output 时，实际对象的实现决定运算，这称为多态。Python 也允许来自不同类、但具有相同接口的对象参与调用。\n\n## 连接关系属于组合\n\n把两个与门的输出接到一个或门，再接非门，得到\n\n$$Y=\\neg\\big[(A\\land B)\\lor(C\\land D)\\big].$$\n\nA=1、B=0、C=1、D=1 时，第一个与门输出 0，第二个输出 1，或门输出 1，最后 Y=0。这一过程也给出了程序检查的顺序。\n\n连接器保存源门和目标门，将源门的 output 作为目标引脚的输入。连接器拥有门的引用，却不是一种逻辑门，因此适合用组合关系表达。也可让引脚直接保存另一个门的引用，求值时沿引用读取。\n\n## 沿依赖关系递归求值\n\n请求最末端门的输出时，它先请求上游输出；上游继续请求自己的输入，直到到达固定布尔值，然后逐层返回。外部键盘读取放在电路计算之前，同一组输入即可反复验证。\n\n组合电路要求依赖图无环。若门 A 依赖门 B，而 B 又依赖 A，简单递归不会结束。可维护“正在求值”的集合检测回路；共享的上游门可在一次求值中缓存结果，避免重复计算。后续图算法中的拓扑排序将给出另一种求值顺序。\n\n> **鲨鱼说** 与门“是一种二输入门”，适合继承；一个电路“包含若干相连的门”，适合组合。连接方案变化时，通常只需改引用关系，无需为每种电路另建子类。\n\n## Python 实现\n\n~~~python\nclass Gate:\n    def __init__(self,label):self.label=label\n    def output(self,active=None):\n        active=set() if active is None else active\n        if self in active:raise ValueError('circuit cycle')\n        active.add(self)\n        try:return self.compute(active)\n        finally:active.remove(self)\n    @staticmethod\n    def read(pin,active):\n        if isinstance(pin,Gate):return pin.output(active)\n        if not isinstance(pin,bool):raise TypeError('boolean or gate required')\n        return pin\nclass BinaryGate(Gate):\n    def __init__(self,label,a,b):\n        super().__init__(label);self.a,self.b=a,b\nclass AndGate(BinaryGate):\n    def compute(self,active):\n        a,b=self.read(self.a,active),self.read(self.b,active)\n        return a and b\nclass OrGate(BinaryGate):\n    def compute(self,active):\n        a,b=self.read(self.a,active),self.read(self.b,active)\n        return a or b\nclass NotGate(Gate):\n    def __init__(self,label,pin):super().__init__(label);self.pin=pin\n    def compute(self,active):return not self.read(self.pin,active)\nfrom itertools import product\nfor a,b,c,d in product([False,True],repeat=4):\n    gate=NotGate('result',OrGate('or',AndGate('ab',a,b),AndGate('cd',c,d)))\n    assert gate.output()==(not ((a and b) or (c and d)))\nprint('16 combinations checked; sample',NotGate('Y',OrGate('O',AndGate('L',True,False),AndGate('R',True,True))).output())\nloop=NotGate('loop',False);loop.pin=loop\ntry:loop.output()\nexcept ValueError:print('cycle detected')\nelse:raise AssertionError('cycle not detected')\n~~~\n\n## 练习\n1. 用与门、或门、非门组合实现异或规则，列出四种输入的输出。\n2. 画出三个门的依赖图，指出哪种连接会形成循环。\n\n[本章习题](/read/?slug=miller-book-01-06)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-01-05.zip",
+        "label": "继承、组合与逻辑门模型 · Python 示例",
+        "size_bytes": 1363,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第一部分 · 编程与算法基础",
+      "number": 5,
+      "chapter": "1",
+      "edition": "2026-10",
+      "minutes": 12,
+      "section": "5",
+      "chapter_title": "Python 与抽象数据类型",
+      "source_sections": [
+        "1.4.6"
+      ]
+    }
+  }
+}

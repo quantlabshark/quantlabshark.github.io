@@ -1,0 +1,37 @@
+{
+  "slug": "calin-book-03-05",
+  "title": "Poisson 过程与相邻事件的等待时间",
+  "summary": "由事件计数建立 Poisson 过程，推导独立增量、补偿鞅和指数间隔。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "随机微积分及其应用",
+  "sort_order": 5019,
+  "cover_url": "",
+  "section_ids": [
+    "17859c88-b779-5654-b120-7a4cc7b39714"
+  ],
+  "body": "## 连续时间中的随机计数\n\n设 $N_t$ 记录从 0 到 $t$ 发生的事件总数。速率为 $\\lambda>0$ 的 Poisson 过程从 $N_0=0$ 出发，具有独立、平稳增量，且\n\n$$N_t-N_s\\sim\\operatorname{Poisson}(\\lambda(t-s)),\\qquad s<t.$$\n\n路径是右连续的阶梯，每次跳跃增加 1。平稳增量表示分布只由区间长度决定。独立增量表示不重叠区间的计数相互独立。事件成簇出现时，可考虑允许历史事件影响后续强度的模型。平均到达速度随时间变化时，则需要相应的时变强度。\n\n短区间 $h$ 内，$\\mathbb P(\\Delta N=1)=\\lambda h+O(h^2)$，$\\mathbb P(\\Delta N\\ge2)=O(h^2)$。第二个概率在有限 $h$ 下并非零，只是比 $h$ 更快地趋于零。\n\n### 小区间规则怎样产生 Poisson 概率\n\n记 $p_k(t)=\\mathbb P(N_t=k)$。要在 $t+h$ 时恰有 $k$ 次事件，主要有两种互斥方式：截至 $t$ 已有 $k$ 次且新增零次，或者已有 $k-1$ 次且新增一次。因此\n\n$$p_k(t+h)=p_k(t)(1-\\lambda h)+p_{k-1}(t)\\lambda h+o(h).$$\n\n减去 $p_k(t)$、除以 $h$ 并令 $h\\to0$，得到 $p_k'=-\\lambda p_k+\\lambda p_{k-1}$；对 $k=0$，则 $p_0'=-\\lambda p_0$、$p_0(0)=1$，解为 $e^{-\\lambda t}$。逐级用积分因子求解，得到 $p_1=\\lambda te^{-\\lambda t}$，一般为 $p_k=e^{-\\lambda t}(\\lambda t)^k/k!$。\n\n其中 $o(h)$ 表示除以 $h$ 后趋于零的余项。有限区间内两次及以上事件的概率并不为零；只是它对这一阶微分方程的贡献在极限下消失。\n\n## 均值、方差与协方差\n\n$\\mathbb E[N_t]=\\operatorname{Var}(N_t)=\\lambda t$。对 $s\\le t$，将 $N_t$ 拆成 $N_s+(N_t-N_s)$，得到\n\n$$\\operatorname{Cov}(N_s,N_t)=\\lambda s,\\qquad\n\\operatorname{Corr}(N_s,N_t)=\\sqrt{s/t}.$$\n\n泊松过程与布朗运动在此具有相同的相关系数，但路径结构不同：泊松过程逐次跳跃并取非负整数，布朗运动路径连续并取实值。相关系数描述二阶共同变化，路径性质还需要另行指定。\n\n## 从计数中扣除预期增长\n\n定义补偿过程 $M_t=N_t-\\lambda t$。给定 $\\mathcal F_s$，未来计数的均值为 $\\lambda(t-s)$，所以\n\n$$\\mathbb E[M_t\\mid\\mathcal F_s]=N_s+\\lambda(t-s)-\\lambda t=M_s.$$\n\n因此 $M_t$ 是鞅。它在事件间以斜率 $-\\lambda$ 下降，在事件时向上跳 1。均值为零不表示路径围绕零对称。\n\n若 $a=\\lambda t$，Poisson 中心矩为 $\\mathbb E[M_t^2]=a$、$\\mathbb E[M_t^3]=a$、$\\mathbb E[M_t^4]=a+3a^2$。三阶矩非零，说明分布存在偏斜。对长度 $h$ 的补偿增量，平方的方差为 $\\lambda h+2\\lambda^2h^2$。\n\n![Poisson 计数与补偿过程](/assets/illustrations/theory/calin/poisson-path.svg)\n\n### 计数的高阶矩怎样核算\n\n令 $q=\\lambda t$，Poisson 阶乘矩给出 $\\mathbb E[N(N-1)\\cdots(N-r+1)]=q^r$。将普通幂展开成下降阶乘，可得\n\n$$\\mathbb E[N^2]=q^2+q,\\quad\n\\mathbb E[N^3]=q^3+3q^2+q,\\quad\n\\mathbb E[N^4]=q^4+6q^3+7q^2+q.$$\n\n把 $M=N-q$ 的三次、四次幂展开后代入，较高次幂相互抵消，留下 $\\mathbb E[M^3]=q$ 和 $\\mathbb E[M^4]=q+3q^2$。因此 $\\operatorname{Var}(M^2)=q+2q^2$。在短区间中，$q=\\lambda h$，这一方差的一阶项并未消失，反映了罕见但幅度为 1 的跳跃。\n\n补偿过程的下降段不是“负事件发生”，只是从实际计数中持续扣除预期次数。路径上出现的跳跃次数仍由 $N_t$ 记录，补偿操作改变中心，不改变跳幅。\n\n## 第一次事件要等多久\n\n令 $T_1=\\inf\\{t:N_t\\ge1\\}$。事件 $T_1>t$ 等价于 $N_t=0$，所以\n\n$$\\mathbb P(T_1>t)=e^{-\\lambda t},\\qquad\np_{T_1}(t)=\\lambda e^{-\\lambda t},\\quad t>0.$$\n\n因此第一次等待时间服从指数分布，均值为 $1/\\lambda$，方差为 $1/\\lambda^2$。它具有无记忆性：\n\n$$\\mathbb P(T_1>s+t\\mid T_1>s)=e^{-\\lambda t}.$$\n\n已经等了多久，不改变接下来还要等至少 $t$ 的概率。这个性质依赖恒定速率，不能用于所有等待时间模型。\n\n## 相邻到达间隔独立同分布\n\n记第 $n$ 次事件时间为 $S_n$，间隔 $T_n=S_n-S_{n-1}$。Poisson 过程在每次到达后重新开始，后续计数具有相同规律并与过去独立，所以 $T_n$ 独立且均服从 $\\operatorname{Exp}(\\lambda)$。\n\n也可通过联合密度验证前两个间隔的分解。连续到达时间满足 $\\mathbb P(S_1=s)=0$，因此不能把普通事件条件概率公式直接写成除以这个零概率；应使用密度或强 Markov 性。\n\n> **鲨鱼说** 计数 $N_t$ 的单位是“次”，速率 $\\lambda$ 的单位是“次/时间”，间隔 $T_n$ 的单位是“时间”。单位检查能帮助发现把 $\\lambda$ 与 $1/\\lambda$ 混用的错误。\n\n### 不用零概率条件直接证明两个间隔独立\n\n设前两次到达时刻为 $S_1=s_1,S_2=s_2$，其中 $0<s_1<s_2$。在两个很短的目标区间各发生一次，其余直到 $s_2$ 的时间不发生事件，得到联合密度\n\n$$p_{S_1,S_2}(s_1,s_2)=\\lambda^2e^{-\\lambda s_2}.$$\n\n换成间隔 $T_1=S_1,T_2=S_2-S_1$，即 $s_1=u,s_2=u+v$，变换的 Jacobian 为 1。因此\n\n$$p_{T_1,T_2}(u,v)=\\lambda^2e^{-\\lambda(u+v)}\n=(\\lambda e^{-\\lambda u})(\\lambda e^{-\\lambda v}),\\quad u,v>0.$$\n\n联合密度分解成两个指数密度，给出独立性。推广到前 $n$ 次到达，会得到所有间隔密度的乘积。给定观察终点处的总次数后，这个独立指数结构会改变，因为条件限制了全部间隔之和。\n\n指数无记忆性也可由生存函数相除直接看出：$e^{-\\lambda(s+t)}/e^{-\\lambda s}=e^{-\\lambda t}$。它等价于恒定的瞬时发生率，不能解释为任何长等待都已经“快轮到发生”。\n\n## 练习：等待和计数的同一事件\n\n平均每小时发生 4 次事件。计算未来半小时无事件的概率，以及等待超过 10 分钟后，再等至少 15 分钟的条件概率。\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n半小时的 Poisson 参数为 2，无事件概率为 $e^{-2}\\approx0.1353$。指数等待具有无记忆性，已等待 10 分钟不会改变后续等待分布。再等至少 15 分钟的概率为 $e^{-4(15/60)}=e^{-1}\\approx0.3679$。两个结果都先把时间换算为与速率一致的小时。\n\n</details>\n\n## 代码下载\n\n[下载计算与绘图代码](/assets/downloads/theory/calin-book-03-05.zip)\n",
+  "metadata": {
+    "theory_book": {
+      "book": "stochastic-calculus",
+      "part": "第一部分 · 概率与随机过程",
+      "number": 19,
+      "chapter": "3",
+      "edition": "2026-10",
+      "minutes": 36,
+      "section": "5",
+      "source_pages": [
+        76,
+        77,
+        78,
+        79,
+        80
+      ],
+      "chapter_title": "常用随机过程",
+      "source_sections": [
+        "3.8",
+        "3.9"
+      ]
+    }
+  }
+}

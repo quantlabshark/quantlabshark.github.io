@@ -1,0 +1,37 @@
+{
+  "slug": "miller-book-07-07",
+  "title": "Prim 最小生成树",
+  "summary": "明确最小生成树的总成本目标，用割的交换论证解释 Prim，并与最短路径逐项比较。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8043,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "连接全部地点时，可能希望铺设线路的总成本最低，而不要求从某一个地点到其他地点都走最短路线。这个目标对应最小生成树。\n\n## 生成树的条件\n\n对无向连通带权图，生成树包含所有 V 个顶点、连通且无环，因此恰有 V−1 条边。最小生成树在这些候选树中使边权总和最小。\n\n三角形 AB=2、AC=3、BC=2，从 A 出发的最短路径树使用 AB、AC，总权 5；最小生成树用 AB、BC，总权 4，但沿树 A 到 C 距离为 4，高于原图直接边 3。\n\n## Prim 扩大当前树\n\n从任意起点开始，已加入顶点集合记为 S。候选边连接 S 与外部，每次选择其中最轻的边，加入其外部端点，并加入该点产生的新候选边。两个端点都已在 S 的旧候选会形成环，应跳过。\n\n从 A 开始，上例候选为 AB:2、AC:3，选 AB 后 S={A,B}，跨界候选变为 AC:3、BC:2，选 BC，三点连通，总权 4。\n\n## 割性质的交换证明\n\nS 与其余顶点形成一个割，令 e 为跨割的最轻边。假设某棵与当前已选边兼容的最优树不含 e，将 e 加入后形成一个环。环中必有另一条跨割边 f，否则无法从割的一侧绕回另一侧。\n\n因为 e 最轻，w(e)≤w(f)。删去 f 后仍是一棵生成树，总成本不增加，且包含 e。于是至少有一棵最优树可以保留本次选择，逐步加入不会排除所有最优解。\n\n## 两种最小堆算法保存的量不同\n\n| 项目 | Dijkstra | Prim |\n| --- | --- | --- |\n| 目标 | 从起点到每点的最短路线 | 连接全图的最小总边权 |\n| 更新值 | dist[u]+w(u,v) | 连接 v 的单边权 w(u,v) |\n| 图的主要条件 | 边权非负，可有向 | 无向连通；权重可负 |\n| 结果 | 前驱路径树 | 最小生成树 |\n\nPrim 的负边不破坏割性质，因为证明比较的是边权大小，未使用路径累加后的非负性。\n\n## 断开图和并列最优\n\n图不连通时，单个起点只能覆盖一个连通分量。可报告不存在全图生成树，或对每个未访问分量重新启动，返回最小生成森林。边权相同可能产生不同的最优边集，检查应关注连通、无环、V−1 条边和总成本。\n\n减键优先队列的常用界为 O(E log V)；直接将候选边入堆的实现可保留 O(E) 项，时间 O(E log(E+1))。无向输入需双向保存同一权重，不能遗漏只有目标位置出现的顶点。\n\n> **鲨鱼说** 两个算法都“从当前最小项继续”，但最小项含义不同。Prim 比较新增一条连接的成本，Dijkstra 比较从起点走到某处的累计成本。\n\n## Python 实现\n\n~~~python\nimport heapq\ndef prim(graph,start):\n    seen={start};heap=[(w,start,v) for v,w in graph[start]];heapq.heapify(heap)\n    edges=[];total=0\n    while heap and len(seen)<len(graph):\n        w,u,v=heapq.heappop(heap)\n        if v in seen:continue\n        seen.add(v);edges.append((u,v,w));total+=w\n        for z,cost in graph[v]:\n            if z not in seen:heapq.heappush(heap,(cost,v,z))\n    if len(seen)!=len(graph):raise ValueError('disconnected graph')\n    return edges,total\ng={'A':[('B',2),('C',3)],'B':[('A',2),('C',2)],'C':[('A',3),('B',2)]}\nedges,total=prim(g,'A')\nassert len(edges)==2 and total==4\nprint(edges,total)\n~~~\n\n## 练习\n1. 对四顶点加权图手工执行Prim，逐步写出割和候选边。\n2. 用本节三角形比较最短路径树与最小生成树的路径长度和总权。\n\n[本章习题](/read/?slug=miller-book-07-08)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-07-07.zip",
+        "label": "Prim 最小生成树 · Python 示例",
+        "size_bytes": 1069,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第三部分 · 图算法与进阶应用",
+      "number": 43,
+      "chapter": "7",
+      "edition": "2026-10",
+      "minutes": 12,
+      "section": "7",
+      "chapter_title": "图及其算法",
+      "source_sections": [
+        "7.8.3"
+      ]
+    }
+  }
+}

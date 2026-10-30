@@ -53,6 +53,12 @@
   window.foamSharkArt = render;
   window.quantSharkArt = render;
   window.quantPandaArt = render;
-  const mount = () => document.querySelectorAll('.brand-mark').forEach(el => { el.innerHTML=portrait(); });
+  const mount = () => {
+    document.querySelectorAll('.brand-mark').forEach(el => { el.innerHTML=portrait(); });
+    document.querySelectorAll('[data-panda-portrait]').forEach(el => {
+      el.innerHTML=full('小鲨陪你学量化');
+      el.addEventListener('click',()=>{if(!matchMedia('(prefers-reduced-motion: reduce)').matches)el.animate([{transform:'rotate(0)'},{transform:'rotate(-5deg)'},{transform:'rotate(5deg)'},{transform:'rotate(0)'}],{duration:600});});
+    });
+  };
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount);else mount();
 })();

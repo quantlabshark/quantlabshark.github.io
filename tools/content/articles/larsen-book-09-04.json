@@ -1,0 +1,34 @@
+{
+  "slug": "larsen-book-09-04",
+  "title": "两个总体的比较：习题",
+  "summary": "52 道题，练习两个总体的比较中的概念、计算与方法选择。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7052,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "本章题组用于练习两个总体的比较。按题号选择下方题组；题面中的公式、数据和图形可点击放大。\n\n## 题组\n\n<details class=\"book-exercise-group\" id=\"questions-9-2-0\"><summary>两个独立总体的均值比较 · 9.2.1—9.2.20</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-065-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"两个独立总体的均值比较 · 9.2.1—9.2.20，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-065-01.webp\" alt=\"两个独立总体的均值比较 · 9.2.1—9.2.20，第 1 幅\" width=\"1330\" height=\"704\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-065-02.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"两个独立总体的均值比较 · 9.2.1—9.2.20，放大第 2 幅\"><img src=\"/assets/exercises/foundations/larsen-065-02.webp\" alt=\"两个独立总体的均值比较 · 9.2.1—9.2.20，第 2 幅\" width=\"1330\" height=\"1667\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-065-03.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"两个独立总体的均值比较 · 9.2.1—9.2.20，放大第 3 幅\"><img src=\"/assets/exercises/foundations/larsen-065-03.webp\" alt=\"两个独立总体的均值比较 · 9.2.1—9.2.20，第 3 幅\" width=\"1330\" height=\"1667\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-065-04.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"两个独立总体的均值比较 · 9.2.1—9.2.20，放大第 4 幅\"><img src=\"/assets/exercises/foundations/larsen-065-04.webp\" alt=\"两个独立总体的均值比较 · 9.2.1—9.2.20，第 4 幅\" width=\"1330\" height=\"675\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-9-3-1\"><summary>方差比与 F 分布 · 9.3.1—9.3.10</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-066-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"方差比与 F 分布 · 9.3.1—9.3.10，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-066-01.webp\" alt=\"方差比与 F 分布 · 9.3.1—9.3.10，第 1 幅\" width=\"1330\" height=\"730\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-066-02.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"方差比与 F 分布 · 9.3.1—9.3.10，放大第 2 幅\"><img src=\"/assets/exercises/foundations/larsen-066-02.webp\" alt=\"方差比与 F 分布 · 9.3.1—9.3.10，第 2 幅\" width=\"1330\" height=\"1667\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-066-03.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"方差比与 F 分布 · 9.3.1—9.3.10，放大第 3 幅\"><img src=\"/assets/exercises/foundations/larsen-066-03.webp\" alt=\"方差比与 F 分布 · 9.3.1—9.3.10，第 3 幅\" width=\"1330\" height=\"344\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-9-4-2\"><summary>两个比例的检验与区间 · 9.4.1—9.4.10</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-067-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"两个比例的检验与区间 · 9.4.1—9.4.10，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-067-01.webp\" alt=\"两个比例的检验与区间 · 9.4.1—9.4.10，第 1 幅\" width=\"1330\" height=\"1609\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-067-02.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"两个比例的检验与区间 · 9.4.1—9.4.10，放大第 2 幅\"><img src=\"/assets/exercises/foundations/larsen-067-02.webp\" alt=\"两个比例的检验与区间 · 9.4.1—9.4.10，第 2 幅\" width=\"1330\" height=\"210\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-9-5-3\"><summary>两个比例的检验与区间 · 9.5.1—9.5.12</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-068-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"两个比例的检验与区间 · 9.5.1—9.5.12，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-068-01.webp\" alt=\"两个比例的检验与区间 · 9.5.1—9.5.12，第 1 幅\" width=\"1330\" height=\"726\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-068-02.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"两个比例的检验与区间 · 9.5.1—9.5.12，放大第 2 幅\"><img src=\"/assets/exercises/foundations/larsen-068-02.webp\" alt=\"两个比例的检验与区间 · 9.5.1—9.5.12，第 2 幅\" width=\"1330\" height=\"1219\" loading=\"lazy\"></a></div>\n\n</details>\n\n",
+  "metadata": {
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第三部分 · 比较、回归与实验设计",
+      "number": 52,
+      "chapter": "9",
+      "edition": "2026-10",
+      "minutes": 29,
+      "section": "4",
+      "questions": 52,
+      "unit_type": "exercise",
+      "chapter_title": "两个总体的比较",
+      "source_sections": [
+        "9.2",
+        "9.3",
+        "9.4",
+        "9.5"
+      ]
+    }
+  }
+}

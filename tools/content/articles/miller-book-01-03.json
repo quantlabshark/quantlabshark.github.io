@@ -1,0 +1,40 @@
+{
+  "slug": "miller-book-01-03",
+  "title": "输入输出、控制流程与函数",
+  "summary": "由数据读取到函数返回组织程序，说明异常处理，并逐步计算牛顿法求平方根。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8003,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "输入、计算和显示承担不同职责。例如读取文本“2,4,6”，先拆成三个字符串，再转换为数值，计算平均数，最后显示 4。把这些步骤分开，计算函数就能直接接受测试数据，不必每次等待键盘输入。\n\n## 字符串转换为数值\n\n`input()` 返回字符串。`int('12')` 得到整数 12，`float('1.5')` 得到小数；`int('abc')` 会抛出 ValueError。读取文件时使用 `with open(path, encoding='utf-8') as f:`，离开代码块时自动关闭文件。\n\n`print` 负责显示，格式化表达式 `f'{value:.2f}'` 将数值显示为两位小数，但不会改变 value 的计算精度。需要传给后续程序的结果，应由函数 return 返回。\n\n## 分支与循环\n\nif、elif、else 按条件选择分支。for 逐个遍历对象；while 在条件成立时重复，循环内必须让状态向退出条件推进。break 退出当前循环，continue 跳到下一轮。\n\n`[x*x for x in range(1, 6) if x % 2]` 先选出 1、3、5，再计算平方，得到 `[1,9,25]`。若只需平方和，可写 `sum(x*x for x in range(1,6))`，无需保存中间列表。\n\n## 参数、局部变量和返回值\n\n定义 `def mean(values):` 后，values 是本次调用的参数名称。函数可先检查序列非空，再返回 `sum(values)/len(values)`。返回值能参与下一次计算；函数内打印结果而没有 return，调用者得到的是 None。\n\n可变默认参数在定义函数时创建一次。若每次调用需要一个新列表，使用 `items=None`，并在函数内建立列表。把累加器作为局部变量，也可避免多次调用互相影响。\n\n## 牛顿迭代的计算过程\n\n求非负数 a 的平方根，相当于求 $f(x)=x^2-a=0$。在当前估计 $x_k>0$ 处用切线近似，令\n\n$$0\\approx f(x_k)+f'(x_k)(x_{k+1}-x_k),$$\n$$x_{k+1}=x_k-\\frac{x_k^2-a}{2x_k}=\\frac{x_k+a/x_k}{2}.$$\n\n求 $\\sqrt2$，从 $x_0=1$ 开始，依次得到 1.5、1.416667、1.414216。函数应对 a=0 直接返回 0，对 a<0 拒绝实数平方根计算；循环同时设置容差和最大次数。停止条件可比较相邻估计差与 `tol * max(1, abs(x))`，兼顾零附近和较大数值。\n\n## 用异常报告不满足约定的输入\n\n语法错误使程序无法解析；运行时异常发生在执行过程中；逻辑错误则可能运行成功却产生错误结果。`raise ValueError(...)` 可报告空序列等非法输入，调用方用对应的 except 处理。只捕获预计可能发生的异常，变量名拼错等错误应保留原来的信息，便于定位。\n\n> **鲨鱼说** return 把数值交给下一步计算，print 只负责显示。先把计算写成“参数输入、结果返回”的函数，再加文件或键盘输入，检查程序会更直接。\n\n## Python 实现\n\n~~~python\ndef mean(values):\n    if not values:\n        raise ValueError('values must not be empty')\n    return sum(values)/len(values)\n\nprint(mean([2,4,6]))\nassert mean([2,4,6])==4\ntry:\n    mean([])\nexcept ValueError:\n    print('empty input rejected')\nelse:\n    raise AssertionError('missing validation')\n\ndef newton_sqrt(value,tol=1e-12,max_steps=1000):\n    if value<0:raise ValueError('negative real argument')\n    if value==0:return 0.\n    x=max(1.,value/2)\n    for _ in range(max_steps):\n        following=(x+value/x)/2\n        if abs(following-x)<=tol*max(1.,abs(following)):return following\n        x=following\n    raise ArithmeticError('iteration did not converge')\nfrom math import isclose,sqrt\nfor value in [0,2,100,1e-8]:assert isclose(newton_sqrt(value),sqrt(value),rel_tol=1e-10,abs_tol=1e-12)\nprint('sqrt(2)',newton_sqrt(2))\n~~~\n\n## 练习\n1. 编写一个读取逗号分隔数值字符串的函数，明确空字符串和非法字符的处理方式。\n2. 设计一个函数，返回序列中的正数个数与总和，并列出至少三个边界输入。\n\n[本章习题](/read/?slug=miller-book-01-06)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-01-03.zip",
+        "label": "输入输出、控制流程与函数 · Python 示例",
+        "size_bytes": 1178,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第一部分 · 编程与算法基础",
+      "number": 3,
+      "chapter": "1",
+      "edition": "2026-10",
+      "minutes": 13,
+      "section": "3",
+      "chapter_title": "Python 与抽象数据类型",
+      "source_sections": [
+        "1.4.2",
+        "1.4.3",
+        "1.4.4",
+        "1.4.5"
+      ]
+    }
+  }
+}

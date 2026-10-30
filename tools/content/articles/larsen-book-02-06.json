@@ -1,0 +1,37 @@
+{
+  "slug": "larsen-book-02-06",
+  "title": "蒙特卡洛模拟与计算误差",
+  "summary": "将事件转换为零一变量，推导模拟误差，并用圆内点比例估计圆周率。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7009,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "当事件难以枚举、积分难以直接求出时，可以重复生成随机结果，计算事件出现的比例。蒙特卡洛方法把概率计算转化为样本平均。\n\n## 模拟比例及其标准误\n\n第 $i$ 次模拟中，事件发生记 $I_i=1$，否则记 0。重复 $N$ 次后，概率估计为 $\\hat p=N^{-1}\\sum_{i=1}^NI_i$。每次事件概率为 $p$ 时，$E(I_i)=p$，且 $I_i^2=I_i$，所以 $\\operatorname{Var}(I_i)=p-p^2$。\n\n各次独立时，平均值的方差为\n\n$$\\operatorname{Var}(\\hat p)=\\frac1{N^2}\\sum_i\\operatorname{Var}(I_i)\n=\\frac{p(1-p)}N.$$\n\n标准误是估计量的标准差。用 $\\hat p$ 代入未知的 $p$，得到 $\\widehat{SE}=\\sqrt{\\hat p(1-\\hat p)/N}$。它描述重新模拟同样次数时，概率估计通常会波动多大。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/monte-carlo.svg\" alt=\"模拟比例随样本量变化，参考误差带按样本量平方根收窄。\" loading=\"lazy\"></figure>\n\n## 通过面积估计圆周率\n\n在单位正方形上均匀生成点 $(X,Y)$。满足 $X^2+Y^2\\le1$ 的点落在四分之一单位圆内，面积比为 $p=\\pi/4$，故 $\\hat\\pi=4\\hat p$。\n\n若 10000 点中有 7850 点在圆内，估计值为 3.14，标准误为\n\n$$4\\sqrt{\\frac{0.785\\times0.215}{10000}}\\approx0.0164.$$\n\n四倍模拟次数才会使标准误约减半，因为误差按 $1/\\sqrt N$ 缩小。结果显示很多小数位，并不会增加模拟本身的精度。\n\n## 误差预算与随机机制\n\n预估概率约为 p、希望标准误不超过 e，可以取 $N\\ge p(1-p)/e^2$。若 p 未知，利用 $p(1-p)\\le1/4$，得到保守要求 $N\\ge1/(4e^2)$。很稀有的事件可能一次也未出现，此时把零代入标准误公式会低估不确定性，需要扩大模拟或改进采样。\n\n模拟生日重复时，每个人必须独立选择日期；误用不放回抽样会使重复永远无法发生。随机种子用于重现同一序列，适合对照程序修改前后的输出。有限次数引起的随机误差能靠增加 N 降低，而把生日设为全年均匀这一模型近似不会因此消失。\n\n> **鲨鱼说** 模拟结果包含两层问题：程序是否正确生成了设定的随机过程，以及这个过程是否适合研究对象。先在可手算的小例子上比较频率与概率，再分析复杂问题。\n\n## 练习\n1. 模拟公平骰子点数和至少为 10 的概率，并与枚举的精确概率比较。\n2. 某事件概率约为 0.2，希望模拟标准误不超过 0.002，估算所需重复次数。\n\n[本章习题](/read/?slug=larsen-book-02-07)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/larsen-book-02-06.zip",
+        "label": "蒙特卡洛模拟与计算误差 · Python 示例",
+        "size_bytes": 933,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第一部分 · 概率与随机变量",
+      "number": 9,
+      "chapter": "2",
+      "edition": "2026-10",
+      "minutes": 12,
+      "section": "6",
+      "chapter_title": "概率",
+      "source_sections": [
+        "2.8"
+      ]
+    }
+  }
+}

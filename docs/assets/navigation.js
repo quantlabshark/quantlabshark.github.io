@@ -16,7 +16,6 @@
  window.addEventListener('pagehide',()=>{try{sessionStorage.setItem('quantlab.nav-scroll',String(document.getElementById('sidebar').scrollTop));}catch{}});
  nav.addEventListener('click',e=>{const button=e.target.closest('.nav-expand');if(!button||!nav.contains(button))return;e.preventDefault();const group=button.closest('[data-nav-section]'),open=button.getAttribute('aria-expanded')!=='true';saved[group.dataset.navSection]=open;toggle(group,open);try{localStorage.setItem('foamlab-nav-groups',JSON.stringify(saved));}catch{}});
  function activate(item){
-  if(window.FoamDirectory?.available){if(item)window.FoamDirectory.breadcrumb(item);else window.FoamDirectory.nav();return;}
   const current=new URL(location.href);let winner=null;
   for(const link of document.querySelectorAll('.nav-subitem')){
    const url=new URL(link.href),specific=[...url.searchParams];
@@ -24,6 +23,7 @@
    if(match){winner=link;break;}
   }
   if(!winner)winner=[...document.querySelectorAll('.nav-parent>a')].find(a=>new URL(a.href).pathname===current.pathname)||null;
+  if(!winner){try{const parent=JSON.parse(document.getElementById('static-article-data')?.textContent||'null')?.parent;winner=parent?[...nav.querySelectorAll('a[href]')].find(a=>new URL(a.href).pathname===parent.url):null;}catch{}}
   if(!winner&&item){
    let key='',filter='';
    if(item.kind==='lesson'){

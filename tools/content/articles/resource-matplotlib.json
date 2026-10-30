@@ -1,0 +1,18 @@
+{
+  "slug": "resource-matplotlib",
+  "title": "Matplotlib 官方文档",
+  "summary": "绘制研究图表并保存输出。",
+  "kind": "recommendation",
+  "track": "",
+  "series": "",
+  "sort_order": 38,
+  "section_ids": [
+    "4560f087-a08d-4b02-8eb8-545d6594d86c",
+    "6cb0390d-4b0e-459e-a155-9dfb328810ec"
+  ],
+  "body": "## 图形结构与文件输出\n\nMatplotlib 文档介绍图形、坐标轴、曲线和标注。绘制研究图表时，明确横纵轴的含义与单位，再设置图例、布局和导出格式，使图形与计算结果对应。\n\n[打开 Matplotlib 官方文档](https://matplotlib.org/stable/users/explain/quick_start.html)\n",
+  "metadata": {
+    "url": "https://matplotlib.org/stable/users/explain/quick_start.html",
+    "external_url": "https://matplotlib.org/stable/users/explain/quick_start.html"
+  }
+}

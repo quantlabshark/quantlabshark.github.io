@@ -1,0 +1,48 @@
+{
+  "slug": "quant-course-09",
+  "title": "09 · NumPy 数组怎样计算多资产收益",
+  "summary": "理解行列、切片、广播和矩阵乘法，按日期与资产方向计算组合收益。",
+  "kind": "lesson",
+  "track": "Python与数据",
+  "series": "量化研究系统课程",
+  "sort_order": 9,
+  "cover_url": "/assets/figures/curriculum/course-09.svg",
+  "section_ids": [
+    "0c97f1c3-dfca-48e2-9cfa-ae10fcb24de9"
+  ],
+  "body": "NumPy 将多项资产、多个时点的数据组织为数组。计算前明确行列的含义，再沿相应维度求收益、均值和加权和，才能使数值运算与金融含义一致。\n\n## 形状就是数据的结构说明\n\n三天、两只股票的价格，是六个数字，也是一张带有方向的数据表。把每天放在行、股票放在列，按行求均值与按列求均值的含义完全不同。NumPy 加快计算的前提，是明确数组每一个维度代表什么。\n\n设自拟价格表为\n\n$$P=\\begin{pmatrix}100&50\\\\102&49\\\\101&51\\end{pmatrix}.$$\n\n第一列是股票 A，第二列是 B；三行按日期先后排列。`P.shape` 为 `(3,2)`，表示三行两列。`P[0,1]` 读取第一天 B 的价格 50，`P[:,0]` 读取 A 的全部日期。冒号表示在相应轴上取全部位置。\n\nPython 列表的 `+` 可以连接两个列表，NumPy 数组的 `+` 通常逐元素相加。对象不同，符号含义也不同，因此应检查变量类型，不能仅凭外观都是方括号就混用。\n\n## 相邻行相除得到收益矩阵\n\n`P[1:]` 去掉第一行，`P[:-1]` 去掉最后一行。两者形状都为 `(2,2)`，对应同一股票的期末和期初价格。逐元素相除再减一得到\n\n$$R=\\begin{pmatrix}2\\%&-2\\%\\\\-0.9804\\%&4.0816\\%\\end{pmatrix}.$$\n\n第二天 A 的收益为 $102/100-1=2\\%$，第三天 B 的收益为 $51/49-1\\approx4.0816\\%$。不能先把两只股票的价格相加再求收益，因为两者股价尺度不同，平均价格并不等于等权组合。\n\n![三行两列价格转换成两行两列收益并与权重相乘](/assets/figures/curriculum/course-09.svg)\n\n每一列始终对应同一资产，收益矩阵少了一行，因为第一天没有前一期价格。右侧权重 60%、40% 乘到每一行，得到各期组合收益。\n\n## 权重乘法与广播\n\n若每期期初把 60% 资金分给 A、40% 分给 B，第一期组合收益为 $0.6\\times2\\%+0.4\\times(-2\\%)=0.4\\%$；第二期约为 $0.6\\times(-0.9804\\%)+0.4\\times4.0816\\%=1.0444\\%$。\n\n用向量 $w=(0.6,0.4)$ 表示权重，`R @ w` 是矩阵乘法，每一行与权重相乘再相加。`R * w` 则借助广播得到每项资产的收益贡献，结果仍为两行两列，再按列方向求和才得到组合收益。\n\n广播把一组权重作用于每一行，不是自动理解资产名称。若权重顺序写成 B、A，而收益列顺序仍是 A、B，程序可能正常运行但经济含义错误。[NumPy 广播文档](https://numpy.org/doc/stable/user/basics.broadcasting.html)\n\n```python\nimport numpy as np\nprices = np.array([[100,50],[102,49],[101,51]],dtype=float)\nreturns = prices[1:]/prices[:-1]-1\nweights = np.array([0.6,0.4])\ncontributions = returns*weights\nportfolio = returns@weights\nprint(\"形状:\",prices.shape,returns.shape,portfolio.shape)\nprint(\"资产收益(%):\\n\",np.round(returns*100,4))\nprint(\"组合收益(%):\",np.round(portfolio*100,4))\nassert np.allclose(contributions.sum(axis=1),portfolio)\nassert np.isclose(weights.sum(),1)\n```\n\n组合收益输出约为 `[0.4,1.0444]`，单位是百分数。`axis=1` 把同一行的各资产合并，`axis=0` 把同一列的不同日期合并。计算每只股票的平均收益用 `returns.mean(axis=0)`，计算每一天等权组合用 `returns.mean(axis=1)`。\n\n## 固定权重隐含了调仓\n\n第一期上涨后，A 的资金比例会变化。若期初总资金 1，A 变为 $0.6\\times1.02=0.612$，B 变为 $0.4\\times0.98=0.392$，A 的新权重约为 60.956%。第二期继续使用 60%、40%，意味着在边界重新调仓。\n\n买入后不调仓时，应保留股数并由市场价格更新权重；固定资金权重则需要成交和费用。数组乘法只表达某一数学假设，是否符合策略必须从账户规则判断。\n\n## 缺失值与无效运算要保留含义\n\n`np.nan` 表示缺失或无法计算的数值，普通求和和均值通常会传播它。忽略缺失值的函数会改变每个日期实际参与的资产集合，因此需要同时记录有效样本数。某只股票停牌，不代表原来持有的股票市值可以从组合中删除。\n\n`dtype=float` 让数组以浮点数计算收益。整数数组适合整数计数，但把小数权重写入整数数组可能被截断。使用切片时还要注意它可能是原数组的视图；需要保留独立处理版本时调用 `.copy()`。\n\n## 布尔筛选会改变样本集合\n\n假设两只股票的当期收益是 2% 和 −1%，表达式 `returns > 0` 会生成真假掩码，筛选后只剩上涨股票。若这期收益是策略要预测的目标，就不能用该掩码决定本期期初买哪些股票；否则程序相当于已经看到了结果。\n\n合法的掩码应来自决策前已知条件，例如此前是否有足够历史、是否属于当时股票池。过滤后还要重算资金权重或明确缺失资金留在现金，不能让剩下两只股票仍各占原来三只时的三分之一，却把结果称为满仓组合。\n\n数组的逻辑条件按元素运算，多个条件通常用 `&`、`|` 组合并加括号。它们与 Python 对单个对象使用的 `and`、`or` 不同。维度也可能因筛选缩小，后续权重长度必须一致。\n\n多资产同时使用一个风险阈值时，广播可以简化代码；每个资产有不同阈值时，要保证阈值向量按资产顺序排列。NumPy 数组主要按位置计算，资产名称需要由外部表或明确列表保存，不能丢掉后再猜测顺序。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>计算前在纸上写出“行是日期、列是资产”，再检查输入和输出形状。一个两行两列的例子，往往比直接查看上万行结果更容易发现轴方向错误。</p></aside>\n\n### 练习\n\n将权重改为 50%、50%，第一期组合收益是多少？为什么不能用两股票价格总和从 150 变为 151 计算等权收益？\n\n<details><summary>查看解答</summary>\n\n第一期等权收益为零。价格总和涨幅为 $151/150-1\\approx0.6667\\%$，对应各持有一股时的资金比例，即 A 占 2/3、B 占 1/3，不是资金各一半。\n\n</details>\n\n## 配套代码\n\n[下载本节代码（ZIP）](/assets/downloads/courses/quant-course-09.zip)\n\n压缩包包含脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n",
+  "metadata": {
+    "curriculum": {
+      "cover": "/assets/figures/curriculum/course-09.svg",
+      "level": "入门",
+      "stage": 2,
+      "number": 9,
+      "edition": "2026-10",
+      "minutes": 18,
+      "source_refs": [
+        {
+          "book": "深入浅出Python量化交易实战",
+          "chapters": "1.3.3、2.1",
+          "pdf_pages": [
+            35,
+            36,
+            37,
+            43
+          ]
+        },
+        {
+          "book": "Quant Roadmap — Ultimate Edition",
+          "chapters": "12",
+          "pdf_pages": [
+            39
+          ]
+        }
+      ],
+      "stage_title": "Python与数据"
+    },
+    "code_download": {
+      "url": "/assets/downloads/courses/quant-course-09.zip",
+      "examples": 1
+    }
+  }
+}

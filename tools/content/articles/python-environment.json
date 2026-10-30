@@ -1,0 +1,14 @@
+{
+  "slug": "python-environment",
+  "title": "02 · 建立可重复运行的 Python 环境",
+  "summary": "配置解释器与依赖，检查项目路径和程序输出。",
+  "kind": "lesson",
+  "track": "Python与数据",
+  "series": "Python与数据",
+  "sort_order": 2,
+  "section_ids": [],
+  "body": "## Python 解释器与依赖环境\n\nPython 解释器负责执行代码，NumPy、pandas 等库提供数组、表格和统计功能。同一脚本在两台电脑上结果不同，可能来自解释器版本、依赖版本或输入文件的差异。为项目建立独立环境，可以分别管理这些依赖。\n\n课程使用 NumPy、pandas、Matplotlib、scikit-learn 和 statsmodels。安装时，运行安装命令的解释器应与执行脚本的解释器一致；编辑器中选择的环境也要与之对应。\n\n## 检查解释器和工作目录\n\n下面的程序只使用 Python 标准库。`sys.executable` 给出当前解释器的位置，`Path.cwd()` 给出工作目录。相对路径以工作目录为起点，因此从不同位置启动同一脚本，可能读写不同位置的文件。\n\n程序在工作目录下创建 `outputs` 文件夹。`exist_ok=True` 表示文件夹已存在时继续执行，不重复创建。\n\n~~~python\nimport sys\nimport platform\nfrom pathlib import Path\n\nproject = Path.cwd()\noutput = project / \"outputs\"\noutput.mkdir(exist_ok=True)\nprint(\"Python:\", platform.python_version())\nprint(\"Interpreter:\", sys.executable)\nprint(\"Project:\", project)\nprint(\"Output exists:\", output.is_dir())\n~~~\n\n## 项目文件与运行记录\n\n原始数据、处理代码和输出结果宜分别保存。清洗后的表格由代码生成，并保留对应的原始输入；图表和结果表放入输出目录。运行说明写明脚本入口、依赖版本和预期输出，便于再次运行时逐项比较。\n\n完成安装后，可用少量模拟数据检查数组计算和图表输出。需要随机抽样时，同时记录随机种子、参数与数据版本。行情账号及访问配置在接入真实数据时单独设置。\n\n## 练习\n\n从另一个目录启动脚本后，输出目录发生变化，原因是什么？\n\n参考答案：`Path.cwd()` 读取的是启动时的工作目录。可以约定从项目根目录运行，也可以在脚本中用脚本所在目录构造路径。笔记本没有统一的脚本文件位置，通常需要显式指定项目目录。修改路径后，再检查输出文件实际保存的位置。\n",
+  "metadata": {
+    "legacy_course": true
+  }
+}

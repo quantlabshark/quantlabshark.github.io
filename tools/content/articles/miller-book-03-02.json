@@ -1,0 +1,38 @@
+{
+  "slug": "miller-book-03-02",
+  "title": "进制转换与表达式求值",
+  "summary": "逐步转换整数进制和中序表达式，追踪运算符栈及后序求值的操作数顺序。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8012,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "栈既能颠倒产生顺序，也能暂存尚不能执行的运算。进制转换使用前一种作用，中序表达式转换使用后一种作用。\n\n## 除法产生最低位\n\n对非负整数 n 和进制 b≥2，除法给出 $n=bq+r$，其中 $0\\le r<b$。余数 r 是最低位，商 q 保存其余高位。对 q 重复除法，直到商为零，再逆序读取余数。\n\n| 被除数 | 除以 2 的商 | 余数 |\n| --- | --- | --- |\n| 13 | 6 | 1 |\n| 6 | 3 | 0 |\n| 3 | 1 | 1 |\n| 1 | 0 | 1 |\n\n余数压栈后弹出为 1101，验证 $1\\times2^3+1\\times2^2+0\\times2+1=13$。零需要直接输出“0”；负数可先转换绝对值，再加负号。十六进制用 0—9、A—F 表示余数 0—15。\n\n## 三种运算符位置\n\n表达式 A+B×C 的中序形式把运算符放在中间；前序为 `+ A * B C`；后序为 `A B C * +`。前序、后序通过位置表达依赖关系，中序则依靠优先级和括号。\n\n本节使用已分词的输入，支持二元 +、−、×、÷ 和括号。多位数如 12 必须是一个词，不能拆成字符 1 和 2。\n\n## 运算符栈怎样转换中序\n\n操作数直接进入输出；左括号压栈；右括号使栈顶运算符依次输出，直到移除对应左括号。遇到运算符时，先输出栈顶优先级更高的项；对于本节左结合的同级运算，也先输出栈顶，再压入当前运算符。\n\n以 `( A + B ) * C` 为例：A 输出，+ 暂存，B 输出；遇 ) 输出 + 并移除 (，得到 `A B +`；* 入栈，C 输出；最后弹出 *，得到 `A B + C *`。未匹配的括号应报错。\n\n如果扩展指数运算，需单独处理右结合规则：a^b^c 通常表示 a^(b^c)，相同优先级时不能沿用上述弹栈规则。一元负号也需要区别于二元减法。\n\n## 后序求值\n\n读取操作数就压栈；读取二元运算符时，先弹出右操作数，再弹出左操作数，计算后将结果压回。`3 4 2 * +` 的栈依次为 `[3]`、`[3,4]`、`[3,4,2]`、`[3,8]`、`[11]`。\n\n对 `8 2 -`，计算的是 8−2。操作数少于两个说明表达式不完整；结束时恰有一个值才是合法结果，多余值也应拒绝。零除法交由数值运算报告。\n\n每个词最多入栈、出栈一次，所以转换和求值均为 O(n) 时间、O(n) 最坏空间。整数进制转换的循环次数等于数位数，约为 $\\log_b n$。\n\n> **鲨鱼说** 运算符栈保存“因优先级尚需等待的运算”，操作数栈保存“已经算出的子表达式结果”。两种栈的元素含义不同，追踪时应分别写清。\n\n## Python 实现\n\n~~~python\nimport operator\ndef postfix(tokens):\n    stack=[];ops={'+':operator.add,'-':operator.sub,'*':operator.mul,'/':operator.truediv}\n    for token in tokens:\n        if token in ops:\n            if len(stack)<2:raise ValueError('missing operand')\n            right=stack.pop();left=stack.pop()\n            stack.append(ops[token](left,right))\n        else:stack.append(float(token))\n    if len(stack)!=1:raise ValueError('invalid expression')\n    return stack[0]\nassert postfix('3 4 2 * +'.split())==11\nassert postfix('8 2 -'.split())==6\nprint(postfix('3 4 + 5 * 6 -'.split()))\n\ndef to_postfix(tokens):\n    precedence={'+':1,'-':1,'*':2,'/':2}\n    operators=[];output=[]\n    for token in tokens:\n        if token.isalnum():output.append(token)\n        elif token=='(':operators.append(token)\n        elif token==')':\n            while operators and operators[-1]!='(':output.append(operators.pop())\n            if not operators:raise ValueError('unmatched closing parenthesis')\n            operators.pop()\n        elif token in precedence:\n            while operators and operators[-1]!='(' and precedence[operators[-1]]>=precedence[token]:\n                output.append(operators.pop())\n            operators.append(token)\n        else:raise ValueError('unknown token')\n    if '(' in operators:raise ValueError('unmatched opening parenthesis')\n    return output+operators[::-1]\nassert to_postfix('A + B * C'.split())==['A','B','C','*','+']\nassert to_postfix('( A + B ) * C'.split())==['A','B','+','C','*']\nprint(to_postfix('A + B * C'.split()))\n\ndef to_base(n,base):\n    if not isinstance(n,int) or not 2<=base<=16:raise ValueError('integer and base 2..16 required')\n    digits='0123456789ABCDEF';sign='-' if n<0 else '';n=abs(n)\n    if n==0:return '0'\n    stack=[]\n    while n:n,r=divmod(n,base);stack.append(digits[r])\n    return sign+''.join(reversed(stack))\nassert to_base(13,2)=='1101' and to_base(-255,16)=='-FF'\nprint('13 in binary',to_base(13,2))\n~~~\n\n## 练习\n1. 将(3+4)*5-6转换成后序表达式并追踪求值栈。\n2. 实现整数到2—16进制的转换，明确负数的输出规则。\n\n[本章习题](/read/?slug=miller-book-03-06)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-03-02.zip",
+        "label": "进制转换与表达式求值 · Python 示例",
+        "size_bytes": 1489,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第二部分 · 数据组织与基本算法",
+      "number": 12,
+      "chapter": "3",
+      "edition": "2026-10",
+      "minutes": 8,
+      "section": "2",
+      "chapter_title": "基本数据结构",
+      "source_sections": [
+        "3.3.6",
+        "3.3.7"
+      ]
+    }
+  }
+}

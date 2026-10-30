@@ -1,0 +1,14 @@
+{
+  "slug": "launch",
+  "title": "QuantLab 开放学习",
+  "summary": "按入门、基础与进阶学习量化研究，结合专题、理论和笔面试练习。",
+  "kind": "announcement",
+  "track": "",
+  "series": "",
+  "sort_order": 46,
+  "section_ids": [
+    "bba8fbde-b0e3-444d-8adc-a61271523e45"
+  ],
+  "body": "## QuantLab 学习网站\n\n系统学习分为入门、基础和进阶三个阶段，覆盖市场、编程、统计、策略研究与交易执行。专题学习和基础理论补充具体方法，笔面试与经验求职栏目用于练习和准备。\n\n课程正文、题目和代码附件均可直接查看。\n\n从[快速开始](/start/)查看学习入口，在[讨论中心](/community/)提交问题与建议。\n",
+  "metadata": {}
+}

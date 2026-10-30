@@ -1,0 +1,32 @@
+{
+  "slug": "miller-book-03-06",
+  "title": "基本数据结构：习题",
+  "summary": "37 道题，练习基本数据结构中的概念、计算与方法选择。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8016,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "本章题组用于练习基本数据结构。按题号选择下方题组；题面中的公式、数据和图形可点击放大。\n\n## 题组\n\n<details class=\"book-exercise-group\" id=\"questions-3-9-0\"><summary>讨论题 · 9 题</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/miller-03-1-116.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"讨论题 · 9 题，放大第 1 幅\"><img src=\"/assets/exercises/foundations/miller-03-1-116.webp\" alt=\"讨论题 · 9 题，第 1 幅\" width=\"1165\" height=\"700\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/miller-03-1-117.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"讨论题 · 9 题，放大第 2 幅\"><img src=\"/assets/exercises/foundations/miller-03-1-117.webp\" alt=\"讨论题 · 9 题，第 2 幅\" width=\"1165\" height=\"336\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-3-10-1\"><summary>编程练习 · 28 题</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/miller-03-2-117.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"编程练习 · 28 题，放大第 1 幅\"><img src=\"/assets/exercises/foundations/miller-03-2-117.webp\" alt=\"编程练习 · 28 题，第 1 幅\" width=\"1165\" height=\"1110\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/miller-03-2-118.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"编程练习 · 28 题，放大第 2 幅\"><img src=\"/assets/exercises/foundations/miller-03-2-118.webp\" alt=\"编程练习 · 28 题，第 2 幅\" width=\"1165\" height=\"1509\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/miller-03-2-119.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"编程练习 · 28 题，放大第 3 幅\"><img src=\"/assets/exercises/foundations/miller-03-2-119.webp\" alt=\"编程练习 · 28 题，第 3 幅\" width=\"1165\" height=\"1509\" loading=\"lazy\"></a></div>\n\n</details>\n\n",
+  "metadata": {
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第二部分 · 数据组织与基本算法",
+      "number": 16,
+      "chapter": "3",
+      "edition": "2026-10",
+      "minutes": 15,
+      "section": "6",
+      "questions": 37,
+      "unit_type": "exercise",
+      "chapter_title": "基本数据结构",
+      "source_sections": [
+        "3.10",
+        "3.9"
+      ]
+    }
+  }
+}

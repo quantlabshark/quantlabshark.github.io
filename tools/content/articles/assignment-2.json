@@ -1,0 +1,14 @@
+{
+  "slug": "assignment-2",
+  "title": "实践 2 · 收益与回撤",
+  "summary": "用合成价格计算收益和回撤，并与交互实验核对。",
+  "kind": "assignment",
+  "track": "",
+  "series": "",
+  "sort_order": 41,
+  "section_ids": [
+    "eef736ef-be09-4f13-99d4-433464d67f07"
+  ],
+  "body": "## 任务\n\n使用合成价格计算逐期收益、复利净值和最大回撤，并与交互实验比较。回撤计算从初始净值 1 开始，记录高点与低点所在日期。\n\n## 提交材料\n\n提交收益表、净值图和回撤区间说明。出现差异时，定位到具体日期，解释差异来自价格、收益公式还是初始值。\n\n## 评价标准\n\n计算口径占 40%，结果核对占 30%，图表解释占 30%。\n\n## 提交方式\n\n在[GitHub 作业提交](https://github.com/quantlabshark/quantlabshark.github.io/issues/new?template=assignment.yml)中填写任务编号、方法、结果与代码链接。提交内容公开可见，需使用 GitHub 账号；账号令牌和个人隐私信息保留在本机。讨论题目时，也可在[讨论中心](/community/)发帖。\n",
+  "metadata": {}
+}

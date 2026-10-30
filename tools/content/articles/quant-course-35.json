@@ -1,0 +1,65 @@
+{
+  "slug": "quant-course-35",
+  "title": "35 · 神经网络、卷积与LSTM",
+  "summary": "逐步计算一次神经网络更新、局部卷积和记忆状态递推，理解文本序列的形状、嵌入、填充与训练控制。",
+  "kind": "lesson",
+  "track": "机器学习与文本",
+  "series": "量化研究系统课程",
+  "sort_order": 35,
+  "cover_url": "/assets/figures/curriculum/course-35.svg",
+  "section_ids": [
+    "5c14064d-8915-5f7c-bcc6-f9bd10d4c40e"
+  ],
+  "body": "神经网络由线性变换和非线性激活组成。卷积处理局部结构，循环网络与 LSTM 处理序列状态，不同结构对应不同的数据关系。\n\n## 两层线性运算为什么还不够\n\n若第一层是$\\mathbf xW_1$，第二层再乘$W_2$，整体仍为$\\mathbf x(W_1W_2)$，只是一层线性变换。网络需要激活函数才能表达更丰富关系。ReLU为$\\max(0,z)$，把负值置零；sigmoid为$1/(1+e^{-z})$，将输出压到0与1之间。\n\n给定$\\mathbf x=(1,-1)$、$W=\\begin{pmatrix}1&0.5\\\\-0.5&1\\end{pmatrix}$，先得到$\\mathbf z=\\mathbf xW=(1.5,-0.5)$，经ReLU变为$\\mathbf h=(1.5,0)$。再以输出权重$(1,-1)$计算得到1.5，sigmoid概率约0.8176。\n\n这就是一个很小的多层感知机MLP：全连接层形成组合，激活函数改变表达方式，输出层连接具体目标。\n\n## 一次参数更新怎样降低损失\n\n二分类交叉熵为$L=-[y\\log p+(1-y)\\log(1-p)]$。若标签为1，初始损失为$-\\log(0.8176)\\approx0.2014$。输出分数的梯度为$p-y\\approx-0.1824$，说明应提高这个正类样本的分数。\n\n利用链式法则，可以将梯度传回输出权重和第一层权重，再按$\\theta_{new}=\\theta_{old}-\\eta\\nabla L$更新。学习率$\\eta$控制一步走多远；太大可能越过较好区域，太小则进展慢。下面先验证这个具体计算，再计算CNN与LSTM的小例。\n\n```python\nimport numpy as np\n\ndef sigmoid(z):\n    return 1 / (1 + np.exp(-z))\n\nx = np.array([1.0, -1.0])\nW = np.array([[1.0, 0.5], [-0.5, 1.0]])\nv = np.array([1.0, -1.0])\nz = x @ W\nhidden = np.maximum(z, 0)\nprob = sigmoid(hidden @ v)\nloss_before = -np.log(prob)  # label y=1\nerror = prob - 1.0\ngrad_v = hidden * error\ngrad_W = np.outer(x, (v * error) * (z > 0))\nv -= 0.1 * grad_v\nW -= 0.1 * grad_W\nprob_after = sigmoid(np.maximum(x @ W, 0) @ v)\nprint(\"MLP:\", prob, prob_after)\nassert -np.log(prob_after) < loss_before\n\nsequence = np.array([1.0, 2.0, 0.0, 3.0])\nkernel = np.array([1.0, -1.0])\nconv = np.array([sequence[i:i+2] @ kernel for i in range(3)])\nactivated = np.maximum(conv, 0)\nprint(\"CNN local values:\", conv, \"max pooling:\", activated.max())\nassert np.allclose(conv, [-1.0, 2.0, -3.0])\n\nh, cell = 0.0, 0.0\nfor value in [1.0, -1.0]:\n    forget = input_gate = output_gate = sigmoid(0.0)\n    candidate = np.tanh(value + h)\n    cell = forget*cell + input_gate*candidate\n    h = output_gate*np.tanh(cell)\n    print(\"LSTM state:\", cell, h)\n```\n\n第一部分更新后正类概率提高、损失降低，验证梯度方向。这里仅有一个样本，不能用它判断泛化。实际训练按批次重复前向、损失、反向传播和更新，并用未参与更新的验证数据观察是否开始过拟合。\n\n## 词编号与嵌入不是同一种数值\n\n词编号只是查表索引，编号100不代表编号10的十倍语义。嵌入矩阵为每个词存一个可训练稠密向量。例如词表有5000项、向量维度16，参数矩阵有$5000\\times16$项；一句20词文本会变成$20\\times16$的矩阵。\n\n普通静态嵌入中，同一词始终查得同一向量，语境差异由后续网络处理。可以从当前任务训练嵌入，也可加载预训练向量；后者的领域与词表若不同，仍需检查匹配。\n\n一批文本的形状通常是“样本数×序列长度×嵌入维度”。填充到64个位置，指每句话保留64个位置，不是词表只保留64个词。截断方向影响句首或句尾信息，填充位置需要掩码或正确长度规则。\n\n## 卷积提取相邻位置的变化\n\n对序列$[1,2,0,3]$，使用核$[1,-1]$、步长1、不补边界，局部乘加依次为$1-2=-1$、$2-0=2$、$0-3=-3$。ReLU后为$[0,2,0]$，全局最大池化取2。\n\n![局部卷积结果与LSTM状态变化](/assets/figures/curriculum/course-35.svg)\n\n左图显示各滑动位置的原始响应与ReLU结果，负响应被置零；右图显示下文两步LSTM的细胞状态和隐藏状态。图中的每个值都来自程序，而不是抽象的网络装饰。\n\n深度学习中常用不翻转核的互相关计算，仍称卷积层。多个核可以学习不同局部模式，步长决定采样间隔，填充决定边界输出。池化减少位置数，也丢失精确位置信息。沿文本词序列做卷积，需要保留顺序，不能先打乱成词袋再假定顺序仍在。\n\n## LSTM怎样保留和更新记忆\n\n普通循环网络把上一状态与当前输入合成新状态，长时间反向传播可能遇到梯度消失。LSTM引入细胞状态$c_t$及三个连续门：遗忘$f_t$、输入$i_t$、输出$o_t$，门由sigmoid给出0到1之间的比例。候选信息$g_t$常由tanh产生。\n\n$$c_t=f_t\\odot c_{t-1}+i_t\\odot g_t,\\qquad\nh_t=o_t\\odot\\tanh(c_t).$$\n\n$\\odot$表示逐元素相乘，不是向量点积。第一项保留旧信息，第二项加入新信息，输出门决定对外暴露多少状态。门值不是只能取0或1。\n\n代码将三个门固定为0.5以展示计算，初始状态为0。第一输入1产生$g_1=\\tanh1$，$c_1\\approx0.3808$、$h_1\\approx0.1817$。第二输入−1时，新候选还受$h_1$影响，旧记忆也保留一半。训练 LSTM 时，需要学习各门的权重，沿时间展开反向传播。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>细胞状态、隐藏状态和输入是三个不同对象。先按一个时间步写清维度与数值，再把同一个更新式沿时间重复，比直接记复杂结构图更容易理解。</p></aside>\n\n## Dropout、早停与模型比较\n\nDropout在训练时随机屏蔽部分激活，并按实现约定缩放；预测时关闭这种随机屏蔽。它降低对少数内部路径的依赖，但不保证消除过拟合。参数惩罚、较小网络和早停也可控制复杂度。\n\n早停依据验证损失选训练轮数，最终测试只评价固定模型。比较MLP、CNN与LSTM时，应统一语料、拆分、词表、序列长度与目标；若CNN只保留16词、MLP保留64词，差异还包括输入信息量。\n\n保存模型时同时保存词表、填充方向、掩码、标签编码和训练日期。仅保存网络权重不能确保之后得到相同输入。文本情绪分类仍需另行验证与未来收益的关系。\n\n## 练习\n\n卷积结果$[-1,2,-3]$经过ReLU与最大池化后是什么？LSTM若遗忘门为1、输入门为0，细胞状态怎样变化？\n\n<details><summary>查看解答</summary>\n\nReLU得到$[0,2,0]$，最大池化为2。LSTM此时$c_t=c_{t-1}$，保留旧细胞状态而不加入新候选；隐藏状态仍受输出门及tanh影响，不必与细胞状态相同。\n\n</details>\n\n---\n\n[课程目录](/courses/)\n\n## 配套代码\n\n[下载本节代码（ZIP）](/assets/downloads/courses/quant-course-35.zip)\n\n压缩包包含脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n",
+  "metadata": {
+    "curriculum": {
+      "cover": "/assets/figures/curriculum/course-35.svg",
+      "level": "进阶",
+      "stage": 6,
+      "number": 35,
+      "edition": "2026-10",
+      "minutes": 50,
+      "source_refs": [
+        {
+          "book": "深入浅出Python量化交易实战",
+          "chapters": "13.2–13.3、14.1–14.3",
+          "pdf_pages": [
+            272,
+            274,
+            276,
+            278,
+            280,
+            281,
+            282,
+            283,
+            284,
+            288,
+            290,
+            293,
+            294,
+            295,
+            297,
+            300,
+            302,
+            303,
+            305
+          ]
+        },
+        {
+          "book": "Quant Roadmap — Ultimate Edition",
+          "chapters": "7",
+          "pdf_pages": [
+            23,
+            24,
+            25
+          ]
+        }
+      ],
+      "stage_title": "机器学习与文本"
+    },
+    "code_download": {
+      "url": "/assets/downloads/courses/quant-course-35.zip",
+      "examples": 1
+    }
+  }
+}

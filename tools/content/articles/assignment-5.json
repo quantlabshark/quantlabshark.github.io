@@ -1,0 +1,14 @@
+{
+  "slug": "assignment-5",
+  "title": "实践 5 · 样本外验证",
+  "summary": "预先固定训练、间隔和测试区间，记录方案选择过程。",
+  "kind": "assignment",
+  "track": "",
+  "series": "",
+  "sort_order": 44,
+  "section_ids": [
+    "eef736ef-be09-4f13-99d4-433464d67f07"
+  ],
+  "body": "## 任务\n\n按时间顺序划分训练、验证和测试数据，确定间隔长度，记录候选方案与选择依据。检查训练标签是否延伸到验证或测试区间。\n\n## 提交材料\n\n提交时间划分图、选定参数及测试结果，并说明每一步使用了哪些日期的数据。\n\n## 评价标准\n\n时间隔离占 40%，参数选择记录占 30%，测试集独立性占 30%。\n\n## 提交方式\n\n在[GitHub 作业提交](https://github.com/quantlabshark/quantlabshark.github.io/issues/new?template=assignment.yml)中填写任务编号、方法、结果与代码链接。提交内容公开可见，需使用 GitHub 账号；账号令牌和个人隐私信息保留在本机。讨论题目时，也可在[讨论中心](/community/)发帖。\n",
+  "metadata": {}
+}

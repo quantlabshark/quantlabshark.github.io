@@ -1,0 +1,36 @@
+{
+  "slug": "calin-book-03-04",
+  "title": "布朗桥与 Bessel 过程",
+  "summary": "认识固定终点的高斯路径和多维布朗运动的距离，推导协方差与径向分布。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "随机微积分及其应用",
+  "sort_order": 5018,
+  "cover_url": "",
+  "section_ids": [
+    "17859c88-b779-5654-b120-7a4cc7b39714"
+  ],
+  "body": "## 把终点固定下来\n\n标准布朗运动在 $T$ 时刻的终点随机。如果关心一条从 0 出发、在 $T$ 时刻又回到 0 的随机路径，可以构造布朗桥\n\n$$B_t=W_t-\\frac tT W_T,\\qquad0\\le t\\le T.$$\n\n显然 $B_0=B_T=0$。减去的直线把原路径终点恰好拉回零。由于布朗桥是高斯变量的线性组合，它仍为高斯过程。其均值为零，协方差为\n\n$$\\operatorname{Cov}(B_s,B_t)=\\min(s,t)-\\frac{st}{T}.$$\n\n推导时展开两个括号，并使用 $\\mathbb E[W_sW_T]=s$。特别地，$\\operatorname{Var}(B_t)=t(1-t/T)$，在两端为零，在中点最大。若 $T=2$，中点方差为 $1/2$。\n\n这个过程具有“布朗运动给定终点为零”的条件分布。虽然 $\\mathbb P(W_T=0)=0$，高斯条件分布仍然可以定义。更一般地，从 $a$ 到 $b$ 的桥为 $a+(b-a)t/T+B_t$。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>协方差，即两个变量偏离各自均值时，共同变化程度的度量。</p></aside>\n\n### 条件于终点的分布怎样定义\n\n对任意 $t\\le T$，$\\operatorname{Cov}(W_t-(t/T)W_T,W_T)=t-(t/T)T=0$。桥残差与终点属于联合高斯向量，因此独立。于是可以分解\n\n$$W_t=\\frac tTW_T+B_t,$$\n\n其中 $B_t$ 的整组有限维值与 $W_T$ 独立。给定终点 $W_T=b$ 后，未来的条件路径分布就是 $(t/T)b+B_t$。这通过正态条件密度定义，不需要把普通条件概率除以零概率事件 $\\{W_T=b\\}$。\n\n例如 $T=2$、起点 0、终点 1，时刻 $t=1$ 的条件均值为 $1/2$，条件方差为 $1/2$。固定终点后，均值走沿起终点连线，随机偏离在两端收缩为零。\n\n## 固定终点改变了预测\n\n对 $0\\le s<t<T$，布朗桥的条件均值为\n\n$$\\mathbb E[B_t\\mid B_s]=\\frac{T-t}{T-s}B_s.$$\n\n路径若在 $s$ 时刻偏离零，后续平均会向终点回拉。这个系数来自高斯条件均值公式：$\\operatorname{Cov}(B_t,B_s)/\\operatorname{Var}(B_s)$。条件方差为 $(t-s)(T-t)/(T-s)$。\n\n构造式使用了未来的 $W_T$，因此 $B_t$ 通常不适应原布朗运动到 $t$ 为止的信息流。它可以在自己的信息流中研究，也可以通过另一条随机微分方程逐步模拟，但不能把上述构造当成实时可用的交易信号。\n\n![布朗桥的路径与方差范围](/assets/illustrations/theory/calin/brownian-bridge.svg)\n\n桥的条件方差也可以逐项算出。联合高斯回归给出\n\n$$\\operatorname{Var}(B_t\\mid B_s)\n=\\operatorname{Var}(B_t)-\\frac{\\operatorname{Cov}(B_s,B_t)^2}{\\operatorname{Var}(B_s)}\n=\\frac{(t-s)(T-t)}{T-s}.$$\n\n取 $T=2,s=1,t=1.5$，若观察到 $B_1=0.8$，则 $B_{1.5}$ 的条件均值为 $0.4$，方差为 $0.25$。越靠近固定终点，剩余可自由波动的时间越少。这个条件分布也给出无需提前读取 $W_T$ 的逐步桥模拟方法。\n\n## 多维布朗运动的距离\n\n取 $n$ 个独立标准布朗运动，组成向量 $\\mathbf W_t$。它到原点的距离\n\n$$R_t=\\sqrt{(W_t^{(1)})^2+\\cdots+(W_t^{(n)})^2}$$\n\n称为 $n$ 维 Bessel 过程。每个时刻的 $R_t^2/t$ 是 $n$ 个独立标准正态的平方和，服从 $\\chi_n^2$。由变量变换得到径向密度\n\n$$p_R(r)=\\frac{2r^{n-1}}{(2t)^{n/2}\\Gamma(n/2)}e^{-r^2/(2t)},\\qquad r>0.$$\n\n其中 $r^{n-1}$ 来自球壳体积。离原点稍远的球壳拥有更多方向，这会与高斯密度向外衰减的趋势共同决定距离分布。\n\n### 从平方距离到距离的变量变换\n\n令 $Q=R_t^2/t\\sim\\chi_n^2$，其密度为 $q^{n/2-1}e^{-q/2}/[2^{n/2}\\Gamma(n/2)]$。取 $q=r^2/t$，导数为 $dq/dr=2r/t$，所以\n\n$$p_R(r)=p_Q(r^2/t)\\frac{2r}{t}\n=\\frac{2r^{n-1}}{(2t)^{n/2}\\Gamma(n/2)}e^{-r^2/(2t)}.$$\n\n这个推导不需要先掌握高维球面积公式；它把维度信息集中到卡方自由度 $n$。密度中的 $r^{n-1}$ 同时与几何球壳体积相符。\n\n一般矩也可利用 $R_t^q=t^{q/2}Q^{q/2}$ 和 Gamma 矩公式计算，得到前面的 Gamma 函数比。取 $q=2$ 时，递推关系 $\\Gamma(n/2+1)=(n/2)\\Gamma(n/2)$ 将它简化为 $nt$。\n\n## 不同维度对应的熟悉分布\n\n当 $n=1$，$R_t=|W_t|$，是半正态分布；当 $n=2$，密度为 $r t^{-1}e^{-r^2/(2t)}$，是 Rayleigh 分布；当 $n=3$，密度为 $\\sqrt{2/\\pi}\\,r^2t^{-3/2}e^{-r^2/(2t)}$。\n\n利用 Gamma 积分，可以统一计算矩：\n\n$$\\mathbb E[R_t^q]=(2t)^{q/2}\\frac{\\Gamma((n+q)/2)}{\\Gamma(n/2)},\\qquad q>-n.$$\n\n特别地，$\\mathbb E[R_t^2]=nt$，$\\mathbb E[R_t]=\\sqrt{2t}\\,\\Gamma((n+1)/2)/\\Gamma(n/2)$。二维情形的均值为 $\\sqrt{\\pi t/2}$，方差为 $(2-\\pi/2)t$。\n\n> **鲨鱼说** 向量平均位置为零，不意味着到原点的平均距离为零。方向可以互相抵消，距离始终非负。$|\\mathbb E[\\mathbf W_t]|$ 与 $\\mathbb E[|\\mathbf W_t|]$ 不能互换。\n\n在二维情形，$\\mathbb E[W_t^{(1)}]=\\mathbb E[W_t^{(2)}]=0$，但距离均值为正。三维时 $\\mathbb E[R_t]=2\\sqrt{2t/\\pi}$，二阶矩为 $3t$，方差为 $(3-8/\\pi)t$。维度越高，距离增大的原因来自多个独立坐标的平方相加，不是每个坐标出现向外的固定漂移。\n\n对半径过程写随机微分方程时会出现与维度相关的径向项，并在原点附近需要特殊处理。因此直接对平方根函数套普通链式法则，既会漏掉伊藤修正，也会遇到零点导数问题。利用卡方变量变换，可以先准确获得固定时刻分布，再研究路径方程。\n\n## 练习：二维位置落在圆内的概率\n\n二维标准布朗运动从原点出发。求时刻 $t=2$ 时距离不超过 3 的概率，并比较均方根距离与平均距离。\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n二维径向分布函数为 $\\mathbb P(R_t\\le r)=1-e^{-r^2/(2t)}$，所以所求概率为 $1-e^{-9/4}\\approx0.8946$。均方根距离为 $\\sqrt{\\mathbb E[R_2^2]}=2$，平均距离为 $\\sqrt\\pi\\approx1.7725$。两者不同，且后者不超过前者，与 Cauchy–Schwarz 不等式一致。\n\n</details>\n\n## 代码下载\n\n[下载计算与绘图代码](/assets/downloads/theory/calin-book-03-04.zip)\n",
+  "metadata": {
+    "theory_book": {
+      "book": "stochastic-calculus",
+      "part": "第一部分 · 概率与随机过程",
+      "number": 18,
+      "chapter": "3",
+      "edition": "2026-10",
+      "minutes": 34,
+      "section": "4",
+      "source_pages": [
+        72,
+        73,
+        74,
+        75
+      ],
+      "chapter_title": "常用随机过程",
+      "source_sections": [
+        "3.5",
+        "3.7"
+      ]
+    }
+  }
+}

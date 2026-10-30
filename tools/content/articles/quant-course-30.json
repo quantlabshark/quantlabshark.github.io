@@ -1,0 +1,54 @@
+{
+  "slug": "quant-course-30",
+  "title": "30 · 决策树与随机森林",
+  "summary": "手算一次树切分，理解分段预测、交互关系和森林平均，并正确使用时间验证与特征重要性。",
+  "kind": "lesson",
+  "track": "因子与预测",
+  "series": "量化研究系统课程",
+  "sort_order": 30,
+  "cover_url": "/assets/figures/curriculum/course-30.svg",
+  "section_ids": [
+    "606eb414-4b3f-55ba-bc41-f936b93c9b47"
+  ],
+  "body": "决策树按特征阈值逐步划分样本，在末端给出类别或数值预测。随机森林汇总多棵树的结果，以降低单棵树对训练样本变化的敏感性。\n\n## 一个阈值怎样分开四条记录\n\n输入1、2、3、4对应类别0、0、1、1。问题“输入是否不超过2.5”把前两条分到左边、后两条分到右边，两边都只剩一种类别。决策树用一连串特征阈值划分样本，到叶节点后给出类别比例或数值均值。\n\n树适合表达条件关系。例如盈利质量较好时，低估值可能提供不同信号；盈利质量较差时，同样低估值可能对应困境。这样的交互不能仅靠两个独立线性项表达。\n\n## Gini不纯度如何选择切分\n\n一个节点中两类比例为$p_0,p_1$，Gini不纯度是$G=1-p_0^2-p_1^2$。根节点各占一半，$G=0.5$。按2.5切分后，两边不纯度均为0，改善为0.5。\n\n如果按1.5切分，左边只有类别0，右边为0、1、1，右边不纯度为$1-(1/3)^2-(2/3)^2=4/9$。按样本数加权后的不纯度为$1/4\\times0+3/4\\times4/9=1/3$，改善仅为$1/6$，因此2.5更优。\n\n回归树使用类似思想比较平方误差。某叶目标为1、2、6，预测均值3，平方误差为$4+1+9=14$；继续切分只有在误差下降足够且样本数量允许时才值得进行。\n\n## 为什么一棵深树容易记住噪声\n\n不断切分直到每片叶只有一个训练样本，可把训练误差压得很低，但阈值可能只是偶然波动。限制深度、提高叶节点最少样本数和剪枝，都能减少这种细碎划分。最合适的复杂度要在后续验证数据上选择。\n\n噪声增加并不意味着真实关系自动变为非线性。若数据本来由直线加噪声生成，树可能比线性模型更容易追随噪声。比较算法时应保留相同划分、指标与简单基准。\n\n## 随机森林怎样平均多个不稳定估计\n\n随机森林通常对样本有放回抽取，并在每个节点随机挑选部分候选特征，形成不同的树。回归平均各树数值，分类汇总概率或投票。假设每棵树预测误差方差为$\\sigma^2$、两树误差相关约为$\\rho$，平均$M$棵树的误差方差可近似写为\n\n$$\\rho\\sigma^2+\\frac{1-\\rho}{M}\\sigma^2.$$\n\n增加树数降低第二项，但共同误差第一项仍然存在。让树有所不同有助于平均；数据泄漏、错误标签或共同偏差不会因树多而消失。\n\n```python\nimport numpy as np\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.inspection import permutation_importance\n\nX = np.array([[1.0], [2.0], [3.0], [4.0]])\ny = np.array([0, 0, 1, 1])\nstump = DecisionTreeClassifier(max_depth=1, random_state=1).fit(X, y)\nprint(\"threshold:\", stump.tree_.threshold[0])\nassert np.isclose(stump.tree_.threshold[0], 2.5)\n\nrng = np.random.default_rng(11)\nfeatures = rng.normal(size=(120, 3))\nlabels = ((features[:, 0] > 0) != (features[:, 1] > 0)).astype(int)\nforest = RandomForestClassifier(n_estimators=100, max_depth=4,\n                                min_samples_leaf=3, random_state=11)\nforest.fit(features[:80], labels[:80])\nprint(\"later-sample accuracy:\", forest.score(features[80:], labels[80:]))\nimportance = permutation_importance(forest, features[80:], labels[80:],\n                                   n_repeats=10, random_state=11)\nprint(\"permutation importance:\", importance.importances_mean)\n```\n\n第一部分恢复阈值2.5。第二部分生成120条三特征记录，标签只取决于前两列是否异号，第三列是无用噪声。前80条训练，后40条评价。它展示森林如何学习交互以及如何计算置换重要性，输出对应这组固定模拟任务。\n\n![两特征交互下的分类区域](/assets/figures/curriculum/course-30.svg)\n\n图中异号的两个象限属于同一类，同号象限属于另一类。单条直线不能将这两类完全分开，而连续阈值切分可以形成四个区域。背景把第三个特征固定为0，样本点显示前两项特征与真实标签，因此它展示的是二维切片。\n\n实际三维输入的测试准确率由程序单独计算。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>森林能平均单棵树的随机波动，但所有树若读到了未来标签，平均结果仍然泄漏。模型复杂度与数据时序是两项独立检查。</p></aside>\n\n## 重要性不是因果证明\n\n按分裂带来的纯度改善累计重要性，可能偏向可选阈值更多的连续变量。置换重要性在固定评价数据上打乱某列，观察评分下降多少，回答“模型对这一列有多依赖”。相关特征能互相替代，单列打乱时下降可能很小。\n\n如果使用重要性选择因子，选择过程必须在训练或内部验证完成，再到新的测试段评价。不能先根据最终测试重要性删列，又把同一测试段当作独立证据。\n\n还要核对标签方向。用昨天的技术指标去解释过去50日累计收益，可能主要测量同一历史行情，而不是预测随后50日。特征区间、标签区间和可用时点应画在同一时间轴上。\n\n## 回归树外推和袋外误差\n\n回归树的叶节点输出训练目标均值，因此通常是分段常数。新输入超过训练最大值，会落入边界叶，而不会自动沿上涨趋势外推。用森林预测市值后得到的估值差，也只是模型残差，需要后续收益检验。\n\n每棵树抽样时没被选中的记录可用于袋外误差，但这些记录不一定晚于该树全部训练样本。对未来预测，袋外分数不能替代按时间留出的后段。树对尺度变换通常不敏感，仍然需要处理缺失、类别编码和数据更新时点。\n\n## 练习\n\n100棵树两两误差完全相关，平均能否降低误差方差？如果节点全部属于类别1，Gini是多少？\n\n<details><summary>查看解答</summary>\n\n完全相关时$\\rho=1$，平均误差方差仍为$\\sigma^2$，增加树数没有分散效果。纯类别1节点的Gini为$1-0^2-1^2=0$，按分类纯度没有继续切分的必要。\n\n</details>\n\n---\n\n[课程目录](/courses/)\n\n## 配套代码\n\n[下载本节代码（ZIP）](/assets/downloads/courses/quant-course-30.zip)\n\n压缩包包含脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n",
+  "metadata": {
+    "curriculum": {
+      "cover": "/assets/figures/curriculum/course-30.svg",
+      "level": "进阶",
+      "stage": 5,
+      "number": 30,
+      "edition": "2026-10",
+      "minutes": 40,
+      "source_refs": [
+        {
+          "book": "深入浅出Python量化交易实战",
+          "chapters": "8.1–8.3",
+          "pdf_pages": [
+            172,
+            174,
+            176,
+            178,
+            181,
+            183,
+            184,
+            188,
+            189
+          ]
+        },
+        {
+          "book": "Quant Roadmap — Ultimate Edition",
+          "chapters": "7",
+          "pdf_pages": [
+            23,
+            24
+          ]
+        }
+      ],
+      "stage_title": "因子与预测"
+    },
+    "code_download": {
+      "url": "/assets/downloads/courses/quant-course-30.zip",
+      "examples": 1
+    }
+  }
+}

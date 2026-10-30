@@ -64,17 +64,10 @@
  async function search(){
   searchRequest?.abort();const request=searchRequest=new AbortController();const version=++searchVersion,q=input.value.trim().toLowerCase().slice(0,120),scope=window.FoamSearchScope?.key()||'',current=()=>dialog.open&&version===searchVersion&&input.value.trim().toLowerCase().slice(0,120)===q&&(window.FoamSearchScope?.key()||'')===scope;
   results.replaceChildren();
-  if(!q){results.textContent='输入关键词查找文章；登录后可搜索正文和代码。';return;}
+  if(!q){results.textContent='输入关键词搜索课程、正文和代码。';return;}
   results.textContent='正在查找匹配内容…';
   try{
-   let found=null;
-   try{
-    await window.QuantLab.contentReady;if(!current())return;
-    const timeout=setTimeout(()=>request.abort(),10000);let r;try{r=await window.QuantLab.client.rpc(window.QuantLab.user&&!window.QuantLab.user.is_anonymous?'foamlab_search_content_scoped':'foamlab_search_catalog',{query:q,section_key:scope||null}).abortSignal(request.signal);}finally{clearTimeout(timeout);}if(!current())return;
-    if(!r.error&&Array.isArray(r.data))found=r.data.filter(publicSearchItem).map(x=>({...x,url:'/read/?slug='+encodeURIComponent(x.slug),kind:({lesson:'课程',tool:'工具',log:'日志',article:'分享',resource:'资料',module:'专题',reference:'参考'})[x.kind]||'参考',text:x.excerpt}));
-   }catch{}
-   const cached=found===null;
-   if(cached)found=await localSearch(q,scope,current);
+   const found=await localSearch(q,scope,current),cached=false;
    if(!current())return;
    results.replaceChildren();
    if(!found.length){results.textContent='没有找到匹配内容，试试更短的关键词。';return;}

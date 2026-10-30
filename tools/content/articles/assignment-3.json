@@ -1,0 +1,14 @@
+{
+  "slug": "assignment-3",
+  "title": "实践 3 · 成交时间账本",
+  "summary": "手工构造八个价格点，逐日记录信号、成交和持仓。",
+  "kind": "assignment",
+  "track": "",
+  "series": "",
+  "sort_order": 42,
+  "section_ids": [
+    "eef736ef-be09-4f13-99d4-433464d67f07"
+  ],
+  "body": "## 任务\n\n构造八个价格点，逐日记录信号、成交时间、成交数量、现金和持仓。规定下一日收盘成交，再计算各持有区间的收益。\n\n## 提交材料\n\n提交逐日账本，并改变一次信号移动方式，比较哪些日期的持仓和盈亏发生变化。\n\n## 评价标准\n\n时点对齐占 50%，费用核算占 30%，差异解释占 20%。\n\n## 提交方式\n\n在[GitHub 作业提交](https://github.com/quantlabshark/quantlabshark.github.io/issues/new?template=assignment.yml)中填写任务编号、方法、结果与代码链接。提交内容公开可见，需使用 GitHub 账号；账号令牌和个人隐私信息保留在本机。讨论题目时，也可在[讨论中心](/community/)发帖。\n",
+  "metadata": {}
+}

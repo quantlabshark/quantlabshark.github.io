@@ -252,15 +252,6 @@
     "sort_order": 110
   },
   {
-    "id": "595214f5-cc0a-4dcc-8a05-6a22406b0664",
-    "key": "community",
-    "name": "讨论中心",
-    "parent_id": null,
-    "href": "/community/",
-    "visible": true,
-    "sort_order": 120
-  },
-  {
     "id": "eef736ef-be09-4f13-99d4-433464d67f07",
     "key": "assignments",
     "name": "作业与实践",

@@ -1,0 +1,44 @@
+{
+  "slug": "factor-book-07-07",
+  "title": "7.7 组合风险的分解与归因",
+  "summary": "从协方差推导边际风险和组成风险，解释暴露、波动、相关性三要素，并把共同因子与特质风险完整加总。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "因子投资：方法与实践",
+  "sort_order": 3042,
+  "cover_url": "",
+  "section_ids": [
+    "0d99264a-7913-52fc-8f8e-a4c784c92834"
+  ],
+  "body": "## 各买一半为何没有各承担一半风险\n\n两项资产年波动分别为20%和10%，彼此不相关，各买50%。第一项贡献的风险会更多，因为同样资金面对更大的收益变化。直接把加权波动$0.5\\times20\\%+0.5\\times10\\%=15\\%$相加，又忽略了分散作用。\n\n令收益向量为$\\mathbf r$，权重为$\\mathbf w$，协方差为$\\Sigma$，组合收益$R=\\mathbf w'\\mathbf r$，则\n\n$$\\sigma_p=\\sqrt{\\mathbf w'\\Sigma\\mathbf w}.$$\n\n风险归因希望把这个实际波动恰好分配到各项收益来源，并解释哪些部分在增加或降低组合风险。\n\n## 边际风险与组成风险\n\n暂时保持其他权重不变，对某一权重作微小增加，波动率的变化速度为\n\n$$MRC_i=\\frac{\\partial\\sigma_p}{\\partial w_i}\n=\\frac{(\\Sigma\\mathbf w)_i}{\\sigma_p}\n=\\frac{\\operatorname{Cov}(r_i,R)}{\\sigma_p}.$$\n\n这叫边际风险贡献。它描述“再增加一点”的影响，不是当前持仓已经承担的全部风险。乘以现有权重，得到组成风险贡献：\n\n$$RC_i=w_iMRC_i,\\qquad\\sum_iRC_i=\\sigma_p.$$\n\n最后的加总来自$\\sum_iw_i(\\Sigma\\mathbf w)_i=\\mathbf w'\\Sigma\\mathbf w$。因此加总的是权重乘边际贡献，不是裸的边际贡献之和。若从资产A挪资金到B，波动变化近似为$(MRC_B-MRC_A)\\Delta w$，需要同时考虑资金从哪里转出。\n\n方差也可分解：$\\operatorname{Var}(R)=\\sum_iw_i\\operatorname{Cov}(r_i,R)$。方差贡献的单位是收益平方，除以总波动后才成为波动率贡献，两种报告不能混用。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>边际风险贡献，即单项权重微小变化对组合风险的影响率。</p></aside>\n\n## 暴露、波动与相关性\n\n利用$\\operatorname{Cov}(r_i,R)=\\sigma_i\\sigma_p\\rho_{i,p}$可得\n\n$$RC_i=w_i\\sigma_i\\rho_{i,p}.$$\n\n三个乘数分别是组合暴露、收益源自身波动，以及它与整个组合的相关性。很大的独立波动，若与组合相关性很低，边际影响也可能较小；负相关或负权重可能产生负风险贡献，表示该项在当前组合中起对冲作用。\n\n例如两个收益源边际风险均为1个百分点，第一个可由10%波动乘0.1相关得到，第二个可由2%波动乘0.5相关得到。它们当前的边际影响相同，但相关性估计变化会带来不同的敏感程度。第一个相关系数从0.1变为0.3，边际风险会由1变为3个百分点，因此压力测试要分别观察波动与相关性。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>负风险贡献不表示这项资产不会亏损。它表示在当前权重与协方差下，这项持仓与其他持仓形成了部分对冲；相关结构变化后，对冲效果也会变化。</p></aside>\n\n## 两项资产逐步计算\n\n在开头的例子中，总方差为$0.5^2\\times0.20^2+0.5^2\\times0.10^2=0.0125$，波动为11.18%。第一项方差贡献0.01，第二项0.0025；各除以总波动，得到8.94与2.24个百分点的波动贡献。\n\n```python\nimport numpy as np\nS = np.diag([.2**2,.1**2])\nw = np.array([.5,.5])\nvol = np.sqrt(w@S@w)\nmarginal = S@w/vol\ncontribution = w*marginal\nshare = contribution/vol\nprint('volatility:', vol)\nprint('contributions:', contribution)\nprint('risk shares:', share)\nassert np.isclose(contribution.sum(),vol)\nassert np.allclose(share,[.8,.2])\n```\n\n风险份额为80%与20%，资金等权没有实现风险平价。改为第一项三分之一、第二项三分之二，两项加权波动相同，在本例不相关条件下风险贡献相等。\n\n## 资产与组合的相关性由哪些部分决定\n\n组合本身由各收益源构成，因此\n\n$$\\rho(r_m,R)=\\frac{\\sum_nw_n\\sigma_n\\rho(r_m,r_n)}{\\sigma_p}.$$\n\n某项收益源与组合的相关性，来自它与所有成分的相关性加权。改变权重也会改变$\\rho(r_m,R)$，不能把两者视为互不影响的输入。\n\n若所有收益源彼此不相关，而且它们完整构成组合，则只剩自身一项：\n\n$$\\rho(r_m,R)=\\frac{w_m\\sigma_m}{\\sigma_p},\\qquad\n\\sum_m\\rho(r_m,R)^2\n=\\frac{\\sum_mw_m^2\\sigma_m^2}{\\sigma_p^2}=1.$$\n\n在这些条件下，平方相关系数恰好等于各项风险份额。前面的例子中，两个相关系数约为0.8944和0.4472，平方后正好为0.8和0.2。一般相关资产不满足这个加总，不能直接把每个$\\rho^2$都算作互不重叠的解释份额。\n\n## 从个股风险转到因子风险\n\n设个股收益模型为$\\mathbf r=B\\mathbf f+\\mathbf u$，组合因子暴露为$\\mathbf b_p=B'\\mathbf w$。若因子与残差不相关，则\n\n$$\\sigma_p^2=\\mathbf b_p'F\\mathbf b_p+\\mathbf w'D\\mathbf w.$$\n\n共同因子$k$的波动贡献为\n\n$$RC^F_k=\\frac{b_{p,k}(F\\mathbf b_p)_k}{\\sigma_p},$$\n\n特质项$i$的贡献为$w_i(D\\mathbf w)_i/\\sigma_p$；若$D$是对角矩阵，才简化成$w_i^2D_{ii}/\\sigma_p$。所有共同因子与特质贡献相加，必须恢复总波动。\n\n![组合风险的共同与特质来源](/assets/figures/factor/risk-decomposition.svg)\n\n图中行业、风格等共同来源需要连同特质部分一起解释。若只展示行业和风格贡献，剩余部分并不是自动消失了，而是尚未纳入归因。共同因子互相相关时，某个风格的风险贡献还会受到其他风格暴露的影响。\n\n## 练习\n\n一份报告列出总年波动12%，行业贡献5个百分点、风格贡献4个百分点、特质贡献3个百分点。能否把三项分别平方，得到方差贡献25、16、9？\n\n<details><summary>查看解答</summary>\n\n不能。组成波动贡献的平方一般不是组成方差贡献。按这里的定义，方差贡献应分别等于$0.05\\times0.12=0.006$、$0.04\\times0.12=0.0048$、$0.03\\times0.12=0.0036$，合计0.0144，恰好等于$0.12^2$。\n\n</details>\n\n---\n\n资料来源：石川、刘洋溢、连祥斌，《因子投资：方法与实践》，2020年，PDF第364—369页。\n\n[返回全书目录](/theory/factor-investing/)\n\n## 配套代码\n\n[下载本节代码（ZIP）](/assets/downloads/factor-investing/factor-book-07-07.zip)\n\n压缩包包含完整脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n",
+  "metadata": {
+    "theory_book": {
+      "book": "factor-investing",
+      "part": "第三部分 · 研究与实践",
+      "number": 43,
+      "chapter": "7",
+      "edition": "2026-10-revised",
+      "minutes": 25,
+      "section": "7.7",
+      "source_pages": [
+        364,
+        365,
+        366,
+        367,
+        368,
+        369
+      ],
+      "chapter_title": "因子投资实践",
+      "source_sections": [
+        "7.7.1 两种传统风险归因方法",
+        "7.7.2 风险的三要素",
+        "7.7.3 从风险角度看收益相关性",
+        "7.7.4 将三要素公式应用于多因子模型"
+      ]
+    },
+    "code_download": {
+      "url": "/assets/downloads/factor-investing/factor-book-07-07.zip",
+      "examples": 1
+    }
+  }
+}

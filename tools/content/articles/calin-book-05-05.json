@@ -1,0 +1,39 @@
+{
+  "slug": "calin-book-05-05",
+  "title": "Poisson 随机积分与跳跃前的权重",
+  "summary": "将积分写成事件时刻求和，推导补偿等距、计数积分和跳跃乘积公式。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "随机微积分及其应用",
+  "sort_order": 5034,
+  "cover_url": "",
+  "section_ids": [
+    "17859c88-b779-5654-b120-7a4cc7b39714"
+  ],
+  "body": "## 每次跳跃贡献一个加权值\n\n设 $N_t$ 是速率为 $\\lambda$ 的 Poisson 过程，到达时刻为 $S_j$。对可预测过程 $H$，计数积分可以写成\n\n$$\\int_0^TH_t\\,dN_t=\\sum_{S_j\\le T}H_{S_j}.$$\n\n如果权重由一个右连续状态过程 $F$ 给出，应使用跳跃前的值 $H_t=F_{t-}$，写成 $\\sum F_{S_j-}$。这样每次事件的权重在该事件发生前已经确定。\n\n定义补偿过程 $M_t=N_t-\\lambda t$，则\n\n$$\\int_0^TH_t\\,dM_t=\\sum_{S_j\\le T}H_{S_j}-\\lambda\\int_0^TH_tdt.$$\n\n第一项记录实际事件，第二项减去条件平均速率形成的补偿。若 $\\mathbb E\\int_0^TH_t^2dt<\\infty$，补偿积分是零均值平方可积鞅，等距关系为\n\n$$\\mathbb E\\left[\\left(\\int_0^TH_t\\,dM_t\\right)^2\\right]\n=\\lambda\\mathbb E\\int_0^TH_t^2dt.$$\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>可预测过程，即其用于积分的权重能够由当前增量发生前的信息确定的过程。</p></aside>\n\n#### 一条计数路径上的实际值与补偿值\n\n设 $T=4$，事件发生于 $0.5,1.5,3$，确定性权重为 $H_t=1+t$。计数积分只在事件处累加：\n\n$$\\int_0^4(1+t)dN_t=1.5+2.5+4=8.$$\n\n若模型强度为 $\\lambda=1$，平均累计权重为\n\n$$\\lambda\\int_0^4(1+t)dt=4+\\frac{4^2}{2}=12,$$\n\n所以同一条路径上的补偿积分为 $8-12=-4$。它是一个具体实现值；“补偿积分均值为零”是对全部可能路径求平均后的结论，不要求每条路径的积分都为零。\n\n图中竖线标出实际事件，平滑曲线给出平均累计权重；两者之差才是补偿后的过程。权重若改成计数自身，事件处应使用 $N_{t-}$，在这三次事件前分别为 0、1、2。\n\n![一条计数路径上的实际值与补偿值](/assets/figures/theory/walkthrough/compensated-payments.svg)\n\n## 补偿积分的等距怎样得到\n\n对简单可预测权重 $H_i$，积分是 $I=\\sum_iH_i(\\Delta N_i-\\lambda\\Delta t_i)$。每个补偿增量对发生前信息条件均值为零、条件方差为 $\\lambda\\Delta t_i$。因此\n\n$$\\mathbb E[I]=0,\\qquad\n\\mathbb E[I^2]=\\sum_i\\lambda\\Delta t_i\\mathbb E[H_i^2].$$\n\n交叉项按最后一个新增量条件化后消失，理由与布朗积分一致；区别是每格方差多了速率 $\\lambda$。再用过程平方范数下的简单逼近，就可扩展到一般可预测权重。\n\n普通计数积分本身通常不是零均值：适当可积时，$\\mathbb E[\\int H_tdN_t]=\\lambda\\mathbb E[\\int H_tdt]$。如果 $H$ 是随机的，它的普通计数积分方差也不应直接写成 $\\lambda\\int H^2dt$；等距对应的是补偿积分，确定性权重时两者才只差一个确定均值。\n\n## 用计数本身作权重\n\n第 $j$ 次事件发生前，$N_{S_j-}=j-1$。因此\n\n$$\\int_0^TN_{t-}\\,dN_t=\\sum_{j=1}^{N_T}(j-1)=\\frac{N_T(N_T-1)}2.$$\n\n若误用跳跃后的 $N_t$，得到 $N_T(N_T+1)/2$，两者相差 $N_T$。这不是可忽略的小误差，而是每次事件都多算了 1。\n\n补偿积分相应为\n\n$$\\int_0^TN_{t-}\\,dM_t=\\frac{N_T(N_T-1)}2-\\lambda\\int_0^TN_tdt.$$\n\n由等距关系，其方差为\n\n$$\\lambda\\int_0^T(\\lambda t+\\lambda^2t^2)dt\n=\\frac{\\lambda^2T^2}{2}+\\frac{\\lambda^3T^3}{3}.$$\n\n## 补偿过程自身的积分\n\n对有跳跃过程，平方展开仍须保留跳幅平方。$M$ 每次跳幅为 1，所以\n\n$$M_T^2=2\\int_0^TM_{t-}\\,dM_t+N_T.$$\n\n于是\n\n$$\\int_0^TM_{t-}\\,dM_t=\\frac12(M_T^2-N_T).$$\n\n与布朗积分 $\\frac12(W_T^2-T)$ 比较，修正项分别是实际二次变差 $N_T$ 与 $T$。其均值为零，方差由等距关系得到 $\\lambda\\int_0^T\\lambda tdt=\\lambda^2T^2/2$。\n\n### 跳跃时刻的平方增量不能省略\n\n一次跳跃前状态为 $M_{t-}$，跳幅为 $\\Delta M_t$，代数上\n\n$$M_t^2-M_{t-}^2=2M_{t-}\\Delta M_t+(\\Delta M_t)^2.$$\n\n第一项使用跳前值。对补偿 Poisson，每次跳幅为 1，平方项累计为 $N_T$；事件间的线性变化则按普通积分处理。两部分合在一起得到 $M_T^2=2\\int M_{t-}dM_t+N_T$。\n\n若使用跳后值 $M_t=M_{t-}+1$ 加权同一次跳跃，每次会额外多出 1，因此改变积分值。有限跳幅不会像光滑路径的小时间平方那样自动消失。也正因如此，修正项是实际事件数 $N_T$，不能事先换成其平均 $\\lambda T$。\n\n## 确定性权重的均值、方差与变换\n\n若 $f$ 是确定性函数，$X_T=\\int_0^Tf(t)dN_t$，则\n\n$$\\mathbb E[X_T]=\\lambda\\int_0^Tf(t)dt,\\qquad\n\\operatorname{Var}(X_T)=\\lambda\\int_0^Tf(t)^2dt.$$\n\n方差等于补偿积分的方差，因为两者只差确定的均值。在相关积分有限时，矩母函数为\n\n$$\\mathbb E[e^{uX_T}]=\\exp\\left[\\lambda\\int_0^T(e^{uf(t)}-1)dt\\right].$$\n\n补偿版本在指数中再减去 $uf(t)$。例如 $f\\equiv c$，恢复 Poisson 矩母函数；指数过程 $\\exp[cN_t-\\lambda t(e^c-1)]$ 因而是鞅。\n\n先令确定性 $f$ 在每格取常数 $f_i$，则 $X=\\sum_if_i\\Delta N_i$。独立计数的指数矩相乘：\n\n$$\\mathbb E[e^{uX}]=\\prod_i\\exp[\\lambda\\Delta t_i(e^{uf_i}-1)]\n=\\exp\\left[\\lambda\\sum_i\\Delta t_i(e^{uf_i}-1)\\right].$$\n\n在有界权重或相应指数可积条件下，让阶梯近似趋于 $f$，便得到积分形式。对 $u$ 在零点求一阶、二阶对数导数，分别得到均值 $\\lambda\\int f$ 和方差 $\\lambda\\int f^2$。只假定 $f$ 平方可积，并不保证任意正参数 $u$ 的指数矩有限。\n\n需要检查积分中的 $e^{uf}$。\n\n若把 $u$ 换成纯虚数 $iu$，则得到特征函数，复指数模长为 1，适用范围更宽。指数矩适合求矩和尾界，特征函数适合描述一般分布，两者的存在条件不能混用。\n\n## 等待时间的 Laplace 变换\n\n第 $n$ 次到达时间是 $n$ 个独立指数间隔之和，所以\n\n$$\\mathbb E[e^{-sS_n}]=\\left(\\frac\\lambda{\\lambda+s}\\right)^n.$$\n\n也可从 Poisson 指数鞅在 $S_n$ 停止后得到。此时 $N_{S_n}=n$ 恰好成立；若改为补偿过程向上跨过实数阈值，则需要处理超调，不能照搬这个代入。\n\n> **鲨鱼说** Poisson 积分最直观的检查是逐次列出事件贡献：第 1 次用哪个权重，第 2 次用哪个权重。左极限符号表达的是事件发生前的信息，并不是可有可无的装饰。\n\n## 练习：检查一条跳跃路径\n\n取 $\\lambda=2,T=1$，观察到事件在 0.2、0.7、0.9 发生。计算 $\\int_0^1N_{t-}dN_t$、$\\int_0^1N_{t-}dM_t$ 与 $\\int_0^1M_{t-}dM_t$。\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n前一积分为 $0+1+2=3$。累计计数面积为 $(1-0.2)+(1-0.7)+(1-0.9)=1.2$，因此第二项为 $3-2\\times1.2=0.6$。\n\n$M_1=3-2=1$，所以第三项为 $(1^2-3)/2=-1$。也可逐段求和与普通时间积分验证：$M$ 的事件前取值依次为 -0.4、-0.4、0.2，跳跃贡献合计 -0.6；再减去 $2\\int_0^1M_tdt=2(1.2-1)=0.4$，结果为 -1。\n\n逐段积分也可检查面积：$N_t$ 在 $[0,0.2)$ 为 0，在 $[0.2,0.7)$ 为 1，在 $[0.7,0.9)$ 为 2，在 $[0.9,1]$ 为 3。因此 $\\int_0^1N_tdt=0+0.5+0.4+0.3=1.2$。将每次事件贡献的剩余时间相加得到同一结果，是两种等价的路径核算方式。\n\n</details>\n\n## 代码下载\n\n[下载计算与绘图代码](/assets/downloads/theory/calin-book-05-05.zip)\n\n[补充算例与绘图代码](/assets/downloads/theory-walkthrough/calin-book-05-05.zip)\n",
+  "metadata": {
+    "theory_book": {
+      "book": "stochastic-calculus",
+      "part": "第二部分 · 路径性质与随机微积分",
+      "number": 34,
+      "chapter": "5",
+      "edition": "2026-10",
+      "minutes": 36,
+      "section": "5",
+      "source_pages": [
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150
+      ],
+      "chapter_title": "随机积分",
+      "source_sections": [
+        "5.7",
+        "5.8"
+      ]
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "slug": "larsen-book-05-05",
+  "title": "充分统计量与信息压缩",
+  "summary": "通过条件分布和因子分解识别充分统计量，再说明条件平均为何能够降低估计方差。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7032,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "十次零一试验有多种成功次序。若模型假定各次独立且成功率相同，估计成功率所需的信息可压缩为成功总数；保留次序不会进一步区分参数。\n\n## 充分性的条件分布定义\n\n令 $S=\\sum_iX_i$。任意含 s 次成功的序列，其概率为 $p^s(1-p)^{n-s}$；总数为 s 的概率还要乘 $\\binom ns$。相除得到\n\n$$P((X_1,\\ldots,X_n)=x\\mid S=s)=\\frac1{\\binom ns},$$\n\n与 p 无关。因此 S 是 p 的充分统计量。一般而言，给定统计量 T 后，完整样本的条件分布若不再依赖参数，就称 T 充分。\n\n例如 n=4、s=2 时，六种成功位置条件概率均为 1/6。这项结论依赖同成功率模型；如果成功率随时间变化，次序就可能重新包含参数信息。\n\n## 因子分解准则\n\n若联合概率或密度可以写成\n\n$$f(x;\\theta)=g(T(x),\\theta)h(x),$$\n\n其中 h 不含参数，则 T 充分。Bernoulli 似然只通过总和依赖数据；指数速率 $\\lambda$ 的似然为 $\\lambda^ne^{-\\lambda\\sum_ix_i}\\prod_i\\mathbf1\\{x_i>0\\}$，同样以总和为充分统计量。\n\n正态均值和方差均未知时，展开 $\\sum_i(x_i-\\mu)^2=\\sum_ix_i^2-2\\mu\\sum_ix_i+n\\mu^2$，可见需保存 $\\sum_ix_i$ 与 $\\sum_ix_i^2$。只存均值会丢失方差信息。均匀上界模型中，参数约束由最大值决定，最大值因此充分。\n\n## 充分性与估计性质\n\n充分性讨论参数信息，无偏性讨论期望。均匀样本最大值充分，却低估总体上界；乘以适当系数后才无偏。T 的一一变换仍保留信息；非一一压缩则需重新检查充分性。\n\n若 U 是一个无偏估计，T 充分，取 $U^*=E(U\\mid T)$。全期望保证 $E(U^*)=E(U)$，全方差给出\n\n$$\\operatorname{Var}(U)=E[\\operatorname{Var}(U\\mid T)]+\\operatorname{Var}(U^*),$$\n\n所以条件平均后的方差不会增加。充分性还保证这个条件平均可按不含未知参数的条件分布计算。这就是 Rao–Blackwell 改进的依据。\n\n> **鲨鱼说** 充分统计量是一份针对指定模型和参数的数据摘要。它能保留当前推断的信息，但换成研究时间顺序或异常结构时，仍可能需要原始数据。\n\n## 练习\n1. Poisson(λ)独立样本，利用因子分解找出充分统计量。\n2. 已知μ、未知σ²的正态样本，找出σ²的充分统计量。\n\n[本章习题](/read/?slug=larsen-book-05-08)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/larsen-book-05-05.zip",
+        "label": "充分统计量与信息压缩 · Python 示例",
+        "size_bytes": 916,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第二部分 · 估计与检验",
+      "number": 32,
+      "chapter": "5",
+      "edition": "2026-10",
+      "minutes": 12,
+      "section": "5",
+      "chapter_title": "参数估计",
+      "source_sections": [
+        "5.6"
+      ]
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "slug": "calin-book-08-06",
+  "title": "随机积分因子与参数变易",
+  "summary": "求解乘性噪声方程，解释交叉变差造成的额外漂移。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "随机微积分及其应用",
+  "sort_order": 5048,
+  "cover_url": "",
+  "section_ids": [
+    "17859c88-b779-5654-b120-7a4cc7b39714"
+  ],
+  "body": "## 从指数函数计算齐次解\n\n对 $dX=a_tXdt+b_tXdW$，先猜测非零解具有指数形式 $X_t=x_0e^{Y_t}$。设 $dY=c_tdt+b_tdW$，伊藤公式给 $d(e^Y)=e^Y(c_t+b_t^2/2)dt+e^Yb_tdW$。为了匹配漂移 $a_tX$，必须令 $c_t=a_t-b_t^2/2$，从而\n\n$$\\Phi_t=\\exp\\left[\\int_0^t(a_s-b_s^2/2)ds+\\int_0^tb_sdW_s\\right],\\qquad X_t=x_0\\Phi_t.$$\n\n只要这些局部积分存在，就可代回核验该表达式。正初值保持正值，负初值保持负值，零初值给零解。指数中的 $-b^2/2$ 负责抵消二阶修正，不能把普通变量分离中的对数积分直接照搬过来。\n\n随机系数仍可使用这个公式。例如 $a=0,b_t=W_t$，由 $\\int WdW=(W_t^2-t)/2$ 得\n\n$$X_t=x_0\\exp\\left[\\frac{W_t^2-t}{2}-\\frac12\\int_0^tW_s^2ds\\right].$$\n\n最后一项是噪声强度自身的累计平方，依赖整个历史。当前布朗值相同的两条路径可能有不同的平方积分，因此一般不能把这一解压缩成 $F(t,W_t)$。\n\n## 一般线性方程的参数变易\n\n考虑\n\n$$dX_t=(a_tX_t+f_t)dt+(b_tX_t+g_t)dW_t.$$\n\n令 $X_t=\\Phi_tY_t$，其中 $\\Phi$ 为上述齐次解。把 $dY=u\\,dt+v\\,dW$ 代入乘积法则，得到 $dX=Yd\\Phi+\\Phi dY+d[\\Phi,Y]$。扩散项匹配要求 $\\Phi v=g$，所以 $v=\\Phi^{-1}g$。交叉变差为 $b\\Phi vdt=bgdt$，漂移匹配因此要求 $\\Phi u=f-bg$。\n\n于是\n\n$$X_t=\\Phi_t\\left[x_0+\\int_0^t\\Phi_s^{-1}(f_s-b_sg_s)ds+\\int_0^t\\Phi_s^{-1}g_sdW_s\\right].$$\n\n其中 $-bg$ 是随机参数变易区别于普通公式的关键。若直接把常微分方程的公式照搬过来，就会漏掉这一项。所有过程都应具有保证积分存在的局部可积性。\n\n## 通过逆指数消去乘性噪声\n\n对于 $dX=f(t,X)dt+g(t)XdW$，取\n\n$$\\rho_t=\\exp\\left[-\\int_0^tg(s)dW_s+\\frac12\\int_0^tg(s)^2ds\\right].$$\n\n伊藤公式给 $d\\rho=\\rho g^2dt-\\rho gdW$，而 $d[\\rho,X]=-\\rho g^2Xdt$。三项相加得到 $d(\\rho X)=\\rho f(t,X)dt$。写 $Y=\\rho X$ 后，$dY/dt=\\rho f(t,Y/\\rho)$。\n\n变换后的方程没有随机微分，但系数 $\\rho$ 仍然随噪声路径变化。因此它是对每条路径求解的随机常微分方程，并不是参数确定的普通方程。对非线性漂移，这种变换常比直接处理噪声更方便。\n\n### 参数变易中的修正项逐项核算\n\n取 $dX=(0.2X+1)dt+(0.3X+0.5)dW$。齐次方程的解因子为 $\\Phi_t=\\exp(0.155t+0.3W_t)$，因为 $0.155=0.2-0.3^2/2$。令 $R=\\Phi^{-1}$，伊藤公式给\n\n$$dR=(-0.2+0.3^2)Rdt-0.3R\\,dW=-0.11Rdt-0.3R\\,dW.$$\n\n对 $Y=RX$ 使用乘积法则。时间项分别来自 $R\\,dX$、$X\\,dR$ 与 $d[R,X]$：\n\n$$R(0.2X+1)-0.11RX-0.3R(0.3X+0.5)=0.85R.$$\n\n其中含 $X$ 的系数 $0.2-0.11-0.09$ 恰好为零。噪声项为 $R(0.3X+0.5)-0.3RX=0.5R$，所以\n\n$$dY=0.85Rdt+0.5R\\,dW,\\qquad\nX_t=\\Phi_t\\left[X_0+0.85\\int_0^tR_sds+0.5\\int_0^tR_sdW_s\\right].$$\n\n修正量 $0.3\\times0.5=0.15$ 来自两个噪声项的交叉变差；省去它就会把时间项误写成 $Rdt$。\n\n## 非线性漂移的积分因子算例\n\n设 $dX=X^{-1}dt+\\alpha XdW$、$X_0=x_0>0$。取 $\\Phi=e^{\\alpha W-\\alpha^2t/2}$、$\\rho=1/\\Phi$，令 $Y=\\rho X$。前面的消项公式给 $dY=\\rho/X\\,dt=\\rho^2/Y\\,dt$。变换后 $Y$ 具有有限变差，故可按普通链式法则计算 $d(Y^2)=2\\rho^2dt$。\n\n积分并取正根，得到\n\n$$X_t=\\Phi_t\\sqrt{x_0^2+2\\int_0^t\\Phi_s^{-2}ds}.$$\n\n根号内始终正，因而解保持正值，倒数漂移在有限时刻有定义。再用 $Z=X^2$ 独立核验：伊藤公式给 $dZ=(2+\\alpha^2Z)dt+2\\alpha Z dW$，它是一般线性方程。其齐次因子为 $\\Phi^2$，得到 $Z=\\Phi^2[x_0^2+2\\int\\Phi^{-2}ds]$，与前式一致。\n\n这一例说明随机积分因子不仅用于线性漂移。关键是变换后得到的逐路径常微分方程是否可解；系数仍随随机路径变化。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>有限变差，即在给定有限区间内，路径总变差有限的性质。</p></aside>\n\n## 一个同时含两类噪声的核验\n\n取 $dX=(aX+f)dt+(bX+g)dW$，所有参数为常数。若 $g=0$，公式退化为只有普通时间积分的变易参数形式。若 $b=0$，则退化为确定积分因子解加性线性方程。特别地，$a=f=0,b=g=1,X_0=0$ 时，$Y=X+1$ 满足 $dY=YdW$，故 $X=e^{W-t/2}-1$。这提供了检验一般公式中 $-bg$ 符号的简单例子。\n\n## 参数变易为什么适合逐项验证\n\n一般线性解看起来较长，但可以拆成“齐次传播”和“外部输入”两部分。齐次因子记录初始状态与乘性噪声的共同传播。括号内两项分别累计普通输入和加性随机输入。乘回齐次因子时，随机输入与它共享噪声，才产生交叉修正。\n\n检查公式时可以先让某些系数为零，再逐步恢复。例如先检查纯确定线性方程，再检查加性噪声，最后检查含常数平移的几何布朗运动。每个退化例子都能独立检验一个结构，而不是只用复杂模拟验证一整条公式。\n\n![欧拉路径误差随步长下降](/assets/illustrations/theory/calin/calin-book-08-06.svg)\n\n对方程 $dX=(X+1)dW$ 使用同一组基础布朗增量，比较欧拉近似与 $e^{W_t-t/2}-1$。纵轴为跨路径的均方误差，双对数图中的虚线与步长成正比。\n\n<aside class=\"shark-note\"><strong>鲨鱼说</strong><p>积分因子含噪声时，它与状态会同时响应同一个布朗增量。乘积中的交叉项就是这次共同响应的累计；先写乘积法则，再消项，能明确每一项的符号。</p></aside>\n\n## 练习\n\n求 $dX_t=dt+\\sigma X_tdW_t$、$X_0=0$ 的表达式和均值。\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n齐次方程 $d\\Phi=\\sigma\\Phi dW$、$\\Phi_0=1$ 的解为 $e^{\\sigma W_t-\\sigma^2t/2}$。由于外部输入为一、没有加性随机输入，一般变易参数公式化为 $X_t=\\Phi_t\\int_0^t\\Phi_s^{-1}ds$。\n\n记普通积分为 $A_t$，则 $dA=\\Phi^{-1}dt$，它与 $\\Phi$ 没有交叉变差。因此 $dX=A\\,d\\Phi+\\Phi dA=\\sigma XdW+dt$，且 $X_0=0$，直接验证了解。\n\n把因子合并，$X_t=\\int_0^t\\exp[\\sigma(W_t-W_s)-\\sigma^2(t-s)/2]ds$。每个被积指数非负，其期望由增量 $N(0,t-s)$ 的指数矩得一。Tonelli 定理允许先交换非负积分与期望，故 $EX_t=\\int_0^t1ds=t$。例如时间二时均值为二。不能把 $E\\Phi_t$ 与 $E\\Phi_s^{-1}$ 相乘，因为两个因子共享早期布朗增量。\n\n</details>\n\n## 配套代码\n\n[下载本节 Python 代码](/assets/downloads/theory/calin-book-08-06.zip)\n\n解压后运行 `calin-book-08-06.py`。需安装 numpy、scipy 和 matplotlib；脚本会生成图像与数值核查结果，无需另行下载数据。\n\n[补充算例与绘图代码](/assets/downloads/theory-walkthrough/calin-book-08-06.zip)\n",
+  "metadata": {
+    "theory_book": {
+      "book": "stochastic-calculus",
+      "part": "第三部分 · 随机方程与测度变换",
+      "number": 48,
+      "chapter": "8",
+      "edition": "2026-10",
+      "minutes": 29,
+      "section": "6",
+      "source_pages": [
+        199,
+        200,
+        201,
+        202,
+        203
+      ],
+      "chapter_title": "随机微分方程",
+      "source_sections": [
+        "8.7",
+        "8.8"
+      ]
+    }
+  }
+}

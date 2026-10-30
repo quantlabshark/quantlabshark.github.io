@@ -1,0 +1,38 @@
+{
+  "slug": "larsen-book-05-06",
+  "title": "一致性、渐近估计与自助法",
+  "summary": "区分一致性与无偏性，说明大样本近似、Delta 方法及自助标准误的计算。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7033,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "估计量在小样本中可能有偏，却随样本增多逐渐接近参数。一致性研究这种大样本行为，与有限样本的无偏性是两个不同问题。\n\n## 概率意义下接近真值\n\n$T_n$ 一致估计 $\\theta$，指任意 $\\varepsilon>0$ 都有 $P(|T_n-\\theta|>\\varepsilon)\\to0$。若偏差与方差都趋于零，则均方误差趋于零，并由\n\n$$P(|T_n-\\theta|>\\varepsilon)\\le\\frac{E[(T_n-\\theta)^2]}{\\varepsilon^2}$$\n\n得到一致性。独立同分布、有限方差下，样本均值方差为 $\\sigma^2/n$，因而一致。仅用首个观测 $X_1$ 估计均值虽然无偏，方差却不会随着其他样本加入而减少。\n\n均匀 $U(0,\\theta)$ 的最大值 $M_n$ 有偏，但对 $0<\\varepsilon<\\theta$，$P(\\theta-M_n>\\varepsilon)=(1-\\varepsilon/\\theta)^n\\to0$，因此也一致。\n\n## 渐近正态与函数变换\n\n若 $\\sqrt n(T_n-\\theta)$ 近似服从 $N(0,v)$，对可微函数 g 作一阶展开：$g(T_n)-g(\\theta)\\approx g'(\\theta)(T_n-\\theta)$，便得到近似方差 $[g'(\\theta)]^2v/n$，称为 Delta 方法。\n\n指数总体均值为 $1/\\lambda$，样本均值方差为 $1/(n\\lambda^2)$。估计速率使用 $g(x)=1/x$，其导数在均值处为 $-\\lambda^2$，所以 $\\hat\\lambda=1/\\bar X$ 的大样本方差约为 $\\lambda^2/n$。这一计算说明参数变换会怎样放大或缩小误差。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/bootstrap.svg\" alt=\"从 2、4、6、8 中有放回抽取四个数，枚举 256 种样本得到均值分布，标准误为平方根 1.25。\" loading=\"lazy\"></figure>\n\n## 自助法重建抽样波动\n\n从 n 个原观测中有放回抽 n 个，计算一次统计量，重复 B 次，得到 $T_1^*,\\ldots,T_B^*$。它们的样本标准差估计原统计量的标准误。这里不再除以 $\\sqrt B$，因为目标是一次原统计量的波动，不是 B 次复制值平均的波动。\n\n数据 2、4、6、8 的均值为 5，经验分布方差为 $(9+1+1+9)/4=5$。每个自助样本包含四次独立经验抽取，因此自助均值的条件方差为 5/4，标准误约 1.118。增大 B 后，模拟得到的标准误应逐渐接近该值。\n\n逐点重抽适用于独立观测。时间相关数据需保留相关结构，例如按区块重抽；样本最大值的经验分布无法生成更大的数值，因此极值估计也要单独分析。\n\n> **鲨鱼说** n 是原始样本量，B 是计算重复次数。增大 B 只能使重抽计算更稳定，不能补充原始样本中没有的信息。\n\n## 练习\n1. Tₙ的偏差为1/n、方差为2/n，证明它一致。\n2. 对样本1、2、4、8、16计算均值和中位数的自助标准误，比较二者对大值的敏感程度。\n\n[本章习题](/read/?slug=larsen-book-05-08)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/larsen-book-05-06.zip",
+        "label": "一致性、渐近估计与自助法 · Python 示例",
+        "size_bytes": 984,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第二部分 · 估计与检验",
+      "number": 33,
+      "chapter": "5",
+      "edition": "2026-10",
+      "minutes": 12,
+      "section": "6",
+      "chapter_title": "参数估计",
+      "source_sections": [
+        "5.7",
+        "5.9"
+      ]
+    }
+  }
+}

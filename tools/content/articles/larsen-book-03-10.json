@@ -1,0 +1,37 @@
+{
+  "slug": "larsen-book-03-10",
+  "title": "矩母函数与独立随机变量之和",
+  "summary": "以指数函数编码各阶矩，推导独立和的矩母函数，并连接正态分布与累积量。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7020,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "求和后的分布有时需要较长的卷积积分。矩母函数提供另一种方法：将分布写成一个函数，独立变量求和便转化为函数相乘。\n\n## 通过导数读取矩\n\n定义 $M_X(t)=E(e^{tX})$。若它在零附近有限，且可交换求导与期望，指数函数展开给出\n\n$$M_X(t)=1+tE(X)+\\frac{t^2}{2}E(X^2)+\\cdots.$$\n\n因此 $M_X^{(r)}(0)=E(X^r)$。特别地，均值为 $M'_X(0)$，方差为 $M''_X(0)-[M'_X(0)]^2$。t 是用于求导的辅助变量，不是观测值。\n\n零附近存在的矩母函数能唯一确定分布。并非所有分布都满足这个存在条件；例如某些重尾分布的 $E(e^{tX})$ 会发散，不能照搬这种计算。\n\n## Bernoulli 与二项分布\n\nX 以概率 p 取 1、以概率 1-p 取 0，则 $M_X(t)=1-p+pe^t$。n 个独立此类变量相加为 S，独立性给出\n\n$$M_S(t)=E\\left(\\prod_i e^{tX_i}\\right)=\\prod_iM_{X_i}(t)=(1-p+pe^t)^n.$$\n\n求一次导数并令 t=0，得 $E(S)=np$。二次导数在零处为 $n(n-1)p^2+np$，减去均值平方 $n^2p^2$，得 $\\operatorname{Var}(S)=np(1-p)$。例如 n=5、p=0.3，均值为 1.5，方差为 1.05。\n\n## 正态密度中的配方\n\n若 $X\\sim N(\\mu,\\sigma^2)$，在密度积分中乘 $e^{tx}$ 后，指数部分可配方：\n\n$$tx-\\frac{(x-\\mu)^2}{2\\sigma^2}\n=-\\frac{(x-\\mu-\\sigma^2t)^2}{2\\sigma^2}+\\mu t+\\frac{\\sigma^2t^2}{2}.$$\n\n前项与原归一化系数组成均值平移后的正态密度，积分为 1；后两项不含 x，可提出积分，因此\n\n$$M_X(t)=\\exp\\left(\\mu t+\\frac{\\sigma^2t^2}{2}\\right).$$\n\n独立正态变量的矩母函数相乘后仍具有这一形式，均值与方差参数分别相加，故和仍为正态。对于 $aX+b$，直接代定义可得 $M_{aX+b}(t)=e^{bt}M_X(at)$。\n\n## 对数矩母函数与累积量\n\n记 $K(t)=\\log M(t)$。独立和使 K 相加，而\n\n$$K'(0)=E(X),\\qquad K''(0)=E(X^2)-[E(X)]^2=\\operatorname{Var}(X).$$\n\n后续中心极限定理的推导将使用中心化变量在零附近的二阶展开。中心化消去一阶项，标准化固定二阶项，因而得到正态极限的形式。\n\n> **鲨鱼说** 矩母函数的用途有两个：在零处求导读取矩，把独立求和转成乘法。先确定计算所需的期望存在，再使用这两条规则。\n\n## 练习\n1. X取-1、1且概率各半，求矩母函数，并由导数计算前四阶矩。\n2. 独立变量分别服从Bin(3,p)和Bin(5,p)，用矩母函数判断它们的和服从什么分布。\n\n[本章习题](/read/?slug=larsen-book-03-11)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/larsen-book-03-10.zip",
+        "label": "矩母函数与独立随机变量之和 · Python 示例",
+        "size_bytes": 958,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第一部分 · 概率与随机变量",
+      "number": 20,
+      "chapter": "3",
+      "edition": "2026-10",
+      "minutes": 14,
+      "section": "10",
+      "chapter_title": "随机变量",
+      "source_sections": [
+        "3.12"
+      ]
+    }
+  }
+}

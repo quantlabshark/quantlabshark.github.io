@@ -1,0 +1,38 @@
+{
+  "slug": "calin-book-08-08",
+  "title": "均值、方差与高阶矩方程",
+  "summary": "由伊藤公式推导矩方程，识别非线性模型中的矩不封闭。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "随机微积分及其应用",
+  "sort_order": 5050,
+  "cover_url": "",
+  "section_ids": [
+    "17859c88-b779-5654-b120-7a4cc7b39714"
+  ],
+  "body": "## 积分表示与矩方程\n\n对 $dX=a(t,X)dt+b(t,X)dW$，若随机积分是真鞅且各项可积，均值满足 $m'(t)=E[a(t,X_t)]$。这里不能一般地把右边改写为 $a(t,m(t))$。当 $a$ 非线性，先代入随机状态再平均，与把平均状态代入通常不同。\n\n使用平方函数的伊藤公式，得到 $dX^2=(2Xa+b^2)dt+2Xb\\,dW$。因此二阶矩 $q(t)=EX_t^2$ 满足\n\n$$q'(t)=E[2X_ta(t,X_t)+b(t,X_t)^2],\\qquad V(t)=q(t)-m(t)^2.$$\n\n扩散系数平方进入二阶矩方程，说明均值中没有显式噪声项，并不表示噪声对分布没有影响。若漂移非线性，它还会通过分布形状间接改变均值。\n\n## 从二阶矩消去均值项\n\n对 $dX=(\\alpha X+\\beta)dt+\\gamma dW$，系数均确定，记 $m=EX,q=EX^2$。一次矩方程为 $m'=\\alpha m+\\beta$；平方伊藤公式给 $q'=2\\alpha q+2\\beta m+\\gamma^2$。\n\n方差 $V=q-m^2$ 的普通导数为 $V'=q'-2mm'$。代入后，$2\\beta m$ 相消，剩下\n\n$$V'=2\\alpha(q-m^2)+\\gamma^2=2\\alpha V+\\gamma^2.$$\n\n令 $A(t)=\\int_0^t\\alpha(s)ds$，乘 $e^{-2A(t)}$ 得 $(e^{-2A}V)'=e^{-2A}\\gamma^2$。因此\n\n$$V(t)=e^{2A(t)}\\left[V_0+\\int_0^te^{-2A(s)}\\gamma(s)^2ds\\right].$$\n\n均值的积分因子含 $A$，方差含 $2A$，因为状态放大倍数在方差中要平方。例子 $dX=(2X+e^{2t})dt+\\sigma dW$，均值乘 $e^{-2t}$ 后导数为一，故 $m=e^{2t}(x_0+t)$；确定初值下 $V=\\sigma^2(e^{4t}-1)/4$。\n\n## 高斯矩与指数矩\n\n对标准布朗运动，伊藤公式给 $dW^{2k}=2kW^{2k-1}dW+k(2k-1)W^{2k-2}dt$。递推得 $EW_t^{2k}=(2k-1)!!t^k$，奇数矩为零。指数矩 $Ee^{uW_t}=e^{u^2t/2}$ 对参数求导，得到\n\n$$E[W_te^{uW_t}]=ut e^{u^2t/2},$$\n$$E[W_t^2e^{uW_t}]=(t+u^2t^2)e^{u^2t/2}.$$\n\n参数可以取 $u=t$，但应在固定观察时刻后代入：$Ee^{tW_t}=e^{t^3/2}$，并不为零。相应地，$E\\cos(tW_t)=e^{-t^3/2}$、$E\\sin(tW_t)=0$。\n\n这些关系还可计算普通积分。例如 $a>0$ 时，完成平方或使用正态指数矩得到 $\\int_{-\\infty}^{\\infty}e^{-ax^2+bx}dx=\\sqrt{\\pi/a}\\,e^{b^2/(4a)}$。对 $b$ 求导就产生含 $x$、$x^2$ 的积分。\n\n## 展开高阶矩递推与高斯积分\n\n令 $m_n(t)=EW_t^n$。伊藤公式积分取期望给 $m_n'=n(n-1)m_{n-2}/2$，初值 $m_n(0)=0$（$n\\ge1$）、$m_0=1$。依次得到 $m_2=t$、$m_4'=6t$ 故 $m_4=3t^2$、$m_6'=15\\times3t^2$ 故 $m_6=15t^3$。奇数矩从 $m_1=0$ 递推均为零。一般结果为 $m_{2k}=(2k)!t^k/(2^kk!)$。\n\n对 $I(a,b)=\\int_{\\mathbb R}e^{-ax^2+bx}dx$、$a>0$，配方得 $-a(x-b/(2a))^2+b^2/(4a)$，因此 $I=\\sqrt{\\pi/a}e^{b^2/(4a)}$。对 $b$ 求导一次、两次分别得到\n\n$$\\int xe^{-ax^2+bx}dx=\\frac b{2a}I(a,b),\\qquad \\int x^2e^{-ax^2+bx}dx=\\left(\\frac1{2a}+\\frac{b^2}{4a^2}\\right)I(a,b),$$\n\n这里两个积分均在整个实轴上。继续求导即可生成高次幂积分。余弦型积分则用正态特征函数：$\\int e^{-ax^2}\\cos(cx)dx=\\sqrt{\\pi/a}e^{-c^2/(4a)}$。例如 $a=c=1$ 得 $\\sqrt\\pi e^{-1/4}$；正弦型因奇对称为零。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>特征函数，即用复指数的期望描述随机变量分布的函数。</p></aside>\n\n## 均值为零不等于鞅\n\n过程 $W_t^4-3t^2$ 在每个时刻均值为零，但其微分漂移为 $6(W_t^2-t)dt$，所以它一般不是鞅。消去漂移的四阶多项式为 $W_t^4-6tW_t^2+3t^2$。鞅约束的是给定过去后的条件均值，而不是单独的无条件均值。\n\n## 非线性漂移与均值上界\n\n逻辑斯谛漂移 $a(x)=rx-kx^2$ 给 $m'=rm-kEX^2=rm-km^2-kV$。方差非负，所以它降低同一均值下的平均增长。二阶矩方程又涉及三阶矩，这称为矩不封闭。写 $EX^2\\approx m^2$ 是忽略方差的近似，不能与精确均值方程混同。\n\n若只需上界，可直接利用函数形状。设状态始终位于所考察区间，$a$ 在该区间凹且在零处可微，则函数不超过零处切线：$a(x)\\le a(0)+a'(0)x$。令 $L=a'(0)$，取期望得到 $m'\\le a(0)+Lm$。乘积分因子：\n\n$$(e^{-Lt}m(t))'\\le a(0)e^{-Lt}.$$\n\n积分得 $m(t)\\le m(0)e^{Lt}+a(0)(e^{Lt}-1)/L$，$L=0$ 时为 $m(0)+a(0)t$。若 $a(0)=0$，才可去掉常数项。例如在非负且不超过 $\\pi$ 的状态区域内，$a(x)=\\sin x\\le x$，对应上界 $m(0)e^t$；使用前仍需由具体模型保证状态约束和随机积分可积。\n\n## 用条件期望判断鞅\n\n判断一个多项式过程是否为鞅，可以把 $W_t=W_s+Z$，其中 $Z$ 独立于过去且方差为 $t-s$，再展开条件矩。所有奇次 $Z$ 项消失，偶次项留下时间补偿。这个方法不依赖微分记号，也能独立检查伊藤推导。\n\n例如四次幂条件期望含 $W_s^4$、$6(t-s)W_s^2$ 和 $3(t-s)^2$。只减去 $3t^2$ 无法消掉中间的随机项；额外的 $-6tW_t^2$ 正好承担这项补偿。结构检查比仅计算一个时刻的均值更有辨别力。\n\n![几何布朗运动的均值中位数与分位数](/assets/illustrations/theory/calin/calin-book-08-08.svg)\n\n取初值一、漂移 0.08、噪声幅度 0.35。阴影是各时刻 5% 至 95% 分位数范围；它描述边际分布，并非一条路径在整个时间段内不越界的保证。\n\n<aside class=\"shark-note\"><strong>鲨鱼说</strong><p>取均值只能删去满足可积条件的随机积分，不能把非线性函数内部的随机状态直接替换为均值。先展开 $EX^2=m^2+V$，就能看见这种替换具体漏掉了什么。</p></aside>\n\n## 练习\n\n设 $dX=\\mu Xdt+\\sigma XdW$、$X_0=x_0$，求二阶矩与方差。\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n一次矩由 $m'=\\mu m,m(0)=x_0$ 得 $m=x_0e^{\\mu t}$。平方公式逐项展开为\n\n$$dX^2=2X(\\mu Xdt+\\sigma XdW)+\\sigma^2X^2dt=(2\\mu+\\sigma^2)X^2dt+2\\sigma X^2dW.$$\n\n有限时间内几何布朗的各阶矩有限，取期望得 $q'=(2\\mu+\\sigma^2)q$、$q(0)=x_0^2$，所以 $q=x_0^2e^{(2\\mu+\\sigma^2)t}$。减去均值平方：\n\n$$V=x_0^2e^{2\\mu t}(e^{\\sigma^2t}-1).$$\n\n也可用显式解独立核验：$X_t^2=x_0^2e^{(2\\mu-\\sigma^2)t+2\\sigma W_t}$，而 $Ee^{2\\sigma W_t}=e^{2\\sigma^2t}$，相乘得到相同二阶矩。若 $x_0=1,\\mu=0,\\sigma=0.5,t=2$，均值仍为一，方差为 $e^{0.5}-1\\approx0.648721$；均值不变不意味着状态没有波动。\n\n</details>\n\n## 配套代码\n\n[下载本节 Python 代码](/assets/downloads/theory/calin-book-08-08.zip)\n\n解压后运行 `calin-book-08-08.py`。需安装 numpy、scipy 和 matplotlib；脚本会生成图像与数值核查结果，无需另行下载数据。\n",
+  "metadata": {
+    "theory_book": {
+      "book": "stochastic-calculus",
+      "part": "第三部分 · 随机方程与测度变换",
+      "number": 50,
+      "chapter": "8",
+      "edition": "2026-10",
+      "minutes": 35,
+      "section": "8",
+      "source_pages": [
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212
+      ],
+      "chapter_title": "随机微分方程",
+      "source_sections": [
+        "8.10"
+      ]
+    }
+  }
+}

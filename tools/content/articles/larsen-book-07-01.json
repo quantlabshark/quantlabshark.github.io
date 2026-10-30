@@ -1,0 +1,40 @@
+{
+  "slug": "larsen-book-07-01",
+  "title": "样本均值、样本方差与 t 分布",
+  "summary": "从正态样本的正交分解解释自由度和独立性，推导 t 统计量及其密度。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7041,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "总体标准差已知时，用它标准化样本均值得到 Z 统计量。用样本标准差 S 替代后，分母也成为随机量，新的比值服从 t 分布。\n\n## 均值方向与残差方向\n\n设 $X_1,\\ldots,X_n$ 独立且服从 $N(\\mu,\\sigma^2)$，令 $Z_i=(X_i-\\mu)/\\sigma$。这 n 个独立标准正态变量的联合密度只依赖平方和 $\\sum_iZ_i^2$，旋转坐标不会改变其形式。\n\n选择一个坐标方向 $(1,\\ldots,1)/\\sqrt n$，在该方向上的投影为 $Z=\\sqrt n(\\bar X-\\mu)/\\sigma$。其余 n−1 个正交方向描述偏离均值的变化。新坐标仍为独立标准正态，因此\n\n$$Z\\sim N(0,1),\\qquad U=\\frac{(n-1)S^2}{\\sigma^2}\\sim\\chi^2_{n-1},$$\n\n并且 Z 与 U 独立。残差和为零限制了一个方向，故平方和具有 n−1 个自由度。正态性使零协方差进一步成为独立性。\n\n## 构造 t 变量\n\n令 $\\nu=n-1$，将两个独立量组成比值：\n\n$$T=\\frac{Z}{\\sqrt{U/\\nu}}=\\frac{\\bar X-\\mu}{S/\\sqrt n}\\sim t_\\nu.$$\n\n当 U 偶尔偏小，分母就变小，T 容易取较大绝对值。因此 t 比标准正态有更厚的尾部。自由度增大后 U/ν 更集中在 1 附近，t 分布逐渐接近标准正态。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/t-distribution.svg\" alt=\"自由度较小时 t 分布尾部更厚，随自由度增大接近正态。\" loading=\"lazy\"></figure>\n\n## 由联合密度积分得到 t 密度\n\n独立 Z、U 的联合密度由标准正态与卡方密度相乘。作变换 $z=t\\sqrt{u/\\nu}$，雅可比为 $\\sqrt{u/\\nu}$，对 u 积分后，核心积分为\n\n$$\\int_0^\\infty u^{(\\nu+1)/2-1}\\exp\\left[-\\frac{1+t^2/\\nu}{2}u\\right]du.$$\n\n使用 Gamma 积分 $\\int_0^\\infty u^{a-1}e^{-bu}du=\\Gamma(a)/b^a$，并合并常数，可得\n\n$$f_T(t)=\\frac{\\Gamma((\\nu+1)/2)}{\\sqrt{\\nu\\pi}\\Gamma(\\nu/2)}\n\\left(1+\\frac{t^2}{\\nu}\\right)^{-(\\nu+1)/2}.$$\n\n$\\nu>1$ 时均值为零；$\\nu>2$ 时方差为 $\\nu/(\\nu-2)$，比 1 大。自由度 4 的 95% 双侧临界值约为 2.776，明显高于正态的 1.96。\n\n## t 与 F 的关系\n\n标准正态平方满足 $Z^2\\sim\\chi^2_1$。将 t 的定义平方，得到 $T^2=Z^2/(U/\\nu)\\sim F_{1,\\nu}$。因此 t 的双侧检验与相应 F 的右尾检验等价：$P(|T|\\ge a)=P(F_{1,\\nu}\\ge a^2)$。后续两组均值比较和回归斜率检验会再次用到这项关系。\n\n> **鲨鱼说** t 分布考虑了用 S 估计 $\\sigma$ 产生的额外波动。它来自指定的正态样本比值，不是按样本大小任意增加一个系数。\n\n## 练习\n1. n=9的正态样本，写出 $8S^2/\\sigma^2$ 与 $(\\bar X-\\mu)/(S/3)$ 的分布。\n2. 比较自由度4、10、30的t分布95%双侧临界值，并说明随自由度变化的趋势。\n\n[本章习题](/read/?slug=larsen-book-07-05)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/larsen-book-07-01.zip",
+        "label": "样本均值、样本方差与 t 分布 · Python 示例",
+        "size_bytes": 994,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第二部分 · 估计与检验",
+      "number": 41,
+      "chapter": "7",
+      "edition": "2026-10",
+      "minutes": 15,
+      "section": "1",
+      "chapter_title": "正态总体的统计推断",
+      "source_sections": [
+        "7.1",
+        "7.2",
+        "7.3",
+        "7.A.1"
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "slug": "reproducible-research",
+  "title": "18 · 保存数据版本与实验记录",
+  "summary": "保存输入、参数、代码版本和环境，追踪结果变化。",
+  "kind": "lesson",
+  "track": "组合与研究",
+  "series": "组合与研究",
+  "sort_order": 18,
+  "cover_url": "",
+  "section_ids": [],
+  "body": "## 数据、代码与参数的对应关系\n\n研究记录用于说明一组结果如何产生。记录至少应包含输入数据版本、代码版本、依赖环境、参数、样本划分及费用设定。结果发生变化时，可据此逐项定位差异。\n\n随机种子只固定对应随机过程。数据源修订、代码修改或依赖版本变化，仍可能改变结果。下面把模拟价格、参数与运行环境整理为 JSON 记录。\n\n~~~python\nimport hashlib\nimport json\nimport platform\n\nraw = b\"date,close\\n2024-01-02,100\\n2024-01-03,101\\n\"\nrecord = {\n    \"data_kind\": \"synthetic\",\n    \"data_sha256\": hashlib.sha256(raw).hexdigest(),\n    \"python\": platform.python_version(),\n    \"parameters\": {\"window\": 3, \"one_way_bps\": 5},\n    \"execution\": \"signal t; trade close t+1; earn from t+2\",\n    \"seed\": 7,\n}\nprint(json.dumps(record, ensure_ascii=False, indent=2))\n~~~\n\n## 文件摘要的用途\n\n`SHA-256` 将输入字节转换为固定长度的摘要。对保存的输入重新计算摘要并与记录比较，可以检查文件是否发生变化。摘要关注内容一致性，价格字段和时间口径仍需在数据检查环节核对。\n\n## 原始输入与派生结果\n\n保留原始数据，由代码生成清洗表和图表，并记录删改规则。每次运行使用独立编号，将参数、图表和结果表关联起来。图表的样本区间与成本口径可写在图注或配套记录中。\n\n共享代码时，账号密钥通过环境配置提供，运行说明列出所需变量。可公开的数据与需要授权的数据分别说明；附带模拟样例，便于在没有账号时检查程序。\n\n## 练习\n\n两次运行的随机种子相同，结果却不同，应检查哪些内容？\n\n参考答案：比较输入摘要、代码版本、依赖版本、参数和执行入口，再检查程序中是否存在另一套随机数生成器或未固定的随机过程。按记录逐项比较，可以缩小差异来源。\n",
+  "metadata": {
+    "legacy_course": true
+  }
+}

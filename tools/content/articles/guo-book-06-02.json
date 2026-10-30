@@ -1,0 +1,39 @@
+{
+  "slug": "guo-book-06-02",
+  "title": "连续执行、变分法与风险速度",
+  "summary": "推导风险与冲击之间的连续时间最优路径，并说明不同风险惩罚如何改变执行速度。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "量化交易：算法、分析、数据、模型和优化",
+  "sort_order": 6039,
+  "cover_url": "",
+  "section_ids": [
+    "19808db5-aef6-5fc5-b233-d9732a29916b"
+  ],
+  "body": "## 剩余库存、卖出速度与目标函数\n\n考虑卖出，剩余库存为 $x(t)$，卖出速度 $v(t)=-x'(t)\\ge0$，边界为 $x(0)=Q,x(T)=0$。若未受影响价格为 $S_t$，线性暂时冲击下的成交价为 $S_t-\\eta v(t)$，卖得越快，获得的价格越低。\n\n暂时冲击成本为 $\\eta\\int_0^Tv(t)^2dt$。若价格波动为 $\\sigma dB_t$，未卖库存暴露造成的收益方差为 $\\sigma^2\\int_0^Tx(t)^2dt$。将两者合并，得到\n\n$$J[x]=\\int_0^T\\{\\eta x'(t)^2+\\lambda\\sigma^2x(t)^2\\}\\,dt.$$\n\n## Euler–Lagrange 方程\n\n对固定端点的路径作微小扰动，令一阶变化为零，得到 $\\eta x''=\\lambda\\sigma^2x$。记 $\\kappa=\\sqrt{\\lambda\\sigma^2/\\eta}$，满足边界的解为\n\n$$x^*(t)=Q\\frac{\\sinh(\\kappa(T-t))}{\\sinh(\\kappa T)}.$$\n\n目标关于路径与速度是凸的，因此这一驻点是最小值。风险惩罚增大时，库存更早下降；冲击系数增大时，更倾向平缓交易。$\\kappa\\to0$ 的极限是 $Q(1-t/T)$，即匀速执行。\n\n![风险参数与剩余库存路径](/assets/illustrations/theory/guo/almgren-chriss-path.svg)\n\n## 从路径扰动得到最优条件\n\n取任意两端为零的小扰动 $h(t)$，把路径改为 $x+\\epsilon h$。目标的一阶变化为 $2\\int_0^T[\\eta x'h'+\\lambda\\sigma^2xh]dt$。对第一项分部积分，边界因 $h(0)=h(T)=0$ 消失，留下 $2\\int_0^T[-\\eta x''+\\lambda\\sigma^2x]h\\,dt$。要对所有扰动都为零，必须满足 $\\eta x''=\\lambda\\sigma^2x$。\n\n二阶变化为 $2\\int_0^T[\\eta h'^2+\\lambda\\sigma^2h^2]dt$，非零扰动时为正，所以求出的路径是唯一最小值。$\\kappa$ 的单位是时间的倒数，决定库存下降的快慢；若价格波动使用年为单位，执行期限也必须换成同一单位。\n\n将最优方程代回目标，可用 $\\eta\\int(x'^2+xx'')dt=\\eta[xx']_0^T$ 得到最优目标值 $J^*=\\eta Q^2\\kappa\\coth(\\kappa T)$。例如 $Q=T=\\eta=1,\\kappa=2$ 时，$J^*\\approx2.0746$；匀速路径的冲击成本为 1，风险项为 $4\\int_0^1(1-t)^2dt=4/3$，总目标为 $2.3333$。最优路径增加了早期交易，降低的库存风险超过增加的冲击。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>执行目标同时计入冲击成本和等待期间的库存风险。较早卖出会增加即时冲击，却减少后续价格波动暴露；最优路径由这两项的合计决定。</p></aside>\n\n### 把二阶方程解到库存曲线\n\n目标中的 $\\eta$ 是暂时冲击系数，$\\lambda$ 是风险惩罚，$\\sigma^2$ 是单位时间价格变化方差。令 $\\kappa^2=\\lambda\\sigma^2/\\eta$，Euler–Lagrange 方程为 $x''=\\kappa^2x$。\n\n用指数函数求通解 $x(t)=Ae^{\\kappa t}+Be^{-\\kappa t}$。为直接满足终点 $x(T)=0$，可等价写成 $x(t)=C\\sinh(\\kappa(T-t))$；其中 $\\sinh z=(e^z-e^{-z})/2$。再由 $x(0)=Q$ 得 $C=Q/\\sinh(\\kappa T)$。\n\n取 $Q=100,T=1,\\kappa=1$，中点库存为\n\n$$x(0.5)=100\\frac{e^{0.5}-e^{-0.5}}{e-e^{-1}}\\approx44.3409.$$\n\n因此前半程卖出约 55.6591 股，比均匀执行的 50 股更多。卖出速度为 $v(t)=Q\\kappa\\cosh(\\kappa(T-t))/\\sinh(\\kappa T)$，其中 $\\cosh z=(e^z+e^{-z})/2$。\n\n图比较 $\\kappa=0,1,2$ 的剩余库存。风险惩罚越大，曲线越早下降；当 $\\kappa\\to0$，用 $\\sinh z\\sim z$ 得 $x(t)\\to Q(1-t/T)$，恢复均匀执行。\n\n![把二阶方程解到库存曲线](/assets/figures/theory/walkthrough/execution-inventory.svg)\n\n## 为什么随机价格下出现确定性路径\n\n在无可预测漂移、参数固定和相应可积条件下，未受影响价格的鞅部分在期望成本中可以通过分部积分消去。剩余成本只取决于库存与交易速度的函数，因此确定性路径可达到最优。\n\n如果冲击、波动率或信号随可观察状态变化，等待获得新信息可能有价值，策略通常需要反馈。确定性结论属于这组模型条件，不能扩展到所有执行问题。\n\n## 改变风险惩罚，路径会改变\n\n若用线性库存惩罚 $c\\int_0^Tx(t)dt$ 替代二次库存风险，Euler–Lagrange 方程变为 $2\\eta x''=c$，无约束解为\n\n$$x(t)=Q(1-t/T)-\\frac c{4\\eta}t(T-t).$$\n\n它可能在到期前变负。若要求库存非负且只能卖出，应在库存达到零后停止；在自由完成时间的情形，最优完成时间为 $\\tau=\\sqrt{4\\eta Q/c}$，当 $\\tau<T$ 时使用 $x(t)=c(\\tau-t)^2/(4\\eta)$，并在 $\\tau$ 后取零。边界约束会改变形式。\n\n## 价格相关风险与 HJB\n\n若风险惩罚为 $\\lambda S_tx_t$，且 $dS_t=\\sigma S_tdB_t$，剩余时间记为 $\\tau$，成本价值 $C(\\tau,x,s)$ 满足\n\n$$C_\\tau=\\tfrac12\\sigma^2s^2C_{ss}+\\lambda sx+\\min_v\\{v^2-vC_x\\}.$$\n\n无速度限制时，$v^*=C_x/2$；只允许卖出时，取非负部分。库存零的边界为 $C(\\tau,0,s)=0$，而剩余时间趋零、库存正时，二次速度成本通常发散。必须完成与终值惩罚是不同边界设置。\n\n先去掉库存非负和只能卖出的限制，可求得解析基准\n\n$$x_t=\\frac{T-t}{T}\\left[Q-\\frac{\\lambda T}{4}\\int_0^tS_u\\,du\\right],\\qquad v_t=\\frac{x_t}{T-t}+\\frac{\\lambda(T-t)S_t}{4}.$$\n\n价格上升会提高线性库存惩罚，推动更快卖出。若方括号变负，解析基准已经违反清算任务的非负库存约束，应改解带边界的控制问题，不能继续把负库存称作剩余待售量。\n\n这一类模型将风险随价格变化的特征纳入动态状态。风险中性期望成本、均值方差、期望效用和平均 VaR 型惩罚会给出不同目标，不能把某一最优路径同时解释为所有指标的最优解。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>快卖付出冲击，慢卖承担库存风险。公式中的两个积分正好对应这两项代价，参数变化也应能在路径形状上得到解释。</p></aside>\n\n## 练习\n\n设 $Q=T=\\eta=1$、$\\lambda\\sigma^2=4$。计算半程剩余库存，与匀速方案比较。\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n$\\kappa=2$，所以 $x(1/2)=\\sinh(1)/\\sinh(2)\\approx0.3240$，匀速为 $0.5$。风险厌恶使前半程多卖出约 $0.176$，以减少后半程的价格暴露。\n\n</details>\n\n## 配套代码\n\n[下载本节代码](/assets/downloads/theory/guo-book-06-02.zip)。压缩包包含 Python 脚本、运行说明和依赖清单。\n\n[补充算例与绘图代码](/assets/downloads/theory-walkthrough/guo-book-06-02.zip)\n",
+  "metadata": {
+    "theory_book": {
+      "book": "quantitative-trading",
+      "part": "第三部分 · 执行、做市与路由",
+      "number": 39,
+      "chapter": "6",
+      "edition": "2026-10",
+      "minutes": 20,
+      "section": 2,
+      "source_pages": [
+        194,
+        195,
+        196,
+        197,
+        222,
+        223
+      ],
+      "chapter_title": "最优执行与订单配置",
+      "source_sections": [
+        "6.1.2",
+        "6.1.3",
+        "6.6"
+      ]
+    }
+  }
+}

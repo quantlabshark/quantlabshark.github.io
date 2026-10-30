@@ -1,0 +1,37 @@
+{
+  "slug": "larsen-book-05-07",
+  "title": "贝叶斯估计、先验与损失函数",
+  "summary": "推导 Beta–二项后验，说明先验权重、损失函数和下一次观测的预测。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7034,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "对未知成功率 p，可以在观察前用一个分布表达不确定性，再用数据更新。贝叶斯估计将这个更新过程写成条件概率运算。\n\n## 先验经过似然重新加权\n\n参数先验为 $\\pi(\\theta)$，数据似然为 $L(\\theta;x)$，后验为\n\n$$\\pi(\\theta\\mid x)=\\frac{L(\\theta;x)\\pi(\\theta)}{\\int L(u;x)\\pi(u)du}.$$\n\n分母是归一化常数，确保后验总面积为一。似然说明给定参数时数据怎样产生，先验说明当前数据出现前的参数分布。\n\n## Beta 先验与成功次数\n\nBeta(a,b) 密度与 $p^{a-1}(1-p)^{b-1}$ 成比例，支持为 0<p<1。n 次独立试验观察到 s 次成功，似然与 $p^s(1-p)^{n-s}$ 成比例。两者相乘后指数相加，后验仍为 Beta：\n\n$$p\\mid x\\sim\\operatorname{Beta}(a+s,b+n-s).$$\n\n取 a=b=2，十次中六次成功，后验为 Beta(8,6)，后验均值为 $8/14\\approx0.5714$，方差为 $8\\times6/(14^2\\times15)\\approx0.01633$。95% 等尾可信区间约为 [0.316,0.808]。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/beta-update.svg\" alt=\"观察十次试验中六次成功后，Beta 先验更新为后验。\" loading=\"lazy\"></figure>\n\n后验均值可写为\n\n$$\\frac{a+s}{a+b+n}=\\frac{a+b}{a+b+n}\\frac a{a+b}+\\frac n{a+b+n}\\frac sn.$$\n\n因此它在先验均值 0.5 和样本比例 0.6 之间，权重分别为 4/14 与 10/14。随着 n 增加，数据的相对权重增加。\n\n## 估计值由损失函数确定\n\n若选择估计 d，平方误差损失的后验平均为\n\n$$E[(d-\\theta)^2\\mid x]=(d-E[\\theta\\mid x])^2+\\operatorname{Var}(\\theta\\mid x).$$\n\n只有第一项随 d 改变，故最优 d 是后验均值。绝对误差损失则由后验中位数最小化；低估和高估成本不同，可以得到相应后验分位数。选择均值并非仅因计算方便，而是对应一个明确误差准则。\n\n## 从后验到预测\n\n给定 p，下一次成功概率为 p。对后验再平均，预测概率就是 $E(p\\mid x)=8/14$。若要预测多次试验，还需把给定 p 的二项分布对后验积分，由此同时考虑未来试验波动和参数不确定性。\n\n可信区间的 95% 表示指定先验和模型下，后验参数概率为 95%。频率置信区间则描述重复抽样的覆盖率，二者的概率对象不同。\n\n> **鲨鱼说** 先验与数据不是简单平均。先把密度与似然相乘得到后验，再按所需的损失或预测问题计算结果。\n\n## 练习\n1. 先验Beta(1,1)，观察8次中成功3次，写出后验分布、后验均值与下一次成功的预测概率。\n2. 对相同数据比较Beta(2,2)和Beta(20,20)先验的后验均值，说明先验强度的影响。\n\n[本章习题](/read/?slug=larsen-book-05-08)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/larsen-book-05-07.zip",
+        "label": "贝叶斯估计、先验与损失函数 · Python 示例",
+        "size_bytes": 944,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第二部分 · 估计与检验",
+      "number": 34,
+      "chapter": "5",
+      "edition": "2026-10",
+      "minutes": 10,
+      "section": "7",
+      "chapter_title": "参数估计",
+      "source_sections": [
+        "5.8"
+      ]
+    }
+  }
+}

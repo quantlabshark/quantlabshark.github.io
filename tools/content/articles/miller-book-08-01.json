@@ -1,0 +1,38 @@
+{
+  "slug": "miller-book-08-01",
+  "title": "动态数组、容量与摊还分析",
+  "summary": "区分长度与容量，按追加过程累计复制次数，推导摊还常数成本并说明插入和缩容。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8045,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "列表对使用者表现为可增长序列，底层却要先申请有限存储。动态数组用“已使用长度”和“已分配容量”两个量管理增长，把多数追加放在已有空位中完成。\n\n## 长度与容量\n\nsize 表示有效元素数，capacity 表示槽位总数，始终满足 0≤size≤capacity。有效索引为 0 至 size−1，不能因为某槽已经分配就允许读取它。\n\n容量不足时，申请更大数组，复制旧引用，再替换底层存储。复制的是引用，嵌套对象并不会获得独立深副本。ctypes.py_object 数组可用于演示这些固定槽位。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/dynamic-array.svg\" alt=\"动态数组按倍增扩容，容量阶梯上升而元素数连续增长。\" loading=\"lazy\"></figure>\n\n## 倍增过程\n\n初始容量 1，连续追加 10 个元素。\n\n| 追加后长度 | 容量 | 本次需复制的旧元素数 |\n| --- | --- | --- |\n| 1 | 1 | 0 |\n| 2 | 2 | 1 |\n| 3 | 4 | 2 |\n| 4 | 4 | 0 |\n| 5 | 8 | 4 |\n| 6—8 | 8 | 0 |\n| 9 | 16 | 8 |\n| 10 | 16 | 0 |\n\n总共写入 10 个新元素，复制旧引用 1+2+4+8=15 次。第 9 次追加较贵，其余许多操作只写一个位置。\n\n## 摊还成本的推导\n\nn 次追加触发的复制规模为 1、2、4、…、2ᵏ，其中 2ᵏ<n，累计\n\n$$1+2+\\cdots+2^k=2^{k+1}-1<2n.$$\n\n再加 n 次新写入，总成本小于常数乘 n，每次摊还 O(1)。这对整串操作成立，不是对随机输入求平均，也不保证每次追加延迟都相同。\n\n若每次只增加一个槽，总复制为 1+2+…+(n−1)=Θ(n²)。固定增长 10 也仍为平方级总复制，只改变常数。按大于 1 的固定比例增长，才能用几何级数得到线性总量。\n\n## 中间插入与删除\n\n在位置 i 插入，先确保容量足够，再从尾到前将 i 及后续元素右移，最后写入新值。移动方向不能反过来，否则会覆盖尚未搬走的数据。删除时从删除位置向后左移，尾部无效引用应清除，避免继续占用被删除对象。\n\n这些操作成本 O(n−i)，扩容策略不会消除保持连续顺序所需的移动。索引访问 O(1)，查找某值最坏 O(n)。\n\n## 缩容设置不同阈值\n\n若半满就减半，下一次插入可能立即扩容，造成反复复制。可在使用量低于容量四分之一时减半，使缩容后的数组约半满，留下缓冲区。实际 Python 列表的增长规则不等同于本节精确倍增模型，模型用于解释摊还分析。\n\n> **鲨鱼说** “摊还常数”允许少数昂贵操作。若系统特别关心单次响应时间，还要单独观察扩容时的复制延迟，而不能只看长期平均。\n\n## Python 实现\n\n~~~python\nimport ctypes\nclass DynamicArray:\n    def __init__(self):\n        self.size=0;self.capacity=1;self.data=(ctypes.py_object*self.capacity)()\n    def append(self,value):\n        if self.size==self.capacity:\n            capacity=2*self.capacity;new=(ctypes.py_object*capacity)()\n            for i in range(self.size):new[i]=self.data[i]\n            self.data=new;self.capacity=capacity\n        self.data[self.size]=value;self.size+=1\n    def __getitem__(self,index):\n        if not 0<=index<self.size:raise IndexError(index)\n        return self.data[index]\na=DynamicArray()\nfor i in range(10):a.append(i)\nassert [a[i] for i in range(a.size)]==list(range(10))\nassert a.capacity==16\nprint(a.size,a.capacity)\n~~~\n\n## 练习\n1. 画出容量从1开始、倍增扩容时前10次追加后的size和capacity。\n2. 比较每次增长1、增长固定10、容量翻倍三种策略的累计复制次数。\n\n[本章习题](/read/?slug=miller-book-08-07)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-08-01.zip",
+        "label": "动态数组、容量与摊还分析 · Python 示例",
+        "size_bytes": 1024,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第三部分 · 图算法与进阶应用",
+      "number": 45,
+      "chapter": "8",
+      "edition": "2026-10",
+      "minutes": 8,
+      "section": "1",
+      "chapter_title": "进阶数据结构与算法应用",
+      "source_sections": [
+        "8.1",
+        "8.2"
+      ]
+    }
+  }
+}

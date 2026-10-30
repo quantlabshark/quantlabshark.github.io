@@ -1,0 +1,37 @@
+{
+  "slug": "larsen-book-04-04",
+  "title": "指数分布、Gamma 分布与等待时间",
+  "summary": "从泊松计数推导等待时间，计算 Gamma 分布的归一化、各阶矩和速率尺度转换。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7025,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "同一个到达过程可以研究两种量：一段时间内发生几次，或发生指定次数需要等待多久。前者对应计数分布，后者对应等待时间分布。\n\n## 首次到达与指数分布\n\n设到达过程具有恒定强度 r，且不相交区间的计数独立。首次等待 T 超过 t，等价于长度 t 内没有事件，故 $P(T>t)=e^{-rt}$。分布函数为 $1-e^{-rt}$，求导得到\n\n$$f_T(t)=re^{-rt},\\qquad t>0.$$\n\n均值为 1/r，方差为 $1/r^2$。每分钟平均到达 2 次时，平均等待 0.5 分钟，超过 1 分钟的概率为 $e^{-2}\\approx0.1353$。由于 $e^{-r(s+t)}/e^{-rs}=e^{-rt}$，指数等待也具有无记忆性。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/gamma.svg\" alt=\"Gamma 分布从一次等待扩展到多次到达的总等待时间。\" loading=\"lazy\"></figure>\n\n## 多次到达与 Gamma 分布\n\nk 段独立同速率指数等待相加，得到第 k 次到达时间。将整数 k 推广为正实数形状参数 $\\alpha$，Gamma 密度为\n\n$$f(t)=\\frac{r^\\alpha}{\\Gamma(\\alpha)}t^{\\alpha-1}e^{-rt},\\quad t>0,$$\n\n其中 $\\Gamma(\\alpha)=\\int_0^\\infty u^{\\alpha-1}e^{-u}du$。分部积分可得 $\\Gamma(\\alpha+1)=\\alpha\\Gamma(\\alpha)$，由 $\\Gamma(1)=1$，整数 k 时便有 $\\Gamma(k)=(k-1)!$。用 $u=rt$ 换元，密度积分恰为 1。\n\n整数 k 的等待解释也能直接给出密度：t 前发生 k-1 次、随后极短时间 dt 内发生一次，其概率的一阶项为 $e^{-rt}(rt)^{k-1}/(k-1)!\\times rdt$，除以 dt 即得上述密度。\n\n## 均值和方差逐项计算\n\n乘上 $t^m$ 后积分，并用同一换元，可得\n\n$$E(T^m)=\\frac{\\Gamma(\\alpha+m)}{r^m\\Gamma(\\alpha)}.$$\n\n取 m=1，均值为 $\\alpha/r$；m=2，二阶矩为 $\\alpha(\\alpha+1)/r^2$；减去均值平方后，方差为 $\\alpha/r^2$。例如 $\\alpha=3,r=2$，均值为 1.5 分钟，方差为 0.75 平方分钟。\n\n第 3 次到达晚于 1 分钟，等价于 1 分钟内计数少于 3，所以 $P(T_3>1)=e^{-2}(1+2+2^2/2)=5e^{-2}\\approx0.67668$。其补概率约 0.32332，表示一分钟内已出现至少三次事件。\n\n## 速率、尺度和卡方分布\n\n尺度参数 $\\beta=1/r$ 时，均值写成 $\\alpha\\beta$，方差为 $\\alpha\\beta^2$。卡方分布 $\\chi^2_\\nu$ 是形状 $\\nu/2$、尺度 2 的 Gamma 分布；其均值为 $\\nu$、方差为 $2\\nu$，后续用于样本方差推断。\n\n## 同速率 Gamma 的可加性\n\n由密度积分，矩母函数为 $M_T(s)=(r/(r-s))^\\alpha$，其中 $s<r$。两个独立 Gamma 变量若具有相同速率 r、形状分别为 $\\alpha_1,\\alpha_2$，和的矩母函数等于两者乘积，故仍为 Gamma，形状变成 $\\alpha_1+\\alpha_2$。\n\n例如形状 1.5、2.5 且速率均为 2 的两个独立变量，相加后的形状为 4、均值为 2、方差为 1。形状不必为整数；共同速率则是这项可加结论的条件。\n\n> **鲨鱼说** 到达越快，等待越短。速率 r 增大时均值下降；尺度 $\\beta$ 增大时均值上升。看变化方向即可检查是否把两种参数混用。\n\n## 练习\n1. 强度为每小时3次的泊松过程，计算等待首次事件超过半小时的概率。\n2. T服从形状4、速率2的Gamma分布，求均值、方差和 $E(T^2)$。\n\n[本章习题](/read/?slug=larsen-book-04-06)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/larsen-book-04-04.zip",
+        "label": "指数分布、Gamma 分布与等待时间 · Python 示例",
+        "size_bytes": 928,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第一部分 · 概率与随机变量",
+      "number": 25,
+      "chapter": "4",
+      "edition": "2026-10",
+      "minutes": 15,
+      "section": "4",
+      "chapter_title": "常用概率分布",
+      "source_sections": [
+        "4.6"
+      ]
+    }
+  }
+}

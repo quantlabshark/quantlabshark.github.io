@@ -1,0 +1,39 @@
+{
+  "slug": "larsen-book-12-03",
+  "title": "变换、非中心 F 与实验效率",
+  "summary": "由一阶展开解释方差稳定变换，推导组间信号的非中心参数并连接实验功效。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7063,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "方差分析的精度既取决于组均值相隔多远，也取决于组内波动。改变测量尺度、增加重复或控制背景差异，会以不同方式影响这两部分。\n\n## 方差稳定变换\n\n若均值增加时方差也增加，一阶展开 $g(Y)\\approx g(\\mu)+g'(\\mu)(Y-\\mu)$ 给出\n\n$$\\operatorname{Var}[g(Y)]\\approx[g'(\\mu)]^2\\operatorname{Var}(Y).$$\n\n泊松方差为 $\\mu$，取 $g(y)=2\\sqrt y$，导数为 $1/\\sqrt\\mu$，变换后的方差近似为 1。二项比例方差为 $p(1-p)/n$，取 $g(p)=2\\arcsin\\sqrt p$，导数为 $1/\\sqrt{p(1-p)}$，方差近似为 1/n。\n\n乘法误差 $Y=\\mu e^\\varepsilon$ 则经对数变为加法误差。变换也改变了均值的解释，若目标仍是原单位均值，需处理非线性还原。边界和小计数处，一阶近似可能较差。\n\n## 备择下的组间平方和\n\n组均值不全相同时，SSTR/$\\sigma^2$ 服从非中心卡方分布，非中心参数为\n\n$$\\lambda=\\frac{\\sum_jn_j(\\mu_j-\\mu_w)^2}{\\sigma^2},\\qquad\n\\mu_w=\\frac{\\sum_jn_j\\mu_j}{N}.$$\n\n它将真实均值的加权离散程度换算为噪声尺度。组内平方和仍估计误差，且与组间部分独立，所以 F 服从非中心 $F_{k-1,N-k,\\lambda}$。\n\n功效使用备择分布计算 $P(F>F_{1-\\alpha;k-1,N-k})$；阈值由中心 F 确定。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/power-anova-review.svg\" alt=\"三组固定均值下的非中心 F 功效，增加样本和降低噪声都会提高检出概率。\" loading=\"lazy\"></figure>\n\n## 样本量、噪声与设计\n\n三个真实均值为 2、3、5，每组 n=3、$\\sigma^2=1$，有 $\\mu_w=10/3$，$\\lambda=14$。每组样本增为六个时，信号平方和和 $\\lambda$ 都加倍；若标准差由 1 增为 2，方差变成四倍，同样样本量下 $\\lambda$ 降到 3.5。\n\n随机分配减少处理与背景的系统联系；区组化把可识别的背景变异从残差中分离；独立重复则增加误差估计的自由度。这三项是实验设计中不同的安排，不能单靠复杂计算互相替代。\n\n> **鲨鱼说** 非中心参数使用真实组均值与总体噪声描述一整条备择分布。本次样本算出的 F 是一个观测统计量，两者不能混用。\n\n## 练习\n1. 三组均值0、1、2，每组n=5，σ²=2，计算非中心参数。\n2. 对均值不同且标准差与均值成比例的正值数据，比较原值和对数值的组内散布。\n\n[本章习题](/read/?slug=larsen-book-12-04)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/larsen-book-12-03.zip",
+        "label": "变换、非中心 F 与实验效率 · Python 示例",
+        "size_bytes": 949,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第三部分 · 比较、回归与实验设计",
+      "number": 63,
+      "chapter": "12",
+      "edition": "2026-10",
+      "minutes": 11,
+      "section": "3",
+      "chapter_title": "单因素方差分析",
+      "source_sections": [
+        "12.5",
+        "12.6",
+        "12.A.2"
+      ]
+    }
+  }
+}

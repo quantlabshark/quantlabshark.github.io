@@ -1,0 +1,14 @@
+{
+  "slug": "synthetic-data",
+  "title": "合成价格与 Python 回测",
+  "summary": "504 个工作日价格点，含同口径回测程序。",
+  "kind": "resource",
+  "track": "",
+  "series": "",
+  "sort_order": 39,
+  "section_ids": [
+    "6cb0390d-4b0e-459e-a155-9dfb328810ec"
+  ],
+  "body": "## 下载与运行\n\n下载[合成价格 CSV](/downloads/synthetic-prices.csv)和[Python 程序](/downloads/backtest.py)，放在同一目录，运行 `python backtest.py`。程序仅使用 Python 标准库。\n\n价格由随机种子 42 生成，用于比较信号、成交和资金变化。程序在第 t 日收盘生成信号，第 t+1 日收盘调仓，并在期末平仓时扣除费用。\n\n可在[对应实验](/labs/#backtest)中调整参数，比较两种实现的结果。\n",
+  "metadata": {}
+}

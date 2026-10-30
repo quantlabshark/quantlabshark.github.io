@@ -1,0 +1,35 @@
+{
+  "slug": "larsen-book-12-04",
+  "title": "单因素方差分析：习题",
+  "summary": "34 道题，练习单因素方差分析中的概念、计算与方法选择。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7064,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "本章题组用于练习单因素方差分析。按题号选择下方题组；题面中的公式、数据和图形可点击放大。\n\n## 题组\n\n<details class=\"book-exercise-group\" id=\"questions-12-2-0\"><summary>单因素方差分析与平方和分解 · 12.2.1—12.2.10</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-082-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"单因素方差分析与平方和分解 · 12.2.1—12.2.10，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-082-01.webp\" alt=\"单因素方差分析与平方和分解 · 12.2.1—12.2.10，第 1 幅\" width=\"1330\" height=\"852\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-082-02.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"单因素方差分析与平方和分解 · 12.2.1—12.2.10，放大第 2 幅\"><img src=\"/assets/exercises/foundations/larsen-082-02.webp\" alt=\"单因素方差分析与平方和分解 · 12.2.1—12.2.10，第 2 幅\" width=\"1330\" height=\"855\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-12-2-1\"><summary>单因素方差分析与平方和分解 · 12.2.11—12.2.13</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-083-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"单因素方差分析与平方和分解 · 12.2.11—12.2.13，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-083-01.webp\" alt=\"单因素方差分析与平方和分解 · 12.2.11—12.2.13，第 1 幅\" width=\"1330\" height=\"244\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-12-3-2\"><summary>多重比较与线性对比 · 12.3.1—12.3.7</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-084-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"多重比较与线性对比 · 12.3.1—12.3.7，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-084-01.webp\" alt=\"多重比较与线性对比 · 12.3.1—12.3.7，第 1 幅\" width=\"1330\" height=\"720\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-12-4-3\"><summary>多重比较与线性对比 · 12.4.1—12.4.6</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-085-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"多重比较与线性对比 · 12.4.1—12.4.6，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-085-01.webp\" alt=\"多重比较与线性对比 · 12.4.1—12.4.6，第 1 幅\" width=\"1330\" height=\"492\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-085-02.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"多重比较与线性对比 · 12.4.1—12.4.6，放大第 2 幅\"><img src=\"/assets/exercises/foundations/larsen-085-02.webp\" alt=\"多重比较与线性对比 · 12.4.1—12.4.6，第 2 幅\" width=\"1330\" height=\"859\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-12-5-4\"><summary>变换、非中心 F 与实验效率 · 12.5.1—12.5.3</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-086-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"变换、非中心 F 与实验效率 · 12.5.1—12.5.3，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-086-01.webp\" alt=\"变换、非中心 F 与实验效率 · 12.5.1—12.5.3，第 1 幅\" width=\"1330\" height=\"877\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-12-A-2-5\"><summary>变换、非中心 F 与实验效率 · 12.A.2.1—12.A.2.5</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-087-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"变换、非中心 F 与实验效率 · 12.A.2.1—12.A.2.5，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-087-01.webp\" alt=\"变换、非中心 F 与实验效率 · 12.A.2.1—12.A.2.5，第 1 幅\" width=\"1330\" height=\"882\" loading=\"lazy\"></a></div>\n\n</details>\n\n",
+  "metadata": {
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第三部分 · 比较、回归与实验设计",
+      "number": 64,
+      "chapter": "12",
+      "edition": "2026-10",
+      "minutes": 25,
+      "section": "4",
+      "questions": 34,
+      "unit_type": "exercise",
+      "chapter_title": "单因素方差分析",
+      "source_sections": [
+        "12.2",
+        "12.3",
+        "12.4",
+        "12.5",
+        "12.A.2"
+      ]
+    }
+  }
+}

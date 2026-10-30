@@ -1,0 +1,14 @@
+{
+  "slug": "assignment-6",
+  "title": "实践 6 · 复现研究报告",
+  "summary": "整理数据、代码、环境和验证结果，形成可复现的研究报告。",
+  "kind": "assignment",
+  "track": "",
+  "series": "",
+  "sort_order": 45,
+  "section_ids": [
+    "eef736ef-be09-4f13-99d4-433464d67f07"
+  ],
+  "body": "## 任务\n\n整理一项策略研究，将数据、代码、运行环境、验证方法和结果联系起来。结论说明研究假设得到怎样的支持，以及结果对样本和成本的依赖。\n\n## 提交材料\n\n提交运行说明、依赖与版本记录、代码、图表和一页结论，使他人能够重新生成结果。\n\n## 评价标准\n\n结果可复现占 40%，验证过程占 30%，适用条件分析占 30%。\n\n## 提交方式\n\n在[GitHub 作业提交](https://github.com/quantlabshark/quantlabshark.github.io/issues/new?template=assignment.yml)中填写任务编号、方法、结果与代码链接。提交内容公开可见，需使用 GitHub 账号；账号令牌和个人隐私信息保留在本机。讨论题目时，也可在[讨论中心](/community/)发帖。\n",
+  "metadata": {}
+}

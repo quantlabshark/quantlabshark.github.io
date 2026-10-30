@@ -1,0 +1,32 @@
+{
+  "slug": "larsen-book-13-03",
+  "title": "随机区组与配对设计：习题",
+  "summary": "22 道题，练习随机区组与配对设计中的概念、计算与方法选择。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7067,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "本章题组用于练习随机区组与配对设计。按题号选择下方题组；题面中的公式、数据和图形可点击放大。\n\n## 题组\n\n<details class=\"book-exercise-group\" id=\"questions-13-2-0\"><summary>随机区组设计 · 13.2.1—13.2.13</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-088-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"随机区组设计 · 13.2.1—13.2.13，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-088-01.webp\" alt=\"随机区组设计 · 13.2.1—13.2.13，第 1 幅\" width=\"1330\" height=\"605\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-088-02.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"随机区组设计 · 13.2.1—13.2.13，放大第 2 幅\"><img src=\"/assets/exercises/foundations/larsen-088-02.webp\" alt=\"随机区组设计 · 13.2.1—13.2.13，第 2 幅\" width=\"1330\" height=\"1667\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-088-03.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"随机区组设计 · 13.2.1—13.2.13，放大第 3 幅\"><img src=\"/assets/exercises/foundations/larsen-088-03.webp\" alt=\"随机区组设计 · 13.2.1—13.2.13，第 3 幅\" width=\"1330\" height=\"715\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-13-3-1\"><summary>配对 t 检验与配对设计的选择 · 13.3.1—13.3.9</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-089-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"配对 t 检验与配对设计的选择 · 13.3.1—13.3.9，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-089-01.webp\" alt=\"配对 t 检验与配对设计的选择 · 13.3.1—13.3.9，第 1 幅\" width=\"1330\" height=\"935\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-089-02.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"配对 t 检验与配对设计的选择 · 13.3.1—13.3.9，放大第 2 幅\"><img src=\"/assets/exercises/foundations/larsen-089-02.webp\" alt=\"配对 t 检验与配对设计的选择 · 13.3.1—13.3.9，第 2 幅\" width=\"1330\" height=\"385\" loading=\"lazy\"></a></div>\n\n</details>\n\n",
+  "metadata": {
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第三部分 · 比较、回归与实验设计",
+      "number": 67,
+      "chapter": "13",
+      "edition": "2026-10",
+      "minutes": 15,
+      "section": "3",
+      "questions": 22,
+      "unit_type": "exercise",
+      "chapter_title": "随机区组与配对设计",
+      "source_sections": [
+        "13.2",
+        "13.3"
+      ]
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "slug": "quant-course-36",
+  "title": "36 · 预测模型的训练、验证与回测",
+  "summary": "用合成价格完成特征、成熟标签、时间验证、模型选择与账户回测，分别评价预测误差和交易净收益。",
+  "kind": "lesson",
+  "track": "机器学习与文本",
+  "series": "量化研究系统课程",
+  "sort_order": 36,
+  "cover_url": "/assets/figures/curriculum/course-36.svg",
+  "section_ids": [
+    "5c14064d-8915-5f7c-bcc6-f9bd10d4c40e"
+  ],
+  "body": "预测模型的评估需要同时检查特征可用时间、标签实现时间与成交时间。训练、验证和回测分别评价模型拟合、方案选择及交易结果。\n\n## 预测标签与持有区间\n\n在第$t$天收盘得到信息，下一开盘买入、再下一开盘卖出，对应标签为\n\n$$y_t=\\frac{P^{open}_{t+2}}{P^{open}_{t+1}}-1.$$\n\n输入使用截至$t$收盘可得的单日收益、三日动量和三日波动。标签直到$t+2$开盘才完成，所以“特征日期在训练截止之前”还不够，必须确认结果也已经发生。\n\n这一次使用180个时点的人工价格，收益由独立随机波动生成，没有人为注入预测信号。它是负对照：流程即使能够拟合训练数据，也不应因此宣称找到了稳定市场规律。\n\n## 训练、验证与重估的边界\n\n首次验证从第60天收盘开始，因此训练仅保留标签结束时间不晚于第60天开盘的记录。验证特征日期为60至79，最终测试从90开始。确定惩罚强度后，再用第90天已完成的历史标签重估模型。\n\n候选Ridge强度固定为0.1、1、10；每个候选都在训练段拟合自己的标准化参数。验证比较均方误差，最终测试同时比较常数预测与账户结果。没有用测试收益调整交易阈值。\n\n## 从原始价格计算特征与标签\n\n单日收益为$P_t/P_{t-1}-1$，三日动量为$P_t/P_{t-3}-1$，三日波动是最近三个单日收益的样本标准差。标签使用下一开盘至再下一开盘的价格，不与这些输入混列。\n\n例如第59天特征的标签在61日开盘结束，它不能进入60日训练；第58天特征标签在60日开盘结束，则已可使用。把标签结束时间存成一列，比依靠记忆判断日期更可靠。\n\n```python\nimport numpy as np\nimport pandas as pd\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.linear_model import Ridge\nfrom sklearn.metrics import mean_squared_error\n\nrng = np.random.default_rng(36)\nn = 180\nclose = 100*np.cumprod(1+rng.normal(0, 0.01, n))\nopening = np.r_[100.0, close[:-1]]\nprice = pd.Series(close)\nframe = pd.DataFrame({\"return1\": price.pct_change(fill_method=None),\n                      \"momentum3\": price/price.shift(3)-1,\n                      \"volatility3\": price.pct_change(fill_method=None).rolling(3).std()})\nframe[\"target\"] = pd.Series(opening).shift(-2)/pd.Series(opening).shift(-1)-1\nframe[\"label_end\"] = np.arange(n)+2\nframe = frame.dropna()\ncolumns = [\"return1\", \"momentum3\", \"volatility3\"]\ntrain = frame.loc[frame[\"label_end\"] <= 60]\nvalid = frame.loc[(frame.index >= 60) & (frame.index < 80)]\ntest = frame.loc[frame.index >= 90]\n\ndef fit_model(alpha, data):\n    model = make_pipeline(StandardScaler(), Ridge(alpha=alpha))\n    return model.fit(data[columns], data[\"target\"])\n\nscores = {}\nfor alpha in [0.1, 1.0, 10.0]:\n    model = fit_model(alpha, train)\n    scores[alpha] = mean_squared_error(valid[\"target\"], model.predict(valid[columns]))\nbest = min(scores, key=lambda a: (scores[a], a))\nready = frame.loc[frame[\"label_end\"] <= 90]\nmodel = fit_model(best, ready)\nprediction = model.predict(test[columns])\nbaseline = np.full(len(test), ready[\"target\"].mean())\nprint(\"validation MSE:\", scores, \"selected alpha:\", best)\nprint(\"test MSE model/mean:\", mean_squared_error(test[\"target\"], prediction),\n      mean_squared_error(test[\"target\"], baseline))\n\ncash, shares, cost = 10000.0, 0, 0.001\nnav, trades = [cash], 0\nfor t, forecast in zip(test.index, prediction):\n    price_in = opening[t+1]\n    target = int(forecast > 0.002)\n    if target and shares == 0:\n        shares = int(cash/(price_in*(1+cost)))\n        cash -= shares*price_in*(1+cost)\n        trades += int(shares > 0)\n    elif not target and shares > 0:\n        cash += shares*price_in*(1-cost)\n        shares = 0\n        trades += 1\n    nav.append(cash+shares*opening[t+2])\nif shares:\n    cash += shares*opening[test.index[-1]+2]*(1-cost)\n    nav[-1] = cash\n    shares = 0\n    trades += 1\nnav = np.array(nav)\nprint(\"synthetic account return:\", nav[-1]/nav[0]-1, \"trades:\", trades)\nassert train[\"label_end\"].max() <= 60\nassert ready[\"label_end\"].max() <= 90\nassert shares == 0 and cash >= 0\n```\n\n代码依赖NumPy、pandas和scikit-learn。数据生成、预处理、候选选择、预测和现金账都包含在内，不需要行情接口。固定随机种子保证同一实验可复现，不表示现实市场规律可重复。\n\n## 数值结果如何解释\n\n验证选中强度0.1。最终模型均方误差约0.00009322，历史均值预测约0.00008919，模型反而略差，误差约高4.5%。这说明在这条无信号合成路径上，三个特征与Ridge并未超过简单基准。\n\n![最终测试中的预测与随后实际收益](/assets/figures/curriculum/course-36.svg)\n\n图中模型预测集中在较小范围，实际收益波动明显更大。单个时期预测方向正确并不足以改善整体误差，需把所有测试时点一起评价。\n\n账户按预测超过0.2%才持有，整数股、每边0.1%费用，最终清仓。程序完成18笔买卖，测试净收益约0.3661%。这个正收益与“预测误差没有超过常数基准”同时成立，因为均方误差与阈值交易评价不同问题。\n\n## 为什么预测误差不能替代交易评价\n\n均方误差平均惩罚每个时点的平方偏差，交易规则只在超过阈值时改变持仓。模型可能在不交易日期改善误差，却在少数大仓位日期判断错误；也可能误差较大，但恰好选中几个盈利区间。\n\n因此报告应同时列出误差、方向、预测分布、交易次数、净收益、回撤和基准差。若改变阈值，应在训练或验证阶段完成，不能为了让这一次测试盈利而反复调整。成本敏感性也应固定已选模型和规则。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>模型输出的是预测值，账户执行的是有约束的决策。把两层分别记录，才能判断改善来自预测、仓位规则还是偶然行情。</p></aside>\n\n## 模型文件之外还要保存什么\n\n研究记录应包含原始数据版本、随机种子、特征定义、标签区间、数据划分、全部候选、选定参数、缩放统计量、执行规则和逐笔账。使用文本或财报时，还需保存公告时间、接收时间、事件去重和资产映射。\n\n把研究迁移到平台时，先检查平台字段、复权、停牌、缺失、费用及订单回调语义。相同策略名称不保证不同平台得到相同结果。模型保存后重新加载，应对固定样本产生相同预测；词表或列顺序改变会使权重失去原含义。\n\n## 持续更新怎样形成新的检验\n\n可按固定频率滚动训练，每次仅加入已结束的标签，保留各次模型在当时给出的预测，供后续评价。监测输入覆盖、分布、预测误差和执行成本；效果下降时先区分数据变化与关系变化，再决定是否更换模型。\n\n财务模型预测市值、文本模型分类情绪、收益模型预测下一期收益，训练目标不同。把它们接入交易之前，必须各自完成到未来收益的连接。更复杂算法和更多数据是否有价值，应通过同样本、同时间、同成本的比较回答。\n\n## 练习\n\n第89天的特征对应标签结束日91，能否进入第90天重估？测试均方误差下降10%，能否省略账户回测？\n\n<details><summary>查看解答</summary>\n\n不能进入，因为第91天结果尚未发生。误差改善也不能省略回测，仓位阈值、收益幅度、交易约束和费用仍会决定净账户表现；两种结果应分别报告。\n\n</details>\n\n---\n\n[课程目录](/courses/)\n\n## 配套代码\n\n[下载本节代码（ZIP）](/assets/downloads/courses/quant-course-36.zip)\n\n压缩包包含脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n",
+  "metadata": {
+    "curriculum": {
+      "cover": "/assets/figures/curriculum/course-36.svg",
+      "level": "进阶",
+      "stage": 6,
+      "number": 36,
+      "edition": "2026-10",
+      "minutes": 50,
+      "source_refs": [
+        {
+          "book": "深入浅出Python量化交易实战",
+          "chapters": "3.1、7.2–7.3、9.2、14.3.4、15.1–15.2",
+          "pdf_pages": [
+            65,
+            66,
+            159,
+            160,
+            161,
+            163,
+            164,
+            203,
+            204,
+            205,
+            305,
+            309,
+            310,
+            311
+          ]
+        },
+        {
+          "book": "Quant Roadmap — Ultimate Edition",
+          "chapters": "1、7、25",
+          "pdf_pages": [
+            9,
+            10,
+            11,
+            23,
+            24,
+            69,
+            70,
+            71,
+            72
+          ]
+        }
+      ],
+      "stage_title": "机器学习与文本"
+    },
+    "code_download": {
+      "url": "/assets/downloads/courses/quant-course-36.zip",
+      "examples": 1
+    }
+  }
+}

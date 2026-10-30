@@ -1,0 +1,38 @@
+{
+  "slug": "larsen-book-11-01",
+  "title": "最小二乘、拟合残差与非线性变换",
+  "summary": "由最小平方误差推导直线系数，逐点计算残差与决定系数，并解释曲线变换的误差尺度。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7057,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "给定成对观测 $(x_i,y_i)$，用直线 $\\hat y_i=a+bx_i$ 描述 y 随 x 的变化。每个点到直线的竖直差 $e_i=y_i-\\hat y_i$ 称为残差。最小二乘使残差平方和最小。\n\n## 对两个参数分别求导\n\n目标为 $SSE=\\sum_i(y_i-a-bx_i)^2$。对 a、b 的偏导设为零，去掉共同因子 −2，得\n\n$$\\sum_i(y_i-a-bx_i)=0,\\qquad\\sum_ix_i(y_i-a-bx_i)=0.$$\n\n第一式给出 $a=\\bar y-b\\bar x$，代入第二式并整理得到\n\n$$\\hat b=\\frac{S_{xy}}{S_{xx}},\\qquad\\hat a=\\bar y-\\hat b\\bar x,$$\n\n其中 $S_{xx}=\\sum_i(x_i-\\bar x)^2$，$S_{xy}=\\sum_i(x_i-\\bar x)(y_i-\\bar y)$。要求 $S_{xx}>0$，否则所有 x 相同，斜率无法由数据识别。\n\n## 四个点逐项计算\n\n取 x=(0,1,2,3)，y=(1,2,2,4)。均值为 1.5、2.25，$S_{xx}=5,S_{xy}=4.5$，所以斜率和截距都为 0.9。拟合值为 (0.9,1.8,2.7,3.6)，残差为 (0.1,0.2,−0.7,0.4)，平方和为 0.7。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/regression.svg\" alt=\"四个数据点的最小二乘直线，虚线表示观测值到拟合值的残差。\" loading=\"lazy\"></figure>\n\n残差和为零，直线通过样本均值点。将 $y_i-\\bar y=(\\hat y_i-\\bar y)+e_i$ 平方求和，正规方程使交叉项消失，得到 $SST=SSR+SSE$。本例 $SST=4.75$，所以 $R^2=1-0.7/4.75\\approx0.8526$。它描述当前样本内变差的分解，预测精度还需在新数据上评价。\n\n## 曲线与参数线性\n\n模型 $y=a+bx+cx^2$ 画出曲线，但对参数 a、b、c 仍线性，可用相同的最小二乘思想。指数模型 $y=Ae^{bx}$ 取对数为 $\\log y=\\log A+bx$；幂律 $y=Ax^b$ 则为 $\\log y=\\log A+b\\log x$。\n\n对数变换后最小化的是对数残差平方，不等于原单位的残差平方。若 $\\log Y=\\eta(x)+\\varepsilon$，且 $\\varepsilon\\sim N(0,\\sigma^2)$，则\n\n$$E(Y\\mid x)=e^{\\eta(x)}E(e^\\varepsilon)=e^{\\eta(x)+\\sigma^2/2}.$$\n\n直接将拟合对数均值指数化得到的是条件中位数形式，回到均值还需上述修正。\n\n> **鲨鱼说** “线性”通常指参数怎样进入模型。先写出误差所在的尺度，再决定是否变换变量，才能知道拟合结果对应什么量。\n\n## 练习\n1. 对x=0,1,2,3和y=1,2,2,4手算直线系数、残差与R²。\n2. 比较对原值拟合指数曲线与对log y拟合直线的误差目标。\n\n[本章习题](/read/?slug=larsen-book-11-04)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/larsen-book-11-01.zip",
+        "label": "最小二乘、拟合残差与非线性变换 · Python 示例",
+        "size_bytes": 981,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第三部分 · 比较、回归与实验设计",
+      "number": 57,
+      "chapter": "11",
+      "edition": "2026-10",
+      "minutes": 13,
+      "section": "1",
+      "chapter_title": "回归与相关",
+      "source_sections": [
+        "11.1",
+        "11.2"
+      ]
+    }
+  }
+}

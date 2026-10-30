@@ -1,0 +1,43 @@
+{
+  "slug": "guo-book-07-01",
+  "title": "库存风险、保留价格与最优报价",
+  "summary": "由库存损益推导保留价格和最优报价，并用有限库存状态计算报价随风险变化的幅度。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "量化交易：算法、分析、数据、模型和优化",
+  "sort_order": 6045,
+  "cover_url": "",
+  "section_ids": [
+    "19808db5-aef6-5fc5-b233-d9732a29916b"
+  ],
+  "body": "## 持有库存为什么会改变报价\n\n做市商同时挂出买价与卖价。成交可获得价差，也会改变库存。若已经持有很多股票，继续买入会扩大价格下跌的损失，因此买价应降低，并提高卖出的吸引力。\n\n设现金为 $x$，库存为 $q$，中间价满足 $dS_t=\\sigma dB_t$。在剩余时间 $\\tau=T-t$ 内不再交易，期末财富为 $x+qS_T$。用绝对风险厌恶系数 $\\gamma>0$ 的指数效用衡量财富，有\n\n$$E[-e^{-\\gamma(x+qS_T)}]=-\\exp\\{-\\gamma(x+qs)+\\tfrac12\\gamma^2q^2\\sigma^2\\tau\\}.$$\n\n风险项与库存平方成正比。令买入一股前后的期望效用相等，得到愿意支付的保留买价；卖出一股同理：\n\n$$r_b=s-\\gamma\\sigma^2\\tau(q+1/2),\\qquad r_a=s-\\gamma\\sigma^2\\tau(q-1/2).$$\n\n两者中心为 $r=s-q\\gamma\\sigma^2\\tau$。正库存使中心下移，负库存使中心上移。这里的保留价格是风险估值，实际挂单还要考虑成交概率。\n\n## 报得远，赚得多，但成交更少\n\n设报价为 $s+\\delta_a$ 与 $s-\\delta_b$，到达强度为 $\\lambda(\\delta)=Ae^{-k\\delta}$。$A$ 控制基础订单量，$k$ 描述成交强度对报价距离的敏感程度。距离增加一元，强度乘以 $e^{-k}$。\n\n若价值函数写为 $V=-\\exp\\{-\\gamma[x+v(t,s,q)]\\}$，对单侧报价求极值，可得\n\n$$\\delta_a^*=c-s+v(t,s,q)-v(t,s,q-1),$$\n$$\\delta_b^*=c+s+v(t,s,q)-v(t,s,q+1),\\qquad c=\\frac1\\gamma\\log(1+\\gamma/k).$$\n\n常数 $c$ 是价差收益与成交概率之间的权衡；价值差刻画多持有一股的收益或负担。将不交易时的库存估值代入，可得常用近似：报价中心为 $s-q\\gamma\\sigma^2\\tau$，总价差为 $2c+\\gamma\\sigma^2\\tau$。\n\n例如 $\\gamma=0.1,k=1,\\sigma=0.2,\\tau=1,q=10$，中心较中间价低 0.04，近似总价差为 $2\\log(1.1)/0.1+0.004\\approx1.9102$。所有参数必须使用相同的价格和时间单位。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>到达强度，即给定当前信息后，单位时间内事件预期发生速度的局部量。</p></aside>\n\n## 报价公式中的收益和风险怎样相接\n\n指数效用的确定性等价财富为 $x+qs-\\gamma q^2\\sigma^2\\tau/2$：把这笔确定金额代入效用，恰好得到前面的随机财富期望效用。若花费价格 $p$ 买一股，现金减少 $p$、库存增加一股，等价财富的变化为 $-p+s-\\gamma\\sigma^2\\tau(q+1/2)$。令变化为零，就得到保留买价。\n\n这里的 $1/2$ 来自 $(q+1)^2-q^2=2q+1$，并非额外手续费。\n\n再看实际卖价的优化。记卖出一股后的相对价值增益为 $\\delta+s+v(q-1)-v(q)=\\delta-d$。在一个短时间段内，报价相关的效用增益与 $e^{-k\\delta}[1-e^{-\\gamma(\\delta-d)}]$ 成正比。求导并令其为零，得 $-k+(k+\\gamma)e^{-\\gamma(\\delta-d)}=0$，所以 $\\delta=d+\\log(1+\\gamma/k)/\\gamma$。这说明最优报价同时包含库存价值差和交易收益项。\n\n取 $\\gamma=0.1,k=1$，交易收益项为 $c=0.9531$ 元。当 $\\gamma\\to0$，用 $\\log(1+x)/x\\to1$ 可得 $c\\to1/k$。风险厌恶很小时，单侧近似目标变为最大化 $\\delta Ae^{-k\\delta}$，求导同样得到 $\\delta=1/k$。\n\n强度还需要与成交概率区分。若某一侧保持不变的成交强度为每秒 $2e^{-1}$，一秒内的平均成交次数为 0.7358，而至少成交一次的概率为 $1-e^{-2/e}\\approx0.5209$。短时间近似 $P(\\text{成交})\\approx\\lambda\\Delta t$ 只适合 $\\lambda\\Delta t$ 很小的情形。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>风险估值回答“这一股对当前持仓值多少钱”；成交模型回答“报这个价格能等到多少交易”。把两者合起来，才得到挂到市场上的报价。</p></aside>\n\n### 报价中心、风险价差与成交强度分开计算\n\n在常见近似报价式中，$s$ 是中间价，$q$ 是库存，$\\gamma$ 是绝对风险厌恶，$\\sigma$ 是价格波动系数，$\\tau$ 是剩余时间；$k$ 则描述报价离中间价越远时成交强度衰减得多快。报价中心与总价差分别为\n\n$$r=s-\\gamma q\\sigma^2\\tau,\\qquad\nd=\\gamma\\sigma^2\\tau+\\frac2\\gamma\\log(1+\\gamma/k).$$\n\n取 $s=100,q=5,\\gamma=0.1,\\sigma=2,\\tau=0.5,k=2$。先算库存修正：$0.1\\times5\\times4\\times0.5=1$，所以中心为 99；风险价差为 0.2，成交强度项为 $20\\log(1.05)\\approx0.9758$，总价差为 1.1758。于是买价约 98.4121，卖价约 99.5879。\n\n对数项也可由单边目标求导理解。令 $\\delta$ 为报价距离、$d_0$ 为该侧库存边际成本，最大化 $e^{-k\\delta}[1-e^{-\\gamma(\\delta-d_0)}]$。求导并令其为零，得到\n\n$$-k+(k+\\gamma)e^{-\\gamma(\\delta-d_0)}=0,\n\\qquad \\delta=d_0+\\frac1\\gamma\\log(1+\\gamma/k).$$\n\n图中只改变库存 $q$，其余参数保持不变，展示报价中心的平移。这里使用连续价格与近似模型，发送订单前还需按价格档位和库存限制处理。\n\n![报价中心、风险价差与成交强度分开计算](/assets/figures/theory/walkthrough/inventory-quotes.svg)\n\n## 用矩阵求有限库存模型\n\n规定 $q\\in\\{-Q,\\ldots,Q\\}$，满仓时关闭买单，空头达到下界时关闭卖单。设\n\n$$V=-e^{-\\gamma(x+qs)}f_q(t)^{-\\gamma/k},\\qquad \\theta_q(t)=\\frac1k\\log f_q(t).$$\n\n终端只按中间价计值时，$f_q(T)=1$。令矩阵 $M$ 的对角项为 $k\\gamma\\sigma^2q^2/2$，相邻非对角项为 $-\\eta$，其中 $\\eta=A(1+\\gamma/k)^{-(1+k/\\gamma)}$，则\n\n$$f(t)=e^{-(T-t)M}\\mathbf1.$$\n\n报价距离为 $\\delta_a=c+\\theta_q-\\theta_{q-1}$、$\\delta_b=c+\\theta_q-\\theta_{q+1}$。这保留了库存边界的影响；接近边界时，简单线性中心近似可能偏离较大。模型允许连续报价，实际应用还需按最小价格变动单位取整，并处理不能跨价的限制。\n\n![库存与买卖报价的关系](/assets/illustrations/theory/guo/market-making-quotes.svg)\n\n## 预测信号与衍生品库存\n\n若价格存在短期漂移，预期升值会提高买入意愿；订单流的自激励会改变两侧成交与逆向选择风险。此时应把信号或订单强度加入状态，不能仅靠固定价差表达。\n\n期权做市还涉及多种风险。若持有股票 $q$ 股、期权 $m$ 份，短期价格变动的一阶暴露为 $q+m\\Delta$。期权的 Gamma、Vega 和时间价值变化不会因 Delta 对冲而消失。股票对冲本身也有成本，因而需要同时决定期权报价与对冲时机。\n\n若标的按均值回复过程变化，其生成元中的漂移项应为 $\\kappa(\\mu-s)\\partial_sV$。\n\n## 练习\n\n沿用上例，将库存由 10 股降至 5 股，其他参数不变，近似报价中心和总价差怎样变化？\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n中心偏移由 $-10\\times0.1\\times0.04=-0.04$ 变为 $-0.02$，向上移动 0.02。近似价差仍为 1.9102，因为该近似中的价差不依赖库存。有限库存矩阵解则会因边界距离变化出现额外调整。\n\n</details>\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>买卖价一起下降，会让买单更难成交、卖单更容易成交，两侧共同推动库存下降。调报价中心与扩大价差，是两种不同的库存管理动作。</p></aside>\n\n## 配套代码\n\n[下载本节代码](/assets/downloads/theory/guo-book-07-01.zip)。压缩包包含 Python 脚本、运行说明和依赖清单。\n\n[补充算例与绘图代码](/assets/downloads/theory-walkthrough/guo-book-07-01.zip)\n",
+  "metadata": {
+    "theory_book": {
+      "book": "quantitative-trading",
+      "part": "第三部分 · 执行、做市与路由",
+      "number": 45,
+      "chapter": "7",
+      "edition": "2026-10",
+      "minutes": 22,
+      "section": 1,
+      "source_pages": [
+        228,
+        229,
+        230,
+        231,
+        246,
+        247,
+        248,
+        249,
+        253
+      ],
+      "chapter_title": "做市与智能路由",
+      "source_sections": [
+        "7.1",
+        "7.2",
+        "7.8",
+        "7.9"
+      ]
+    }
+  }
+}

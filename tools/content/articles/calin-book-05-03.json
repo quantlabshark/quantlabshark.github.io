@@ -1,0 +1,37 @@
+{
+  "slug": "calin-book-05-03",
+  "title": "伊藤等距、鞅性质与连续版本",
+  "summary": "证明随机积分的均值、协方差和条件预测性质，区分零条件均值与独立增量。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "随机微积分及其应用",
+  "sort_order": 5032,
+  "cover_url": "",
+  "section_ids": [
+    "17859c88-b779-5654-b120-7a4cc7b39714"
+  ],
+  "body": "## 积分保留线性和区间可加性\n\n若 $H,G$ 可预测且在 $[0,T]$ 上满足平方可积条件，则\n\n$$\\int_0^T(aH_t+bG_t)dW_t=a\\int_0^TH_tdW_t+b\\int_0^TG_tdW_t.$$\n\n积分也可以按时间区间拆分。两条性质先对有限和成立，再由均方极限推广。但随机积分不保留普通正测度积分的单调性：即使 $H_t\\ge0$，$\\int H_tdW_t$ 仍可能为负，因为布朗增量有正有负。\n\n## 交叉项如何消失\n\n对简单过程，积分平方展开含 $H_i\\Delta W_iH_j\\Delta W_j$。设 $i<j$，则 $H_i\\Delta W_iH_j$ 在 $t_j$ 已知，而 $\\Delta W_j$ 对当时信息条件均值为零，所以该乘积的期望为零。\n\n不能把所有因子都声称为相互独立，因为后面的权重 $H_j$ 可以依赖前面的增量。正确的理由是对最后一个尚未发生的增量取条件期望。由此得到伊藤等距：\n\n$$\\mathbb E\\left[\\left(\\int_0^TH_tdW_t\\right)^2\\right]=\\mathbb E\\int_0^TH_t^2dt.$$\n\n利用极化或直接展开，还可得协方差公式\n\n$$\\mathbb E\\left[\\left(\\int_0^TH_tdW_t\\right)\\left(\\int_0^TG_tdW_t\\right)\\right]\n=\\mathbb E\\int_0^TH_tG_tdt.$$\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>条件期望，即给定已有信息后，对可能结果按条件概率求平均。</p></aside>\n\n### 权重依赖过去时怎样算交叉项\n\n取 $T=1$，前半段权重为 1，后半段权重为 $W_{1/2}$。令 $A=W_{1/2}$、$B=W_1-W_{1/2}$，则 $A,B$ 独立，均值均为 0，方差均为 $1/2$。对应积分为\n\n$$I=A+AB.$$\n\n后半段权重 $A$ 依赖前半段的路径，所以不能把 $A$ 与整个积分当成独立变量。直接展开：\n\n$$E[I^2]=E[A^2]+2E[A^2B]+E[A^2B^2]\n=\\frac12+0+\\frac12\\times\\frac12=\\frac34.$$\n\n其中 $E[A^2B]=E[A^2]E[B]=0$ 用到了 $A,B$ 的独立性。按等距公式计算则为\n\n$$E\\int_0^1H_t^2dt\n=\\frac12+\\frac12E[W_{1/2}^2]=\\frac34.$$\n\n两条路线给出相同结果。零均值来自每一步增量在权重确定以后才发生；它不要求权重自身是常数。\n\n![权重依赖过去时怎样算交叉项](/assets/figures/theory/walkthrough/adaptive-integrand.svg)\n\n## 积分过程是鞅\n\n令 $I_t=\\int_0^tH_sdW_s$。在每个有限区间满足平方可积条件时，$I_t$ 是平方可积鞅，均值为零。对 $s<t$，\n\n$$\\mathbb E[I_t-I_s\\mid\\mathcal F_s]=0.$$\n\n对应的条件二阶矩为\n\n$$\\mathbb E[(I_t-I_s)^2\\mid\\mathcal F_s]\n=\\mathbb E\\left[\\int_s^tH_u^2du\\mid\\mathcal F_s\\right].$$\n\n如果只研究有限时间 $[0,T]$，不需要额外要求从 0 到无穷的平方积分有限；无限时间收敛才需要进一步的全局控制。\n\n### 条件等距为什么仍然成立\n\n先把 $[s,t]$ 分成网格，并将积分写为 $\\sum_iH_i\\Delta W_i$。交叉项在最后一个增量发生前条件化后为零；对角项满足\n\n$$\\mathbb E[H_i^2(\\Delta W_i)^2\\mid\\mathcal F_s]\n=\\mathbb E[\\mathbb E[H_i^2(\\Delta W_i)^2\\mid\\mathcal F_{t_i}]\\mid\\mathcal F_s]\n=\\Delta t_i\\mathbb E[H_i^2\\mid\\mathcal F_s].$$\n\n对各格求和，再由平方范数逼近取极限，就得到条件二阶矩公式。$H_i$ 可以依赖 $s$ 之后、$t_i$ 之前的信息，故不能直接把它移到最外层 $\\mathcal F_s$ 条件期望之外。\n\n鞅性质的证明也用同样时间顺序：每个未来增量先对发生前信息取条件均值，得到零，再用塔式法则退回 $\\mathcal F_s$。它只给零条件均值，不保证整个条件分布与过去无关。\n\n## 零条件均值不等于独立未来\n\n取 $H_u=W_s$，作用在固定区间 $(s,t]$，则未来积分增量为 $W_s(W_t-W_s)$。给定过去时均值为零，但条件方差为 $W_s^2(t-s)$，显然依赖过去。它不是独立增量。\n\n因此一般伊藤积分是鞅，却未必是高斯过程或具有独立增量。确定性被积函数具有更强结构，将在 Wiener 积分中单独讨论。随机波动系数通常会形成状态依赖的条件分布。\n\n## 为什么积分可以取连续路径版本\n\n简单过程积分在每个区间内都是布朗增量的线性组合，路径连续。取逼近过程 $H^{(n)}$，对应积分 $I^{(n)}$。Doob 不等式和等距关系给出\n\n$$\\mathbb E\\left[\\sup_{t\\le T}|I_t^{(n)}-I_t^{(m)}|^2\\right]\n\\le4\\mathbb E\\int_0^T|H_t^{(n)}-H_t^{(m)}|^2dt.$$\n\n选取误差可求和的子序列，可以获得几乎必然的一致收敛。连续函数的一致极限仍连续，从而构造出积分的连续版本。单有“每两个相近时刻的均方差很小”，本身不足以完成这一步路径证明。\n\n积分还满足 $[I]_t=\\int_0^tH_s^2ds$。随机被积函数会使积分的二次变差随机；当 $H$ 变化时，路径的局部波动强度也随之变化。\n\n> **鲨鱼说** 伊藤等距提供了最直接的误差度量：被积函数在“时间乘概率”的平方平均误差是多少，终点积分的均方误差就是多少。它既是理论构造工具，也是数值检验工具。\n\n### 从终点误差到连续路径\n\n可以选取一列简单逼近，使相邻积分满足 $\\mathbb E[\\sup_{t\\le T}|I_t^{(n+1)}-I_t^{(n)}|^2]\\le2^{-4n}$。Markov 不等式给出相邻路径最大差超过 $2^{-n}$ 的概率不超过 $2^{-2n}$，概率和有限。\n\nBorel–Cantelli 引理使这些超差最终不再发生。而 $\\sum_n2^{-n}$ 收敛，所以相邻差在整段时间上一致可求和，得到连续函数的一致极限。这说明为什么需要 Doob 的最大值控制：仅有每个固定时刻的均方收敛，不能直接保证同一条路径连续。\n\n对简单权重，局部平方增量贡献为 $H_i^2\\Delta t_i$，加总后得到积分的二次变差 $[I]_t=\\int_0^tH_s^2ds$。若 $H$ 随状态变化，这个累计波动尺度也随机；即使 $\\mathbb E[I_t]=0$，不同路径可能积累不同的二次变差。\n\n## 练习：比较两种权重\n\n令 $I=\\int_0^1W_t\\,dW_t$，$J=\\int_0^1t\\,dW_t$。求两者的协方差，判断能否仅凭该结果断言独立。\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n协方差为 $\\mathbb E\\int_0^1tW_tdt=0$，因为每个 $W_t$ 的均值为零。但是零协方差不足以推出独立；这里 $I=(W_1^2-1)/2$ 非正态，不能使用联合正态的结论。\n\n进一步有 $\\operatorname{Cov}(W_1,J)=\\int_0^1t dt=1/2$，二者联合高斯。利用高斯四阶矩公式可得 $\\mathbb E[I J^2]=(1/2)\\times2(1/2)^2=1/4$，而 $\\mathbb E[I]\\mathbb E[J^2]=0$。所以 $I,J$ 实际不独立。\n\n不用直接引用高斯四阶矩，也能计算这个混合矩。令 $Z=W_1$，将 $J$ 正交分解为 $J=Z/2+\\varepsilon$，其中 $\\varepsilon$ 与 $Z$ 独立、均值为零、方差为 $1/12$。于是 $\\mathbb E[J^2\\mid Z]=Z^2/4+1/12$，从而\n\n$$\\mathbb E[IJ^2]=\\frac12\\mathbb E\\left[(Z^2-1)\\left(\\frac{Z^2}{4}+\\frac1{12}\\right)\\right]\n=\\frac18(3-1)+\\frac1{24}(1-1)=\\frac14.$$\n\n这与独立时应有的零值不同，提供了具体反证。零协方差只检查一阶乘积 $IJ$，这里用 $IJ^2$ 检测到了非线性依赖。\n\n</details>\n\n## 代码下载\n\n[下载计算与绘图代码](/assets/downloads/theory/calin-book-05-03.zip)\n\n[补充算例与绘图代码](/assets/downloads/theory-walkthrough/calin-book-05-03.zip)\n",
+  "metadata": {
+    "theory_book": {
+      "book": "stochastic-calculus",
+      "part": "第二部分 · 路径性质与随机微积分",
+      "number": 32,
+      "chapter": "5",
+      "edition": "2026-10",
+      "minutes": 33,
+      "section": "3",
+      "source_pages": [
+        137,
+        138,
+        139,
+        140,
+        141,
+        142
+      ],
+      "chapter_title": "随机积分",
+      "source_sections": [
+        "5.5"
+      ]
+    }
+  }
+}

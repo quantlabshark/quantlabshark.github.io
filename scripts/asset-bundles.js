@@ -4,18 +4,13 @@ const fs=require('node:fs'),path=require('node:path');
 // Keep original order and licenses. These files are build outputs, not source
 // mutations; the release inventory and versioned asset URLs remain reproducible.
 const groups={
- 'site-extras.css':['search-matches.css','community-likes.css'],
- 'site-core.css':['vendor/katex/katex.min.css','site.css','presentation.css','lab.css','home.css','support.css','footer-contact.css','lesson-navigation.css','refinements.css','typography.css','courses.css','topics.css','reader.css','page-outline.css','navigation.css','panda-pet.css','panda-animation.css','panda-character.css','foamlab-theme.css','palettes.css','account-menu.css','profile-avatars.css','site-stats.css','community-byline.css','reply-notifications.css','directory.css','resources-hub.css','sidebar-resize.css','private-notes.css'],
- 'runtime-account.js':['vendor/supabase.js','account.js','site-stats.js','pagination.js'],
- 'runtime-content.js':['vendor/purify.min.js','vendor/marked.js','inline-code.js','math-source.js','math-loader.js','community-replies.js','resources-hub.js','article-aliases.js','lab.js'],
+ 'site-extras.css':['search-matches.css'],
+ 'site-core.css':['vendor/katex/katex.min.css','site.css','presentation.css','lab.css','home.css','support.css','footer-contact.css','lesson-navigation.css','refinements.css','typography.css','courses.css','topics.css','reader.css','page-outline.css','navigation.css','panda-pet.css','panda-animation.css','panda-character.css','foamlab-theme.css','palettes.css','directory.css','resources-hub.css','sidebar-resize.css'],
+ 'runtime-content.js':['vendor/purify.min.js','static-core.js'],
  'runtime-math.js':['vendor/katex/katex.min.js'],
- 'runtime-ui.js':['directory.js','section-page.js','account-menu.js','reply-notifications.js','browser-code.js','footer-contact.js','refinements.js','figure-viewer.js','page-outline.js','private-notes.js','page-views.js'],
- 'runtime-panda-art.js':['panda-art.js','profile-avatars.js'],
- 'runtime-panda-pet.js':['collection-time.js','panda-motion.js','panda-particles.js','panda-pet.js','panda-notes.js']
+ 'runtime-ui.js':['directory.js','browser-code.js','footer-contact.js','refinements.js','figure-viewer.js','page-outline.js'],
+ 'runtime-panda-art.js':['panda-art.js'],
 };
-hexo.extend.helper.register('foam_content_origin',()=>{
- try{const config=JSON.parse(fs.readFileSync(path.join(hexo.source_dir,'assets/auth-config.json'),'utf8')),url=new URL(config.supabaseUrl);return url.protocol==='https:'?url.origin:'';}catch{return '';}
-});
 hexo.foamAssetBundles=new Map();
 hexo.extend.helper.register('foam_bundle_url',name=>{
  const url='/assets/'+name,body=hexo.foamAssetBundles.get(url);

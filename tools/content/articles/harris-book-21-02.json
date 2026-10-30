@@ -1,0 +1,48 @@
+{
+  "slug": "harris-book-21-02",
+  "title": "21.2 实现缺口与未成交机会成本",
+  "summary": "从决策时的理想组合出发，把实际交易差异拆分为成交成本、等待成本、费用和未成交成本。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "交易与交易所：市场微观结构",
+  "sort_order": 4060,
+  "cover_url": "",
+  "section_ids": [
+    "44e2f2e9-a852-5af5-8a72-788df5e2df9d"
+  ],
+  "body": "## 计划交易与成本基准\n\n实现缺口比较两个组合：一个在作出决策时立即按基准价格完成全部目标数量，另一个按真实成交记录执行。两者在同一个评价时点计价。这样既包括已经成交的部分，也包括后来放弃或一直没有成交的部分。\n\n设目标数量为$Q$，决策价为$p_0$，买入方向$s=1$、卖出方向$s=-1$，实际各笔成交为$(q_i,p_i)$，累计成交量$q=\\sum_i q_i$，评价终点价格为$p_T$，总显性费用为$F$。在不考虑期间分红、融资和其他现金流的简化情形下，金额实现缺口为\n\n$$\\mathrm{IS}=s\\sum_i q_i(p_i-p_0)+s(Q-q)(p_T-p_0)+F.$$\n\n第一项是已成交部分相对决策价的成本。第二项是未成交部分的机会成本。第三项是实际费用。卖单必须保留$s=-1$，否则价格下跌造成的未卖出损失会被误记成收益。机会成本也可能为负：计划买入后价格反而下跌，没有买到的部分相对理想组合减少了亏损。\n\n## 一个包含部分成交的算例\n\n自拟案例：决定以10元为基准买入1000股。先以10.02元买400股，再以10.05元买300股，剩余300股没有成交。评价时点股价为10.10元，费用合计5元。\n\n成交价格成本为$400\\times0.02+300\\times0.05=23$元；未成交成本为$300\\times0.10=30$元；总实现缺口为58元。相对原计划名义金额10000元，成本为58个基点。一个基点等于万分之一。\n\n只汇报已成交700股的均价，会遗漏30元机会成本。只降低佣金而使成交更慢，也可能让总成本上升。比较两种算法时，应使用同样的目标数量、决策时点和评价终点。\n\n```python\n# 自拟部分成交数据；仅使用 Python 标准库\ndef shortfall(side, target, decision, fills, terminal, fees):\n    done = sum(q for q, _ in fills)\n    assert side in (-1, 1) and 0 <= done <= target\n    execution = side * sum(q * (p - decision) for q, p in fills)\n    missed = side * (target - done) * (terminal - decision)\n    total = execution + missed + fees\n    return execution, missed, total, total / (target * decision) * 10000\n\nbuy = shortfall(1, 1000, 10, [(400, 10.02), (300, 10.05)], 10.10, 5)\nsell = shortfall(-1, 1000, 10, [(400, 9.98), (300, 9.95)], 9.90, 5)\nfor name, result in [('买入', buy), ('卖出', sell)]:\n    print(name, tuple(round(x, 4) for x in result))\n    assert abs(result[2] - 58) < 1e-9\n```\n\n![部分成交订单的实现缺口分解](/assets/figures/harris/implementation-shortfall.svg)\n\n买入 1000 股的决策中，两笔已成交订单分别产生 8 元和 15 元的价格差异，300 股未成交产生 30 元机会成本，加上 5 元费用，总缺口为 58 元。\n\n## 等待和拆单为什么会被遗漏\n\n把决策、交给交易台、释放给经纪商以及实际成交几个时点的价格连续相减，可以将已成交价格成本分解为经理等待、交易台等待和经纪商执行阶段。对每一笔成交，这些价格差相加仍等于$p_i-p_0$。这些名称主要标识时间区间，不能把区间内全部变化都认定为某个人造成的冲击。\n\n假如第一笔买入推动中点从10元升至10.03元，第二笔在10.05元成交。第二笔相对当时中点只贵0.02元，但相对最初决策价贵0.05元。把每笔交易都换成新的基准，会掩盖拆单累积的影响。母订单应保留统一的原始基准，同时记录子订单的信息。\n\n评价终点也影响结果。今天没买到、明天上涨、下周回落，会产生不同的机会成本。因此应在研究前规定截止时间，并记录撤单和目标数量变更的原因。若目标数量远超可交易规模，假设全量都能按中点成交会严重高估机会成本。计划必须与市场容量相容。\n\n如果持有期间发生分红、融资利息或借券费用，理想组合与实际组合还应按各自持仓和时间计入现金流。多空转换或目标数量修改时，也需要保存新的决策记录，避免把后来新增的交易目标套用到最早价格。将金额成本换成基点时，应说明分母使用原始目标金额还是已成交金额，两种口径不能混着排名。\n\n## 练习\n\n上述买单若全部未成交，终点价格降到9.90元，没有实际费用，实现缺口是多少？是否可以据此断言“永不成交”是最优策略？\n\n<details><summary>查看解答</summary>\n\n实现缺口为$1000\\times(9.90-10)=-100$元，实际组合比假想的立即买入组合少亏100元。但这只是一次结果。执行策略需要兼顾大量订单的目标、信息时效和成交机会；用事后价格选择是否成交，会混入未来信息。\n\n</details>\n\n[返回全书目录](/theory/trading-and-exchanges/)\n\n## 配套代码\n\n[下载本节代码（ZIP）](/assets/downloads/trading-and-exchanges/harris-book-21-02.zip)\n\n压缩包包含完整脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n",
+  "metadata": {
+    "theory_book": {
+      "book": "trading-and-exchanges",
+      "part": "第六部分 · 衡量与评价",
+      "number": 61,
+      "chapter": "21",
+      "edition": "2026-10",
+      "minutes": 7,
+      "section": "21.2",
+      "source_year": 2003,
+      "source_pages": [
+        439,
+        440,
+        441,
+        442,
+        443,
+        444,
+        447,
+        448,
+        449,
+        450
+      ],
+      "chapter_title": "流动性与交易成本的测量",
+      "source_sections": [
+        "21.3 MEASURING TRANSACTION COSTS WITH SPECIFIED PRICE BENCHMARKS",
+        "21.4 PROPERTIES OF TRANSACTION COST PRICE BENCHMARK ESTIMATORS",
+        "21.6 MISSED TRADE OPPORTUNITY COSTS"
+      ]
+    },
+    "code_download": {
+      "url": "/assets/downloads/trading-and-exchanges/harris-book-21-02.zip",
+      "examples": 1
+    }
+  }
+}

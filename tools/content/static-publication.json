@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-30",
+  "mode": "public-static",
+  "article_count": 744,
+  "modules": {
+    "base": 48,
+    "topics": 136,
+    "theory": 394,
+    "interview": 100,
+    "courses": 66
+  },
+  "interview_answers": 637,
+  "browser_checks": 38,
+  "external_requests": [],
+  "page_errors": [],
+  "checks": {
+    "full_text_search": true,
+    "pagination": true,
+    "collapsed_answers": true,
+    "legacy_article_links": true,
+    "reading_without_javascript": true
+  },
+  "retained": [
+    "articles",
+    "figures",
+    "formula rendering",
+    "code downloads",
+    "themes",
+    "chapter navigation"
+  ],
+  "removed": [
+    "database client and configuration",
+    "login and account routes",
+    "admin editor",
+    "private notes and member progress",
+    "database comments and likes",
+    "database visit counters"
+  ],
+  "snapshot_checks": {
+    "mathematics_and_programming_articles": 129,
+    "interview_articles": 100,
+    "interview_body_format_fix": "material-037: protect formula from Markdown link parsing"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "slug": "harris-book-16-02",
+  "title": "16.2 估值误差与赢家诅咒",
+  "summary": "理解为什么赢得交易机会本身带有信息，以及价值交易者为什么需要保留不交易区间。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "交易与交易所：市场微观结构",
+  "sort_order": 4046,
+  "cover_url": "",
+  "section_ids": [
+    "44e2f2e9-a852-5af5-8a72-788df5e2df9d"
+  ],
+  "body": "## 为什么平均正确仍会买贵\n\n假设多人竞价购买同一项资产，其真实价值对大家相同，但目前无法准确知道。每个人用自己的模型和资料估值，有人高估、有人低估。即使每个人的估值在长期平均上没有偏差，最高出价者也更可能来自高估的一端。\n\n如果最高出价者按自己的估值直接出价并支付该价格，“赢得竞价”就可能伴随买贵。赢家诅咒不是说胜出一定亏损，而是说条件样本发生了变化：全部估值的平均误差为零，并不意味着在胜出条件下的平均误差也为零。\n\n用符号写，就是 $E[\\varepsilon]=0$ 未必推出 $E[\\varepsilon\\mid\\text{胜出}]=0$。$\\varepsilon$ 表示估值误差，条件部分要求只观察那些成功取得交易的样本。这与限价单只在某些状态成交的选择效应相似。\n\n## 一个可以重复的模拟\n\n设真实价值为 100，每人的估值误差独立、均值为零、标准差为 5。以下程序仅展示估值选择效应，不模拟完整竞价均衡。价格直接取最高估值，目的是观察“大家平均不偏”与“胜出者偏高”如何同时成立。\n\n```python\nimport random\nfrom statistics import mean\nrng = random.Random(16)\ntrue_value, trials = 100.0, 10000\nfor bidders in (2, 5, 20):\n    errors, winner_errors = [], []\n    for _ in range(trials):\n        estimates = [true_value + rng.gauss(0, 5)\n                     for _ in range(bidders)]\n        errors.extend(x - true_value for x in estimates)\n        winner_errors.append(max(estimates) - true_value)\n    print(bidders, round(mean(errors), 3),\n          round(mean(winner_errors), 3))\n```\n\n第一列是人数，第二列为全部估值的平均误差，第三列为胜出估值的平均误差。第二列接近零，第三列明显为正。参与人数增加，极端高估更容易出现。在真实竞价中，理性参与者会根据这一选择效应调整出价，因此不能把程序结果直接当成真实成交损失预测。\n\n![全部估值与获胜者估值的平均误差](/assets/figures/harris/winner-curse.svg)\n\n图中重现本节模拟。全部估值的平均误差接近零，最高报价者的平均误差却为正；竞价人数越多，被选中的极端高估越明显。\n\n## 如何影响价值交易\n\n价值交易者通常只在市场价格与自己估值差异较大时行动。但“差异很大”既可能是市场错了，也可能是自己的估值错误特别大。若每次都挑出估计最便宜的资产买入，相当于不断选择模型最乐观的部分。仅在全部资产上验证预测平均无偏，不能保证选中组合也无偏。\n\n因此，买入阈值需要考虑估值不确定性、模型遗漏和交易后的信息。卖出也有对应问题：愿意以最低价出售的人，可能是低估最严重的人。价值交易者会在合理估值周围保留一个不交易区间，而不是只要价格略低就买、略高就卖。\n\n## 与逆向选择的区别\n\n赢家诅咒主要强调自己的估值误差与被选中成交之间的关系。逆向选择强调对手方比自己掌握更多信息。两者可同时存在，但不能互相替代。前者即使大家都诚实使用带噪声的估计也会出现。后者则涉及信息在交易双方之间的不均衡。\n\n误差越大、竞争估值的人越多，选择效应越值得重视。若是双边统一价格拍卖，成交价由买卖双方共同形成，而非每个赢家都支付自己的最高出价，极端估值对实际支付价格的影响可能减弱。这说明竞价规则会改变赢家诅咒的强弱，不能把所有市场一概而论。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>逆向选择，即交易对手掌握的信息差异，使成交样本偏向对自身不利状态的现象。</p></aside>\n\n## 研究成本也需要由成功交易覆盖\n\n研究者不仅分析最后成交的资产，也会花时间排除大量没有机会的资产。可交易机会稀少时，少数成功交易需要覆盖全部研究活动、融资和持仓风险。这也是外围价差较宽的原因。提高成交次数若只是放宽了证据标准，可能增加错误而非提高效率。\n\n## 练习\n\n从 500 只股票中挑出模型预计收益最高的 5 只，能否直接使用全样本平均预测误差作为这 5 只股票的误差判断？\n\n<details><summary>查看解答</summary>\n\n不能。选择最高预测值会倾向选中正向误差较大的样本，应在与实际选股规则一致的条件下评估预测表现，使用样本外验证，并考虑极端预测的收缩。否则全样本看似无偏，实际组合仍可能系统性过于乐观。\n\n</details>\n\n[返回全书目录](/theory/trading-and-exchanges/)\n\n## 配套代码\n\n[下载本节代码（ZIP）](/assets/downloads/trading-and-exchanges/harris-book-16-02.zip)\n\n压缩包包含完整脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n",
+  "metadata": {
+    "theory_book": {
+      "book": "trading-and-exchanges",
+      "part": "第四部分 · 流动性供给",
+      "number": 47,
+      "chapter": "16",
+      "edition": "2026-10",
+      "minutes": 8,
+      "section": "16.2",
+      "source_year": 2003,
+      "source_pages": [
+        353,
+        354,
+        355,
+        356,
+        357
+      ],
+      "chapter_title": "价值交易者",
+      "source_sections": [
+        "16.2 THE OUTSIDE SPREAD AND ITS DETERMINANTS"
+      ]
+    },
+    "code_download": {
+      "url": "/assets/downloads/trading-and-exchanges/harris-book-16-02.zip",
+      "examples": 1
+    }
+  }
+}

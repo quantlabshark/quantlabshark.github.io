@@ -1,0 +1,39 @@
+{
+  "slug": "miller-book-02-03",
+  "title": "Python 容器性能与计时实验",
+  "summary": "按操作比较列表、字典和双端队列，分离数据准备与计时，解释多规模实验。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8009,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "“使用列表”并不能单独确定复杂度。读取一个索引、在尾部追加、在开头删除，都操作同一容器，却有不同的数据移动量。\n\n## 列表的成本来自移动引用\n\n| 操作 | 通常的成本 | 原因 |\n| --- | --- | --- |\n| a[i]、a[i]=x | O(1) | 由索引定位 |\n| append(x) | 摊还 O(1) | 通常写入空余位置，偶尔扩容 |\n| pop() | O(1) | 删除尾部 |\n| insert(0,x)、pop(0) | O(n) | 后续引用整体移动 |\n| x in a | O(n) | 最坏逐项比较 |\n| a[i:j] | O(k) | 复制切片中 k 个引用 |\n| a+b | O(len(a)+len(b)) | 建立拼接结果 |\n\n循环执行 `result = result + [x]`，会依次复制长度 1、2、…、n，总量 $n(n+1)/2$。使用 append 则利用预留容量，多次追加的总成本为线性。\n\n## 字典和集合适合按键访问\n\n在哈希和相等比较可视为常数成本时，字典按键读取、插入、删除平均为 O(1)，遍历全部 n 个键仍为 O(n)。极端冲突可能使单次操作退化，长字符串的计算成本也应根据实际问题计入。\n\n队列若频繁从头部删除，可使用 `collections.deque` 的 popleft，避免列表整体移动。deque 的两端操作高效，但不适合频繁在中间按索引访问。选择容器需要看全部主要操作。\n\n## 计时对象必须保持一致\n\n用 timeit 重复运行待测函数，将输入生成、结果展示和计时分开。测一次 pop(0) 后，原列表变短；若继续计时，后续操作面对的规模已变化。可每次重建数据，或明确定义测量的是“删除全部元素”的总成本。\n\n本节程序比较两种建立列表的方法。每次函数调用都从空列表开始，最终返回相同的 range(n) 序列。输入规模取 500、1000、2000，每个规模多次测量。计时范围包含整段构建过程，因而可比较累计复制的代价。\n\n## 用时间比例理解增长\n\n若实测时间近似 $T(n)=an$，则 $T(2n)/T(n)\\approx2$；若近似 $bn^2$，比例约为 4。解释器调用、缓存、内存分配和其他进程会使小规模结果偏离理论比例。记录规模与重复次数，查看多次测量分布，可判断偏差是否主要来自固定开销。\n\n取重复结果中的最小值可减少其他进程干扰的影响，但它代表较少干扰时的耗时；比较日常运行波动时，也应记录中位数或范围。不要将一次读数直接外推到所有机器和数据规模。\n\n> **鲨鱼说** 构造容器和在容器中查询是两项成本。一次性查询时，先建集合可能不划算；重复查询很多次时，较低的单次成本才会逐渐抵消建表开销。\n\n## Python 实现\n\n~~~python\nfrom timeit import repeat\ndef append_build(n):\n    result=[]\n    for i in range(n):result.append(i)\n    return result\ndef concat_build(n):\n    result=[]\n    for i in range(n):result=result+[i]\n    return result\nfor n in (500,1000,2000):\n    a=min(repeat(lambda:append_build(n),number=5,repeat=3))\n    b=min(repeat(lambda:concat_build(n),number=5,repeat=3))\n    print(n,'append',a,'concatenation',b)\n    assert append_build(n)==concat_build(n)\n~~~\n\n## 练习\n1. 比较循环append与反复列表拼接生成序列的时间增长。\n2. 设计一个比较列表成员查找与集合成员查找的实验，把容器创建时间单独记录。\n\n[本章习题](/read/?slug=miller-book-02-04)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-02-03.zip",
+        "label": "Python 容器性能与计时实验 · Python 示例",
+        "size_bytes": 1018,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第一部分 · 编程与算法基础",
+      "number": 9,
+      "chapter": "2",
+      "edition": "2026-10",
+      "minutes": 13,
+      "section": "3",
+      "chapter_title": "算法分析",
+      "source_sections": [
+        "2.3",
+        "2.3.1",
+        "2.3.2"
+      ]
+    }
+  }
+}

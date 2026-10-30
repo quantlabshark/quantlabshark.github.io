@@ -6,4 +6,4 @@ description:
 ---
 ## 参与建设
 
-在[讨论中心](/community/)反馈问题；在[作者工作台](/studio/)分享研究笔记；在 [GitHub](https://github.com/quantlabshark/quantlabshark.github.io/issues) 提交可复现的问题说明。
+在 [GitHub](https://github.com/quantlabshark/quantlabshark.github.io/issues) 提交课程勘误、学习问题和网站建议。附上对应文章地址与复现过程，便于核对。

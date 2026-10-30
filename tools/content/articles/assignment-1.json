@@ -1,0 +1,15 @@
+{
+  "slug": "assignment-1",
+  "title": "实践 1 · 数据审计",
+  "summary": "提交数据来源、字段说明、重复日期和缺失值检查。",
+  "kind": "assignment",
+  "track": "",
+  "series": "",
+  "sort_order": 40,
+  "cover_url": "",
+  "section_ids": [
+    "eef736ef-be09-4f13-99d4-433464d67f07"
+  ],
+  "body": "## 任务\n\n选择一份行情数据，说明取得时间、样本范围、字段含义和单位。检查日期顺序、重复记录与缺失值，并逐项解释处理方法。\n\n## 提交材料\n\n提交数据字典、检查代码和问题清单。清单记录问题位置、原因判断、处理方式及受影响的行数。\n\n## 评价标准\n\n数据与时间范围说明占 30%，检查过程可复现占 40%，处理理由占 30%。\n\n## 提交方式\n\n在[GitHub 作业提交](https://github.com/quantlabshark/quantlabshark.github.io/issues/new?template=assignment.yml)中填写任务编号、方法、结果与代码链接。提交内容公开可见，需使用 GitHub 账号；账号令牌和个人隐私信息保留在本机。讨论题目时，也可在[讨论中心](/community/)发帖。\n",
+  "metadata": {}
+}

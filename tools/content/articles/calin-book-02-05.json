@@ -1,0 +1,37 @@
+{
+  "slug": "calin-book-02-05",
+  "title": "正态、对数正态与 Gamma 分布",
+  "summary": "从加性误差、乘性变化和等待时间认识正态、对数正态、Gamma 与卡方分布。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "随机微积分及其应用",
+  "sort_order": 5008,
+  "cover_url": "",
+  "section_ids": [
+    "17859c88-b779-5654-b120-7a4cc7b39714"
+  ],
+  "body": "## 正态分布的参数与标准化\n\n若 $X\\sim N(\\mu,\\sigma^2)$，其密度为\n\n$$p(x)=\\frac1{\\sigma\\sqrt{2\\pi}}\\exp\\left[-\\frac{(x-\\mu)^2}{2\\sigma^2}\\right],\\qquad\\sigma>0.$$\n\n$\\mu$ 决定中心，$\\sigma$ 决定宽度。标准化 $Z=(X-\\mu)/\\sigma$ 后，$Z\\sim N(0,1)$。线性变换 $aX+b$ 的均值为 $a\\mu+b$，方差为 $a^2\\sigma^2$，标准差为 $|a|\\sigma$。\n\n矩母函数将各阶矩集中在一个函数中，对参数求导即可取得相应期望。正态分布的矩母函数为 $\\mathbb E[e^{tX}]=e^{\\mu t+\\sigma^2t^2/2}$。对 $t$ 求导并令 $t=0$ 可以得到各阶矩。标准正态的奇数阶矩为零，二阶矩为 1，四阶矩为 3。这些结果将用于计算布朗增量的平方和。\n\n独立正态变量之和仍为正态，均值与方差分别相加。例如两个独立误差的标准差为 3 和 4，其和的标准差为 $\\sqrt{3^2+4^2}=5$，不是 7。\n\n### 正态指数矩的计算步骤\n\n先取标准正态 $Z$，将指数合并并完成平方：\n\n$$\\mathbb E[e^{uZ}]=\\frac1{\\sqrt{2\\pi}}\\int_{\\mathbb R}e^{-z^2/2+uz}dz\n=e^{u^2/2}\\frac1{\\sqrt{2\\pi}}\\int_{\\mathbb R}e^{-(z-u)^2/2}dz=e^{u^2/2}.$$\n\n最后一个积分等于 1，因为只是把标准正态密度平移。若 $X=\\mu+\\sigma Z$，便得到 $e^{\\mu u}\\mathbb E[e^{u\\sigma Z}]=e^{\\mu u+\\sigma^2u^2/2}$。在零点求一阶和二阶导数，分别得到 $\\mathbb E[X]=\\mu$、$\\mathbb E[X^2]=\\mu^2+\\sigma^2$；继续求导可得到标准正态四阶矩 3。\n\n计算正态区间概率时，先标准化再查 $\\Phi$。例如 $X\\sim N(10,4)$，则 $\\mathbb P(8\\le X\\le12)=\\Phi(1)-\\Phi(-1)\\approx0.6827$。这里第二个参数 4 是方差，标准差为 2。\n\n## 正态变量的指数为什么偏斜\n\n若 $Y=e^X$，其中 $X\\sim N(\\mu,\\sigma^2)$，称 $Y$ 服从对数正态分布。因为指数始终为正，$Y$ 适合描述正值的乘性变化。由变量变换，\n\n$$p_Y(y)=\\frac1{y\\sigma\\sqrt{2\\pi}}\n\\exp\\left[-\\frac{(\\log y-\\mu)^2}{2\\sigma^2}\\right],\\quad y>0.$$\n\n利用正态矩母函数，$\\mathbb E[Y^k]=e^{k\\mu+k^2\\sigma^2/2}$，因此\n\n$$\\mathbb E[Y]=e^{\\mu+\\sigma^2/2},\\qquad\n\\operatorname{Var}(Y)=e^{2\\mu+\\sigma^2}(e^{\\sigma^2}-1).$$\n\n中位数为 $e^\\mu$。取 $\\mu=0,\\sigma=0.5$，中位数为 1，均值约为 1.133，方差约为 0.365。右侧较长的尾部使均值高于中位数。\n\n对数正态密度中的 $1/y$ 也可直接检查：原变量是 $x=\\log y$，因此 $dx/dy=1/y$，变换后的密度要乘这个伸缩因子。指数变换把原来等宽的对数区间变成不同宽度的正值区间，不能只把正态密度中的 $x$ 换为 $\\log y$ 就结束。\n\n若 $Y_1,Y_2$ 独立且对数都为正态，则乘积的对数是两个正态之和，乘积仍为对数正态；但两个对数正态变量的和一般不属于同一分布族。乘法闭合与加法闭合来自不同的变换，不能互换。\n\n## Gamma 分布统一描述若干等待时间\n\n采用形状参数 $\\alpha>0$、尺度参数 $\\beta>0$，Gamma 密度为\n\n$$p(x)=\\frac{x^{\\alpha-1}e^{-x/\\beta}}{\\Gamma(\\alpha)\\beta^\\alpha},\\quad x>0.$$\n\n其中 $\\Gamma(\\alpha)=\\int_0^\\infty u^{\\alpha-1}e^{-u}du$，满足 $\\Gamma(\\alpha+1)=\\alpha\\Gamma(\\alpha)$。将密度乘以 $x$ 或 $x^2$ 后积分，利用这一递推关系得 $\\mathbb E[X]=\\alpha\\beta$、$\\operatorname{Var}(X)=\\alpha\\beta^2$。\n\n当 $\\alpha=1$ 时，是参数为 $\\lambda=1/\\beta$ 的指数分布，均值为 $1/\\lambda$。若 $n$ 段独立等待时间都服从同一指数分布，它们的和服从形状 $n$、尺度 $1/\\lambda$ 的 Gamma 分布。平均每小时发生 2 次事件时，等到第 3 次事件的平均时间为 $3/2$ 小时，方差为 $3/4$ 小时平方。\n\n### Gamma 函数怎样给出分布矩\n\n分部积分得到 $\\Gamma(\\alpha+1)=\\alpha\\Gamma(\\alpha)$，并有 $\\Gamma(1)=1$，所以正整数处 $\\Gamma(n)=(n-1)!$。对 Gamma 变量，计算 $q$ 阶矩并换元 $u=x/\\beta$：\n\n$$\\mathbb E[X^q]=\\frac1{\\Gamma(\\alpha)\\beta^\\alpha}\\int_0^\\infty x^{\\alpha+q-1}e^{-x/\\beta}dx\n=\\beta^q\\frac{\\Gamma(\\alpha+q)}{\\Gamma(\\alpha)},\\quad q> -\\alpha.$$\n\n取 $q=1$ 得 $\\alpha\\beta$，取 $q=2$ 得 $\\alpha(\\alpha+1)\\beta^2$，再减去均值平方便得到 $\\alpha\\beta^2$。不仅公式相似，均值和方差确实由同一个积分恒等式产生。\n\n形状参数决定起点附近的行为：$\\alpha<1$ 时密度在零附近较高，$\\alpha=1$ 时为指数分布，$\\alpha>1$ 时密度从零开始上升并在 $(\\alpha-1)\\beta$ 达峰。尺度参数则同时把横轴、均值和标准差按比例拉伸。\n\n## 独立等待时间之和与 Gamma 密度\n\n对独立非负变量 $X,Y$，和 $S=X+Y$ 的密度为\n\n$$p_S(s)=\\int_0^s p_X(x)p_Y(s-x)dx.$$\n\n若两者都是参数 $\\lambda$ 的指数分布，则\n\n$$p_S(s)=\\int_0^s\\lambda e^{-\\lambda x}\\lambda e^{-\\lambda(s-x)}dx\n=\\lambda^2se^{-\\lambda s}.$$\n\n这是形状为 2 的 Gamma 密度。若两个指数参数分别为 $\\lambda_1\\ne\\lambda_2$，同样积分得到\n\n$$p_S(s)=\\frac{\\lambda_1\\lambda_2}{\\lambda_1-\\lambda_2}\n(e^{-\\lambda_2s}-e^{-\\lambda_1s}).$$\n\n卷积积分中的 $x$ 表示第一项的取值，第二项就必须取 $s-x$。独立性将联合密度写成乘积；对所有可能拆分累加才得到和的密度。非负支持把积分域限制为 $0<x<s$；对一般实值变量，积分域应是整个实数轴。\n\nGamma 的可加性可用 Laplace 变换检查。若 $X\\sim\\operatorname{Gamma}(\\alpha,\\beta)$，则 $\\mathbb E[e^{-sX}]=(1+\\beta s)^{-\\alpha}$。两个独立变量具有相同尺度 $\\beta$ 时，和的变换是两式之积，等于 $(1+\\beta s)^{-(\\alpha_1+\\alpha_2)}$，因此形状相加。尺度不同则不能直接使用这条结论。\n\n一个标准正态的平方密度为 $e^{-x/2}/\\sqrt{2\\pi x}$，与 Gamma 密度比较可读出形状 $1/2$、尺度 2。再用独立 Gamma 可加性，便得到 $n$ 个平方和的形状 $n/2$，这给出了卡方分布的参数来源。\n\n## 卡方分布来自平方和\n\n若 $Z_1,\\ldots,Z_n$ 独立且均为标准正态，则 $Q=\\sum_{j=1}^n Z_j^2\\sim\\chi_n^2$。它也是 $\\operatorname{Gamma}(n/2,2)$，因此均值为 $n$、方差为 $2n$。这里相加的是平方；直接把正态变量相加得到的是正态分布。\n\n> **鲨鱼说** Gamma 分布有“尺度”和“速率”两种参数写法。尺度 $\\beta$ 与速率 $\\lambda$ 互为倒数。看到公式先检查指数是 $e^{-x/\\beta}$ 还是 $e^{-\\lambda x}$，再代入均值。\n\n## 练习：误差平方与等待时间\n\n四个独立标准正态误差的平方和记为 $Q$。另有四段独立的指数等待时间，每段平均 2 分钟，总和记为 $S$。比较两者分布。\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n$Q\\sim\\operatorname{Gamma}(2,2)$，均值为 4，方差为 8。$S\\sim\\operatorname{Gamma}(4,2)$，均值为 8 分钟，方差为 16 分钟平方。两者尺度相同，但形状不同：一个标准正态平方贡献形状 $1/2$，一段指数等待时间贡献形状 1。它们属于同一分布族，并不代表数值分布相同。\n\n</details>\n\n## 代码下载\n\n[下载计算与绘图代码](/assets/downloads/theory/calin-book-02-05.zip)\n",
+  "metadata": {
+    "theory_book": {
+      "book": "stochastic-calculus",
+      "part": "第一部分 · 概率与随机过程",
+      "number": 8,
+      "chapter": "2",
+      "edition": "2026-10",
+      "minutes": 42,
+      "section": "5",
+      "source_pages": [
+        36,
+        37,
+        38,
+        40,
+        41
+      ],
+      "chapter_title": "概率与条件期望",
+      "source_sections": [
+        "2.10",
+        "2.11"
+      ]
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "slug": "calin-book-04-05",
+  "title": "带漂移的首达时间与 Laplace 变换",
+  "summary": "用指数鞅和边值方程计算单边、双边首达概率及时间矩，处理未到达与跳跃超调。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "随机微积分及其应用",
+  "sort_order": 5026,
+  "cover_url": "",
+  "section_ids": [
+    "17859c88-b779-5654-b120-7a4cc7b39714"
+  ],
+  "body": "## 漂移改变到达的方向\n\n令 $X_t=\\mu t+\\sigma W_t$，其中 $\\sigma>0$，首次到达 $a>0$ 的时间为 $\\tau_a$。若 $\\mu>0$，漂移向目标推进；若 $\\mu<0$，路径可能永远不到达。因此先研究带指示的 Laplace 变换\n\n$$L(s)=\\mathbb E[e^{-s\\tau_a}\\mathbf1_{\\{\\tau_a<\\infty\\}}],\\qquad s\\ge0.$$\n\n令 $\\theta=(\\sqrt{\\mu^2+2\\sigma^2s}-\\mu)/\\sigma^2$，它满足 $\\mu\\theta+\\sigma^2\\theta^2/2=s$。指数过程 $e^{\\theta X_t-st}$ 是鞅。在首达时刻的截断上停止，再使用相应界控制极限，可得\n\n$$L(s)=\\exp\\left[\\frac a{\\sigma^2}\\left(\\mu-\\sqrt{\\mu^2+2\\sigma^2s}\\right)\\right].$$\n\n### Laplace 变换把等待时间转成什么\n\n当 $s>0$ 时，$e^{-s\\tau}$ 对较长等待赋予较小权重，而且取值在 0 与 1 之间，适合在等待时间均值可能无穷时使用。若存在永不到达的情形，约定其贡献为零。令 $s\\downarrow0$，变换趋于最终到达概率，而不是未经检查就必然等于 1。\n\n若最终必到且相关矩有限，$-L'(0)=\\mathbb E[\\tau]$、$L''(0)=\\mathbb E[\\tau^2]$。导数由 $e^{-s\\tau}$ 的导数产生，取零点极限时仍需矩存在或使用单调极限。这也允许从导数发散识别无穷均值。\n\n指数鞅中为什么选择正根？要到达的是正水平 $a$，$e^{\\theta X_{t\\wedge\\tau_a}-s(t\\wedge\\tau_a)}$ 在 $\\theta\\ge0$ 时由 $e^{\\theta a}$ 控制。方程 $\\mu\\theta+\\sigma^2\\theta^2/2=s$ 有两个根，选择非负根使停止与极限的控制自然成立。最终停止位置等于 $a$，才把随机位置从指数中换成固定边界。\n\n## 从变换恢复密度\n\n逆 Laplace 变换给出有限到达时间的密度\n\n$$f(t)=\\frac a{\\sigma\\sqrt{2\\pi t^3}}\n\\exp\\left[-\\frac{(a-\\mu t)^2}{2\\sigma^2t}\\right],\\qquad t>0.$$\n\n验证时可把指数拆成 $-a^2/(2\\sigma^2t)+a\\mu/\\sigma^2-\\mu^2t/(2\\sigma^2)$，再使用积分恒等式\n\n$$\\int_0^\\infty t^{-3/2}e^{-A/t-Bt}dt=\\sqrt{\\frac\\pi A}e^{-2\\sqrt{AB}},\\quad A,B>0.$$\n\n对密度乘 $e^{-st}$ 后积分，恰好恢复 $L(s)$，这比仅凭分布名称匹配更可靠。\n\n当 $\\mu>0$ 时，总概率为 1，密度为逆高斯分布，均值 $a/\\mu$，方差 $a\\sigma^2/\\mu^3$。当 $\\mu=0$ 时，仍几乎必然到达，但平均时间无穷。若 $\\mu<0$，有限到达概率为 $L(0)=e^{2\\mu a/\\sigma^2}<1$，其余概率放在 $+\\infty$。\n\n所以负漂移时无条件 $\\mathbb E[\\tau_a]=\\infty$。有限密度的一阶矩 $\\int_0^\\infty tf(t)dt$ 只统计到达路径，不能称为无条件平均到达时间。条件于最终到达，平均时间为 $a/|\\mu|$。\n\n对 $\\mu>0$，将密度与逆高斯形式逐项对照，可读出均值参数 $m=a/\\mu$ 和形状参数 $\\lambda_*=a^2/\\sigma^2$。也可直接对 $\\log L(s)$ 求导：一阶导在零点为 $-a/\\mu$，二阶导为 $a\\sigma^2/\\mu^3$，后者就是方差。\n\n若 $\\mu<0$，先将有限到达密度除以 $p=e^{2\\mu a/\\sigma^2}$，才得到条件于到达的概率密度。化简后，它与把漂移换成 $|\\mu|$ 的正漂移首达密度相同。因此条件均值是 $a/|\\mu|$，条件方差是 $a\\sigma^2/|\\mu|^3$；无条件变量仍以概率 $1-p$ 为无穷。\n\n## 双边退出概率\n\n在达到 $a$ 或 $-b$ 时停止，记时间为 $\\tau$，上边退出概率为 $p$。对 $\\mu\\ne0$，可以停止指数鞅 $e^{-2\\mu X_t/\\sigma^2}$，或求解边值方程，得到\n\n$$p=\\frac{1-e^{-2\\mu b/\\sigma^2}}{1-e^{-2\\mu(a+b)/\\sigma^2}}.$$\n\n当 $\\mu\\to0$，用指数展开得到 $p=b/(a+b)$。再对鞅 $X_t-\\mu t$ 使用停止定理，得\n\n$$\\mathbb E[\\tau]=\\frac{ap-b(1-p)}\\mu.$$\n\n在零漂移极限下，它趋于 $ab/\\sigma^2$。例如 $a=b=1,\\mu=0.5,\\sigma=1$，$p=1/(1+e^{-1})\\approx0.7311$，平均退出时间约为 0.9242。\n\n## 双边时间的变换不能随意拆乘积\n\n退出时间与退出方向一般有关，不能默认独立。正确方法是设 $u(x)=\\mathbb E_x[e^{-s\\tau}]$，解\n\n$$\\frac{\\sigma^2}{2}u''+\\mu u'=su,\\qquad u(-b)=u(a)=1.$$\n\n令 $\\kappa=\\sqrt{\\mu^2+2\\sigma^2s}/\\sigma^2$，解线性微分方程得到\n\n$$u(0)=\\frac{e^{-\\mu b/\\sigma^2}\\sinh(\\kappa a)+e^{\\mu a/\\sigma^2}\\sinh(\\kappa b)}{\\sinh(\\kappa(a+b))}.$$\n\n零漂移且 $a=b$ 时简化为 $1/\\cosh(a\\sqrt{2s}/\\sigma)$。在 $s=0$ 附近展开，可得平均时间 $a^2/\\sigma^2$、二阶矩 $5a^4/(3\\sigma^4)$。\n\n### 边值方程从一步条件平均产生\n\n在边界内部从 $x$ 出发，等待很短时间 $h$，位置增量的条件均值为 $\\mu h$、二阶矩的一阶项为 $\\sigma^2h$。对光滑的变换函数 $u$，动态关系为 $u(x)=e^{-sh}\\mathbb E_x[u(X_h)]$。将两边展开到 $h$ 的一阶：\n\n$$u(x)=u(x)+h\\left(\\mu u'(x)+\\frac{\\sigma^2}{2}u''(x)-su(x)\\right)+o(h).$$\n\n令一阶系数为零，得到前面的 ODE。到达任一边界后等待时间为零，所以边界值是 $e^0=1$。若计算上边退出概率，同一方程取 $s=0$，边界则改为 $p(-b)=0,p(a)=1$。\n\n解变换方程时，令 $u(x)=e^{-\\mu x/\\sigma^2}v(x)$，一阶导数项被消掉，剩下 $v''=\\kappa^2v$。其解是双曲正弦、余弦或两指数的线性组合，代入两个边界确定常数，才得到 $u(0)$ 的显式式子。该推导不假设退出时间与退出方向独立。\n\n对零漂移、对称边界，$L(s)=\\operatorname{sech}(a\\sqrt{2s}/\\sigma)$。利用 $\\operatorname{sech}z=1-z^2/2+5z^4/24+O(z^6)$，比较 $L(s)=1-s\\mathbb E[\\tau]+s^2\\mathbb E[\\tau^2]/2+\\cdots$，得二阶矩 $5a^4/(3\\sigma^4)$，方差为 $2a^4/(3\\sigma^4)$。\n\n## 计数首达与超调\n\nPoisson 过程达到水平 $c>0$ 的时间，实际是第 $\\lceil c\\rceil$ 次到达，平均为 $\\lceil c\\rceil/\\lambda$。补偿过程 $N_t-\\lambda t$ 的向上越界则更复杂：跳跃会跨过边界，停止值通常不等于边界。指数停止公式中必须保留实际超调，不能把它替换为固定阈值。\n\n> **鲨鱼说** 用首达时间公式前，先回答三件事：是否最终必到、路径是否连续、计算的是无条件平均还是条件于到达的平均。这三项会改变公式的含义。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>补偿过程，即从事件计数或累计支付中减去其条件平均累积后得到的过程。</p></aside>\n\n## 练习：逆漂移方向的到达\n\n$X_t=-t+0.5W_t$ 从零出发，求最终达到 1 的概率、条件于到达的平均时间，以及无条件平均时间。\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n$\\mu=-1,\\sigma^2=0.25,a=1$，所以到达概率为 $e^{2\\mu a/\\sigma^2}=e^{-8}\\approx0.00033546$。条件于到达，平均时间为 $a/|\\mu|=1$。由于以正概率永远不到达，无条件 $\\mathbb E[\\tau_1]=\\infty$。有限密度的一阶矩为 $e^{-8}$，它是“条件均值乘到达概率”，不能代替无条件平均等待时间。\n\n</details>\n\n## 代码下载\n\n[下载计算与绘图代码](/assets/downloads/theory/calin-book-04-05.zip)\n",
+  "metadata": {
+    "theory_book": {
+      "book": "stochastic-calculus",
+      "part": "第二部分 · 路径性质与随机微积分",
+      "number": 26,
+      "chapter": "4",
+      "edition": "2026-10",
+      "minutes": 40,
+      "section": "5",
+      "source_pages": [
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "chapter_title": "停止时间与路径性质",
+      "source_sections": [
+        "4.5",
+        "4.6"
+      ]
+    }
+  }
+}

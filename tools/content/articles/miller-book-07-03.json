@@ -1,0 +1,40 @@
+{
+  "slug": "miller-book-07-03",
+  "title": "骑士周游与回溯搜索",
+  "summary": "用棋盘邻接图建立周游搜索，解释当前路径标记、回溯和最少剩余度数启发式。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8039,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "骑士周游要求从一个格子出发，按骑士走法访问每格恰好一次。它要求一条连续路线覆盖所有顶点，区别于“通过搜索过程曾经访问所有格子”。\n\n## 棋盘转换为图\n\n骑士一步的坐标增量为 (±1,±2) 或 (±2,±1)，共八种。对 n×n 棋盘过滤越界坐标，得到每格邻居。角落 (0,0) 只有 (1,2)、(2,1) 两个候选，内部位置最多八个。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/knight.svg\" alt=\"棋盘中央骑士可到达的八个位置，每步分别移动一格和两格。\" loading=\"lazy\"></figure>\n\nV=n²，度数至多 8，构图为 O(n²)。周游是这张图上的 Hamilton 路径；若最后一格还可跳回起点，则是闭合周游。\n\n## 每次选择一格\n\n维护 path 和 used。进入候选格后加入两者，递归选择下一个未使用邻居；path 长度达到 n² 时成功。没有可走邻居但尚未覆盖棋盘，说明当前分支失败，删除末格并从 used 撤销，再尝试其他候选。\n\nused 表示当前路线占用的格子。失败分支中的格子在另一条路线里仍可能有用，因此不能像普通可达性 DFS 那样永久标记。\n\n## 回溯检查什么\n\n从 (0,0) 选到 (1,2) 后，后继不能再回 (0,0)，因为会重复格子。若某条路线提前被封闭，回退到最近仍有其他候选的节点。每一次递归都使用不同的“已占用集合”，这也是搜索可能重复处理同一坐标的原因。\n\n得到路线后应独立检查三项：共有 n² 个互异格子；所有坐标在棋盘内；相邻两格坐标差的绝对值排序后都是 [1,2]。闭合问题还要检查末格至首格。\n\n## 优先处理容易被封死的位置\n\nWarnsdorff 规则给每个候选格计算“当前未访问邻居数”，优先尝试较少者。若先走活动空间大的格子，狭窄位置可能后来无法接入；提前安排它们常能减少死路。\n\n剩余度数应随 used 更新，不能只按初始棋盘度数排序。相同度数可按固定坐标顺序打破平局，保证演示可重复。启发式只改变尝试顺序，保留回溯才能在首选失败后继续搜索。\n\n## 不沿用普通遍历的线性界\n\n普通 DFS 只展开每个顶点一次，为 O(V+E)。周游搜索反复尝试不同路径，最坏组合数呈指数增长；启发式减少常见输入的搜索量，但未提供普遍多项式保证。当前路径最多 V 个格子，递归与 used 占 O(V)。\n\n> **鲨鱼说** 周游的困难在于“一步接一步且不重复”，不是棋盘能否连通。图表示明确了合法移动，仍需搜索这些移动能否组成一条覆盖全部格子的路线。\n\n## Python 实现\n\n~~~python\ndef knight_tour(n=5,start=(0,0)):\n    moves=((1,2),(2,1),(2,-1),(1,-2),(-1,-2),(-2,-1),(-2,1),(-1,2))\n    def neighbors(p):\n        return [(p[0]+dx,p[1]+dy) for dx,dy in moves\n                if 0<=p[0]+dx<n and 0<=p[1]+dy<n]\n    path=[start];seen={start}\n    def search():\n        if len(path)==n*n:return True\n        options=[q for q in neighbors(path[-1]) if q not in seen]\n        options.sort(key=lambda q:sum(v not in seen for v in neighbors(q)))\n        for q in options:\n            path.append(q);seen.add(q)\n            if search():return True\n            seen.remove(q);path.pop()\n        return False\n    return path.copy() if search() else None\npath=knight_tour()\nassert path is not None and len(set(path))==25\nassert all(sorted((abs(a[0]-b[0]),abs(a[1]-b[1])))==[1,2]\n           for a,b in zip(path,path[1:]))\nfor row in range(5):\n    print([path.index((row,col))+1 for col in range(5)])\n~~~\n\n## 练习\n1. 列出5×5棋盘左上角和中心格的合法邻居。\n2. 比较固定邻居顺序与最少剩余度数优先时的递归调用次数。\n\n[本章习题](/read/?slug=miller-book-07-08)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-07-03.zip",
+        "label": "骑士周游与回溯搜索 · Python 示例",
+        "size_bytes": 1213,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第三部分 · 图算法与进阶应用",
+      "number": 39,
+      "chapter": "7",
+      "edition": "2026-10",
+      "minutes": 11,
+      "section": "3",
+      "chapter_title": "图及其算法",
+      "source_sections": [
+        "7.5.1",
+        "7.5.2",
+        "7.5.3",
+        "7.5.4"
+      ]
+    }
+  }
+}

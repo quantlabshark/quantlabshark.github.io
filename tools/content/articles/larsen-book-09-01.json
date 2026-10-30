@@ -1,0 +1,39 @@
+{
+  "slug": "larsen-book-09-01",
+  "title": "两个独立总体的均值比较",
+  "summary": "推导独立均值差的标准误，比较合并方差 t 方法与 Welch 方法，并计算区间。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7049,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "比较两个总体的均值时，两组抽样都会带来误差。先计算均值差的方差，再决定如何估计其中的未知总体方差。\n\n## 独立均值差\n\n两组样本量为 $n_X,n_Y$，均值为 $\\mu_X,\\mu_Y$，方差为 $\\sigma_X^2,\\sigma_Y^2$。由于组间独立，$D=\\bar X-\\bar Y$ 满足\n\n$$E(D)=\\mu_X-\\mu_Y,\\qquad\\operatorname{Var}(D)=\\frac{\\sigma_X^2}{n_X}+\\frac{\\sigma_Y^2}{n_Y}.$$\n\n减法并不会减去误差方差：中心化后平方，负号被平方消除，而独立性使交叉项为零。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/two-sample.svg\" alt=\"比较两个总体时，均值差与组内离散程度共同影响统计量。\" loading=\"lazy\"></figure>\n\n## 共同方差的精确 t 推断\n\n若两总体正态、具有共同方差，合并两组残差平方和得到\n\n$$S_p^2=\\frac{(n_X-1)S_X^2+(n_Y-1)S_Y^2}{n_X+n_Y-2}.$$\n\n分子除以共同方差是两个独立卡方变量之和，自由度相加；它又与两组样本均值独立。因此检验差值 $\\Delta_0$ 时，\n\n$$T=\\frac{D-\\Delta_0}{S_p\\sqrt{1/n_X+1/n_Y}}\\sim t_{n_X+n_Y-2}.$$\n\n取两组各五个样本，均值 12、9，方差 4、9，得到 $S_p^2=6.5$，标准误 $\\sqrt{2.6}\\approx1.612$。检验均值相同，t≈1.861，自由度 8；95% 差值区间为 $3\\pm2.306\\times1.612$，约 [-0.718,6.718]。\n\n## 不同方差的 Welch 近似\n\n不假设共同方差时，直接取 $SE=\\sqrt{S_X^2/n_X+S_Y^2/n_Y}$。令 $a=S_X^2/n_X,b=S_Y^2/n_Y$，近似自由度为\n\n$$\\nu=\\frac{(a+b)^2}{a^2/(n_X-1)+b^2/(n_Y-1)}.$$\n\n其来源是用一个缩放卡方变量近似随机方差和，并匹配均值与方差。上述数据中 SE 恰好相同，但 $\\nu\\approx6.969$，应使用相应 t 分位数。样本量不等时，两种 SE 也常不同。\n\n等方差假设应由模型和测量背景支持。若方差差别明显，Welch 方法可直接处理；若观测一一配对，则还存在组间协方差，应改为分析配对差值。\n\n> **鲨鱼说** 两组比较的误差可能主要来自其中一组。看 $S_X^2/n_X$ 与 $S_Y^2/n_Y$ 的大小，便能知道扩大哪一组更有助于提高精度。\n\n## 练习\n1. nX=10、nY=15，两组均值20、18，方差9、16，计算Welch统计量和近似自由度。\n2. 解释为什么不能把同一个人的处理前后观测当作两个独立样本。\n\n[本章习题](/read/?slug=larsen-book-09-04)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/larsen-book-09-01.zip",
+        "label": "两个独立总体的均值比较 · Python 示例",
+        "size_bytes": 1109,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第三部分 · 比较、回归与实验设计",
+      "number": 49,
+      "chapter": "9",
+      "edition": "2026-10",
+      "minutes": 12,
+      "section": "1",
+      "chapter_title": "两个总体的比较",
+      "source_sections": [
+        "9.1",
+        "9.2",
+        "9.A.1"
+      ]
+    }
+  }
+}

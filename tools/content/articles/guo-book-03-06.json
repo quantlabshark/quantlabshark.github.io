@@ -1,0 +1,38 @@
+{
+  "slug": "guo-book-03-06",
+  "title": "Bellman 递推与连续时间 HJB",
+  "summary": "用库存小例子推导 Bellman 递推，再从短时间展开得到连续时间 HJB 方程。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "量化交易：算法、分析、数据、模型和优化",
+  "sort_order": 6019,
+  "cover_url": "",
+  "section_ids": [
+    "19808db5-aef6-5fc5-b233-d9732a29916b"
+  ],
+  "body": "## 状态要足够描述未来\n\n动态规划把一连串选择拆成“当前决策加后续最优决策”。设状态为 $x_t$、行动为 $u_t$，状态按 $x_{t+1}=F(x_t,u_t,\\epsilon_{t+1})$ 变化。当给定当前状态和行动后，未来分布不再需要更早的历史，状态就具有马尔可夫性质。\n\n对于交易问题，只有价格往往不够。剩余订单量、当前库存、时间和预测信号可能都影响未来成本，应一并放入状态。遗漏关键变量，会使同一个表面状态对应不同的真实决策问题。\n\n## 从最后一步倒推\n\n设终值成本为 $g(x_T)$，当期成本为 $c_t(x,u)$。定义价值函数为从现在起的最小预期总成本，则\n\n$$V_T(x)=g(x),\\qquad V_t(x)=\\min_{u\\in U_t(x)}\\{c_t(x,u)+E[V_{t+1}(x_{t+1})\\mid x,u]\\}.$$\n\n终值条件先确定，再从 $T-1$ 向前计算。每个时点不仅保存最小值，也保存取得最小值的行动，才能在实际路径上执行策略。\n\n## 两期买入的手算例子\n\n需要在两期内买入两单位，初始剩余量 $q=2$。每期可以买 $u\\in\\{0,1,2\\}$，但不能超过剩余量。成交成本为 $u^2$，第一期结束后，剩余量为 $q$ 时产生总计 $0.5q^2$ 的等待风险成本，第二期必须全部完成。\n\n最后一期 $V_1(q)=q^2$。第一期的三个候选成本为：不买，$0+0.5\\times4+4=6$；买一，$1+0.5+1=2.5$；买二，$4+0+0=4$。因此第一期买一，第二期买一。\n\n如果只看当前成交成本，会选择不买；如果不设最后必须完成的条件，也可能永远不买。终值与约束是模型的一部分，不能等求解后再补。\n\n## 连续时间的短步展开\n\n设状态满足 $dX_t=b(t,X_t,u_t)dt+\\sigma(t,X_t,u_t)dB_t$。在很短的 $dt$ 内，先支付 $c\\,dt$，再进入下一状态。对价值函数用 Itô 公式展开并取条件期望，随机积分的期望为零，得到\n\n$$0=V_t+\\min_u\\left\\{c+bV_x+\\tfrac12\\sigma^2V_{xx}\\right\\},\\qquad V(T,x)=g(x).$$\n\n这就是 HJB 方程。$bV_x$ 衡量状态平均变化的价值影响，$\\sigma^2V_{xx}/2$ 衡量随机波动与价值曲率的关系。多维情形将二阶项替换为协方差矩阵与 Hessian 的迹。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>条件期望，即给定已有信息后，对可能结果按条件概率求平均。</p></aside>\n\n## 短时间递推与二阶修正\n\n在 $\\Delta t$ 内，状态变化近似为 $\\Delta X=b\\Delta t+\\sigma\\sqrt{\\Delta t}\\,Z$。把 $V(t+\\Delta t,x+\\Delta X)$ 展开，保留 $V_t\\Delta t$、$V_x\\Delta X$ 和 $V_{xx}(\\Delta X)^2/2$。取条件期望后，$E(\\Delta X)=b\\Delta t$，$E[(\\Delta X)^2]=\\sigma^2\\Delta t+O(\\Delta t^2)$，再除以 $\\Delta t$，便得到 HJB 中的一阶和二阶项。\n\n例如 $V(x)=x^2$，没有漂移时，直接计算 $E[(x+\\sigma\\sqrt{\\Delta t}Z)^2]-x^2=\\sigma^2\\Delta t$。HJB 给出的变化也为 $(\\sigma^2/2)\\times2\\Delta t$。这个简单核对能检查是否漏掉二分之一或把方差写成标准差。\n\n若改用剩余时间 $\\tau=T-t$，时间导数变为 $V_t=-V_\\tau$。因此写成日历时间和写成剩余时间的方程，时间导数符号可能相反，而描述的是同一个控制问题。设定终端罚金时也应固定这一时间约定。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>布朗增量约为时间步长的平方根，其平方仍与时间步长同阶。因此随机变化虽均值为零，仍能通过价值函数的弯曲程度影响期望结果。</p></aside>\n\n### 解出一个可以逐项验证的 HJB\n\n设 $dX_s=u_sds+\\sigma dW_s$，控制 $u$ 可取任意实数，目标为最小化 $E[\\int_t^T u_s^2/2\\,ds+X_T^2/2]$。$X$ 是需要压低的状态，$u^2/2$ 是调整成本，终端平方是剩余偏差的惩罚。\n\nHJB 为 $0=V_t+\\sigma^2V_{xx}/2+\\min_u(u^2/2+uV_x)$。只对括号内的 $u$ 求导，得到 $u+V_x=0$，所以 $u^*=-V_x$，最小值为 $-V_x^2/2$。\n\n终端条件是二次函数，因此设 $V(t,x)=a(t)x^2/2+c(t)$。代入导数并按 $x^2$ 与常数分组：\n\n$$0=\\frac12(a'-a^2)x^2+c'+\\frac{\\sigma^2a}{2}.$$\n\n对所有 $x$ 成立，故 $a'=a^2,c'=-\\sigma^2a/2$，边界 $a(T)=1,c(T)=0$。解得\n\n$$a(t)=\\frac1{1+T-t},\\qquad\nc(t)=\\frac{\\sigma^2}{2}\\log(1+T-t),\\qquad\nu^*(t,x)=-\\frac{x}{1+T-t}.$$\n\n取剩余时间 1、$x=2,\\sigma=1$，当前控制为 $-1$，价值为 $1+\\log2/2\\approx1.3466$。图中越接近终点，反馈曲线越陡，表示相同偏差需要更快调整。\n\n![解出一个可以逐项验证的 HJB](/assets/figures/theory/walkthrough/hjb-feedback.svg)\n\n## 从方程到数值解\n\n有限差分把时间和状态离散成网格，每个网格点比较允许的控制。边界应由经济条件确定，例如库存为零时停止执行、最大库存处禁止继续买入。网格需要满足稳定性要求，不能只凭曲线平滑判断结果正确。\n\n![剩余量与最优首期交易量](/assets/illustrations/theory/guo/bellman-action.svg)\n\n数值核查可以从可手算的小状态开始，再细化网格。比较总成本是否随网格收敛、行动是否满足约束、边界值是否正确。若允许即时大幅交易，模型可能变成脉冲或奇异控制，方程还需加入干预算子或梯度约束。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>价值函数不是当前账户余额，而是“从这个状态出发，今后最优操作还要承担多少成本”。它把未来影响折算为当前可以比较的数值。</p></aside>\n\n## 练习\n\n把上例第一期的等待风险系数从 $0.5$ 改为 3，第一期应该买多少？\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n三个候选成本分别为 $0+3\\times4+4=16$、$1+3+1=5$、$4+0+0=4$，所以第一期买入全部两单位。风险系数增大，使延迟执行的代价超过分拆交易节省的冲击。\n\n</details>\n\n## 配套代码\n\n[下载本节代码](/assets/downloads/theory/guo-book-03-06.zip)。压缩包包含 Python 脚本、运行说明和依赖清单。\n\n[补充算例与绘图代码](/assets/downloads/theory-walkthrough/guo-book-03-06.zip)\n",
+  "metadata": {
+    "theory_book": {
+      "book": "quantitative-trading",
+      "part": "第一部分 · 统计与投资组合",
+      "number": 19,
+      "chapter": "3",
+      "edition": "2026-10",
+      "minutes": 17,
+      "section": 6,
+      "source_pages": [
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103
+      ],
+      "chapter_title": "主动组合与动态决策",
+      "source_sections": [
+        "3.4"
+      ]
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "slug": "miller-book-08-05",
+  "title": "RGB 图像与八叉树颜色量化",
+  "summary": "按二进制位划分 RGB 空间，推导加权代表色，逐步说明八叉树合并与误差计算。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8049,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "RGB 像素由红、绿、蓝三个 0—255 整数组成，最多可表示 256³ 种颜色。颜色量化将这些颜色映射到较小调色板，降低颜色种类数，同时引入近似误差。\n\n## 固定网格的局限\n\n若每个通道只保留高 2 位，分别划为 4 个区间，总共最多 4³=64 色。计算简单，但图像颜色往往集中在部分区域，均匀划分会把同样的精度分配给很少出现甚至没有出现的颜色。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/quantization.svg\" alt=\"同一颜色渐变在较多和较少调色板颜色下的对比。\" loading=\"lazy\"></figure>\n\n八叉树把颜色空间逐层分成八块，只建立实际出现的分支，再根据颜色使用情况合并。\n\n## 一层读取三个二进制位\n\n第 0 层读取 R、G、B 的最高位，形成三位索引 $4r_7+2g_7+b_7$，范围 0—7；下一层读取次高位，继续定位子立方体。八层可区分全部 8 位通道值。\n\n例如 (160,96,32) 的二进制前两位分别为 R:10、G:01、B:00。第一层索引为 4×1+2×0+0=4；第二层为 4×0+2×1+0=2。两个颜色共享越长前缀，就位于越小的共同立方体。\n\n## 节点保存加权统计量\n\n每个经过的节点累计像素数 N 和通道和 $S_R$、$S_G$、$S_B$。把一个节点作为代表色时，取 $\\bar c=(S_R,S_G,S_B)/N$，再舍入到整数。\n\n这一选择来自平方误差分解：\n\n$$\\sum_i\\|x_i-c\\|^2=\\sum_i\\|x_i-\\bar x\\|^2+N\\|c-\\bar x\\|^2.$$\n\n交叉项因 $\\sum_i(x_i-\\bar x)=0$ 消失，因此实数代表色取均值时最优。每个通道独立舍入到最近整数，得到整数约束下的平方误差最小值。\n\n(10,20,30) 与 (14,24,34) 各出现一次，代表色为 (12,22,32)，总平方误差 24。若前者出现 9 次、后者一次，均值为 (10.4,20.4,30.4)，不能仍取两种不同颜色的简单平均。\n\n## 合并到颜色上限 K\n\n先构建树，再选一个子节点均为叶子的内部节点，将这些子叶合为该父节点。若有 r 个子叶，叶子总数减少 r−1；父节点已有全部计数和通道和，代表色无需重新扫描像素。\n\n当前实现优先选择较深、像素较少的可合并分支，重复至叶数≤K。合并一个只有单孩子的分支暂不减少叶数，但减少树深，后续仍可继续合并。一次可能减少多色，结果可以少于 K。\n\n## 重建和成本\n\n每个原像素沿相同位路径向下，遇合并后的叶子即使用其代表色。输出尺寸和像素数保持不变。N 个像素、最大深度 d≤8，建树与映射各 O(Nd)；本节简单实现每次重新扫描候选节点，合并阶段可能达到节点数的平方级，较大图像可维护可合并节点队列改善。\n\n均方误差为所有通道平方误差之和除以 3N。还应观察渐变色带与边缘细节；RGB 欧氏误差并非完全等同于人眼色差，因此指标与图像要一起检查。\n\n> **鲨鱼说** 合并时平均的是像素，而非“不同颜色的名单”。出现 100 次的颜色应有 100 份权重，节点的计数和通道总和正是为此保留。\n\n## Python 实现\n\n~~~python\nfrom dataclasses import dataclass,field\n@dataclass\nclass Node:\n    depth:int=0\n    count:int=0\n    sums:list=field(default_factory=lambda:[0,0,0])\n    children:dict=field(default_factory=dict)\n\ndef octree_quantize(pixels,k=8,depth=5):\n    if k<1 or not 1<=depth<=8:raise ValueError('invalid palette size or depth')\n    root=Node()\n    for rgb in pixels:\n        if len(rgb)!=3 or any(not 0<=c<=255 for c in rgb):raise ValueError('invalid RGB')\n        node=root\n        for level in range(depth+1):\n            node.count+=1\n            for c in range(3):node.sums[c]+=rgb[c]\n            if level<depth:\n                shift=7-level\n                key=sum(((rgb[c]>>shift)&1)<<(2-c) for c in range(3))\n                node=node.children.setdefault(key,Node(level+1))\n    def leaves(node):\n        return 1 if not node.children else sum(leaves(v) for v in node.children.values())\n    def candidates(node):\n        result=[]\n        if node.children:\n            if all(not child.children for child in node.children.values()):result.append(node)\n            for child in node.children.values():result.extend(candidates(child))\n        return result\n    if not pixels:return [],[]\n    while leaves(root)>k:\n        node=max(candidates(root),key=lambda n:(n.depth,-n.count))\n        node.children.clear()\n    palette=[]\n    def color(node):\n        return tuple(round(s/node.count) for s in node.sums)\n    def collect(node):\n        if not node.children:palette.append(color(node))\n        for child in node.children.values():collect(child)\n    collect(root)\n    output=[]\n    for rgb in pixels:\n        node=root\n        for level in range(depth):\n            if not node.children:break\n            shift=7-level\n            key=sum(((rgb[c]>>shift)&1)<<(2-c) for c in range(3))\n            node=node.children[key]\n        output.append(color(node))\n    return output,palette\npixels=[(r,g,80) for r in range(0,256,16) for g in range(0,256,16)]\noutput,palette=octree_quantize(pixels,8)\nassert len(output)==len(pixels) and len(set(palette))<=8\nassert all(p in palette for p in output)\nprint('palette',palette)\nprint('mean squared error',sum((a-b)**2 for p,q in zip(pixels,output) for a,b in zip(p,q))/(3*len(pixels)))\n~~~\n\n## 练习\n1. 手算两个RGB颜色的前两层八叉树路径，判断它们在哪一层分开。\n2. 在固定深度示例上加入节点合并，使调色板颜色数不超过给定K，并比较重建误差。\n\n[本章习题](/read/?slug=miller-book-08-07)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-08-05.zip",
+        "label": "RGB 图像与八叉树颜色量化 · Python 示例",
+        "size_bytes": 1610,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第三部分 · 图算法与进阶应用",
+      "number": 49,
+      "chapter": "8",
+      "edition": "2026-10",
+      "minutes": 14,
+      "section": "5",
+      "chapter_title": "进阶数据结构与算法应用",
+      "source_sections": [
+        "8.5",
+        "8.5.1",
+        "8.5.2",
+        "8.5.3"
+      ]
+    }
+  }
+}

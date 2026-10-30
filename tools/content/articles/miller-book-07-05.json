@@ -1,0 +1,37 @@
+{
+  "slug": "miller-book-07-05",
+  "title": "强连通分量与缩点图",
+  "summary": "通过六顶点例子计算强连通分量，说明转置与完成顺序为什么能隔离每个分量。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8041,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "有向图中“u 可以到 v”不意味着“v 可以回 u”。强连通分量将能相互到达的顶点归为一组，再研究组之间的单向关系。\n\n## 相互可达定义分组\n\n相互可达具有自反、对称和传递性，因此将顶点划分为互不重叠的组。单个顶点即使没有自环，也以长度为零的路径到达自己，构成合法分量。\n\n把每组压缩为一个点，保留不同组之间的边，得到缩点图。它一定无环：若几个分量形成环，它们就能沿环相互到达，本应合为一组。\n\n## 例子的分量关系\n\nA→B、B→C、C→A 形成一组；C→D；D→E、E→D 形成另一组；E→F。三个强连通分量为 {A,B,C}、{D,E}、{F}，缩点后是一条有向链。\n\n从 A 在原图一次搜索会到达全部六点，但 F 不能返回 A，所以“可达集合”不是强连通分量。\n\n## 两遍 DFS\n\n第一遍在原图对全部顶点做 DFS，将每个点在完成时加入序列。第二步将所有边反向，得到转置图。第三步按第一遍完成时间递减顺序，在转置图对尚未访问点启动 DFS，每次访问到的一组就是一个强连通分量。\n\n本例从 A 开始，按 C 先回 A 再到 D 的顺序，完成序列可为 F、E、D、C、B、A。反向取 A 为第二遍起点，转置图中只能在 A、B、C 内循环，收集第一组；之后 D 收集 D、E；最后 F 单独一组。\n\n## 顺序为什么必要\n\n对缩点图中的边 C₁→C₂，第一遍 DFS 中，C₁ 的最大完成时间大于 C₂ 的最大完成时间。若先发现 C₁，可继续到 C₂ 并先完成后者；若先发现 C₂，它无法返回 C₁，否则两组应相同，因此 C₂ 会在之后发现的 C₁ 前完成。\n\n最大完成时间所在分量没有来自尚未处理分量的入边。转置后，它便没有通往这些分量的出边，第二遍搜索不会越界。移去这组后，对余下缩点图重复同一论证。\n\n转置还保留组内相互可达：原来的双向路径全部反向后仍构成双向路径。因此第二遍恰能收集整组。\n\n## 时间、存储与输出\n\n两遍 DFS 各 O(V+E)，构造转置也 O(V+E)，总成本仍为线性；存储包括原图、转置图、访问集合和完成序列。可以为每个顶点保存分量编号，再扫描原边，去掉组内边并去重，构造缩点 DAG。\n\n> **鲨鱼说** 反向边本身不会自动分组。第一遍的完成顺序决定从哪一组开始，使第二遍不会走进尚未划分的其他组。\n\n## Python 实现\n\n~~~python\ndef components(graph):\n    vertices=set(graph)\n    for vs in graph.values():vertices.update(vs)\n    seen=set();order=[]\n    def dfs(u):\n        seen.add(u)\n        for v in graph.get(u,[]):\n            if v not in seen:dfs(v)\n        order.append(u)\n    for u in sorted(vertices):\n        if u not in seen:dfs(u)\n    reverse={u:[] for u in vertices}\n    for u,vs in graph.items():\n        for v in vs:reverse[v].append(u)\n    seen.clear();groups=[]\n    def collect(u,group):\n        seen.add(u);group.add(u)\n        for v in reverse[u]:\n            if v not in seen:collect(v,group)\n    for u in reversed(order):\n        if u not in seen:\n            group=set();collect(u,group);groups.append(group)\n    return groups\ng={'A':['B'],'B':['C'],'C':['A','D'],'D':['E'],'E':['D','F'],'F':[]}\ngroups=components(g)\nassert {frozenset(x) for x in groups}=={frozenset('ABC'),frozenset('DE'),frozenset('F')}\nprint([sorted(x) for x in groups])\n~~~\n\n## 练习\n1. 对本节六顶点图手工画转置图并追踪两次DFS。\n2. 增加F→B后，判断强连通分量怎样变化。\n\n[本章习题](/read/?slug=miller-book-07-08)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-07-05.zip",
+        "label": "强连通分量与缩点图 · Python 示例",
+        "size_bytes": 1109,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第三部分 · 图算法与进阶应用",
+      "number": 41,
+      "chapter": "7",
+      "edition": "2026-10",
+      "minutes": 11,
+      "section": "5",
+      "chapter_title": "图及其算法",
+      "source_sections": [
+        "7.7"
+      ]
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "slug": "miller-book-05-02",
+  "title": "散列、冲突与开放寻址",
+  "summary": "从散列函数和映射接口讲起，逐槽解释探测、删除标记、冲突方案与扩容。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8024,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "映射保存键与值的对应关系，例如用学号查姓名。散列表先用散列函数计算候选槽位，再比较真实键；槽位相同并不表示键相同。\n\n## 散列函数怎样得到位置\n\n容量为 m，槽位编号为 0 至 m−1。整数可取 $h(k)=k\\bmod m$。折叠法把数字分段求和，再取模；平方取中法先平方，再取中间数位。它们是构造散列函数的教学方法，效果取决于键的分布。\n\n字符串若只累加字符编码，cat 和 act 必然相同，因为求和忽略顺序。可按位置加权，或逐字符计算 $h\\leftarrow(bh+\\operatorname{ord}(c))\\bmod m$，其中 b 是固定基数。相等键必须得到相同散列值，不同键仍可能冲突。\n\n## 线性探测\n\n容量 7，插入 10、17、24，其初始槽均为 3。10 放槽 3，17 冲突后放槽 4，24 再向后放槽 5。查找 24 必须沿同样路径检查 3、4、5。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/hashing.svg\" alt=\"线性探测将散列到同一槽位的键依次放入后面的空槽。\" loading=\"lazy\"></figure>\n\n探测序列为 $(h(k)+j)\\bmod m$，j=0,…,m−1。找到相同键时更新值，遇空槽时插入；最多检查 m 个槽，满表则扩容或报告容量不足。put、get、delete 分别对应插入或更新、按键读取、删除；size 只在新增键时增加。\n\n## 删除标记保留探测路径\n\n删除槽 4 的 17 后，若直接设为从未使用的空槽，查找 24 会在此误停。应使用 DELETED 标记：查找越过它继续走，插入可记录它作为候选位置，但仍需继续检查后面是否已有相同键，避免产生两个副本。\n\n从未使用的 EMPTY 才表示这条探测路径不可能继续包含目标。删除标记过多也会拖长查找，需要重建散列表清理。\n\n## 其他冲突处理方法\n\n固定步长 s 的探测为 $(h+js)\\bmod m$，要遍历全表需 gcd(s,m)=1。二次探测用 j² 等变化步长；双重散列由第二个散列函数确定步长。二者需要配套的容量和覆盖规则。\n\n链地址法在每个槽保存一个桶，冲突键放入同桶。查找先定位桶再逐项比较，删除可直接从桶中移除。它与开放寻址的存储组织不同，装载因子也可以超过 1。\n\n## 装载因子与扩容\n\n$\\alpha=n/m$ 是元素数与槽位数之比。开放寻址中接近满表时，空位稀少，线性探测还会形成连续聚集。扩容后 m 改变，所有键需重新计算位置，不能仅把旧数组复制到新数组前半段。\n\n在散列分布良好、负载受控且键处理成本有界时，操作平均 O(1)；大量冲突时最坏为 O(n)。单次扩容为 O(n)，采用成比例增长可把这部分成本分摊到多次插入。\n\n> **鲨鱼说** EMPTY 表示“查到这里可以停止”，DELETED 表示“这里曾被占用，还要继续查”。两种空位承担不同的查找语义。\n\n## Python 实现\n\n~~~python\nclass HashMap:\n    EMPTY=object();DELETED=object()\n    def __init__(self,size=11):\n        self.slots=[self.EMPTY]*size\n    def put(self,key,value):\n        m=len(self.slots);first_deleted=None\n        for step in range(m):\n            i=(hash(key)+step)%m;entry=self.slots[i]\n            if entry is self.DELETED:\n                if first_deleted is None:first_deleted=i\n            elif entry is self.EMPTY:\n                self.slots[first_deleted if first_deleted is not None else i]=(key,value);return\n            elif entry[0]==key:\n                self.slots[i]=(key,value);return\n        if first_deleted is not None:self.slots[first_deleted]=(key,value);return\n        raise OverflowError('table full')\n    def get(self,key):\n        for step in range(len(self.slots)):\n            entry=self.slots[(hash(key)+step)%len(self.slots)]\n            if entry is self.EMPTY:break\n            if entry is not self.DELETED and entry[0]==key:return entry[1]\n        raise KeyError(key)\n    def delete(self,key):\n        for step in range(len(self.slots)):\n            i=(hash(key)+step)%len(self.slots);entry=self.slots[i]\n            if entry is self.EMPTY:break\n            if entry is not self.DELETED and entry[0]==key:self.slots[i]=self.DELETED;return\n        raise KeyError(key)\ntable=HashMap(7)\nfor x in [10,17,24]:table.put(x,str(x))\ntable.delete(17);assert table.get(24)=='24'\ntable.put(24,'updated');assert table.get(24)=='updated'\nprint(table.get(24))\n~~~\n\n## 练习\n1. 容量11，依次插入22、1、13、11、24，画线性探测后的槽位。\n2. 删除中间冲突键后，比较普通空槽与删除标记对查找的影响。\n\n[本章习题](/read/?slug=miller-book-05-07)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-05-02.zip",
+        "label": "散列、冲突与开放寻址 · Python 示例",
+        "size_bytes": 1179,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第二部分 · 数据组织与基本算法",
+      "number": 24,
+      "chapter": "5",
+      "edition": "2026-10",
+      "minutes": 13,
+      "section": "2",
+      "chapter_title": "搜索和排序",
+      "source_sections": [
+        "5.2.3"
+      ]
+    }
+  }
+}

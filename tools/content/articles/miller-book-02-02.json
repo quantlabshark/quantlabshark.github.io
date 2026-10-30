@@ -1,0 +1,37 @@
+{
+  "slug": "miller-book-02-02",
+  "title": "异序词检测与算法改进",
+  "summary": "用四种异序词算法比较信息组织方式，推导枚举、匹配、排序与计数的成本。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8008,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "两个字符串互为异序词，表示每个字符出现次数相同，排列顺序可以不同。silent 与 listen 符合；abca 与 abcc 虽长度相同，却因 a、c 的次数不同而不符合。\n\n## 先固定字符处理规则\n\n本节直接比较输入字符，区分大小写，也保留空格。长度不同立即返回 False。若应用要求忽略大小写或空格，应先统一转换，再使用相同算法比较。\n\n## 穷举排列\n\nn 个位置的排列最多有 n! 种。生成第一个字符串的每一种排列，与第二个比较，总成本可达 O(n·n!)。重复字符可能减少不同排列数，但未经去重的排列程序仍可能反复生成相同结果。\n\n这种算法直接对应“是否存在一种重排”，但为判断一个布尔结果生成大量排列，代价很高。n=10 时已有 3,628,800 个位置排列。\n\n## 逐项匹配\n\n依次取第一个字符串的字符，在第二个字符串尚未使用的位置中寻找，匹配后将该位置标记。标记使一个字符不能被重复使用。\n\n若每次都从头扫描，最坏工作量为 O(n²)。即使把已匹配项移出后续搜索，仍可能检查 $n+(n-1)+\\cdots+1=n(n+1)/2$ 个候选位置。额外存储用于使用标记或第二串的可修改副本。\n\n## 排序比较\n\n将两串排序，异序词会得到同一序列。abca 和 caba 都排成 aabc。两次排序成本 O(n log n)，之后逐项比较 O(n)，总成本由排序主导。调用 `sorted` 返回新列表，需要计入额外存储。\n\n## 计数比较\n\n对固定的 26 个小写字母，使用长度 26 的计数数组。读取第一串时加一，读取第二串时减一。最终所有位置为零，就表示每个字符次数相等。处理 abca 后，a:2、b:1、c:1；再减去 caba 的字符，三个计数均为零。\n\n处理完某个前缀后，计数始终等于该前缀中字符的实际出现次数。循环结束时，它记录全部次数，因此判定与定义相符。固定字符集下时间 Θ(n)，额外空间 Θ(1)。字符种类不限时可改用字典，设不同字符数为 k，平均时间 O(n)，空间 O(k)。\n\n| 方法 | 主要成本 | 记录的信息 |\n| --- | --- | --- |\n| 枚举 | 阶乘级 | 每一种排列 |\n| 匹配 | 平方级 | 哪些位置已使用 |\n| 排序 | n log n 级 | 字符的规范次序 |\n| 计数 | 线性级 | 每个字符的重数 |\n\n> **鲨鱼说** 判定只需要字符重数。计数法直接保存这部分信息，因此省去了寻找位置和比较排列的工作。\n\n## Python 实现\n\n~~~python\ndef counts(s):\n    result={}\n    for c in s:result[c]=result.get(c,0)+1\n    return result\ndef anagram(a,b):return len(a)==len(b) and counts(a)==counts(b)\nassert anagram('silent','listen')\nassert anagram('abca','caba')\nassert not anagram('abca','abcc')\nprint(counts('abca'))\n~~~\n\n## 练习\n1. 比较三种方法对空串、重复字符和长度不同输入的行为。\n2. 将规格改为忽略大小写和空格，说明预处理及其成本。\n\n[本章习题](/read/?slug=miller-book-02-04)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-02-02.zip",
+        "label": "异序词检测与算法改进 · Python 示例",
+        "size_bytes": 888,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第一部分 · 编程与算法基础",
+      "number": 8,
+      "chapter": "2",
+      "edition": "2026-10",
+      "minutes": 12,
+      "section": "2",
+      "chapter_title": "算法分析",
+      "source_sections": [
+        "2.2.2"
+      ]
+    }
+  }
+}

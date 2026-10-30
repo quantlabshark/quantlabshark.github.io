@@ -1,0 +1,36 @@
+{
+  "slug": "calin-book-11-03",
+  "title": "随机摆与线性振动",
+  "summary": "把二阶振动方程写成状态系统，计算协方差和能量输入。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "随机微积分及其应用",
+  "sort_order": 5062,
+  "cover_url": "",
+  "section_ids": [
+    "17859c88-b779-5654-b120-7a4cc7b39714"
+  ],
+  "body": "## 小角度近似与噪声的位置\n\n长度为 $\\ell$ 的单摆满足 $\\ddot\\theta=-(g/\\ell)\\sin\\theta$。当角度以弧度表示且足够小时，$\\sin\\theta\\approx\\theta$，便得到固有频率 $\\omega=\\sqrt{g/\\ell}$ 的线性振动。这里 $\\theta$ 为角度，$v=\\dot\\theta$ 为角速度；角速度的单位与线性速度不同。\n\n若扰动作用于力矩，它首先改变角速度，再通过时间积分改变角度。因此下面只在 $dv$ 方程中直接加入 $dW$。这种噪声位置决定了角度路径仍可微、角速度路径通常不可微，也决定了短时方差分别按 $t^3$ 与 $t$ 增长。\n\n## 状态向量与一阶方程组\n\n在小角度近似下，单摆的确定方程为 $\\ddot\\theta+\\omega^2\\theta=0$，其中 $\\omega=\\sqrt{g/\\ell}$。若随机力进入角加速度，可写成\n\n$$d\\theta_t=v_tdt,\\qquad dv_t=-\\omega^2\\theta_tdt+\\sigma dW_t.$$\n\n角度是速度的普通时间积分，速度才直接接收布朗冲击。形式上的 $\\ddot\\theta+\\omega^2\\theta=\\sigma\\eta$ 应通过这个一阶积分系统理解，而不是对布朗路径求两次普通导数。\n\n令状态 $Z=(\\theta,v)^T$，矩阵 $A=\\begin{pmatrix}0&1\\\\-\\omega^2&0\\end{pmatrix}$、$B=(0,\\sigma)^T$，则 $dZ=AZdt+BdW$。确定矩阵积分因子给\n\n$$Z_t=e^{At}Z_0+\\int_0^te^{A(t-s)}B\\,dW_s.$$\n\n## 正弦与余弦响应\n\n矩阵 $A$ 满足 $A^2=-\\omega^2I$。把指数级数中的偶数次与奇数次幂分开，\n\n$$e^{At}=I\\sum_{j=0}^\\infty\\frac{(-1)^j(\\omega t)^{2j}}{(2j)!}+\\frac A\\omega\\sum_{j=0}^\\infty\\frac{(-1)^j(\\omega t)^{2j+1}}{(2j+1)!}=I\\cos\\omega t+\\frac A\\omega\\sin\\omega t.$$\n\n因此\n\n$$e^{At}=\\begin{pmatrix}\\cos\\omega t&\\sin\\omega t/\\omega\\\\-\\omega\\sin\\omega t&\\cos\\omega t\\end{pmatrix}.$$\n\n将它乘初值向量和噪声向量，分别得到\n\n$$\\theta_t=\\theta_0\\cos\\omega t+\\frac{v_0}{\\omega}\\sin\\omega t+\\frac\\sigma\\omega\\int_0^t\\sin[\\omega(t-s)]dW_s,$$\n$$v_t=-\\omega\\theta_0\\sin\\omega t+v_0\\cos\\omega t+\\sigma\\int_0^t\\cos[\\omega(t-s)]dW_s.$$\n\n一个时刻 $s$ 的速度冲击，在后续时间产生余弦速度响应和正弦角度响应。两个随机积分的核都是确定函数，所以任意线性组合仍为正态变量；这正是联合正态的定义。共享同一噪声使它们可能相关，并不会破坏联合正态。\n\n## 方差与协方差\n\n先假设初值确定。随机部分均值为零，方差只需计算核的平方。令 $u=t-s$，用 $\\sin^2z=(1-\\cos2z)/2$，\n\n$$\\operatorname{Var}(\\theta_t)=\\frac{\\sigma^2}{\\omega^2}\\int_0^t\\sin^2(\\omega u)du=\\sigma^2\\left[\\frac{t}{2\\omega^2}-\\frac{\\sin2\\omega t}{4\\omega^3}\\right].$$\n\n类似地，$\\cos^2z=(1+\\cos2z)/2$ 给\n\n$$\\operatorname{Var}(v_t)=\\sigma^2\\left[\\frac t2+\\frac{\\sin2\\omega t}{4\\omega}\\right].$$\n\n协方差使用两个核的乘积，且只有同一时刻的布朗增量相乘才产生 $ds$：\n\n$$\\operatorname{Cov}(\\theta_t,v_t)=\\frac{\\sigma^2}{\\omega}\\int_0^t\\sin(\\omega u)\\cos(\\omega u)du=\\frac{\\sigma^2\\sin^2\\omega t}{2\\omega^2}.$$\n\n短时展开给 $\\operatorname{Var}(\\theta_t)=\\sigma^2t^3/3+O(t^5)$、$\\operatorname{Var}(v_t)=\\sigma^2t+O(t^3)$、$\\operatorname{Cov}(\\theta_t,v_t)=\\sigma^2t^2/2+O(t^4)$。因此短时相关系数趋于 $\\sqrt3/2$。角度和速度虽然平滑程度不同，最初仍由同一批冲击驱动。\n\n## 噪声持续增加能量\n\n取单位质量的线性振动能量 $E_t=(v_t^2+\\omega^2\\theta_t^2)/2$。伊藤公式中确定回复力与位置变化相抵，得到\n\n$$dE_t=\\sigma v_tdW_t+\\frac12\\sigma^2dt.$$\n\n所以 $EE_t=E_0+\\sigma^2t/2$。没有阻尼时，系统不断接收随机能量，方差随时间增长，不能期待稳定幅度。图中单条轨迹的能量可升可降，但跨路径平均具有这条线性趋势。\n\n若加入阻尼 $dv=(-\\omega^2\\theta-\\gamma v)dt+\\sigma dW$，则平均能量变化为 $-\\gamma Ev^2+\\sigma^2/2$。在稳定参数下可达到输入与耗散平衡。协方差矩阵满足 $P'=AP+PA^T+BB^T$，可以统一计算阻尼系统，而不必逐项展开所有积分。\n\n## 电路中的相同数学结构\n\n对于线性电路方程 $q''+3q'+2q=\\eta$，齐次特征根为 $-1,-2$。零初值的脉冲响应需满足 $h(0)=0,h'(0)=1$，所以 $h(u)=e^{-u}-e^{-2u}$。一般初始电荷 $q_0$、电流 $i_0$ 下，\n\n$$q_t=(2q_0+i_0)e^{-t}-(q_0+i_0)e^{-2t}+\\int_0^t[e^{-(t-s)}-e^{-2(t-s)}]dW_s.$$\n\n代入 $t=0$ 及对确定部分求导，可分别恢复两个初值。随机积分均值为零，所以平均电荷遵从齐次方程。其方差为\n\n$$\\frac{1-e^{-2t}}2-\\frac{2(1-e^{-3t})}3+\\frac{1-e^{-4t}}4,$$\n\n长期趋于 $1/12$。电阻对应的耗散使该模型具有有限稳态方差，而无阻尼摆没有这一性质。\n\n## 两个状态分别受到独立噪声\n\n若 $dX=Ydt+\\alpha dW^1$、$dY=-Xdt+\\beta dW^2$，两个噪声独立，则旋转矩阵给\n\n$$X_t=x_0\\cos t+y_0\\sin t+\\alpha\\int_0^t\\cos(t-s)dW_s^1+\\beta\\int_0^t\\sin(t-s)dW_s^2,$$\n$$Y_t=-x_0\\sin t+y_0\\cos t-\\alpha\\int_0^t\\sin(t-s)dW_s^1+\\beta\\int_0^t\\cos(t-s)dW_s^2.$$\n\n独立噪声之间的交叉项为零，同一噪声在两坐标间的贡献仍需保留，因而 $\\operatorname{Cov}(X_t,Y_t)=(\\beta^2-\\alpha^2)\\sin^2t/2$。当 $\\alpha\\ne0$ 时，$X$ 直接接收布朗冲击，不能再把它当作具有普通导数 $Y$ 的角度路径。\n\n## 用协方差矩阵检查联合结果\n\n任何时刻的二维协方差矩阵都必须半正定，因此协方差平方不超过两个方差之积。这可以作为公式与程序的核验。零时刻两个方差和协方差都应为零；小时间内速度方差先以一次时间增长，角度方差以三次时间增长。\n\n如果数值图中角度每一步出现直接跳变，可能把噪声误加在位置而不是速度方程上。两个模型都能画出波动曲线，但响应核、光滑性和能量变化不同，应回到状态方程核对噪声作用的位置。\n\n![随机摆的相轨迹与平均能量](/assets/illustrations/theory/calin/calin-book-11-03.svg)\n\n固有频率一、噪声幅度 0.2、初值为零。左图为一条角度与角速度轨迹，右图展示跨路径平均能量与线性理论值。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>半正定，即矩阵对应的二次型对任意向量均不为负的性质。</p></aside>\n\n<aside class=\"shark-note\"><strong>鲨鱼说</strong><p>将位置与速度组成状态向量后，二阶随机方程可写成一阶矩阵方程。均值由矩阵指数传播，协方差由噪声响应核的乘积积分决定，二者可以分开计算。</p></aside>\n\n## 练习\n\n取 $\\omega=1,\\sigma=0.2$、零初值。在 $t=\\pi$ 时求角度方差、速度方差、协方差与平均能量。\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n确定初值为零，因此角度与角速度的均值均为零。在 $t=\\pi$，$\\sin(2\\pi)=0$、$\\sin\\pi=0$，代入核积分结果得到\n\n$$\\operatorname{Var}(\\theta_\\pi)=0.2^2\\frac\\pi2=0.02\\pi,\\quad\\operatorname{Var}(v_\\pi)=0.02\\pi,\\quad\\operatorname{Cov}(\\theta_\\pi,v_\\pi)=0.$$\n\n两个方差均约为 $0.062832$。由于这两个变量联合正态，零协方差进一步推出这个时刻的独立性。\n\n能量 $E_\\pi=(v_\\pi^2+\\theta_\\pi^2)/2$，因此\n\n$$EE_\\pi=\\frac12(0.02\\pi+0.02\\pi)=0.02\\pi.$$\n\n还可独立检查：$dE=\\sigma v,dW+\\sigma^2dt/2$，随机积分均值零，初始能量零，所以 $EE_t=0.2^2t/2$。两种计算在 $t=\\pi$ 一致。协方差在其他时刻通常不为零，因此不能把这一时点的独立性推广到两个坐标的整条路径。\n\n</details>\n\n## 配套代码\n\n[下载本节 Python 代码](/assets/downloads/theory/calin-book-11-03.zip)\n\n解压后运行 `calin-book-11-03.py`。需安装 numpy、scipy 和 matplotlib；脚本会生成图像与数值核查结果，无需另行下载数据。\n",
+  "metadata": {
+    "theory_book": {
+      "book": "stochastic-calculus",
+      "part": "第四部分 · 应用与练习",
+      "number": 62,
+      "chapter": "11",
+      "edition": "2026-10",
+      "minutes": 41,
+      "section": "3",
+      "source_pages": [
+        265,
+        266,
+        267,
+        268,
+        269
+      ],
+      "chapter_title": "随机模型的应用",
+      "source_sections": [
+        "11.4"
+      ]
+    }
+  }
+}

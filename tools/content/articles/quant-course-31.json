@@ -1,0 +1,56 @@
+{
+  "slug": "quant-course-31",
+  "title": "31 · 支持向量机与动态特征选择",
+  "summary": "推导分类间隔和软间隔目标，理解核函数、回归容忍区间及特征选择的时间边界。",
+  "kind": "lesson",
+  "track": "机器学习与文本",
+  "series": "量化研究系统课程",
+  "sort_order": 31,
+  "cover_url": "/assets/figures/curriculum/course-31.svg",
+  "section_ids": [
+    "5c14064d-8915-5f7c-bcc6-f9bd10d4c40e"
+  ],
+  "body": "支持向量机通过分类间隔和误差惩罚选择边界。特征选择则确定模型使用哪些信息，两者都应在训练与验证数据内完成，并保留独立测试区间。\n\n## 为什么分类边界不能只求分对训练点\n\n输入−2、−1属于负类，1、2属于正类。把边界放在−0.9或0.9都能分对四条记录，但它们分别紧贴某一类；放在0处则给两边留下相同空间。支持向量机在合适的误差约束下，寻找间隔较大的边界。\n\n线性决策函数为$f(\\mathbf x)=\\mathbf w'\\mathbf x+b$，按正负分类。若标签$y_i$为−1或1，可分数据满足$y_i f(\\mathbf x_i)\\ge1$。最小化$\\|\\mathbf w\\|^2/2$，等价于扩大两侧间隔$2/\\|\\mathbf w\\|$。\n\n在本例中可取$w=1,b=0$，支持边界位于−1与1，间隔为2。位于两侧约束边缘的点影响边界位置，称为支持向量。离边界更远的点并非完全无关，但在保持其约束不活跃时，小幅移动通常不会改变这个解。\n\n![线性分类边界、间隔及支持向量](/assets/figures/curriculum/course-31.svg)\n\n实线表示决策值为0的位置，虚线表示正负单位决策值。被圈出的样本位于间隔边缘；图中横向间隔与手算一致。\n\n## 软间隔允许哪些错误\n\n真实样本经常重叠。引入非负松弛量$\\xi_i$后，目标变为\n\n$$\\min_{\\mathbf w,b,\\boldsymbol\\xi}\\frac12\\|\\mathbf w\\|^2+C\\sum_i\\xi_i,\n\\qquad y_i f(\\mathbf x_i)\\ge1-\\xi_i.$$\n\n$\\xi_i=0$表示满足间隔，介于0与1表示在间隔内但分类仍正确，大于1则表示分错。较大C更重视训练违约，较小C允许更多违约以获得较平缓边界。C的含义受特征尺度和损失归一化影响，应与缩放一起验证。\n\n## 核函数怎样表达弯曲边界\n\n核函数通过样本间相似度构造非线性关系。RBF核为\n\n$$K(\\mathbf x,\\mathbf z)=\\exp(-\\gamma\\|\\mathbf x-\\mathbf z\\|^2).$$\n\n距离1、$\\gamma=1$时相似度约0.3679；$\\gamma=2$时为0.1353。较大$\\gamma$让单点影响更局部，可能形成许多小区域。最终预测还需要支持向量权重和截距，不是仅凭“附近是什么类”就完成判断。\n\n输入单位改变会改变距离，所以通常先标准化。C与$\\gamma$共同决定边界复杂度，应在内部时间验证中选择，不能分别看训练准确率后无限增大。\n\n## 支持向量回归的容忍带\n\n连续收益目标使用SVR。其$\\varepsilon$不敏感损失为$\\max(0,|y-\\hat y|-\\varepsilon)$：误差落在容忍带内不再处罚，超过部分才进入损失。若预测0.8%、实际1.0%、容忍带0.3个百分点，损失为0。实际1.4%时超出0.3个百分点，损失为0.3个百分点。\n\nSVC的决策值不直接等于概率，SVR的评分也不等于分类准确率。若需要概率，要使用单独的校准过程和允许的历史数据；如果预测市值，评价目标就是市值误差，而不是自动变成未来收益。\n\n## 动态选因子是另一个学习步骤\n\n每次更新先用训练样本的树重要性挑选特征，再缩放并拟合SVM，是一种动态选择流程。选择器本身已经读取标签，因此必须放在训练窗口内部。先用全部数据选择两列，再划分时间，会把后段标签提前传入模型。\n\n```python\nimport numpy as np\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.feature_selection import SelectFromModel\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.svm import SVC\nfrom sklearn.pipeline import Pipeline\n\nrng = np.random.default_rng(31)\nX = rng.normal(size=(120, 4))\ny = (X[:, 0] - 0.7*X[:, 1] + 0.3*rng.normal(size=120) > 0).astype(int)\nfor cutoff in [60, 80]:\n    model = Pipeline([\n        (\"select\", SelectFromModel(\n            DecisionTreeClassifier(max_depth=3, random_state=1),\n            threshold=-np.inf, max_features=2)),\n        (\"scale\", StandardScaler()),\n        (\"svm\", SVC(kernel=\"rbf\", C=1.0, gamma=\"scale\"))\n    ])\n    model.fit(X[:cutoff], y[:cutoff])\n    chosen = np.flatnonzero(model.named_steps[\"select\"].get_support())\n    print(\"cutoff:\", cutoff, \"selected:\", chosen)\n    print(\"next block:\", model.predict(X[cutoff:cutoff+10]))\n    assert len(chosen) == 2\n```\n\n代码在第60和80条记录更新，只使用各切点之前的数据，从四列选出两列，并预测随后十条。模拟标签被假定在切点前已经完成。真实多日收益标签应另外保存结束时间，只允许已经成熟的标签进入训练。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>动态选因子会改变的不只是模型输入，还可能改变持仓与交易成本。先与固定特征、相同更新日期的基准比较，才能知道频繁更新是否增加了价值。</p></aside>\n\n## 怎样解释因子名单变化\n\n两个高度相关因子可能轮流入选，但它们表达的是相近信息。反过来，名单不变也不意味着预测稳定，参数更新仍可能造成大幅换仓。应同时记录特征集合、预测分布、交易次数和净收益。\n\n每次模型更新还要检查至少存在两个类别，保存列名、列顺序、选择器、缩放统计量与分类器。只有单一类别时，普通二分类SVC不能正常拟合，应执行事先定义的常数预测或延迟更新规则。回放研究时使用当时保存的模型及预处理参数。\n\n## 练习\n\n样本标签为1，决策值为0.4，最小松弛量是多少？若决策值变为−0.2呢？先在全部样本上选特征为何有问题？\n\n<details><summary>查看解答</summary>\n\n由$yf(x)\\ge1-\\xi$，第一种需要$\\xi\\ge0.6$，分类正确但进入间隔；第二种需要$\\xi\\ge1.2$，已分错。全样本选择器使用了未来标签，使后续测试不再独立，应把选择器在每个训练窗口内重新拟合。\n\n</details>\n\n---\n\n[课程目录](/courses/)\n\n## 配套代码\n\n[下载本节代码（ZIP）](/assets/downloads/courses/quant-course-31.zip)\n\n压缩包包含脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n",
+  "metadata": {
+    "curriculum": {
+      "cover": "/assets/figures/curriculum/course-31.svg",
+      "level": "进阶",
+      "stage": 6,
+      "number": 31,
+      "edition": "2026-10",
+      "minutes": 40,
+      "source_refs": [
+        {
+          "book": "深入浅出Python量化交易实战",
+          "chapters": "9.1–9.2",
+          "pdf_pages": [
+            195,
+            196,
+            197,
+            199,
+            200,
+            203,
+            204,
+            205,
+            206
+          ]
+        },
+        {
+          "book": "Quant Roadmap — Ultimate Edition",
+          "chapters": "1、7",
+          "pdf_pages": [
+            10,
+            11,
+            23,
+            24
+          ]
+        }
+      ],
+      "stage_title": "机器学习与文本"
+    },
+    "code_download": {
+      "url": "/assets/downloads/courses/quant-course-31.zip",
+      "examples": 1
+    }
+  }
+}

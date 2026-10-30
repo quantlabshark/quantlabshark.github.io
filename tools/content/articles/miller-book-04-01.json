@@ -1,0 +1,41 @@
+{
+  "slug": "miller-book-04-01",
+  "title": "递归、基本情形与调用栈",
+  "summary": "用求和与进制转换追踪递归调用，证明终止与正确性，并区分调用栈和切片成本。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8017,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "递归把当前问题交给规模更小的同类问题，再用返回结果完成本层计算。编写递归时，要同时说明何时停止、规模怎样减小、子结果怎样组合。\n\n## 从列表求和写递推\n\n对列表 a，定义 S(i) 为从索引 i 到末尾的元素之和，n 为列表长度。\n\n$$S(i)=a_i+S(i+1)\\quad(i<n),\\qquad S(n)=0.$$\n\nS(n) 是基本情形；i 每次增加 1，剩余长度 n−i 减少；本层把当前元素加到子结果。这三项分别提供停止条件、推进方式和组合规则。\n\n## 调用向下展开，结果向上返回\n\n输入 `[2,3,5]`，S(0) 等待 2+S(1)，S(1) 等待 3+S(2)，S(2) 等待 5+S(3)。S(3) 返回 0，随后依次得到 5、8、10。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/recursion.svg\" alt=\"递归调用逐层保留栈帧，最深层返回后依次计算。\" loading=\"lazy\"></figure>\n\n每一层保留参数、局部变量和返回位置，称为栈帧。最晚发出的调用先返回，形成后进先出的调用栈。调用子函数时，父层尚未结束，只是暂停等待。\n\n## 用归纳说明正确性\n\n当剩余长度为 0，返回空和 0 正确。假设函数能正确计算长度为 k 的后缀，长度 k+1 的后缀等于首项加剩余 k 项，因此递推也正确。剩余长度是非负整数且每步减 1，所以必然到达基本情形。\n\n终止证明不能省略。例如 i 不变时，组合公式形式相似，却会无限递归。\n\n## 递归转换进制\n\n对 n≥0、b≥2，若 n<b，返回一个数位；否则先转换 n//b，再附加 n%b。13 转二进制的调用为 13→6→3→1；返回时依次形成 1、11、110、1101。\n\n整数每次除以 b，递归深度约为 $\\log_b n$。这一调用栈替代了上一章显式保存余数的栈。若逐层拼接不可变字符串，还需计入字符串复制；可把字符追加到列表后统一 join。\n\n## 递归的实际成本\n\n索引版求和每层常数操作，共 n 层，时间 O(n)、栈空间 O(n)。若每层传 `a[1:]`，切片长度依次为 n−1、n−2、…、1，累计复制 O(n²)，这些副本在返回前还可能同时存在。\n\nPython 不依赖尾调用消除，尾递归也不能按常数栈空间估计。大量线性步骤可改用循环；树和分治问题则通常更适合保留递归结构。\n\n> **鲨鱼说** 把本层“等待的表达式”写在纸上，例如 2+□，就能看到递归返回后还要完成什么，也能判断为什么这些调用需要保留在栈中。\n\n## Python 实现\n\n~~~python\ndef recursive_sum(a,i=0):\n    if i==len(a):return 0\n    return a[i]+recursive_sum(a,i+1)\nassert recursive_sum([2,3,5])==10\nassert recursive_sum([])==0\nprint(recursive_sum([2,3,5]))\n\ndef recursive_base(n,base):\n    if n<0 or not 2<=base<=16:raise ValueError('require n>=0, base 2..16')\n    digits='0123456789ABCDEF'\n    if n<base:return digits[n]\n    return recursive_base(n//base,base)+digits[n%base]\nassert recursive_base(13,2)=='1101'\nprint('recursive conversion',recursive_base(13,2))\n~~~\n\n## 练习\n1. 画出阶乘5!的调用与返回过程，指出基本情形。\n2. 比较用切片递归求和与用索引递归求和的时间和空间成本。\n\n[本章习题](/read/?slug=miller-book-04-06)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-04-01.zip",
+        "label": "递归、基本情形与调用栈 · Python 示例",
+        "size_bytes": 993,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第二部分 · 数据组织与基本算法",
+      "number": 17,
+      "chapter": "4",
+      "edition": "2026-10",
+      "minutes": 8,
+      "section": "1",
+      "chapter_title": "递归与动态规划",
+      "source_sections": [
+        "4.1",
+        "4.2",
+        "4.3",
+        "4.8",
+        "4.9"
+      ]
+    }
+  }
+}

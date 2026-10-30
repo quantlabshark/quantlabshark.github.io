@@ -1,0 +1,32 @@
+{
+  "slug": "miller-book-06-07",
+  "title": "树：习题",
+  "summary": "26 道题，练习树中的概念、计算与方法选择。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8036,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "本章题组用于练习树。按题号选择下方题组；题面中的公式、数据和图形可点击放大。\n\n## 题组\n\n<details class=\"book-exercise-group\" id=\"questions-6-11-0\"><summary>讨论题 · 14 题</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/miller-06-1-226.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"讨论题 · 14 题，放大第 1 幅\"><img src=\"/assets/exercises/foundations/miller-06-1-226.webp\" alt=\"讨论题 · 14 题，第 1 幅\" width=\"1165\" height=\"285\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/miller-06-1-227.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"讨论题 · 14 题，放大第 2 幅\"><img src=\"/assets/exercises/foundations/miller-06-1-227.webp\" alt=\"讨论题 · 14 题，第 2 幅\" width=\"1165\" height=\"1509\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/miller-06-1-228.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"讨论题 · 14 题，放大第 3 幅\"><img src=\"/assets/exercises/foundations/miller-06-1-228.webp\" alt=\"讨论题 · 14 题，第 3 幅\" width=\"1165\" height=\"491\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-6-12-1\"><summary>编程练习 · 12 题</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/miller-06-2-228.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"编程练习 · 12 题，放大第 1 幅\"><img src=\"/assets/exercises/foundations/miller-06-2-228.webp\" alt=\"编程练习 · 12 题，第 1 幅\" width=\"1165\" height=\"955\" loading=\"lazy\"></a></div>\n\n</details>\n\n",
+  "metadata": {
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第二部分 · 数据组织与基本算法",
+      "number": 36,
+      "chapter": "6",
+      "edition": "2026-10",
+      "minutes": 15,
+      "section": "7",
+      "questions": 26,
+      "unit_type": "exercise",
+      "chapter_title": "树",
+      "source_sections": [
+        "6.11",
+        "6.12"
+      ]
+    }
+  }
+}

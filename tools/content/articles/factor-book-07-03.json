@@ -1,0 +1,50 @@
+{
+  "slug": "factor-book-07-03",
+  "title": "7.3 收益预测、风险与组合优化",
+  "summary": "推导预算约束下的均值方差配置，比较最小方差、最大分散度、风险平价，并把交易成本和模型失配纳入组合决策。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "因子投资：方法与实践",
+  "sort_order": 3038,
+  "cover_url": "",
+  "section_ids": [
+    "0d99264a-7913-52fc-8f8e-a4c784c92834"
+  ],
+  "body": "## 高预测收益为何不一定对应高权重\n\n假设两只股票的预期年收益分别为8%和12%。全部持有第二只股票是否更合适，还取决于它们的波动、共同涨跌、费用和允许承担的风险。组合优化把这些条件写入同一个问题，求出满足条件的持仓。\n\n令$\\boldsymbol\\mu$为预期收益向量，$\\Sigma$为协方差矩阵，$\\mathbf w$为权重，$\\zeta>0$为风险厌恶系数。均值方差目标是\n\n$$\\max_{\\mathbf w}\\left(\\boldsymbol\\mu'\\mathbf w-\\frac{\\zeta}{2}\\mathbf w'\\Sigma\\mathbf w\\right).$$\n\n第一项是预期收益，第二项是风险惩罚。$\\zeta$越大，同样收益优势越难补偿额外风险。输入必须采用同一时间尺度；月度预期收益不能直接搭配年度协方差。\n\n![收益、风险、成本与约束共同决定权重](/assets/figures/factor/portfolio.svg)\n\n图中为四资产教学示例：最大化 $\\mu^{\\mathsf T}w-\\frac{4}{2}w^{\\mathsf T}\\Sigma w$，约束为权重之和等于 1，暂设交易成本为零。算得 A、B、C、D 权重约为 15.5%、25.5%、25.3%、33.7%。收益预测最高的 B 没有取得最大权重，因为风险与共同波动也进入了目标函数。加入成本和持仓限制后，最优权重还会变化。\n\n## 收益模型与风险模型不一致会发生什么\n\n设风险模型使用暴露矩阵$B$，预测收益可拆成\n\n$$\\boldsymbol\\mu=B\\mathbf a+\\boldsymbol\\mu_\\perp,\\qquad B'\\boldsymbol\\mu_\\perp=0.$$\n\n前一部分由风险模型已有因子解释；后一部分是与这些因子正交的预测方向。若风险模型为$\\Sigma=BFB'+\\sigma_s^2I$，该方向只承担模型中的特质方差。无约束优化会给出\n\n$$\\mathbf w_\\perp=\\frac{\\boldsymbol\\mu_\\perp}{\\zeta\\sigma_s^2}.$$\n\n当$\\sigma_s^2$估得很小，权重就很大。这里不是“没有风险”，而是优化器认为这个预测方向的风险很低。如果它实际对应一个遗漏的共同风险，组合便可能在模型的盲点上集中。\n\n处理办法包括重新协调两套模型的因子、将预测中的独立方向加入风险估计，或对$\\mathbf w'\\boldsymbol\\mu_\\perp$增加惩罚，例如$\\theta(\\mathbf w'\\boldsymbol\\mu_\\perp)^2$。删除或替换风险因子虽然也能改变匹配关系，但会同时丢失风险解释，必须先验证剩余风险是否仍被覆盖。较高的样本内收益预测不足以支持直接删除风险项。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>优化结果异常集中时，先检查模型是否把某个方向误认成“收益很高而风险很小”。求解器通常忠实执行了输入，问题可能出在预测、协方差或单位。</p></aside>\n\n## 满仓约束怎样改变公式\n\n没有任何约束时，一阶条件给出$\\mathbf w=\\Sigma^{-1}\\boldsymbol\\mu/\\zeta$。但真实账户常要求$\\mathbf1'\\mathbf w=1$。加上预算约束后，正确解为\n\n$$\\mathbf w=\\frac1\\zeta\\Sigma^{-1}(\\boldsymbol\\mu-\\eta\\mathbf1),\\qquad\n\\eta=\\frac{\\mathbf1'\\Sigma^{-1}\\boldsymbol\\mu-\\zeta}{\\mathbf1'\\Sigma^{-1}\\mathbf1}.$$\n\n$\\eta$是预算约束的影子价格，用来调整所有资产的收益要求。将无约束解简单除以权重和，一般不能得到同一个风险厌恶参数下的预算约束最优解。\n\n以两项资产为例，令\n\n$$\\Sigma=\\begin{pmatrix}0.04&0.01\\\\0.01&0.09\\end{pmatrix},\\quad\n\\boldsymbol\\mu=\\begin{pmatrix}0.08\\\\0.12\\end{pmatrix},\\quad\\zeta=3.$$\n\n对角元对应20%和30%的年波动，非对角元表示正协方差。满仓最优权重约为60.61%和39.39%，高收益资产获得较多资金，但并未占据全部资金。\n\n## 四种常用配置目标\n\n最小方差不输入收益预测，在满仓条件下求解\n\n$$\\mathbf w_{MV}=\\frac{\\Sigma^{-1}\\mathbf1}{\\mathbf1'\\Sigma^{-1}\\mathbf1}.$$\n\n最大分散度关注\n\n$$DR(\\mathbf w)=\\frac{\\mathbf w'\\boldsymbol\\sigma}{\\sqrt{\\mathbf w'\\Sigma\\mathbf w}},$$\n\n其中$\\boldsymbol\\sigma$是各资产自身波动率。分子是假设没有分散时的加权波动，分母是实际组合波动。在适当可行条件下，候选方向与$\\Sigma^{-1}\\boldsymbol\\sigma$成比例；若限制不准卖空，还必须检查该候选是否满足约束。\n\n风险平价要求各资产的组成风险贡献相等：\n\n$$RC_i=\\frac{w_i(\\Sigma\\mathbf w)_i}{\\sigma_p}=\\frac{\\sigma_p}{N}.$$\n\n它均衡风险份额，通常不等于资金等权。当所有资产之间相关系数相同时，风险平价可由$w_i\\propto1/\\sigma_i$实现；一般相关结构下则需要联合求解。\n\n这些方法与收益假设有联系。若满仓下所有预期收益相同，均值方差目标退化为最小方差。若各资产夏普比率相同，最大夏普的切点组合方向与最大分散度方向一致。进一步采用相同相关结构，可得到反波动率权重。再假定波动相同，则得到等权。每放弃一种输入，都隐含一种简化。\n\n```python\n# 自拟两资产：比较预算约束均值方差与最小方差。\nimport numpy as np\nS = np.array([[.04,.01],[.01,.09]])\nmu = np.array([.08,.12]); one = np.ones(2); risk_aversion = 3\ninv = np.linalg.inv(S)\neta = (one@inv@mu-risk_aversion)/(one@inv@one)\nw = inv@(mu-eta*one)/risk_aversion\nw_min = inv@one/(one@inv@one)\nfor name, weights in [('mean_variance',w), ('minimum_variance',w_min)]:\n    print(name, weights, 'return', weights@mu,\n          'volatility', np.sqrt(weights@S@weights))\nassert np.isclose(w.sum(),1)\nassert np.allclose(w, [20/33,13/33])\nassert np.allclose(w_min, [8/11,3/11])\n```\n\n最小方差权重约72.73%和27.27%，年波动约17.84%。均值方差组合年波动约18.29%，预期收益由9.09%提高到9.58%。多承担的波动换取了更高的预测收益，是否合适由目标函数与约束共同决定。\n\n## 真实组合需要哪些约束\n\n预算约束控制净资金，$\\sum_i|w_i|$控制总敞口，两者不同。多空各100%的组合净权重为零，总敞口却为200%。除此之外，还可设置禁止卖空、个股和行业上限、换手上限、持股数量、目标风格暴露以及跟踪误差约束。\n\n若基准权重为$\\mathbf b$，主动风险是\n\n$$TE=\\sqrt{(\\mathbf w-\\mathbf b)'\\Sigma(\\mathbf w-\\mathbf b)}.$$\n\n它衡量偏离基准的波动，不是组合自身波动。持股数量约束涉及是否持有某只股票的离散选择，通常比连续权重约束更难求解；不能把所有组合问题都视作同一种简单二次规划。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>跟踪误差，即策略收益与基准收益之差的波动率。</p></aside>\n\n## 交易成本使“最优目标”变成“是否值得调仓”\n\n设调仓前按当前价格计算的权重为$\\mathbf w^-$，交易量为$\\Delta\\mathbf w=\\mathbf w-\\mathbf w^-$。一种成本近似为\n\n$$TC=\\sum_ic_i|\\Delta w_i|+\\sum_id_i(\\Delta w_i)^2.$$\n\n线性部分描述佣金和近似价差成本，二次部分描述随交易量增加的冲击。将$TC$从预期收益中扣除，微小信号变化就未必值得交易。若价格已经变化，应先重估调仓前权重，而不是仍使用上一次设定的目标权重。\n\n## 练习\n\n某股票目标权重由10%升至11%，预期带来的组合收益增加0.02个百分点，交易总成本为0.03个百分点。其他风险条件相同，应否完成这次调整？\n\n<details><summary>查看解答</summary>\n\n净预期改善为−0.01个百分点，单凭这个预测不值得调仓。若调整还能缓解违反约束的风险暴露，则应将这一收益纳入完整目标后重新比较。成本与收益都必须按组合资金和相同持有期计量。\n\n</details>\n\n---\n\n资料来源：石川、刘洋溢、连祥斌，《因子投资：方法与实践》，2020年，PDF第317—327页。\n\n[返回全书目录](/theory/factor-investing/)\n\n## 配套代码\n\n[下载本节代码（ZIP）](/assets/downloads/factor-investing/factor-book-07-03.zip)\n\n压缩包包含完整脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n",
+  "metadata": {
+    "theory_book": {
+      "book": "factor-investing",
+      "part": "第三部分 · 研究与实践",
+      "number": 39,
+      "chapter": "7",
+      "edition": "2026-10-revised",
+      "minutes": 34,
+      "section": "7.3",
+      "source_pages": [
+        317,
+        318,
+        319,
+        320,
+        321,
+        322,
+        323,
+        324,
+        325,
+        326,
+        327
+      ],
+      "chapter_title": "因子投资实践",
+      "source_sections": [
+        "7.3.1 错位的收益与风险模型",
+        "7.3.2 目标函数",
+        "7.3.3 不同目标函数的比较",
+        "7.3.4 约束条件",
+        "7.3.5 交易成本模型"
+      ]
+    },
+    "code_download": {
+      "url": "/assets/downloads/factor-investing/factor-book-07-03.zip",
+      "examples": 1
+    }
+  }
+}

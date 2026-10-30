@@ -1,0 +1,35 @@
+{
+  "slug": "calin-book-02-02",
+  "title": "概率积分与极限交换",
+  "summary": "从加权平均构造期望，掌握单调收敛、控制收敛及其失效方式。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "随机微积分及其应用",
+  "sort_order": 5005,
+  "cover_url": "",
+  "section_ids": [
+    "17859c88-b779-5654-b120-7a4cc7b39714"
+  ],
+  "body": "## 从有限加权平均开始\n\n若收益 $X$ 以概率 0.2、0.5、0.3 分别取 -2、1、4，平均收益为 $-2\\times0.2+1\\times0.5+4\\times0.3=1.3$。概率积分把这种加权计算推广到无限种结果。先对简单随机变量定义\n\n$$X=\\sum_{j=1}^m a_j\\mathbf1_{A_j},\\qquad\n\\int_\\Omega X\\,d\\mathbb P=\\sum_{j=1}^m a_j\\mathbb P(A_j),$$\n\n其中 $A_j$ 两两不交。系数是各组中的取值，概率是各组的权重。\n\n对一般非负随机变量，可以用越来越细的阶梯函数从下方逼近。例如把 $X$ 的值截断在 $n$，再向下取到 $2^{-n}$ 的整数倍。近似量 $X_n$ 逐点增加并趋于 $X$，于是定义 $\\int Xd\\mathbb P=\\lim_n\\int X_nd\\mathbb P$。结果允许为 $+\\infty$。\n\n任意实值随机变量分解为 $X=X^+-X^-$，其中 $X^+=\\max(X,0)$、$X^-=\\max(-X,0)$。若 $\\mathbb E|X|<\\infty$，则正负部分都有有限积分，定义\n\n$$\\mathbb E[X]=\\mathbb E[X^+]-\\mathbb E[X^-].$$\n\n若正负两部分都是无穷，不能把它们相减得到一个平均值。对称分布也不自动保证均值存在，例如标准 Cauchy 分布的两侧尾部都不可积。\n\n### 两个积分空间如何对应\n\n$\\int_\\Omega X(\\omega)d\\mathbb P(\\omega)$ 在试验结果上累加；$\\int_\\mathbb R xp_X(x)dx$ 则按 $X$ 的数值分组后累加。两者计算的是同一个期望。严格地说，令 $\\mu_X(A)=\\mathbb P(X\\in A)$，则\n\n$$\\mathbb E[g(X)]=\\int_{\\mathbb R}g(x)d\\mu_X(x).$$\n\n只有当分布 $\\mu_X$ 有密度时，才进一步写成 $\\int g(x)p_X(x)dx$。离散变量用求和，混合变量要同时保留概率原子与连续积分。把积分写在数轴上，不意味着所有随机变量都有密度。\n\n例如变量以概率 $1/2$ 取零，以概率 $1/2$ 服从 $U(0,2)$。则 $\\mathbb E[X^2]=(1/2)\\times0+(1/2)\\int_0^2x^2(1/2)dx=2/3$。若把连续部分错误归一化成总概率 1，就会把答案算成 $4/3$。\n\n### 实际构造非负变量的阶梯逼近\n\n可取 $X_n=\\min\\{n,2^{-n}\\lfloor2^nX\\rfloor\\}$。符号 $\\lfloor y\\rfloor$ 表示不超过 $y$ 的最大整数。每个 $X_n$ 只取有限多个值；分辨率不断加倍、截断点不断提高，故 $0\\le X_n\\uparrow X$。在 $X\\le n$ 的位置，近似误差小于 $2^{-n}$。\n\n例如 $X=0.7$ 时，前几次下取整近似是 $0.5,0.5,0.625,0.6875$，逐步从下方逼近。单调收敛定理保证这些有限加权和的极限等于所定义的积分，不依赖采用哪一种合适的阶梯逼近。\n\n## 积分的基本运算\n\n在可积条件下，期望具有线性性：$\\mathbb E[aX+bY]=a\\mathbb E[X]+b\\mathbb E[Y]$，不需要 $X,Y$ 独立。若 $X\\le Y$ 几乎必然，则 $\\mathbb E[X]\\le\\mathbb E[Y]$。特别地，$|\\mathbb E[X]|\\le\\mathbb E|X|$。\n\n独立性用于把乘积期望分开：适当可积时，$\\mathbb E[XY]=\\mathbb E[X]\\mathbb E[Y]$。不要把这一条与期望线性混为一谈。相关的两个收益仍可直接相加求均值，但计算组合方差时需要协方差。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>协方差，即两个变量偏离各自均值时，共同变化程度的度量。</p></aside>\n\n## 单调收敛：逐渐加入非负贡献\n\n若 $0\\le X_n\\uparrow X$ 几乎必然，则\n\n$$\\mathbb E[X_n]\\uparrow\\mathbb E[X].$$\n\n不要求 $X$ 具有有限均值。对非负随机变量的级数，令 $S_n=\\sum_{k=1}^nX_k$，由此得到 $\\mathbb E[\\sum_kX_k]=\\sum_k\\mathbb E[X_k]$。这一结果说明非负项不会因交换求和与积分而发生正负抵消问题。\n\n例如 $X\\ge0$，截断变量 $X\\wedge n$ 单调增加到 $X$。计算尾部很长的分布时，可以先算截断均值，再观察它是否趋于有限值。\n\n以速率为 2 的指数变量 $X$ 为例，截断量 $X\\wedge n$ 的期望可用尾概率积分计算：\n\n$$\\mathbb E[X\\wedge n]=\\int_0^n\\mathbb P(X>t)dt=\\frac{1-e^{-2n}}2\\uparrow\\frac12.$$\n\n为什么尾概率积分成立？逐条结果都有 $X(\\omega)\\wedge n=\\int_0^n\\mathbf1_{\\{X(\\omega)>t\\}}dt$，对非负函数交换两个积分即可。这个表示把一个取值平均问题转成了“超过各个阈值的概率”累加。\n\n单调收敛没有要求各个 $X_n$ 的均值统一有界；若极限变量尾部太重，均值可以趋于无穷。非负性避免了正负无穷相减，单调性则保证每次近似只增加贡献。\n\n## 控制收敛：用一个可积上界控制尾部\n\n若 $X_n\\to X$ 几乎必然，且存在同一个随机变量 $Y$ 满足 $|X_n|\\le Y$、$\\mathbb E[Y]<\\infty$，则\n\n$$\\mathbb E|X_n-X|\\to0,\\qquad\\mathbb E[X_n]\\to\\mathbb E[X].$$\n\n“同一个”很关键。每个 $X_n$ 各自有界，不能代替一个对所有 $n$ 都成立的可积上界。一个直接应用是有界随机变量：若统一有 $|X_n|\\le C$，可以取 $Y=C$。\n\n## 几乎处处收敛为何还不够\n\n在 $\\Omega=(0,1)$ 的均匀概率下，取\n\n$$X_n(\\omega)=n\\mathbf1_{(0,1/n)}(\\omega).$$\n\n对每个固定的 $\\omega>0$，当 $n$ 足够大时，$\\omega$ 不再落入 $(0,1/n)$，故 $X_n(\\omega)\\to0$。但 $\\mathbb E[X_n]=n\\times(1/n)=1$，均值并未趋于零。函数的非零区域越来越窄，高度却越来越高，面积始终为 1。\n\n![概率质量向窄区间集中](/assets/illustrations/theory/calin/convergence-spikes.svg)\n\n> **鲨鱼说** 交换极限与期望时，需要控制那些越来越罕见、取值却越来越大的结果。只检查大多数样本已经接近目标，会漏掉这些对均值仍有显著贡献的尾部。\n\n### 支配条件控制了哪一部分\n\n若 $|X_n|\\le Y$ 且 $\\mathbb E[Y]<\\infty$，那么大于阈值 $K$ 的尾部贡献统一满足\n\n$$\\mathbb E[|X_n|\\mathbf1_{\\{|X_n|>K\\}}]\n\\le\\mathbb E[Y\\mathbf1_{\\{Y>K\\}}]\\longrightarrow0.$$\n\n这表示无论选择哪一个 $n$，都可以用同一个足够大的阈值让尾部平均贡献很小。剩下的有界部分再利用收敛处理。尖峰 $X_n=n\\mathbf1_{(0,1/n)}$ 不满足这种控制：对任意 $K$，只要 $n>K$，它的全部均值 1 都落在阈值之外。\n\n> **鲨鱼说** 单调收敛适合不断加入非负贡献；控制收敛适合取值可能上下变动、但始终被同一个可积变量约束的序列。条件不满足时，应检查具体尾部，而不是仅凭样本图像判断能否交换极限。\n\n## 练习：判断能否交换极限\n\n令 $U\\sim U(0,1)$，$Y_n=\\sin(nU)/n$，$Z_n=n^2\\mathbf1_{\\{U<1/n^2\\}}$。分别判断它们是否几乎必然趋于零，以及期望是否趋于零。\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n$|Y_n|\\le1/n$，所以对所有样本点均趋于零，且 $|\\mathbb E[Y_n]|\\le1/n\\to0$。也可以用控制收敛，取上界 1。\n\n对几乎所有 $U>0$，当 $n$ 足够大时 $U\\ge1/n^2$，因此 $Z_n\\to0$ 几乎必然；但 $\\mathbb E[Z_n]=n^2\\mathbb P(U<1/n^2)=1$。它没有满足控制收敛所需的统一可积上界。两个序列的点态极限相同，均值极限却不同，差别来自尾部控制。\n\n</details>\n\n## 代码下载\n\n[下载计算与绘图代码](/assets/downloads/theory/calin-book-02-02.zip)\n",
+  "metadata": {
+    "theory_book": {
+      "book": "stochastic-calculus",
+      "part": "第一部分 · 概率与随机过程",
+      "number": 5,
+      "chapter": "2",
+      "edition": "2026-10",
+      "minutes": 38,
+      "section": "2",
+      "source_pages": [
+        29,
+        30,
+        31
+      ],
+      "chapter_title": "概率与条件期望",
+      "source_sections": [
+        "2.5",
+        "2.6"
+      ]
+    }
+  }
+}

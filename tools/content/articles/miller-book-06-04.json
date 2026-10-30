@@ -1,0 +1,37 @@
+{
+  "slug": "miller-book-06-04",
+  "title": "二叉堆与优先级队列",
+  "summary": "逐步上浮、下沉维护最小堆，解释数组索引，并用节点高度分布推导线性建堆。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8033,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "优先级队列每次取出优先级最高的任务。如果数值越小优先级越高，就可用最小堆保存。堆顶是全局最小值，其余位置无需整体排序。\n\n## 两个约束\n\n结构上，堆是最后一层从左向右填充的完全二叉树；顺序上，每个父节点的键不大于孩子。沿任何根到叶路径，键不会下降，所以根不大于全部后代。\n\n完全结构可直接按层存入数组。从 0 编号，i 的左孩子为 2i+1、右孩子为 2i+2，非根节点的父索引为 (i−1)//2。索引超过数组长度的孩子不存在。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/heap.svg\" alt=\"最小堆满足每个父节点不大于子节点，但同层元素无需有序。\" loading=\"lazy\"></figure>\n\n## 插入后上浮\n\n新值放数组末尾，保持完全结构；若小于父值，交换并继续。堆 `[2,5,3,9,7]` 加入 1 后，1 位于索引 5，先与索引 2 的 3 交换，再与根 2 交换，得到 `[1,5,2,9,7,3]`。\n\n只有新节点的祖先路径可能违反堆序，其余边未变。树高 O(log n)，所以插入最坏 O(log n)。\n\n## 删除堆顶后下沉\n\n保存根作为返回值，将尾值移到根并删除尾位置。与两个孩子中较小者比较；若根更大，交换后继续。必须选较小孩子，否则另一个孩子可能仍小于新父节点。\n\n例如 `[1,5,2,9,7,3]` 删除 1，把 3 放到根；较小孩子为 2，交换后得到 `[2,5,3,9,7]`。空堆删除报错；单节点堆删除后直接为空，不再下沉。\n\n## 从无序数组整体建堆\n\n叶子单独已经是堆。从最后一个非叶节点 n//2−1 开始，向前逐个下沉。处理某节点时，其左右子树已经建好，只需修复该根与子树的关系。\n\n高度约为 h 的节点数按 $n/2^{h+1}$ 递减，每个至多下沉 h 层，故总工作受下式控制：\n\n$$n\\sum_{h\\ge0}\\frac{h}{2^{h+1}}=n.$$\n\n这里级数为 1，可由几何级数求导得到；实际有限树的取整只改变常数。因此整体建堆 O(n)，比按 O(log n) 上界逐项估计得到的 O(n log n) 更紧。\n\n## 接口与使用范围\n\npeek 读取根为 O(1)，push、pop 为 O(log n)，整体构造 O(n)。查任意键仍可能扫描全部元素，堆没有搜索树的左右键区间。重复 pop 可输出升序结果；若任务优先级相同且需保持到达顺序，可用“优先级、递增序号、任务”作为比较记录。\n\n> **鲨鱼说** 建堆的多数节点就在叶子附近，只能下沉很短距离。把每个节点都按整棵树高度估计，会得到正确但偏松的上界。\n\n## Python 实现\n\n~~~python\nclass MinHeap:\n    def __init__(self,values=()):\n        self.a=list(values)\n        for i in range(len(self.a)//2-1,-1,-1):self.down(i)\n    def down(self,i):\n        a=self.a\n        while 2*i+1<len(a):\n            child=2*i+1\n            if child+1<len(a) and a[child+1]<a[child]:child+=1\n            if a[i]<=a[child]:break\n            a[i],a[child]=a[child],a[i];i=child\n    def push(self,value):\n        a=self.a;a.append(value);i=len(a)-1\n        while i and a[i]<a[(i-1)//2]:\n            p=(i-1)//2;a[i],a[p]=a[p],a[i];i=p\n    def pop(self):\n        if not self.a:raise IndexError('empty heap')\n        answer=self.a[0];last=self.a.pop()\n        if self.a:self.a[0]=last;self.down(0)\n        return answer\nheap=MinHeap([9,5,6,2,3]);heap.push(1)\nout=[heap.pop() for _ in range(6)]\nassert out==[1,2,3,5,6,9]\nprint(out)\n~~~\n\n## 练习\n1. 手动将[9,5,6,2,3]整体建成最小堆，记录每次下沉。\n2. 用堆维护数据流中最大的k个值，说明堆中应保存什么以及使用最小堆还是最大堆。\n\n[本章习题](/read/?slug=miller-book-06-07)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-06-04.zip",
+        "label": "二叉堆与优先级队列 · Python 示例",
+        "size_bytes": 1109,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第二部分 · 数据组织与基本算法",
+      "number": 33,
+      "chapter": "6",
+      "edition": "2026-10",
+      "minutes": 11,
+      "section": "4",
+      "chapter_title": "树",
+      "source_sections": [
+        "6.6"
+      ]
+    }
+  }
+}

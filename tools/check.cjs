@@ -1,8 +1,8 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
-const root=path.resolve(__dirname,'../docs');let pages=0;const missing=new Set();
-function walk(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const file=path.join(dir,e.name);if(e.isDirectory())walk(file);else if(e.name.endsWith('.html')){pages++;const s=fs.readFileSync(file,'utf8');assert(!/nmkforbzmbstasnjxlid|foamlabshark\.github\.io/.test(s),'Old service in '+file);for(const m of s.matchAll(/(?:src|href)=["'](\/[^"'#?]*)(?:[?#][^"']*)?["']/g)){const target=path.join(root,decodeURIComponent(m[1]),m[1].endsWith('/')?'index.html':'');if(!fs.existsSync(target))missing.add(m[1]);}}}}
-walk(root);const config=JSON.parse(fs.readFileSync(path.join(root,'assets/auth-config.json')));assert.equal(config.supabaseUrl,'https://skqoondpsqzvybnmcaas.supabase.co');assert.equal(missing.size,0,'Missing internal routes/assets: '+[...missing].join(', '));
+const root=path.resolve(__dirname,'../docs');let pages=0;const missing=new Set(),existence=new Map();
+function walk(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const file=path.join(dir,e.name);if(e.isDirectory())walk(file);else if(e.name.endsWith('.html')){pages++;const s=fs.readFileSync(file,'utf8');assert(!/nmkforbzmbstasnjxlid|foamlabshark\.github\.io/.test(s),'Old service in '+file);for(const m of s.matchAll(/(?:src|href)=["'](\/[^"'#?]*)(?:[?#][^"']*)?["']/g)){const target=path.join(root,decodeURIComponent(m[1]),m[1].endsWith('/')?'index.html':'');if(!existence.has(target))existence.set(target,fs.existsSync(target));if(!existence.get(target))missing.add(m[1]);}}}}
+walk(root);assert.equal(missing.size,0,'Missing internal routes/assets: '+[...missing].join(', '));
 // Navigation must exist before account/network requests finish, on every shell.
 for(const route of ['index.html','start/index.html','courses/index.html','tools/index.html','read/index.html','interview/index.html','interview/zhou/index.html','interview/practice/index.html','theory/index.html','theory/factor-investing/index.html']){const html=fs.readFileSync(path.join(root,route),'utf8'),nav=html.match(/<nav aria-label="主要导航">([\s\S]*?)<\/nav>/)?.[1];assert(nav,'Missing main navigation '+route);for(const key of ['tools','interview','interview-zhou','interview-practice','theory','factor-investing'])assert(nav.includes('data-nav-section="'+key+'"'),'Missing fallback '+key+' in '+route);}
 const questions=JSON.parse(fs.readFileSync(path.join(__dirname,'content/interview-catalog.json'),'utf8'));
@@ -58,4 +58,18 @@ for(const entry of library.entries)assert(/^https?:\/\//.test(entry.url),entry.t
 const experience=JSON.parse(fs.readFileSync(path.join(__dirname,'content/interview-experience.json'),'utf8'));
 assert.equal(experience.entries.length,23);assert.equal(experience.platform_links.length,3);
 assert(!fs.existsSync(path.join(root,'2022')),'Legacy blog in deployment');
-console.log('Checked '+pages+' pages: internal links, service config, navigation, 66 system lessons, 100 interview units, '+theory.length+' theory units, 136 topic lessons, 249 resources and 23 experience records passed.');
+const articles=fs.readdirSync(path.join(__dirname,'content/articles')).filter(f=>f.endsWith('.json')).map(f=>JSON.parse(fs.readFileSync(path.join(__dirname,'content/articles',f),'utf8')));
+assert.equal(articles.length,744);
+let folded=0;
+for(const r of articles){
+ const html=fs.readFileSync(path.join(root,'read',r.slug,'index.html'),'utf8');
+ assert(html.length>10000,'Empty article '+r.slug);assert(html.includes('id="static-article"'),'Missing static body '+r.slug);
+ assert(!/正在确认登录|前往登录|runtime-account|auth-config|\.supabase\.(?:co|com)/.test(html),'Backend dependency '+r.slug);
+ if(r.metadata?.interview)folded+=(html.match(/<details class="interview-answer"/g)||[]).length;
+ assert(!/<details class="interview-answer"[^>]*\sopen(?:\s|>)/.test(html),'Answer initially open '+r.slug);
+}
+assert.equal(folded,637);
+const search=JSON.parse(fs.readFileSync(path.join(root,'assets/search-live.json'),'utf8'));assert.equal(search.length,744);assert(search.every(r=>r.text.length>20));
+for(const file of ['auth-config.json','runtime-account.js','vendor/supabase.js'])assert(!fs.existsSync(path.join(root,'assets',file)),'Legacy backend asset '+file);
+for(const route of ['account','admin','studio','notes'])assert(!fs.existsSync(path.join(root,route)),'Legacy account route '+route);
+console.log('Checked '+pages+' pages: 744 public static articles, 637 folded answers, full-text search, internal links, navigation, courses, theory, topics, resources and attachments passed.');

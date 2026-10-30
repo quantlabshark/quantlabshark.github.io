@@ -1,0 +1,62 @@
+{
+  "slug": "quant-course-24",
+  "title": "24 · 样本外回测与研究报告",
+  "summary": "完成一次按时间划分的均线策略实验，检查交易时序、验证集选参、测试基准与费用敏感性。",
+  "kind": "lesson",
+  "track": "策略与回测",
+  "series": "量化研究系统课程",
+  "sort_order": 24,
+  "cover_url": "/assets/figures/curriculum/course-24.svg",
+  "section_ids": [
+    "5c3ef451-63c2-4e13-86cd-7320240126e5"
+  ],
+  "body": "样本外回测评价预先确定的规则在后续时期的表现。报告将参数选择、资金核算、基准比较和结果解释连接起来，使读者能够追溯结论的依据。\n\n## 三个均线窗口，什么时候才能选出一个\n\n想检验“价格高于近期均价后，是否仍会继续上涨”，可以设置2、3、4日三个候选窗口。但如果先看完整行情，再选择赚钱最多的窗口，得到的是经过挑选的历史赢家。它尚未回答新时期会发生什么。\n\n把36个时点分成三段：0—17用于开发程序，18—23用于比较窗口，24—35用于最终评价。验证段选择一次窗口，最终测试只执行这个选择。训练和验证可以反复使用，测试一旦被用来调整规则，就已经成为新的开发数据。\n\n![按时间划分的研究区间与测试净值](/assets/figures/curriculum/course-24.svg)\n\n图中上方显示三个区间的时间位置，下方只展示固定窗口在测试段的净值及同口径买入持有。曲线从相同资金开始，终点均计入清仓费用。\n\n## 从上一日收盘形成今日订单\n\n均线窗口为$L$时，时点$t$的开盘信号使用$P^{close}_{t-1}$及截至$t-1$的$L$个收盘价。高于均价且当前空仓就买入，否则清仓。当天尚未发生的收盘价不能用于当天开盘交易。\n\n每段开始资金10000元，只买整数股，不借款、不卖空，买卖每边费率0.1%。买入数量按$\\lfloor C/[P(1+c)]\\rfloor$确定，确保预留手续费。每个区间最后按指定开盘价清仓，现金收益设为零。\n\n例如现金10000元、买价102元，能买$\\lfloor10000/(102\\times1.001)\\rfloor=97$股，买入及费用为9903.894元，剩余96.106元。若忽略费用计算数量，在现金接近整数股金额时可能产生透支。\n\n## 训练、验证与样本外回测\n\n下面只使用程序内的模拟价格，依赖NumPy与pandas。`backtest`负责执行固定规则；窗口选择留在函数之外，因此可以清楚看到哪些数据参与了选择。\n\n```python\nimport numpy as np\nimport pandas as pd\n\nclose = np.array([100,101,102,101,100,99,100,102,104,103,102,104,\n                  105,106,104,103,102,104,105,104,103,101,100,102,\n                  103,105,106,104,103,101,102,104,106,105,107,108], dtype=float)\nopening = np.array([100,100,101,102,101,100,99,100,102,104,103,102,\n                    104,105,106,104,103,102,104,105,104,103,101,100,\n                    102,103,105,106,104,103,101,102,104,106,105,107], dtype=float)\n\ndef backtest(window, start, end, cost=0.001):\n    average = pd.Series(close).rolling(window).mean().to_numpy()\n    cash, shares = 10000.0, 0\n    nav, orders = [cash], []\n    for t in range(start, end):\n        target = int(t >= window and close[t-1] > average[t-1])\n        price = opening[t]\n        if target == 1 and shares == 0:\n            quantity = int(cash / (price * (1 + cost)))\n            if quantity > 0:\n                cash -= quantity * price * (1 + cost)\n                shares = quantity\n                orders.append((t, \"buy\", quantity, price))\n        elif target == 0 and shares > 0:\n            cash += shares * price * (1 - cost)\n            orders.append((t, \"sell\", shares, price))\n            shares = 0\n        assert cash >= -1e-8 and shares >= 0\n        nav.append(cash + shares * opening[t+1])\n    if shares:\n        cash += shares * opening[end] * (1 - cost)\n        orders.append((end, \"sell\", shares, opening[end]))\n        nav[-1] = cash\n        shares = 0\n    assert shares == 0\n    return np.array(nav), orders\n\ndef buy_and_hold(start, end, cost=0.001):\n    quantity = int(10000 / (opening[start] * (1 + cost)))\n    cash = 10000 - quantity * opening[start] * (1 + cost)\n    nav = np.r_[10000.0, cash + quantity * opening[start+1:end+1]]\n    nav[-1] -= quantity * opening[end] * cost\n    return nav\n\ndef metrics(nav):\n    drawdown = nav / np.maximum.accumulate(nav) - 1\n    return {\"return\": float(nav[-1]/nav[0]-1),\n            \"max_drawdown\": float(-drawdown.min())}\n\ncandidates = [2, 3, 4]\nvalidation = {w: backtest(w, 18, 23)[0][-1] for w in candidates}\nbest = max(candidates, key=lambda w: (validation[w], -w))\nnav, orders = backtest(best, 24, 35)\nprint(\"validation final wealth:\", validation)\nprint(\"selected window:\", best)\nprint(\"strategy:\", metrics(nav))\nprint(\"buy and hold:\", metrics(buy_and_hold(24, 35)))\nprint(\"cash:\", metrics(np.full(12, 10000.0)))\nprint(\"orders:\", orders)\nfor cost in [0.0, 0.001, 0.002]:\n    scenario, _ = backtest(best, 24, 35, cost=cost)\n    print(\"cost scenario:\", cost, metrics(scenario))\nassert len(nav) == 12\n```\n\n开盘时点从24到35形成11个持有区间，连同初始净值共12个值。循环先处理当前订单，再按下一开盘价估值。末项清仓后改为实际现金。滚动均线可以使用测试开始前已知的历史价格，不必把早期价格清空，关键是参数选择不能使用测试收益。\n\n## 为什么盈利仍不代表超过基准\n\n验证阶段选择2日窗口，并列时按预先设定规则选较小窗口。基准费率下，测试策略累计收益约4.5053%、最大回撤约1.9665%。同区间买入持有约4.6473%，现金为0%。策略赚了钱，但比买入持有少约0.1420个百分点。\n\n比较基准时，两者必须使用相同初始资金、价格、费用、整数股与清仓约定。否则较高收益可能只是少扣了一次费用，或采用了更有利的成交时刻。验证段三个候选均亏损，也应如实保留；“选最优”不等于“找到有效策略”。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>样本外是一段数据在研究中的角色。文件名叫test，并不会让它自动独立；只要看过结果后据此改规则，这段数据就参与了开发。</p></aside>\n\n## 费用敏感性为什么固定规则\n\n程序将同一选定窗口分别放在零费率、0.1%和0.2%费率下执行，测量成本变化的影响。它没有在每种测试费率下重新选择赚钱最多的窗口。由于数量必须为整数，费率改变也可能改变可买股数，因此净值差不一定严格等于某个固定费用差。\n\n还可以将信号推迟一个开盘执行，检验预测优势是否很快消失；或限制单笔成交比例，检验容量。每次敏感性分析应说明只改变了什么，并保留各项结果，不只展示最有利场景。\n\n## 多次尝试会怎样改变证据\n\n若一个无效规则以5%概率偶然显著，独立尝试20个规则，至少一次误报概率为$1-0.95^{20}\\approx64.2\\%$。真实策略往往相关，但搜索越广、只保留赢家的偏差仍然存在。White或Hansen等重抽样方法、控制整体错误率的逐步检验，都是处理“从很多候选里挑一个”的研究方向。不能只对最终赢家做一次普通检验。\n\n时间序列中相邻收益可能相关，随机打乱记录的交叉验证容易把未来状态放入训练。较长历史可用滚动窗口：每次用过去训练和选参，评价下一段，再拼接各期样本外结果。若标签跨越多日，还需排除在预测时尚未完成的训练标签。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>交叉验证，即反复划分拟合与评价样本，用于比较模型或参数的方法。</p></aside>\n\n## 研究报告应写出哪些数值\n\n报告至少包含研究假设、数据版本、时间划分、候选窗口、最终规则、成交与费用假设、测试净收益、回撤、交易次数和基准差。交易清单应能对应每次现金变化；没有成交的信号也应记录。\n\n对这个实验，结论可以写为：“2日均线在给定模拟测试段净赚4.5053%，略低于同成本买入持有。结论仅来自11个持有区间。下一步需要增加后续时间和不同状态，并检验延迟与成本。”这段结论明确了结果、比较对象和下一项研究问题，没有把程序成功运行当作市场有效性证明。\n\n## 练习\n\n测试结果公布后，将候选窗口从2、3、4改成2到20，并再次挑选测试收益最高者。这个新结果应如何标注？最后为什么要更新清仓后的末项净值？\n\n<details><summary>查看解答</summary>\n\n原测试段已经参与新的参数搜索，应标为开发或验证结果，新的结论需要新的未查看时间段。末项在清仓前只是持仓市值，更新为实际现金才能计入退出手续费，避免高估最终收益。\n\n</details>\n\n---\n\n[课程目录](/courses/)\n\n## 配套代码\n\n[下载本节代码（ZIP）](/assets/downloads/courses/quant-course-24.zip)\n\n压缩包包含脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n",
+  "metadata": {
+    "curriculum": {
+      "cover": "/assets/figures/curriculum/course-24.svg",
+      "level": "基础",
+      "stage": 4,
+      "number": 24,
+      "edition": "2026-10",
+      "minutes": 45,
+      "source_refs": [
+        {
+          "book": "量化交易：算法、分析、数据、模型和优化",
+          "chapters": "2.8.5",
+          "pdf_pages": [
+            62,
+            63
+          ]
+        },
+        {
+          "book": "深入浅出Python量化交易实战",
+          "chapters": "2.1–2.4",
+          "pdf_pages": [
+            40,
+            43,
+            45,
+            52,
+            59,
+            61,
+            62
+          ]
+        },
+        {
+          "book": "Quant Roadmap — Ultimate Edition",
+          "chapters": "25",
+          "pdf_pages": [
+            69,
+            70,
+            71,
+            72
+          ]
+        }
+      ],
+      "stage_title": "策略与回测"
+    },
+    "code_download": {
+      "url": "/assets/downloads/courses/quant-course-24.zip",
+      "examples": 1
+    }
+  }
+}

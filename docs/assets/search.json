@@ -1,1 +1,882 @@
-[{"title":"01 · 研究问题与检验方法","url":"/read/?slug=research-workflow","text":"01 · 研究问题与检验方法"},{"title":"02 · 建立可重复运行的 Python 环境","url":"/read/?slug=python-environment","text":"02 · 建立可重复运行的 Python 环境"},{"title":"03 · 用 NumPy 理解数组与向量计算","url":"/read/?slug=numpy-arrays","text":"03 · 用 NumPy 理解数组与向量计算"},{"title":"04 · 用 pandas 建立干净的时间索引","url":"/read/?slug=pandas-data-cleaning","text":"04 · 用 pandas 建立干净的时间索引"},{"title":"05 · 数据披露与历史可用时间","url":"/read/?slug=point-in-time-data","text":"05 · 数据披露与历史可用时间"},{"title":"06 · 从单期收益到净值与复利","url":"/read/?slug=returns-compounding","text":"06 · 从单期收益到净值与复利"},{"title":"07 · 统计描述、相关性与时间依赖","url":"/read/?slug=statistics-correlation","text":"07 · 统计描述、相关性与时间依赖"},{"title":"08 · 构造只使用历史数据的滚动特征","url":"/read/?slug=rolling-features","text":"08 · 构造只使用历史数据的滚动特征"},{"title":"09 · 为研究建立公平的基准","url":"/read/?slug=benchmarks-hypotheses","text":"09 · 为研究建立公平的基准"},{"title":"10 · 识别回测中最常见的偏差","url":"/read/?slug=research-biases","text":"10 · 识别回测中最常见的偏差"},{"title":"11 · 写出能逐笔核对的回测账本","url":"/read/?slug=backtest-ledger","text":"11 · 写出能逐笔核对的回测账本"},{"title":"12 · 将交易成本纳入每次成交","url":"/read/?slug=costs-and-turnover","text":"12 · 将交易成本纳入每次成交"},{"title":"13 · 阅读收益、回撤和夏普比率","url":"/read/?slug=performance-risk","text":"13 · 阅读收益、回撤和夏普比率"},{"title":"14 · 按时间划分样本外验证","url":"/read/?slug=out-of-sample-validation","text":"14 · 按时间划分样本外验证"},{"title":"15 · 用稳健性实验检验研究结论","url":"/read/?slug=robustness-experiments","text":"15 · 用稳健性实验检验研究结论"},{"title":"16 · 理解组合权重与再平衡","url":"/read/?slug=portfolio-weights","text":"16 · 理解组合权重与再平衡"},{"title":"17 · 建立不泄漏信息的机器学习基线","url":"/read/?slug=machine-learning-baseline","text":"17 · 建立不泄漏信息的机器学习基线"},{"title":"18 · 保存数据版本与实验记录","url":"/read/?slug=reproducible-research","text":"18 · 保存数据版本与实验记录"},{"title":"19 · 用模拟交易检查运行过程","url":"/read/?slug=paper-trading-monitoring","text":"19 · 用模拟交易检查运行过程"},{"title":"20 · 策略研究报告的编写与复现","url":"/read/?slug=capstone-research-report","text":"20 · 策略研究报告的编写与复现"},{"title":"简单收益率","url":"/read/?slug=ref-returns","text":"简单收益率"},{"title":"复利净值","url":"/read/?slug=ref-compound","text":"复利净值"},{"title":"最大回撤","url":"/read/?slug=ref-drawdown","text":"最大回撤"},{"title":"交易成本与换手","url":"/read/?slug=ref-cost","text":"交易成本与换手"},{"title":"未来信息与数据泄漏","url":"/read/?slug=ref-lookahead","text":"未来信息与数据泄漏"},{"title":"时间序列验证","url":"/read/?slug=ref-timesplit","text":"时间序列验证"},{"title":"read_csv：读取表格","url":"/read/?slug=ref-read-csv","text":"read_csv：读取表格"},{"title":"sort_index：按时间排序","url":"/read/?slug=ref-sort-index","text":"sort_index：按时间排序"},{"title":"rolling：滚动窗口","url":"/read/?slug=ref-rolling","text":"rolling：滚动窗口"},{"title":"shift：移动数据位置","url":"/read/?slug=ref-shift","text":"shift：移动数据位置"},{"title":"isna：检查缺失数据","url":"/read/?slug=ref-missing","text":"isna：检查缺失数据"},{"title":"merge_asof：按已知时间连接","url":"/read/?slug=ref-join","text":"merge_asof：按已知时间连接"},{"title":"NumPy 官方文档","url":"/read/?slug=resource-numpy","text":"NumPy 官方文档"},{"title":"pandas 官方文档","url":"/read/?slug=resource-pandas","text":"pandas 官方文档"},{"title":"scikit-learn 官方文档","url":"/read/?slug=resource-sklearn","text":"scikit-learn 官方文档"},{"title":"statsmodels 官方文档","url":"/read/?slug=resource-statsmodels","text":"statsmodels 官方文档"},{"title":"Python 官方文档","url":"/read/?slug=resource-python","text":"Python 官方文档"},{"title":"Matplotlib 官方文档","url":"/read/?slug=resource-matplotlib","text":"Matplotlib 官方文档"},{"title":"合成价格与 Python 回测","url":"/read/?slug=synthetic-data","text":"合成价格与 Python 回测"},{"title":"实践 1 · 数据审计","url":"/read/?slug=assignment-1","text":"实践 1 · 数据审计"},{"title":"实践 2 · 收益与回撤","url":"/read/?slug=assignment-2","text":"实践 2 · 收益与回撤"},{"title":"实践 3 · 成交时间账本","url":"/read/?slug=assignment-3","text":"实践 3 · 成交时间账本"},{"title":"实践 4 · 成本敏感性","url":"/read/?slug=assignment-4","text":"实践 4 · 成本敏感性"},{"title":"实践 5 · 样本外验证","url":"/read/?slug=assignment-5","text":"实践 5 · 样本外验证"},{"title":"实践 6 · 复现研究报告","url":"/read/?slug=assignment-6","text":"实践 6 · 复现研究报告"},{"title":"QuantLab 开放学习","url":"/read/?slug=launch","text":"QuantLab 开放学习"},{"title":"资料来源与研究约定","url":"/read/?slug=sources-and-validation","text":"资料来源与研究约定"},{"title":"求和、函数与微积分基础","url":"/read/?slug=larsen-book-guide","text":"求和、函数与微积分基础"},{"title":"总体、样本与统计推断","url":"/read/?slug=larsen-book-01-01","text":"总体、样本与统计推断"},{"title":"概率与实验设计的发展","url":"/read/?slug=larsen-book-01-02","text":"概率与实验设计的发展"},{"title":"样本空间、事件与概率运算","url":"/read/?slug=larsen-book-02-01","text":"样本空间、事件与概率运算"},{"title":"条件概率、全概率与贝叶斯公式","url":"/read/?slug=larsen-book-02-02","text":"条件概率、全概率与贝叶斯公式"},{"title":"独立事件与重复试验","url":"/read/?slug=larsen-book-02-03","text":"独立事件与重复试验"},{"title":"排列、组合与重复计数","url":"/read/?slug=larsen-book-02-04","text":"排列、组合与重复计数"},{"title":"等可能模型与组合概率","url":"/read/?slug=larsen-book-02-05","text":"等可能模型与组合概率"},{"title":"蒙特卡洛模拟与计算误差","url":"/read/?slug=larsen-book-02-06","text":"蒙特卡洛模拟与计算误差"},{"title":"概率：习题","url":"/read/?slug=larsen-book-02-07","text":"概率：习题"},{"title":"二项分布与超几何分布","url":"/read/?slug=larsen-book-03-01","text":"二项分布与超几何分布"},{"title":"离散分布、分布函数与分位数","url":"/read/?slug=larsen-book-03-02","text":"离散分布、分布函数与分位数"},{"title":"连续密度与积分概率","url":"/read/?slug=larsen-book-03-03","text":"连续密度与积分概率"},{"title":"期望、函数的期望与平均数","url":"/read/?slug=larsen-book-03-04","text":"期望、函数的期望与平均数"},{"title":"方差、协方差与误差传播","url":"/read/?slug=larsen-book-03-05","text":"方差、协方差与误差传播"},{"title":"联合分布与边际分布","url":"/read/?slug=larsen-book-03-06","text":"联合分布与边际分布"},{"title":"随机变量变换与卷积","url":"/read/?slug=larsen-book-03-07","text":"随机变量变换与卷积"},{"title":"次序统计量与样本极值","url":"/read/?slug=larsen-book-03-08","text":"次序统计量与样本极值"},{"title":"条件密度与全期望公式","url":"/read/?slug=larsen-book-03-09","text":"条件密度与全期望公式"},{"title":"矩母函数与独立随机变量之和","url":"/read/?slug=larsen-book-03-10","text":"矩母函数与独立随机变量之和"},{"title":"随机变量：习题","url":"/read/?slug=larsen-book-03-11","text":"随机变量：习题"},{"title":"泊松分布与稀有事件计数","url":"/read/?slug=larsen-book-04-01","text":"泊松分布与稀有事件计数"},{"title":"正态分布、标准化与中心极限定理","url":"/read/?slug=larsen-book-04-02","text":"正态分布、标准化与中心极限定理"},{"title":"几何分布与负二项分布","url":"/read/?slug=larsen-book-04-03","text":"几何分布与负二项分布"},{"title":"指数分布、Gamma 分布与等待时间","url":"/read/?slug=larsen-book-04-04","text":"指数分布、Gamma 分布与等待时间"},{"title":"分布选择、随机数生成与模拟核验","url":"/read/?slug=larsen-book-04-05","text":"分布选择、随机数生成与模拟核验"},{"title":"常用概率分布：习题","url":"/read/?slug=larsen-book-04-06","text":"常用概率分布：习题"},{"title":"矩估计与最大似然估计","url":"/read/?slug=larsen-book-05-01","text":"矩估计与最大似然估计"},{"title":"置信区间、误差界与样本量","url":"/read/?slug=larsen-book-05-02","text":"置信区间、误差界与样本量"},{"title":"偏差、均方误差与估计效率","url":"/read/?slug=larsen-book-05-03","text":"偏差、均方误差与估计效率"},{"title":"Fisher 信息与 Cramér–Rao 下界","url":"/read/?slug=larsen-book-05-04","text":"Fisher 信息与 Cramér–Rao 下界"},{"title":"充分统计量与信息压缩","url":"/read/?slug=larsen-book-05-05","text":"充分统计量与信息压缩"},{"title":"一致性、渐近估计与自助法","url":"/read/?slug=larsen-book-05-06","text":"一致性、渐近估计与自助法"},{"title":"贝叶斯估计、先验与损失函数","url":"/read/?slug=larsen-book-05-07","text":"贝叶斯估计、先验与损失函数"},{"title":"参数估计：习题","url":"/read/?slug=larsen-book-05-08","text":"参数估计：习题"},{"title":"假设、检验统计量与拒绝域","url":"/read/?slug=larsen-book-06-01","text":"假设、检验统计量与拒绝域"},{"title":"两类错误、功效与样本量","url":"/read/?slug=larsen-book-06-02","text":"两类错误、功效与样本量"},{"title":"广义似然比检验","url":"/read/?slug=larsen-book-06-03","text":"广义似然比检验"},{"title":"统计显著性与实际效应","url":"/read/?slug=larsen-book-06-04","text":"统计显著性与实际效应"},{"title":"假设检验：习题","url":"/read/?slug=larsen-book-06-05","text":"假设检验：习题"},{"title":"样本均值、样本方差与 t 分布","url":"/read/?slug=larsen-book-07-01","text":"样本均值、样本方差与 t 分布"},{"title":"单样本均值的 t 推断","url":"/read/?slug=larsen-book-07-02","text":"单样本均值的 t 推断"},{"title":"正态总体方差的区间与检验","url":"/read/?slug=larsen-book-07-03","text":"正态总体方差的区间与检验"},{"title":"未知方差下的检验功效","url":"/read/?slug=larsen-book-07-04","text":"未知方差下的检验功效"},{"title":"正态总体的统计推断：习题","url":"/read/?slug=larsen-book-07-05","text":"正态总体的统计推断：习题"},{"title":"数据类型、抽样与实验结构","url":"/read/?slug=larsen-book-08-01","text":"数据类型、抽样与实验结构"},{"title":"图表、分布摘要与异常观测","url":"/read/?slug=larsen-book-08-02","text":"图表、分布摘要与异常观测"},{"title":"数据类型与研究设计：习题","url":"/read/?slug=larsen-book-08-03","text":"数据类型与研究设计：习题"},{"title":"两个独立总体的均值比较","url":"/read/?slug=larsen-book-09-01","text":"两个独立总体的均值比较"},{"title":"方差比与 F 分布","url":"/read/?slug=larsen-book-09-02","text":"方差比与 F 分布"},{"title":"两个比例的检验与区间","url":"/read/?slug=larsen-book-09-03","text":"两个比例的检验与区间"},{"title":"两个总体的比较：习题","url":"/read/?slug=larsen-book-09-04","text":"两个总体的比较：习题"},{"title":"多项分布与 Pearson 卡方统计量","url":"/read/?slug=larsen-book-10-01","text":"多项分布与 Pearson 卡方统计量"},{"title":"估计参数后的拟合优度检验","url":"/read/?slug=larsen-book-10-02","text":"估计参数后的拟合优度检验"},{"title":"列联表、独立性与异常点","url":"/read/?slug=larsen-book-10-03","text":"列联表、独立性与异常点"},{"title":"拟合优度与列联表：习题","url":"/read/?slug=larsen-book-10-04","text":"拟合优度与列联表：习题"},{"title":"最小二乘、拟合残差与非线性变换","url":"/read/?slug=larsen-book-11-01","text":"最小二乘、拟合残差与非线性变换"},{"title":"回归系数推断与预测区间","url":"/read/?slug=larsen-book-11-02","text":"回归系数推断与预测区间"},{"title":"相关系数、二维正态与条件预测","url":"/read/?slug=larsen-book-11-03","text":"相关系数、二维正态与条件预测"},{"title":"回归与相关：习题","url":"/read/?slug=larsen-book-11-04","text":"回归与相关：习题"},{"title":"单因素方差分析与平方和分解","url":"/read/?slug=larsen-book-12-01","text":"单因素方差分析与平方和分解"},{"title":"多重比较与线性对比","url":"/read/?slug=larsen-book-12-02","text":"多重比较与线性对比"},{"title":"变换、非中心 F 与实验效率","url":"/read/?slug=larsen-book-12-03","text":"变换、非中心 F 与实验效率"},{"title":"单因素方差分析：习题","url":"/read/?slug=larsen-book-12-04","text":"单因素方差分析：习题"},{"title":"随机区组设计","url":"/read/?slug=larsen-book-13-01","text":"随机区组设计"},{"title":"配对 t 检验与配对设计的选择","url":"/read/?slug=larsen-book-13-02","text":"配对 t 检验与配对设计的选择"},{"title":"随机区组与配对设计：习题","url":"/read/?slug=larsen-book-13-03","text":"随机区组与配对设计：习题"},{"title":"符号检验与中位数推断","url":"/read/?slug=larsen-book-14-01","text":"符号检验与中位数推断"},{"title":"Wilcoxon 符号秩与秩和检验","url":"/read/?slug=larsen-book-14-02","text":"Wilcoxon 符号秩与秩和检验"},{"title":"Kruskal–Wallis 与 Friedman 检验","url":"/read/?slug=larsen-book-14-03","text":"Kruskal–Wallis 与 Friedman 检验"},{"title":"游程检验与非参数方法的效率","url":"/read/?slug=larsen-book-14-04","text":"游程检验与非参数方法的效率"},{"title":"非参数统计：习题","url":"/read/?slug=larsen-book-14-05","text":"非参数统计：习题"},{"title":"双因素设计与交互作用","url":"/read/?slug=larsen-book-15-01","text":"双因素设计与交互作用"},{"title":"双因素平方和与均方期望","url":"/read/?slug=larsen-book-15-02","text":"双因素平方和与均方期望"},{"title":"三因素设计与二水平效应编码","url":"/read/?slug=larsen-book-15-03","text":"三因素设计与二水平效应编码"},{"title":"部分析因、混杂与设计分辨率","url":"/read/?slug=larsen-book-15-04","text":"部分析因、混杂与设计分辨率"},{"title":"统计表、分位数与数值计算","url":"/read/?slug=larsen-book-a-01","text":"统计表、分位数与数值计算"},{"title":"问题、算法与抽象数据类型","url":"/read/?slug=miller-book-01-01","text":"问题、算法与抽象数据类型"},{"title":"Python 数据、引用与可变对象","url":"/read/?slug=miller-book-01-02","text":"Python 数据、引用与可变对象"},{"title":"输入输出、控制流程与函数","url":"/read/?slug=miller-book-01-03","text":"输入输出、控制流程与函数"},{"title":"类、分数对象与运算符","url":"/read/?slug=miller-book-01-04","text":"类、分数对象与运算符"},{"title":"继承、组合与逻辑门模型","url":"/read/?slug=miller-book-01-05","text":"继承、组合与逻辑门模型"},{"title":"Python 与抽象数据类型：习题","url":"/read/?slug=miller-book-01-06","text":"Python 与抽象数据类型：习题"},{"title":"操作次数与渐近复杂度","url":"/read/?slug=miller-book-02-01","text":"操作次数与渐近复杂度"},{"title":"异序词检测与算法改进","url":"/read/?slug=miller-book-02-02","text":"异序词检测与算法改进"},{"title":"Python 容器性能与计时实验","url":"/read/?slug=miller-book-02-03","text":"Python 容器性能与计时实验"},{"title":"算法分析：习题","url":"/read/?slug=miller-book-02-04","text":"算法分析：习题"},{"title":"栈与括号匹配","url":"/read/?slug=miller-book-03-01","text":"栈与括号匹配"},{"title":"进制转换与表达式求值","url":"/read/?slug=miller-book-03-02","text":"进制转换与表达式求值"},{"title":"队列、双端队列与循环处理","url":"/read/?slug=miller-book-03-03","text":"队列、双端队列与循环处理"},{"title":"打印任务的离散时间模拟","url":"/read/?slug=miller-book-03-04","text":"打印任务的离散时间模拟"},{"title":"链表、引用更新与有序插入","url":"/read/?slug=miller-book-03-05","text":"链表、引用更新与有序插入"},{"title":"基本数据结构：习题","url":"/read/?slug=miller-book-03-06","text":"基本数据结构：习题"},{"title":"递归、基本情形与调用栈","url":"/read/?slug=miller-book-04-01","text":"递归、基本情形与调用栈"},{"title":"递归绘图与自相似结构","url":"/read/?slug=miller-book-04-02","text":"递归绘图与自相似结构"},{"title":"汉诺塔与递推关系","url":"/read/?slug=miller-book-04-03","text":"汉诺塔与递推关系"},{"title":"迷宫搜索、回溯与访问标记","url":"/read/?slug=miller-book-04-04","text":"迷宫搜索、回溯与访问标记"},{"title":"重复子问题、记忆化与动态规划","url":"/read/?slug=miller-book-04-05","text":"重复子问题、记忆化与动态规划"},{"title":"递归与动态规划：习题","url":"/read/?slug=miller-book-04-06","text":"递归与动态规划：习题"},{"title":"顺序查找与二分查找","url":"/read/?slug=miller-book-05-01","text":"顺序查找与二分查找"},{"title":"散列、冲突与开放寻址","url":"/read/?slug=miller-book-05-02","text":"散列、冲突与开放寻址"},{"title":"冒泡、选择与插入排序","url":"/read/?slug=miller-book-05-03","text":"冒泡、选择与插入排序"},{"title":"希尔排序与间隔序列","url":"/read/?slug=miller-book-05-04","text":"希尔排序与间隔序列"},{"title":"归并排序与分治","url":"/read/?slug=miller-book-05-05","text":"归并排序与分治"},{"title":"快速排序、划分与枢轴选择","url":"/read/?slug=miller-book-05-06","text":"快速排序、划分与枢轴选择"},{"title":"搜索和排序：习题","url":"/read/?slug=miller-book-05-07","text":"搜索和排序：习题"},{"title":"树的术语与两种表示","url":"/read/?slug=miller-book-06-01","text":"树的术语与两种表示"},{"title":"解析树与递归求值","url":"/read/?slug=miller-book-06-02","text":"解析树与递归求值"},{"title":"前序、中序、后序与层序遍历","url":"/read/?slug=miller-book-06-03","text":"前序、中序、后序与层序遍历"},{"title":"二叉堆与优先级队列","url":"/read/?slug=miller-book-06-04","text":"二叉堆与优先级队列"},{"title":"二叉搜索树的查找、插入与删除","url":"/read/?slug=miller-book-06-05","text":"二叉搜索树的查找、插入与删除"},{"title":"AVL 平衡树与旋转","url":"/read/?slug=miller-book-06-06","text":"AVL 平衡树与旋转"},{"title":"树：习题","url":"/read/?slug=miller-book-06-07","text":"树：习题"},{"title":"图的表示与遍历成本","url":"/read/?slug=miller-book-07-01","text":"图的表示与遍历成本"},{"title":"宽度优先搜索与词梯","url":"/read/?slug=miller-book-07-02","text":"宽度优先搜索与词梯"},{"title":"骑士周游与回溯搜索","url":"/read/?slug=miller-book-07-03","text":"骑士周游与回溯搜索"},{"title":"深度优先、时间戳与拓扑排序","url":"/read/?slug=miller-book-07-04","text":"深度优先、时间戳与拓扑排序"},{"title":"强连通分量与缩点图","url":"/read/?slug=miller-book-07-05","text":"强连通分量与缩点图"},{"title":"Dijkstra 最短路径","url":"/read/?slug=miller-book-07-06","text":"Dijkstra 最短路径"},{"title":"Prim 最小生成树","url":"/read/?slug=miller-book-07-07","text":"Prim 最小生成树"},{"title":"图及其算法：习题","url":"/read/?slug=miller-book-07-08","text":"图及其算法：习题"},{"title":"动态数组、容量与摊还分析","url":"/read/?slug=miller-book-08-01","text":"动态数组、容量与摊还分析"},{"title":"同余、快速幂与扩展欧几里得","url":"/read/?slug=miller-book-08-02","text":"同余、快速幂与扩展欧几里得"},{"title":"RSA 的数论结构与教学实现","url":"/read/?slug=miller-book-08-03","text":"RSA 的数论结构与教学实现"},{"title":"跳表与随机层级索引","url":"/read/?slug=miller-book-08-04","text":"跳表与随机层级索引"},{"title":"RGB 图像与八叉树颜色量化","url":"/read/?slug=miller-book-08-05","text":"RGB 图像与八叉树颜色量化"},{"title":"字符串匹配、自动机与 KMP","url":"/read/?slug=miller-book-08-06","text":"字符串匹配、自动机与 KMP"},{"title":"进阶数据结构与算法应用：习题","url":"/read/?slug=miller-book-08-07","text":"进阶数据结构与算法应用：习题"},{"title":"图形接口、程序组织与运行检查","url":"/read/?slug=miller-book-a-01","text":"图形接口、程序组织与运行检查"}]
+[
+  {
+    "title": "01 · 研究问题与检验方法",
+    "url": "/read/?slug=research-workflow",
+    "text": "明确研究对象、数据范围、交易规则与评价指标。"
+  },
+  {
+    "title": "02 · 建立可重复运行的 Python 环境",
+    "url": "/read/?slug=python-environment",
+    "text": "配置解释器与依赖，检查项目路径和程序输出。"
+  },
+  {
+    "title": "03 · 用 NumPy 理解数组与向量计算",
+    "url": "/read/?slug=numpy-arrays",
+    "text": "把价格序列变成收益数组，检查形状、切片和计算单位。"
+  },
+  {
+    "title": "04 · 用 pandas 建立干净的时间索引",
+    "url": "/read/?slug=pandas-data-cleaning",
+    "text": "处理日期、排序和重复记录，并保留缺失数据的含义。"
+  },
+  {
+    "title": "05 · 数据披露与历史可用时间",
+    "url": "/read/?slug=point-in-time-data",
+    "text": "区分报告期、披露日和修订日，重建决策时可用的数据。"
+  },
+  {
+    "title": "06 · 从单期收益到净值与复利",
+    "url": "/read/?slug=returns-compounding",
+    "text": "区分简单收益、对数收益和累计净值，理解亏损后的恢复幅度。"
+  },
+  {
+    "title": "07 · 统计描述、相关性与时间依赖",
+    "url": "/read/?slug=statistics-correlation",
+    "text": "用数值示例理解均值、波动、相关性与时间依赖。"
+  },
+  {
+    "title": "08 · 构造只使用历史数据的滚动特征",
+    "url": "/read/?slug=rolling-features",
+    "text": "计算滚动特征，对齐数据可用、信号生成和持仓时间。"
+  },
+  {
+    "title": "09 · 为研究建立公平的基准",
+    "url": "/read/?slug=benchmarks-hypotheses",
+    "text": "用相同观察区间与口径比较规则，提前定义什么结果算支持假设。"
+  },
+  {
+    "title": "10 · 识别回测中最常见的偏差",
+    "url": "/read/?slug=research-biases",
+    "text": "识别未来信息、样本筛选和参数搜索引入的偏差。"
+  },
+  {
+    "title": "11 · 写出能逐笔核对的回测账本",
+    "url": "/read/?slug=backtest-ledger",
+    "text": "用标准库实现现金、持仓、成交费用和权益，明确新仓位从何时贡献收益。"
+  },
+  {
+    "title": "12 · 将交易成本纳入每次成交",
+    "url": "/read/?slug=costs-and-turnover",
+    "text": "区分成交金额、单边费率和往返成本，观察高换手规则的敏感性。"
+  },
+  {
+    "title": "13 · 阅读收益、回撤和夏普比率",
+    "url": "/read/?slug=performance-risk",
+    "text": "给指标写清样本、频率和年化假设，同时展示净值与下行风险。"
+  },
+  {
+    "title": "14 · 按时间划分样本外验证",
+    "url": "/read/?slug=out-of-sample-validation",
+    "text": "按时间划分训练、验证和测试数据，处理标签重叠与参数选择。"
+  },
+  {
+    "title": "15 · 用稳健性实验检验研究结论",
+    "url": "/read/?slug=robustness-experiments",
+    "text": "比较参数、样本区间和费用变化对研究结果的影响。"
+  },
+  {
+    "title": "16 · 理解组合权重与再平衡",
+    "url": "/read/?slug=portfolio-weights",
+    "text": "计算组合收益和价格变化后的权重，识别再平衡的真实交易需求。"
+  },
+  {
+    "title": "17 · 建立不泄漏信息的机器学习基线",
+    "url": "/read/?slug=machine-learning-baseline",
+    "text": "结合时间验证与预处理，比较线性模型和均值预测，再评价交易结果。"
+  },
+  {
+    "title": "18 · 保存数据版本与实验记录",
+    "url": "/read/?slug=reproducible-research",
+    "text": "保存输入、参数、代码版本和环境，追踪结果变化。"
+  },
+  {
+    "title": "19 · 用模拟交易检查运行过程",
+    "url": "/read/?slug=paper-trading-monitoring",
+    "text": "记录数据、订单与持仓状态，比较模拟执行与回测假设。"
+  },
+  {
+    "title": "20 · 策略研究报告的编写与复现",
+    "url": "/read/?slug=capstone-research-report",
+    "text": "组织研究假设、数据、方法与结果，附上代码和运行说明。"
+  },
+  {
+    "title": "简单收益率",
+    "url": "/read/?slug=ref-returns",
+    "text": "相邻价格的比例变化。"
+  },
+  {
+    "title": "复利净值",
+    "url": "/read/?slug=ref-compound",
+    "text": "按顺序累乘各期增长因子。"
+  },
+  {
+    "title": "最大回撤",
+    "url": "/read/?slug=ref-drawdown",
+    "text": "净值相对历史高点的最大跌幅。"
+  },
+  {
+    "title": "交易成本与换手",
+    "url": "/read/?slug=ref-cost",
+    "text": "以成交额为基准计算手续费和滑点。"
+  },
+  {
+    "title": "未来信息与数据泄漏",
+    "url": "/read/?slug=ref-lookahead",
+    "text": "特征只能使用决策时已知的信息。"
+  },
+  {
+    "title": "时间序列验证",
+    "url": "/read/?slug=ref-timesplit",
+    "text": "保留时间顺序，并隔离标签覆盖区间。"
+  },
+  {
+    "title": "read_csv：读取表格",
+    "url": "/read/?slug=ref-read-csv",
+    "text": "指定日期列、数据类型和缺失值规则。"
+  },
+  {
+    "title": "sort_index：按时间排序",
+    "url": "/read/?slug=ref-sort-index",
+    "text": "时间顺序是滚动计算的前提。"
+  },
+  {
+    "title": "rolling：滚动窗口",
+    "url": "/read/?slug=ref-rolling",
+    "text": "明确窗口长度与所需最少样本。"
+  },
+  {
+    "title": "shift：移动数据位置",
+    "url": "/read/?slug=ref-shift",
+    "text": "用移位表达信号与成交的时间关系。"
+  },
+  {
+    "title": "isna：检查缺失数据",
+    "url": "/read/?slug=ref-missing",
+    "text": "统计缺失数量，区分停牌、未上市与采集缺失。"
+  },
+  {
+    "title": "merge_asof：按已知时间连接",
+    "url": "/read/?slug=ref-join",
+    "text": "将记录与当时已经公布的数据连接。"
+  },
+  {
+    "title": "NumPy 官方文档",
+    "url": "/read/?slug=resource-numpy",
+    "text": "数组与数值计算的基础。"
+  },
+  {
+    "title": "pandas 官方文档",
+    "url": "/read/?slug=resource-pandas",
+    "text": "时间索引、表格清洗与滚动计算。"
+  },
+  {
+    "title": "scikit-learn 官方文档",
+    "url": "/read/?slug=resource-sklearn",
+    "text": "预处理、模型基线与防止数据泄漏。"
+  },
+  {
+    "title": "statsmodels 官方文档",
+    "url": "/read/?slug=resource-statsmodels",
+    "text": "统计模型与时间序列分析。"
+  },
+  {
+    "title": "Python 官方文档",
+    "url": "/read/?slug=resource-python",
+    "text": "解释器、数据结构与标准库。"
+  },
+  {
+    "title": "Matplotlib 官方文档",
+    "url": "/read/?slug=resource-matplotlib",
+    "text": "绘制研究图表并保存输出。"
+  },
+  {
+    "title": "合成价格与 Python 回测",
+    "url": "/read/?slug=synthetic-data",
+    "text": "504 个工作日价格点，含同口径回测程序。"
+  },
+  {
+    "title": "实践 1 · 数据审计",
+    "url": "/read/?slug=assignment-1",
+    "text": "提交数据来源、字段说明、重复日期和缺失值检查。"
+  },
+  {
+    "title": "实践 2 · 收益与回撤",
+    "url": "/read/?slug=assignment-2",
+    "text": "用合成价格计算收益和回撤，并与交互实验核对。"
+  },
+  {
+    "title": "实践 3 · 成交时间账本",
+    "url": "/read/?slug=assignment-3",
+    "text": "手工构造八个价格点，逐日记录信号、成交和持仓。"
+  },
+  {
+    "title": "实践 4 · 成本敏感性",
+    "url": "/read/?slug=assignment-4",
+    "text": "固定窗口，比较单边 0、5、10、20 基点成本。"
+  },
+  {
+    "title": "实践 5 · 样本外验证",
+    "url": "/read/?slug=assignment-5",
+    "text": "预先固定训练、间隔和测试区间，记录方案选择过程。"
+  },
+  {
+    "title": "实践 6 · 复现研究报告",
+    "url": "/read/?slug=assignment-6",
+    "text": "整理数据、代码、环境和验证结果，形成可复现的研究报告。"
+  },
+  {
+    "title": "QuantLab 开放学习",
+    "url": "/read/?slug=launch",
+    "text": "按入门、基础与进阶学习量化研究，结合专题、理论和笔面试练习。"
+  },
+  {
+    "title": "资料来源与研究约定",
+    "url": "/read/?slug=sources-and-validation",
+    "text": "模拟数据的生成方式、历史数据要求与结果解释。"
+  },
+  {
+    "title": "求和、函数与微积分基础",
+    "url": "/read/?slug=larsen-book-guide",
+    "text": "认识下标、求和与函数变化，学习统计推导所需的代数、求导和积分。"
+  },
+  {
+    "title": "总体、样本与统计推断",
+    "url": "/read/?slug=larsen-book-01-01",
+    "text": "用测量和分组数据区分总体、样本与参数，说明抽样波动和混杂如何影响推断。"
+  },
+  {
+    "title": "概率与实验设计的发展",
+    "url": "/read/?slug=larsen-book-01-02",
+    "text": "从机会游戏、测量误差和农业试验认识概率、估计及随机实验的形成。"
+  },
+  {
+    "title": "样本空间、事件与概率运算",
+    "url": "/read/?slug=larsen-book-02-01",
+    "text": "把事件写成集合，用互斥分解推导补事件、并集和容斥公式。"
+  },
+  {
+    "title": "条件概率、全概率与贝叶斯公式",
+    "url": "/read/?slug=larsen-book-02-02",
+    "text": "通过车间缺陷数据推导条件概率、全概率和贝叶斯公式，并分析信息产生方式。"
+  },
+  {
+    "title": "独立事件与重复试验",
+    "url": "/read/?slug=larsen-book-02-03",
+    "text": "区分独立与互斥，通过重复试验、可靠性和反例理解相互独立。"
+  },
+  {
+    "title": "排列、组合与重复计数",
+    "url": "/read/?slug=larsen-book-02-04",
+    "text": "从选择步骤推导排列组合，处理重复元素、分组和二项式系数。"
+  },
+  {
+    "title": "等可能模型与组合概率",
+    "url": "/read/?slug=larsen-book-02-05",
+    "text": "在等可能抽样中统一计数规则，计算抽球、生日重复和任务分配的概率。"
+  },
+  {
+    "title": "蒙特卡洛模拟与计算误差",
+    "url": "/read/?slug=larsen-book-02-06",
+    "text": "将事件转换为零一变量，推导模拟误差，并用圆内点比例估计圆周率。"
+  },
+  {
+    "title": "概率：习题",
+    "url": "/read/?slug=larsen-book-02-07",
+    "text": "230 道题，练习概率中的概念、计算与方法选择。"
+  },
+  {
+    "title": "二项分布与超几何分布",
+    "url": "/read/?slug=larsen-book-03-01",
+    "text": "由成功位置计数推导二项分布，由不放回抽样推导超几何分布及有限总体修正。"
+  },
+  {
+    "title": "离散分布、分布函数与分位数",
+    "url": "/read/?slug=larsen-book-03-02",
+    "text": "从概率表构造分布函数，解释跳跃、区间端点和离散分位数。"
+  },
+  {
+    "title": "连续密度与积分概率",
+    "url": "/read/?slug=larsen-book-03-03",
+    "text": "以曲线下面积计算连续概率，推导分布函数、中位数和短区间近似。"
+  },
+  {
+    "title": "期望、函数的期望与平均数",
+    "url": "/read/?slug=larsen-book-03-04",
+    "text": "从概率加权定义期望，计算函数的期望，解释均值、中位数和非线性变换的区别。"
+  },
+  {
+    "title": "方差、协方差与误差传播",
+    "url": "/read/?slug=larsen-book-03-05",
+    "text": "展开中心化平方推导方差和协方差，用线性组合说明相关性及概率界。"
+  },
+  {
+    "title": "联合分布与边际分布",
+    "url": "/read/?slug=larsen-book-03-06",
+    "text": "从联合概率表和三角支持区域计算边际分布、事件概率及协方差。"
+  },
+  {
+    "title": "随机变量变换与卷积",
+    "url": "/read/?slug=larsen-book-03-07",
+    "text": "用概率守恒推导单变量与二维变换，逐步计算平方、独立和及总量占比的分布。"
+  },
+  {
+    "title": "次序统计量与样本极值",
+    "url": "/read/?slug=larsen-book-03-08",
+    "text": "推导极值及第 k 小观测的分布，用均匀样本计算中位数、极差及联合次序密度。"
+  },
+  {
+    "title": "条件密度与全期望公式",
+    "url": "/read/?slug=larsen-book-03-09",
+    "text": "由联合密度得到条件密度，再通过组内与组间分解推导全期望和全方差。"
+  },
+  {
+    "title": "矩母函数与独立随机变量之和",
+    "url": "/read/?slug=larsen-book-03-10",
+    "text": "以指数函数编码各阶矩，推导独立和的矩母函数，并连接正态分布与累积量。"
+  },
+  {
+    "title": "随机变量：习题",
+    "url": "/read/?slug=larsen-book-03-11",
+    "text": "281 道题，练习随机变量中的概念、计算与方法选择。"
+  },
+  {
+    "title": "泊松分布与稀有事件计数",
+    "url": "/read/?slug=larsen-book-04-01",
+    "text": "由小概率二项试验的极限推导泊松分布，计算时间窗计数、均值和方差。"
+  },
+  {
+    "title": "正态分布、标准化与中心极限定理",
+    "url": "/read/?slug=larsen-book-04-02",
+    "text": "统一正态标准化、样本均值分布和中心极限定理，再计算二项概率的连续性修正。"
+  },
+  {
+    "title": "几何分布与负二项分布",
+    "url": "/read/?slug=larsen-book-04-03",
+    "text": "推导首次成功和第 r 次成功的等待分布，解释无记忆性及总次数、失败数的差别。"
+  },
+  {
+    "title": "指数分布、Gamma 分布与等待时间",
+    "url": "/read/?slug=larsen-book-04-04",
+    "text": "从泊松计数推导等待时间，计算 Gamma 分布的归一化、各阶矩和速率尺度转换。"
+  },
+  {
+    "title": "分布选择、随机数生成与模拟核验",
+    "url": "/read/?slug=larsen-book-04-05",
+    "text": "按数据生成机制选择分布，推导逆分布法与正态随机数生成，并检查模拟误差。"
+  },
+  {
+    "title": "常用概率分布：习题",
+    "url": "/read/?slug=larsen-book-04-06",
+    "text": "98 道题，练习常用概率分布中的概念、计算与方法选择。"
+  },
+  {
+    "title": "矩估计与最大似然估计",
+    "url": "/read/?slug=larsen-book-05-01",
+    "text": "由样本矩构造参数估计，展开最大似然求解，并检查正态与均匀模型的边界。"
+  },
+  {
+    "title": "置信区间、误差界与样本量",
+    "url": "/read/?slug=larsen-book-05-02",
+    "text": "从标准化统计量反解均值区间，再推导比例的 Wilson 区间和样本量要求。"
+  },
+  {
+    "title": "偏差、均方误差与估计效率",
+    "url": "/read/?slug=larsen-book-05-03",
+    "text": "用均方误差比较估计方法，推导样本方差的自由度修正及均匀上界估计的效率。"
+  },
+  {
+    "title": "Fisher 信息与 Cramér–Rao 下界",
+    "url": "/read/?slug=larsen-book-05-04",
+    "text": "从得分函数推导 Fisher 信息和无偏估计的方差下界，用二项比例验证等号条件。"
+  },
+  {
+    "title": "充分统计量与信息压缩",
+    "url": "/read/?slug=larsen-book-05-05",
+    "text": "通过条件分布和因子分解识别充分统计量，再说明条件平均为何能够降低估计方差。"
+  },
+  {
+    "title": "一致性、渐近估计与自助法",
+    "url": "/read/?slug=larsen-book-05-06",
+    "text": "区分一致性与无偏性，说明大样本近似、Delta 方法及自助标准误的计算。"
+  },
+  {
+    "title": "贝叶斯估计、先验与损失函数",
+    "url": "/read/?slug=larsen-book-05-07",
+    "text": "推导 Beta–二项后验，说明先验权重、损失函数和下一次观测的预测。"
+  },
+  {
+    "title": "参数估计：习题",
+    "url": "/read/?slug=larsen-book-05-08",
+    "text": "110 道题，练习参数估计中的概念、计算与方法选择。"
+  },
+  {
+    "title": "假设、检验统计量与拒绝域",
+    "url": "/read/?slug=larsen-book-06-01",
+    "text": "用二项试验计算拒绝域和 p 值，再将同一思路用于正态均值检验。"
+  },
+  {
+    "title": "两类错误、功效与样本量",
+    "url": "/read/?slug=larsen-book-06-02",
+    "text": "分别计算两类错误与功效，推导已知方差时的样本量公式及似然比最优原则。"
+  },
+  {
+    "title": "广义似然比检验",
+    "url": "/read/?slug=larsen-book-06-03",
+    "text": "分别求受约束和无约束最大似然，推导正态均值及二项比例的似然比检验。"
+  },
+  {
+    "title": "统计显著性与实际效应",
+    "url": "/read/?slug=larsen-book-06-04",
+    "text": "结合差值、区间和检验结果解释显著性，推导多重比较误报率并介绍等效性判断。"
+  },
+  {
+    "title": "假设检验：习题",
+    "url": "/read/?slug=larsen-book-06-05",
+    "text": "49 道题，练习假设检验中的概念、计算与方法选择。"
+  },
+  {
+    "title": "样本均值、样本方差与 t 分布",
+    "url": "/read/?slug=larsen-book-07-01",
+    "text": "从正态样本的正交分解解释自由度和独立性，推导 t 统计量及其密度。"
+  },
+  {
+    "title": "单样本均值的 t 推断",
+    "url": "/read/?slug=larsen-book-07-02",
+    "text": "逐项计算单样本 t 检验和均值区间，并从重新估计方差推导似然比等价关系。"
+  },
+  {
+    "title": "正态总体方差的区间与检验",
+    "url": "/read/?slug=larsen-book-07-03",
+    "text": "由卡方枢轴量反解总体方差区间，说明单侧、等尾双侧及似然比规则。"
+  },
+  {
+    "title": "未知方差下的检验功效",
+    "url": "/read/?slug=larsen-book-07-04",
+    "text": "将备择均值代入 t 统计量，推导非中心参数并计算样本量对功效的影响。"
+  },
+  {
+    "title": "正态总体的统计推断：习题",
+    "url": "/read/?slug=larsen-book-07-05",
+    "text": "59 道题，练习正态总体的统计推断中的概念、计算与方法选择。"
+  },
+  {
+    "title": "数据类型、抽样与实验结构",
+    "url": "/read/?slug=larsen-book-08-01",
+    "text": "识别变量尺度与观测单位，区分抽样、随机分配、配对和区组结构。"
+  },
+  {
+    "title": "图表、分布摘要与异常观测",
+    "url": "/read/?slug=larsen-book-08-02",
+    "text": "从频数图、经验分布和箱线图认识数据，计算四分位数并分析异常观测的影响。"
+  },
+  {
+    "title": "数据类型与研究设计：习题",
+    "url": "/read/?slug=larsen-book-08-03",
+    "text": "32 道题，练习数据类型与研究设计中的概念、计算与方法选择。"
+  },
+  {
+    "title": "两个独立总体的均值比较",
+    "url": "/read/?slug=larsen-book-09-01",
+    "text": "推导独立均值差的标准误，比较合并方差 t 方法与 Welch 方法，并计算区间。"
+  },
+  {
+    "title": "方差比与 F 分布",
+    "url": "/read/?slug=larsen-book-09-02",
+    "text": "由独立卡方比构造 F 分布，推导方差比区间和倒数分位数关系。"
+  },
+  {
+    "title": "两个比例的检验与区间",
+    "url": "/read/?slug=larsen-book-09-03",
+    "text": "分别计算两比例相等检验与差值区间的标准误，并推导固定样本量下的分配比例。"
+  },
+  {
+    "title": "两个总体的比较：习题",
+    "url": "/read/?slug=larsen-book-09-04",
+    "text": "52 道题，练习两个总体的比较中的概念、计算与方法选择。"
+  },
+  {
+    "title": "多项分布与 Pearson 卡方统计量",
+    "url": "/read/?slug=larsen-book-10-01",
+    "text": "从多项概率及其协方差理解 Pearson 统计量，计算已知类别概率的拟合优度。"
+  },
+  {
+    "title": "估计参数后的拟合优度检验",
+    "url": "/read/?slug=larsen-book-10-02",
+    "text": "先拟合未知参数，再计算频数偏离，说明自由度修正及重复拟合的参数自助校准。"
+  },
+  {
+    "title": "列联表、独立性与异常点",
+    "url": "/read/?slug=larsen-book-10-03",
+    "text": "由行列边际拟合独立期望表，推导自由度并计算二乘二关联及残差。"
+  },
+  {
+    "title": "拟合优度与列联表：习题",
+    "url": "/read/?slug=larsen-book-10-04",
+    "text": "46 道题，练习拟合优度与列联表中的概念、计算与方法选择。"
+  },
+  {
+    "title": "最小二乘、拟合残差与非线性变换",
+    "url": "/read/?slug=larsen-book-11-01",
+    "text": "由最小平方误差推导直线系数，逐点计算残差与决定系数，并解释曲线变换的误差尺度。"
+  },
+  {
+    "title": "回归系数推断与预测区间",
+    "url": "/read/?slug=larsen-book-11-02",
+    "text": "从线性模型推导系数标准误，区分均值响应区间和新观测预测区间。"
+  },
+  {
+    "title": "相关系数、二维正态与条件预测",
+    "url": "/read/?slug=larsen-book-11-03",
+    "text": "连接相关与回归，配方推导二维正态的条件均值和方差，并解释零相关检验。"
+  },
+  {
+    "title": "回归与相关：习题",
+    "url": "/read/?slug=larsen-book-11-04",
+    "text": "81 道题，练习回归与相关中的概念、计算与方法选择。"
+  },
+  {
+    "title": "单因素方差分析与平方和分解",
+    "url": "/read/?slug=larsen-book-12-01",
+    "text": "由组内与组间偏差分解总平方和，计算单因素方差分析表并解释 F 分布来源。"
+  },
+  {
+    "title": "多重比较与线性对比",
+    "url": "/read/?slug=larsen-book-12-02",
+    "text": "用 Tukey 区间比较全部组对，用线性对比表达指定问题，并计算对比平方和及正交性。"
+  },
+  {
+    "title": "变换、非中心 F 与实验效率",
+    "url": "/read/?slug=larsen-book-12-03",
+    "text": "由一阶展开解释方差稳定变换，推导组间信号的非中心参数并连接实验功效。"
+  },
+  {
+    "title": "单因素方差分析：习题",
+    "url": "/read/?slug=larsen-book-12-04",
+    "text": "34 道题，练习单因素方差分析中的概念、计算与方法选择。"
+  },
+  {
+    "title": "随机区组设计",
+    "url": "/read/?slug=larsen-book-13-01",
+    "text": "在区组内比较处理，推导处理、区组和残差平方和，并逐项计算二处理三地块例子。"
+  },
+  {
+    "title": "配对 t 检验与配对设计的选择",
+    "url": "/read/?slug=larsen-book-13-02",
+    "text": "将配对观测转为差值样本，计算 t 区间，并用协方差说明配对精度。"
+  },
+  {
+    "title": "随机区组与配对设计：习题",
+    "url": "/read/?slug=larsen-book-13-03",
+    "text": "22 道题，练习随机区组与配对设计中的概念、计算与方法选择。"
+  },
+  {
+    "title": "符号检验与中位数推断",
+    "url": "/read/?slug=larsen-book-14-01",
+    "text": "用正负号构造精确二项检验，再反演为总体中位数的次序统计量区间。"
+  },
+  {
+    "title": "Wilcoxon 符号秩与秩和检验",
+    "url": "/read/?slug=larsen-book-14-02",
+    "text": "分别推导配对符号秩和独立两样本秩和，说明并列秩、精确分布及解释范围。"
+  },
+  {
+    "title": "Kruskal–Wallis 与 Friedman 检验",
+    "url": "/read/?slug=larsen-book-14-03",
+    "text": "将秩比较扩展到多组与区组，计算 Kruskal–Wallis 和 Friedman 统计量及并列修正。"
+  },
+  {
+    "title": "游程检验与非参数方法的效率",
+    "url": "/read/?slug=larsen-book-14-04",
+    "text": "由符号变换次数计算游程，推导期望和精确计数，并比较参数方法与秩方法的信息利用。"
+  },
+  {
+    "title": "非参数统计：习题",
+    "url": "/read/?slug=larsen-book-14-05",
+    "text": "41 道题，练习非参数统计中的概念、计算与方法选择。"
+  },
+  {
+    "title": "双因素设计与交互作用",
+    "url": "/read/?slug=larsen-book-15-01",
+    "text": "在因素组合上计算主效应、简单效应及交互作用，解释重复观测的用途。"
+  },
+  {
+    "title": "双因素平方和与均方期望",
+    "url": "/read/?slug=larsen-book-15-02",
+    "text": "对双因素重复设计分解四类平方和，建立分析表，并用均方期望确定检验分母。"
+  },
+  {
+    "title": "三因素设计与二水平效应编码",
+    "url": "/read/?slug=larsen-book-15-03",
+    "text": "用正负编码计算二水平主效应和交互，区分效应与系数，并扩展到三因素。"
+  },
+  {
+    "title": "部分析因、混杂与设计分辨率",
+    "url": "/read/?slug=larsen-book-15-04",
+    "text": "通过半分设计的列关系说明效应混杂，计算别名并解释分辨率与补充试验。"
+  },
+  {
+    "title": "统计表、分位数与数值计算",
+    "url": "/read/?slug=larsen-book-a-01",
+    "text": "统一常用统计表的尾部与分位数定义，逐步查找临界值并核对软件结果。"
+  },
+  {
+    "title": "问题、算法与抽象数据类型",
+    "url": "/read/?slug=miller-book-01-01",
+    "text": "由平均数计算区分问题、算法和程序，用栈的接口说明抽象数据类型与正确性证明。"
+  },
+  {
+    "title": "Python 数据、引用与可变对象",
+    "url": "/read/?slug=miller-book-01-02",
+    "text": "从名称绑定解释共享引用，按操作认识数值和容器，区分切片、浅复制与嵌套对象。"
+  },
+  {
+    "title": "输入输出、控制流程与函数",
+    "url": "/read/?slug=miller-book-01-03",
+    "text": "由数据读取到函数返回组织程序，说明异常处理，并逐步计算牛顿法求平方根。"
+  },
+  {
+    "title": "类、分数对象与运算符",
+    "url": "/read/?slug=miller-book-01-04",
+    "text": "以约分分数建立对象不变式，推导运算规则，解释特殊方法和相等比较。"
+  },
+  {
+    "title": "继承、组合与逻辑门模型",
+    "url": "/read/?slug=miller-book-01-05",
+    "text": "从真值表构造逻辑门接口，说明继承、方法重写、连接器和递归求值。"
+  },
+  {
+    "title": "Python 与抽象数据类型：习题",
+    "url": "/read/?slug=miller-book-01-06",
+    "text": "19 道题，练习Python 与抽象数据类型中的概念、计算与方法选择。"
+  },
+  {
+    "title": "操作次数与渐近复杂度",
+    "url": "/read/?slug=miller-book-02-01",
+    "text": "建立操作次数模型，推导线性、平方和对数增长，区分最坏、平均与摊还成本。"
+  },
+  {
+    "title": "异序词检测与算法改进",
+    "url": "/read/?slug=miller-book-02-02",
+    "text": "用四种异序词算法比较信息组织方式，推导枚举、匹配、排序与计数的成本。"
+  },
+  {
+    "title": "Python 容器性能与计时实验",
+    "url": "/read/?slug=miller-book-02-03",
+    "text": "按操作比较列表、字典和双端队列，分离数据准备与计时，解释多规模实验。"
+  },
+  {
+    "title": "算法分析：习题",
+    "url": "/read/?slug=miller-book-02-04",
+    "text": "11 道题，练习算法分析中的概念、计算与方法选择。"
+  },
+  {
+    "title": "栈与括号匹配",
+    "url": "/read/?slug=miller-book-03-01",
+    "text": "通过逐字符状态表建立括号匹配算法，说明栈接口、不变式及线性复杂度。"
+  },
+  {
+    "title": "进制转换与表达式求值",
+    "url": "/read/?slug=miller-book-03-02",
+    "text": "逐步转换整数进制和中序表达式，追踪运算符栈及后序求值的操作数顺序。"
+  },
+  {
+    "title": "队列、双端队列与循环处理",
+    "url": "/read/?slug=miller-book-03-03",
+    "text": "明确队列与双端队列的操作约定，通过轮转和回文算例分析时间、空间成本。"
+  },
+  {
+    "title": "打印任务的离散时间模拟",
+    "url": "/read/?slug=miller-book-03-04",
+    "text": "定义离散模拟的事件顺序和单位，用确定任务验证等待时间，再建立随机到达模型。"
+  },
+  {
+    "title": "链表、引用更新与有序插入",
+    "url": "/read/?slug=miller-book-03-05",
+    "text": "用引用图解释链表插入删除，补齐列表操作接口，比较无序与有序链表的定位成本。"
+  },
+  {
+    "title": "基本数据结构：习题",
+    "url": "/read/?slug=miller-book-03-06",
+    "text": "37 道题，练习基本数据结构中的概念、计算与方法选择。"
+  },
+  {
+    "title": "递归、基本情形与调用栈",
+    "url": "/read/?slug=miller-book-04-01",
+    "text": "用求和与进制转换追踪递归调用，证明终止与正确性，并区分调用栈和切片成本。"
+  },
+  {
+    "title": "递归绘图与自相似结构",
+    "url": "/read/?slug=miller-book-04-02",
+    "text": "从坐标和状态恢复解释递归绘图，推导树枝数量、三角形尺度及面积变化。"
+  },
+  {
+    "title": "汉诺塔与递推关系",
+    "url": "/read/?slug=miller-book-04-03",
+    "text": "通过盘子移动约束建立汉诺塔递归，展开最少步数公式并核对时间与栈空间。"
+  },
+  {
+    "title": "迷宫搜索、回溯与访问标记",
+    "url": "/read/?slug=miller-book-04-04",
+    "text": "把网格写成搜索状态，追踪访问集合与当前路线，说明回溯、终止和最短路径的区别。"
+  },
+  {
+    "title": "重复子问题、记忆化与动态规划",
+    "url": "/read/?slug=miller-book-04-05",
+    "text": "由找零的最后一枚硬币推导转移，填写状态表并还原方案，比较记忆化与动态规划。"
+  },
+  {
+    "title": "递归与动态规划：习题",
+    "url": "/read/?slug=miller-book-04-06",
+    "text": "18 道题，练习递归与动态规划中的概念、计算与方法选择。"
+  },
+  {
+    "title": "顺序查找与二分查找",
+    "url": "/read/?slug=miller-book-05-01",
+    "text": "用半开区间推导二分边界，逐轮计算首次出现位置，并说明重复值和预排序成本。"
+  },
+  {
+    "title": "散列、冲突与开放寻址",
+    "url": "/read/?slug=miller-book-05-02",
+    "text": "从散列函数和映射接口讲起，逐槽解释探测、删除标记、冲突方案与扩容。"
+  },
+  {
+    "title": "冒泡、选择与插入排序",
+    "url": "/read/?slug=miller-book-05-03",
+    "text": "逐轮比较冒泡、选择和插入排序，用带标签重复键解释稳定性与逆序对成本。"
+  },
+  {
+    "title": "希尔排序与间隔序列",
+    "url": "/read/?slug=miller-book-05-04",
+    "text": "逐轮展示间隔 4、2、1 的希尔排序，解释分组插入、最终有序性与间隔相关的复杂度。"
+  },
+  {
+    "title": "归并排序与分治",
+    "url": "/read/?slug=miller-book-05-05",
+    "text": "逐项合并有序子列，展开归并排序递推，说明稳定性、缓冲区和自底向上实现。"
+  },
+  {
+    "title": "快速排序、划分与枢轴选择",
+    "url": "/read/?slug=miller-book-05-06",
+    "text": "从三路划分的不变式解释快速排序，比较平衡与极端分割，并核算教学实现的空间。"
+  },
+  {
+    "title": "搜索和排序：习题",
+    "url": "/read/?slug=miller-book-05-07",
+    "text": "25 道题，练习搜索和排序中的概念、计算与方法选择。"
+  },
+  {
+    "title": "树的术语与两种表示",
+    "url": "/read/?slug=miller-book-06-01",
+    "text": "明确树的深度、高度与子树，用两种存储方式表达同一结构，推导节点数量边界。"
+  },
+  {
+    "title": "解析树与递归求值",
+    "url": "/read/?slug=miller-book-06-02",
+    "text": "从完全括号化语法和后序词构造解析树，逐层求值并重建保留括号的表达式。"
+  },
+  {
+    "title": "前序、中序、后序与层序遍历",
+    "url": "/read/?slug=miller-book-06-03",
+    "text": "用同一棵树对照四种遍历，说明访问位置、迭代栈和结果拼接对复杂度的影响。"
+  },
+  {
+    "title": "二叉堆与优先级队列",
+    "url": "/read/?slug=miller-book-06-04",
+    "text": "逐步上浮、下沉维护最小堆，解释数组索引，并用节点高度分布推导线性建堆。"
+  },
+  {
+    "title": "二叉搜索树的查找、插入与删除",
+    "url": "/read/?slug=miller-book-06-05",
+    "text": "维护搜索树的全子树顺序，逐步处理三类删除，补充映射、后继和有序迭代。"
+  },
+  {
+    "title": "AVL 平衡树与旋转",
+    "url": "/read/?slug=miller-book-06-06",
+    "text": "推导 AVL 高度界，按有序区间解释单双旋转，逐步维护缓存高度并说明删除传播。"
+  },
+  {
+    "title": "树：习题",
+    "url": "/read/?slug=miller-book-06-07",
+    "text": "26 道题，练习树中的概念、计算与方法选择。"
+  },
+  {
+    "title": "图的表示与遍历成本",
+    "url": "/read/?slug=miller-book-07-01",
+    "text": "将关系写为顶点、边与权重，比较图的接口、矩阵和邻接表，并从存储推导遍历成本。"
+  },
+  {
+    "title": "宽度优先搜索与词梯",
+    "url": "/read/?slug=miller-book-07-02",
+    "text": "追踪队列中的距离层次，证明首次发现得到最少边数路径，并分开计算词梯构图成本。"
+  },
+  {
+    "title": "骑士周游与回溯搜索",
+    "url": "/read/?slug=miller-book-07-03",
+    "text": "用棋盘邻接图建立周游搜索，解释当前路径标记、回溯和最少剩余度数启发式。"
+  },
+  {
+    "title": "深度优先、时间戳与拓扑排序",
+    "url": "/read/?slug=miller-book-07-04",
+    "text": "用颜色和时间戳说明 DFS 的嵌套关系，分类有向边，并推导两种拓扑排序。"
+  },
+  {
+    "title": "强连通分量与缩点图",
+    "url": "/read/?slug=miller-book-07-05",
+    "text": "通过六顶点例子计算强连通分量，说明转置与完成顺序为什么能隔离每个分量。"
+  },
+  {
+    "title": "Dijkstra 最短路径",
+    "url": "/read/?slug=miller-book-07-06",
+    "text": "逐轮松弛距离并还原最短路线，给出非负边权下的确定性证明和堆中旧记录处理。"
+  },
+  {
+    "title": "Prim 最小生成树",
+    "url": "/read/?slug=miller-book-07-07",
+    "text": "明确最小生成树的总成本目标，用割的交换论证解释 Prim，并与最短路径逐项比较。"
+  },
+  {
+    "title": "图及其算法：习题",
+    "url": "/read/?slug=miller-book-07-08",
+    "text": "20 道题，练习图及其算法中的概念、计算与方法选择。"
+  },
+  {
+    "title": "动态数组、容量与摊还分析",
+    "url": "/read/?slug=miller-book-08-01",
+    "text": "区分长度与容量，按追加过程累计复制次数，推导摊还常数成本并说明插入和缩容。"
+  },
+  {
+    "title": "同余、快速幂与扩展欧几里得",
+    "url": "/read/?slug=miller-book-08-02",
+    "text": "由同余运算推导快速幂，逐步回代扩展欧几里得，并说明模逆元存在条件。"
+  },
+  {
+    "title": "RSA 的数论结构与教学实现",
+    "url": "/read/?slug=miller-book-08-03",
+    "text": "连接素数、欧拉函数和模逆元，手算 RSA 小整数例子，并证明非互素消息也能恢复。"
+  },
+  {
+    "title": "跳表与随机层级索引",
+    "url": "/read/?slug=miller-book-08-04",
+    "text": "追踪跳表的逐层查找与前驱更新，推导期望层数、空间和有序映射操作。"
+  },
+  {
+    "title": "RGB 图像与八叉树颜色量化",
+    "url": "/read/?slug=miller-book-08-05",
+    "text": "按二进制位划分 RGB 空间，推导加权代表色，逐步说明八叉树合并与误差计算。"
+  },
+  {
+    "title": "字符串匹配、自动机与 KMP",
+    "url": "/read/?slug=miller-book-08-06",
+    "text": "建立模式匹配自动机的状态表，再由前后缀重叠推导 KMP 回退和线性复杂度。"
+  },
+  {
+    "title": "进阶数据结构与算法应用：习题",
+    "url": "/read/?slug=miller-book-08-07",
+    "text": "20 道题，练习进阶数据结构与算法应用中的概念、计算与方法选择。"
+  },
+  {
+    "title": "图形接口、程序组织与运行检查",
+    "url": "/read/?slug=miller-book-a-01",
+    "text": "按绘图任务认识图形工具，分离算法与显示，并通过接口、依赖和运行结果组织程序。"
+  }
+]

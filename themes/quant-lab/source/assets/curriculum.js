@@ -26,14 +26,12 @@
   pager.hidden=!rows.length;pager.innerHTML=`<p>第 ${page} / ${total} 页</p><div>${button(1,'首页',page===1)}${button(page-1,'上一页',page===1)}${numbers}${button(page+1,'下一页',page===total)}${button(total,'末页',page===total)}</div>`;
  }
  function jumpHash(){const stage=document.getElementById(location.hash.slice(1));if(!stage||!host.contains(stage))return false;let rows=matched(),index=rows.findIndex(r=>stage.contains(r));if(index<0){level='';query.value='';rows=matched();index=rows.findIndex(r=>stage.contains(r));}if(index<0)return false;page=Math.floor(index/PAGE_SIZE)+1;render();save('replace',location.hash);stage.scrollIntoView({block:'start'});return true;}
- function progress(){const done=new Set(window.foamAuth?.progress||[]);host.querySelectorAll('[data-course-row]').forEach(row=>{const complete=done.has(row.dataset.courseId),dot=row.querySelector('.curriculum-complete');dot.classList.toggle('done',complete);dot.setAttribute('aria-label',complete?'已完成':'未标记完成');});}
  function top(){host.scrollIntoView({block:'start'});host.focus({preventScroll:true});}
  pager.addEventListener('click',e=>{const button=e.target.closest('button[data-page]');if(!button||button.disabled)return;page=Number(button.dataset.page);render();save('push');top();});
  document.getElementById('curriculum-levels').addEventListener('click',e=>{const a=e.target.closest('[data-curriculum-level]');if(!a||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;e.preventDefault();level=a.dataset.curriculumLevel;query.value='';page=1;render();save('push');top();});
  all.addEventListener('click',()=>{level='';page=1;render();save('push');});
  query.addEventListener('input',()=>{page=1;render();save();});
- window.addEventListener('foam-auth-change',progress);window.addEventListener('hashchange',jumpHash);
+ window.addEventListener('hashchange',jumpHash);
  window.addEventListener('popstate',()=>{readLocation();render();if(!jumpHash())top();});
  readLocation();render();requestAnimationFrame(jumpHash);
- (async()=>{try{const D=await window.FoamDirectory.ready;if(!D.available)throw Error('directory');const node=D.nodes.find(n=>n.key==='courses');const rows=(await D.content(node)).filter(r=>r.kind==='lesson'&&r.metadata?.curriculum).sort((a,b)=>a.sort_order-b.sort_order);if(!rows.length)throw Error('empty');host.innerHTML=V.render(rows);document.getElementById('curriculum-toc').innerHTML=V.stages(rows).map(s=>`<a href="#stage-${String(s.id).padStart(2,'0')}"><span>${String(s.id).padStart(2,'0')}</span>${L.esc(s.name)}</a>`).join('');host.dataset.live='true';render();jumpHash();await window.foamAuth.profileReady;progress();}catch{document.getElementById('curriculum-sync').textContent='当前显示发布时的课程目录；实时进度暂时无法读取。';}})();
 })();

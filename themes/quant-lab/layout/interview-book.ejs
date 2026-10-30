@@ -6,6 +6,6 @@
  <section class="interview-toc" aria-label="本册章节"><strong>本册目录</strong><nav id="interview-toc"><% chapters.forEach(c=>{ %><a href="#chapter-<%= c.number %>"><span><%= String(c.number).padStart(2,'0') %></span><%= c.title %></a><% }); %></nav><p><%= zhou?'按章节查阅题目与解答。':'按公司查阅题目与解答。' %></p></section>
  <div class="interview-filters"><label class="search-field"><%- icon('search') %><input id="interview-query" type="search" placeholder="搜索公司、题目或知识点" aria-label="搜索公司、题目或知识点" maxlength="100"></label><label class="interview-filter-label">难度<select id="interview-difficulty"><option value="">全部难度</option><option>基础</option><option>进阶</option><option>挑战</option><option>综合</option></select></label><button class="button secondary" type="button" id="interview-expand" aria-expanded="false">展开全部</button></div>
  <div class="interview-catalog-layout"><div><p id="interview-result" class="muted" role="status" aria-live="polite"><%= rows.length %> 个阅读单元</p><div id="interview-catalog"><%- interview_catalog(book) %></div><p id="interview-empty" class="interview-source-note" hidden>没有匹配的题目。试试其他关键词或难度。</p><p id="interview-sync" class="muted" role="status"></p></div></div>
- <noscript><p class="interview-source-note">章节目录可直接浏览。搜索、筛选与登录阅读需要启用 JavaScript。</p></noscript>
+ <noscript><p class="interview-source-note">章节目录可直接浏览。搜索和筛选需要启用 JavaScript。</p></noscript>
 
 </div>

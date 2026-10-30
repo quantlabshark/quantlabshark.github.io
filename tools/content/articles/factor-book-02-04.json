@@ -1,0 +1,45 @@
+{
+  "slug": "factor-book-02-04",
+  "title": "怎样检验模型解释不了的收益",
+  "summary": "逐步估计异象组合的 alpha，理解异方差、自相关与 White、Newey–West 标准误。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "因子投资：方法与实践",
+  "sort_order": 3008,
+  "cover_url": "",
+  "section_ids": [
+    "0d99264a-7913-52fc-8f8e-a4c784c92834"
+  ],
+  "body": "某选股组合平均每月比低分组多赚 0.8%，但它同时偏向小市值股票。究竟是新指标有用，还是熟悉的规模暴露在起作用？把组合收益对已有因子回归，可以先分离两者，再判断剩余平均收益是否足够稳定。\n\n![独立误差与连续相关误差的时间排列](/assets/figures/factor/inference.svg)\n\n相邻误差若经常同向变化，多期观测会包含重复信息。均值相同、单期波动相同，也可能需要不同的标准误；有效信息量不能只按观测条数计算。\n\n## 从选股指标到待检验组合\n\n先明确指标，例如某个财务质量评分；用形成日可获得的评分排序，构造高分减低分组合，逐月得到收益 $q_t$。再选定基准因子收益向量 $f_t$，估计\n\n$$q_t=\\alpha+\\beta^{\\mathsf T}f_t+e_t.$$\n\n$\\alpha$ 是该组合没有被基准模型解释的平均收益，$\\beta$ 告诉我们它还暴露于哪些已知因子。若月均收益 0.8%，市场和规模解释 0.5%，剩余截距为 0.3%。检验目标是 $H_0:\\alpha=0$，而不是再次检验总收益是否为零。\n\n多个指标组成的质量评分可以表达盈利、增长和安全性等共同逻辑，但指标组合越多，可尝试的方案也越多。构造规则应先固定，再保留完整测试记录；否则统计显著性还混入了选择最佳方案的影响。\n\n## 标准误描述截距估计的波动\n\n若截距为 0.3%，标准误为 0.1%，则 $t_\\alpha=3$；若标准误为 0.3%，则 $t_\\alpha=1$。截距相同，证据强弱不同，因为第二个估计更不精确。\n\n在经典独立正态、同方差误差条件下，$T$ 期、$K$ 个因子再加一个截距的回归，常用 $T-K-1$ 个自由度的 $t$ 分布。真实收益误差可能在某些时期明显更大，也可能连续数月同方向变化，此时需要改变标准误算法。\n\n## 异方差与自相关分别是什么\n\n**异方差**指误差的波动水平改变。例如平静月份的残差多在 ±1% 内，压力月份可达 ±8%；用一个固定残差方差评价全部月份，会忽略不同观测的信息精度。\n\n**自相关**指不同月份误差相关。例如一个组合持有期为三个月，每月又建立新组合，相邻月份共享持仓与信息。连续三次正收益就不等于三份完全独立证据。正自相关通常降低均值估计的有效样本量，负自相关也可能使稳健标准误小于普通标准误。\n\n在解释变量与误差满足适当外生性条件时，OLS 系数仍可估计平均关系；改变标准误主要改变我们对系数精度的判断。若使用未来数据、遗漏与解释变量相关的驱动因素，换用稳健标准误不会修复系数本身的偏差。\n\n## White 估计：让每期误差贡献自己的方差\n\n把回归写成 $y=Xb+e$，$X$ 有 $T$ 行，每行 $x_t^{\\mathsf T}$ 包含截距和因子收益；$b$ 包含 $\\alpha$ 与全部暴露。OLS 为 $\\hat b=(X^{\\mathsf T}X)^{-1}X^{\\mathsf T}y$。\n\n一般误差协方差为 $\\Omega$ 时，系数协方差是\n\n$$\\operatorname{Var}(\\hat b\\mid X)=(X^{\\mathsf T}X)^{-1}X^{\\mathsf T}\\Omega X(X^{\\mathsf T}X)^{-1}.$$\n\n最外侧两项由解释变量决定，关键是中间部分如何计入误差。若误差仅有异方差、没有跨期相关，用每期残差平方替代其方差，得到 White 估计的中间矩阵\n\n$$H_0=\\sum_{t=1}^{T}\\hat e_t^2x_tx_t^{\\mathsf T}.$$\n\n再以 $(X^{\\mathsf T}X)^{-1}$ 从两边相乘，就得到系数协方差估计。这里写的是未加小样本倍率的 HC0 形式；不同软件的 HC1 等选项会增加有限样本调整。\n\n## Newey–West：把邻近月份的联系加回来\n\n设最多考虑 $L$ 阶相关。滞后 $\\ell$ 的权重采用 $w_\\ell=1-\\ell/(L+1)$，越远的月份赋予越小权重。中间矩阵为\n\n$$H=H_0+\\sum_{\\ell=1}^{L}w_\\ell\n\\sum_{t=\\ell+1}^{T}\\hat e_t\\hat e_{t-\\ell}\n(x_tx_{t-\\ell}^{\\mathsf T}+x_{t-\\ell}x_t^{\\mathsf T}).$$\n\n于是 $\\hat V_{NW}=(X^{\\mathsf T}X)^{-1}H(X^{\\mathsf T}X)^{-1}$。它同时计入当期误差大小与跨期联系。对角元素开平方后，第一项就是截距标准误。三角形权重有助于保持协方差估计的半正定性质；不能把所有跨期乘积无区分地相加。\n\n常见经验带宽为 $L=\\lfloor4(T/100)^{2/9}\\rfloor$。向下取整记为 $\\lfloor\\cdot\\rfloor$。持有期重叠和较强持续性可能需要进一步检查带宽敏感性，报告结果时应给出实际 $L$。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>半正定，即矩阵对应的二次型对任意向量均不为负的性质。</p></aside>\n\n## 只有一条收益序列时怎样计算\n\n检验因子均值，可视为只含截距的回归 $f_t=\\mu+u_t$。此时 $\\hat\\mu=\\bar f$，残差 $u_t=f_t-\\bar f$。定义 $\\hat\\gamma_\\ell=T^{-1}\\sum_{t=\\ell+1}^{T}u_tu_{t-\\ell}$，则\n\n$$\\widehat{\\operatorname{Var}}(\\bar f)=\\frac1T\n\\left[\\hat\\gamma_0+2\\sum_{\\ell=1}^{L}w_\\ell\\hat\\gamma_\\ell\\right].$$\n\n教学代码生成一条带持续性的收益序列，并直接计算其均值标准误。固定随机种子用于复现，结果不是市场样本。\n\n```python\nimport numpy as np\nrng = np.random.default_rng(2026)\nT, L = 240, 4\nu = np.zeros(T)\nfor t in range(1, T):\n    u[t] = 0.6 * u[t-1] + rng.normal(0, 0.02)\nreturns = 0.004 + u\nresidual = returns - returns.mean()\nlong_run_variance = np.dot(residual, residual) / T\nfor lag in range(1, L + 1):\n    covariance = np.dot(residual[lag:], residual[:-lag]) / T\n    long_run_variance += 2 * (1 - lag / (L + 1)) * covariance\nse_hac = np.sqrt(long_run_variance / T)\nse_iid = returns.std(ddof=1) / np.sqrt(T)\nprint(f\"均值 {returns.mean():.4%}，独立样本标准误 {se_iid:.4%}\")\nprint(f\"NW 标准误 {se_hac:.4%}，t 值 {returns.mean()/se_hac:.3f}\")\nassert se_hac > 0 and se_iid > 0\n```\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>标准误调整改变的是“我们有多确信”，通常不改变已经算出的样本均值。如果两份报告的平均收益相同、t 值不同，先核对自相关处理、滞后阶数与小样本调整。</p></aside>\n\n## 截面方法检验新增信息\n\n另一种检验在每个月把下一期股票收益对异象指标与已知控制变量回归，例如规模、BM 和盈利。异象指标的系数表示在控制这些特征后，它对应多少收益差。逐月得到系数序列后，再计算均值和 Newey–West 标准误。\n\n这个问题与组合 $\\alpha$ 相互补充：组合回归判断某条持仓规则是否留下模型外收益；截面回归判断指标是否提供其他变量之外的线性预测信息。分组可能捕捉极端值或非线性关系，因此两种检验不必得到完全相同的结果。\n\n### 练习\n\n一项策略普通标准误为 0.10%，NW 标准误为 0.18%，平均月收益都是 0.30%。两个 $t$ 值是多少？哪个变化来自交易收益？\n\n<details><summary>查看解答</summary>\n\n分别为 3 和约 1.67。交易收益没有变化，变化来自对均值估计误差的计量。若存在相关误差，较大的标准误意味着此前把部分重复信息当成了更多独立证据。\n\n</details>\n\n---\n\n[返回全书目录](/theory/factor-investing/)\n\n## 配套代码\n\n[下载本节代码（ZIP）](/assets/downloads/factor-investing/factor-book-02-04.zip)\n\n压缩包包含完整脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n",
+  "metadata": {
+    "theory_book": {
+      "book": "factor-investing",
+      "part": "第一部分 · 基础与方法",
+      "number": 9,
+      "chapter": "2",
+      "edition": "2026-10-revised",
+      "minutes": 10,
+      "section": "2.4",
+      "source_pages": [
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "chapter_title": "因子投资方法论",
+      "source_sections": [
+        "2.4.1 时序回归检验异象",
+        "2.4.2 计量经济学问题",
+        "2.4.3 White估计量和Newey–West估计量",
+        "2.4.4 截面回归检验异象"
+      ]
+    },
+    "code_download": {
+      "url": "/assets/downloads/factor-investing/factor-book-02-04.zip",
+      "examples": 1
+    }
+  }
+}

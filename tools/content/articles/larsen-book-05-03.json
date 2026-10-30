@@ -1,0 +1,37 @@
+{
+  "slug": "larsen-book-05-03",
+  "title": "偏差、均方误差与估计效率",
+  "summary": "用均方误差比较估计方法，推导样本方差的自由度修正及均匀上界估计的效率。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7030,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "同一个参数可以有多种估计方法。比较它们时，需要研究重复抽样中的结果，而不能仅看某一次估计是否接近真值。\n\n## 偏差与均方误差\n\n估计量 T 的偏差为 $E(T)-\\theta$。无偏表示平均估计等于参数，单次结果仍会波动。将 $T-\\theta$ 拆成中心化随机部分与固定偏移，平方取期望，得到\n\n$$\\operatorname{MSE}(T)=E[(T-\\theta)^2]\n=\\operatorname{Var}(T)+[E(T)-\\theta]^2.$$\n\n交叉项为零，因为 $E[T-E(T)]=0$。例如偏差 0.2、方差 0.09 时，均方误差为 $0.09+0.04=0.13$。偏差减小但方差大幅增加，未必能降低总体平方误差。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/bias-variance.svg\" alt=\"估计量的偏差控制中心位置，方差控制分布宽度。\" loading=\"lazy\"></figure>\n\n## 样本方差为何使用 n−1\n\n独立同分布样本均值为 $\\mu$、方差为 $\\sigma^2$。代数恒等式给出\n\n$$\\sum_i(X_i-\\bar X)^2=\\sum_i(X_i-\\mu)^2-n(\\bar X-\\mu)^2.$$\n\n右侧第一项期望是 $n\\sigma^2$，第二项期望是 $n\\operatorname{Var}(\\bar X)=\\sigma^2$，故左侧期望为 $(n-1)\\sigma^2$。因此\n\n$$S^2=\\frac1{n-1}\\sum_i(X_i-\\bar X)^2$$\n\n无偏估计总体方差。样本 2、4、6 的均值为 4，平方离差和为 8，无偏方差为 4；分母 n 的版本为 8/3。残差之和必须为零，估计均值使其少了一个自由变化方向，这就是 n−1 的自由度含义。\n\n## 比较均匀上界的估计\n\n从 $U(0,\\theta)$ 抽 n 个观测，最大值 M 的密度为 $nm^{n-1}/\\theta^n$。积分给出 $E(M)=n\\theta/(n+1)$、$E(M^2)=n\\theta^2/(n+2)$。\n\n修正后的 $T=(n+1)M/n$ 无偏，其方差为 $\\theta^2/[n(n+2)]$。另一无偏估计 $2\\bar X$ 的方差为 $\\theta^2/(3n)$。n>1 时，前者更小，说明总体边界的信息可帮助提高精度。\n\n未修正 M 的偏差为 $-\\theta/(n+1)$，将其方差与偏差平方相加，均方误差为 $2\\theta^2/[(n+1)(n+2)]$。不同估计应按同一准则比较，不能将一个的方差与另一个的均方误差混为一谈。\n\n> **鲨鱼说** 无偏描述估计分布的中心位置，方差描述它有多宽。评估一次估计的误差，需要把这两个因素同时考虑。\n\n## 练习\n1. 某估计量偏差为0.2、方差为0.09，计算均方误差。\n2. 正态样本n=5，比较分母n和n-1的方差估计在期望上的差别。\n\n[本章习题](/read/?slug=larsen-book-05-08)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/larsen-book-05-03.zip",
+        "label": "偏差、均方误差与估计效率 · Python 示例",
+        "size_bytes": 1062,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第二部分 · 估计与检验",
+      "number": 30,
+      "chapter": "5",
+      "edition": "2026-10",
+      "minutes": 12,
+      "section": "3",
+      "chapter_title": "参数估计",
+      "source_sections": [
+        "5.4"
+      ]
+    }
+  }
+}

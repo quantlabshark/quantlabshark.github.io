@@ -1,0 +1,38 @@
+{
+  "slug": "larsen-book-04-02",
+  "title": "正态分布、标准化与中心极限定理",
+  "summary": "统一正态标准化、样本均值分布和中心极限定理，再计算二项概率的连续性修正。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7023,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "正态分布用中心位置和分散程度描述连续变量。后续许多估计与检验依赖正态近似，因此需要分清单次观测、观测总和与样本平均的尺度。\n\n## 标准化为同一条曲线\n\n若 $X\\sim N(\\mu,\\sigma^2)$，密度为\n\n$$f(x)=\\frac1{\\sigma\\sqrt{2\\pi}}\\exp\\left[-\\frac{(x-\\mu)^2}{2\\sigma^2}\\right].$$\n\n$\\mu$ 是均值，$\\sigma>0$ 是标准差；记号的第二个参数是方差。令 $Z=(X-\\mu)/\\sigma$，则 $Z\\sim N(0,1)$。把标准正态分布函数记为 $\\Phi$，有 $P(a<X<b)=\\Phi((b-\\mu)/\\sigma)-\\Phi((a-\\mu)/\\sigma)$。\n\n长度服从 $N(100,4)$ 时，标准差为 2，区间 [96,104] 对应 Z 在 [-2,2]，概率约为 0.9545。\n\n## 从单次观测到样本均值\n\n独立同分布的 n 次观测具有均值 $\\mu$、方差 $\\sigma^2$，则 $E(\\bar X)=\\mu$，$\\operatorname{Var}(\\bar X)=\\sigma^2/n$。正态总体给出精确分布 $\\bar X\\sim N(\\mu,\\sigma^2/n)$。\n\n总体不是正态，但方差有限且非零时，中心极限定理说明\n\n$$Z_n=\\frac{\\sqrt n(\\bar X-\\mu)}\\sigma\\ \\Rightarrow\\ N(0,1).$$\n\n符号 $\\Rightarrow$ 表示分布收敛。随 n 增大，趋近正态的是标准化后的均值；原始数据的偏斜并不会因此消失。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/clt.svg\" alt=\"指数样本的标准化均值分布随样本量增加接近正态曲线。\" loading=\"lazy\"></figure>\n\n## 二阶展开的推导\n\n令 $Y_i=(X_i-\\mu)/\\sigma$，其均值为零、二阶矩为一。若矩母函数在零附近存在，展开为 $M_Y(u)=1+u^2/2+o(u^2)$。$o(u^2)$ 表示除以 $u^2$ 后趋于零的余项。由独立性，\n\n$$M_{Z_n}(t)=\\left[M_Y(t/\\sqrt n)\\right]^n\n=\\left[1+\\frac{t^2}{2n}+o(1/n)\\right]^n.$$\n\n取对数后，用 $\\log(1+v)=v+o(v)$，极限为 $t^2/2$；再取指数得到 $e^{t^2/2}$，正是标准正态的矩母函数。有限方差但矩母函数不存在时，可以用特征函数完成相应证明。\n\n## 二项概率的连续性修正\n\n设 $X\\sim\\operatorname{Bin}(100,0.4)$，均值为 40，方差为 24。计算 $P(X\\le45)$ 时，整数 45 对应的柱形区域一直延伸至 45.5，因此\n\n$$P(X\\le45)\\approx\\Phi\\left(\\frac{45.5-40}{\\sqrt{24}}\\right)\\approx0.86921.$$\n\n精确二项概率约为 0.86891。若求 $P(35\\le X\\le45)$，积分边界相应取 34.5 和 45.5。是否近似良好还取决于成功和失败的期望次数以及目标是否位于尾部；概率极端时可直接计算二项概率。\n\n> **鲨鱼说** 用正态表前，先写所计算变量的均值和标准差。单个观测用 $\\sigma$，平均值用 $\\sigma/\\sqrt n$，总和用 $\\sigma\\sqrt n$。\n\n## 练习\n1. 单次测量标准差为12，独立测量36次，计算均值的标准误及其偏离真值超过4的正态近似概率。\n2. X服从Bin(80,0.4)，分别用有、无连续性修正估计 $P(X\\le30)$。\n\n[本章习题](/read/?slug=larsen-book-04-06)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/larsen-book-04-02.zip",
+        "label": "正态分布、标准化与中心极限定理 · Python 示例",
+        "size_bytes": 952,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第一部分 · 概率与随机变量",
+      "number": 23,
+      "chapter": "4",
+      "edition": "2026-10",
+      "minutes": 11,
+      "section": "2",
+      "chapter_title": "常用概率分布",
+      "source_sections": [
+        "4.3",
+        "4.A.2"
+      ]
+    }
+  }
+}

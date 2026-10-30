@@ -1,0 +1,37 @@
+{
+  "slug": "calin-book-07-02",
+  "title": "热方程与随机积分",
+  "summary": "用后向热方程消去漂移，并区分时间方向和剩余时间。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "随机微积分及其应用",
+  "sort_order": 5041,
+  "cover_url": "",
+  "section_ids": [
+    "17859c88-b779-5654-b120-7a4cc7b39714"
+  ],
+  "body": "## 从一个未来支付理解终端问题\n\n设最终时刻为 $T$，终端量是 $g(W_T)$。时刻 $t$ 已经知道 $W_t=x$，以后尚有独立增量 $W_T-W_t\\sim N(0,T-t)$。因此当前预测为 $u(t,x)=E[g(x+\\sqrt{T-t}Z)]$，其中 $Z\\sim N(0,1)$。\n\n沿真实路径取 $x=W_t$，就有 $u(t,W_t)=E[g(W_T)\\mid\\mathcal F_t]$。塔式法则说明，先在将来作一次预测，再回到现在取条件期望，结果仍等于现在的预测。因此这个过程是鞅。热方程将这种“预测随时间更新”的关系写成偏微分方程。\n\n### 从平方终端量反推热方程\n\n设 $T=1$，终端量为 $g(W_T)=W_T^2$。给定当前时刻 $t$、当前位置 $W_t=x$，令剩余时间 $\\tau=T-t$。未来位置可写成 $x+\\sqrt\\tau Z$，$Z$ 为独立标准正态，因此\n\n$$u(t,x)=E[(x+\\sqrt\\tau Z)^2]\n=x^2+2x\\sqrt\\tau E[Z]+\\tau E[Z^2]\n=x^2+T-t.$$\n\n$u$ 是“给定当前位置后的平均预测”，不是实际终点平方。逐项求导：$u_t=-1$，$u_x=2x$，$u_{xx}=2$，所以 $u_t+u_{xx}/2=-1+1=0$，且 $u(T,x)=x^2$，同时满足方程与终端条件。\n\n取 $t=0.25,x=0.4$，当前预测为 $0.4^2+0.75=0.91$。沿路径代入伊藤公式后，时间项消失，只剩 $du(t,W_t)=2W_tdW_t$。图中不同剩余时间对应不同曲线；距离终点越远，尚未实现的方差越大。\n\n![从平方终端量反推热方程](/assets/figures/theory/walkthrough/backward-heat.svg)\n\n## 用偏微分方程消去时间积分\n\n设希望计算 $\\int_a^b h(t,W_t)dW_t$。若能找到 $\\phi(t,x)$ 满足 $\\phi_x=h$，伊藤公式就把积分写成端点差再减去时间积分。进一步要求\n\n$$\\phi_t+\\frac12\\phi_{xx}=0,$$\n\n便有 $d\\phi(t,W_t)=h(t,W_t)dW_t$，所求积分直接等于 $\\phi(b,W_b)-\\phi(a,W_a)$。这称为后向热方程方法。不是每个 $h$ 都能满足这两项要求，因此不能遇到任何被积函数都强行寻找纯端点表示。\n\n若 $\\phi_t+\\phi_{xx}/2=G(t,x)$ 不为零，也仍有\n\n$$\\int_a^b h(t,W_t)dW_t=\\phi(b,W_b)-\\phi(a,W_a)-\\int_a^bG(t,W_t)dt.$$\n\n由此可把热方程方法视为分部积分的一种组织方式：优先寻找漂移恰好相消的函数。\n\n## 分离变量的三种类型\n\n设 $\\phi(t,x)=a(t)b(x)$，在非零处除以 $ab$，得到 $a'/a=-b''/(2b)$。左边只依赖时间，右边只依赖状态，所以二者等于一个常数。若写成 $b''=\\lambda^2b$，则 $a=e^{-\\lambda^2t/2}$，$b$ 是 $e^{\\lambda x},e^{-\\lambda x}$ 的线性组合。若写成 $b''=-\\lambda^2b$，则 $a=e^{\\lambda^2t/2}$，$b$ 是正弦、余弦的线性组合。常数为零时得到关于 $x$ 的仿射函数。\n\n加法形式也可直接计算。设 $\\phi=a(t)+b(x)$，则 $a'=-b''/2=-C$，所以 $\\phi=C(x^2-t)+C_1x+C_2$。这些函数给出平方补偿过程等基本例子。\n\n以 $\\phi=e^{\\lambda x-\\lambda^2t/2}$ 为例，其状态导数为 $\\lambda\\phi$，故\n\n$$\\int_0^Te^{\\lambda W_t-\\lambda^2t/2}dW_t=\\frac{e^{\\lambda W_T-\\lambda^2T/2}-1}{\\lambda},\\quad\\lambda\\ne0.$$\n\n取 $\\phi=e^{\\lambda^2t/2}\\sin(\\lambda x)$，状态导数为 $\\lambda e^{\\lambda^2t/2}\\cos(\\lambda x)$，得到\n\n$$\\int_0^Te^{\\lambda^2t/2}\\cos(\\lambda W_t)dW_t=\\frac{e^{\\lambda^2T/2}\\sin(\\lambda W_T)}\\lambda.$$\n\n余弦的状态导数多一个负号，因此正弦积分为 $[1-e^{\\lambda^2T/2}\\cos(\\lambda W_T)]/\\lambda$。时间指数的正负由空间二阶导数决定；$\\lambda=0$ 时应回到原被积函数计算或取极限。\n\n## 前向时间与剩余时间\n\n高斯核 $p(s,x)=(2\\pi s)^{-1/2}e^{-x^2/(2s)}$ 满足 $p_s=\\tfrac12p_{xx}$，这里 $s$ 表示已经扩散的时间。它不满足 $p_s+\\tfrac12p_{xx}=0$，所以一般不能把 $p(t,W_t)$ 直接当作无漂移过程。\n\n固定终点 $T$，改为 $\\phi(t,x)=p(T-t,x)$，时间求导多出一个负号，才有 $\\phi_t+\\tfrac12\\phi_{xx}=0$。此时 $T-t$ 是剩余扩散时间。为避开核在剩余时间为零处的奇点，计算可先限制在 $t\\le T-\\varepsilon$。\n\n更一般地，给定终端函数 $g$，定义\n\n$$u(t,x)=E[g(x+W_{T-t})].$$\n\n在足够光滑、可积的条件下，它满足后向方程和终端条件 $u(T,x)=g(x)$。沿当前路径观察 $u(t,W_t)$，就是在时刻 $t$ 对未来终端值的条件期望，所以鞅性质也有概率解释。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>补偿过程，即从事件计数或累计支付中减去其条件平均累积后得到的过程。</p></aside>\n\n## 多项式与缩放检查\n\n取 $g(x)=x^2$，得到 $u(t,x)=x^2+T-t$，其随机微分为 $2W_tdW_t$。忽略常数 $T$ 就得到熟悉的 $W_t^2-t$。取三次幂则得到 $x^3+3x(T-t)$。\n\n如果 $\\phi$ 满足后向热方程，那么 $\\phi(c^2t,cx)$ 也满足同一方程：时间导数和二阶空间导数都乘 $c^2$。空间扩大 $c$ 倍，应把时间扩大 $c^2$ 倍，这与布朗尺度一致。\n\n## 卷积、相似变量与新的解\n\n将条件期望展开为密度积分，得到\n\n$$u(t,x)=\\int_{\\mathbb R}g(y)\\frac{e^{-(y-x)^2/[2(T-t)]}}{\\sqrt{2\\pi(T-t)}}dy.$$\n\n这称为高斯卷积。若 $g$ 有界，距离终点还有正时间时，可以在积分号内求导，得到后向热方程。核的总质量为一，说明常数终端量在传播中仍为同一个常数。\n\n例如 $g(y)=\\mathbf1_{\\{y>K\\}}$，则 $u(t,x)=\\Phi((x-K)/\\sqrt{T-t})$。设 $z=(x-K)/\\sqrt\\tau$、$\\tau=T-t$，有 $z_t=z/(2\\tau)$、$z_x=1/\\sqrt\\tau$。因标准正态密度 $\\varphi'(z)=-z\\varphi(z)$，得到 $u_t=z\\varphi(z)/(2\\tau)$、$u_{xx}=-z\\varphi(z)/\\tau$，两项相消。相似变量把时间和空间合成一个标准化距离；也可用 $\\Phi(z)=\\tfrac12\\operatorname{erfc}(-z/\\sqrt2)$ 表示，其中 $\\operatorname{erfc}(q)=2\\int_q^\\infty e^{-v^2}dv/\\sqrt\\pi$。\n\n方程是线性的，所以解的线性组合仍为解。平移 $\\phi(t-t_0,x-x_0)$、尺度变换 $\\phi(c^2t,cx)$ 以及足够光滑的偏导数也保持方程。每次变换都要同步变换定义域和终端条件。卷积可理解为平移解的连续加权和。含源项 $u_t+u_{xx}/2=G$ 时，随机积分公式还应减去 $\\int G(t,W_t)dt$。\n\n若 $G$ 只依赖时间，这一项为普通确定积分。\n\n## 条件期望解释了平滑\n\n终端函数 $g$ 即使变化尖锐，距离终点还有一段时间时，$u(t,x)$ 会对许多可能的未来位置求平均。高斯卷积使位置上的尖锐变化变得平滑。剩余时间越长，平均范围越宽。接近终点时随机增量方差缩小，函数才逐渐回到终端形状。\n\n例如终端值只记录是否超过阈值，当前条件期望就是未来超过阈值的概率，而不是现在位置是否超过阈值的零一判断。这一解释能把热方程的平滑作用与概率预测联系起来，也说明终端点的不光滑和内部时间的可微性可以同时存在。\n\n![不同剩余时间的高斯核](/assets/illustrations/theory/calin/calin-book-07-02.svg)\n\n剩余时间越长，高斯核越宽；接近终点时，质量向当前位置集中。三条曲线的面积均为一。\n\n<aside class=\"shark-note\"><strong>鲨鱼说</strong><p>终端函数告诉我们最后要预测什么；高斯核告诉我们从现在的位置出发，未来可能落在哪里。把两者加权平均，就得到当前预测。剩余时间改变时，平滑范围也随之改变。</p></aside>\n\n## 练习\n\n计算 $\\int_0^2e^{2t}\\cos(2W_t)dW_t$。再求 $u(t,x)=E[(x+W_{T-t})^4]$ 并验证后向方程。\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n第一问识别 $\\lambda=2$，可选原函数 $\\phi(t,x)=\\tfrac12e^{2t}\\sin(2x)$。其状态导数正好是被积函数，时间导数为 $e^{2t}\\sin(2x)$，半个二阶空间导数为其相反数。故积分等于端点差 $\\phi(2,W_2)-\\phi(0,0)=\\tfrac12e^4\\sin(2W_2)$。\n\n第二问记 $\\tau=T-t$，令 $Z\\sim N(0,\\tau)$。展开 $(x+Z)^4=x^4+4x^3Z+6x^2Z^2+4xZ^3+Z^4$。奇数矩为零，$EZ^2=\\tau$、$EZ^4=3\\tau^2$，所以\n\n$$u(t,x)=x^4+6x^2\\tau+3\\tau^2.$$\n\n时间导数为 $-6x^2-6\\tau$；一阶空间导数为 $4x^3+12x\\tau$，二阶空间导数为 $12x^2+12\\tau$。于是 $u_t+u_{xx}/2=0$，且 $u(T,x)=x^4$。例如剩余时间一、当前位置二，条件四阶矩为 $16+24+3=43$。沿路径的随机微分为 $(4W_t^3+12W_t\\tau)dW_t$，没有漂移，与条件期望的鞅性质一致。\n\n</details>\n\n## 配套代码\n\n[下载本节 Python 代码](/assets/downloads/theory/calin-book-07-02.zip)\n\n解压后运行 `calin-book-07-02.py`。需安装 numpy、scipy 和 matplotlib；脚本会生成图像与数值核查结果，无需另行下载数据。\n\n[补充算例与绘图代码](/assets/downloads/theory-walkthrough/calin-book-07-02.zip)\n",
+  "metadata": {
+    "theory_book": {
+      "book": "stochastic-calculus",
+      "part": "第二部分 · 路径性质与随机微积分",
+      "number": 41,
+      "chapter": "7",
+      "edition": "2026-10",
+      "minutes": 38,
+      "section": "2",
+      "source_pages": [
+        172,
+        173,
+        174,
+        175,
+        176,
+        177
+      ],
+      "chapter_title": "随机积分的计算",
+      "source_sections": [
+        "7.3"
+      ]
+    }
+  }
+}

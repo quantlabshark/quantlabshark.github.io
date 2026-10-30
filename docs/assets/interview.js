@@ -18,15 +18,6 @@
   host.addEventListener('toggle',updateExpand,true);query.addEventListener('input',()=>filter());difficulty.addEventListener('change',()=>filter());
   expand.addEventListener('click',()=>{const open=expand.getAttribute('aria-expanded')!=='true';for(const ch of host.querySelectorAll('.interview-chapter:not([hidden])'))ch.open=open;updateExpand();});
   window.addEventListener('hashchange',openHash);window.addEventListener('popstate',()=>{const u=new URLSearchParams(location.search);query.value=u.get('q')||'';difficulty.value=u.get('difficulty')||'';filter(false);});filter(false);openHash();
-  (async()=>{try{
-   const D=await window.FoamDirectory.ready;if(!D.available)throw Error('directory');const node=D.nodes.find(n=>n.key===page.dataset.labCatalog);if(!node)throw Error('missing directory');
-   const rows=(await D.content(node)).filter(r=>r.metadata?.interview?.book===page.dataset.interviewBook).sort((a,b)=>a.sort_order-b.sort_order);
-   const opened=new Set([...host.querySelectorAll('details[open]')].map(c=>c.id));host.innerHTML=V.render(rows);for(const c of host.querySelectorAll('details'))c.open=opened.has(c.id);
-   const chapters=V.chapters(rows);document.getElementById('interview-count').textContent=`${chapters.length} ${page.dataset.interviewBook==='zhou'?'章':'组'} · ${rows.length} 节 · 题目与解答`;
-   document.getElementById('interview-toc').innerHTML=chapters.map(c=>`<a href="#chapter-${esc(c.number)}"><span>${String(c.number).padStart(2,'0')}</span>${esc(c.title)}</a>`).join('');
-   const start=document.getElementById('interview-start');start.hidden=!rows.length;if(rows.length)start.href='/read/?slug='+encodeURIComponent(rows[0].slug);
-   filter(false);openHash();host.dataset.live='true';
-  }catch{document.getElementById('interview-sync').textContent='当前显示发布时的目录；实时更新暂时无法读取。';}})();
  }
  function revealAnswerHash(){let target;try{target=document.getElementById(decodeURIComponent(location.hash.slice(1)));}catch{}if(!target)return;const details=target.closest('.interview-answer');if(details){details.open=true;requestAnimationFrame(()=>target.scrollIntoView({block:'start'}));}}
  window.addEventListener('hashchange',revealAnswerHash);

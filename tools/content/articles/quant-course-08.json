@@ -1,0 +1,51 @@
+{
+  "slug": "quant-course-08",
+  "title": "08 · 用变量、列表和函数表达交易账本",
+  "summary": "从一笔交易扩展到多笔记录，理解数据类型、循环、函数返回值和边界检查。",
+  "kind": "lesson",
+  "track": "Python与数据",
+  "series": "量化研究系统课程",
+  "sort_order": 8,
+  "cover_url": "/assets/figures/curriculum/course-08.svg",
+  "section_ids": [
+    "0c97f1c3-dfca-48e2-9cfa-ae10fcb24de9"
+  ],
+  "body": "变量保存单个对象，列表保存一组有顺序的对象，函数封装可重复使用的计算。用这些基本结构记录价格、成交数量和费用，可以逐步建立交易账本。\n\n## 数字、文字、真假和缺失\n\n价格 100、股数 20、股票名称“示例A”，在程序里都可以存储，但它们不能做相同运算。把价格误存成文字，可能让 `100 + 5` 从加法变成字符串拼接。数据类型决定程序如何解释输入。\n\n整数 `int` 适合表示笔数、股数等离散计数。浮点数 `float` 表示价格和收益等带小数的量。字符串 `str` 保存代码和文字。布尔值 `bool` 只有 `True` 和 `False`，适合表示条件是否成立。`None` 可表示尚未提供的值，与数值零不同。\n\n变量名只是绑定值的名称。`price = 100` 后再执行 `price = 105`，变量指向新值，并不自动保留历史价格。因此一串历史记录需要容器保存。浮点数采用有限精度表示，比较计算结果时通常检查误差是否小于容差，例如 `abs(x-y) < 1e-10`，避免要求所有小数运算逐位完全相等。\n\n## 列表按顺序保存，字典按名称查找\n\n`prices = [100,102,101,105]` 是列表。索引从 0 开始，`prices[0]` 是 100，`prices[-1]` 是 105。切片 `prices[1:3]` 取索引 1、2，不包含结束位置 3，因此得到 `[102,101]`。\n\n![列表索引、切片与相邻价格配对](/assets/figures/curriculum/course-08.svg)\n\n计算相邻收益时，左侧序列是 `[100,102,101]`，右侧是 `[102,101,105]`。它们逐项配对后，分别计算新价格除以旧价格减一。图中的位置关系比记忆一段切片代码更重要。\n\n字典把字段名称映射到值，例如 `{\"symbol\":\"示例A\",\"price\":100,\"shares\":20}`。对于交易记录，用命名字段比用 `[\"示例A\",100,20]` 更容易判断哪一个数字是价格、哪一个是数量。多个字典再放进列表，就构成一张小型交易表。\n\n## 循环让同一规则逐条作用\n\n`for` 循环依次读取记录；`if` 根据条件选择分支。下面把每笔买入和卖出写成同样结构。买入让持仓增加、现金减少；卖出让持仓减少、现金增加。费用无论买卖都减少现金。\n\n自拟交易为：初始现金 5000 元，先以 100 元买 20 股，再以 105 元卖 8 股，最后剩余 12 股按 103 元估值。每笔固定费用 2 元。买入后现金 2998，卖出后现金 3836，股票市值 1236，总资产 5072 元，总盈亏 72 元。\n\n```python\ntrades = [\n    {\"side\":\"buy\", \"price\":100.0, \"shares\":20},\n    {\"side\":\"sell\", \"price\":105.0, \"shares\":8},\n]\ncash, position = 5000.0, 0\nfor trade in trades:\n    quantity, price = trade[\"shares\"], trade[\"price\"]\n    if trade[\"side\"] == \"buy\":\n        cash -= quantity*price + 2\n        position += quantity\n    else:\n        cash += quantity*price - 2\n        position -= quantity\nmarket_value = position*103.0\nprint(cash, position, market_value, cash+market_value)\nassert cash == 3836 and cash+market_value == 5072\n```\n\n结果保留了现金和持仓两个状态。若只累计买卖价差，就会漏掉尚未卖出部分的浮动盈亏。\n\n## 函数把输入、计算和输出写清楚\n\n函数适合表达反复使用的计算。下面的 `simple_return` 接收期初和期末价格，返回简单收益；它不会读取外部某个同名价格变量。\n\n```python\ndef simple_return(start_price, end_price):\n    if start_price <= 0:\n        raise ValueError(\"期初价格必须大于零\")\n    return end_price/start_price - 1\n\nprices = [100,102,101,105]\nreturns = [simple_return(a,b) for a,b in zip(prices[:-1],prices[1:])]\nprint([round(r*100,4) for r in returns])\nassert len(returns) == len(prices)-1\n```\n\n输出为 2%、约 −0.9804%、约 3.9604%。四个价格形成三个相邻区间，所以收益数量少一个。`return` 把数值交回调用处，`print` 只是显示文字。把仅有 `print` 的函数当成能返回数值的函数，会得到 `None`。\n\n## 输入类型与有效性检查\n\n收益计算要求期初价格为正，持仓计算需要数量单位一致。检查输入时应针对经济含义，例如不允许卖出的数量超过可用持仓。如果研究明确允许卖空，则另行记录借券和资金条件。不要把所有异常一律填成零，因为这会把“无法计算”变成“没有收益”。\n\n列表是可修改对象。执行 `b = a` 后，二者可能引用同一列表，修改 `b` 也会影响 `a`；需要独立副本时可使用 `a.copy()`。研究中原始数据与处理中间变量混用，常会造成回头无法恢复原始输入。\n\n## 可变参数与函数副作用\n\n假设列表 `prices` 保存原始价格，另一个名称 `working = prices` 并没有复制数据；两者指向同一个列表。若随后执行 `working[0] = 0`，原始列表第一项也会改变。需要独立列表时使用 `working = prices.copy()`，嵌套容器则还要检查内部对象是否共享。\n\n这与交易状态的更新不同。账户现金和持仓本来就需要随成交变化，而原始成交记录应保留。因此可以让计算函数接收原始记录并返回一个新结果，避免在不知情时改写输入。\n\n函数还需要明确失败条件。比如计算平均买入成本时，累计股数为零就没有这个均价。返回零会使下游误以为资产免费取得。应返回缺失或抛出有含义的异常。异常信息写清“股数为零，无法计算均价”，比让后面某一步除以零更容易定位。\n\n最后可以把复杂计算拆成小函数：一段计算收益，一段更新现金，一段检查持仓限制。每段都能用两三笔自拟记录验证，再把它们连起来。这种划分服务于检查经济关系，而不必为了形式把每一行都包装成函数。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>一个函数最好能用几组很小的输入手算。例如价格不变应返回零，价格翻倍应返回一，期初为零应明确报错。先检查这些情况，再放进几百万行数据。</p></aside>\n\n### 练习\n\n`prices[1:4]` 选中了哪些价格？若函数只执行 `print(end/start-1)`，外部用它的结果继续乘本金会发生什么？\n\n<details><summary>查看解答</summary>\n\n列表为 `[100,102,101,105]` 时，切片取得 102、101、105。没有显式 `return` 的函数默认返回 `None`，无法像数值一样继续乘本金，应返回收益数值并在外部显示。\n\n</details>\n\n## 配套代码\n\n[下载本节代码（ZIP）](/assets/downloads/courses/quant-course-08.zip)\n\n压缩包包含脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n",
+  "metadata": {
+    "curriculum": {
+      "cover": "/assets/figures/curriculum/course-08.svg",
+      "level": "入门",
+      "stage": 2,
+      "number": 8,
+      "edition": "2026-10",
+      "minutes": 18,
+      "source_refs": [
+        {
+          "book": "Quant Roadmap — Ultimate Edition",
+          "chapters": "12",
+          "pdf_pages": [
+            39,
+            40
+          ]
+        },
+        {
+          "book": "深入浅出Python量化交易实战",
+          "chapters": "1.3.3、2.1",
+          "pdf_pages": [
+            33,
+            34,
+            35,
+            36,
+            37,
+            43
+          ]
+        }
+      ],
+      "stage_title": "Python与数据"
+    },
+    "code_download": {
+      "url": "/assets/downloads/courses/quant-course-08.zip",
+      "examples": 2
+    }
+  }
+}

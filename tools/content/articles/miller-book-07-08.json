@@ -1,0 +1,32 @@
+{
+  "slug": "miller-book-07-08",
+  "title": "图及其算法：习题",
+  "summary": "20 道题，练习图及其算法中的概念、计算与方法选择。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8044,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "本章题组用于练习图及其算法。按题号选择下方题组；题面中的公式、数据和图形可点击放大。\n\n## 题组\n\n<details class=\"book-exercise-group\" id=\"questions-7-11-0\"><summary>讨论题 · 12 题</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/miller-07-1-264.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"讨论题 · 12 题，放大第 1 幅\"><img src=\"/assets/exercises/foundations/miller-07-1-264.webp\" alt=\"讨论题 · 12 题，第 1 幅\" width=\"1165\" height=\"860\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/miller-07-1-265.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"讨论题 · 12 题，放大第 2 幅\"><img src=\"/assets/exercises/foundations/miller-07-1-265.webp\" alt=\"讨论题 · 12 题，第 2 幅\" width=\"1165\" height=\"559\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-7-12-1\"><summary>编程练习 · 8 题</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/miller-07-2-265.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"编程练习 · 8 题，放大第 1 幅\"><img src=\"/assets/exercises/foundations/miller-07-2-265.webp\" alt=\"编程练习 · 8 题，第 1 幅\" width=\"1165\" height=\"887\" loading=\"lazy\"></a></div>\n\n</details>\n\n",
+  "metadata": {
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第三部分 · 图算法与进阶应用",
+      "number": 44,
+      "chapter": "7",
+      "edition": "2026-10",
+      "minutes": 15,
+      "section": "8",
+      "questions": 20,
+      "unit_type": "exercise",
+      "chapter_title": "图及其算法",
+      "source_sections": [
+        "7.11",
+        "7.12"
+      ]
+    }
+  }
+}

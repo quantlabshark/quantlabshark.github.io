@@ -1,0 +1,15 @@
+{
+  "slug": "ref-read-csv",
+  "title": "read_csv：读取表格",
+  "summary": "指定日期列、数据类型和缺失值规则。",
+  "kind": "reference",
+  "track": "",
+  "series": "",
+  "sort_order": 27,
+  "section_ids": [
+    "13c09645-17ba-4818-ac04-473fbd820fb0",
+    "c41526dd-742a-469f-9389-9bfddcee30dc"
+  ],
+  "body": "## read_csv：读取表格\n\nCSV 用文本保存表格，每行是一条记录。下面读取价格文件，并将 `date` 列解析为日期。文件采用相对路径，因此需要放在当前工作目录，或将路径改为实际文件位置。\n\n```python\nimport pandas as pd\ndf = pd.read_csv(\"synthetic-prices.csv\", parse_dates=[\"date\"])\nprint(df.dtypes)\n```\n\n`df.dtypes` 显示各列的数据类型。读取后检查行数、列名和日期范围，再确认价格等数值字段是否被正确识别。\n",
+  "metadata": {}
+}

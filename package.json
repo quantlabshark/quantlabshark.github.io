@@ -7,8 +7,7 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "preview": "node tools/serve.cjs",
-    "check": "node tools/check.cjs && node tools/check-theory-presentation.cjs",
-    "sync:catalog": "node tools/sync-public-catalogs.cjs"
+    "check": "node tools/check.cjs && node tools/check-theory-presentation.cjs"
   },
   "engines": {
     "node": ">=20.19.0"
@@ -17,7 +16,6 @@
     "version": "8.1.2"
   },
   "dependencies": {
-    "@supabase/supabase-js": "2.117.2",
     "cheerio": "1.2.0",
     "dompurify": "3.4.16",
     "hexo": "8.1.2",

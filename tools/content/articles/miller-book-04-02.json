@@ -1,0 +1,37 @@
+{
+  "slug": "miller-book-04-02",
+  "title": "递归绘图与自相似结构",
+  "summary": "从坐标和状态恢复解释递归绘图，推导树枝数量、三角形尺度及面积变化。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8018,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "递归绘图让同一几何规则作用于不同位置和尺度。为了读懂程序，先明确函数接收哪些坐标、改变哪些状态，以及返回时应恢复到哪里。\n\n## 二叉树的几何规则\n\n一条树枝起点为 (x,y)，长度 L，方向角 θ，则终点为\n\n$$x'=x+L\\cos\\theta,\\qquad y'=y+L\\sin\\theta.$$\n\n从终点分别以方向 θ−α、θ+α 绘制两个子枝，长度缩为 rL，其中 0<r<1。达到最小长度或规定深度时停止。θ 是当前方向，α 是分叉角，r 是缩放比例。\n\n从根枝计为第 0 层，到第 d 层共 $1+2+\\cdots+2^d=2^{d+1}-1$ 条枝。深度增加一层，新增枝数翻倍，绘制量很快增加。\n\n## 海龟状态怎样恢复\n\n海龟保存位置和朝向。画完右子树，必须回到分叉点并恢复父枝方向，才能画左子树。可以用后退与反向旋转恢复，也可进入函数时保存 position、heading，返回前设置回原值。\n\n例如先向前 L，再右转 α，递归完成后左转 2α 画另一枝，最后右转 α 并后退 L。每个子调用也遵守“返回时回到进入状态”的约定，整段状态才闭合。\n\n## 三角形分解\n\n给定顶点 A、B、C，计算 $M_{AB}=(A+B)/2$、$M_{AC}=(A+C)/2$、$M_{BC}=(B+C)/2$。保留三个角上的小三角形，将中央部分留空，继续对三个小三角形递归。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/fractal.svg\" alt=\"谢尔平斯基三角形由三个更小的同类图形递归组成。\" loading=\"lazy\"></figure>\n\n初始 A=(0,0)、B=(1,0)、C=(1/2,√3/2)，一级分解的底边中点为 (1/2,0)，另两个中点为 (1/4,√3/4)、(3/4,√3/4)。深度 0 画当前三角形；深度 d>0 调用三个深度 d−1 的子问题。\n\n## 数量、尺度与面积\n\n深度 d 有 $3^d$ 个最小三角形，各自边长是初始的 $2^{-d}$，面积是初始的 $4^{-d}$，所以总涂色面积为初始面积的 $(3/4)^d$。d=2 时有 9 个小三角形，总面积为 9/16。\n\n当前程序直接计算顶点，并用 Matplotlib 保存图片，不依赖交互窗口。几何计算和显示分开后，可以检查中点、数量和边长，再检查生成图像。负深度应拒绝，否则递归无法到达零。\n\n> **鲨鱼说** 图形偏移不一定是三角函数算错。若某个递归分支没有恢复位置或方向，后面的所有分支都会从错误状态出发。\n\n## Python 实现\n\n~~~python\nimport matplotlib\nmatplotlib.use('Agg')\nimport matplotlib.pyplot as plt\ndef sierpinski(a,b,c,depth,ax):\n    if depth<0:raise ValueError('negative depth')\n    if depth==0:\n        ax.fill([a[0],b[0],c[0]],[a[1],b[1],c[1]],color='#31778b')\n        return\n    mid=lambda p,q:((p[0]+q[0])/2,(p[1]+q[1])/2)\n    ab,ac,bc=mid(a,b),mid(a,c),mid(b,c)\n    for corners in ((a,ab,ac),(ab,b,bc),(ac,bc,c)):\n        sierpinski(*corners,depth-1,ax)\nfig,ax=plt.subplots(figsize=(7,6))\nsierpinski((0,0),(1,0),(.5,3**.5/2),4,ax)\nax.set_aspect('equal');ax.axis('off');fig.tight_layout()\nfig.savefig('sierpinski.png',dpi=180)\nprint('Saved sierpinski.png')\n~~~\n\n## 练习\n1. 计算二叉树深度为5时的线段数量，并估计增加到10时工作量的变化。\n2. 生成深度0、1、2、3的谢尔平斯基三角形，比较面积和小三角形数量。\n\n[本章习题](/read/?slug=miller-book-04-06)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-04-02.zip",
+        "label": "递归绘图与自相似结构 · Python 示例",
+        "size_bytes": 1132,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第二部分 · 数据组织与基本算法",
+      "number": 18,
+      "chapter": "4",
+      "edition": "2026-10",
+      "minutes": 8,
+      "section": "2",
+      "chapter_title": "递归与动态规划",
+      "source_sections": [
+        "4.4"
+      ]
+    }
+  }
+}

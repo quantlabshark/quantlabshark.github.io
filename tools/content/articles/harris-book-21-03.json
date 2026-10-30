@@ -1,0 +1,46 @@
+{
+  "slug": "harris-book-21-03",
+  "title": "21.3 成本估计的偏差与订单流模型",
+  "summary": "识别基准选择、拆单和交易动机造成的偏差，理解反转模型与永久、暂时价格影响。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "交易与交易所：市场微观结构",
+  "sort_order": 4061,
+  "cover_url": "",
+  "section_ids": [
+    "44e2f2e9-a852-5af5-8a72-788df5e2df9d"
+  ],
+  "body": "## 一个统计量不能同时回答所有问题\n\n当时的报价中点离成交时点很近，受无关新闻影响较小，适合检查报价条件下的执行价格。收盘价离上午的成交较远，会混入一天的新闻，但可能反映等待是否有价值。提高对择时能力的识别，通常需要更长的观察窗口。窗口越长，无关价格变动带来的噪声也越大。\n\n噪声和偏差不同。噪声使单笔结果时好时坏，多笔平均可以缓解。偏差使某类交易长期朝同一方向被误判，增加样本并不能自动解决。比较经纪商时，还要控制交易难度：订单规模、波动率、交易紧迫性不同，平均成本不能直接比较。\n\n以下几种机制尤其容易混淆。\n\n- 拆单提高后续报价。用每笔成交时的新中点衡量，会少算前序订单造成的累积成本。\n- 追涨策略在涨价后才决定买入。用更早的开盘价衡量，会把策略选择的价格变化计入执行成本；逆势买入则可能显得异常便宜。\n- 知情买家买入后价格上涨。用后续收盘价衡量，会把预测正确的收益误当作执行质量。\n- 只考核有效价差，会鼓励不断挂买单追赶上涨市场。每次成交看似省了价差，最初可以成交的低价却早已失去。\n- 只考核收盘价，交易台可以集中在收盘成交；只考核VWAP，也可能机械贴近VWAP。这些做法能改善分数，却未必符合原订单的经济目的。\n\n预先固定的决策基准能减少这些特定的择时和换基准问题。它仍要求决策时间、数量及撤单记录可信，不能靠结果出来以后补写交易计划。\n\n## 从成交价反转估计价差\n\n没有可靠报价时，可以利用买方主动成交偏高、卖方主动成交偏低所产生的价格反转。一个简化模型写成\n\n$$p_t=v_t+c s_t,$$\n\n其中$v_t$为有效价格，$c$为半价差，$s_t$为随机买卖方向。若有效价格增量与交易方向独立，方向独立且买卖概率相同，价差恒定，则相邻价格变化的协方差为$-c^2$。Roll估计量为\n\n$$\\widehat S=2\\sqrt{-\\widehat{\\operatorname{Cov}}(\\Delta p_t,\\Delta p_{t-1})}.$$\n\n负协方差源于价格在买价与卖价之间跳动。若样本协方差为正，公式没有实数结果，不能强行解释为测出了负价差。订单方向持续、报价随交易信息调整和价格有其他序列相关时，简化假设也会失效。\n\n```python\n# 自拟市场：有效价格固定，半价差为 0.02，随机买卖方向\nimport random\nfrom statistics import mean\nrandom.seed(2103)\nprice = [100 + 0.02 * random.choice([-1, 1]) for _ in range(50001)]\nchange = [b - a for a, b in zip(price, price[1:])]\nx, y = change[:-1], change[1:]\nmx, my = mean(x), mean(y)\ncov = mean((a - mx) * (b - my) for a, b in zip(x, y))\nestimate = 2 * (-cov) ** 0.5 if cov < 0 else None\nprint('真实价差:', 0.04, '估计价差:', round(estimate, 5))\nassert abs(estimate - 0.04) < 0.002\n```\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>协方差，即两个变量偏离各自均值时，共同变化程度的度量。</p></aside>\n\n## 订单流如何分成两种影响\n\nGlosten–Harris模型让有效价格随带符号成交量移动：$\\Delta v_t=\\lambda s_tq_t+\\varepsilon_t$，并让暂时成分为$a s_t+b s_tq_t$。合并得到\n\n$$\\Delta p_t=\\lambda s_tq_t+a\\Delta s_t+b\\Delta(s_tq_t)+\\varepsilon_t.$$\n\n这里$q_t$是数量，$\\lambda$刻画模型中的永久影响，$a,b$刻画暂时交易成本。回归分别使用带符号数量、方向变化和带符号数量变化。所谓永久，是指模型将这一部分纳入新的有效价格，不表示股价永远不再变化。交易方向识别错误、漏掉共同新闻、错误合并成交都会影响估计。回归系数也不是直接可观察的交易费用。\n\n估计窗口还应与研究目的对应。把正常交易与消息发布时段混在一起，可能让一组平均参数掩盖两种不同机制。先按事前定义的市场状态比较，再判断模型是否需要允许参数变化，通常比只追求整体拟合度更有解释力。\n\n## 练习\n\n同一个买单的全部成交恰好构成当天所有成交，VWAP成本会怎样？\n\n<details><summary>查看解答</summary>\n\n该订单均价等于市场VWAP，所以相对VWAP的价格成本为零。订单仍可能跨越价差并推高价格。这里基准被订单本身决定，不能据此断言无交易成本。\n\n</details>\n\n[返回全书目录](/theory/trading-and-exchanges/)\n\n## 配套代码\n\n[下载本节代码（ZIP）](/assets/downloads/trading-and-exchanges/harris-book-21-03.zip)\n\n压缩包包含完整脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n",
+  "metadata": {
+    "theory_book": {
+      "book": "trading-and-exchanges",
+      "part": "第六部分 · 衡量与评价",
+      "number": 62,
+      "chapter": "21",
+      "edition": "2026-10",
+      "minutes": 7,
+      "section": "21.3",
+      "source_year": 2003,
+      "source_pages": [
+        440,
+        441,
+        442,
+        443,
+        444,
+        445,
+        446,
+        447,
+        448
+      ],
+      "chapter_title": "流动性与交易成本的测量",
+      "source_sections": [
+        "21.4 PROPERTIES OF TRANSACTION COST PRICE BENCHMARK ESTIMATORS",
+        "21.5 MEASURING IMPLICIT TRANSACTION COSTS WITH ECONOMETRIC METHODS"
+      ]
+    },
+    "code_download": {
+      "url": "/assets/downloads/trading-and-exchanges/harris-book-21-03.zip",
+      "examples": 1
+    }
+  }
+}

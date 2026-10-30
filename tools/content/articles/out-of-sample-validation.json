@@ -1,0 +1,14 @@
+{
+  "slug": "out-of-sample-validation",
+  "title": "14 · 按时间划分样本外验证",
+  "summary": "按时间划分训练、验证和测试数据，处理标签重叠与参数选择。",
+  "kind": "lesson",
+  "track": "回测与验证",
+  "series": "回测与验证",
+  "sort_order": 14,
+  "section_ids": [],
+  "body": "## 训练、验证与测试\n\n时间序列研究按历史顺序划分样本。训练集用于拟合参数，验证集用于选择模型或配置，测试集用于评价已经确定的方案。这样可以对应实际过程：用过去获得的数据建立模型，再预测后续时期。\n\n下面用 18 个整数索引展示三次划分。每次训练结束后留出两个观测，再使用三个观测测试。`gap=2` 按观测条数计数；数据缺日或时间间隔不规则时，需要另外检查实际日期。\n\n~~~python\nimport numpy as np\nfrom sklearn.model_selection import TimeSeriesSplit\n\nx = np.arange(18).reshape(-1, 1)\nsplitter = TimeSeriesSplit(n_splits=3, test_size=3, gap=2)\nfor train, test in splitter.split(x):\n    print(\"Train:\", train[0], train[-1],\n          \"Test:\", test[0], test[-1])\n    assert train[-1] < test[0]\n~~~\n\n## 标签区间的重叠\n\n若标签为未来五个交易日收益，一个训练样本的标签可能延伸至验证期。此时即使特征日期早于验证期，训练仍可能使用验证期间的价格。应根据标签结束时间剔除边界处重叠的样本，再确定所需间隔。\n\n等间隔数据便于让各次测试覆盖相近时长。若采样间隔不同，需按日期重新安排切分，避免三条记录对应完全不同的市场时间。\n\n## 预处理的拟合范围\n\n标准化的均值、方差，缺失值填补参数和特征选择规则，都从每一折训练集估计，然后应用于该折测试集。将这些步骤与模型放入同一 `Pipeline`，可以使它们随每次切分重新拟合。\n\n## 练习\n\n根据测试结果修改参数后，原测试集应如何定位？\n\n参考答案：它已经参与方案选择，应视为验证数据。记录本次修改，并用另一段未参与选择的后续数据评价最终方案。可用的独立测试数据随反复调整而减少，因此参数搜索应主要在训练与验证环节完成。\n",
+  "metadata": {
+    "legacy_course": true
+  }
+}

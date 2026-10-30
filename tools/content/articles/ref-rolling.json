@@ -1,0 +1,15 @@
+{
+  "slug": "ref-rolling",
+  "title": "rolling：滚动窗口",
+  "summary": "明确窗口长度与所需最少样本。",
+  "kind": "reference",
+  "track": "",
+  "series": "",
+  "sort_order": 29,
+  "section_ids": [
+    "13c09645-17ba-4818-ac04-473fbd820fb0",
+    "c41526dd-742a-469f-9389-9bfddcee30dc"
+  ],
+  "body": "## rolling：滚动窗口\n\n滚动窗口随时间向后移动，每个位置只保留最近一段数据。下面计算最近 20 条收盘价的均值，`min_periods=20` 要求窗口内有 20 个有效观测。\n\n```python\nmean = df[\"close\"].rolling(20, min_periods=20).mean()\n```\n\n前 19 条结果为空。当前日收盘价进入窗口后，均线才可确定；如果按收盘后生成信号的规则交易，成交应安排在后续可执行时点。\n",
+  "metadata": {}
+}

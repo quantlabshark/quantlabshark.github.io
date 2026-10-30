@@ -1,0 +1,39 @@
+{
+  "slug": "miller-book-07-06",
+  "title": "Dijkstra 最短路径",
+  "summary": "逐轮松弛距离并还原最短路线，给出非负边权下的确定性证明和堆中旧记录处理。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8042,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "边的成本不同后，最少边数不再等于最低成本。Dijkstra 算法维护从起点出发的当前最佳路线，每次处理距离最小的候选顶点，适用于非负边权。\n\n## 松弛是尝试一条新路线\n\n起点 s 距离为 0，其他点初始为无穷大。若已知一条到 u 的路线，再沿权重 w(u,v) 的边到 v，候选距离为 dist[u]+w(u,v)。若它更小，就更新 dist[v]，并记 parent[v]=u。\n\n有限的 dist 都对应一条已找到的路线，因此是真实最短距离的上界。算法逐步降低这些上界，直到无法改善。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/shortest-path.svg\" alt=\"带非负权重的图，最短路径比较沿途边权之和。\" loading=\"lazy\"></figure>\n\n## 逐轮计算\n\n边为 A→B:4，A→C:1，C→B:2，B→D:1，C→D:5。\n\n| 处理的点 | B 的距离 | C 的距离 | D 的距离 |\n| --- | --- | --- | --- |\n| A | 4 | 1 | ∞ |\n| C | 3 | 1 | 6 |\n| B | 3 | 1 | 4 |\n| D | 3 | 1 | 4 |\n\n前驱 D←B←C←A 给出 A→C→B→D，总权 1+2+1=4。B 首次发现为 4，不能当场确定；之后经过 C 改善为 3。\n\n## 为什么最小候选可以确定\n\n设从堆中取出的未确定顶点 u 候选距离最小。假设存在一条更短的 s→u 路径，在这条路径上找到第一个尚未确定的点 y，其前驱 x 已确定。处理 x 时已经松弛 x→y，所以 dist[y] 不大于这条路径到 y 的长度。\n\n剩余边权非负，路径到 y 的长度不超过整条更短路线长度，即 dist[y]<dist[u]，与 u 是最小候选矛盾。非负权使这个最后的不等式成立，负边会破坏证明。\n\n## 堆允许保留过期候选\n\n距离改善时压入新的 (distance,vertex)，不必原地修改旧项。例中 B 有旧记录 (4,B) 和新记录 (3,B)。弹出旧项时，若其距离不同于 distance[B]，直接跳过。\n\n若顶点本身不可比较，距离相同会使二元组比较顶点而报错，可加入递增序号形成 (distance,sequence,vertex)。前驱只在严格改善时更新。\n\n## 成本与结果\n\n使用减键堆时常写 O((V+E)log V)；保留旧项的实现堆可有 O(E) 项，时间上界 O((V+E)log(E+1))，空间 O(V+E)。简单图中 log E 与 log V 同阶。\n\n到目标的距离不可达时，不应沿不存在的前驱重建路径。负边需要换用支持负权的算法，且负环可能使最低成本没有有限值。\n\n> **鲨鱼说** “发现”只说明已有一条路线，“确定”说明它已经最短。二者在 BFS 等权场景中可以接近合并，在带权图中必须分清。\n\n## Python 实现\n\n~~~python\nimport heapq\ndef dijkstra(graph,start):\n    if any(w<0 for vs in graph.values() for _,w in vs):raise ValueError('negative edge')\n    distance={start:0};parent={start:None};heap=[(0,start)]\n    while heap:\n        d,u=heapq.heappop(heap)\n        if d!=distance[u]:continue\n        for v,w in graph.get(u,[]):\n            candidate=d+w\n            if candidate<distance.get(v,float('inf')):\n                distance[v]=candidate;parent[v]=u\n                heapq.heappush(heap,(candidate,v))\n    return distance,parent\ng={'A':[('B',4),('C',1)],'C':[('B',2),('D',5)],'B':[('D',1)],'D':[]}\ndistance,parent=dijkstra(g,'A')\nassert distance['D']==4 and parent['D']=='B'\nprint(distance)\n~~~\n\n## 练习\n1. 在本节图中加入A→D权10，追踪旧候选如何变成过期记录。\n2. 构造一个含负边、使提前确定顶点的Dijkstra策略失败的例子。\n\n[本章习题](/read/?slug=miller-book-07-08)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-07-06.zip",
+        "label": "Dijkstra 最短路径 · Python 示例",
+        "size_bytes": 1092,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第三部分 · 图算法与进阶应用",
+      "number": 42,
+      "chapter": "7",
+      "edition": "2026-10",
+      "minutes": 9,
+      "section": "6",
+      "chapter_title": "图及其算法",
+      "source_sections": [
+        "7.8",
+        "7.8.1",
+        "7.8.2"
+      ]
+    }
+  }
+}

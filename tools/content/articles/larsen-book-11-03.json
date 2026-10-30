@@ -1,0 +1,39 @@
+{
+  "slug": "larsen-book-11-03",
+  "title": "相关系数、二维正态与条件预测",
+  "summary": "连接相关与回归，配方推导二维正态的条件均值和方差，并解释零相关检验。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7059,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "协方差受单位影响，相关系数则将它除以两个标准差，形成无量纲的线性关联指标。相关与回归联系紧密，但回答的问题并不相同。\n\n## 相关系数和回归斜率\n\n总体相关为 $\\rho=\\operatorname{Cov}(X,Y)/(\\sigma_X\\sigma_Y)$，样本相关为 $r=S_{xy}/\\sqrt{S_{xx}S_{yy}}$。Cauchy–Schwarz 不等式保证其范围为 [-1,1]。\n\n含截距的一元回归满足 $\\hat\\beta=r(s_Y/s_X)$，$R^2=r^2$。斜率表示 X 增加一个单位时拟合均值怎样变化，相关表示标准化后的线性关系强度。X 从米改用厘米，斜率缩小百倍，相关不变。\n\n零相关只排除线性关联。例如 X 关于零对称、$Y=X^2$ 时，可有 $\\rho=0$，但 Y 仍由 X 完全决定。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/bivariate.svg\" alt=\"均值为 100、50，标准差为 10、8，相关为 0.6 的二维正态等高线；X=120 时条件均值为 59.6。\" loading=\"lazy\"></figure>\n\n## 二维正态的条件分布\n\n设两变量共同正态，标准化值为 $u=(x-\\mu_X)/\\sigma_X$、$v=(y-\\mu_Y)/\\sigma_Y$，联合密度指数含 $-[u^2-2\\rho uv+v^2]/[2(1-\\rho^2)]$。\n\n固定 x 后，对 v 配方：\n\n$$u^2-2\\rho uv+v^2=(v-\\rho u)^2+(1-\\rho^2)u^2.$$\n\n后一项与 v 无关，进入归一化常数；前一项是正态二次型，所以\n\n$$Y\\mid X=x\\sim N\\left(\\mu_Y+\\rho\\frac{\\sigma_Y}{\\sigma_X}(x-\\mu_X),\\sigma_Y^2(1-\\rho^2)\\right).$$\n\n取 $\\mu_X=100,\\sigma_X=10,\\mu_Y=50,\\sigma_Y=8,\\rho=0.6$，观察 X=120 后，Y 的条件均值为 59.6，条件标准差为 6.4。条件均值线性、条件方差不随 x 改变，都是共同正态模型的性质。\n\n## 检验与解释\n\n独立二维正态样本在 $H_0:\\rho=0$ 下，有\n\n$$T=r\\sqrt{\\frac{n-2}{1-r^2}}\\sim t_{n-2}.$$\n\n它可由回归斜率零假设的 t 统计量整理得到。两个边际分别正态，不足以单独保证共同正态。\n\n离群点、混合人群、X 的取值范围和共同时间趋势都会影响相关。合并两个人群可能产生很强的总体相关，而组内关系很弱；缩窄取值范围又可能降低相关。因果解释还需要研究设计和机制证据。\n\n## 从成对观测估计模型参数\n\n对 n 对独立二维正态观测，均值的极大似然估计为 $\\bar x,\\bar y$，两个方差估计为 $S_{xx}/n,S_{yy}/n$，协方差估计为 $S_{xy}/n$。因此相关估计为 $S_{xy}/\\sqrt{S_{xx}S_{yy}}=r$，共同分母 n 被约去。\n\n若要无偏估计方差和协方差，应把分母统一改为 n−1；相关的比值仍是 r，但 r 本身不因此成为无偏估计。将估计参数代入条件均值公式，恰好得到最小二乘直线，建立了概率模型与回归计算的联系。\n\n> **鲨鱼说** 同一个 r 可能对应不同散点结构。先看散点和分组，再用相关系数概括其中的线性部分。\n\n## 练习\n1. n=15、样本相关r=0.5，计算零相关的t统计量。\n2. 将本节二维正态算例的ρ改为0和0.9，分别计算给定X=120时的条件均值和条件标准差。\n\n[本章习题](/read/?slug=larsen-book-11-04)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/larsen-book-11-03.zip",
+        "label": "相关系数、二维正态与条件预测 · Python 示例",
+        "size_bytes": 896,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第三部分 · 比较、回归与实验设计",
+      "number": 59,
+      "chapter": "11",
+      "edition": "2026-10",
+      "minutes": 15,
+      "section": "3",
+      "chapter_title": "回归与相关",
+      "source_sections": [
+        "11.4",
+        "11.5",
+        "11.6"
+      ]
+    }
+  }
+}

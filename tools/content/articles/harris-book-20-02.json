@@ -1,0 +1,40 @@
+{
+  "slug": "harris-book-20-02",
+  "title": "20.2 用 Roll 模型理解价差与波动测量",
+  "summary": "从逐笔成交价格出发，推导负序列协方差与价差的关系，并用模拟检验估计方法。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "交易与交易所：市场微观结构",
+  "sort_order": 4058,
+  "cover_url": "",
+  "section_ids": [
+    "44e2f2e9-a852-5af5-8a72-788df5e2df9d"
+  ],
+  "body": "## 方差、标准差与时间尺度\n\n价格变化的方差衡量其围绕平均变化的平方偏离，标准差是方差的平方根。分解波动时，通常是在合适假设下相加方差，不能把两个标准差直接相加。协方差衡量两项变化是否一起偏高或偏低，负协方差表示它们倾向相反。\n\nRoll 模型用一个简单结构说明，逐笔成交波动既包含价值创新，也包含买卖价反弹。设第 $t$ 笔成交价为\n\n$$P_t=V_t+\\frac{s}{2}q_t,$$\n\n$V_t$ 为基本价值，$s$ 为固定的完整价差，$q_t=1$ 表示买方主动成交，$q_t=-1$ 表示卖方主动成交。买方在价值上方半价差成交，卖方在下方半价差成交。\n\n## 明确随机假设\n\n令 $V_t=V_{t-1}+\\varepsilon_t$，其中价值创新 $\\varepsilon_t$ 均值为零、方差为 $\\sigma_\\varepsilon^2$，不同时间相互独立。再假设买卖方向各占一半、各笔方向独立，并且方向与所有价值创新独立。\n\n由此可得\n\n$$\\Delta P_t=\\varepsilon_t+\\frac{s}{2}(q_t-q_{t-1}).$$\n\n因为 $q_t$ 的均值为零、方差为 1，独立方向之差的方差为 2，所以\n\n$$\\operatorname{Var}(\\Delta P_t)=\\sigma_\\varepsilon^2+\\frac{s^2}{2}.$$\n\n后面一项就是这一模型中的买卖价反弹方差。\n\n## 为什么相邻变化负相关\n\n相邻的两个变化都含有 $q_{t-1}$，但符号相反：它在当前变化中为负，在上一次变化中为正。其他交叉项在独立假设下平均为零。因此\n\n$$\\operatorname{Cov}(\\Delta P_t,\\Delta P_{t-1})=-\\frac{s^2}{4}.$$\n\n把协方差记为 $c_1$，可反推出\n\n$$s=2\\sqrt{-c_1},\\qquad \\sigma_\\varepsilon^2=\\operatorname{Var}(\\Delta P_t)+2c_1.$$\n\n这说明即使只有成交价格，没有逐笔报价，也可能在明确假设下估计价差与价值波动。\n\n## 用可重复数据检验\n\n下面生成固定价差为 0.20 元、价值创新标准差为 0.03 元的自拟数据。使用固定随机种子便于复算。\n\n```python\nimport random\nfrom statistics import mean, pvariance\nfrom math import sqrt\nrng = random.Random(20)\nspread, value = 0.20, 100.0\nprices = []\nfor _ in range(50000):\n    value += rng.gauss(0, 0.03)\n    direction = rng.choice((-1, 1))\n    prices.append(value + spread * direction / 2)\nchanges = [b-a for a, b in zip(prices, prices[1:])]\nx, y = changes[1:], changes[:-1]\nmx, my = mean(x), mean(y)\ncovariance = mean((a-mx)*(b-my) for a, b in zip(x, y))\nif covariance >= 0:\n    raise ValueError('样本协方差非负，不能套用实数 Roll 估计')\nestimated_spread = 2 * sqrt(-covariance)\nfundamental_variance = pvariance(changes) + 2 * covariance\nprint('价差:', round(estimated_spread, 5))\nprint('价值创新方差:', round(fundamental_variance, 6))\nassert abs(estimated_spread - spread) < 0.01\n```\n\n估计价差应接近 0.20，价值创新方差应接近 $0.03^2=0.0009$。有限样本不会精确等于参数。把程序中的方向改成连续同向、把价差设为随时间变化，或让方向依赖价值创新，结果就可能偏离，因为模型条件已经改变。\n\n![有效价格与带有买卖价差的逐笔成交价](/assets/figures/harris/bid-ask-bounce.svg)\n\n图中展示模拟的前 80 笔交易。有效价格缓慢变化，成交价则随买卖方向在其两侧跳动；这种跳动会在相邻价格变化中产生负协方差。\n\n## 如何解释失效结果\n\n真实样本若得到非负的一阶协方差，不能把负号去掉再开平方，也不能悄悄填零。应报告该样本不支持简单 Roll 公式，并检查采样频率、方向持续性、报价更新和其他价格动力。\n\n原模型只让相邻变化相关。大单冲击若跨多笔成交才恢复，较长滞后的负相关也会重要，简单模型可能低估暂时性波动。重叠收益、异步成交和跨交付日价格，也会改变相关结构。模型估计是带假设的测量，不能仅凭一个数字断言市场全部噪声的大小。\n\n## 选择采样尺度与观察窗口\n\n逐笔数据、每分钟数据与每日数据回答不同问题。逐笔价格更容易受到买卖价反弹影响，日度变化则可能把短期反转相互抵消。若改用报价中点，可以减少直接的买卖价交替影响，但中点仍可能随订单信息和库存变化，不能被自动视作真实基本价值。\n\n波动还会随时间变化。滚动窗口用最近一段数据重新计算方差，短窗口对状态变化反应较快却更不稳定，长窗口较平稳却可能混合不同市场状态。无论选哪一种，都应写清采样频率、窗口长度、价格还是收益口径，以及是否扣除了明显的数据错误。不同口径的数字不能直接横向比较。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>滚动窗口，即随观测时点移动、仅保留最近一段样本的计算区间。</p></aside>\n\n## 练习\n\n若估计的一阶协方差为 $-0.0025$ 元平方，Roll 估计的完整价差是多少？若成交价变化方差为 $0.008$，估计的价值创新方差又是多少？\n\n<details><summary>查看解答</summary>\n\n价差为 $2\\sqrt{0.0025}=0.10$ 元。价值创新方差为 $0.008+2\\times(-0.0025)=0.003$ 元平方，标准差约为 0.0548 元。注意价差和标准差的单位是元，方差与协方差的单位是元平方。\n\n</details>\n\n[返回全书目录](/theory/trading-and-exchanges/)\n\n## 配套代码\n\n[下载本节代码（ZIP）](/assets/downloads/trading-and-exchanges/harris-book-20-02.zip)\n\n压缩包包含完整脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n",
+  "metadata": {
+    "theory_book": {
+      "book": "trading-and-exchanges",
+      "part": "第五部分 · 流动性与波动",
+      "number": 59,
+      "chapter": "20",
+      "edition": "2026-10",
+      "minutes": 8,
+      "section": "20.2",
+      "source_year": 2003,
+      "source_pages": [
+        427,
+        428,
+        429,
+        430
+      ],
+      "chapter_title": "价格波动",
+      "source_sections": [
+        "20.3 MEASURING VOLATILITY AND ITS COMPONENTS"
+      ]
+    },
+    "code_download": {
+      "url": "/assets/downloads/trading-and-exchanges/harris-book-20-02.zip",
+      "examples": 1
+    }
+  }
+}

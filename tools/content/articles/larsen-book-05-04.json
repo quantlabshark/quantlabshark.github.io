@@ -1,0 +1,37 @@
+{
+  "slug": "larsen-book-05-04",
+  "title": "Fisher 信息与 Cramér–Rao 下界",
+  "summary": "从得分函数推导 Fisher 信息和无偏估计的方差下界，用二项比例验证等号条件。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7031,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "样本相同，估计方法却可能具有不同方差。Fisher 信息衡量模型区分相邻参数的能力，Cramér–Rao 下界据此给出无偏估计方差所受的限制。\n\n## 得分函数与信息\n\n设似然为 L，对数似然为 $\\ell$，得分函数为 $U(\\theta)=\\partial\\ell/\\partial\\theta$。若支持不随参数变化，且微分可以移入积分，由总概率为 1 可得\n\n$$E(U)=\\int\\frac{\\partial_\\theta f}{f}f\\,dx\n=\\partial_\\theta\\int f\\,dx=0.$$\n\n信息定义为 $I_n(\\theta)=E[U(\\theta)^2]$，也可写成 $-E[\\ell''(\\theta)]$。独立观测的得分相加，各项均值为零，所以信息也相加；同分布时 $I_n=nI_1$。\n\n## 下界的推导\n\n若 T 无偏估计 $\\theta$，则 $E_\\theta(T)=\\theta$。对参数求导，得到 $E(TU)=1$；因为 $E(U)=0$，有 $\\operatorname{Cov}(T,U)=1$。Cauchy–Schwarz 不等式给出\n\n$$1=\\operatorname{Cov}(T,U)^2\\le\\operatorname{Var}(T)\\operatorname{Var}(U)\n=\\operatorname{Var}(T)I_n(\\theta).$$\n\n因此 $\\operatorname{Var}(T)\\ge1/I_n(\\theta)$。若估计的是 $g(\\theta)$，上述导数变为 $g'(\\theta)$，下界为 $[g'(\\theta)]^2/I_n(\\theta)$。\n\n等号要求 $T-E(T)$ 与得分 U 成比例。下界的存在不保证某个估计量一定达到它；有偏估计也不属于上述无偏比较范围。\n\n## Bernoulli 样本的计算\n\n单个 X 的对数似然为 $X\\log p+(1-X)\\log(1-p)$，求导整理得 $U=(X-p)/[p(1-p)]$。利用 $\\operatorname{Var}(X)=p(1-p)$，得到单次信息 $I_1=1/[p(1-p)]$。\n\nn 次独立观测有 $I_n=n/[p(1-p)]$，故估计 p 的方差下界为 $p(1-p)/n$。样本比例 $\\bar X$ 恰好达到该值。n=100、p=0.4 时，下界为 0.0024；样本量增为 400，方差降至 0.0006，标准差减半。\n\n## 支持边界改变时\n\n$U(0,\\theta)$ 的积分上限依赖 $\\theta$，求导时会产生边界项。若忽略它，$E(U)=0$ 这一推导就失效，也不能沿同一路径使用下界。\n\n> **鲨鱼说** 信息量随独立样本数线性增加，标准差下界却按平方根缩小。把标准差降低一半，通常需要四倍独立样本。\n\n## 练习\n1. 已知方差σ²的正态样本，计算μ的Fisher信息，并检查样本均值是否达到下界。\n2. 指数分布以均值θ参数化，推导单次观测信息及无偏估计θ的方差下界。\n\n[本章习题](/read/?slug=larsen-book-05-08)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/larsen-book-05-04.zip",
+        "label": "Fisher 信息与 Cramér–Rao 下界 · Python 示例",
+        "size_bytes": 897,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第二部分 · 估计与检验",
+      "number": 31,
+      "chapter": "5",
+      "edition": "2026-10",
+      "minutes": 13,
+      "section": "4",
+      "chapter_title": "参数估计",
+      "source_sections": [
+        "5.5"
+      ]
+    }
+  }
+}

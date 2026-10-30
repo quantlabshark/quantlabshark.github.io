@@ -1,0 +1,16 @@
+{
+  "slug": "market-data-access",
+  "title": "行情数据接入与检查",
+  "summary": "用自己的账号在本机获取日线，检查日期、缺失和复权口径。",
+  "kind": "resource",
+  "track": "",
+  "series": "",
+  "sort_order": 48,
+  "section_ids": [
+    "6cb0390d-4b0e-459e-a155-9dfb328810ec"
+  ],
+  "body": "## 行情获取与字段检查\n\n在[行情数据接入指南](/market-data/)下载 Python 示例，在本机配置自己的账号后运行。示例中不保存账号令牌。\n\n下载后检查标的代码、日期范围、价格单位和缺失记录。日线原始价格采用未复权口径；计算跨分红、拆股等事件的收益时，需要确定复权和公司行动的处理方式。\n",
+  "metadata": {
+    "canonical_path": "/market-data/"
+  }
+}

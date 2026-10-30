@@ -1,0 +1,43 @@
+{
+  "slug": "factor-book-02-06",
+  "title": "相关指标怎样分离出各自的增量信息",
+  "summary": "用残差、几何投影和完整数值例子理解正交化与多元回归。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "因子投资：方法与实践",
+  "sort_order": 3010,
+  "cover_url": "",
+  "section_ids": [
+    "0d99264a-7913-52fc-8f8e-a4c784c92834"
+  ],
+  "body": "两项价值指标给股票的排名几乎一样，把它们同时放进收益回归，为什么系数反而忽高忽低？数据可能足以确定二者合起来的作用，却缺少区分“究竟是哪一个指标起作用”的信息。正交化把后一项中已经被前项解释的部分剔除，使增量关系更容易看清。\n\n## 从单变量最小二乘开始\n\n把 $n$ 个观测排成向量 $x$ 与 $y$。先考虑没有截距的回归 $y=bx+e$。向量内积 $x^{\\mathsf T}y=\\sum_i x_i y_i$，于是\n\n$$\\hat b=\\frac{x^{\\mathsf T}y}{x^{\\mathsf T}x}.$$\n\n分子衡量二者同方向变化，分母按 $x$ 的幅度标准化。拟合值 $\\hat b x$ 是 $y$ 在 $x$ 方向的投影；残差与 $x$ 垂直，即 $x^{\\mathsf T}e=0$。\n\n若回归包含截距，先把 $x$ 和 $y$ 各自减去均值，再使用上述公式；截距为 $\\hat a=\\bar y-\\hat b\\bar x$。所以去均值可理解为先剔除“常数方向”。\n\n![拟合直线与残差说明回归的投影关系](/assets/figures/factor/regression.svg)\n\n散点图中的垂直残差对应观测误差；向量空间中的“正交”则表示残差与解释变量的内积为零。它是整个样本的代数关系，不是每个散点都与横轴成直角这种图形判断。\n\n## 两个变量为什么不能各算各的\n\n多元回归 $y=b_1x_1+b_2x_2+e$ 同时估计两个方向。若 $x_1^{\\mathsf T}x_2=0$，它们不重叠，两个系数分别由各自与 $y$ 的投影确定。若二者相关，直接分别做两次单变量回归，就会让共同部分被计算两次。\n\n解决方法是先解释 $x_2$ 中与 $x_1$ 有关的部分，保留残差\n\n$$z_2=x_2-\\frac{x_1^{\\mathsf T}x_2}{x_1^{\\mathsf T}x_1}x_1.$$\n\n此时 $x_1^{\\mathsf T}z_2=0$。完整多元回归中 $x_2$ 的系数可由 $\\hat b_2=z_2^{\\mathsf T}y/(z_2^{\\mathsf T}z_2)$ 求出。它衡量的是 $x_2$ 剩余部分对 $y$ 的贡献，而不是 $x_2$ 与 $y$ 的全部相关性。\n\n## 一组可以手算的数据\n\n取教学向量 $x_1=(-1,0,1)$、$x_2=(0,1,2)$，并设 $y=(1,2,3)$。若暂不加截距，$x_2$ 在 $x_1$ 上的投影系数为 $2/2=1$，残差 $z_2=(1,1,1)$。于是 $b_2=(1+2+3)/3=2$；再从 $y$ 中减去 $2x_2$，得到 $(1,0,-1)$，对应 $b_1=-1$。检验可得 $y=-x_1+2x_2$。\n\n这个例子中 $z_2$ 恰好是常数。如果再额外加入截距，三列之间就会完全重复，无法唯一分离三个系数。这说明是否包含截距属于模型的一部分，不能在推导中随意增加。\n\n下面换用四个观测并显式包含截距，比较逐步残差化与一次多元回归。\n\n```python\nimport numpy as np\nx1 = np.array([-1., 0., 1., 2.])\nx2 = np.array([0., 2., 1., 4.])\ny = 0.5 + 2 * x1 + 3 * x2\ncontrols = np.column_stack([np.ones(4), x1])\nz2 = x2 - controls @ np.linalg.lstsq(controls, x2, rcond=None)[0]\nb2 = np.dot(z2, y) / np.dot(z2, z2)\nX = np.column_stack([controls, x2])\nfull = np.linalg.lstsq(X, y, rcond=None)[0]\nprint(\"完整回归 [截距, x1, x2]：\", full)\nprint(\"残差化得到的 x2 系数：\", b2)\nassert np.allclose(full, [0.5, 2, 3])\nassert np.isclose(b2, full[-1])\nassert np.allclose(controls.T @ z2, 0)\n```\n\n## 多个变量按顺序正交化\n\n对变量 $x_0,\\ldots,x_K$，可令 $z_0=x_0$，并依次计算\n\n$$z_k=x_k-\\sum_{j=0}^{k-1}\\frac{z_j^{\\mathsf T}x_k}{z_j^{\\mathsf T}z_j}z_j.$$\n\n这就是 Gram–Schmidt 过程：每一步从新变量中剔除已经保留的方向。最后一项的原模型系数为 $b_K=z_K^{\\mathsf T}y/(z_K^{\\mathsf T}z_K)$。前面的 $z_j$ 系数一般不能直接当成原 $x_j$ 系数。\n\n要一次求出全部原系数，可以倒序回代：\n\n$$b_j=\\frac{z_j^{\\mathsf T}\\left(y-\\sum_{k=j+1}^{K}b_kx_k\\right)}{z_j^{\\mathsf T}z_j}.$$\n\n先减掉后面已求出的变量贡献，再计算当前变量贡献。数值软件通常使用更稳定的 QR 或相关分解完成这类运算；学习手算有助于理解“控制其他变量后”的含义。\n\n## 高相关为什么使系数不稳定\n\n若 $x_k$ 几乎可由其他变量解释，残差 $z_k$ 很小。在独立同方差误差模型中，设误差方差为 $\\sigma^2$，则原回归中该系数的方差为\n\n$$\\operatorname{Var}(\\hat b_k\\mid X)=\\frac{\\sigma^2}{z_k^{\\mathsf T}z_k}.$$\n\n分母越小，用来识别独立作用的信息越少，估计越容易被微小数据变化影响。正交化可以明确重新表达变量，却不会凭空增加原数据的信息。若原变量完全线性相关，$z_k=0$，应合并、删除重复变量或重新定义问题。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>把盈利指标对规模和行业回归后取残差，得到的是“同规模、同行业条件下相对更高的盈利”。它与原始盈利指标已经不是同一个特征。保存残差指标时，应同时保存被剔除的变量和回归权重。</p></aside>\n\n截面特征正交化、时间序列因子收益正交化以及双重排序控制变量，处理的对象不同。前两者可在所用样本和内积下实现精确正交；分组控制通常只是近似隔离。更换日期、权重或股票池后，相关关系需要重新计算。\n\n### 练习\n\n先保留价值指标，再把盈利指标对价值回归取残差；交换顺序后，两个残差指标会完全相同吗？\n\n<details><summary>查看解答</summary>\n\n通常不同。先保留的变量获得共同部分，后处理的变量只保留增量部分，因此顺序改变经济解释。在满秩、无额外约束且使用同一变量空间的完整回归中，总拟合空间可以不变，但各个新指标的含义和归因份额会改变。\n\n</details>\n\n---\n\n[返回全书目录](/theory/factor-investing/)\n\n## 配套代码\n\n[下载本节代码（ZIP）](/assets/downloads/factor-investing/factor-book-02-06.zip)\n\n压缩包包含完整脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n",
+  "metadata": {
+    "theory_book": {
+      "book": "factor-investing",
+      "part": "第一部分 · 基础与方法",
+      "number": 11,
+      "chapter": "2",
+      "edition": "2026-10-revised",
+      "minutes": 8,
+      "section": "2.6",
+      "source_pages": [
+        78,
+        79,
+        80,
+        81,
+        82,
+        83
+      ],
+      "chapter_title": "因子投资方法论",
+      "source_sections": [
+        "2.6.1 简单一元回归",
+        "2.6.2 回归的几何意义",
+        "2.6.3 用正交化过程求解多元回归"
+      ]
+    },
+    "code_download": {
+      "url": "/assets/downloads/factor-investing/factor-book-02-06.zip",
+      "examples": 1
+    }
+  }
+}

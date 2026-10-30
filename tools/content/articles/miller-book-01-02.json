@@ -1,0 +1,37 @@
+{
+  "slug": "miller-book-01-02",
+  "title": "Python 数据、引用与可变对象",
+  "summary": "从名称绑定解释共享引用，按操作认识数值和容器，区分切片、浅复制与嵌套对象。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8002,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "执行 `a = [1, 2]` 会建立一个列表，并让名称 a 指向它。再执行 `b = a`，只是增加一个指向同一列表的名称。此后 `b.append(3)` 改变该列表，通过 a 也会看到 `[1, 2, 3]`。\n\n## 可变性描述对象能否原地改变\n\n列表、字典和集合允许修改内容；整数、浮点数、字符串和元组不允许原地修改。`s = s + 'x'` 产生新字符串并重新绑定 s，不是修改旧字符串。\n\n元组固定的是其引用序列。若 `t = ([1], 2)`，不能给 `t[0]` 重新赋值，但可以执行 `t[0].append(3)`：内层列表仍是可变对象。判断变化时，需要分清正在修改哪一层。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/references.svg\" alt=\"变量 a 和 b 可以指向同一个可变列表。\" loading=\"lazy\"></figure>\n\n## 常用容器及其操作\n\n| 类型 | 保存的关系 | 常用操作 |\n| --- | --- | --- |\n| list | 按位置排列的元素 | 索引、切片、append、pop |\n| tuple | 固定的引用序列 | 索引、解包，如 x,y=(2,3) |\n| str | 字符序列 | split、join、upper、切片 |\n| set | 不重复的元素 | 成员判断、交集、并集、差集 |\n| dict | 键与值的映射 | d[key]、get、items、按键删除 |\n\n`'a' in d` 判断字典是否包含键 a；`d.get('a', 0)` 在键不存在时返回默认值 0。键必须可哈希，即能提供在作为键期间保持一致的哈希值，并满足相等对象具有相同哈希值。列表不可用作键；只含可哈希元素的元组通常可以。\n\n字典按插入顺序迭代，需要按键大小排列时使用 `sorted(d)`。集合没有用于表达业务次序的索引，不能依赖其遍历顺序。\n\n## 索引、切片与数值运算\n\n长度 n 的序列非负索引从 0 到 n−1。切片 `a[start:stop:step]` 包含 start，不包含 stop；`a[::-1]` 得到逆序副本。空列表可以切片，却不能读取 `a[0]`。\n\n整数运算满足 $a=(a//b)b+a\\%b$，其中 b 非零，`//` 向负无穷取整。例如 −7//3=−3，−7%3=2。`/` 表示真除法，`**` 表示乘方。`and`、`or` 会短路：`d != 0 and n/d > 2` 在 d 为零时不会计算除法。\n\n浮点数使用有限位二进制表示，0.1 等十进制数通常只能近似保存。对计算值可使用 `math.isclose`，其中相对误差适合随数值尺度变化的容差，绝对误差用于零附近的比较。\n\n## 复制需要检查嵌套层次\n\n`b = a.copy()` 创建新的外层列表，内部对象仍共享。令 `a = [[1], [2]]`，复制后 `b[0].append(9)` 同时影响 a 的第一行；若对每行分别复制，两层列表才分开。\n\n`rows = [[0]] * 3` 将同一行引用重复三次。修改一行就会影响三处。`[[0] for _ in range(3)]` 每轮创建新行，三行相互独立。更深的嵌套可使用 `copy.deepcopy`，但应先判断是否确实需要独立副本。\n\n> **鲨鱼说** 赋值、外层复制、逐层复制是三种操作。画出“名称指向哪个对象”的箭头，通常比只看变量名更容易判断数据是否共享。\n\n## Python 实现\n\n~~~python\na=[1,2];b=a;b.append(3)\nassert a==[1,2,3]\nrows=[[0]]*3;rows[0][0]=7\nindependent=[[0] for _ in range(3)];independent[0][0]=7\nprint('shared',rows,'independent',independent)\nassert independent==[[7],[0],[0]]\n~~~\n\n## 练习\n1. 比较a.copy()和逐个复制内层列表后的行为。\n2. 用字典统计字符串中每个字符出现的次数，并说明输出顺序如何确定。\n\n[本章习题](/read/?slug=miller-book-01-06)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-01-02.zip",
+        "label": "Python 数据、引用与可变对象 · Python 示例",
+        "size_bytes": 873,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第一部分 · 编程与算法基础",
+      "number": 2,
+      "chapter": "1",
+      "edition": "2026-10",
+      "minutes": 15,
+      "section": "2",
+      "chapter_title": "Python 与抽象数据类型",
+      "source_sections": [
+        "1.4.1"
+      ]
+    }
+  }
+}

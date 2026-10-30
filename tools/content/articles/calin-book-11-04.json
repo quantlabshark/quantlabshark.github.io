@@ -1,0 +1,38 @@
+{
+  "slug": "calin-book-11-04",
+  "title": "随机增长、容量限制与灾变",
+  "summary": "比较乘性扩散、逻辑斯谛增长、泊松灾变和持续收获。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "随机微积分及其应用",
+  "sort_order": 5063,
+  "cover_url": "",
+  "section_ids": [
+    "17859c88-b779-5654-b120-7a4cc7b39714"
+  ],
+  "body": "## 相对增长率和绝对变化量\n\n若数量从100增加到110，绝对增加量为10，相对增加量为10%。确定模型 $dP=rPdt$ 中，$r$ 表示单位时间的相对增长率。随机模型 $dP=rPdt+\\beta P dW$ 则让相对冲击的标准差在短时 $h$ 上为 $\\beta\\sqrt h$。数量越大，相同百分比波动对应的绝对变化越大，这就是乘性噪声。\n\n下面将连续增长、资源竞争、突发损失与固定数量的收获分别建模。它们对状态的作用不同：增长与数量成正比，竞争与数量平方相关，灾变按比例跳变，固定收获直接减去数量。\n\n## 平均增长与典型路径\n\n令数量 $P_t$ 满足 $dP_t=rP_tdt+\\beta P_tdW_t$、$P_0>0$。解为 $P_t=P_0e^{(r-\\beta^2/2)t+\\beta W_t}$，因此状态对数正态，均值为 $P_0e^{rt}$，中位数为 $P_0e^{(r-\\beta^2/2)t}$。\n\n由于 $W_t/t\\to0$，长期路径的对数增长率为 $r-\\beta^2/2$。如果 $0<r<\\beta^2/2$，均值仍增长，但几乎每条路径长期趋零，均值由少数很大的结果维持。理解平均值与典型路径的差别，是乘性随机模型的核心。\n\n对时变增长率 $a(t)$，只需把 $rt$ 换成 $\\int_0^ta(s)ds$。例如 $a(t)=t^2$ 时，均值翻倍时间满足 $e^{T^3/3}=2$，即 $T=(3\\log2)^{1/3}$。\n\n## 容量限制的逻辑斯谛模型\n\n考虑 $dP=(rP-kP^2)dt+\\beta PdW$，其中 $r,k>0$。确定方程在 $P=r/k$ 处增长与竞争相抵。为解随机方程，令 $Y=1/P$；$f'(p)=-p^{-2}$、$f''(p)=2p^{-3}$，因此\n\n$$dY=[(\\beta^2-r)Y+k]dt-\\beta YdW.$$\n\n原来的非线性项变成常数输入 $k$。令 $G_t=e^{(r-\\beta^2/2)t+\\beta W_t}$，齐次部分的解为 $G_t^{-1}$。变常数公式给\n\n$$Y_t=G_t^{-1}\\left(P_0^{-1}+k\\int_0^tG_sds\\right),\\qquad P_t=\\frac{P_0G_t}{1+kP_0\\int_0^tG_sds}.$$\n\n从零时刻代入可恢复 $P_0$；分子、分母均正，故正初值下状态保持正。将 $\\beta=0$ 代入，$\\int_0^te^{rs}ds=(e^{rt}-1)/r$，便得\n\n$$P_t=\\frac{P_0K}{P_0+(K-P_0)e^{-rt}},\\qquad K=r/k.$$\n\n例如 $P_0=1,r=0.3,k=0.4$，确定容量为0.75，初始数量高于容量，所以确定路径下降；加入噪声后，$K$ 不再是不能越过的硬上限，因为在 $P=K$ 处扩散项 $\\beta K$ 仍非零。\n\n均值方程为 $m'=rm-kEP^2=rm-km^2-k\\operatorname{Var}(P)$。这说明直接把随机模型的均值当成确定逻辑斯谛解，会漏掉由方差产生的负项。\n\n## 增长与竞争共享噪声\n\n另一种设定是 $dP=F(P)dt+\\alpha F(P)dW$，$F(P)=rP-kP^2$。此时噪声也在容量点消失，和上一模型的 $\\beta P$ 不同。在 $0<P<r/k$ 内取 $H'(p)=1/F(p)$，有\n\n$$dH(P_t)=\\left[1-\\frac{\\alpha^2}{2}F'(P_t)\\right]dt+\\alpha dW_t.$$\n\n其中 $H(p)=r^{-1}\\log[p/(r-kp)]$，而 $F'=r-2kp$。普通变量分离会漏掉修正项，因此不能把确定方程的对数比公式直接加一项布朗运动作为解。\n\n## 泊松灾变\n\n设 $N_t$ 为强度 $\\lambda$ 的泊松过程，每次灾变损失比例 $\\delta\\in(0,1)$。方程为 $dP=rPdt-\\delta P_{t-}dN$。两次事件间解为指数增长；每次跳跃满足 $P_t=P_{t-}-\\delta P_{t-}=(1-\\delta)P_{t-}$。累计 $N_t$ 次跳跃后，\n\n$$P_t=P_0e^{rt}(1-\\delta)^{N_t}.$$\n\n为求均值，先计算泊松概率母函数。对 $z\\ge0$，\n\n$$E z^{N_t}=\\sum_{n=0}^\\infty z^n e^{-\\lambda t}\\frac{(\\lambda t)^n}{n!}=e^{\\lambda t(z-1)}.$$\n\n取 $z=1-\\delta$ 得 $EP_t=P_0e^{(r-\\lambda\\delta)t}$；取 $z=(1-\\delta)^2$ 得\n\n$$EP_t^2=P_0^2e^{[2r-2\\lambda\\delta+\\lambda\\delta^2]t},\\quad\\operatorname{Var}(P_t)=(EP_t)^2(e^{\\lambda\\delta^2t}-1).$$\n\n另一方面，$\\log(P_t/P_0)/t=r+(N_t/t)\\log(1-\\delta)$。由 $N_t/t\\to\\lambda$，长期路径对数增长率为 $r+\\lambda\\log(1-\\delta)$。它通常低于均值指数率，反映重复百分比损失的乘法累积。\n\n对阈值 $x>0$，先取对数再除以负数 $\\log(1-\\delta)$，所以 $P_t\\le x$ 等价于\n\n$$N_t\\ge k,\\qquad k=\\max\\left(0,\\left\\lceil\\frac{\\log(x/P_0)-rt}{\\log(1-\\delta)}\\right\\rceil\\right).$$\n\n若 $k\\ge1$，概率为 $1-e^{-\\lambda t}\\sum_{j=0}^{k-1}(\\lambda t)^j/j!$；$k=0$ 时为一。所有速率须先统一时间单位，例如每月增长率0.3换成年指数率为3.6，而每年灾变5次的强度仍为5。\n\n## 持续收获\n\n线性收获模型为 $dP=(rP-\\rho)dt-\\sigma dW$。其中 $\\rho$ 是每单位时间固定移除的数量，而非百分比。乘确定积分因子 $e^{-rt}$ 后，\n\n$$d(e^{-rt}P_t)=-\\rho e^{-rt}dt-\\sigma e^{-rt}dW_t.$$\n\n积分并乘回 $e^{rt}$，得到\n\n$$P_t=\\frac\\rho r+(P_0-\\rho/r)e^{rt}-\\sigma\\int_0^te^{r(t-s)}dW_s,\\qquad r\\ne0.$$\n\n在 $t=0$，前两项之和为 $P_0$；若漏掉 $\\rho/r$，初值就不满足方程。均值为前两项，方差由核的平方积分给 $\\sigma^2(e^{2rt}-1)/(2r)$。当 $r\\to0$，使用指数展开便恢复 $P_t=P_0-\\rho t-\\sigma W_t$。\n\n这是一种未吸收的线性模型。若约定数量首次到零后即灭绝并保持零，则停止后的分布不再是上述正态分布，均值公式也应针对停止模型重新计算。\n\n## 用分位数理解增长分布\n\n几何布朗增长的第 $p$ 分位数为 $P_0\\exp[(r-\\beta^2/2)t+\\beta\\sqrt t\\,\\Phi^{-1}(p)]$。分位数带展示多数路径所在范围，比只画均值更容易看出分布的不对称。上尾少数大值会把均值拉到中位数上方。\n\n比较容量限制与灾变模型时，也应保持相同时间单位、初值和观察期限。容量限制连续地压低高状态的增长，灾变则在离散事件中突然损失比例；只调整均值让两条平均曲线相近，不能使路径风险变得相同。\n\n![乘性随机增长与容量限制的样本路径](/assets/illustrations/theory/calin/calin-book-11-04.svg)\n\n两种模型共用相同布朗路径，初值一、增长率 0.3、噪声幅度一，右图竞争系数为 0.4。左图采用对数纵轴，展示少数大值与多数低值同时存在的情况；虚线是无容量限制模型的均值。\n\n<aside class=\"shark-note\"><strong>鲨鱼说</strong><p>增长模型先确定噪声作用在哪里：数量、增长率、资源竞争还是灾变比例。不同位置会产生不同的漂移修正、边界和长期增长率。</p></aside>\n\n## 练习\n\n取 $r=0.3$、$\\lambda=2$、$\\delta=0.2$，均以年为单位。计算灾变模型的平均增长率和典型路径的对数增长率。\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n先计算均值：$EP_t=P_0e^{(r-\\lambda\\delta)t}$，因此均值的指数增长率为\n\n$$r-\\lambda\\delta=0.3-2\\times0.2=-0.1.$$\n\n一年后平均数量是初值的 $e^{-0.1}\\approx0.904837$ 倍。这里 $-0.1$ 是连续指数率，对应一年下降比例约9.52%，不是精确下降10%。\n\n对单条长期路径，取对数并除以时间，$N_t/t\\to2$，所以\n\n$$\\lim_{t\\to\\infty}\\frac{\\log(P_t/P_0)}t=0.3+2\\log0.8\\approx-0.146287.$$\n\n两者均为负，但路径对数率更低。原因是 $\\log(1-\\delta)<-\\delta$；重复20%的损失按乘法累积。作为另一个检查，一年后的相对方差为 $e^{\\lambda\\delta^2}-1=e^{0.08}-1\\approx0.083287$，说明均值曲线没有包含数量分布的波动。\n\n</details>\n\n## 配套代码\n\n[下载本节 Python 代码](/assets/downloads/theory/calin-book-11-04.zip)\n\n解压后运行 `calin-book-11-04.py`。需安装 numpy、scipy 和 matplotlib；脚本会生成图像与数值核查结果，无需另行下载数据。\n",
+  "metadata": {
+    "theory_book": {
+      "book": "stochastic-calculus",
+      "part": "第四部分 · 应用与练习",
+      "number": 63,
+      "chapter": "11",
+      "edition": "2026-10",
+      "minutes": 39,
+      "section": "4",
+      "source_pages": [
+        270,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276
+      ],
+      "chapter_title": "随机模型的应用",
+      "source_sections": [
+        "11.5"
+      ]
+    }
+  }
+}

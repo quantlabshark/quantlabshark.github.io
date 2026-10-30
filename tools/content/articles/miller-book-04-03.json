@@ -1,0 +1,37 @@
+{
+  "slug": "miller-book-04-03",
+  "title": "汉诺塔与递推关系",
+  "summary": "通过盘子移动约束建立汉诺塔递归，展开最少步数公式并核对时间与栈空间。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8019,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "三根柱子 A、B、C，A 上有 n 个大小不同的盘子，小盘在上。每次只移动最上面的一个盘子，大盘不能放在小盘上，目标是把全部盘子移到 C。\n\n## 最大盘决定三个阶段\n\n要移动第 n 个、也是最大的盘子，必须先移开上面的 n−1 个盘子。它们需放在辅助柱 B，目标柱 C 留空。随后把最大盘 A→C，最后将 B 上的 n−1 个盘子移到 C。\n\n两个较小任务仍遵守同一规则，只是柱子角色不同。函数 hanoi(n,source,target,spare) 因此依次调用：\n\n1. hanoi(n−1,source,spare,target)。\n2. 移动 source→target。\n3. hanoi(n−1,spare,target,source)。\n\nn=0 时没有盘子，直接结束；n=1 时两个子调用均为空，只移动一次。\n\n## 三个盘子的执行次序\n\n将盘子从小到大编号 1、2、3。n=3 时依次移动：1:A→C，2:A→B，1:C→B，3:A→C，1:B→A，2:B→C，1:A→C。第 4 步才移动最大盘，之前和之后各解决一个两盘子问题。\n\n可用三个栈保存柱子状态。每一步先从源栈弹出，再检查目标栈为空或栈顶盘更大，最后压入。这样同时检查移动序列长度和每步合法性。\n\n## 最少步数的递推\n\n最优方案中，移动最大盘之前至少需要完成一个 n−1 盘转移，之后还要完成另一个；直接按三阶段执行恰能做到。因此\n\n$$T(n)=2T(n-1)+1,\\qquad T(0)=0.$$\n\n令 U(n)=T(n)+1，则 U(n)=2U(n−1)，U(0)=1。反复展开得 U(n)=2ⁿ，故\n\n$$T(n)=2^n-1.$$\n\nn=3 得 7，n=10 得 1023。每秒移动一盘时，n=20 约需 12.14 天。输出每一步的算法至少需要与移动数相同的时间。\n\n## 总调用量和同时保留的调用不同\n\n递归树含指数数量的调用，但同一时刻只沿一条深度约 n 的路径展开，所以额外调用栈为 O(n)。用生成器逐步 yield 移动，可避免先保存全部 $2^n-1$ 对柱子；若转换成 list，输出存储仍是指数级。\n\n> **鲨鱼说** 深度描述“同时等待返回的层数”，总调用数描述“整个过程做了多少次调用”。汉诺塔中前者为线性，后者为指数，不能互相替代。\n\n## Python 实现\n\n~~~python\ndef hanoi(n,source='A',target='C',spare='B'):\n    if n<0:raise ValueError('n must be nonnegative')\n    if n==0:return\n    yield from hanoi(n-1,source,spare,target)\n    yield source,target\n    yield from hanoi(n-1,spare,target,source)\nmoves=list(hanoi(3));assert len(moves)==7\npegs={'A':[3,2,1],'B':[],'C':[]}\nfor source,target in moves:\n    disk=pegs[source].pop()\n    assert not pegs[target] or pegs[target][-1]>disk\n    pegs[target].append(disk)\nassert pegs['C']==[3,2,1]\nprint(moves)\n~~~\n\n## 练习\n1. 列出n=3时全部移动，并验证每一步的大小规则。\n2. 若每秒移动一盘，计算n=20和n=30所需时间。\n\n[本章习题](/read/?slug=miller-book-04-06)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-04-03.zip",
+        "label": "汉诺塔与递推关系 · Python 示例",
+        "size_bytes": 1006,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第二部分 · 数据组织与基本算法",
+      "number": 19,
+      "chapter": "4",
+      "edition": "2026-10",
+      "minutes": 11,
+      "section": "3",
+      "chapter_title": "递归与动态规划",
+      "source_sections": [
+        "4.5"
+      ]
+    }
+  }
+}

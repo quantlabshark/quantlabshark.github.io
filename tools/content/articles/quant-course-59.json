@@ -1,0 +1,48 @@
+{
+  "slug": "quant-course-59",
+  "title": "59 · 智能订单路由与随机逼近",
+  "summary": "用队列流量、返利和欠超成交成本构造路由目标，以投影随机逼近调整订单。",
+  "kind": "lesson",
+  "track": "执行与做市",
+  "series": "量化研究系统课程",
+  "sort_order": 59,
+  "cover_url": "/assets/figures/curriculum/course-59.svg",
+  "section_ids": [
+    "5ef91958-52de-5cd7-8782-1265893a5d9a"
+  ],
+  "body": "订单路由将交易分配到不同市场。报价、排队位置、费用和截止时间共同影响成交结果，随机逼近则利用逐次观察更新分配参数。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>随机逼近，即利用逐次含噪观测更新未知参数或最优决策的方法。</p></aside>\n\n## 返利、排队与补单成本共同决定路由\n\n两个市场同报买价10元，A前方20股、B前方60股。B返利更高，但一段时间内先要消耗60股才轮到自己。路由需要比较实际成交机会和截止时补单成本，不能只比较费率。\n\n设固定窗口内目标买入 $N$，开头主动买入 $M$，各市场被动挂单 $L_i$。到截止时，未完成部分补单，超额部分需要处理。市价与限价总提交量可以大于目标，前提是明确保留超成交风险。若系统禁止这种做法，则必须改可行集合。\n\n## 从流量计算自己的成交量\n\n$Q_i$ 为排在前方的数量，$\\eta_i$ 为窗口内有效消耗前方的流出，自己的成交为\n\n$$F_i=\\min\\{(\\eta_i-Q_i)^+,L_i\\},\\qquad A=M+\\sum_iF_i.$$\n\n符号 $z^+=\\max(z,0)$。当 $Q=20,L=30$，流出10时自己成交0，流出40时成交20，流出70时最多成交30。新增排在后方的订单不缩短前方；汇总撤单也不能全当作前方流出。\n\n![从流量计算自己的成交量示意图](/assets/figures/curriculum/course-59.svg)\n\n曲线前段为0，中段斜率1，最后封顶在自己的订单量。增加挂单量只有在流量已足以穿过前方及现有挂单时，才增加本次成交。\n\n## 统一到相对中间价成本\n\n令半价差 $h$、主动费 $f$、被动返利 $r_i$，欠成交和超成交惩罚为 $\\lambda_u,\\lambda_o$。用 $\\theta$ 表示提交与补单的简化冲击系数，样本成本写为\n\n$$c=(h+f)M-\\sum_i(h+r_i)F_i+\\lambda_u(N-A)^++\\lambda_o(A-N)^++\\theta[M+\\sum_iL_i+(N-A)^+].$$\n\n主动买入支付价差和费；被动成交相对中间价取得价差及返利，故为负项。欠成交惩罚须按定义计入末端补单代价，避免在末端重复计入相同费用。超成交与欠成交不同方向，不能相互抵消后只惩罚净平均误差。\n\n自拟一场所例：$N=100,M=40,L=80,Q=20,\\eta=70$，被动成交50、总成交90。取 $h=0.01,f=0.001,r=0.0002,\\lambda_u=0.06,\\theta=0.0001$，成本为 $0.44-0.51+0.60+0.013=0.543$ 元。将前方流出70误当成自己的成交，会错误地认为没有欠单。\n\n## 每个样本怎样给出更新方向\n\n在非折点处，令 $D_i=1\\{\\eta_i>Q_i+L_i\\}$，$U=1\\{A<N\\},O=1\\{A>N\\}$。样本梯度为\n\n$$\\partial_Mc=h+f+\\theta-(\\lambda_u+\\theta)U+\\lambda_oO,$$\n$$\\partial_{L_i}c=\\theta+D_i[-(h+r_i)-(\\lambda_u+\\theta)U+\\lambda_oO].$$\n\n若本场所流量连现有订单都没有填满，$D_i=0$，增加挂单不会改善这次成交，只增加下单项。若现有单已满且总量仍不足，增加订单能减少欠单惩罚，梯度通常为负，沿负梯度更新就会增加该量。\n\n上面的数值例里 $D=0,U=1$，市价梯度 $0.0111-0.0601=-0.049$，被动量梯度0.0001。增加1股主动量可减少约0.049元成本；再加1股被动量在这次流量下并不成交。\n\n## 投影随机逼近\n\n无需为所有市场流量积分，每次抽一个联合流量样本，计算梯度，再作 $z_{t+1}=\\Pi_{\\mathcal C}(z_t-a_tg_t)$。$z=(M,L_1,\\ldots)$，$\\Pi$ 把更新结果拉回合法数量集合。若集合是每项0到 $N$，逐项截断就是投影；若还限制总和，逐项截断就不够。\n\n```python\nimport numpy as np\nrng = np.random.default_rng(59)\nN, h, fee, theta = 1.0, 0.01, 0.001, 0.0001\nrebate = np.array([0.0002,0.0001])\nQ = np.array([0.2,0.1])\nunder_penalty, over_penalty = 0.06, 0.03\norder = np.array([0.4,0.3,0.3])\naverage = np.zeros(3)\nfor t in range(1,30001):\n    flow = rng.exponential([0.7,0.5])\n    fill = np.minimum(np.maximum(flow-Q,0),order[1:])\n    total = order[0]+fill.sum()\n    common = -(under_penalty+theta)*(total<N)+over_penalty*(total>N)\n    active = (flow>Q+order[1:]).astype(float)\n    gradient = np.r_[h+fee+theta+common,\n                      theta+active*(-h-rebate+common)]\n    step = 0.3/(1+t/100)**0.6\n    order = np.clip(order-step*gradient,0,N)\n    if t>15000:\n        average += order/15000\nflow = rng.exponential([0.7,0.5],(100000,2))\nfill = np.minimum(np.maximum(flow-Q,0),average[1:])\ntotal = average[0]+fill.sum(axis=1)\ncost = ((h+fee)*average[0] - fill@(h+rebate)\n        + under_penalty*np.maximum(N-total,0) + over_penalty*np.maximum(total-N,0)\n        + theta*(average.sum()+np.maximum(N-total,0)))\nprint('市价与两处限价',average)\nprint('独立评估成本、全市价成本',cost.mean(),(h+fee+theta)*N)\n```\n\n本例归一化目标为1，后期迭代平均约为主动0.68179、A挂单0.29203、B挂单0.31368，总提交约1.2875。独立抽样评估平均成本约0.009953，低于全主动0.0111。比较的是自拟流量分布下的模型成本。总提交超过1并非计算错误，而是可行集合允许超挂，目标函数用惩罚处理超成交。\n\n## 学习速度与样本依赖\n\n经典递减步长满足 $\\sum a_t=\\infty,\\sum a_t^2<\\infty$：前者保留长期调整能力，后者控制噪声积累。还需要目标、梯度矩及样本依赖等条件。后半段平均可减小迭代噪声，但市场状态不断变化时，原平稳收敛解释要重新评估。\n\n训练应保留同一窗口内各市场流量的联合样本。把两市场各自随机打乱后重新配对，会改变“同时流动性不足”的概率，可能低估尾部补单成本。评估至少分列平均成本、欠成交、超成交与延迟敏感性。\n\n## 路由结果进入订单管理\n\n两处可能几乎同时成交，撤单请求不是撤单确认。风险暴露必须包含未确认的在途订单。用成交编号去重、回报更新剩余量，再重新计算需要路由的数量，才能使模型中的超成交惩罚与实际账户一致。\n\n## 将更新后的订单量投影到可行域\n\n若允许每个分量0到1、总和可以超过1，逐项截断足够。若要求主动与两处被动总和恰好1，候选向量 $(0.7,0.5,0.4)$ 各项都合法，但总和1.6。对这个例子投影到单纯形会从每项减去共同阈值0.2，得到 $(0.5,0.3,0.2)$。简单截断则根本没有改变它。\n\n若减去阈值后出现负数，应将该项归零，再对剩余项重新确定阈值。这来自欧氏距离最小化与和约束的拉格朗日条件。可行集合表达真实系统能提交什么，选择不同集合就是不同路由任务，不能只换一个数值优化器名字。\n\n## 联合流动性的数值影响\n\n设每场所有一半概率能完成自己的50股、另一半完全不能成交。若两处独立，目标100股时双方都失败概率0.25。若它们总同时充足或同时短缺，则双方都失败概率0.5。每处的平均成交率完全相同，总任务的尾部风险却不同。\n\n两个场所各自样本随机打乱会把第二种结构变得近似第一种，使路由低估同时补单的风险。保留同步联合样本不只为了计算平均相关系数，也为了保留共同极端状态。\n\n样本梯度还可以用有限差分核对。选不在折点的状态，将某个订单量增加很小的 $\\epsilon$，计算 $[c(z+\\epsilon e_i)-c(z)]/\\epsilon$，应接近公式梯度。若恰好总成交等于目标或队列流量等于订单边界，应比较左右方向或使用合法次梯度，而不是要求处处同一导数。\n\n## 练习\n\n**1.** $Q=50,L=40$，流量30、70、120时自己各成交多少？\n\n<details><summary>查看解答</summary>\n\n分别0、20、40。先减前方量，再截在0到40之间。\n\n</details>\n\n**2.** 目标100，两个市场各挂80，不设超成交惩罚会偏向什么行为？\n\n<details><summary>查看解答</summary>\n\n模型可能为了减少欠成交不断增加多处挂单，却没有承担同时成交超过100的处理成本。应明确总提交约束或超成交代价，并纳入撤单延迟。\n\n</details>\n\n[课程与资料索引](/read/?slug=quant-course-66) · [下载课程示例代码](/assets/downloads/quant-curriculum-examples.zip)\n\n## 配套代码\n\n[下载本节代码（ZIP）](/assets/downloads/courses/quant-course-59.zip)\n\n压缩包包含脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n",
+  "metadata": {
+    "curriculum": {
+      "cover": "/assets/figures/curriculum/course-59.svg",
+      "level": "进阶",
+      "stage": 10,
+      "number": 59,
+      "edition": "2026-10-revised",
+      "minutes": 50,
+      "source_refs": [
+        {
+          "book": "量化交易：算法、分析、数据、模型和优化 — Xin Guo 等",
+          "chapters": [
+            "7.4",
+            "7.5.1–7.5.3",
+            "7.8"
+          ],
+          "pdf_pages": [
+            234,
+            235,
+            236,
+            237,
+            238,
+            239,
+            246
+          ]
+        }
+      ],
+      "stage_title": "执行与做市"
+    },
+    "code_download": {
+      "url": "/assets/downloads/courses/quant-course-59.zip",
+      "examples": 1
+    }
+  }
+}

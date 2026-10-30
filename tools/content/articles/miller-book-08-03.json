@@ -1,0 +1,38 @@
+{
+  "slug": "miller-book-08-03",
+  "title": "RSA 的数论结构与教学实现",
+  "summary": "连接素数、欧拉函数和模逆元，手算 RSA 小整数例子，并证明非互素消息也能恢复。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8047,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "RSA 使用一对指数：先按公开指数作模幂，再按对应私有指数作模幂，可以恢复原整数。上一节的快速幂和逆元计算正好提供所需运算。\n\n## 建立参数关系\n\n取不同素数 p、q，令 n=pq。1 至 n−1 中与 n 互素的整数个数为 $\\varphi(n)=(p-1)(q-1)$。选择 e 与 φ(n) 互素，再求 d 满足\n\n$$ed\\equiv1\\pmod{\\varphi(n)}.$$\n\n公开 (n,e)，保留 d 及素因子。消息先表示为 0≤m<n 的整数，加密 $c=m^e\\bmod n$，解密 $m'=c^d\\bmod n$。\n\n## 一组可手算的数据\n\np=5、q=11，则 n=55、φ(n)=40。选 e=3，扩展欧几里得给出 d=27，因为 3×27=81=1+2×40。m=7 时，c=7³ mod 55=13。\n\n解密计算 13²⁷ mod 55。重复平方得到 13²≡4，13⁴≡16，13⁸≡36，13¹⁶≡31。27=16+8+2+1，所以余数为 31×36×4×13 mod 55：依次为 16、9、7，恢复消息。\n\n## 互素消息的证明\n\n若 gcd(m,n)=1，欧拉定理给出 $m^{\\varphi(n)}\\equiv1\\pmod n$。将 ed=1+kφ(n) 代入，\n\n$$m^{ed}=m\\big(m^{\\varphi(n)}\\big)^k\\equiv m\\pmod n.$$\n\n先加密再解密等于指数相乘，因为中间取模不改变后续幂的余数。\n\n## 不互素的消息也需覆盖\n\n若 m 被 p 整除，则 m 与 $m^{ed}$ 模 p 都为零；若不被 p 整除，费马小定理给出 $m^{p-1}\\equiv1\\pmod p$，而 ed−1 是 p−1 的倍数，所以仍有 $m^{ed}\\equiv m\\pmod p$。\n\n模 q 同理。p、q 互素，中国剩余定理保证同时模两者相等就模 pq 相等。因此 0 到 n−1 的全部消息都能恢复，代码也逐个检查本例 55 个值。\n\n## 从字符到整数\n\n文本先编码为字节，再按固定分组转换为小于 n 的整数。解码需知道编码、块长和末块实际长度，否则前导零或末尾填充可能丢失。n=55 太小，连任意一个 0—255 字节都无法直接容纳，只适合演示整数关系。\n\n直接模幂是确定性的，相同消息产生相同密文，还保留可利用的代数关系。实际加密采用标准填充与成熟密码库，而非按字符独立套用本节公式；这关系到消息如何安全表示，不能由扩大示例数字代替。\n\n> **鲨鱼说** 解密正确性的核心是 ed 与 1 在适当模数下同余。先算清指数关系，再分别模 p、q 检查，就能覆盖包括零和非互素值在内的全部消息。\n\n## Python 实现\n\n~~~python\nfrom math import gcd\np,q,e=5,11,3\nn=p*q;phi=(p-1)*(q-1)\nassert gcd(e,phi)==1\nd=pow(e,-1,phi)\ncipher=pow(7,e,n);plain=pow(cipher,d,n)\nassert (d,cipher,plain)==(27,13,7)\nassert all(pow(pow(m,e,n),d,n)==m for m in range(n))\nprint('public',(n,e),'private exponent',d,'cipher',cipher,'decoded',plain)\n~~~\n\n## 练习\n1. 取p=3、q=11、e=3，求d，并选择一个合法消息完成加解密。\n2. 在本节n=55的例子中，逐个检查0到54的全部消息都能恢复。\n\n[本章习题](/read/?slug=miller-book-08-07)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-08-03.zip",
+        "label": "RSA 的数论结构与教学实现 · Python 示例",
+        "size_bytes": 962,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第三部分 · 图算法与进阶应用",
+      "number": 47,
+      "chapter": "8",
+      "edition": "2026-10",
+      "minutes": 8,
+      "section": "3",
+      "chapter_title": "进阶数据结构与算法应用",
+      "source_sections": [
+        "8.3",
+        "8.3.4"
+      ]
+    }
+  }
+}

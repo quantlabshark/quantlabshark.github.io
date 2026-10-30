@@ -1,0 +1,42 @@
+{
+  "slug": "quant-course-39",
+  "title": "39 · 收缩估计与Black–Litterman配置",
+  "summary": "用先验与样本的加权关系解释收缩，推导均值更新、相对收益观点及Black–Litterman后验。",
+  "kind": "lesson",
+  "track": "投资组合",
+  "series": "量化研究系统课程",
+  "sort_order": 39,
+  "cover_url": "/assets/figures/curriculum/course-39.svg",
+  "section_ids": [
+    "4cb276d3-8233-5664-8700-2a8bbd7b23cc"
+  ],
+  "body": "收缩估计结合样本信息与较稳定的参考值，减轻小样本估计波动。Black–Litterman 方法进一步把市场隐含收益与带有不确定性的投资观点结合起来。\n\n## 六个月上涨，能否推断长期均值\n\n某资产六个月平均月收益为2%，而较长期经验给出的均值为0.5%。若两部分信息具有相同精度，一个折中估计为1.25%。样本提供了新证据，但只有六个月时，不必把旧信息完全丢弃。\n\n收缩估计将不稳定的样本结果向结构化目标拉近。它通常引入一些偏差，换取更低的估计方差。是否值得取决于目标是否合理、样本有多少、结果用于何种决策。\n\n## 协方差为何特别容易估不准\n\n$m$项资产需要估计$m(m+1)/2$个独立协方差元素。100项资产对应5050个参数；若只有60期数据，样本协方差的秩至多为59，无法直接获得唯一逆矩阵。\n\n常见收缩形式为\n\n$$\\hat\\Sigma_\\delta=(1-\\delta)S+\\delta F,\\qquad0\\le\\delta\\le1.$$\n\n$S$是样本协方差，$F$是目标矩阵，$\\delta$控制收缩程度。对角目标假设资产间不相关。常相关目标保留各自波动、压缩相关性差异。因子目标用少量共同风险描述联动。目标不同，保留的信息也不同。Ledoit–Wolf等方法按估计误差选择强度，不要求先把它解释为贝叶斯先验。\n\n## 正态均值的贝叶斯更新\n\n设每期收益的方差$\\sigma^2$已知，未知均值$\\mu$的先验为$N(m_0,v_0)$。观察$n$个独立收益，样本均值为$\\bar r$。后验为正态分布，其参数为\n\n$$v_n=\\left(\\frac1{v_0}+\\frac n{\\sigma^2}\\right)^{-1},\\qquad\nm_n=v_n\\left(\\frac{m_0}{v_0}+\\frac{n\\bar r}{\\sigma^2}\\right).$$\n\n方差的倒数称为精度。后验精度等于先验精度加样本精度；后验均值是按精度加权的平均。若先验相当于6期观测，已有6期样本，两个权重各一半，得到前面的1.25%。观察更多数据后，样本权重增加。\n\n下一期收益本身还会波动，因此预测方差是$\\sigma^2+v_n$。只用$\\sigma^2$忽略了对均值的未知。均值和协方差同时未知时，可以使用正态–逆Wishart先验：$\\mu\\mid\\Sigma\\sim N(\\nu,\\Sigma/\\kappa)$、$\\Sigma\\sim\\mathrm{IW}(\\Psi,n_0)$。其中$\\kappa$控制均值先验精度，$n_0$控制协方差信息。\n\n在$n_0>m+1$时，$E(\\Sigma)=\\Psi/(n_0-m-1)$。这些参数应与收益周期和矩阵维度一致。\n\n## 从市场权重反推收益先验\n\nBlack–Litterman方法先给出一个基准收益向量，再表达研究者的观点。若均值方差目标为$w^\\top\\pi-\\delta w^\\top\\Sigma w/2$，在适当的超额收益与融资设定下，市场均衡权重$w_{\\mathrm{eq}}$对应\n\n$$\\pi=\\delta\\Sigma w_{\\mathrm{eq}}.$$\n\n这里$\\delta$是风险厌恶强度。若目标函数的方差前没有$1/2$，一阶条件的系数会相应改变；实现时必须保持同一约定。反推收益提供的是与给定风险、权重和偏好一致的起点。\n\n设未知均值先验为$\\mu\\sim N(\\pi,V)$，其中$V=\\tau\\Sigma$。参数$\\tau$描述对均值先验的不确定性，不是直接把资产收益波动缩放成预测波动。\n\n## 相对观点如何进入矩阵\n\n“A的预期收益比B高1个百分点”可写成$P\\mu=q+\\epsilon$，其中$P=(1,-1)$、$q=0.01$，观点误差$\\epsilon\\sim N(0,\\Omega)$。一行$P$表达一个观点；$\\Omega$越大，该观点越不精确。\n\n在先验与观点误差独立的正态模型下，后验均值为\n\n$$m=\\pi+VP^\\top(PVP^\\top+\\Omega)^{-1}(q-P\\pi).$$\n\n$q-P\\pi$是观点与原先预测的差异；中间的矩阵决定根据不确定性应调整多少。后验协方差为\n\n$$U=V-VP^\\top(PVP^\\top+\\Omega)^{-1}PV.$$\n\n若下一期收益噪声协方差$\\Sigma$已知且与均值误差独立，预测协方差为$\\Sigma+U$，不能只拿$U$当资产风险。\n\n```python\nimport numpy as np\ncov = np.array([[0.04, 0.01], [0.01, 0.09]])\ntau = 0.05\nprior = np.array([0.04, 0.06])\np = np.array([[1.0, -1.0]])\nview = np.array([0.01])\nomega = np.array([[0.0025]])\nv = tau * cov\nadjustment = v @ p.T @ np.linalg.solve(p @ v @ p.T + omega, view - p @ prior)\nposterior = prior + adjustment\nprint(posterior)\nprint('prior spread:', float((p @ prior)[0]))\nprint('posterior spread:', float((p @ posterior)[0]))\n```\n\n代码依赖NumPy，先验收益为A4%、B6%，观点为A比B高1%，$\\tau=0.05$、观点方差0.0025。更新后A为4.5625%、B为4.5%，收益差为0.0625%。观点没有被照单全收，因为先验本来认为A低于B2个百分点，且观点自身仍有不确定性。\n\n![相对收益差的先验、观点与后验分布](/assets/figures/curriculum/course-39.svg)\n\n图中的横轴是A减B的预期收益差，纵轴为概率密度。后验中心在两者之间，分布比先验窄。它表示关于未知均值的认识变化，不是下一期实际收益一定落入的狭窄区间。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>“观点强”应落实为经过校准的误差大小。随意把观点方差设得极小，会使更新几乎完全服从观点，随后产生集中仓位；这只是输入假设的结果。</p></aside>\n\n## 练习\n\n若只将观点方差$\\Omega$扩大很多，后验趋向哪里？若先验均值已经满足$P\\pi=q$，还会调整均值吗？\n\n<details><summary>查看解答</summary>\n\n观点方差趋于很大时，更新增益趋于0，后验均值回到$\\pi$。若$P\\pi=q$，差异项为0，均值不调整；但一致的新信息仍可降低后验不确定性，所以$U$一般小于$V$。\n\n</details>\n\n---\n\n[课程目录](/courses/)\n\n## 配套代码\n\n[下载本节代码（ZIP）](/assets/downloads/courses/quant-course-39.zip)\n\n压缩包包含脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n",
+  "metadata": {
+    "curriculum": {
+      "cover": "/assets/figures/curriculum/course-39.svg",
+      "level": "进阶",
+      "stage": 7,
+      "number": 39,
+      "edition": "2026-10",
+      "minutes": 35,
+      "source_refs": [
+        {
+          "book": "量化交易：算法、分析、数据、模型和优化 — Xin Guo 等",
+          "chapters": [
+            "2.4.2"
+          ],
+          "pdf_pages": [
+            41,
+            42,
+            43
+          ]
+        }
+      ],
+      "stage_title": "投资组合"
+    },
+    "code_download": {
+      "url": "/assets/downloads/courses/quant-course-39.zip",
+      "examples": 1
+    }
+  }
+}

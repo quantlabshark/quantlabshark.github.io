@@ -1,0 +1,35 @@
+{
+  "slug": "larsen-book-04-06",
+  "title": "常用概率分布：习题",
+  "summary": "98 道题，练习常用概率分布中的概念、计算与方法选择。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7027,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "本章题组用于练习常用概率分布。按题号选择下方题组；题面中的公式、数据和图形可点击放大。\n\n## 题组\n\n<details class=\"book-exercise-group\" id=\"questions-4-2-0\"><summary>泊松分布与稀有事件计数 · 4.2.1—4.2.9</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-037-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"泊松分布与稀有事件计数 · 4.2.1—4.2.9，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-037-01.webp\" alt=\"泊松分布与稀有事件计数 · 4.2.1—4.2.9，第 1 幅\" width=\"1330\" height=\"396\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-037-02.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"泊松分布与稀有事件计数 · 4.2.1—4.2.9，放大第 2 幅\"><img src=\"/assets/exercises/foundations/larsen-037-02.webp\" alt=\"泊松分布与稀有事件计数 · 4.2.1—4.2.9，第 2 幅\" width=\"1330\" height=\"636\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-4-2-1\"><summary>泊松分布与稀有事件计数 · 4.2.10—4.2.25</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-038-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"泊松分布与稀有事件计数 · 4.2.10—4.2.25，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-038-01.webp\" alt=\"泊松分布与稀有事件计数 · 4.2.10—4.2.25，第 1 幅\" width=\"1330\" height=\"174\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-038-02.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"泊松分布与稀有事件计数 · 4.2.10—4.2.25，放大第 2 幅\"><img src=\"/assets/exercises/foundations/larsen-038-02.webp\" alt=\"泊松分布与稀有事件计数 · 4.2.10—4.2.25，第 2 幅\" width=\"1330\" height=\"1667\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-038-03.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"泊松分布与稀有事件计数 · 4.2.10—4.2.25，放大第 3 幅\"><img src=\"/assets/exercises/foundations/larsen-038-03.webp\" alt=\"泊松分布与稀有事件计数 · 4.2.10—4.2.25，第 3 幅\" width=\"1330\" height=\"872\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-4-2-2\"><summary>泊松分布与稀有事件计数 · 4.2.26—4.2.29</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-039-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"泊松分布与稀有事件计数 · 4.2.26—4.2.29，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-039-01.webp\" alt=\"泊松分布与稀有事件计数 · 4.2.26—4.2.29，第 1 幅\" width=\"1330\" height=\"656\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-4-3-3\"><summary>正态分布、标准化与中心极限定理 · 4.3.1—4.3.14</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-040-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"正态分布、标准化与中心极限定理 · 4.3.1—4.3.14，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-040-01.webp\" alt=\"正态分布、标准化与中心极限定理 · 4.3.1—4.3.14，第 1 幅\" width=\"1330\" height=\"472\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-040-02.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"正态分布、标准化与中心极限定理 · 4.3.1—4.3.14，放大第 2 幅\"><img src=\"/assets/exercises/foundations/larsen-040-02.webp\" alt=\"正态分布、标准化与中心极限定理 · 4.3.1—4.3.14，第 2 幅\" width=\"1330\" height=\"1422\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-4-3-4\"><summary>正态分布、标准化与中心极限定理 · 4.3.15—4.3.20</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-041-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"正态分布、标准化与中心极限定理 · 4.3.15—4.3.20，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-041-01.webp\" alt=\"正态分布、标准化与中心极限定理 · 4.3.15—4.3.20，第 1 幅\" width=\"1330\" height=\"635\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-4-3-5\"><summary>正态分布、标准化与中心极限定理 · 4.3.21—4.3.39</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-042-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"正态分布、标准化与中心极限定理 · 4.3.21—4.3.39，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-042-01.webp\" alt=\"正态分布、标准化与中心极限定理 · 4.3.21—4.3.39，第 1 幅\" width=\"1330\" height=\"921\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-042-02.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"正态分布、标准化与中心极限定理 · 4.3.21—4.3.39，放大第 2 幅\"><img src=\"/assets/exercises/foundations/larsen-042-02.webp\" alt=\"正态分布、标准化与中心极限定理 · 4.3.21—4.3.39，第 2 幅\" width=\"1330\" height=\"1667\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-042-03.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"正态分布、标准化与中心极限定理 · 4.3.21—4.3.39，放大第 3 幅\"><img src=\"/assets/exercises/foundations/larsen-042-03.webp\" alt=\"正态分布、标准化与中心极限定理 · 4.3.21—4.3.39，第 3 幅\" width=\"1330\" height=\"270\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-4-4-6\"><summary>几何分布与负二项分布 · 4.4.1—4.4.10</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-043-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"几何分布与负二项分布 · 4.4.1—4.4.10，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-043-01.webp\" alt=\"几何分布与负二项分布 · 4.4.1—4.4.10，第 1 幅\" width=\"1330\" height=\"950\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-4-5-7\"><summary>几何分布与负二项分布 · 4.5.1—4.5.10</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-044-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"几何分布与负二项分布 · 4.5.1—4.5.10，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-044-01.webp\" alt=\"几何分布与负二项分布 · 4.5.1—4.5.10，第 1 幅\" width=\"1330\" height=\"1215\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-4-6-8\"><summary>指数分布、Gamma 分布与等待时间 · 4.6.1—4.6.10</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-045-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"指数分布、Gamma 分布与等待时间 · 4.6.1—4.6.10，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-045-01.webp\" alt=\"指数分布、Gamma 分布与等待时间 · 4.6.1—4.6.10，第 1 幅\" width=\"1330\" height=\"702\" loading=\"lazy\"></a></div>\n\n</details>\n\n",
+  "metadata": {
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第一部分 · 概率与随机变量",
+      "number": 27,
+      "chapter": "4",
+      "edition": "2026-10",
+      "minutes": 44,
+      "section": "6",
+      "questions": 98,
+      "unit_type": "exercise",
+      "chapter_title": "常用概率分布",
+      "source_sections": [
+        "4.2",
+        "4.3",
+        "4.4",
+        "4.5",
+        "4.6"
+      ]
+    }
+  }
+}

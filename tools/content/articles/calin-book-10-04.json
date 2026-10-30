@@ -1,0 +1,39 @@
+{
+  "slug": "calin-book-10-04",
+  "title": "Girsanov 定理与漂移变换",
+  "summary": "用指数密度改变路径权重，推导新测度下的布朗运动和漂移。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "随机微积分及其应用",
+  "sort_order": 5059,
+  "cover_url": "",
+  "section_ids": [
+    "17859c88-b779-5654-b120-7a4cc7b39714"
+  ],
+  "body": "## 事件权重与概率测度变换\n\n在有限样本空间中，若事件结果的旧概率为 $p_i$，选取正权重 $z_i$ 且 $\\sum_i p_i z_i=1$，则新概率为 $q_i=p_i z_i$，新期望为 $\\sum_i y_iq_i=\\sum_i y_iz_ip_i$。连续路径空间的写法 $dQ=Z_TdP$ 做的是同一件事：\n\n$$Q(A)=E_P[Z_T\\mathbf1_A],\\qquad E_QY=E_P[Z_TY].$$\n\n下标 $P,Q$ 指明用哪套概率权重求平均。路径 $W_t(\\omega)$ 本身仍是同一个函数，但它的均值、条件均值乃至“是否为布朗运动”都可能改变。若要使用截至 $t$ 的信息，应把终点权重平均回当前，得到密度过程 $Z_t=E_P(Z_T\\mid\\mathcal F_t)$。\n\n## 同样的路径，不同的权重\n\n概率测度规定每类路径被赋予多大权重。更换测度不会把已经写下的路径逐点改掉，但会改变它们在期望和条件概率中的分量。Girsanov 定理说明，在适当条件下，可以通过这种重加权改变扩散的漂移，同时保持二次变差。\n\n固定有限时间 $T$，设 $\\theta$ 可预测并满足使指数过程为真鞅的条件，例如 Novikov 条件。定义\n\n$$Z_t=\\exp\\left[-\\int_0^t\\theta_sdW_s-\\frac12\\int_0^t\\theta_s^2ds\\right],\\qquad dQ=Z_TdP.$$\n\n由于 $Z_T>0$ 且 $E_PZ_T=1$，它确实定义一个概率测度，并在此时间范围内与 $P$ 等价。等价是指零概率事件相同，不是所有非空事件都具有正概率。\n\n## 新布朗运动与符号\n\n定理给出 $B_t^Q=W_t+\\int_0^t\\theta_sds$ 是 $Q$ 下的标准布朗运动。若原状态满足 $dX=b_tdt+\\sigma_tdW_t$，代入 $dW=dB^Q-\\theta dt$，得到\n\n$$dX_t=(b_t-\\sigma_t\\theta_t)dt+\\sigma_tdB_t^Q.$$\n\n要去掉漂移，在 $\\sigma\\ne0$ 时可选择 $\\theta=b/\\sigma$，但仍必须验证密度是真鞅。不能只写出形式上的比值，就默认所需测度一定存在。多维时还涉及漂移是否位于扩散矩阵的像空间内。\n\n## 常漂移的直接核验\n\n取 $\\theta=\\lambda$，$Z_T=e^{-\\lambda W_T-\\lambda^2T/2}$。旧密度为 $(2\\pi T)^{-1/2}e^{-w^2/(2T)}$，乘上权重后，指数变成\n\n$$-\\frac{w^2}{2T}-\\lambda w-\\frac{\\lambda^2T}{2}=-\\frac{(w+\\lambda T)^2}{2T}.$$\n\n因此 $W_T$ 在 $Q$ 下服从 $N(-\\lambda T,T)$，而 $X_T=W_T+\\lambda T$ 服从 $N(0,T)$。例如 $\\lambda=0.8,T=1$ 时，$E_PX_T=0.8$、$E_QX_T=0$，两者方差均为一。均值正向偏移的样本被负号指数降低权重，从而抵消了漂移。\n\n这只验证了一个终点分布。要证明整条 $X$ 为布朗运动，还须证明它给定过去的增量规律。下一段利用条件期望与 Lévy 表征完成这一部分。\n\n### 用配方直接看出新测度下的均值\n\n取 $T=1$、常数 $\\theta=0.5$。在旧测度 $P$ 下，$W_1$ 的密度为 $\\phi(w)=(2\\pi)^{-1/2}e^{-w^2/2}$。用权重 $Z_1=e^{-0.5W_1-0.125}$ 更换测度，$Q$ 下的密度是“旧密度乘权重”：\n\n$$q(w)=\\frac1{\\sqrt{2\\pi}}\\exp\\left(-\\frac{w^2}{2}-0.5w-0.125\\right)\n=\\frac1{\\sqrt{2\\pi}}\\exp\\left[-\\frac{(w+0.5)^2}{2}\\right].$$\n\n配方后读出 $W_1\\sim N(-0.5,1)$，而 $\\widetilde W_1=W_1+0.5\\sim N(0,1)$。这也核对了漂移修正的正负号。新密度积分为 1，等价于 $E_P[Z_1]=1$。\n\n例如事件 $W_1>0$ 在旧测度下概率为 0.5，在新测度下为 $1-\\Phi(0.5)\\approx0.3085$。同一事件被赋予不同权重；$W_1$ 与 $\\widetilde W_1$ 则是相差常数的两个变量。图中同时画出两套密度和正半轴面积。\n\n![用配方直接看出新测度下的均值](/assets/figures/theory/walkthrough/measure-change.svg)\n\n## 条件期望的 Bayes 公式\n\n令 $U=E_P(Z_TY\\mid\\mathcal F_s)/Z_s$。对于任意 $A\\in\\mathcal F_s$，因为 $U$ 是当前已知量，\n\n$$E_Q[U\\mathbf1_A]=E_P[Z_TU\\mathbf1_A]=E_P[Z_sU\\mathbf1_A]=E_P[Z_TY\\mathbf1_A]=E_Q[Y\\mathbf1_A].$$\n\n这正是条件期望的定义，所以\n\n$$E_Q(Y\\mid\\mathcal F_s)=\\frac{E_P(Z_TY\\mid\\mathcal F_s)}{Z_s}.$$\n\n分母负责在已知过去之后重新归一化。现在先取确定有界 $\\theta$，并令 $X_t=W_t+\\int_0^t\\theta_u du$。乘积公式给 $d(ZX)=Z(1-\\theta X)dW$，故 $ZX$ 是 $P$ 下的真鞅。对 $s<t\\le T$，塔式法则依次给出\n\n$$\\begin{aligned}E_P(Z_TX_t\\mid\\mathcal F_s)&=E_P[E_P(Z_TX_t\\mid\\mathcal F_t)\\mid\\mathcal F_s]\\\\&=E_P(Z_tX_t\\mid\\mathcal F_s)=Z_sX_s.\\end{aligned}$$\n\n除以 $Z_s$ 即得 $E_Q(X_t\\mid\\mathcal F_s)=X_s$。$X$ 路径连续、初值零，而有限变差漂移不改变二次变差，所以 $[X]_t=t$。Lévy 表征于是说明 $X$ 是 $Q$ 下布朗运动。随机可预测的 $\\theta$ 在 Novikov 等条件下使用局部化论证，结论相同。\n\n常数参数还给出便于计算的恒等式：对相关期望存在的 $f$，\n\n$$E[f(W_t+\\lambda t)]=e^{-\\lambda^2t/2}E[f(W_t)e^{\\lambda W_t}].$$\n\n它可直接由上述正态密度配方得到。取 $f(x)=x$ 或 $x^2$，分别得到 $\\lambda t$ 和 $t+\\lambda^2t^2$；取 $f(x)=\\cos x$，得到 $e^{-t/2}\\cos(\\lambda t)$。\n\n## 金融模型中的含义\n\n若 $dS=\\mu Sdt+\\sigma SdW$，无风险利率为常数 $r$，选择 $\\theta=(\\mu-r)/\\sigma$ 后，在 $Q$ 下 $dS=rSdt+\\sigma SdB^Q$，贴现价格 $e^{-rt}S_t$ 无漂移。在满足可积与定价假设时，可用于计算贴现支付的期望。\n\n风险中性测度用于与无套利价格一致的权重，并不表示现实中股票预期收益真的变成无风险利率。实际收益预测与定价测度是不同的数学任务，参数和测度应同时标清。\n\n## 有限时间范围不能随意省略\n\n指数密度在每个固定有限区间都有效，不代表它在无限时间上仍给出同样的等价关系。长时间极限可能使权重集中到越来越少的路径，导致极限密度与有限时间密度表现不同。因此计算时应保留所用终点 $T$。\n\n数值重加权中可以检查样本权重平均是否接近一，并观察少数权重是否占据大部分总量。平均值偶然接近一并不能证明方差足够小；有效样本量还取决于权重平方和。重要性抽样的误差分析应把权重波动一起计入。\n\n![Girsanov 重加权前后的终点分布](/assets/illustrations/theory/calin/calin-book-10-04.svg)\n\n取时间一、漂移 0.8。相同终点样本在测度 $P$ 下均值为 0.8，按指数密度重加权后，在 $Q$ 下与标准正态密度重合。\n\n<aside class=\"shark-note\"><strong>鲨鱼说</strong><p>记号里的正负号可以不靠背：先固定密度指数中取负号，再写新布朗运动等于旧布朗运动加漂移，最后代入状态方程。这样漂移变化的方向就能逐步核对。</p></aside>\n\n## 练习\n\n设 $\\theta_t=\\lambda t$。写出密度过程、新布朗运动，并计算 $E[W_te^{-\\lambda\\int_0^tsdW_s}]$。\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n首先计算累计漂移和累计平方参数：\n\n$$\\int_0^t\\theta_sds=\\frac{\\lambda t^2}{2},\\qquad\\int_0^t\\theta_s^2ds=\\frac{\\lambda^2t^3}{3}.$$\n\n参数确定且在每个有限区间平方可积，因此 Novikov 条件成立。对应密度为\n\n$$Z_t=\\exp\\!\\left[-\\lambda\\int_0^tsdW_s-\\frac{\\lambda^2t^3}{6}\\right],$$\n\n而 $B_t^Q=W_t+\\lambda t^2/2$ 是新测度下布朗运动。\n\n接着令 $A=\\int_0^tsdW_s$。$W_t$ 与 $A$ 都是确定核的布朗积分，因此联合正态。等距及交叉等距分别给\n\n$$\\operatorname{Var}(W_t)=t,\\quad\\operatorname{Var}(A)=\\frac{t^3}{3},\\quad\\operatorname{Cov}(W_t,A)=\\int_0^tsds=\\frac{t^2}{2}.$$\n\n联合指数矩为 $E e^{uW_t+vA}=\\exp[\\tfrac12(u^2t+uvt^2+v^2t^3/3)]$。先对 $u$ 求导，再令 $u=0,v=-\\lambda$，得到\n\n$$E[W_te^{-\\lambda A}]=-\\frac{\\lambda t^2}{2}\\exp\\!\\left(\\frac{\\lambda^2t^3}{6}\\right).$$\n\n另一种核验是 $E_P(W_tZ_t)=E_QW_t=-\\lambda t^2/2$，把确定归一化因子移到另一边即可得到同式。取 $t=\\lambda=1$，结果约为 $-0.590680$。负号来自密度对正向终点的降权，平方参数来自方差。\n\n</details>\n\n## 配套代码\n\n[下载本节 Python 代码](/assets/downloads/theory/calin-book-10-04.zip)\n\n解压后运行 `calin-book-10-04.py`。需安装 numpy、scipy 和 matplotlib；脚本会生成图像与数值核查结果，无需另行下载数据。\n\n[补充算例与绘图代码](/assets/downloads/theory-walkthrough/calin-book-10-04.zip)\n",
+  "metadata": {
+    "theory_book": {
+      "book": "stochastic-calculus",
+      "part": "第三部分 · 随机方程与测度变换",
+      "number": 59,
+      "chapter": "10",
+      "edition": "2026-10",
+      "minutes": 38,
+      "section": "4",
+      "source_pages": [
+        247,
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254
+      ],
+      "chapter_title": "鞅、时间变换与测度变换",
+      "source_sections": [
+        "10.4"
+      ]
+    }
+  }
+}

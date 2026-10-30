@@ -1,0 +1,31 @@
+{
+  "slug": "larsen-book-08-03",
+  "title": "数据类型与研究设计：习题",
+  "summary": "32 道题，练习数据类型与研究设计中的概念、计算与方法选择。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7048,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "本章题组用于练习数据类型与研究设计。按题号选择下方题组；题面中的公式、数据和图形可点击放大。\n\n## 题组\n\n<details class=\"book-exercise-group\" id=\"questions-8-2-0\"><summary>数据类型、抽样与实验结构 · 8.2.1—8.2.32</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-064-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"数据类型、抽样与实验结构 · 8.2.1—8.2.32，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-064-01.webp\" alt=\"数据类型、抽样与实验结构 · 8.2.1—8.2.32，第 1 幅\" width=\"1330\" height=\"1258\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-064-02.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"数据类型、抽样与实验结构 · 8.2.1—8.2.32，放大第 2 幅\"><img src=\"/assets/exercises/foundations/larsen-064-02.webp\" alt=\"数据类型、抽样与实验结构 · 8.2.1—8.2.32，第 2 幅\" width=\"1330\" height=\"1667\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-064-03.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"数据类型、抽样与实验结构 · 8.2.1—8.2.32，放大第 3 幅\"><img src=\"/assets/exercises/foundations/larsen-064-03.webp\" alt=\"数据类型、抽样与实验结构 · 8.2.1—8.2.32，第 3 幅\" width=\"1330\" height=\"1667\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-064-04.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"数据类型、抽样与实验结构 · 8.2.1—8.2.32，放大第 4 幅\"><img src=\"/assets/exercises/foundations/larsen-064-04.webp\" alt=\"数据类型、抽样与实验结构 · 8.2.1—8.2.32，第 4 幅\" width=\"1330\" height=\"1667\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-064-05.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"数据类型、抽样与实验结构 · 8.2.1—8.2.32，放大第 5 幅\"><img src=\"/assets/exercises/foundations/larsen-064-05.webp\" alt=\"数据类型、抽样与实验结构 · 8.2.1—8.2.32，第 5 幅\" width=\"1330\" height=\"1033\" loading=\"lazy\"></a></div>\n\n</details>\n\n",
+  "metadata": {
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第二部分 · 估计与检验",
+      "number": 48,
+      "chapter": "8",
+      "edition": "2026-10",
+      "minutes": 15,
+      "section": "3",
+      "questions": 32,
+      "unit_type": "exercise",
+      "chapter_title": "数据类型与研究设计",
+      "source_sections": [
+        "8.2"
+      ]
+    }
+  }
+}

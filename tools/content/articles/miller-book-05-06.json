@@ -1,0 +1,39 @@
+{
+  "slug": "miller-book-05-06",
+  "title": "快速排序、划分与枢轴选择",
+  "summary": "从三路划分的不变式解释快速排序，比较平衡与极端分割，并核算教学实现的空间。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8028,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "快速排序选一个枢轴 p，把元素按与 p 的大小关系分组，再递归处理需要排序的部分。一次划分只确定组与组之间的顺序，并未完成各组内部排序。\n\n## 三路划分\n\n对 `[3,1,3,2,3]` 取 p=3，依次放入小于、等于、大于三个组，得到 `[1,2]`、`[3,3,3]`、空组。只需继续排序小于和大于组，中间全部相等，无需递归。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/partition.svg\" alt=\"快速排序划分后，枢轴两侧分别是不大于和不小于它的元素。\" loading=\"lazy\"></figure>\n\n原地三路划分可用 lt、i、gt 三个边界维护：`[lo,lt)` 小于 p，`[lt,i)` 等于 p，`[i,gt]` 尚未检查，`(gt,hi]` 大于 p。\n\n当前值小于 p 时，与 lt 交换并同时增加 lt、i；大于 p 时，与 gt 交换并减少 gt，此时 i 处换来的值尚未检查，不能直接增加 i；等于 p 时只增加 i。未知区间为空即完成。\n\n## 时间由分割规模决定\n\n若每次两侧约相等，$T(n)=2T(n/2)+O(n)$，每层总工作线性、层数对数，得到 O(n log n)。若每次只移走一个极端枢轴，$T(n)=T(n-1)+O(n)$，展开为 n+(n−1)+…+1，得到 O(n²)。\n\n固定选首项时，有序输入容易形成极端分割。随机选择枢轴使对不同排列的期望比较次数为 O(n log n)，仍保留平方级最坏情形。取首、中、尾的中位数改善部分常见输入，但并不消除所有极端情况。\n\n## 重复值为什么值得单独处理\n\n全部元素相等时，三路划分一次扫描就完成，时间 Θ(n)。若二路实现每次只排除一个相等元素，会产生深递归。写指针循环时，还需确保相等情况下至少一个指针推进，避免原地停留。\n\n## 区分教学列表版和原地版\n\n本节代码创建 lower、equal、upper 三个新列表，便于观察分组。平衡递归时峰值额外存储为 O(n)；极端分割时，祖先层仍保留规模 n、n−1 等列表，峰值可达 O(n²)。不能把这一版本称为原地排序。\n\n原地划分只需常数个局部变量，普通递归栈平均 O(log n)、最坏 O(n)。若只递归较短的一侧、以循环继续处理较长侧，可以把栈深度限制为 O(log n)，但极端情况下时间仍可能为 O(n²)。\n\n常见交换式快速排序不稳定。这里的分组列表版按输入顺序追加元素，若按统一键比较，可保留同键顺序；稳定性必须由具体实现判断。\n\n> **鲨鱼说** 与右端交换后，当前位置出现一个尚未检查的新值，所以 i 要停留。用四段区间的不变式检查这一步，能避免漏元素和重复处理。\n\n## Python 实现\n\n~~~python\nimport random\ndef quick_sort(values,rng):\n    if len(values)<2:return list(values)\n    pivot=values[rng.randrange(len(values))]\n    lower=[];equal=[];upper=[]\n    for x in values:\n        if x<pivot:lower.append(x)\n        elif x>pivot:upper.append(x)\n        else:equal.append(x)\n    return quick_sort(lower,rng)+equal+quick_sort(upper,rng)\nrng=random.Random(20261018)\nfor a in [[],[3,1,3,2,3],list(range(100)),[7]*100]:\n    assert quick_sort(a,rng)==sorted(a)\nprint(quick_sort([3,1,3,2,3],rng))\n~~~\n\n## 练习\n1. 对有序数组固定取首元素，写出每层子问题规模。\n2. 比较二路与三路划分处理大量重复值时的递归规模。\n\n[本章习题](/read/?slug=miller-book-05-07)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-05-06.zip",
+        "label": "快速排序、划分与枢轴选择 · Python 示例",
+        "size_bytes": 987,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第二部分 · 数据组织与基本算法",
+      "number": 28,
+      "chapter": "5",
+      "edition": "2026-10",
+      "minutes": 12,
+      "section": "6",
+      "chapter_title": "搜索和排序",
+      "source_sections": [
+        "5.3.6",
+        "5.4",
+        "5.5"
+      ]
+    }
+  }
+}

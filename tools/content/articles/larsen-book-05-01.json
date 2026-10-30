@@ -1,0 +1,38 @@
+{
+  "slug": "larsen-book-05-01",
+  "title": "矩估计与最大似然估计",
+  "summary": "由样本矩构造参数估计，展开最大似然求解，并检查正态与均匀模型的边界。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7028,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "前面由已知参数计算样本概率；现在反过来，利用样本确定参数。例如观测若干等待时间，目标是估计到达速率。估计量必须能由观测值计算，不能依赖尚未知晓的参数。\n\n## 矩估计用样本替代总体矩\n\n设独立样本为 $X_1,\\ldots,X_n$。第一阶样本矩是 $m_1=\\bar X$，第二阶是 $m_2=n^{-1}\\sum_iX_i^2$。矩估计将它们与模型中的 $E(X),E(X^2)$ 对应，再求参数。\n\n指数分布速率为 $\\lambda$，均值为 $1/\\lambda$。令 $m_1=1/\\lambda$，得 $\\hat\\lambda=1/\\bar X$。若是形状 $\\alpha$、尺度 $\\beta$ 均未知的 Gamma 模型，由均值 $\\alpha\\beta$ 与方差 $\\alpha\\beta^2$ 联立可得\n\n$$\\hat\\alpha=\\frac{m_1^2}{m_2-m_1^2},\\qquad\\hat\\beta=\\frac{m_2-m_1^2}{m_1}.$$\n\n这里 $m_2-m_1^2$ 使用分母 n，与后面的无偏样本方差有所不同。\n\n## 最大似然固定数据、比较参数\n\n观测为 $x_1,\\ldots,x_n$，独立模型的似然为 $L(\\theta)=\\prod_if(x_i;\\theta)$。它把参数作为变量，衡量各参数下同一数据的概率或密度。取对数不改变最大值位置，且把乘积变为求和。\n\nn 次 Bernoulli 试验中成功 s 次，有\n\n$$\\ell(p)=s\\log p+(n-s)\\log(1-p),\\qquad\n\\ell'(p)=\\frac sp-\\frac{n-s}{1-p}.$$\n\n令导数为零，整理 $s(1-p)=(n-s)p$，得 $\\hat p=s/n$。当 0<s<n 时，二阶导为负，确为最大值。若全部失败或全部成功，最大值分别在 p=0 或 p=1。图中 s=3、n=5，最大值位于 0.6。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/likelihood.svg\" alt=\"三次成功两次失败的似然在 p 等于 0.6 处最大。\" loading=\"lazy\"></figure>\n\n## 正态均值与方差\n\n用 $v=\\sigma^2$ 表示方差，正态对数似然除去常数后为 $-n\\log v/2-\\sum_i(x_i-\\mu)^2/(2v)$。对 $\\mu$ 求导得到 $\\sum_i(x_i-\\mu)/v=0$，因此 $\\hat\\mu=\\bar x$。代回再对 v 求导：\n\n$$-\\frac n{2v}+\\frac{\\sum_i(x_i-\\bar x)^2}{2v^2}=0\n\\quad\\Longrightarrow\\quad\\hat v=\\frac1n\\sum_i(x_i-\\bar x)^2.$$\n\n例如数据 1、2、2、5，均值为 2.5，平方离差和为 9，最大似然方差为 9/4=2.25。无偏方差则是 9/3=3，二者优化的准则不同。\n\n## 参数决定支持范围时\n\n若样本来自 $U(0,\\theta)$，则 $L(\\theta)=\\theta^{-n}\\mathbf1\\{\\theta\\ge x_{(n)}\\}$。指示符表示参数必须不小于样本最大值，否则数据不可能出现。可行范围内，似然随 $\\theta$ 增大而下降，故 $\\hat\\theta=x_{(n)}$。\n\n同一模型的矩估计为 $2\\bar x$，因为 $E(X)=\\theta/2$。数据 0.2、0.5、0.8 给出矩估计 1、最大似然估计 0.8。\n\n> **鲨鱼说** 求最大值时，先列参数范围，再检查内部导数和边界。均匀模型的答案由支持边界决定，仅解导数等于零会漏掉它。\n\n## 练习\n1. 指数样本为1、2、3、4，分别用矩估计和最大似然估计速率参数。\n2. 样本来自[0,θ]均匀分布，推导矩估计，并与最大似然估计比较。\n\n[本章习题](/read/?slug=larsen-book-05-08)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/larsen-book-05-01.zip",
+        "label": "矩估计与最大似然估计 · Python 示例",
+        "size_bytes": 1035,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第二部分 · 估计与检验",
+      "number": 28,
+      "chapter": "5",
+      "edition": "2026-10",
+      "minutes": 15,
+      "section": "1",
+      "chapter_title": "参数估计",
+      "source_sections": [
+        "5.1",
+        "5.2"
+      ]
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "slug": "miller-book-04-04",
+  "title": "迷宫搜索、回溯与访问标记",
+  "summary": "把网格写成搜索状态，追踪访问集合与当前路线，说明回溯、终止和最短路径的区别。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8020,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "迷宫中的一个可通行格子可表示为坐标 (r,c)。从它向上下左右移动，就得到候选下一步。搜索的任务是沿这些邻接关系找到从起点到出口的路线。\n\n## 状态和基本情形\n\n先检查坐标是否越界，再检查是否为墙、是否已经访问。不能先读取 grid[r][c] 再检查边界。合法的新格子加入访问集合和当前路径；若它就是出口，返回成功，否则依次探索邻居。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/maze.svg\" alt=\"迷宫路径按相邻可通行格子延伸，并记录访问位置避免重复。\" loading=\"lazy\"></figure>\n\n在三行网格 `... / ##. / ...` 中，从 (0,0) 到 (2,2)，路线为 (0,0)→(0,1)→(0,2)→(1,2)→(2,2)。邻居尝试顺序决定搜索先看哪里，但不改变是否存在路线。\n\n## 访问集合防止循环\n\n若 (0,0) 可达 (0,1)，反方向通常也可达。没有标记时，两者会反复调用。seen 保存已经展开的格子，同一格最多展开一次，有限网格便能终止。\n\n对固定墙壁、只需找任意路线的任务，一个格子已探索完全部出口后，从另一条路线再到达它不会产生新的可达区域，因此 seen 可永久保留。\n\n## 当前路径需要撤销\n\npath 保存本次递归分支中的坐标。进入格子时 append；若所有邻居都失败，返回前 pop，撤销这一格。如果某邻居成功，直接向上返回，保留通往出口的路径。\n\n例如在分叉处先探索一条死路，seen 会留下该死路中的格子，path 则退回分叉位置，再尝试另一方向。两个容器保存的信息不同，不能用一个标记替代。\n\n## 搜索目标改变时，标记规则也改变\n\n找一条路线时，永久 seen 可避免重复工作。枚举全部简单路径时，不同路径可能经过同一格，需在退出当前路径时撤销路径内标记，否则会遗漏其他路线。若状态包含钥匙、剩余体力等条件，状态也应扩展为“坐标+这些条件”，不能只按坐标去重。\n\n## 深度优先的距离性质\n\n递归沿一个方向走到尽头再返回，称为深度优先搜索。第一条成功路线可能绕远；无权网格最短路线应按距离逐层扩展，即后续的宽度优先搜索。\n\n设 V 为格子数，E 为邻接边数，时间为 O(V+E)。每格至多四个邻居，故网格中为 O(V)，访问集合与最坏递归深度也为 O(V)。大网格可改用显式栈管理待探索状态。\n\n> **鲨鱼说** 回溯时撤销 path，表示放弃当前路线；保留 seen，表示该区域已经探索过。是否撤销某个标记，取决于它代表路线选择还是全局搜索记录。\n\n## Python 实现\n\n~~~python\ndef find_path(grid,start,end):\n    rows,cols=len(grid),len(grid[0]);seen=set();path=[]\n    def visit(r,c):\n        if not(0<=r<rows and 0<=c<cols) or grid[r][c]=='#' or (r,c) in seen:return False\n        seen.add((r,c));path.append((r,c))\n        if (r,c)==end:return True\n        for dr,dc in [(1,0),(0,1),(-1,0),(0,-1)]:\n            if visit(r+dr,c+dc):return True\n        path.pop();return False\n    return path if visit(*start) else None\ngrid=['...','##.','...']\npath=find_path(grid,(0,0),(2,2))\nassert path==[(0,0),(0,1),(0,2),(1,2),(2,2)]\nprint(path)\n~~~\n\n## 练习\n1. 在5×5网格上设计一个有死路的迷宫，追踪visited和path的变化。\n2. 给出一个深度优先先找到的路径比最短路径长的例子。\n\n[本章习题](/read/?slug=miller-book-04-06)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-04-04.zip",
+        "label": "迷宫搜索、回溯与访问标记 · Python 示例",
+        "size_bytes": 1035,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第二部分 · 数据组织与基本算法",
+      "number": 20,
+      "chapter": "4",
+      "edition": "2026-10",
+      "minutes": 11,
+      "section": "4",
+      "chapter_title": "递归与动态规划",
+      "source_sections": [
+        "4.6"
+      ]
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "slug": "calin-book-02-06",
+  "title": "比例、计数与首达时间分布",
+  "summary": "理解 Beta、Poisson、逆 Gamma 与逆高斯分布的取值范围、参数和矩。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "随机微积分及其应用",
+  "sort_order": 5009,
+  "cover_url": "",
+  "section_ids": [
+    "17859c88-b779-5654-b120-7a4cc7b39714"
+  ],
+  "body": "## 变量取值范围与分布选择\n\n选择分布时，首先检查变量的取值范围。比例应落在 0 与 1 之间，事件次数只能是非负整数，等待时间应非负。只比较均值和方差，可能选出取值范围不合适的模型。\n\nBeta 分布适合描述 $(0,1)$ 内的比例。形状参数为 $\\alpha,\\beta>0$ 时，密度为\n\n$$p(x)=\\frac{x^{\\alpha-1}(1-x)^{\\beta-1}}{B(\\alpha,\\beta)},\\quad\nB(\\alpha,\\beta)=\\frac{\\Gamma(\\alpha)\\Gamma(\\beta)}{\\Gamma(\\alpha+\\beta)}.$$\n\n均值与方差分别为\n\n$$\\mathbb E[X]=\\frac\\alpha{\\alpha+\\beta},\\qquad\n\\operatorname{Var}(X)=\\frac{\\alpha\\beta}{(\\alpha+\\beta)^2(\\alpha+\\beta+1)}.$$\n\n两参数相等时密度左右对称；同时增大参数会使分布更集中。$\\operatorname{Beta}(2,2)$ 和 $\\operatorname{Beta}(20,20)$ 的均值都是 $1/2$，但方差分别为 $1/20$ 和 $1/164$。当两参数都为 $1/2$ 时，密度反而在两端较高，这将与布朗运动的反正弦律相联系。\n\n### 比例分布的均值从哪里来\n\n把 Beta 密度乘以 $x^q$ 后积分，分子仍是一个 Beta 积分：\n\n$$\\mathbb E[X^q]=\\frac{B(\\alpha+q,\\beta)}{B(\\alpha,\\beta)},\\qquad q> -\\alpha.$$\n\n利用 Gamma 函数递推，$\\mathbb E[X]=\\alpha/(\\alpha+\\beta)$，$\\mathbb E[X^2]=\\alpha(\\alpha+1)/[(\\alpha+\\beta)(\\alpha+\\beta+1)]$。二阶矩减均值平方，才得到方差公式。\n\n取 $\\alpha=2,\\beta=3$，密度为 $12x(1-x)^2$，均值为 0.4，二阶矩为 0.2，方差为 0.04。若两参数同时乘 10，均值仍为 0.4，但方差降为 $0.24/51\\approx0.004706$。参数比决定中心，参数总和控制集中程度。\n\n## Poisson 分布计算事件次数\n\n若 $N\\sim\\operatorname{Poisson}(\\lambda)$，则\n\n$$\\mathbb P(N=k)=e^{-\\lambda}\\frac{\\lambda^k}{k!},\\qquad k=0,1,2,\\ldots.$$\n\n其均值和方差都等于 $\\lambda$。利用指数级数，矩母函数为\n\n$$\\mathbb E[e^{uN}]=e^{-\\lambda}\\sum_{k=0}^{\\infty}\\frac{(\\lambda e^u)^k}{k!}\n=\\exp[\\lambda(e^u-1)].$$\n\n若一段时间内平均收到 3 条请求，Poisson 模型给出没有请求的概率 $e^{-3}\\approx0.0498$，至少两条请求的概率 $1-e^{-3}(1+3)\\approx0.8009$。这里的 $\\lambda$ 是该时间段的平均次数。到了 Poisson 过程，常用 $\\lambda$ 表示单位时间速率，长度 $t$ 的区间对应参数 $\\lambda t$。\n\n独立 Poisson 变量之和仍为 Poisson，参数相加。这可由矩母函数乘积得到，也可逐项卷积验证。若计数来自共同冲击，独立性失效，方差便不一定等于均值。\n\n### 计数矩用阶乘形式更容易计算\n\n从概率质量函数直接求和：\n\n$$\\mathbb E[N]=e^{-\\lambda}\\sum_{k=1}^{\\infty}k\\frac{\\lambda^k}{k!}\n=\\lambda e^{-\\lambda}\\sum_{j=0}^{\\infty}\\frac{\\lambda^j}{j!}=\\lambda.$$\n\n同理，$\\mathbb E[N(N-1)]=\\lambda^2$。因为 $N^2=N(N-1)+N$，故二阶矩为 $\\lambda^2+\\lambda$，减去均值平方后方差为 $\\lambda$。这种下降阶乘 $N(N-1)\\cdots(N-r+1)$ 的期望等于 $\\lambda^r$，以后计算 Poisson 积分的高阶矩时很有用。\n\n例如 $\\lambda=3$，$\\mathbb E[N^2]=12$；不能把“均值为 3”直接平方当作二阶矩 9。差额 3 恰好是计数的不确定性。\n\n## 逆 Gamma：取倒数后尾部变长\n\n设 $Y$ 服从形状 $\\alpha$、速率 $\\beta$ 的 Gamma 分布，令 $X=1/Y$。变量变换的 Jacobian 为 $1/x^2$，得到逆 Gamma 密度\n\n$$p_X(x)=\\frac{\\beta^\\alpha}{\\Gamma(\\alpha)}x^{-\\alpha-1}e^{-\\beta/x},\\quad x>0.$$\n\n一般矩为 $\\mathbb E[X^q]=\\beta^q\\Gamma(\\alpha-q)/\\Gamma(\\alpha)$，要求 $q<\\alpha$。因此\n\n$$\\mathbb E[X]=\\frac\\beta{\\alpha-1}\\quad(\\alpha>1),\\qquad\n\\operatorname{Var}(X)=\\frac{\\beta^2}{(\\alpha-1)^2(\\alpha-2)}\\quad(\\alpha>2).$$\n\n当 $1<\\alpha\\le2$，均值有限但二阶矩无穷；当 $\\alpha\\le1$，均值也不有限。靠近零的 Gamma 取值被倒数变换放大，形成右侧的重尾。检查矩存在的条件，比直接套入分母更重要。\n\n取倒数时，$y=1/x$，$|dy/dx|=1/x^2$。将 Gamma 密度代入后，幂次由 $y^{\\alpha-1}$ 变成 $x^{-(\\alpha-1)}$，再乘 $x^{-2}$，合成 $x^{-\\alpha-1}$。这个步骤决定了逆 Gamma 的尾部速度。\n\n计算 $q$ 阶矩时换元 $u=\\beta/x$，积分变成 $\\beta^q\\Gamma(\\alpha-q)/\\Gamma(\\alpha)$。要求 $\\alpha-q>0$，因为在 $u=0$ 附近要积分 $u^{\\alpha-q-1}$。同一条件也可从原变量尾部看出：大 $x$ 时，$x^qp_X(x)$ 近似常数乘 $x^{q-\\alpha-1}$，只有 $q<\\alpha$ 才可积。\n\n> **鲨鱼说** 分母中出现 $\\alpha-1$ 或 $\\alpha-2$，不能靠代入负数延续均值、方差公式。公式本身是在积分收敛条件下推导的；越过这个条件后，问题是相应矩不存在，而不是得到负的方差。\n\n## 逆高斯：带正漂移的首次到达时间\n\n逆高斯分布不是“正态变量的倒数”。参数 $\\mu,\\lambda>0$ 时，其密度为\n\n$$p(x)=\\sqrt{\\frac\\lambda{2\\pi x^3}}\n\\exp\\left[-\\frac{\\lambda(x-\\mu)^2}{2\\mu^2x}\\right],\\quad x>0.$$\n\n均值为 $\\mu$，方差为 $\\mu^3/\\lambda$。密度通常右偏，众数为\n\n$$\\mu\\left(\\sqrt{1+\\frac{9\\mu^2}{4\\lambda^2}}-\\frac{3\\mu}{2\\lambda}\\right).$$\n\n若 $X_t=vt+\\sigma W_t$ 且 $v>0$，首次到达正水平 $a$ 的时间服从逆高斯分布，参数为 $\\mu=a/v$、$\\lambda=a^2/\\sigma^2$。因此平均到达时间是 $a/v$，方差是 $a\\sigma^2/v^3$。例如 $a=2,v=1,\\sigma=0.5$，平均时间为 2，方差为 0.5。\n\n> **鲨鱼说** 逆 Gamma 与逆高斯只是名称相近。前者来自 Gamma 变量取倒数，后者与带漂移布朗运动的首达时间相连。判断分布时，使用生成机制、支持范围和密度公式，不要只凭名称。\n\n### 逆高斯参数的另一个核对方法\n\n逆高斯的 Laplace 变换为\n\n$$L(s)=\\mathbb E[e^{-sX}]=\\exp\\left[\\frac\\lambda\\mu\\left(1-\\sqrt{1+\\frac{2\\mu^2s}{\\lambda}}\\right)\\right],\\quad s\\ge0.$$\n\n令 $\\ell(s)=\\log L(s)$，则 $\\ell'(0)=-\\mu$、$\\ell''(0)=\\mu^3/\\lambda$。因为 $L'(0)=-\\mathbb E[X]$，而 $\\ell''(0)=\\mathbb E[X^2]-\\mathbb E[X]^2$，便得到均值与方差。较大的 $\\lambda$ 在固定 $\\mu$ 下使到达时间更集中。\n\n在首达时间参数化中，$\\mu=a/v$、$\\lambda=a^2/\\sigma^2$。例如同样向前漂移 $v=1$、目标为 $a=2$，若噪声标准差由 0.5 增至 1，平均到达时间仍为 2，方差却从 0.5 增至 2。平均时间不变，不代表到达时间分布不变。\n\n## 练习：相同均值，不同尾部\n\n比较 $X\\sim\\operatorname{InvGamma}(3,4)$ 与 $Y\\sim\\operatorname{IG}(\\mu=2,\\lambda=8)$ 的均值和方差。逆 Gamma 的三阶矩是否存在？\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n$X$ 的均值为 $4/(3-1)=2$，方差为 $16/[(3-1)^2(3-2)]=4$。$Y$ 的均值为 2，方差为 $2^3/8=1$。两者平均值相同，但前者更分散。逆 Gamma 的 $q$ 阶矩要求 $q<\\alpha$；这里 $q=\\alpha=3$，三阶矩不有限。有限均值、有限方差并不保证所有高阶矩都存在。\n\n</details>\n\n## 代码下载\n\n[下载计算与绘图代码](/assets/downloads/theory/calin-book-02-06.zip)\n",
+  "metadata": {
+    "theory_book": {
+      "book": "stochastic-calculus",
+      "part": "第一部分 · 概率与随机过程",
+      "number": 9,
+      "chapter": "2",
+      "edition": "2026-10",
+      "minutes": 44,
+      "section": "6",
+      "source_pages": [
+        38,
+        39,
+        40
+      ],
+      "chapter_title": "概率与条件期望",
+      "source_sections": [
+        "2.10"
+      ]
+    }
+  }
+}

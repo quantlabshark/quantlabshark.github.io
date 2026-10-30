@@ -1,0 +1,47 @@
+{
+  "slug": "quant-course-33",
+  "title": "33 · 文本向量化与主题模型",
+  "summary": "手算词袋与TF-IDF矩阵，理解LDA的文档主题混合，以及词表、短语和主题数如何进入验证。",
+  "kind": "lesson",
+  "track": "机器学习与文本",
+  "series": "量化研究系统课程",
+  "sort_order": 33,
+  "cover_url": "/assets/figures/curriculum/course-33.svg",
+  "section_ids": [
+    "5c14064d-8915-5f7c-bcc6-f9bd10d4c40e"
+  ],
+  "body": "文本向量化把文档转换为模型可处理的数字。词频表示记录词语出现情况，主题模型则用若干潜在主题概括文档之间的联系。\n\n## 三句话怎样写成矩阵\n\n把“利润 增长”“利润 下降”“订单 增长”按词表`[下降, 利润, 增长, 订单]`排列，可得到\n\n$$X=\\begin{pmatrix}0&1&1&0\\\\1&1&0&0\\\\0&0&1&1\\end{pmatrix}.$$\n\n每行是一篇文档，每列是一个词，数值为出现次数。这叫词袋表示，保留词频但忽略词序。“不 增长”与“增长 不”会有同样计数，因此需要根据任务决定是否加入短语或采用序列模型。\n\n真实词表可能有数万列，单篇新闻只使用其中少量词，矩阵大多为零。稀疏矩阵只保存非零位置和值，避免把大量内存花在零上。\n\n## 常见词与稀有词怎样区分\n\n词频TF描述某词在当前文档出现多少次，文档频数DF统计多少篇文档出现过它。一个具体的平滑IDF定义是\n\n$$IDF(w)=\\ln\\frac{1+N}{1+DF(w)}+1.$$\n\n这里$N=3$。“利润”出现在两篇，IDF为$\\ln(4/3)+1=1.2877$；“订单”只出现一次，为$\\ln2+1=1.6931$。在本例每词每篇最多出现一次，TF-IDF非零值就是对应IDF。\n\n![三篇文本的词计数与TF-IDF权重](/assets/figures/curriculum/course-33.svg)\n\n图中的零表示未出现，非零值展示常见词和较稀有词的不同权重。稀有仅意味着区分文档的能力可能较强，不代表它与未来收益更相关；错字和网页模板也可能很稀有。\n\n## 行归一化与新文本\n\nTF-IDF还可按文档向量长度归一化。例如“利润 增长”两项都为1.2877，L2归一化后各为$1/\\sqrt2$，避免较长文章仅因词更多而拥有更大向量长度。下面关闭归一化，以便直接核对手算。\n\n```python\nimport numpy as np\nfrom sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer\nfrom sklearn.decomposition import LatentDirichletAllocation\n\ntexts = [\"利润 增长\", \"利润 下降\", \"订单 增长\"]\ncount = CountVectorizer(tokenizer=str.split, token_pattern=None, lowercase=False)\ncounts = count.fit_transform(texts)\ntfidf = TfidfVectorizer(tokenizer=str.split, token_pattern=None,\n                       lowercase=False, norm=None)\nweighted = tfidf.fit_transform(texts)\nprint(count.get_feature_names_out())\nprint(counts.toarray())\nprint(\"idf:\", dict(zip(tfidf.get_feature_names_out(), tfidf.idf_)))\nassert np.isclose(tfidf.idf_[list(tfidf.get_feature_names_out()).index(\"利润\")], np.log(4/3)+1)\n\ncorpus = [\"利润 增长 订单\", \"订单 扩张 收入\", \"收入 利润 增长\",\n          \"降雨 洪水 天气\", \"天气 降雨 风暴\", \"洪水 风暴 救援\"]\nvectorizer = CountVectorizer(tokenizer=str.split, token_pattern=None, lowercase=False)\nX = vectorizer.fit_transform(corpus)\nlda = LatentDirichletAllocation(n_components=2, max_iter=30,\n                               learning_method=\"batch\", random_state=3)\nmixtures = lda.fit_transform(X)\nterms = vectorizer.get_feature_names_out()\nfor topic in lda.components_:\n    print(\"top terms:\", terms[np.argsort(topic)[-4:][::-1]])\nprint(\"document topic weights:\", np.round(mixtures, 3))\nassert np.allclose(mixtures.sum(axis=1), 1.0)\n```\n\n第一部分输出上述词表、计数矩阵和IDF。词表及IDF都只在训练语料拟合，后续调用`transform`。新词不在既有词表中通常被忽略；若整篇变为全零，说明模型没有得到已知词汇证据，需要统计这种覆盖失败。\n\n## LSI、pLSA与LDA各自压缩什么\n\nLSI或LSA使用矩阵分解，把大量词列压缩为少量方向，类似PCA的几何思想；方向可能含正负权重，解释时不能直接当成词概率。pLSA用潜在主题解释文档与词的共现概率，文档由多个主题混合。\n\nLDA即潜在狄利克雷分配，为文档主题比例和主题词概率加入先验结构。它假定每篇文档有主题分布$\\boldsymbol\\theta_d$，每个主题有词分布$\\boldsymbol\\phi_k$。生成一个词时，先按$\\boldsymbol\\theta_d$抽主题，再按该主题$\\boldsymbol\\phi_k$抽词：\n\n$$P(w\\mid d)=\\sum_k\\theta_{d,k}\\phi_{k,w}.$$\n\n如果某文档经营主题占80%、天气主题占20%，而“订单”在两主题下概率分别为0.3与0.01，则它的模型词概率为$0.8\\times0.3+0.2\\times0.01=0.242$。拟合过程反过来，从实际词计数推断这些潜在比例。\n\n## 狄利克雷先验为何有用\n\n主题比例各项非负且和为一，狄利克雷分布正适合描述这样的随机向量。对称参数较小通常鼓励少数主题占较大比例，较大则倾向较均匀。它不是无条件假定所有文档都只谈一个主题，也不能保证自动得到人类想要的主题。\n\n代码后半段使用六篇自拟短文，三篇谈经营、三篇谈天气，用词计数训练两个主题。结果输出每个主题最常见的词，以及每篇文档的两个比例，后者加总为1。主题编号可以交换，“经营”“天气”的名字由词语与代表文档共同解释。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>主题模型需要文档之间的差异。把全部新闻拼成一篇长文本，会丢失“哪篇文章主要谈什么”的信息；统一分词不等于删除文档边界。</p></aside>\n\n## 短语与主题评价\n\n一元词只看单词，二元词加入相邻组合，例如“不 增长”。范围1到2应同时包含“不”“增长”“不 增长”，不会只留下其中一项。短语能保留局部顺序，也会扩大词表，需要设置最低出现频数并检查是否只是来源模板。\n\n主题评价可查看代表词、代表文档、一致性、新文档拟合和跨窗口稳定性。主题数通过训练验证确定，不能因为某次输出恰好听起来合理就认定最佳。用主题比例预测市场时，主题模型也应只读取当时可用语料，再单独评价未来目标。\n\n## 练习\n\n一个词在全部三篇文档中都出现，IDF是多少？某文档两个主题比例0.6与0.4，某词对应概率0.2与0.05，词概率是多少？\n\n<details><summary>查看解答</summary>\n\nIDF为$\\ln(4/4)+1=1$，不为0，这是当前平滑定义的结果。词概率为$0.6\\times0.2+0.4\\times0.05=0.14$。主题比例和词概率是不同层次的分布，不能互换。\n\n</details>\n\n---\n\n[课程目录](/courses/)\n\n## 配套代码\n\n[下载本节代码（ZIP）](/assets/downloads/courses/quant-course-33.zip)\n\n压缩包包含脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n",
+  "metadata": {
+    "curriculum": {
+      "cover": "/assets/figures/curriculum/course-33.svg",
+      "level": "进阶",
+      "stage": 6,
+      "number": 33,
+      "edition": "2026-10",
+      "minutes": 40,
+      "source_refs": [
+        {
+          "book": "深入浅出Python量化交易实战",
+          "chapters": "11.1–11.3",
+          "pdf_pages": [
+            235,
+            238,
+            239,
+            240,
+            241,
+            242,
+            243,
+            246,
+            248,
+            250
+          ]
+        }
+      ],
+      "stage_title": "机器学习与文本"
+    },
+    "code_download": {
+      "url": "/assets/downloads/courses/quant-course-33.zip",
+      "examples": 1
+    }
+  }
+}

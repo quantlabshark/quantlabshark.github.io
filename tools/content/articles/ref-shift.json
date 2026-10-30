@@ -1,0 +1,15 @@
+{
+  "slug": "ref-shift",
+  "title": "shift：移动数据位置",
+  "summary": "用移位表达信号与成交的时间关系。",
+  "kind": "reference",
+  "track": "",
+  "series": "",
+  "sort_order": 30,
+  "section_ids": [
+    "13c09645-17ba-4818-ac04-473fbd820fb0",
+    "c41526dd-742a-469f-9389-9bfddcee30dc"
+  ],
+  "body": "## shift：移动数据位置\n\n`shift(2)` 将每条数据向后移动两行，新增的前两行为空。下面用收盘价高于 20 日均线作为信号，再将它与对应持仓收益区间对齐。\n\n```python\nsignal = df[\"close\"] > df[\"close\"].rolling(20).mean()\nholding_return_interval = signal.shift(2).fillna(False)\n```\n\n这里约定第 t 日收盘生成信号、第 t+1 日收盘成交。因此，新仓位获得第 t+1 日收盘至第 t+2 日收盘的收益，信号需要放到第 t+2 行。若改用开盘成交，应重新按开盘价格与收益区间确定移动方式。\n",
+  "metadata": {}
+}

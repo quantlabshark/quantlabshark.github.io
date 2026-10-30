@@ -1,0 +1,37 @@
+{
+  "slug": "larsen-book-05-02",
+  "title": "置信区间、误差界与样本量",
+  "summary": "从标准化统计量反解均值区间，再推导比例的 Wilson 区间和样本量要求。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7029,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "一个点估计说明参数大约是多少，区间估计进一步表达精度。区间端点随样本改变，构造它们时需要利用已知的抽样分布。\n\n## 反解标准化不等式\n\n正态总体标准差 $\\sigma$ 已知，$Z=(\\bar X-\\mu)/(\\sigma/\\sqrt n)$ 服从标准正态。记 $z_q$ 为 q 分位数，选择两侧合计概率 $\\alpha$，有\n\n$$P\\left(-z_{1-\\alpha/2}\\le\\frac{\\bar X-\\mu}{\\sigma/\\sqrt n}\\le z_{1-\\alpha/2}\\right)=1-\\alpha.$$\n\n先乘正数 $\\sigma/\\sqrt n$，再移项解出 $\\mu$，得到区间 $\\bar X\\pm z_{1-\\alpha/2}\\sigma/\\sqrt n$。这种分布已知、不依赖未知参数的统计表达式称为枢轴量。\n\n取 n=25、$\\sigma=10$、$\\bar x=100$，95% 水平使用 $z_{0.975}\\approx1.96$，区间为 [96.08,103.92]。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/intervals.svg\" alt=\"重复抽样构造的置信区间，有的覆盖固定总体均值，有的没有覆盖。\" loading=\"lazy\"></figure>\n\n## 置信水平对应重复覆盖\n\n反复独立抽样并使用同一规则，95% 区间约有 95% 覆盖固定参数。抽样前端点随机，抽样后得到一个确定区间。置信水平描述这套构造规则的覆盖率，与贝叶斯模型中给参数指定概率分布的含义不同。\n\n## 比例的近似区间\n\nn 次试验成功 s 次，$\\hat p=s/n$。将未知 p 代入样本比例的标准误，可得常见近似区间 $\\hat p\\pm z\\sqrt{\\hat p(1-\\hat p)/n}$。n=100、s=40 时，标准误约 0.049，95% 区间约 [0.304,0.496]。\n\n成功或失败很少时，这个对称区间可能越过 [0,1]。Wilson 方法保留标准误中的未知 p，反解\n\n$$n(\\hat p-p)^2\\le z^2p(1-p).$$\n\n展开并移项，得到 $(n+z^2)p^2-(2n\\hat p+z^2)p+n\\hat p^2\\le0$。由二次方程两根给出端点：\n\n$$\\frac{\\hat p+z^2/(2n)\\ \\pm\\ z\\sqrt{\\hat p(1-\\hat p)/n+z^2/(4n^2)}}{1+z^2/n}.$$\n\nn=20、s=2、z=1.96 时，约为 [0.028,0.301]。若用精确二项区间，则通过反演二项尾概率求端点，不依赖这里的正态近似。\n\n## 由半宽规划样本量\n\n均值区间半宽 E 满足 $E=z\\sigma/\\sqrt n$，所以 $n\\ge(z\\sigma/E)^2$。$\\sigma=10,E=2$、95% 水平时，n 至少为 97。\n\n比例区间规划需给定预期 p。若没有相关信息，利用 $p(1-p)\\le1/4$，可取 $n\\ge z^2/(4E^2)$。E=0.03、z=1.96 时，向上取整为 1068。提高置信水平会增大 z，要求更多样本或更宽区间。\n\n> **鲨鱼说** 区间宽度同时反映数据波动、样本量和置信水平。比较两个区间之前，要先确认这三个条件是否相同。\n\n## 练习\n1. 已知σ=8，n=64，样本均值52，计算90%和95%均值置信区间。\n2. 希望比例估计的95%近似误差不超过0.05，在无先验比例信息时估算样本量。\n\n[本章习题](/read/?slug=larsen-book-05-08)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/larsen-book-05-02.zip",
+        "label": "置信区间、误差界与样本量 · Python 示例",
+        "size_bytes": 945,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第二部分 · 估计与检验",
+      "number": 29,
+      "chapter": "5",
+      "edition": "2026-10",
+      "minutes": 14,
+      "section": "2",
+      "chapter_title": "参数估计",
+      "source_sections": [
+        "5.3"
+      ]
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "slug": "quant-course-32",
+  "title": "32 · 新闻文本、分词与信息时点",
+  "summary": "保留新闻语义和历史版本，完成清洗、分词、去重与决策时间筛选，再区分语言标签与市场标签。",
+  "kind": "lesson",
+  "track": "机器学习与文本",
+  "series": "量化研究系统课程",
+  "sort_order": 32,
+  "cover_url": "/assets/figures/curriculum/course-32.svg",
+  "section_ids": [
+    "5c14064d-8915-5f7c-bcc6-f9bd10d4c40e"
+  ],
+  "body": "金融文本的含义同时依赖词语、否定、数字与事件时间。处理文本时，需要保留影响判断的内容，并记录文本何时首次可用于决策。\n\n## “利润不下降”不能清洗成“利润下降”\n\n这两句话共享大多数词，但“不”改变了结论。清洗文本的目标是统一无关格式并保留任务信息，而不是尽量减少字符。否定词、程度词、数字、百分号、货币单位和说话主体，都可能决定金融含义。\n\n原始文本保存收到的完整内容，清洗文本保存规则处理后的版本，分词把连续文字划成词或子词。停用词是针对当前任务忽略的词，不存在对所有任务都适用的通用名单。英文空格承担词界，直接删除全部空格会把词连在一起。\n\n## 新闻有不止一个时间\n\n事件可能昨天发生，报道今天09:00发布，系统09:02收到，解析09:02:10完成。09:01的决策不能使用它。可用时点应不早于发布时间、接收时间与处理完成时间；文章最后修订时刻也应单独记录。\n\n![新闻发布、接收与决策的时间关系](/assets/figures/curriculum/course-32.svg)\n\n图中的E1在09:02已收到，因此进入09:03决策；E2到09:06才收到，不能提前进入。相同事件的09:05转载不会让09:03以前多出一条独立信息。\n\n建议至少保留文章编号、事件编号、来源、原文、版本、发布时间、接收时间、处理完成时间与资产映射。文章编号区分来源，事件编号关联同一事项。若直接用最新正文覆盖原始文章，会把后来修正的金额放回更早日期。\n\n## 清洗顺序与中文分词\n\n先处理字符编码、HTML转义与全角半角，再去网页标签、合并多余空白；保留原始字段用于检查。中文可使用词典与统计分词器，自定义公司名、产品名和专业术语，避免把同一实体拆成不同形式。\n\n词典最长匹配是一个容易理解的起点：从当前位置尝试最长已知词，匹配后向后移动，未匹配字符先保留。它没有解决歧义和新词问题，但能展示词边界怎样产生。成熟分词器的词典和版本也应保存，否则更新可能改变历史输入。\n\n```python\nimport re\nimport html\nimport unicodedata\nimport pandas as pd\n\ndef clean_text(text):\n    text = unicodedata.normalize(\"NFKC\", html.unescape(text))\n    text = re.sub(r\"<[^>]+>\", \" \", text)\n    return re.sub(r\"\\s+\", \" \", text).strip()\n\ndef segment(text):\n    vocabulary = sorted([\"公司\", \"利润\", \"下降\", \"增长\", \"亏损\", \"改善\", \"不\"], key=len, reverse=True)\n    tokens, i = [], 0\n    while i < len(text):\n        if text[i].isspace():\n            i += 1\n            continue\n        token = next((w for w in vocabulary if text.startswith(w, i)), text[i])\n        tokens.append(token)\n        i += len(token)\n    return [w for w in tokens if w not in {\"公司\"}]\n\nnews = pd.DataFrame({\n    \"event\": [\"E1\", \"E1\", \"E2\"],\n    \"received\": pd.to_datetime([\"2024-01-02 09:02\", \"2024-01-02 09:05\", \"2024-01-02 09:06\"], utc=True),\n    \"text\": [\"<p>公司利润不下降</p>\", \"公司利润不下降\", \"公司利润下降\"]\n})\nnews[\"clean\"] = news[\"text\"].map(clean_text)\nnews = news.sort_values(\"received\").drop_duplicates([\"event\", \"clean\"])\nknown = news.loc[news[\"received\"] <= pd.Timestamp(\"2024-01-02 09:03\", tz=\"UTC\")].copy()\nknown[\"tokens\"] = known[\"clean\"].map(segment)\nprint(known[[\"event\", \"tokens\"]])\nassert known[\"tokens\"].iloc[0] == [\"利润\", \"不\", \"下降\"]\n```\n\n示例依赖pandas，其余为标准库。E1原文含HTML标签，清洗后得到“公司利润不下降”；词典分词并移除示例停用词“公司”，保留`[利润, 不, 下降]`。E1的同文转载被去重，09:03时只留下最早收到的一条。\n\n## 去重不只是删相同行\n\n相同文本可以用清洗后的内容和事件编号识别，近似转载还需要文本相似度或事件聚类。研究预测时，训练中出现原文、测试中出现同一事件转载，会使模型看起来很熟悉后段内容。划分应兼顾时间与事件分组。\n\n不过所有重复都删掉也未必正确。若研究传播强度，转载次数可能就是特征，应保留独立的传播统计，而不是把它与原文内容混成多份独立新闻。原文、转载和修订分别记录，才能适应不同研究目标。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>同一事件报道十次，不等于出现十条独立证据。可以研究传播次数，但内容分类和事件数量应使用不同字段。</p></aside>\n\n## 关键词能表达什么\n\n关键词提取可按词频、逆文档频率或词图关系排序，返回前K项及权重。它有助于概览主题，例如某篇报道集中出现“订单”“扩产”“产能”，但关键词权重不是上涨概率，也不直接给出受益公司的交易方向。\n\n“公司否认订单减少”可能同时含否认、订单、减少；只保留“减少”会误读。引用语句还要区分作者陈述与被引用者观点。抽查样本时应覆盖否定、转折、数字、公告表格、引号和乱码，而不是只看分词最整齐的句子。\n\n## 标签来自语言还是市场\n\n人工正负情绪标签描述表达倾向，需要统一规则并复核分歧。例如“亏损缩小”可能是经营改善，但仍然亏损；标注指南应明确判断的是变化、水平还是语气。\n\n未来收益标签则是另一项任务，必须定义资产、预测区间和成交时点。负面报道发布后股价仍可能上涨，因为坏消息已被预期，或者实际结果没有预期那么差。情绪分数可以作为候选特征，但要用随后收益单独验证。\n\n## 文本研究应保留的中间结果\n\n每次处理保留输入版本、清洗规则、分词词典、停用词表和去重映射。计算每日情绪时，还需说明没有新闻的股票如何处理，以及同一天多篇文章采用平均、加权还是极值。数据覆盖突然扩大时，新闻数量增长未必代表市场更关注。\n\n## 练习\n\n09:00发布的文章09:10才收到，09:05能否使用？文章下午修正“利润下降5%”为“下降50%”，历史上午回放应使用哪个版本？\n\n<details><summary>查看解答</summary>\n\n09:05尚未收到，不能使用。上午回放应使用当时收到的5%版本，下午收到修订后才更新为50%，并保留修订关系。否则会把未来信息回填到过去。\n\n</details>\n\n---\n\n[课程目录](/courses/)\n\n## 配套代码\n\n[下载本节代码（ZIP）](/assets/downloads/courses/quant-course-32.zip)\n\n压缩包包含脚本、运行说明、依赖清单和预期输出。解压后运行 `example.py`，即可复现本节计算。\n",
+  "metadata": {
+    "curriculum": {
+      "cover": "/assets/figures/curriculum/course-32.svg",
+      "level": "进阶",
+      "stage": 6,
+      "number": 32,
+      "edition": "2026-10",
+      "minutes": 40,
+      "source_refs": [
+        {
+          "book": "深入浅出Python量化交易实战",
+          "chapters": "10.2–10.3",
+          "pdf_pages": [
+            223,
+            225,
+            226,
+            227,
+            229,
+            230,
+            232,
+            234
+          ]
+        },
+        {
+          "book": "Quant Roadmap — Ultimate Edition",
+          "chapters": "7、14",
+          "pdf_pages": [
+            23,
+            24,
+            46
+          ]
+        }
+      ],
+      "stage_title": "机器学习与文本"
+    },
+    "code_download": {
+      "url": "/assets/downloads/courses/quant-course-32.zip",
+      "examples": 1
+    }
+  }
+}

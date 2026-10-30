@@ -1,0 +1,35 @@
+{
+  "slug": "larsen-book-14-05",
+  "title": "非参数统计：习题",
+  "summary": "41 道题，练习非参数统计中的概念、计算与方法选择。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7072,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "本章题组用于练习非参数统计。按题号选择下方题组；题面中的公式、数据和图形可点击放大。\n\n## 题组\n\n<details class=\"book-exercise-group\" id=\"questions-14-2-0\"><summary>符号检验与中位数推断 · 14.2.1—14.2.11</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-090-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"符号检验与中位数推断 · 14.2.1—14.2.11，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-090-01.webp\" alt=\"符号检验与中位数推断 · 14.2.1—14.2.11，第 1 幅\" width=\"1330\" height=\"1336\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-14-3-1\"><summary>Wilcoxon 符号秩与秩和检验 · 14.3.1—14.3.2</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-091-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"Wilcoxon 符号秩与秩和检验 · 14.3.1—14.3.2，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-091-01.webp\" alt=\"Wilcoxon 符号秩与秩和检验 · 14.3.1—14.3.2，第 1 幅\" width=\"1330\" height=\"553\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-14-3-2\"><summary>Wilcoxon 符号秩与秩和检验 · 14.3.3—14.3.10</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-092-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"Wilcoxon 符号秩与秩和检验 · 14.3.3—14.3.10，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-092-01.webp\" alt=\"Wilcoxon 符号秩与秩和检验 · 14.3.3—14.3.10，第 1 幅\" width=\"1330\" height=\"958\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-092-02.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"Wilcoxon 符号秩与秩和检验 · 14.3.3—14.3.10，放大第 2 幅\"><img src=\"/assets/exercises/foundations/larsen-092-02.webp\" alt=\"Wilcoxon 符号秩与秩和检验 · 14.3.3—14.3.10，第 2 幅\" width=\"1330\" height=\"247\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-14-4-3\"><summary>Kruskal–Wallis 与 Friedman 检验 · 14.4.1—14.4.8</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-093-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"Kruskal–Wallis 与 Friedman 检验 · 14.4.1—14.4.8，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-093-01.webp\" alt=\"Kruskal–Wallis 与 Friedman 检验 · 14.4.1—14.4.8，第 1 幅\" width=\"1330\" height=\"148\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-093-02.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"Kruskal–Wallis 与 Friedman 检验 · 14.4.1—14.4.8，放大第 2 幅\"><img src=\"/assets/exercises/foundations/larsen-093-02.webp\" alt=\"Kruskal–Wallis 与 Friedman 检验 · 14.4.1—14.4.8，第 2 幅\" width=\"1330\" height=\"1152\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-14-5-4\"><summary>Kruskal–Wallis 与 Friedman 检验 · 14.5.1—14.5.6</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-094-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"Kruskal–Wallis 与 Friedman 检验 · 14.5.1—14.5.6，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-094-01.webp\" alt=\"Kruskal–Wallis 与 Friedman 检验 · 14.5.1—14.5.6，第 1 幅\" width=\"1330\" height=\"858\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-094-02.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"Kruskal–Wallis 与 Friedman 检验 · 14.5.1—14.5.6，放大第 2 幅\"><img src=\"/assets/exercises/foundations/larsen-094-02.webp\" alt=\"Kruskal–Wallis 与 Friedman 检验 · 14.5.1—14.5.6，第 2 幅\" width=\"1330\" height=\"273\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-14-6-5\"><summary>游程检验与非参数方法的效率 · 14.6.1—14.6.6</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-095-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"游程检验与非参数方法的效率 · 14.6.1—14.6.6，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-095-01.webp\" alt=\"游程检验与非参数方法的效率 · 14.6.1—14.6.6，第 1 幅\" width=\"1330\" height=\"183\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-095-02.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"游程检验与非参数方法的效率 · 14.6.1—14.6.6，放大第 2 幅\"><img src=\"/assets/exercises/foundations/larsen-095-02.webp\" alt=\"游程检验与非参数方法的效率 · 14.6.1—14.6.6，第 2 幅\" width=\"1330\" height=\"1667\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-095-03.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"游程检验与非参数方法的效率 · 14.6.1—14.6.6，放大第 3 幅\"><img src=\"/assets/exercises/foundations/larsen-095-03.webp\" alt=\"游程检验与非参数方法的效率 · 14.6.1—14.6.6，第 3 幅\" width=\"1330\" height=\"1468\" loading=\"lazy\"></a></div>\n\n</details>\n\n",
+  "metadata": {
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第三部分 · 比较、回归与实验设计",
+      "number": 72,
+      "chapter": "14",
+      "edition": "2026-10",
+      "minutes": 34,
+      "section": "5",
+      "questions": 41,
+      "unit_type": "exercise",
+      "chapter_title": "非参数统计",
+      "source_sections": [
+        "14.2",
+        "14.3",
+        "14.4",
+        "14.5",
+        "14.6"
+      ]
+    }
+  }
+}

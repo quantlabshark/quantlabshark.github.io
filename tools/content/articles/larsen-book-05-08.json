@@ -1,0 +1,37 @@
+{
+  "slug": "larsen-book-05-08",
+  "title": "参数估计：习题",
+  "summary": "110 道题，练习参数估计中的概念、计算与方法选择。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7035,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "本章题组用于练习参数估计。按题号选择下方题组；题面中的公式、数据和图形可点击放大。\n\n## 题组\n\n<details class=\"book-exercise-group\" id=\"questions-5-2-0\"><summary>矩估计与最大似然估计 · 5.2.1—5.2.16</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-046-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"矩估计与最大似然估计 · 5.2.1—5.2.16，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-046-01.webp\" alt=\"矩估计与最大似然估计 · 5.2.1—5.2.16，第 1 幅\" width=\"1330\" height=\"826\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-046-02.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"矩估计与最大似然估计 · 5.2.1—5.2.16，放大第 2 幅\"><img src=\"/assets/exercises/foundations/larsen-046-02.webp\" alt=\"矩估计与最大似然估计 · 5.2.1—5.2.16，第 2 幅\" width=\"1330\" height=\"1466\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-5-2-1\"><summary>矩估计与最大似然估计 · 5.2.17—5.2.27</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-047-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"矩估计与最大似然估计 · 5.2.17—5.2.27，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-047-01.webp\" alt=\"矩估计与最大似然估计 · 5.2.17—5.2.27，第 1 幅\" width=\"1330\" height=\"1373\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-5-3-2\"><summary>置信区间、误差界与样本量 · 5.3.1—5.3.28</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-048-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"置信区间、误差界与样本量 · 5.3.1—5.3.28，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-048-01.webp\" alt=\"置信区间、误差界与样本量 · 5.3.1—5.3.28，第 1 幅\" width=\"1330\" height=\"1369\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-048-02.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"置信区间、误差界与样本量 · 5.3.1—5.3.28，放大第 2 幅\"><img src=\"/assets/exercises/foundations/larsen-048-02.webp\" alt=\"置信区间、误差界与样本量 · 5.3.1—5.3.28，第 2 幅\" width=\"1330\" height=\"1667\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-048-03.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"置信区间、误差界与样本量 · 5.3.1—5.3.28，放大第 3 幅\"><img src=\"/assets/exercises/foundations/larsen-048-03.webp\" alt=\"置信区间、误差界与样本量 · 5.3.1—5.3.28，第 3 幅\" width=\"1330\" height=\"922\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-5-4-3\"><summary>偏差、均方误差与估计效率 · 5.4.1—5.4.16</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-049-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"偏差、均方误差与估计效率 · 5.4.1—5.4.16，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-049-01.webp\" alt=\"偏差、均方误差与估计效率 · 5.4.1—5.4.16，第 1 幅\" width=\"1330\" height=\"352\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-049-02.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"偏差、均方误差与估计效率 · 5.4.1—5.4.16，放大第 2 幅\"><img src=\"/assets/exercises/foundations/larsen-049-02.webp\" alt=\"偏差、均方误差与估计效率 · 5.4.1—5.4.16，第 2 幅\" width=\"1330\" height=\"1138\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-5-4-4\"><summary>偏差、均方误差与估计效率 · 5.4.17—5.4.22</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-050-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"偏差、均方误差与估计效率 · 5.4.17—5.4.22，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-050-01.webp\" alt=\"偏差、均方误差与估计效率 · 5.4.17—5.4.22，第 1 幅\" width=\"1330\" height=\"220\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-050-02.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"偏差、均方误差与估计效率 · 5.4.17—5.4.22，放大第 2 幅\"><img src=\"/assets/exercises/foundations/larsen-050-02.webp\" alt=\"偏差、均方误差与估计效率 · 5.4.17—5.4.22，第 2 幅\" width=\"1330\" height=\"609\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-5-5-5\"><summary>Fisher 信息与 Cramér–Rao 下界 · 5.5.1—5.5.7</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-051-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"Fisher 信息与 Cramér–Rao 下界 · 5.5.1—5.5.7，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-051-01.webp\" alt=\"Fisher 信息与 Cramér–Rao 下界 · 5.5.1—5.5.7，第 1 幅\" width=\"1330\" height=\"711\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-5-6-6\"><summary>充分统计量与信息压缩 · 5.6.1—5.6.11</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-052-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"充分统计量与信息压缩 · 5.6.1—5.6.11，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-052-01.webp\" alt=\"充分统计量与信息压缩 · 5.6.1—5.6.11，第 1 幅\" width=\"1330\" height=\"173\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-052-02.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"充分统计量与信息压缩 · 5.6.1—5.6.11，放大第 2 幅\"><img src=\"/assets/exercises/foundations/larsen-052-02.webp\" alt=\"充分统计量与信息压缩 · 5.6.1—5.6.11，第 2 幅\" width=\"1330\" height=\"919\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-5-7-7\"><summary>一致性、渐近估计与自助法 · 5.7.1—5.7.6</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-053-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"一致性、渐近估计与自助法 · 5.7.1—5.7.6，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-053-01.webp\" alt=\"一致性、渐近估计与自助法 · 5.7.1—5.7.6，第 1 幅\" width=\"1330\" height=\"592\" loading=\"lazy\"></a></div>\n\n</details>\n\n<details class=\"book-exercise-group\" id=\"questions-5-8-8\"><summary>贝叶斯估计、先验与损失函数 · 5.8.1—5.8.9</summary>\n\n<div class=\"book-exercise-pages\"><a href=\"/assets/exercises/foundations/larsen-054-01.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"贝叶斯估计、先验与损失函数 · 5.8.1—5.8.9，放大第 1 幅\"><img src=\"/assets/exercises/foundations/larsen-054-01.webp\" alt=\"贝叶斯估计、先验与损失函数 · 5.8.1—5.8.9，第 1 幅\" width=\"1330\" height=\"458\" loading=\"lazy\"></a><a href=\"/assets/exercises/foundations/larsen-054-02.webp\" target=\"_blank\" rel=\"noopener\" aria-label=\"贝叶斯估计、先验与损失函数 · 5.8.1—5.8.9，放大第 2 幅\"><img src=\"/assets/exercises/foundations/larsen-054-02.webp\" alt=\"贝叶斯估计、先验与损失函数 · 5.8.1—5.8.9，第 2 幅\" width=\"1330\" height=\"444\" loading=\"lazy\"></a></div>\n\n</details>\n\n",
+  "metadata": {
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第二部分 · 估计与检验",
+      "number": 35,
+      "chapter": "5",
+      "edition": "2026-10",
+      "minutes": 46,
+      "section": "8",
+      "questions": 110,
+      "unit_type": "exercise",
+      "chapter_title": "参数估计",
+      "source_sections": [
+        "5.2",
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "5.7",
+        "5.8"
+      ]
+    }
+  }
+}

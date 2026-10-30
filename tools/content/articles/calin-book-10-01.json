@@ -1,0 +1,38 @@
+{
+  "slug": "calin-book-10-01",
+  "title": "指数鞅与漂移补偿",
+  "summary": "从零条件均值的积分构造鞅，并理解指数归一化和可积条件。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "随机微积分及其应用",
+  "sort_order": 5056,
+  "cover_url": "",
+  "section_ids": [
+    "17859c88-b779-5654-b120-7a4cc7b39714"
+  ],
+  "body": "## 条件期望在鞅定义中的作用\n\n设 $\\mathcal F_s$ 表示时刻 $s$ 已知的信息。$E(Y\\mid\\mathcal F_s)$ 是利用这些信息对 $Y$ 作出的平均预测，本身可以是随机变量。例如 $E(W_t\\mid\\mathcal F_s)=W_s$：知道当前位置后，未来增量的平均仍为零。鞅的定义 $E(M_t\\mid\\mathcal F_s)=M_s$ 要求这种关系对任意 $s<t$ 成立，同时要求 $M_t$ 可积、只使用当前和过去信息。\n\n后面会反复使用两条规则。若 $X$ 已在 $s$ 时刻知道，则 $E(XY\\mid\\mathcal F_s)=X E(Y\\mid\\mathcal F_s)$；若 $s\\le u$，则 $E[E(Y\\mid\\mathcal F_u)\\mid\\mathcal F_s]=E(Y\\mid\\mathcal F_s)$。第二条称为塔式法则：先用较多信息预测，再退回较少信息，与直接预测相同。\n\n## 伊藤积分为何具有鞅性质\n\n先看左端点分段常数过程 $H_u=H_i$，其中 $H_i$ 在 $t_i$ 时刻已知。一段积分为 $H_i(W_{t_{i+1}}-W_{t_i})$，所以\n\n$$E[H_i(W_{t_{i+1}}-W_{t_i})\\mid\\mathcal F_{t_i}]=H_i\\cdot0=0.$$\n\n若 $s<t_i$，再用塔式法则，这段积分给定 $\\mathcal F_s$ 的条件均值仍为零。各段相加便得 $E(\\int_s^tH_udW_u\\mid\\mathcal F_s)=0$。一般可预测、平方可积的 $H$ 用简单过程逼近，伊藤等距保证积分在平方均值下收敛，条件期望也随之收敛。因此，当 $E\\int_0^T H_u^2du<\\infty$ 时，$M_t=\\int_0^tH_udW_u$ 是平方可积鞅。\n\n这里用到的是未来积分的**条件均值为零**。例如未来积分 $W_s(W_t-W_s)$ 的条件方差为 $W_s^2(t-s)$，它依赖过去，因而通常不与过去独立。\n\n对 $M^2$ 应用伊藤公式得到\n\n$$d(M_t^2)=2M_tH_tdW_t+H_t^2dt.$$\n\n所以 $M_t^2-\\int_0^tH_u^2du$ 是局部鞅；在所述平方可积鞅框架下，它也是可积鞅。被减去的二次变差是平方函数由波动累积的平均增长。例如 $H_u=u$ 时，应扣掉 $t^3/3$，而非 $t$。\n\n## 指数需要扣掉一半方差\n\n令 $A_t=\\int_0^t\\theta_sdW_s$、$Q_t=\\int_0^t\\theta_s^2ds$，定义\n\n$$Z_t=\\exp(A_t-Q_t/2).$$\n\n对指数应用伊藤公式，时间项 $-Z_tdQ_t/2$ 与二阶修正 $Z_td[A]_t/2$ 抵消，因此 $dZ_t=Z_t\\theta_tdW_t$。这说明它是非负局部鞅。要把它用于概率权重，还需 $EZ_t=1$，仅有局部鞅性质并不自动保证这一点。\n\n一个常用充分条件是 Novikov 条件：$E\\exp[\\tfrac12\\int_0^T\\theta_s^2ds]<\\infty$。在该条件下 $Z$ 是真鞅。若 $\\theta$ 是确定平方可积函数，则 $A_t$ 为方差 $Q_t$ 的正态变量，直接用指数矩便得 $EZ_t=e^{-Q_t/2}e^{Q_t/2}=1$。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>伊藤等距，即随机积分的二阶矩与被积过程平方的时间积分期望相等的关系。</p></aside>\n\n## 确定参数的数值例子\n\n取常数 $\\theta=0.4$、$T=2$。此时 $Q_T=0.32$，$Z_T=e^{0.4W_2-0.16}$，均值为一，二阶矩为 $e^{0.32}$，方差为 $e^{0.32}-1\\approx0.377128$。多数权重接近一，少数较大权重补偿较小权重，保持平均不变。\n\n当 $\\theta_s=s$，$Q_t=t^3/3$，分部积分又给 $\\int_0^tsdW_s=tW_t-\\int_0^tW_sds$。因此 $\\exp[tW_t-\\int_0^tW_sds-t^3/6]$ 是鞅。补偿项由整个积分的方差决定，不能只看终点系数 $t$。\n\n## 普通补偿与指数补偿\n\n对光滑函数 $f$，伊藤公式写成\n\n$$f(W_t)-f(W_0)=\\int_0^tf'(W_s)dW_s+\\frac12\\int_0^tf''(W_s)ds.$$\n\n把右边时间积分移到左边，便得到无漂移过程。若梯度对应的随机积分平方可积，这个过程是真鞅。例如\n\n$$W_t^3-3\\int_0^tW_sds,\\qquad e^{cW_t}-\\frac{c^2}{2}\\int_0^te^{cW_s}ds$$\n\n都是有限时间上的鞅；第二式的积分中也必须保留参数 $c$。三次函数的另一种补偿是 $W_t^3-3tW_t$：直接对 $f(t,x)=x^3-3tx$ 求导，$f_t+f_{xx}/2=-3x+3x=0$，故同样无漂移。两种补偿相差一个随机积分，并不互相矛盾。\n\n若 $\\Delta f=\\lambda f$，则 $f(W_t)-\\tfrac\\lambda2\\int_0^tf(W_s)ds$ 采用加法补偿，而 $e^{-\\lambda t/2}f(W_t)$ 采用乘法补偿。用乘积公式可见两者都消除 $\\lambda f/2$ 的时间项。以 $f(x)=\\sin x$ 为例，$\\lambda=-1$，因此 $e^{t/2}\\sin W_t$ 是鞅；余弦同理。\n\n二维例子 $f(x,y)=e^x\\cos y$ 的二阶偏导分别为 $e^x\\cos y$ 和 $-e^x\\cos y$，和为零。其梯度平方长度为 $e^{2x}$，而 $E e^{2W_s^1}=e^{2s}$，在有限时间上的积分有限。这同时说明无漂移和真鞅两项条件。\n\n## 乘积构造与条件信息\n\n两个鞅相乘一般会多出交叉变差。例如 $W_t^2$ 的漂移为一。考虑一个有漂移的过程\n\n$$X_t=W_t+\\int_0^tu(s)ds,\\qquad Z_t=\\exp\\!\\left[-\\int_0^tu(s)dW_s-\\frac12\\int_0^tu(s)^2ds\\right],$$\n\n其中 $u$ 为确定有界函数。由 $dZ=-uZ,dW$，乘积公式给\n\n$$\\begin{aligned}d(ZX)&=Z(u,dt+dW)+X(-uZ,dW)+(-uZ),dt\\\\&=Z(1-uX)dW.\\end{aligned}$$\n\n原来的漂移恰被交叉变差抵消。有限时间上，$Z$ 有各阶矩，$X$ 有有限高斯矩；Cauchy–Schwarz 不等式说明 $E\\int_0^T Z_s^2(1-u(s)X_s)^2ds<\\infty$。因此 $ZX$ 是真鞅。后面用 $Z_T$ 给路径加权时，正是这个乘积关系把 $X$ 变成新概率下的鞅。\n\n对于确定 $u$ 的指数过程，还可直接拆为 $Z_t=Z_sR_{s,t}$。$R_{s,t}$ 只由未来确定核积分构成，独立于 $\\mathcal F_s$，且均值一，所以 $E(Z_t\\mid\\mathcal F_s)=Z_s$。这验证了所有时刻之间的条件关系；单独验证某一时刻 $EZ_t=1$ 还没有给出这项关系。\n\n## 非负局部鞅为何需要额外检查\n\n局部化可以让每个停止版本保持期望，但去掉停止阈值时，极少数极大路径可能失去期望贡献。非负性通常只保证期望不会增加，不能自动保证它始终等于初值。因此用随机指数作密度时，归一化是否保留是一项数学条件。\n\nNovikov 条件是方便使用的充分条件；它失败并不立即说明指数不是鞅，需要其他论证。确定有界参数在有限时间上最容易验证，适合先用于理解测度变换，再逐渐处理随状态变化的参数。\n\n![指数鞅终点权重的右偏分布](/assets/illustrations/theory/calin/calin-book-10-01.svg)\n\n取参数 0.4、时间二。虚线为均值一；右侧少量较大权重使均值高于分布峰值。图中展示权重零至四的主要范围。\n\n<aside class=\"shark-note\"><strong>鲨鱼说</strong><p>“微分里没有漂移”先得到局部鞅。若要取期望、使用停止定理或把它当概率密度，还需要检查积分或指数的可积性。这一步决定公式能否用于后面的计算。</p></aside>\n\n## 练习\n\n设 $Z_t=e^{\\lambda W_t-\\lambda^2t/2}$。求 $E(Z_t\\mid\\mathcal F_s)$ 和 $E(Z_t^2\\mid\\mathcal F_s)$。\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n记 $h=t-s$、$\\Delta W=W_t-W_s$。已知过去后，$Z_s$ 为已知量，$\\Delta W$ 独立且服从 $N(0,h)$。\n\n先写出分解\n\n$$Z_t=Z_s e^{\\lambda\\Delta W-\\lambda^2h/2}.$$\n\n正态指数矩为 $E e^{a\\Delta W}=e^{a^2h/2}$。取 $a=\\lambda$，得到\n\n$$E(Z_t\\mid\\mathcal F_s)=Z_s e^{-\\lambda^2h/2}e^{\\lambda^2h/2}=Z_s.$$\n\n平方后应同时把随机指数乘二和补偿项乘二：$Z_t^2=Z_s^2e^{2\\lambda\\Delta W-\\lambda^2h}$。于是\n\n$$E(Z_t^2\\mid\\mathcal F_s)=Z_s^2e^{-\\lambda^2h}e^{(2\\lambda)^2h/2}=Z_s^2e^{\\lambda^2h}.$$\n\n减去条件均值的平方，可得条件方差 $Z_s^2(e^{\\lambda^2h}-1)$。若 $\\lambda=0.4$、$h=2$，它约为 $0.377128Z_s^2$。因此即使未来权重的平均不变，不确定性仍会随当前权重和未来时间增加。\n\n</details>\n\n## 配套代码\n\n[下载本节 Python 代码](/assets/downloads/theory/calin-book-10-01.zip)\n\n解压后运行 `calin-book-10-01.py`。需安装 numpy、scipy 和 matplotlib；脚本会生成图像与数值核查结果，无需另行下载数据。\n",
+  "metadata": {
+    "theory_book": {
+      "book": "stochastic-calculus",
+      "part": "第三部分 · 随机方程与测度变换",
+      "number": 56,
+      "chapter": "10",
+      "edition": "2026-10",
+      "minutes": 40,
+      "section": "1",
+      "source_pages": [
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236
+      ],
+      "chapter_title": "鞅、时间变换与测度变换",
+      "source_sections": [
+        "10.1"
+      ]
+    }
+  }
+}

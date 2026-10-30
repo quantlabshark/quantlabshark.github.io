@@ -1,0 +1,18 @@
+{
+  "slug": "resource-sklearn",
+  "title": "scikit-learn 官方文档",
+  "summary": "预处理、模型基线与防止数据泄漏。",
+  "kind": "recommendation",
+  "track": "",
+  "series": "",
+  "sort_order": 35,
+  "section_ids": [
+    "4560f087-a08d-4b02-8eb8-545d6594d86c",
+    "6cb0390d-4b0e-459e-a155-9dfb328810ec"
+  ],
+  "body": "## 预处理、建模与验证\n\nscikit-learn 文档介绍常用模型、数据变换与模型评价。重点理解训练和测试的划分、预处理参数的拟合范围，以及 Pipeline 怎样将这些步骤放入同一验证流程。\n\n[打开 scikit-learn 官方文档](https://scikit-learn.org/stable/common_pitfalls.html)\n",
+  "metadata": {
+    "url": "https://scikit-learn.org/stable/common_pitfalls.html",
+    "external_url": "https://scikit-learn.org/stable/common_pitfalls.html"
+  }
+}

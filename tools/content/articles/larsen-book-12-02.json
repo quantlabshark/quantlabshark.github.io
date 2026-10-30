@@ -1,0 +1,38 @@
+{
+  "slug": "larsen-book-12-02",
+  "title": "多重比较与线性对比",
+  "summary": "用 Tukey 区间比较全部组对，用线性对比表达指定问题，并计算对比平方和及正交性。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7062,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "方差分析回答均值是否全部相同。若需要知道差异具体出现在哪里，应把比较对象写得更明确，再选择同时比较或预设对比。\n\n## 全部两两比较\n\n对 k 组等样本量 n 的数据，误差均方为 MSE、自由度为 $\\nu$。Tukey 同时区间为\n\n$$\\bar Y_i-\\bar Y_j\\ \\pm q_{1-\\alpha;k,\\nu}\\sqrt{MSE/n}.$$\n\nq 是学生化极差分布分位数，考虑了全部均值中最大差异的波动。组样本量不等时，Tukey–Kramer 形式把根号改为 $\\sqrt{MSE(1/n_i+1/n_j)/2}$。\n\n接续均值 2、3、5、每组 n=3、MSE=1、误差自由度 6 的例子，95% q 约为 4.339，区间半宽约 2.505。A−C 为 −3，区间约 [−5.505,−0.495]；A−B 为 −1，区间约 [−3.505,1.505]。\n\n## 用系数表达对比\n\n若问题是 A 是否不同于 B、C 的平均，写 $C=\\mu_A-(\\mu_B+\\mu_C)/2$。一般线性对比为 $C=\\sum_jc_j\\mu_j$，且 $\\sum_jc_j=0$，从而对所有组共同平移不敏感。\n\n独立组均值的方差相加，得到\n\n$$\\hat C=\\sum_jc_j\\bar Y_j,\\qquad\nSE(\\hat C)=\\sqrt{MSE\\sum_j\\frac{c_j^2}{n_j}}.$$\n\n检验 $C=C_0$ 使用 $T=(\\hat C-C_0)/SE(\\hat C)$，参考 $t_\\nu$。\n\n本例 c=(1,−1/2,−1/2)，$\\hat C=-2$，标准误为 $\\sqrt{(1+1/4+1/4)/3}=\\sqrt{1/2}$，t≈−2.828。\n\n## 对比平方和与正交\n\n当检验零对比时，$SS_C=\\hat C^2/\\sum_jc_j^2/n_j$，本例为 8。两个对比 c、d 满足 $\\sum_jc_jd_j/n_j=0$ 时正交，其估计协方差为零；正态模型下进一步独立。\n\nk−1 个独立正交对比可将组间平方和分解为不同方向的差异。预先指定的少量对比与看完结果再挑最大的差异具有不同选择过程，后者需相应处理多重比较。\n\n> **鲨鱼说** 对比系数就是问题的数学表达。把“比较 A 与另外两组平均”写成 (1,−1/2,−1/2)，估计值和标准误便可按同一组系数计算。\n\n## 练习\n1. 四组均值分别10、12、15、17，定义“前两组平均与后两组平均”的对比并计算估计值。\n2. 在等样本量三组中，检查(1,-1,0)与(1/2,1/2,-1)是否正交。\n\n[本章习题](/read/?slug=larsen-book-12-04)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/larsen-book-12-02.zip",
+        "label": "多重比较与线性对比 · Python 示例",
+        "size_bytes": 1020,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第三部分 · 比较、回归与实验设计",
+      "number": 62,
+      "chapter": "12",
+      "edition": "2026-10",
+      "minutes": 11,
+      "section": "2",
+      "chapter_title": "单因素方差分析",
+      "source_sections": [
+        "12.3",
+        "12.4"
+      ]
+    }
+  }
+}

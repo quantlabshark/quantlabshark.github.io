@@ -1,0 +1,32 @@
+{
+  "slug": "zhou-full-3-3",
+  "title": "3.3 偏导数与重积分",
+  "summary": "说明偏导、链式法则与积分换元，并用极坐标计算高斯积分。",
+  "kind": "reference",
+  "track": "微积分与线性代数",
+  "series": "经典量化面试教材",
+  "sort_order": 1013,
+  "cover_url": "",
+  "section_ids": [
+    "061c5d65-3752-51b1-815a-0a831b5df727"
+  ],
+  "body": "偏导数在保持其他变量不变时，衡量某个变量的局部影响。重积分则累加多维区域内的贡献，积分顺序与区域边界需要相互一致。\n\n## 偏导数与链式法则\n\n对 $w=f(x,y)$，固定其他变量后取导数，例如 $f_x(x_0,y_0)=\\lim_{h\\to0}[f(x_0+h,y_0)-f(x_0,y_0)]/h$。二阶偏导包括 $f_{xx},f_{yy},f_{xy},f_{yx}$；混合偏导在邻域内连续时相等。\n\n若 $w=f(x_1,\\ldots,x_m)$，而各 $x_i$ 依赖 $t_1,\\ldots,t_n$，则\n\n$$\\frac{\\partial w}{\\partial t_j}=\\sum_{i=1}^m\\frac{\\partial f}{\\partial x_i}\\frac{\\partial x_i}{\\partial t_j}.$$\n\n二维积分转成极坐标时，$x=r\\cos\\theta$、$y=r\\sin\\theta$，雅可比为 $r$，故 $dxdy=r\\,drd\\theta$。积分区域也必须同步转换。\n\n## 高斯积分\n\n**题目。**计算 $\\int_0^\\infty e^{-x^2/2}dx$。\n\n**考点**：二重积分；极坐标；正态归一化。\n\n<details class=\"interview-answer\">\n<summary>查看分析与解答</summary>\n\n### 必要知识\n\n有些函数没有初等原函数，但整个区间上的定积分仍可求出。极坐标把平面点写为 x=r cosθ、y=r sinθ，其面积元为 r dr dθ；这个 r 来自半径越大、同一角度对应的弧长越长。\n\n### 分析思路\n\n直接积分 e⁻ˣ²/² 不容易。把全实轴积分平方后，指数变成 −(x²+y²)/2，只依赖到原点的距离。圆对称结构提示改用极坐标，径向积分便可直接换元。\n\n### 解答步骤\n\n令 $I=\\int_{-\\infty}^{\\infty}e^{-x^2/2}dx>0$。由于被积函数非负，乘积积分可合为整个平面的积分：\n\n$$I^2=\\iint_{\\mathbb R^2}e^{-(x^2+y^2)/2}dxdy\n=\\int_0^{2\\pi}\\int_0^\\infty e^{-r^2/2}r\\,drd\\theta.$$\n\n令 u=r²/2，du=r dr，则径向积分为 $\\int_0^\\infty e^{-u}du=1$，角度积分为 2π。因此 I²=2π，取正根 I=√(2π)。原题只取非负半轴，利用偶对称性：\n\n$$\\int_0^\\infty e^{-x^2/2}dx=\\frac{\\sqrt{2\\pi}}2=\\sqrt{\\pi/2}.$$\n\n这也解释了标准正态密度为什么要除以 √(2π)：除后全实轴面积恰好为 1。\n\n### 同类问题\n\n遇到平方和指数，可考虑先升维形成圆对称，再转换坐标。对 a>0，换元 y=√a x 可得 $\\int_{-\\infty}^{\\infty}e^{-ax^2/2}dx=\\sqrt{2\\pi/a}$；漏掉极坐标的 r 会导致错误结果。\n\n</details>\n",
+  "metadata": {
+    "interview": {
+      "book": "zhou",
+      "topic": "微积分与线性代数",
+      "number": 13,
+      "chapter": 3,
+      "edition": "2026-10",
+      "section": "3.3",
+      "difficulty": "综合",
+      "full_source": true,
+      "answer_count": 1,
+      "source_pages": [
+        21
+      ],
+      "question_count": 1,
+      "answers_collapsed": true
+    }
+  }
+}

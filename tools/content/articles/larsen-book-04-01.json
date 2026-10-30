@@ -1,0 +1,38 @@
+{
+  "slug": "larsen-book-04-01",
+  "title": "泊松分布与稀有事件计数",
+  "summary": "由小概率二项试验的极限推导泊松分布，计算时间窗计数、均值和方差。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7022,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "固定时间内有多少个请求到达、某段材料上有多少处缺陷，都属于事件计数。若事件在细小区间内少见，且不同区间的发生近似独立，泊松模型提供一种计数分布。\n\n## 参数表示平均次数\n\n泊松变量的概率为\n\n$$P(X=k)=e^{-\\lambda}\\frac{\\lambda^k}{k!},\\qquad k=0,1,2,\\ldots.$$\n\n$\\lambda>0$ 表示指定观察范围内的平均次数。若到达强度 r 为每分钟 2 次，观察 t=3 分钟，则 $\\lambda=rt=6$。强度带时间单位，平均次数没有单位；两者不可混用。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/poisson.svg\" alt=\"泊松分布随事件强度增加向右移动并变宽。\" loading=\"lazy\"></figure>\n\n## 从二项概率取极限\n\n将观察范围分成 n 个小段，各段独立，发生概率为 $\\lambda/n$。总计数的二项概率为\n\n$$\\binom nk(\\lambda/n)^k(1-\\lambda/n)^{n-k}.$$\n\n固定 k 后，将它拆成三部分：\n\n$$\\frac{\\lambda^k}{k!}\\prod_{j=0}^{k-1}(1-j/n)\\cdot(1-\\lambda/n)^n\\cdot(1-\\lambda/n)^{-k}.$$\n\nn 趋于无穷时，有限乘积趋于 1，中间项趋于 $e^{-\\lambda}$，末项趋于 1，便得到泊松概率。它对应“机会很多、每次概率很小、总平均次数有限”的机制。\n\n## 均值、方差与独立可加性\n\n对概率求和并平移下标，可得\n\n$$E(X)=\\sum_{k=1}^{\\infty}k e^{-\\lambda}\\frac{\\lambda^k}{k!}\n=\\lambda e^{-\\lambda}\\sum_{j=0}^{\\infty}\\frac{\\lambda^j}{j!}=\\lambda.$$\n\n同理 $E[X(X-1)]=\\lambda^2$，所以 $E(X^2)=\\lambda^2+\\lambda$，方差也等于 $\\lambda$。矩母函数为 $\\exp[\\lambda(e^t-1)]$；两个独立泊松变量相加时，矩母函数相乘，参数相加。\n\n## 尾概率的计算\n\n设备每小时平均告警 0.5 次，按恒定强度泊松过程建模，两小时的 $\\lambda=1$。无告警概率为 $e^{-1}\\approx0.3679$，至少两次为 $1-e^{-1}-e^{-1}\\approx0.2642$。\n\n另取 $\\lambda=3$，$P(X\\le2)=e^{-3}(1+3+9/2)\\approx0.42319$。附件将它与 $\\operatorname{Bin}(n,3/n)$ 比较，可观察二项分布随 n 增大接近这个概率。\n\n若样本方差明显大于均值，应检查是否把不同强度的时段混在一起，或事件存在聚集。这样的数据结构会改变泊松模型的均值方差关系。\n\n> **鲨鱼说** $\\lambda$ 可以大于一，因为它是次数的平均。至少发生一次的概率则是 $1-e^{-\\lambda}$，始终位于零和一之间。\n\n## 练习\n1. 每分钟平均到达0.3个请求，计算5分钟内恰好2个和至少1个请求的概率。\n2. 两个独立计数分别服从Pois(2)和Pois(3)，求总计数恰好4的概率。\n\n[本章习题](/read/?slug=larsen-book-04-06)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/larsen-book-04-01.zip",
+        "label": "泊松分布与稀有事件计数 · Python 示例",
+        "size_bytes": 927,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第一部分 · 概率与随机变量",
+      "number": 22,
+      "chapter": "4",
+      "edition": "2026-10",
+      "minutes": 14,
+      "section": "1",
+      "chapter_title": "常用概率分布",
+      "source_sections": [
+        "4.1",
+        "4.2"
+      ]
+    }
+  }
+}

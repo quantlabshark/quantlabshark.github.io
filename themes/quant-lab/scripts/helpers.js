@@ -3,6 +3,7 @@
 hexo.extend.generator.register('index', () => []);
 hexo.extend.helper.register('learning', () => hexo.locals.get('data').learning);
 hexo.extend.helper.register('breadcrumb_parent', page => {
+  if(page.item)return require('../../../lib/static-content.cjs').parent(page.item);
   const home={url:'/',label:'学习概览'},path=String(page.path||'');
   if(page.layout==='interview-experience-page')return {url:'/interview/experience/',label:'经验与求职'};
   if(page.layout==='interview-book')return {url:'/interview/',label:'量化笔试与面试'};
@@ -10,7 +11,6 @@ hexo.extend.helper.register('breadcrumb_parent', page => {
   if(page.layout==='topic')return {url:'/topics/',label:'专题学习'};
   if(['commands/index.html','dictionaries/index.html'].includes(path))return {url:'/quick-reference/',label:'速查手册'};
   if(/^[^/]+\/index\.html$/.test(path))return home;
-  if(page.section==='admin'||path.startsWith('admin/'))return {url:'/admin/',label:'管理平台'};
   const labels={courses:'系统学习',lessons:'课程目录',topics:'专题学习',programming:'Python 实践',tools:'工具生态',resources:'资料中心',recommendations:'资料中心',sharing:'实践与分享',authors:'实践与分享',community:'讨论中心',assignments:'作业与实践',announcements:'网站公告',studio:'个人中心'};
   const section=page.section||path.split('/')[0],name=labels[section];
   if(!name)return home;

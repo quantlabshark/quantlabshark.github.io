@@ -1,0 +1,37 @@
+{
+  "slug": "calin-book-02-09",
+  "title": "概率不等式：从矩估计尾部风险",
+  "summary": "推导 Jensen、Cauchy–Schwarz、Markov、Chebyshev 与 Chernoff 界，并解释适用差别。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "随机微积分及其应用",
+  "sort_order": 5012,
+  "cover_url": "",
+  "section_ids": [
+    "17859c88-b779-5654-b120-7a4cc7b39714"
+  ],
+  "body": "## 凸函数与平均值\n\n凸函数的图形位于任一支撑直线上方。若 $\\varphi$ 可微，在 $m=\\mathbb E[X]$ 处有 $\\varphi(x)\\ge\\varphi(m)+\\varphi'(m)(x-m)$。对两边取期望，线性项的均值为零，得到 Jensen 不等式\n\n$$\\varphi(\\mathbb E[X])\\le\\mathbb E[\\varphi(X)].$$\n\n取 $\\varphi(x)=x^2$ 可得 $(\\mathbb E[X])^2\\le\\mathbb E[X^2]$；取指数函数可得 $e^{\\mathbb E[X]}\\le\\mathbb E[e^X]$。对凹函数，不等号反向。它适用于非线性平均，但通常不能给出两边差距的精确大小。\n\n## Cauchy–Schwarz 控制乘积\n\n对平方可积的 $X,Y$，\n\n$$|\\mathbb E[XY]|\\le\\sqrt{\\mathbb E[X^2]\\mathbb E[Y^2]}.$$\n\n可以从任意实数 $a$ 下 $\\mathbb E[(X-aY)^2]\\ge0$ 出发，要求关于 $a$ 的二次多项式判别式不大于零。取 $Y=1$，得到 $\\mathbb E|X|\\le\\sqrt{\\mathbb E[X^2]}$，因此平方可积必然可积。\n\n对中心化变量应用该不等式，得到 $|\\operatorname{Corr}(X,Y)|\\le1$。等号对应两个中心化变量几乎必然成比例。\n\n若 $\\mathbb E[Y^2]>0$，把 $\\mathbb E[(X-aY)^2]$ 展开为 $\\mathbb E[X^2]-2a\\mathbb E[XY]+a^2\\mathbb E[Y^2]$。它在 $a=\\mathbb E[XY]/\\mathbb E[Y^2]$ 处最小，最小值必须非负，所以\n\n$$\\mathbb E[X^2]-\\frac{\\mathbb E[XY]^2}{\\mathbb E[Y^2]}\\ge0.$$\n\n若 $\\mathbb E[Y^2]=0$，则 $Y=0$ 几乎必然，不等式直接成立。非退化情况下，等号对应最小平方误差为零，即 $X=aY$ 几乎必然。这个证明同时说明 Cauchy–Schwarz 与线性最小二乘之间的联系。\n\nJensen 不等式中需要 $X$ 可积、$\\varphi(X)$ 的期望有定义；严格凸性且 $X$ 不是几乎必然常数时，在有限期望条件下才得到严格不等式。仅有“对称分布”并不能决定是否严格，因为常数分布也对称。\n\n## Markov 与 Chebyshev 界\n\n对非负变量 $Y$ 和 $a>0$，有 $Y\\ge a\\mathbf1_{\\{Y\\ge a\\}}$，取期望便得\n\n$$\\mathbb P(Y\\ge a)\\le\\frac{\\mathbb E[Y]}a.$$\n\n令 $Y=|X|^p$，可得 $\\mathbb P(|X|\\ge a)\\le\\mathbb E|X|^p/a^p$。再令 $Y=(X-\\mu)^2$，得到 Chebyshev 不等式\n\n$$\\mathbb P(|X-\\mu|\\ge a)\\le\\frac{\\sigma^2}{a^2}.$$\n\n它只要求有限方差，适用范围宽，但往往较松。对标准正态，$a=3$ 时给出的上界是 $1/9\\approx0.1111$，真实双侧概率约为 0.00270。上界的用途是保证不会超过某值，不等于对概率的精确估计。\n\n## Chernoff 界利用指数矩\n\n当 $u>0$ 时，$X\\ge a$ 蕴含 $e^{uX}\\ge e^{ua}$。对指数变量应用 Markov 不等式，得到\n\n$$\\mathbb P(X\\ge a)\\le e^{-ua}\\mathbb E[e^{uX}].$$\n\n选择使右边最小的 $u$，就得到 Chernoff 界。若 $X\\sim N(0,\\sigma^2)$，右边为 $\\exp(-ua+u^2\\sigma^2/2)$；配方或求导可得最优 $u=a/\\sigma^2$，于是\n\n$$\\mathbb P(X\\ge a)\\le e^{-a^2/(2\\sigma^2)}.$$\n\n若 $N\\sim\\operatorname{Poisson}(\\lambda)$，对整数 $k>\\lambda$，优化 $-uk+\\lambda(e^u-1)$ 得 $u=\\log(k/\\lambda)$，故\n\n$$\\mathbb P(N\\ge k)\\le\\exp\\left[-k\\log\\frac k\\lambda+k-\\lambda\\right].$$\n\n对左尾，选 $u<0$，同样可得 $\\mathbb P(X\\le a)\\le e^{-ua}\\mathbb E[e^{uX}]$，因为乘以负数会反转原来的不等号。参数必须使指数矩存在。重尾分布可能没有正指数矩，此时不能使用对应的右尾 Chernoff 计算。\n\n### 对同一个计数问题比较四种结果\n\n令 $N\\sim\\operatorname{Poisson}(3)$，计算至少发生 8 次的概率。只使用均值，Markov 界为 $3/8=0.375$。使用方差，事件 $N\\ge8$ 蕴含 $|N-3|\\ge5$，Chebyshev 界为 $3/25=0.12$。\n\nChernoff 方法取 $u=\\log(8/3)>0$，得到\n\n$$\\mathbb P(N\\ge8)\\le e^{-8\\log(8/3)+8-3}\\approx0.058039.$$\n\n精确概率则是 $1-e^{-3}\\sum_{k=0}^7 3^k/k!\\approx0.011905$。三种界都有效，但使用更多分布信息得到的界仍不一定等于真实概率。\n\n优化时必须检查参数方向。对正态右尾阈值 $a>\\mu$，最优指数参数 $(a-\\mu)/\\sigma^2$ 才是正数；若 $a\\le\\mu$，直接代入负参数就不再是这一右尾推导，应保留平凡上界或重新选择方法。\n\n## 同向函数为什么具有非负协方差\n\n若 $f,g$ 都单调增加，令 $X'$ 为 $X$ 的独立同分布副本，则\n\n$$2\\operatorname{Cov}(f(X),g(X))\n=\\mathbb E[(f(X)-f(X'))(g(X)-g(X'))]\\ge0.$$\n\n因为两个差值总是同号。两函数同时递减时结论也成立；一个递增、一个递减时不等号反向。这里假设相关乘积可积。这条关系解释了同一个状态变量的两个递增函数为何通常一起上升；它不要求 $X$ 服从正态分布。\n\n> **鲨鱼说** 概率不等式根据已知分布信息给出尾部概率的界。只有均值可用 Markov；有方差可用 Chebyshev；知道指数矩才有条件优化 Chernoff。更紧的概率界通常需要更多分布信息。\n\n### 从尾概率反过来计算矩\n\n对非负 $Y$ 和 $p>0$，逐条结果有 $Y^p=\\int_0^Yp t^{p-1}dt$。对指示函数积分并交换非负积分，得到\n\n$$\\mathbb E[Y^p]=\\int_0^\\infty p t^{p-1}\\mathbb P(Y>t)dt.$$\n\n这条恒等式说明，控制远端尾概率可以控制高阶矩；尾部衰减太慢时，高阶矩会发散。它也将用于最大值不等式和首达时间均值的计算。概率界只能向其保证的方向使用：上界发散不能证明矩发散，尾部的下界或渐近式才可以。\n\n## 练习：为样本平均控制误差\n\n$X_1,\\ldots,X_n$ 独立同分布，均值为 $\\mu$，方差为 4。若希望用 Chebyshev 界保证 $\\mathbb P(|\\bar X_n-\\mu|\\ge0.5)\\le0.05$，至少需要多少样本？\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n独立性使 $\\operatorname{Var}(\\bar X_n)=4/n$。因此\n\n$$\\mathbb P(|\\bar X_n-\\mu|\\ge0.5)\\le\\frac{4/n}{0.25}=\\frac{16}{n}.$$\n\n要求 $16/n\\le0.05$，得到 $n\\ge320$。这是只用均值和方差得到的充分条件，不表示 319 个样本一定不够；若知道分布形状，可以计算更精细的样本量。\n\n</details>\n",
+  "metadata": {
+    "theory_book": {
+      "book": "stochastic-calculus",
+      "part": "第一部分 · 概率与随机过程",
+      "number": 12,
+      "chapter": "2",
+      "edition": "2026-10",
+      "minutes": 35,
+      "section": "9",
+      "source_pages": [
+        47,
+        48,
+        49,
+        50,
+        51,
+        52
+      ],
+      "chapter_title": "概率与条件期望",
+      "source_sections": [
+        "2.13"
+      ]
+    }
+  }
+}

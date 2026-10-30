@@ -1,0 +1,39 @@
+{
+  "slug": "miller-book-08-02",
+  "title": "同余、快速幂与扩展欧几里得",
+  "summary": "由同余运算推导快速幂，逐步回代扩展欧几里得，并说明模逆元存在条件。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8046,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "计算大整数幂的余数时，不必先生成完整的幂。模运算允许在中间步骤缩小数值，指数的二进制表示又能减少乘法次数。\n\n## 同余与四则运算\n\n$a\\equiv b\\pmod m$ 表示 m 整除 a−b。若 a、b 同余，c、d 同余，则 a+c 与 b+d、ac 与 bd 也同余。因此每次加乘后取模，保留最终所需余数。\n\n模除法需要逆元：只有 gcd(a,m)=1 时，才存在 x 使 ax≡1。不能像普通实数那样任意约去因子，例如 2×1≡2×4 (mod 6)，但 1 与 4 并不同余。\n\n## 重复平方\n\n偶数指数满足 $a^{2k}=(a^k)^2$，奇数指数满足 $a^{2k+1}=a(a^k)^2$。计算 $3^{13}\\bmod17$，13=8+4+1，所需幂为：\n\n| 幂 | 模 17 的余数 |\n| --- | --- |\n| 3¹ | 3 |\n| 3² | 9 |\n| 3⁴ | 9² mod 17=13 |\n| 3⁸ | 13² mod 17=16 |\n\n结果为 16×13×3 mod 17：先得 4，再得 12。迭代实现检查指数最低位，为 1 则把当前底数乘入 result，然后底数平方、指数整除 2。\n\n循环保持 $result\\cdot base^{e}$ 与原目标幂同余。指数为零时，result 就是答案。乘法次数 O(log e)，大整数每次乘法的位运算成本仍需另计。\n\n## 最大公因数的递归\n\na=qb+r，因此同时整除 a、b 的数恰好也整除 b、r，得到 gcd(a,b)=gcd(b,r)。余数严格小于正除数，重复到 b=0 时结束。\n\n扩展算法同时求 x、y，使 ax+by=g。若子调用给出 bx′+ry′=g，代入 r=a−qb，便得 $ay'+b(x'-qy')=g$。因此返回系数为 x=y′、y=x′−qy′。\n\n## 手算一个逆元\n\n求 5 在模 18 下的逆元：18=3×5+3，5=1×3+2，3=1×2+1。回代：\n\n$$1=3-2=3-(5-3)=2\\times3-5$$\n$$=2(18-3\\times5)-5=2\\times18-7\\times5.$$\n\n因此 5×(−7)≡1 (mod 18)，取非负代表 11，验证 5×11=55≡1。若最大公因数大于 1，就不可能将 ax+my 写成 1，逆元不存在。\n\n> **鲨鱼说** 取模减少中间整数的长度，重复平方减少乘法次数。这是两个不同的节省来源，组合后才得到高效模幂。\n\n## Python 实现\n\n~~~python\ndef mod_power(a,n,m):\n    if n<0 or m<=0:raise ValueError('require n>=0 and m>0')\n    result=1%m;a%=m\n    while n:\n        if n&1:result=result*a%m\n        a=a*a%m;n//=2\n    return result\ndef extended_gcd(a,b):\n    if b==0:return a,1,0\n    g,x,y=extended_gcd(b,a%b)\n    return g,y,x-(a//b)*y\nassert mod_power(3,13,17)==12\ng,x,y=extended_gcd(5,18)\nassert 5*x+18*y==g==1 and x%18==11\nprint(mod_power(3,13,17),x%18)\n~~~\n\n## 练习\n1. 手算7²⁰ mod13，列出重复平方过程。\n2. 用扩展欧几里得求7在模26下的逆元，并检查6在模15下是否有逆元。\n\n[本章习题](/read/?slug=miller-book-08-07)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-08-02.zip",
+        "label": "同余、快速幂与扩展欧几里得 · Python 示例",
+        "size_bytes": 971,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第三部分 · 图算法与进阶应用",
+      "number": 46,
+      "chapter": "8",
+      "edition": "2026-10",
+      "minutes": 12,
+      "section": "2",
+      "chapter_title": "进阶数据结构与算法应用",
+      "source_sections": [
+        "8.3.1",
+        "8.3.2",
+        "8.3.3"
+      ]
+    }
+  }
+}

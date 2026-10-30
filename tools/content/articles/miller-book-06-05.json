@@ -1,0 +1,37 @@
+{
+  "slug": "miller-book-06-05",
+  "title": "二叉搜索树的查找、插入与删除",
+  "summary": "维护搜索树的全子树顺序，逐步处理三类删除，补充映射、后继和有序迭代。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "Python 数据结构与算法分析",
+  "sort_order": 8034,
+  "cover_url": "",
+  "section_ids": [
+    "3ba9f7c0-467b-529b-9ae6-4e5dd9022046"
+  ],
+  "body": "二叉搜索树在每个节点划分键的范围：左子树全部键小于当前键，右子树全部键大于当前键。约束作用于整棵子树，只比较直接孩子并不足够。\n\n## 查找与映射插入\n\n从根比较目标：更小走左，更大走右，相等则返回对应值。遇空子树说明不存在。映射版本对已有键更新值，不增加节点数；集合版本仅保留该键一次。\n\n插入沿同一路径寻找空位置，接入新叶。保存节点数时，只有新增或真正删除才修改 size；值可以为 None，所以不能用“返回值是否非空”判断键是否存在，应检查是否找到了节点。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/bst.svg\" alt=\"二叉搜索树每个节点的左子树更小，右子树更大。\" loading=\"lazy\"></figure>\n\n## 删除分三种结构\n\n叶子：把父节点指向它的引用设为空。只有一个孩子：父节点直接接到该孩子。若删的是根，更新整棵树的根引用。\n\n有两个孩子：选择右子树最小节点作为中序后继，将它的键和值替换当前记录，再删除原后继。后继没有左孩子，因此后一次删除至多只有一个孩子。\n\n## 双孩子删除的具体变化\n\n依次插入 `[5,3,8,2,4,6,9,7]`。删除 5 时，右子树根为 8，沿左边找到 6。根记录改为 6，原 6 的右孩子 7 接到 8 的左侧。中序结果为 2、3、4、6、7、8、9。\n\n6 大于旧左子树全部键，又小于右子树其余键，所以替换保留顺序。也可对称地选左子树最大值作为前驱，但不能任意选一个后代。\n\n## 后继与有序迭代\n\n节点有右子树时，后继是右子树最小值；无右子树时，沿 parent 向上，直到第一次从某祖先的左侧返回，该祖先就是后继。若一路从右侧上升到根外，当前键已经最大。\n\n从最小节点反复寻找后继，或使用中序遍历生成器，都能按键排序输出。范围查询可根据上下界跳过整侧不可能符合的子树。\n\n## 修改后的根必须接回去\n\n递归 insert、delete 返回新的子树根，调用者执行 `root.left = ...` 或 `root.right = ...`，最外层也接收返回值。这样能统一叶子删除、单孩子替换和根变化。仅改变局部变量而未接回，外部结构不会随之改变。\n\n若维护 parent、height 或子树大小，修改结构时必须同步更新。检查顺序时可向递归传递 low、high 边界，验证每个键位于整条祖先路径限定的区间。\n\n## 时间取决于高度\n\n查找、插入和删除为 O(h)。依次插入 1、2、3、4 会退化为链，h=n−1；随机顺序常较平衡，但普通搜索树没有最坏对数保证。下一节通过高度差约束控制 h。\n\n> **鲨鱼说** 双孩子删除的关键是找到能继承原位置全部大小约束的键。右子树最小值正好符合条件，且它自身的删除更简单。\n\n## Python 实现\n\n~~~python\nfrom dataclasses import dataclass\n@dataclass\nclass Node:\n    key:int\n    left:object=None\n    right:object=None\ndef insert(root,key):\n    if root is None:return Node(key)\n    if key<root.key:root.left=insert(root.left,key)\n    elif key>root.key:root.right=insert(root.right,key)\n    return root\ndef delete(root,key):\n    if root is None:raise KeyError(key)\n    if key<root.key:root.left=delete(root.left,key)\n    elif key>root.key:root.right=delete(root.right,key)\n    else:\n        if root.left is None:return root.right\n        if root.right is None:return root.left\n        successor=root.right\n        while successor.left:successor=successor.left\n        root.key=successor.key;root.right=delete(root.right,successor.key)\n    return root\ndef inorder(root):\n    return inorder(root.left)+[root.key]+inorder(root.right) if root else []\nroot=None\nfor x in [5,3,8,2,4,6,9,7]:root=insert(root,x)\nroot=delete(root,5)\nassert inorder(root)==[2,3,4,6,7,8,9]\nprint(inorder(root))\n\ndef search(root,key):\n    while root is not None:\n        if key==root.key:return root\n        root=root.left if key<root.key else root.right\n    return None\nassert search(root,7).key==7 and search(root,5) is None\n~~~\n\n## 练习\n1. 在本节树中依次删除叶子2、单孩子6和根5，分别画出引用变化。\n2. 构造一组使普通搜索树退化为链的插入顺序，并比较查找次数。\n\n[本章习题](/read/?slug=miller-book-06-07)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/miller-book-06-05.zip",
+        "label": "二叉搜索树的查找、插入与删除 · Python 示例",
+        "size_bytes": 1147,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "python-data-structures",
+      "part": "第二部分 · 数据组织与基本算法",
+      "number": 34,
+      "chapter": "6",
+      "edition": "2026-10",
+      "minutes": 12,
+      "section": "5",
+      "chapter_title": "树",
+      "source_sections": [
+        "6.7"
+      ]
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "slug": "material-049",
+  "title": "固定内存的时间加权移动平均",
+  "summary": "不规则到达数据的窗口均价",
+  "kind": "reference",
+  "track": "凯读",
+  "series": "量化笔面试资料",
+  "sort_order": 2051,
+  "cover_url": "",
+  "section_ids": [
+    "6609a5e7-aa1a-5c66-9e8a-4566ec0c74ff"
+  ],
+  "body": "## 1. 不规则到达数据的窗口均价\n\n**题目**\n\n依时间非递减地接收报价 $(t_i,P_i)$，两次报价之间价格保持前一次值。给定窗口 $W>0$ 和桶数 $B\\ge1$，实现 `MovingAverage.Update(t,p)` 与 `Get()`，估计最近窗口 $[t-W,t]$ 的时间平均价格。内存限制为 $O(B)$。尚未覆盖一个窗口返回 NaN，同一时刻报价更新当前价格，逆序输入报错。说明近似误差来自哪里。\n\n**考点**：时间积分；固定桶压缩；边界误差。\n\n<details class=\"interview-answer\">\n<summary>查看分析与解答</summary>\n\n### 必要知识\n\n报价按不规则时刻到达，时间均价应让持续更久的价格占更大权重。每段价格恒定时，积分就是“价格×持续时间”的矩形面积。固定内存无法保留任意密集报价的全部变化，需要明确压缩后丢失的信息。\n\n### 分析思路\n\n把历史按固定宽度切桶，每桶保留面积和实际覆盖区间。完整桶可直接相加，窗口左端只取部分桶时按桶均价近似，并单独分析该处误差。\n\n### 解答步骤\n\nW=4、B=2时桶宽两秒。0秒价格10、2秒改20、4秒改30，在4秒查询的是[0,4]上的10×2+20×2，均价15；4秒新报价只影响随后区间，单个时刻没有面积。到5秒，窗口[1,5]包含10一秒、20两秒、30一秒，均价20。\n\n**先区别两种均值。**若价格 10 持续三秒、价格 20 持续一秒，时间均价是 $(10\\times3+20\\times1)/4=12.5$；直接平均两个报价得到 15，会给短暂报价过高权重。目标应写为 $W^{-1}\\int_{t-W}^tP(s)\\,ds$。\n\n**再压缩历史。**将时间轴划成宽 $h=W/B$ 的固定桶。每桶保存实际覆盖起止时刻及价格乘时间的积分。新报价到达时，用上一报价填补中间时间段，并把它按桶边界分割。超过窗口的旧桶删除。即使窗口里有大量报价，桶数量仍约为 $B$。\n\n**最后处理窗口左端。**整桶积分已知。窗口截断最旧桶时，无法从一个总积分恢复桶内任意片段的准确积分，只能按该桶平均价格分配重叠面积。这是固定内存换取精度的地方。下文给出误差范围和实现，窗口右端始终截止到最后一次 `Update` 的时刻。\n\n极长间隔仅积分最近一个窗口，单次更新最多处理 $O(B)$ 个桶，保存至多 $B+2$ 桶。密集报价不会增加桶数。\n\n没有窗口内价格变化次数或形状约束时，固定桶数不能对所有窗口边界保持严格精确。误差只来自最旧部分桶，若该桶价格范围为 $R_P$，均值绝对误差不超过 $R_Ph/W$。尚未积累窗口时返回 NaN。同时间报价替换当前价格，逆序时间拒绝。\n\n~~~python\nimport math\n\nclass MovingAverage:\n    def __init__(self, num_bin: int, window: float):\n        if num_bin < 1 or not math.isfinite(window) or window <= 0:\n            raise ValueError('桶数与窗口必须为正')\n        self.B, self.W = int(num_bin), float(window)\n        self.h = self.W/self.B\n        self.bins = {}\n        self.first = self.t = self.value = None\n    def Update(self, timestamp: float, value: float):\n        t, value = float(timestamp), float(value)\n        if not math.isfinite(t) or not math.isfinite(value):\n            raise ValueError('输入必须有限')\n        if self.t is None:\n            self.first = self.t = t\n            self.value = value\n            return\n        if t < self.t:\n            raise ValueError('时间必须非递减')\n        left = t-self.W\n        self.bins = {k:v for k,v in self.bins.items() if v[1] > left}\n        a = max(self.t,left)\n        while a < t:\n            k = math.floor(a/self.h)\n            edge = (k+1)*self.h\n            if edge <= a:\n                k += 1\n                edge = (k+1)*self.h\n            b = min(t,edge)\n            if b <= a:\n                raise ValueError('时间精度不足以划分该窗口')\n            area = (b-a)*self.value\n            if k in self.bins:\n                rec = self.bins[k]\n                self.bins[k] = (rec[0],b,rec[2]+area)\n            else:\n                self.bins[k] = (a,b,area)\n            a = b\n        self.t, self.value = t,value\n    def Get(self) -> float:\n        if self.t is None or self.t-self.first < self.W:\n            return float('nan')\n        left = self.t-self.W\n        area = 0.0\n        for a,b,s in self.bins.values():\n            overlap = max(0.0,min(b,self.t)-max(a,left))\n            if b > a:\n                area += s*overlap/(b-a)\n        return area/self.W\n\nma = MovingAverage(2,4)\nma.Update(0,10); ma.Update(2,20); ma.Update(4,30)\nassert abs(ma.Get()-15)<1e-12\nma.Update(5,40)\nassert abs(ma.Get()-20)<1e-12\nma.Update(1000,8)\nassert abs(ma.Get()-40)<1e-12\nassert len(ma.bins)<=4\n~~~\n\n若最旧桶在截断点前后价格不同，按全桶均价分摊就可能偏离真实重叠面积。最坏面积误差可由桶内价格幅度R_P乘桶宽h界定，除W得R_P/B。增大B缩小误差界，但没有已知价格幅度时不能给统一数值误差。Get的时间终点是最后Update，若现实时间继续流逝而无新报价，应先按接口约定更新查询时刻。\n\n### 同类问题\n\n流式统计先写精确的数学目标，再说明压缩保留哪些充分信息。对每次Update的O(B)上界与固定O(B)内存分别说明，不能因内存固定就宣称每次更新也是常数时间。\n\n</details>\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/interview/material-049.zip",
+        "label": "固定内存的时间加权移动平均 · Python 示例",
+        "size_bytes": 1600,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "interview": {
+      "book": "practice",
+      "topic": "凯读",
+      "number": 51,
+      "chapter": 45,
+      "company": "凯读",
+      "edition": "2026-10",
+      "section": "固定内存的时间加权移动平均",
+      "difficulty": "综合",
+      "full_source": true,
+      "answer_count": 1,
+      "source_files": [
+        "xhs量化面经整理汇总/凯读.docx"
+      ],
+      "question_count": 1,
+      "company_section": 1,
+      "answers_collapsed": true
+    }
+  }
+}

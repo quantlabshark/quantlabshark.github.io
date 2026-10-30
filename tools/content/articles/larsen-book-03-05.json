@@ -1,0 +1,38 @@
+{
+  "slug": "larsen-book-03-05",
+  "title": "方差、协方差与误差传播",
+  "summary": "展开中心化平方推导方差和协方差，用线性组合说明相关性及概率界。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "数理统计及其应用",
+  "sort_order": 7015,
+  "cover_url": "",
+  "section_ids": [
+    "c53aefaf-f9e0-5d3d-8641-2d0c9c6e973a"
+  ],
+  "body": "两个变量可能具有相同平均值，却有不同波动。方差把观测与均值的差先平方，再求平均，用一个非负数描述分散程度。\n\n## 方差的两种写法\n\n令 $\\mu=E(X)$。展开平方并使用期望的线性性：\n\n$$\\operatorname{Var}(X)=E[(X-\\mu)^2]\n=E(X^2)-2\\mu E(X)+\\mu^2=E(X^2)-\\mu^2.$$\n\nX 等概率取 1、3 时，均值为 2，二阶矩为 5，方差为 1。方差的单位是原单位的平方，标准差 $\\sigma=\\sqrt{\\operatorname{Var}(X)}$ 则恢复原单位。平移常数不影响离差，缩放 a 倍使平方离差变为 a² 倍，所以 $\\operatorname{Var}(aX+b)=a^2\\operatorname{Var}(X)$。\n\n## 协方差记录共同变化\n\n两个变量的中心化乘积均值称为协方差：\n\n$$\\operatorname{Cov}(X,Y)=E[(X-E X)(Y-E Y)]=E(XY)-E(X)E(Y).$$\n\n两者经常同时高于或低于各自均值时，乘积多为正，协方差倾向为正。除以两个标准差得到相关系数 $\\rho=\\operatorname{Cov}(X,Y)/(\\sigma_X\\sigma_Y)$，其范围为 [-1,1]，不依赖原变量的计量单位。\n\n<figure class=\"book-concept-figure\"><img src=\"/assets/figures/foundations/covariance.svg\" alt=\"具有正协方差的两个随机变量，散点呈右上倾斜。\" loading=\"lazy\"></figure>\n\n将 $a(X-E X)+b(Y-E Y)$ 平方，交叉项为 $2ab(X-E X)(Y-E Y)$，因而\n\n$$\\operatorname{Var}(aX+bY)=a^2\\sigma_X^2+b^2\\sigma_Y^2+2ab\\operatorname{Cov}(X,Y).$$\n\n独立时协方差为零，零协方差却不保证独立。例如 X 在 [-1,1] 上均匀，令 $Y=X^2$，则 $E(X)=E(X^3)=0$，协方差为零，但 Y 完全由 X 决定。\n\n## 平均值的波动\n\n两项变量的标准差均为 0.1，相关系数为 0.2，等权平均的方差为 $0.25(0.01+0.01)+0.5\\times0.2\\times0.01=0.006$，标准差约 0.0775。\n\n若 n 项方差均为 $\\sigma^2$，任意两项相关系数为 $\\rho$，方差展开含 n 个自身项和 $n(n-1)$ 个交叉项，故\n\n$$\\operatorname{Var}(\\bar X)=\\frac{\\sigma^2}{n}[1+(n-1)\\rho].$$\n\n当 $\\rho=0$ 时为 $\\sigma^2/n$；固定正相关时，共同波动限制了扩大样本后的精度。\n\n## 只知道方差时的概率界\n\n对非负变量 W，$E(W)\\ge aP(W\\ge a)$，因为在 $W\\ge a$ 的区域上，每个 W 至少贡献 a。令 $W=(X-\\mu)^2$、$a=k^2\\sigma^2$，得到 Chebyshev 不等式\n\n$$P(|X-\\mu|\\ge k\\sigma)\\le\\frac1{k^2}.$$\n\n取 k=2，可知至少 75% 的概率在均值两侧两个标准差内。这个界适用于所有具有有限方差的分布，正态分布更集中的结论需要额外分布条件。\n\n## 偏斜程度与尾部\n\n方差是二阶中心矩。更一般地，$m_k=E[(X-\\mu)^k]$ 称为 k 阶中心矩；存在有限三、四阶矩且 $\\sigma>0$ 时，定义偏度 $\\gamma_1=m_3/\\sigma^3$、超额峰度 $\\gamma_2=m_4/\\sigma^4-3$。除以相应标准差幂次，是为了消除计量单位。\n\n三次方保留正负方向：较大的正离差更容易使偏度为正。四次方则显著放大远离均值的观测。标准正态的四阶矩为 3，所以其超额峰度为零；峰度不能仅凭图形尖不尖判断。\n\n以速率为 1 的指数变量为例，$E(X^k)=k!$，均值和方差都为 1。展开中心矩：$m_3=6-3\\times2+3\\times1-1=2$，$m_4=24-4\\times6+6\\times2-4+1=9$，因此偏度为 2，超额峰度为 6。它有明显右尾，远端观测对高阶矩影响较大。\n\n> **鲨鱼说** 增加高度相关的观测，精度不会按独立样本的速度改善。计算平均值方差时，协方差项必须和各自方差一起保留。\n\n## 练习\n1. X、Y 方差分别为4、9，协方差为1，计算 $\\operatorname{Var}(2X-Y)$。\n2. 10个观测方差为1、两两相关系数为0.3，求平均值的方差，并与独立情形比较。\n\n[本章习题](/read/?slug=larsen-book-03-11)\n",
+  "metadata": {
+    "downloads": [
+      {
+        "url": "/assets/downloads/theory/larsen-book-03-05.zip",
+        "label": "方差、协方差与误差传播 · Python 示例",
+        "size_bytes": 1063,
+        "description": "解压后运行 example.py。包内附运行说明、依赖清单和示例输出。"
+      }
+    ],
+    "theory_book": {
+      "book": "mathematical-statistics",
+      "part": "第一部分 · 概率与随机变量",
+      "number": 15,
+      "chapter": "3",
+      "edition": "2026-10",
+      "minutes": 19,
+      "section": "5",
+      "chapter_title": "随机变量",
+      "source_sections": [
+        "3.6",
+        "3.9"
+      ]
+    }
+  }
+}

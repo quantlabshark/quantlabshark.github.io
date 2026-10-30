@@ -1,0 +1,35 @@
+{
+  "slug": "calin-book-03-07",
+  "title": "下鞅、最大值不等式与长期平均",
+  "summary": "认识条件均值向上的过程，利用 Doob 不等式控制整段路径的最大波动。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "随机微积分及其应用",
+  "sort_order": 5021,
+  "cover_url": "",
+  "section_ids": [
+    "17859c88-b779-5654-b120-7a4cc7b39714"
+  ],
+  "body": "## 下鞅不要求每条路径上升\n\n适应、可积的过程 $X_t$ 若满足 $\\mathbb E[X_t\\mid\\mathcal F_s]\\ge X_s$（$s\\le t$），称为下鞅；不等号反向则为上鞅。条件均值的方向不等于路径的方向。布朗运动的平方可能在某段时间下降，但 $W_t^2$ 是下鞅，因为未来条件均值等于 $W_s^2+(t-s)$。\n\n鞅既是下鞅也是上鞅。若 $M_t$ 是鞅、$\\varphi$ 为凸函数且 $\\varphi(M_t)$ 可积，由条件 Jensen 不等式，\n\n$$\\mathbb E[\\varphi(M_t)\\mid\\mathcal F_s]\\ge\\varphi(M_s).$$\n\n因此 $|M_t|$、$M_t^2$ 都是常见下鞅。若起点已经是下鞅，要让复合过程仍为下鞅，还通常要求 $\\varphi$ 同时单调增加。\n\n对下鞅再作用凸函数时，单调性不可随意删除。确定过程 $X_t=t$ 是下鞅，凸函数 $\\varphi(x)=-x$ 却把它变成 $-t$，后者为上鞅。对鞅使用凸函数只需 Jensen；对一般下鞅，还需要用函数单调增加把 $\\mathbb E[X_t\\mid\\mathcal F_s]\\ge X_s$ 传递到函数值。\n\n例如 $|W_t|$ 的路径会反复回到零，但条件平均仍不会低于当前绝对值。几何上的凸性把两侧随机波动转成平均值向上的效应，而不是要求每个增量都非负。\n\n## 为什么要控制整段路径\n\n只知道终点 $M_T$ 的分布，不能直接判断途中是否曾越过阈值。定义最大值 $M_T^*=\\sup_{0\\le t\\le T}|M_t|$。风险限制、数值稳定性和路径收敛，都可能关心这个最大值。\n\n对非负、右连续的下鞅 $X_t$，Doob 最大不等式给出\n\n$$\\mathbb P\\left(\\sup_{t\\le T}X_t\\ge a\\right)\\le\\frac{\\mathbb E[X_T]}a,\\qquad a>0.$$\n\n其思路是找第一次超过阈值的时刻：只要曾达到 $a$，下鞅的后续条件平均不能比当时更低，于是终点期望至少承担这部分概率乘以 $a$。严格证明通过离散网格和停止时间完成。\n\n取 $X_t=M_t^2$，得到 $\\mathbb P(M_T^*\\ge a)\\le\\mathbb E[M_T^2]/a^2$。对标准布朗运动，右边为 $T/a^2$。当上界超过 1 时只能使用平凡上界 1。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>停止时间，即是否已经停止，可以仅凭当时及此前信息判断的随机时刻。</p></aside>\n\n### 在有限网格上证明最大不等式\n\n先观察 $X_0,\\ldots,X_n$，令 $A_k$ 为“前面都没有达到 $a$，第一次在第 $k$ 步达到”的事件。各 $A_k$ 不交，且 $A_k\\in\\mathcal F_k$。下鞅条件给出\n\n$$\\mathbb E[X_n\\mathbf1_{A_k}]\n=\\mathbb E[\\mathbf1_{A_k}\\mathbb E[X_n\\mid\\mathcal F_k]]\n\\ge\\mathbb E[X_k\\mathbf1_{A_k}]\\ge a\\mathbb P(A_k).$$\n\n对 $k$ 求和，得到更精细的 $a\\mathbb P(X_n^*\\ge a)\\le\\mathbb E[X_n\\mathbf1_{\\{X_n^*\\ge a\\}}]$，再利用非负性上界为 $\\mathbb E[X_n]$。连续时间下用越来越密的网格和右连续路径把最大值逼近过去，得到相同结论。\n\n## 从尾部界到均方最大值\n\n对 $p>1$，更强的 Doob $L^p$ 不等式为\n\n$$\\|M_T^*\\|_p\\le\\frac p{p-1}\\|M_T\\|_p.$$\n\n取 $p=2$ 得 $\\mathbb E[(M_T^*)^2]\\le4\\mathbb E[M_T^2]$。这里常数 4 是通用上界，不要求在某个具体过程上恰好取到。\n\n这条结果能把“终点的均方误差小”转化成“整个有限时间区间上的最大误差小”。构造随机积分的连续版本时，正是利用这种控制，把简单过程积分的近似推广到整条路径。\n\n令 $Z=\\sup_{t\\le T}|M_t|$。对下鞅 $|M_t|$ 使用精细形式，$a\\mathbb P(Z\\ge a)\\le\\mathbb E[|M_T|\\mathbf1_{\\{Z\\ge a\\}}]$。两边乘 $p a^{p-2}$ 并从零积分，得到\n\n$$\\mathbb E[Z^p]\\le\\frac p{p-1}\\mathbb E[|M_T|Z^{p-1}].$$\n\n再由 Hölder 不等式，右边不超过 $\\frac p{p-1}\\|M_T\\|_p\\|Z\\|_p^{p-1}$，约去相应幂次即得 $\\|Z\\|_p\\le p\\|M_T\\|_p/(p-1)$。严格处理时先截断最大值，避免在证明中预先假定 $\\mathbb E[Z^p]$ 有限。取 $p=2$ 后平方，系数才成为 4。\n\n## Poisson 计数的长期速率\n\n对速率 $\\lambda$ 的 Poisson 过程，\n\n$$\\mathbb E\\left[\\left(\\frac{N_t}{t}-\\lambda\\right)^2\\right]\n=\\frac{\\operatorname{Var}(N_t)}{t^2}=\\frac\\lambda t\\longrightarrow0.$$\n\n因此经验速率 $N_t/t$ 在均方意义下趋于 $\\lambda$。绝对计数误差 $N_t-\\lambda t$ 的标准差仍按 $\\sqrt t$ 增长，但相对到观察时长后会缩小。独立指数间隔的大数定律还可推出几乎必然收敛。\n\n对布朗运动，同理有 $\\mathbb E[(W_t/t)^2]=1/t\\to0$。累计波动增大与平均波动缩小可以同时发生，关键在于是否除以时间。\n\n> **鲨鱼说** 最大值不等式控制的是“曾经超出”的概率，比固定终点概率更贴近路径问题。不要把 $\\mathbb P(|M_T|>a)$ 当成 $\\mathbb P(\\sup_{t\\le T}|M_t|>a)$；路径可能先越界，再回到范围内。\n\n### 从间隔平均反推计数平均\n\n第 $n$ 次到达时间 $S_n$ 是独立指数间隔之和，所以强大数定律给出 $S_n/n\\to1/\\lambda$ 几乎必然。观察时刻 $t$ 位于第 $N_t$ 和第 $N_t+1$ 次到达之间：$S_{N_t}\\le t<S_{N_t+1}$。\n\n当 $t\\to\\infty$，$N_t\\to\\infty$，两边除以 $N_t$：左边趋于 $1/\\lambda$，右边可写成 $[S_{N_t+1}/(N_t+1)](1+1/N_t)$，也趋于 $1/\\lambda$。夹逼得到 $t/N_t\\to1/\\lambda$，故 $N_t/t\\to\\lambda$ 几乎必然。这是一条沿同一计数路径的结论，比只计算固定时刻的均方误差更强。\n\n## 练习：一次最大波动保证\n\n$M_t=N_t-2t$ 为速率 2 的补偿 Poisson 过程。用 Doob 不等式给出 $0\\le t\\le3$ 期间 $|M_t|$ 曾达到 6 的概率上界，并求最大绝对值平方的期望上界。\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n$\\mathbb E[M_3^2]=2\\times3=6$。对下鞅 $M_t^2$ 使用阈值 $36$，得到 $\\mathbb P(\\sup_{t\\le3}|M_t|\\ge6)\\le6/36=1/6$。由 $L^2$ 最大不等式，$\\mathbb E[\\sup_{t\\le3}|M_t|^2]\\le4\\times6=24$。两个都是保证性上界，并非过程最大值分布的精确结果。\n\n</details>\n",
+  "metadata": {
+    "theory_book": {
+      "book": "stochastic-calculus",
+      "part": "第一部分 · 概率与随机过程",
+      "number": 21,
+      "chapter": "3",
+      "edition": "2026-10",
+      "minutes": 33,
+      "section": "7",
+      "source_pages": [
+        84,
+        85,
+        86,
+        87
+      ],
+      "chapter_title": "常用随机过程",
+      "source_sections": [
+        "3.12"
+      ]
+    }
+  }
+}

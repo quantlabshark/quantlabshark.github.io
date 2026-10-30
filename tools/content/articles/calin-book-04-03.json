@@ -1,0 +1,37 @@
+{
+  "slug": "calin-book-04-03",
+  "title": "首次到达与反射原理",
+  "summary": "推导布朗运动最大值和单边首达时间分布，解释几乎必到但平均等待无穷。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "随机微积分及其应用",
+  "sort_order": 5024,
+  "cover_url": "",
+  "section_ids": [
+    "17859c88-b779-5654-b120-7a4cc7b39714"
+  ],
+  "body": "## 将整条路径问题转成终点问题\n\n令 $\\tau_a=\\inf\\{t:W_t=a\\}$，$a>0$，并记 $M_t=\\max_{s\\le t}W_s$。事件 $\\tau_a\\le t$ 等价于 $M_t\\ge a$。路径第一次碰到 $a$ 后，把后续增量关于水平 $a$ 反射，布朗运动的对称性和强 Markov 性保证反射后的路径具有相同概率。\n\n那些在 $t$ 前碰到 $a$、最终落在 $a$ 下方的路径，与最终落在 $a$ 上方的路径一一对应。因此\n\n$$\\mathbb P(M_t\\ge a)=2\\mathbb P(W_t\\ge a)\n=2\\left[1-\\Phi\\left(\\frac a{\\sqrt t}\\right)\\right].$$\n\n这里 $\\Phi$ 是标准正态分布函数。反射原理使用了路径在首次碰到边界后的对称性，不能直接套用于带非零漂移的过程而保持同一公式。\n\n具体地，若路径在 $\\tau_a$ 碰到 $a$，定义反射后的路径为：碰到之前不变，之后取 $\\widetilde W_s=2a-W_s$。第一次命中后的新增量符号被反转，利用强 Markov 性和布朗对称性，不改变路径分布。\n\n当原终点 $W_t<a$ 且此前已经命中 $a$ 时，新终点 $\\widetilde W_t> a$；反射操作再做一次会回到原路径。因此“命中后回落”和“终点在上方”两类事件概率相等。所有终点在上方的连续路径都已经命中边界，于是首达概率是终点右尾的两倍。\n\n这里强 Markov 性的作用是允许从随机的命中时刻重新开始使用独立布朗增量，而不只是从一个事先固定的时刻重新开始。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>反射原理，即通过反射首次到达某水平之后的路径，把越界事件与终点事件联系起来的方法。</p></aside>\n\n## 首达时间的密度\n\n对上式关于 $t$ 求导，得到\n\n$$f_{\\tau_a}(t)=\\frac a{\\sqrt{2\\pi}t^{3/2}}\\exp\\left(-\\frac{a^2}{2t}\\right),\\qquad t>0.$$\n\n密度在 $t=a^2/3$ 达到最大值。这个最可能的时间不是均值，也不是中位数。中位数 $m$ 满足 $\\Phi(a/\\sqrt m)=3/4$，所以 $m=[a/\\Phi^{-1}(3/4)]^2\\approx2.1981a^2$。\n\n当 $t\\to\\infty$，到达概率趋于 1，所以 $\\tau_a<\\infty$ 几乎必然。可是尾概率\n\n$$\\mathbb P(\\tau_a>t)=2\\Phi(a/\\sqrt t)-1\n\\sim a\\sqrt{\\frac2\\pi}\\,t^{-1/2}.$$\n\n利用 $\\mathbb E[\\tau_a]=\\int_0^\\infty\\mathbb P(\\tau_a>t)dt$，可知平均等待时间发散。一般的正阶矩在 $0<p<1/2$ 时有限，$p\\ge1/2$ 时发散。\n\n![首达时间密度及长尾](/assets/illustrations/theory/calin/first-passage.svg)\n\n求密度时，对 $a/\\sqrt t$ 的导数为 $-a/(2t^{3/2})$，与分布函数前面的 $-2$ 相乘，得到 $a t^{-3/2}\\phi(a/\\sqrt t)$，即上面的密度。\n\n尾部渐近来自标准正态分布函数在零点的展开 $\\Phi(z)=1/2+z/\\sqrt{2\\pi}+O(z^3)$。代入 $z=a/\\sqrt t$，得到 $\\mathbb P(\\tau_a>t)\\sim a\\sqrt{2/\\pi}\\,t^{-1/2}$。积分 $\\int_1^\\infty t^{-1/2}dt$ 发散，因此均值无穷。\n\n更一般地，对 $0<p<1/2$，在密度矩积分中换元 $u=a^2/(2t)$，得到\n\n$$\\mathbb E[\\tau_a^p]=\\frac{a^{2p}}{2^p}\\frac{\\Gamma(1/2-p)}{\\sqrt\\pi}.$$\n\n$p\\ge1/2$ 时 Gamma 积分在零点发散。这里并不是所有正阶矩都无穷；例如四分之一次矩有限，但一阶矩不有限。中位数则只要求CDF达到一半，不涉及尾部积分，所以仍为有限值。\n\n## 最大值的固定时刻分布\n\n由反射公式，$M_t$ 与 $|W_t|$ 在每个固定时刻同分布。因此\n\n$$\\mathbb E[M_t]=\\sqrt{\\frac{2t}\\pi},\\qquad\n\\operatorname{Var}(M_t)=t\\left(1-\\frac2\\pi\\right),\\qquad\n\\mathbb E[M_t^2]=t.$$\n\n这只是固定时刻的分布关系。$M_t$ 随时间单调不减，$|W_t|$ 却会升降，所以两个过程不能据此认定具有相同的整条路径分布。\n\n## 维度怎样改变返回行为\n\n一维布朗运动会几乎必然碰到任意给定水平。二维布朗运动从圆外出发，会几乎必然进入任意给定的正半径圆盘；但从非零点出发，它碰到某个指定单点的概率为零。进入任意小邻域与碰到那个点，是不同事件。\n\n在 $d\\ge3$ 维，从距离原点 $r>\\varepsilon$ 处出发，进入半径 $\\varepsilon$ 球的概率为 $(\\varepsilon/r)^{d-2}$，小于 1。维度越高，路径有更多向外扩散的方向。这些差别说明一维直觉不能直接移到高维。\n\n> **鲨鱼说** 几乎必然发生，只表示最终不发生的概率为零；它不限制等待时间的尾部有多长。一个事件可以最终几乎必然发生，却让平均等待时间无限大。\n\n### 维度差异的径向解释\n\n从距离原点 $r$ 的位置出发，进入半径 $\\varepsilon$ 球的概率只依赖 $r$。在球外，径向调和方程为 $u''(r)+(d-1)u'(r)/r=0$。对 $d\\ge3$，满足 $u(\\varepsilon)=1$、$u(r)\\to0$ 当 $r\\to\\infty$ 的解为 $u(r)=(\\varepsilon/r)^{d-2}$。\n\n二维时先加入外圆半径 $R$，先到内圆而非外圆的概率为 $\\log(R/r)/\\log(R/\\varepsilon)$。固定 $\\varepsilon>0$ 并让 $R\\to\\infty$，概率趋于 1，所以任意正半径邻域都会被进入。可是邻域半径趋于零后的进入时间可以越来越晚，并不产生一个有限时刻恰好命中原点。二维的单点命中问题需要单独处理，不能把“进入每个邻域”直接改写为“命中那个点”。\n\n## 练习：两倍高度需要多长时间\n\n比较 $\\tau_1$ 与 $\\tau_2$ 的分布，并计算 $\\mathbb P(\\tau_2\\le4)$。再求 $\\mathbb P(M_4\\ge2)$。\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n由布朗缩放，$\\tau_a\\overset d=a^2\\tau_1$，所以 $\\tau_2\\overset d=4\\tau_1$。阈值扩大两倍，对应的时间尺度扩大四倍。代入反射公式：\n\n$$\\mathbb P(\\tau_2\\le4)=2[1-\\Phi(1)]\\approx0.31731.$$\n\n由于 $\\{M_4\\ge2\\}=\\{\\tau_2\\le4\\}$，两个概率相同。终点超过 2 的概率只有 $1-\\Phi(1)\\approx0.15866$；另一半路径曾越界但在观察终点前又回落。\n\n</details>\n\n## 代码下载\n\n[下载计算与绘图代码](/assets/downloads/theory/calin-book-04-03.zip)\n",
+  "metadata": {
+    "theory_book": {
+      "book": "stochastic-calculus",
+      "part": "第二部分 · 路径性质与随机微积分",
+      "number": 24,
+      "chapter": "4",
+      "edition": "2026-10",
+      "minutes": 32,
+      "section": "3",
+      "source_pages": [
+        94,
+        95,
+        96,
+        97,
+        98,
+        99
+      ],
+      "chapter_title": "停止时间与路径性质",
+      "source_sections": [
+        "4.3"
+      ]
+    }
+  }
+}

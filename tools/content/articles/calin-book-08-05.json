@@ -1,0 +1,33 @@
+{
+  "slug": "calin-book-08-05",
+  "title": "泊松驱动的随机方程",
+  "summary": "计算跳跃冲击的衰减累积，区分计数噪声与补偿噪声。",
+  "kind": "lesson",
+  "track": "基础理论与原理",
+  "series": "随机微积分及其应用",
+  "sort_order": 5047,
+  "cover_url": "",
+  "section_ids": [
+    "17859c88-b779-5654-b120-7a4cc7b39714"
+  ],
+  "body": "## 连续下降与离散事件怎样接起来\n\n设当前时刻没有事件，方程只剩 $X'=\\kappa(m-X)$，经过长度 $h$ 的等待后，状态为 $m+(X-m)e^{-\\kappa h}$。事件发生时再把状态加上 $\\alpha$。交替执行这两步，就得到一条跳跃样本路径。\n\n如果在时刻 $T_j$ 加入一次冲击，它到时刻 $t$ 的剩余影响为 $\\alpha e^{-\\kappa(t-T_j)}$。线性系统允许将各次冲击相加，因此事件求和形式不是额外猜测，而是逐事件解的合并。\n\n## 把每次事件当作一次冲击\n\n设 $N_t$ 为强度 $\\lambda$ 的泊松过程。方程\n\n$$dX_t=\\kappa(m-X_t)dt+\\alpha dN_t,\\qquad X_0=x_0$$\n\n描述状态在事件之间向 $m$ 回复，每次事件使它增加固定幅度 $\\alpha$。这里 $dN$ 不是布朗微分：状态路径有跳跃，且即使 $\\alpha>0$ 的冲击与均值回复相抵，也不能把跳跃轨迹当作连续正态波动。\n\n确定积分因子仍适用。令事件时刻为 $T_1,T_2,\\ldots$，得到\n\n$$X_t=m+(x_0-m)e^{-\\kappa t}+\\alpha\\sum_{T_j\\le t}e^{-\\kappa(t-T_j)}.$$\n\n同一个时刻发生的冲击越早，到观察时刻保留下来的影响越小。这类过程常称为衰减冲击或散粒噪声模型。求解时可以按事件时刻逐段推进，不必把时间切成极小等长网格。\n\n## 用独立计数增量推导两个矩\n\n先把确定权重 $f(s)$ 近似为阶梯函数，写 $J=\\sum f_i\\Delta N_i$。每段计数均值和方差均为 $\\lambda\\Delta t_i$，且彼此独立，所以\n\n$$EJ=\\sum f_i\\lambda\\Delta t_i,\\qquad\\operatorname{Var}(J)=\\sum f_i^2\\lambda\\Delta t_i.$$\n\n取极限后得到 $E\\int f dN=\\lambda\\int fds$、$\\operatorname{Var}(\\int f dN)=\\lambda\\int f^2ds$。代入 $f(s)=\\alpha e^{-\\kappa(t-s)}$：\n\n$$EX_t=m+(x_0-m)e^{-\\kappa t}+\\frac{\\lambda\\alpha}{\\kappa}(1-e^{-\\kappa t}),$$\n$$\\operatorname{Var}(X_t)=\\frac{\\lambda\\alpha^2}{2\\kappa}(1-e^{-2\\kappa t}).$$\n\n长期均值比回复水平高 $\\lambda\\alpha/\\kappa$，因为单位时间平均收到 $\\lambda\\alpha$ 的输入。把驱动改成补偿噪声 $\\alpha(dN-\\lambda dt)$ 后，跳幅不变、跳跃间多出 $-\\alpha\\lambda$ 漂移，平均偏移消失，方差不变。\n\n例如 $\\kappa=2,m=1,\\alpha=0.5,\\lambda=4$，长期均值为二、方差为 $4\\times0.5^2/(2\\times2)=1/4$。若跳幅减半而强度加倍，平均输入不变，方差减半。\n\n## 分布为什么不正态\n\n在有限时间 $t$，没有发生事件的概率为 $e^{-\\lambda t}$。在这个事件上，状态恰为确定值 $m+(x_0-m)e^{-\\kappa t}$，所以分布含有一个原子。非退化正态分布没有单点质量，因此不能仅凭线性方程和已知均值方差就把它当成正态。\n\n条件于 $N_t=n$，这 $n$ 个事件时刻的无序版本可视为在 $[0,t]$ 上独立均匀抽样。由此可以生成终点状态，也可写出特征函数：\n\n$$E e^{iuX_t}=\\exp\\left(iu[m+(x_0-m)e^{-\\kappa t}]+\\lambda\\int_0^t[e^{iu\\alpha e^{-\\kappa(t-s)}}-1]ds\\right).$$\n\n该式来自独立增量的乘积，再在细分极限下转成指数积分。对 $u$ 求导能重新得到均值和方差；它保留了仅有两个矩时看不到的分布信息。\n\n<aside class=\"shark-note\"><p class=\"shark-note-title\">鲨鱼说</p><p>特征函数，即用复指数的期望描述随机变量分布的函数。</p></aside>\n\n## 特征函数为什么出现指数积分\n\n泊松变量 $K\\sim\\operatorname{Poisson}(r)$ 满足 $Ee^{ivK}=\\exp[r(e^{iv}-1)]$。对阶梯权重，独立性使 $E\\exp(iu\\sum f_i\\Delta N_i)$ 等于各段特征函数之积，因而等于 $\\exp\\{\\lambda\\sum\\Delta t_i[e^{iuf_i}-1]\\}$。划分加密后，和变成积分，得到前面的指数表示。\n\n条件于总事件数 $N_t=n$，无序事件时刻可由 $n$ 个独立均匀变量表示，排序后就是有序跳时刻。终点模拟因而可先抽一个泊松数，再抽这些均匀时刻并计算衰减权重。这个算法保留区间内每次事件的真实位置，比把全部事件堆在网格右端更准确。\n\n## 事件模拟与时间模拟\n\n事件模拟先生成独立的指数等待时间，均值为 $1/\\lambda$；在等待期间按确定回复方程推进，到事件时刻再加 $\\alpha$。等步长模拟则生成 $\\Delta N\\sim\\operatorname{Poisson}(\\lambda h)$。若把所有区间内事件都集中在右端，衰减权重会近似偏差；步长越小偏差越小。\n\n## 事件强度与跳幅的不同作用\n\n固定平均输入 $\\lambda\\alpha$ 时，可以用很多小跳或少数大跳实现相同长期均值，但方差由 $\\lambda\\alpha^2$ 决定。把跳幅减半、强度加倍，平均输入不变，方差却减半。两种模型在均值曲线上可能重合，实际路径却明显不同。\n\n因此拟合事件模型不能只对齐平均水平。还应观察跳跃间隔、跳幅分布和状态的自相关。若真实事件大小有差异，可引入独立随机跳幅，将均值公式中的 $\\alpha$ 改成跳幅均值、方差公式中的 $\\alpha^2$ 改成跳幅二阶矩。\n\n![泊松冲击的跃升与随后衰减](/assets/illustrations/theory/calin/calin-book-08-05.svg)\n\n回复水平一、回复速度二、跳幅 0.5、事件强度四。每次事件造成向上跳跃，事件间按指数衰减；虚线为集合均值。\n\n<aside class=\"shark-note\"><strong>鲨鱼说</strong><p>泊松积分的方差取决于跳幅平方。相同平均输入可以由很多小跳或少数大跳形成，两者的平均曲线相同，波动与尾部却不同。</p></aside>\n\n## 练习\n\n令 $dX_t=-X_tdt+2dN_t$、$X_0=0$、$\\lambda=3$。求时刻一的均值、方差及 $P(X_1=0)$。\n\n<details class=\"interview-answer\"><summary>查看解答</summary>\n\n先解事件间的 $X'=-X$。每次事件增加二，因此时刻一的状态为 $X_1=2\\sum_{T_j\\le1}e^{-(1-T_j)}$。每个加数严格为正，故状态为零当且仅当事件数为零，$P(X_1=0)=P(N_1=0)=e^{-3}\\approx0.0497871$。\n\n均值使用一次权重积分：$EX_1=3\\int_0^12e^{-(1-s)}ds=6(1-e^{-1})\\approx3.79272$。方差使用权重平方：\n\n$$\\operatorname{Var}(X_1)=3\\int_0^14e^{-2(1-s)}ds=6(1-e^{-2})\\approx5.18799.$$\n\n二阶矩则为该方差加均值平方。分布在零处有约 4.98% 的单点概率，同时在正半轴分布其他概率；给出两个矩之后仍需保留这种非正态结构。\n\n</details>\n\n## 配套代码\n\n[下载本节 Python 代码](/assets/downloads/theory/calin-book-08-05.zip)\n\n解压后运行 `calin-book-08-05.py`。需安装 numpy、scipy 和 matplotlib；脚本会生成图像与数值核查结果，无需另行下载数据。\n",
+  "metadata": {
+    "theory_book": {
+      "book": "stochastic-calculus",
+      "part": "第三部分 · 随机方程与测度变换",
+      "number": 47,
+      "chapter": "8",
+      "edition": "2026-10",
+      "minutes": 31,
+      "section": "5",
+      "source_pages": [
+        198,
+        199
+      ],
+      "chapter_title": "随机微分方程",
+      "source_sections": [
+        "8.6"
+      ]
+    }
+  }
+}
